@@ -40,7 +40,7 @@ export function Navigation() {
 
             {/* Floating Glassmorphic Navbar - Center */}
             <div className="pointer-events-auto max-w-4xl bg-white/10 backdrop-blur-md border border-white/20 rounded-full shadow-2xl px-3 md:px-6 py-2.5 md:py-3 animate-float">
-              <div className="hidden lg:flex items-center justify-center gap-1.5 md:gap-3">
+              <div className="hidden lg:flex items-center justify-center gap-1.5 md:gap-3 font-fraktur">
                 {/* Left Navigation Links */}
                 <Link
                   href="/about"
@@ -118,7 +118,7 @@ export function Navigation() {
 
               {/* Mobile Navigation Menu Dropdown */}
               {isOpen && (
-                <div className="lg:hidden border-t border-white/20 mt-3 pt-3 space-y-2">
+                <div className="lg:hidden border-t border-white/20 mt-3 pt-3 space-y-2 font-fraktur">
                   {navLinks.map((link) => (
                     <Link
                       key={link.href}
