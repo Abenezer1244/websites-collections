@@ -50,8 +50,8 @@ export default function Home() {
       <JsonLd data={pageSchema} />
       <JsonLd data={breadcrumbSchema} />
 
-      {/* Hero Section with Video Background */}
-      <section className="relative overflow-hidden text-white pt-32 md:pt-40 pb-20">
+      {/* Hero Section with Video Background - Full Screen Height */}
+      <section className="relative overflow-hidden text-white min-h-screen flex items-center">
         {/* Video Background */}
         <video
           className="absolute inset-0 w-full h-full object-cover"
@@ -71,9 +71,9 @@ export default function Home() {
         <AnimatedBlobSecondary position="bottom-left" size="md" opacity="light" />
 
         {/* Content */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Compassionate Care in a Home Environment
             </h1>
             <p className="text-lg md:text-xl mb-8 opacity-90">
