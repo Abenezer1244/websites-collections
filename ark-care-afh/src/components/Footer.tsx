@@ -97,10 +97,10 @@ export function Footer() {
               &copy; {currentYear} Ark Care AFH. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
-              <Link href="#" className="hover:text-accent transition-colors">
+              <Link href="/privacy-policy" className="hover:text-accent transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="#" className="hover:text-accent transition-colors">
+              <Link href="/terms-of-service" className="hover:text-accent transition-colors">
                 Terms of Service
               </Link>
             </div>
