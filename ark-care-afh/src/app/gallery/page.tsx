@@ -1,20 +1,31 @@
+'use client'
+
+import { AnimatedBlob, AnimatedBlobSecondary } from '@/components/AnimatedBlob'
+
 export default function Gallery() {
   const galleryPlaceholders = [
-    { id: 1, title: "Facility exterior" },
-    { id: 2, title: "Main living room" },
-    { id: 3, title: "Dining area" },
-    { id: 4, title: "Bedroom example" },
-    { id: 5, title: "Activities & recreation" },
-    { id: 6, title: "Outdoor spaces" },
-    { id: 7, title: "Kitchen & meals" },
-    { id: 8, title: "Common areas" },
+    { id: 1, title: "Barbecues & Picnics" },
+    { id: 2, title: "Bible Study Groups" },
+    { id: 3, title: "Birthday Celebrations" },
+    { id: 4, title: "Board & Card Games" },
+    { id: 5, title: "Arts & Crafts" },
+    { id: 6, title: "Cooking Activities" },
+    { id: 7, title: "Holiday Events" },
+    { id: 8, title: "Movie Nights" },
+    { id: 9, title: "Music & Entertainment" },
+    { id: 10, title: "Puzzle Activities" },
+    { id: 11, title: "Exercise & Wellness" },
+    { id: 12, title: "Tea Time & Social Events" },
   ]
 
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary/90 to-primary/70 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-gradient-to-r from-primary/90 to-primary/70 text-white py-16">
+        <AnimatedBlob position="top-right" size="lg" opacity="medium" />
+        <AnimatedBlobSecondary position="bottom-left" size="md" opacity="light" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold">Gallery</h1>
           <p className="text-lg mt-4 opacity-90 max-w-2xl">
             Take a tour of Ark Care AFH and see our comfortable, welcoming home environment
@@ -25,7 +36,13 @@ export default function Gallery() {
       {/* Gallery Grid */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <h2 className="text-3xl font-bold text-foreground mb-4 text-center">
+            Our Activities
+          </h2>
+          <p className="text-lg text-muted-foreground mb-12 text-center max-w-2xl mx-auto">
+            We offer a variety of engaging activities designed to promote physical wellness, mental stimulation, and social connection for all our residents.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {galleryPlaceholders.map((item) => (
               <div
                 key={item.id}

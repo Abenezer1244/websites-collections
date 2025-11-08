@@ -1,12 +1,19 @@
+'use client'
+
+import { AnimatedBlob, AnimatedBlobSecondary } from '@/components/AnimatedBlob'
+
 export default function About() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary/90 to-primary/70 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-gradient-to-r from-primary/90 to-primary/70 text-white py-16">
+        <AnimatedBlob position="top-right" size="lg" opacity="medium" />
+        <AnimatedBlobSecondary position="bottom-left" size="md" opacity="light" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold">About Ark Care AFH</h1>
           <p className="text-lg mt-4 opacity-90 max-w-2xl">
-            Our mission is to provide compassionate, quality care in a home environment
+            Licensed adult family home providing personalized care in Algona, Washington
           </p>
         </div>
       </section>
@@ -45,13 +52,16 @@ export default function About() {
           </h2>
           <div className="bg-card rounded-lg shadow-sm border border-border p-8 md:p-12">
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Ark Care AFH was founded on the belief that quality adult family home care is built on compassion, professional expertise, and genuine human connection. We recognized a need in our community for a care setting that combines the comfort of a home environment with the professional support that residents need.
+              Ark Care AFH is a licensed adult family home located in Algona, Washington, dedicated to providing compassionate, personalized care in a home-like environment. We specialize in caring for individuals with diverse needs, including seniors, adults with developmental disabilities, and those requiring specialized behavioral health support.
             </p>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Our facility was designed from the ground up to provide a safe, comfortable, and welcoming home. We carefully selected our location and designed our spaces to promote independence, dignity, and quality of life for our residents.
+              Our facility at 127 4th Ave N, Algona, WA 98001 was designed from the ground up to provide a safe, comfortable, and welcoming home. We carefully selected our location and designed our spaces to promote independence, dignity, and quality of life for our residents.
+            </p>
+            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+              We offer comprehensive services under multiple programs including HCS (Home and Community Services), DDA Meaningful Day programs, and Expanded Community Services. Our specialized support includes care for individuals with mental health needs, dementia support, and developmental disability services.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Today, we are proud to serve residents in our community, providing comprehensive care services that allow individuals to maintain their independence while receiving the support they need. Our team is committed to exceeding expectations and making a positive difference in the lives of those we serve.
+              Today, we are proud to serve residents in our community, providing comprehensive care services that allow individuals to maintain their independence while receiving the support they need. Our team is committed to exceeding expectations and making a positive difference in the lives of those we serve. For more information or to schedule a tour, please call us at (206) 455-3644.
             </p>
           </div>
         </div>

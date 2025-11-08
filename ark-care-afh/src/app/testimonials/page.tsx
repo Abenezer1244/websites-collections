@@ -1,3 +1,7 @@
+'use client'
+
+import { AnimatedBlob, AnimatedBlobSecondary } from '@/components/AnimatedBlob'
+
 export default function Testimonials() {
   const testimonials = [
     {
@@ -45,8 +49,11 @@ export default function Testimonials() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary/90 to-primary/70 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-gradient-to-r from-primary/90 to-primary/70 text-white py-16">
+        <AnimatedBlob position="top-right" size="lg" opacity="medium" />
+        <AnimatedBlobSecondary position="bottom-left" size="md" opacity="light" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold">Testimonials</h1>
           <p className="text-lg mt-4 opacity-90 max-w-2xl">
             Hear from residents and families about their experience at Ark Care AFH

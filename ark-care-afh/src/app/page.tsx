@@ -1,17 +1,21 @@
 import Link from 'next/link'
+import { AnimatedBlob, AnimatedBlobSecondary } from '@/components/AnimatedBlob'
 
 export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary/90 to-primary/70 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-gradient-to-r from-primary/90 to-primary/70 text-white py-20">
+        <AnimatedBlob position="top-right" size="lg" opacity="medium" />
+        <AnimatedBlobSecondary position="bottom-left" size="md" opacity="light" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               Compassionate Care in a Home Environment
             </h1>
             <p className="text-lg md:text-xl mb-8 opacity-90">
-              Ark Care AFH provides quality adult family home care services with personalized attention, professional staff, and a warm, supportive environment.
+              Ark Care AFH provides personalized adult family home care services in Algona, WA with specialized support for mental health, dementia, and developmental disabilities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -109,25 +113,25 @@ export default function Home() {
                   <svg className="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-foreground font-medium">Medication management and health monitoring</span>
+                  <span className="text-foreground font-medium">Medication management with pharmacy oversight</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <svg className="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-foreground font-medium">Meal preparation and nutrition support</span>
+                  <span className="text-foreground font-medium">Assistance with daily living & hygiene</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <svg className="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-foreground font-medium">Personal care and hygiene assistance</span>
+                  <span className="text-foreground font-medium">Specialized support for mental health, dementia & developmental disabilities</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <svg className="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-foreground font-medium">Recreational activities and community outings</span>
+                  <span className="text-foreground font-medium">Customized activities & meaningful day programs</span>
                 </li>
               </ul>
               <Link
