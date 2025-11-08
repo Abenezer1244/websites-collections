@@ -50,8 +50,8 @@ export default function About() {
       <JsonLd data={pageSchema} />
       <JsonLd data={breadcrumbSchema} />
 
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-primary/90 to-primary/70 text-white py-16">
+      {/* Hero Section with Navbar Overlay */}
+      <section className="relative overflow-hidden bg-gradient-to-r from-primary/90 to-primary/70 text-white pt-32 md:pt-40 pb-16">
         <AnimatedBlob position="top-right" size="lg" opacity="medium" />
         <AnimatedBlobSecondary position="bottom-left" size="md" opacity="light" />
 
