@@ -11,7 +11,10 @@ export function Navigation() {
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
     { href: '/services', label: 'Services' },
+    { href: '/staff', label: 'Staff' },
+    { href: '/testimonials', label: 'Testimonials' },
     { href: '/gallery', label: 'Gallery' },
+    { href: '/faq', label: 'FAQ' },
     { href: '/contact', label: 'Contact' },
   ]
 
