@@ -37,7 +37,7 @@ export function AnimatedBlob({
     <div
       className={`absolute pointer-events-none ${positionClasses[position]} ${opacityClasses[opacity]} ${sizeClasses[size]} ${className}`}
       style={{
-        background: 'radial-gradient(circle, hsl(var(--primary)) 0%, transparent 70%)',
+        background: 'radial-gradient(circle, var(--primary) 0%, transparent 70%)',
         filter: 'blur(50px)',
         animation: 'float 6s ease-in-out infinite'
       }}
@@ -76,7 +76,7 @@ export function AnimatedBlobSecondary({
     <div
       className={`absolute pointer-events-none ${positionClasses[position]} ${opacityClasses[opacity]} ${sizeClasses[size]} ${className}`}
       style={{
-        background: 'radial-gradient(circle, hsl(var(--secondary)) 0%, transparent 70%)',
+        background: 'radial-gradient(circle, var(--secondary) 0%, transparent 70%)',
         filter: 'blur(50px)',
         animation: 'float 8s ease-in-out infinite reverse'
       }}
