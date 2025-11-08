@@ -50,11 +50,27 @@ export default function Home() {
       <JsonLd data={pageSchema} />
       <JsonLd data={breadcrumbSchema} />
 
-      {/* Hero Section with Navbar Overlay */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-primary/90 to-primary/70 text-white pt-32 md:pt-40 pb-20">
+      {/* Hero Section with Video Background */}
+      <section className="relative overflow-hidden text-white pt-32 md:pt-40 pb-20">
+        {/* Video Background */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
+
+        {/* Dark Overlay for Text Visibility */}
+        <div className="absolute inset-0 bg-black/40" />
+
+        {/* Animated Blobs */}
         <AnimatedBlob position="top-right" size="lg" opacity="medium" />
         <AnimatedBlobSecondary position="bottom-left" size="md" opacity="light" />
 
+        {/* Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
