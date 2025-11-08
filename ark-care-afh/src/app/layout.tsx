@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
@@ -7,13 +7,8 @@ import { JsonLd } from "@/components/JsonLd";
 import { ThemeProvider } from "@/components/theme-provider";
 import { generateOrganizationSchema, siteConfig } from "@/lib/seo";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const outfit = Outfit({
+  variable: "--font-sans",
   subsets: ["latin"],
 });
 
@@ -90,7 +85,7 @@ export default function RootLayout({
         <JsonLd data={generateOrganizationSchema()} />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
+        className={`${outfit.variable} antialiased flex flex-col min-h-screen`}
       >
         <ThemeProvider
           attribute="class"
