@@ -69,19 +69,22 @@ export function Footer() {
           {/* Contact */}
           <div>
             <h4 className="font-semibold mb-4">Contact</h4>
-            <div className="space-y-2 text-sm">
+            <div className="space-y-3 text-sm">
               <div>
                 <p className="opacity-90">Phone</p>
-                <p className="font-semibold">Coming Soon</p>
-              </div>
-              <div>
-                <p className="opacity-90">Email</p>
                 <a
-                  href="mailto:contact@arkcare.local"
+                  href="tel:+12064553644"
                   className="font-semibold hover:text-accent transition-colors"
                 >
-                  contact@arkcare.local
+                  (206) 455-3644
                 </a>
+              </div>
+              <div>
+                <p className="opacity-90">Address</p>
+                <p className="font-semibold">
+                  127 4th Ave N<br />
+                  Algona, WA 98001
+                </p>
               </div>
             </div>
           </div>
