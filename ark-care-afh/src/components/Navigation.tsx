@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { cn } from '@/lib/utils'
+import { ModeToggle } from './mode-toggle'
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -19,7 +20,7 @@ export function Navigation() {
   ]
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-white border-b border-border shadow-sm">
+    <nav className="sticky top-0 z-50 w-full bg-background border-b border-border shadow-sm dark:shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -43,7 +44,10 @@ export function Navigation() {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Theme Toggle & Mobile Menu Button */}
+          <div className="flex items-center gap-2">
+            <ModeToggle />
+            {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-foreground hover:bg-muted"
@@ -71,6 +75,7 @@ export function Navigation() {
               )}
             </svg>
           </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
