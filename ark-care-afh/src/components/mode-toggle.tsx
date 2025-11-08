@@ -17,7 +17,7 @@ export function ModeToggle() {
   return (
     <button
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-      className="relative p-2 rounded-lg text-white/80 hover:text-white hover:bg-white/10 transition-colors duration-200"
+      className="relative p-2.5 rounded-lg text-white/80 hover:text-white hover:bg-white/10 transition-colors duration-200 flex items-center justify-center"
       aria-label="Toggle theme"
     >
       <svg
