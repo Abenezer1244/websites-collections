@@ -186,3 +186,18 @@ body {
     transform: translateY(-30px) translateX(20px);
   }
 }
+
+@keyframes floatingNavbar {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: floatingNavbar 3s ease-in-out infinite;
+  }
+}
