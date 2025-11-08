@@ -23,15 +23,15 @@ export function Navigation() {
 
       {/* Main Navigation Bar - Aligned Container */}
       <div className="fixed top-0 left-0 right-0 z-50 pointer-events-none">
-        <div className="h-full flex items-center justify-center px-4 sm:px-6 pt-6 md:pt-8">
-          <div className="w-full max-w-7xl flex items-center gap-3 md:gap-4">
+        <div className="h-full flex items-center justify-center px-2 sm:px-3 pt-5 md:pt-6">
+          <div className="w-full max-w-7xl flex items-center gap-2 md:gap-2.5">
             {/* Logo - Left Side */}
             <div className="pointer-events-auto flex-shrink-0">
               <Link
                 href="/"
-                className="flex items-center gap-2 md:gap-3 font-bold text-sm md:text-base text-white group transition-transform hover:scale-105"
+                className="flex items-center gap-1.5 md:gap-2 font-bold text-xs md:text-sm text-white group transition-transform hover:scale-105"
               >
-                <div className="w-10 md:w-12 h-10 md:h-12 bg-white/20 backdrop-blur rounded-lg flex items-center justify-center font-bold text-white text-sm md:text-lg hover:bg-white/30 transition-colors">
+                <div className="w-8 md:w-10 h-8 md:h-10 bg-white/20 backdrop-blur rounded-lg flex items-center justify-center font-bold text-white text-xs md:text-sm hover:bg-white/30 transition-colors">
                   A
                 </div>
                 <span className="hidden sm:inline">Ark</span>
@@ -39,19 +39,19 @@ export function Navigation() {
             </div>
 
             {/* Floating Glassmorphic Navbar - Center */}
-            <div className="pointer-events-auto flex-1 bg-white/10 backdrop-blur-md border border-white/20 rounded-full shadow-2xl px-4 md:px-8 py-3 md:py-4 animate-float">
-              <div className="hidden lg:flex items-center justify-center gap-2 md:gap-4">
+            <div className="pointer-events-auto flex-1 bg-white/10 backdrop-blur-md border border-white/20 rounded-full shadow-2xl px-3 md:px-6 py-2.5 md:py-3 animate-float">
+              <div className="hidden lg:flex items-center justify-center gap-1.5 md:gap-3">
                 {/* Left Navigation Links */}
                 <Link
                   href="/about"
-                  className="px-3 md:px-4 py-2 text-xs md:text-sm font-medium text-white/80 hover:text-white transition-all duration-200 rounded-lg hover:bg-white/10"
+                  className="px-2.5 md:px-3 py-1.5 text-xs md:text-sm font-medium text-white/80 hover:text-white transition-all duration-200 rounded-lg hover:bg-white/10"
                 >
                   About Us
                 </Link>
 
                 <Link
                   href="/gallery"
-                  className="px-3 md:px-4 py-2 text-xs md:text-sm font-medium text-white/80 hover:text-white transition-all duration-200 rounded-lg hover:bg-white/10"
+                  className="px-2.5 md:px-3 py-1.5 text-xs md:text-sm font-medium text-white/80 hover:text-white transition-all duration-200 rounded-lg hover:bg-white/10"
                 >
                   Gallery
                 </Link>
@@ -59,7 +59,7 @@ export function Navigation() {
                 {/* Home - Center and Larger */}
                 <Link
                   href="/"
-                  className="px-4 md:px-6 py-2 text-sm md:text-lg font-bold text-white transition-all duration-200 rounded-lg hover:bg-white/10"
+                  className="px-3 md:px-5 py-1.5 text-sm md:text-lg font-bold text-white transition-all duration-200 rounded-lg hover:bg-white/10"
                 >
                   Home
                 </Link>
@@ -67,14 +67,14 @@ export function Navigation() {
                 {/* Right Navigation Links */}
                 <Link
                   href="/services"
-                  className="px-3 md:px-4 py-2 text-xs md:text-sm font-medium text-white/80 hover:text-white transition-all duration-200 rounded-lg hover:bg-white/10"
+                  className="px-2.5 md:px-3 py-1.5 text-xs md:text-sm font-medium text-white/80 hover:text-white transition-all duration-200 rounded-lg hover:bg-white/10"
                 >
                   Services
                 </Link>
 
                 <Link
                   href="/contact"
-                  className="px-3 md:px-4 py-2 text-xs md:text-sm font-medium text-white/80 hover:text-white transition-all duration-200 rounded-lg hover:bg-white/10"
+                  className="px-2.5 md:px-3 py-1.5 text-xs md:text-sm font-medium text-white/80 hover:text-white transition-all duration-200 rounded-lg hover:bg-white/10"
                 >
                   Contact Us
                 </Link>
@@ -151,11 +151,11 @@ export function Navigation() {
             {/* Call Button - Right Side */}
             <a
               href="tel:+12064553644"
-              className="pointer-events-auto flex-shrink-0 hidden md:inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-white/20 hover:bg-white/30 text-white rounded-full transition-all duration-200 border border-white/30"
+              className="pointer-events-auto flex-shrink-0 hidden md:inline-flex items-center justify-center w-9 h-9 md:w-10 md:h-10 bg-white/20 hover:bg-white/30 text-white rounded-full transition-all duration-200 border border-white/30"
               aria-label="Call now"
               title="Call Now"
             >
-              <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
             </a>
