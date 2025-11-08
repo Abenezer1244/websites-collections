@@ -1,26 +1,59 @@
 @import "tailwindcss";
 
+/* Supabase Theme Colors */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --background: 0 0% 100%;
+  --foreground: 0 0% 3.6%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 3.6%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 3.6%;
+  --muted: 0 0% 96.1%;
+  --muted-foreground: 0 0% 45.1%;
+  --accent: 142.1 76.2% 36.3%;
+  --accent-foreground: 355.7 100% 97.3%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 89.8%;
+  --input: 0 0% 89.8%;
+  --primary: 142.1 76.2% 36.3%;
+  --primary-foreground: 355.7 100% 97.3%;
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 96%;
+  --ring: 142.1 76.2% 36.3%;
+  --radius: 0.5rem;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 3.6%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 8.5%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 8.5%;
+    --popover-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 142.1 76.2% 36.3%;
+    --accent-foreground: 355.7 100% 97.3%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --primary: 142.1 76.2% 36.3%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 96%;
+    --ring: 142.1 76.2% 36.3%;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
 }
