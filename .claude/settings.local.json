@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ssh:*)",
+      "Bash(git config:*)",
+      "Bash(npm create:*)",
+      "Bash(claude mcp add:*)",
+      "Bash(npx -y create-next-app@latest:*)",
+      "Bash(npx shadcn@latest init:*)",
+      "Bash(cat:*)",
+      "Bash(npm install:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(npm run build:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
