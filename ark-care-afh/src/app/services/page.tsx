@@ -1,8 +1,49 @@
-'use client'
-
+import type { Metadata } from 'next'
 import { AnimatedBlob, AnimatedBlobSecondary } from '@/components/AnimatedBlob'
+import { JsonLd } from '@/components/JsonLd'
+import { pageMetadata, generateWebPageSchema, generateBreadcrumbSchema, siteConfig } from '@/lib/seo'
+
+export const metadata: Metadata = {
+  title: pageMetadata.services.title,
+  description: pageMetadata.services.description,
+  keywords: pageMetadata.services.keywords,
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: `${siteConfig.url}/services`,
+    siteName: siteConfig.name,
+    title: pageMetadata.services.title,
+    description: pageMetadata.services.description,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: 'Ark Care AFH Services',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageMetadata.services.title,
+    description: pageMetadata.services.description,
+    images: [siteConfig.ogImage],
+  },
+}
 
 export default function Services() {
+  const breadcrumbs = [
+    { name: 'Home', url: siteConfig.url },
+    { name: 'Services', url: `${siteConfig.url}/services` }
+  ]
+
+  const pageSchema = generateWebPageSchema(
+    pageMetadata.services.title,
+    pageMetadata.services.description,
+    `${siteConfig.url}/services`
+  )
+
+  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs)
   const services = [
     {
       title: "24/7 Professional Care",
@@ -48,6 +89,9 @@ export default function Services() {
 
   return (
     <>
+      <JsonLd data={pageSchema} />
+      <JsonLd data={breadcrumbSchema} />
+
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-primary/90 to-primary/70 text-white py-16">
         <AnimatedBlob position="top-right" size="lg" opacity="medium" />

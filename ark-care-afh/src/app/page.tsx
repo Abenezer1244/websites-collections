@@ -1,9 +1,55 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { AnimatedBlob, AnimatedBlobSecondary } from '@/components/AnimatedBlob'
+import { JsonLd } from '@/components/JsonLd'
+import { pageMetadata, generateWebPageSchema, generateBreadcrumbSchema, siteConfig } from '@/lib/seo'
+
+export const metadata: Metadata = {
+  title: pageMetadata.home.title,
+  description: pageMetadata.home.description,
+  keywords: pageMetadata.home.keywords,
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    title: pageMetadata.home.title,
+    description: pageMetadata.home.description,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: 'Ark Care AFH - Adult Family Home Care in Algona, WA',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageMetadata.home.title,
+    description: pageMetadata.home.description,
+    images: [siteConfig.ogImage],
+  },
+}
 
 export default function Home() {
+  const breadcrumbs = [
+    { name: 'Home', url: siteConfig.url }
+  ]
+
+  const pageSchema = generateWebPageSchema(
+    pageMetadata.home.title,
+    pageMetadata.home.description,
+    siteConfig.url
+  )
+
+  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs)
+
   return (
     <>
+      <JsonLd data={pageSchema} />
+      <JsonLd data={breadcrumbSchema} />
+
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-primary/90 to-primary/70 text-white py-20">
         <AnimatedBlob position="top-right" size="lg" opacity="medium" />

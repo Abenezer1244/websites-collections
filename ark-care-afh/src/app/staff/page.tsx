@@ -1,8 +1,49 @@
-'use client'
-
+import type { Metadata } from 'next'
 import { AnimatedBlob, AnimatedBlobSecondary } from '@/components/AnimatedBlob'
+import { JsonLd } from '@/components/JsonLd'
+import { pageMetadata, generateWebPageSchema, generateBreadcrumbSchema, siteConfig } from '@/lib/seo'
+
+export const metadata: Metadata = {
+  title: pageMetadata.staff.title,
+  description: pageMetadata.staff.description,
+  keywords: pageMetadata.staff.keywords,
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: `${siteConfig.url}/staff`,
+    siteName: siteConfig.name,
+    title: pageMetadata.staff.title,
+    description: pageMetadata.staff.description,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: 'Ark Care AFH Staff',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageMetadata.staff.title,
+    description: pageMetadata.staff.description,
+    images: [siteConfig.ogImage],
+  },
+}
 
 export default function Staff() {
+  const breadcrumbs = [
+    { name: 'Home', url: siteConfig.url },
+    { name: 'Staff', url: `${siteConfig.url}/staff` }
+  ]
+
+  const pageSchema = generateWebPageSchema(
+    pageMetadata.staff.title,
+    pageMetadata.staff.description,
+    `${siteConfig.url}/staff`
+  )
+
+  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs)
   const team = [
     {
       name: "Sarah Johnson",
@@ -44,6 +85,9 @@ export default function Staff() {
 
   return (
     <>
+      <JsonLd data={pageSchema} />
+      <JsonLd data={breadcrumbSchema} />
+
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-primary/90 to-primary/70 text-white py-16">
         <AnimatedBlob position="top-right" size="lg" opacity="medium" />

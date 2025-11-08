@@ -1,23 +1,57 @@
-# Allow all robots to access all pages
+# Ark Care AFH robots.txt - SEO Optimized
+# Last updated: 2024
+
+# Allow all crawlers by default
 User-agent: *
 Allow: /
+Allow: /api/
+Allow: /*.json
+Allow: /*.js
+Allow: /*.css
 
-# Sitemap location
-Sitemap: https://arkcare-afh.com/sitemap.xml
-
-# Specific rules for search engines
+# Specific rules for major search engines
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Mobile
+Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 2
 
 User-agent: Slurp
 Allow: /
+Crawl-delay: 1
 
-# Disallow admin or private areas (if any)
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+# Disallow private areas and non-content pages
+User-agent: *
 Disallow: /admin/
 Disallow: /private/
+Disallow: /.env
+Disallow: /.git/
+Disallow: /config/
+Disallow: /node_modules/
 
-# Crawl delay (in seconds) to respect server resources
-Crawl-delay: 0
+# Prevent indexing of duplicate/similar content
+User-agent: *
+Disallow: /*?*
+Disallow: /*&*
+Disallow: /search?
+Disallow: /filter?
+
+# Sitemap locations
+Sitemap: https://arkcare.local/sitemap.xml
+Sitemap: https://arkcare.local/sitemap-pages.xml
+
+# Global crawl delay
+Crawl-delay: 1
+
+# Global request rate (requests per time period)
+Request-rate: 30/60

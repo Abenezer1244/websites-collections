@@ -1,10 +1,55 @@
-'use client'
-
+import type { Metadata } from 'next'
 import { AnimatedBlob, AnimatedBlobSecondary } from '@/components/AnimatedBlob'
+import { JsonLd } from '@/components/JsonLd'
+import { pageMetadata, generateWebPageSchema, generateBreadcrumbSchema, siteConfig } from '@/lib/seo'
+
+export const metadata: Metadata = {
+  title: pageMetadata.privacyPolicy.title,
+  description: pageMetadata.privacyPolicy.description,
+  keywords: pageMetadata.privacyPolicy.keywords,
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: `${siteConfig.url}/privacy-policy`,
+    siteName: siteConfig.name,
+    title: pageMetadata.privacyPolicy.title,
+    description: pageMetadata.privacyPolicy.description,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: 'Privacy Policy - Ark Care AFH',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageMetadata.privacyPolicy.title,
+    description: pageMetadata.privacyPolicy.description,
+    images: [siteConfig.ogImage],
+  },
+}
 
 export default function PrivacyPolicy() {
+  const breadcrumbs = [
+    { name: 'Home', url: siteConfig.url },
+    { name: 'Privacy Policy', url: `${siteConfig.url}/privacy-policy` }
+  ]
+
+  const pageSchema = generateWebPageSchema(
+    pageMetadata.privacyPolicy.title,
+    pageMetadata.privacyPolicy.description,
+    `${siteConfig.url}/privacy-policy`
+  )
+
+  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs)
+
   return (
     <>
+      <JsonLd data={pageSchema} />
+      <JsonLd data={breadcrumbSchema} />
+
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-primary/90 to-primary/70 text-white py-16">
         <AnimatedBlob position="top-right" size="lg" opacity="medium" />
