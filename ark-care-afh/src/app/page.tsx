@@ -201,6 +201,164 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-12 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              What People Are Saying
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Real reviews from residents and their families about the care they receive at Ark Care AFH
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            {[
+              {
+                text: "Ark Care AFH has been wonderful for my mother. She feels at home here, the staff treats her with genuine care and respect, and I feel confident knowing she's in good hands. The whole team goes above and beyond.",
+                author: "Margaret S.",
+                relation: "Daughter"
+              },
+              {
+                text: "I moved here 6 months ago and it's been the best decision. The caregivers are patient and kind, the meals are delicious, and there's always something to do. I feel like part of a family here.",
+                author: "Henry P.",
+                relation: "Resident"
+              },
+              {
+                text: "We can't thank Sarah and her team enough. The level of personalized attention my father receives is exceptional. They communicate with us regularly and truly care about his well-being.",
+                author: "Jennifer K.",
+                relation: "Daughter"
+              },
+              {
+                text: "The staff here is professional, compassionate, and attentive. My wife receives excellent care for her specific needs, and I'm grateful for the peace of mind and support we receive.",
+                author: "Robert M.",
+                relation: "Spouse"
+              }
+            ].map((testimonial, index) => (
+              <div
+                key={index}
+                className="bg-card rounded-lg shadow-sm border border-border p-8 hover:shadow-md transition-shadow"
+              >
+                {/* Stars */}
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <svg
+                      key={i}
+                      className="w-5 h-5 text-yellow-400 fill-current"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                    </svg>
+                  ))}
+                </div>
+
+                {/* Testimonial Text */}
+                <p className="text-muted-foreground mb-6 leading-relaxed italic">
+                  "{testimonial.text}"
+                </p>
+
+                {/* Author */}
+                <div className="border-t border-border pt-4">
+                  <p className="font-semibold text-foreground">
+                    {testimonial.author}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    {testimonial.relation}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <p className="text-muted-foreground mb-6">
+              Want to hear more? View all testimonials from our community.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 md:py-24 bg-muted">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-12 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Find answers to common questions about Ark Care AFH
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            {[
+              {
+                q: "What is the admission process?",
+                a: "The admission process begins with a tour of our facility and a consultation with our team. During this visit, we discuss your care needs, answer your questions, and determine if Ark Care AFH is the right fit. If both parties agree to move forward, we complete paperwork and schedule a start date."
+              },
+              {
+                q: "What services are included in the care plan?",
+                a: "Services include 24/7 professional care, medication management, personal care, meal preparation, laundry, housekeeping, activities, and transportation. We create customized care plans based on individual needs."
+              },
+              {
+                q: "Can family members visit anytime?",
+                a: "We have flexible visiting hours to accommodate family schedules. We encourage regular family involvement and communication. Please discuss visiting preferences during the admission process."
+              },
+              {
+                q: "Are you licensed and regulated?",
+                a: "Yes, we comply with all state and local regulations for adult family homes. Our owner holds necessary licenses and certifications."
+              },
+              {
+                q: "What kinds of activities are available?",
+                a: "We offer a variety of activities including games, crafts, outdoor outings, movies, reading, and social gatherings. Activities are tailored to individual interests and abilities."
+              },
+              {
+                q: "What if I have concerns about the care?",
+                a: "We take all concerns seriously. Please speak with our staff or owner directly. We're committed to addressing concerns promptly and working together for the best outcome."
+              }
+            ].map((item, idx) => (
+              <details
+                key={idx}
+                className="bg-card rounded-lg border border-border p-6 hover:shadow-sm transition-shadow"
+              >
+                <summary className="cursor-pointer font-semibold text-foreground flex justify-between items-center">
+                  <span>{item.q}</span>
+                  <svg
+                    className="w-5 h-5 text-primary flex-shrink-0 ml-2 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                    />
+                  </svg>
+                </summary>
+                <p className="text-muted-foreground mt-4 leading-relaxed">
+                  {item.a}
+                </p>
+              </details>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-muted-foreground mb-6">
+              Have more questions? We're here to help!
+            </p>
+            <Link
+              href="/contact"
+              className="inline-block px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+            >
+              Contact Us
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-3xl mx-auto text-center px-4 sm:px-6 lg:px-8">

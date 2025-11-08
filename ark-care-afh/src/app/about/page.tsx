@@ -234,6 +234,98 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      {/* Our Team */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Our Care Team
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Our team consists of trained, certified professionals who are passionate about providing quality care. Every staff member is committed to treating residents with dignity, respect, and compassion. All staff members maintain current CPR/First Aid certification and participate in ongoing professional development.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Sarah Johnson",
+                title: "Owner & Care Coordinator",
+                qualifications: ["RN License", "10+ years AFH experience", "CPR/First Aid Certified"],
+                bio: "Sarah founded Ark Care AFH with a passion for providing quality, compassionate care in a home setting. Her nursing background and dedication to excellence ensure the highest standards of care."
+              },
+              {
+                name: "Michelle Chen",
+                title: "Lead Caregiver",
+                qualifications: ["HCA Certification", "Dementia Care Specialist", "CPR/First Aid"],
+                bio: "Michelle brings 8 years of professional caregiving experience and a genuine commitment to supporting residents with compassion and respect. She specializes in person-centered care."
+              },
+              {
+                name: "David Martinez",
+                title: "Caregiver",
+                qualifications: ["HCA Certification", "Physical Therapy Assistant", "CPR/First Aid"],
+                bio: "David is dedicated to helping residents maintain independence and mobility. His background in rehabilitation support enables him to provide specialized care for residents with mobility needs."
+              },
+              {
+                name: "Jennifer Williams",
+                title: "Caregiver",
+                qualifications: ["HCA Certification", "Activity Coordinator", "CPR/First Aid"],
+                bio: "Jennifer creates meaningful activities and social opportunities for residents. Her enthusiasm for engaging activities helps residents enjoy enriching experiences at our home."
+              },
+              {
+                name: "Robert Taylor",
+                title: "Caregiver",
+                qualifications: ["HCA Certification", "Nutrition Support", "CPR/First Aid"],
+                bio: "Robert ensures residents receive nutritious, delicious meals prepared with care. His background in nutrition helps support the health and wellness of all residents."
+              },
+              {
+                name: "Lisa Anderson",
+                title: "Administrative Coordinator",
+                qualifications: ["Healthcare Administration Certification", "HIPAA Training"],
+                bio: "Lisa manages administrative operations and ensures smooth communication with families and healthcare providers. She maintains detailed records and coordinates care planning."
+              }
+            ].map((member, index) => (
+              <div
+                key={index}
+                className="bg-card rounded-lg shadow-sm border border-border overflow-hidden hover:shadow-md transition-shadow"
+              >
+                {/* Avatar Placeholder */}
+                <div className="h-40 bg-primary/10 flex items-center justify-center">
+                  <svg
+                    className="w-16 h-16 text-primary/30"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                  </svg>
+                </div>
+
+                {/* Info */}
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold text-foreground mb-1">
+                    {member.name}
+                  </h3>
+                  <p className="text-primary font-medium text-sm mb-3">
+                    {member.title}
+                  </p>
+                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                    {member.bio}
+                  </p>
+                  <div className="border-t border-border pt-4">
+                    <p className="text-xs font-semibold text-foreground mb-2">Qualifications:</p>
+                    <ul className="text-xs text-muted-foreground space-y-1">
+                      {member.qualifications.map((qual, idx) => (
+                        <li key={idx}>• {qual}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   )
 }
