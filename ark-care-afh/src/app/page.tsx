@@ -92,10 +92,10 @@ export default function Home() {
       </section>
 
       {/* Key Benefits Section - Redesigned */}
-      <section className="py-20 md:py-32 bg-gradient-to-br from-slate-50 via-white to-blue-50">
+      <section className="py-20 md:py-32 bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <span className="inline-block px-4 py-2 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
+            <span className="inline-block px-4 py-2 bg-primary/10 dark:bg-primary/20 text-primary text-sm font-semibold rounded-full mb-4">
               Why Choose Us
             </span>
             <h2 className="text-4xl md:text-5xl font-black text-foreground mb-6 leading-tight">
@@ -108,10 +108,10 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-6">
             {/* Benefit 1 */}
-            <div className="group relative bg-white rounded-2xl p-8 shadow-sm border border-border/50 hover:shadow-xl transition-all duration-300 overflow-hidden">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full -mr-12 -mt-12 group-hover:scale-150 transition-transform duration-500" />
+            <div className="group relative bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-sm border border-border/50 dark:border-slate-700 hover:shadow-xl dark:hover:shadow-xl dark:hover:shadow-primary/20 transition-all duration-300 overflow-hidden">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 dark:bg-primary/10 rounded-full -mr-12 -mt-12 group-hover:scale-150 transition-transform duration-500" />
               <div className="relative">
-                <div className="w-14 h-14 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-14 h-14 bg-gradient-to-br from-primary/20 to-primary/10 dark:from-primary/30 dark:to-primary/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
@@ -126,10 +126,10 @@ export default function Home() {
             </div>
 
             {/* Benefit 2 */}
-            <div className="group relative bg-white rounded-2xl p-8 shadow-sm border border-border/50 hover:shadow-xl transition-all duration-300 overflow-hidden md:translate-y-6">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full -mr-12 -mt-12 group-hover:scale-150 transition-transform duration-500" />
+            <div className="group relative bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-sm border border-border/50 dark:border-slate-700 hover:shadow-xl dark:hover:shadow-xl dark:hover:shadow-primary/20 transition-all duration-300 overflow-hidden md:translate-y-6">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 dark:bg-primary/10 rounded-full -mr-12 -mt-12 group-hover:scale-150 transition-transform duration-500" />
               <div className="relative">
-                <div className="w-14 h-14 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-14 h-14 bg-gradient-to-br from-primary/20 to-primary/10 dark:from-primary/30 dark:to-primary/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-3m0 0l7-4 7 4M5 9v10a1 1 0 001 1h12a1 1 0 001-1V9m-9 9l4-4m0 0l4 4m-4-4v4" />
                   </svg>
@@ -144,10 +144,10 @@ export default function Home() {
             </div>
 
             {/* Benefit 3 */}
-            <div className="group relative bg-white rounded-2xl p-8 shadow-sm border border-border/50 hover:shadow-xl transition-all duration-300 overflow-hidden">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full -mr-12 -mt-12 group-hover:scale-150 transition-transform duration-500" />
+            <div className="group relative bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-sm border border-border/50 dark:border-slate-700 hover:shadow-xl dark:hover:shadow-xl dark:hover:shadow-primary/20 transition-all duration-300 overflow-hidden">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 dark:bg-primary/10 rounded-full -mr-12 -mt-12 group-hover:scale-150 transition-transform duration-500" />
               <div className="relative">
-                <div className="w-14 h-14 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-14 h-14 bg-gradient-to-br from-primary/20 to-primary/10 dark:from-primary/30 dark:to-primary/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
