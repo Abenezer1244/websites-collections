@@ -212,3 +212,71 @@ html:not(.dark) section[data-section="why-choose"] {
 html.dark section[data-section="why-choose"] {
   background-color: black !important;
 }
+
+/* Why Choose Section Animations */
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUpFadeDelay {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes iconBounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+
+@keyframes cardLift {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.animate-slideup {
+  animation: slideUpFade 0.7s ease-out forwards;
+}
+
+.animate-slideup-delay-1 {
+  animation: slideUpFadeDelay 0.7s ease-out 0.15s forwards;
+  opacity: 0;
+}
+
+.animate-slideup-delay-2 {
+  animation: slideUpFadeDelay 0.7s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.animate-slideup-delay-3 {
+  animation: slideUpFadeDelay 0.7s ease-out 0.45s forwards;
+  opacity: 0;
+}
+
+.group:hover .animate-icon-bounce {
+  animation: iconBounce 0.6s ease-in-out infinite;
+}
+
+.group:hover {
+  animation: cardLift 2s ease-in-out infinite;
+}
