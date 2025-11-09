@@ -92,7 +92,7 @@ export default function Home() {
       </section>
 
       {/* Key Benefits Section - Redesigned */}
-      <section className="py-20 md:py-32 bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+      <section className="py-20 md:py-32 bg-white dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <span className="inline-block px-4 py-2 bg-primary/10 dark:bg-primary/20 text-primary text-sm font-semibold rounded-full mb-4">
@@ -108,7 +108,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-6">
             {/* Benefit 1 */}
-            <div className="group relative bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-sm border border-border/50 dark:border-slate-700 hover:shadow-xl dark:hover:shadow-xl dark:hover:shadow-primary/20 transition-all duration-300 overflow-hidden">
+            <div className="group relative bg-slate-50 dark:bg-slate-800 rounded-2xl p-8 shadow-sm border border-slate-200 dark:border-slate-700 hover:shadow-xl dark:hover:shadow-xl dark:hover:shadow-primary/20 transition-all duration-300 overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 dark:bg-primary/10 rounded-full -mr-12 -mt-12 group-hover:scale-150 transition-transform duration-500" />
               <div className="relative">
                 <div className="w-14 h-14 bg-gradient-to-br from-primary/20 to-primary/10 dark:from-primary/30 dark:to-primary/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -126,7 +126,7 @@ export default function Home() {
             </div>
 
             {/* Benefit 2 */}
-            <div className="group relative bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-sm border border-border/50 dark:border-slate-700 hover:shadow-xl dark:hover:shadow-xl dark:hover:shadow-primary/20 transition-all duration-300 overflow-hidden md:translate-y-6">
+            <div className="group relative bg-slate-50 dark:bg-slate-800 rounded-2xl p-8 shadow-sm border border-slate-200 dark:border-slate-700 hover:shadow-xl dark:hover:shadow-xl dark:hover:shadow-primary/20 transition-all duration-300 overflow-hidden md:translate-y-6">
               <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 dark:bg-primary/10 rounded-full -mr-12 -mt-12 group-hover:scale-150 transition-transform duration-500" />
               <div className="relative">
                 <div className="w-14 h-14 bg-gradient-to-br from-primary/20 to-primary/10 dark:from-primary/30 dark:to-primary/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -144,7 +144,7 @@ export default function Home() {
             </div>
 
             {/* Benefit 3 */}
-            <div className="group relative bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-sm border border-border/50 dark:border-slate-700 hover:shadow-xl dark:hover:shadow-xl dark:hover:shadow-primary/20 transition-all duration-300 overflow-hidden">
+            <div className="group relative bg-slate-50 dark:bg-slate-800 rounded-2xl p-8 shadow-sm border border-slate-200 dark:border-slate-700 hover:shadow-xl dark:hover:shadow-xl dark:hover:shadow-primary/20 transition-all duration-300 overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 dark:bg-primary/10 rounded-full -mr-12 -mt-12 group-hover:scale-150 transition-transform duration-500" />
               <div className="relative">
                 <div className="w-14 h-14 bg-gradient-to-br from-primary/20 to-primary/10 dark:from-primary/30 dark:to-primary/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
