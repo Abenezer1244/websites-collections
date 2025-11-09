@@ -23,8 +23,8 @@ export function Navigation() {
 
       {/* Main Navigation Bar - Centered Container */}
       <div className="fixed top-0 left-0 right-0 z-50 pointer-events-none">
-        <div className="h-full max-w-7xl mx-auto px-2 sm:px-3 pt-5 md:pt-6 flex items-center justify-center w-full">
-          <div className="flex items-center gap-2 md:gap-2.5">
+        <div className="h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 md:pt-6 flex items-center justify-center w-full">
+          <div className="flex items-center gap-3 md:gap-4">
             {/* Logo - Left Side */}
             <div className="pointer-events-auto flex-shrink-0">
               <Link
@@ -39,7 +39,7 @@ export function Navigation() {
             </div>
 
             {/* Left Spacer */}
-            <div className="flex-none w-12 pointer-events-none"></div>
+            <div className="flex-none w-16 pointer-events-none"></div>
 
             {/* Floating Glassmorphic Navbar - Center */}
             <div className="pointer-events-auto max-w-4xl w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-full shadow-2xl px-6 md:px-10 py-3 md:py-4 animate-float flex-shrink-0">
@@ -147,7 +147,7 @@ export function Navigation() {
             </div>
 
             {/* Right Spacer */}
-            <div className="flex-none w-12 pointer-events-none"></div>
+            <div className="flex-none w-16 pointer-events-none"></div>
 
             {/* Theme Toggle - Right Side */}
             <div className="pointer-events-auto flex-shrink-0 hidden md:block">
