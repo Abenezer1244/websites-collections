@@ -21,10 +21,10 @@ export function Navigation() {
         <div className="h-32 md:h-40"></div>
       </nav>
 
-      {/* Main Navigation Bar - Aligned Container */}
+      {/* Main Navigation Bar - Centered Container */}
       <div className="fixed top-0 left-0 right-0 z-50 pointer-events-none">
-        <div className="h-full flex items-center px-2 sm:px-3 pt-5 md:pt-6">
-          <div className="w-full flex items-center gap-2 md:gap-2.5">
+        <div className="h-full flex items-center justify-center px-2 sm:px-3 pt-5 md:pt-6">
+          <div className="flex items-center gap-2 md:gap-2.5">
             {/* Logo - Left Side */}
             <div className="pointer-events-auto flex-shrink-0">
               <Link
