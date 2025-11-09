@@ -23,26 +23,25 @@ export function Navigation() {
 
       {/* Main Navigation Bar - Centered Container */}
       <div className="fixed top-0 left-0 right-0 z-50 pointer-events-none">
-        <div className="h-full px-4 sm:px-6 lg:px-8 pt-5 md:pt-6 flex items-center justify-center w-full">
-          <div className="flex items-center gap-3 md:gap-4">
-            {/* Logo - Left Side */}
-            <div className="pointer-events-auto flex-shrink-0">
-              <Link
-                href="/"
-                className="flex items-center gap-1.5 md:gap-2 font-bold text-xs md:text-sm text-white group transition-transform hover:scale-105"
-              >
-                <div className="w-8 md:w-10 h-8 md:h-10 bg-white/20 backdrop-blur rounded-lg flex items-center justify-center font-bold text-white text-xs md:text-sm hover:bg-white/30 transition-colors">
-                  A
-                </div>
-                <span className="hidden sm:inline">Ark</span>
-              </Link>
-            </div>
+        <div className="h-full px-4 sm:px-6 lg:px-8 pt-5 md:pt-6 flex items-center w-full">
+          {/* Logo - Left Side */}
+          <div className="pointer-events-auto flex-shrink-0">
+            <Link
+              href="/"
+              className="flex items-center gap-1.5 md:gap-2 font-bold text-xs md:text-sm text-white group transition-transform hover:scale-105"
+            >
+              <div className="w-8 md:w-10 h-8 md:h-10 bg-white/20 backdrop-blur rounded-lg flex items-center justify-center font-bold text-white text-xs md:text-sm hover:bg-white/30 transition-colors">
+                A
+              </div>
+              <span className="hidden sm:inline">Ark</span>
+            </Link>
+          </div>
 
-            {/* Left Spacer */}
-            <div className="flex-none w-16 pointer-events-none"></div>
+          {/* Center spacer for navbar - flex-1 to push navbar to center */}
+          <div className="flex-1 pointer-events-none"></div>
 
-            {/* Floating Glassmorphic Navbar - Center */}
-            <div className="pointer-events-auto max-w-4xl w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-full shadow-2xl px-6 md:px-10 py-3 md:py-4 animate-float flex-shrink-0">
+          {/* Floating Glassmorphic Navbar - Center */}
+          <div className="pointer-events-auto max-w-4xl bg-white/10 backdrop-blur-md border border-white/20 rounded-full shadow-2xl px-6 md:px-10 py-3 md:py-4 animate-float flex-shrink-0">
               <div className="hidden lg:flex items-center justify-center gap-6 md:gap-8">
                 {/* Left Navigation Links */}
                 <Link
@@ -146,26 +145,25 @@ export function Navigation() {
               )}
             </div>
 
-            {/* Right Spacer */}
-            <div className="flex-none w-16 pointer-events-none"></div>
+          {/* Right spacer for balance - flex-1 to push buttons to right */}
+          <div className="flex-1 pointer-events-none"></div>
 
-            {/* Theme Toggle - Right Side */}
-            <div className="pointer-events-auto flex-shrink-0 hidden md:block">
-              <ModeToggle />
-            </div>
-
-            {/* Call Button - Right Side */}
-            <a
-              href="tel:+12064553644"
-              className="pointer-events-auto flex-shrink-0 hidden md:inline-flex items-center justify-center w-9 h-9 md:w-10 md:h-10 bg-white/20 hover:bg-white/30 text-white rounded-full transition-all duration-200 border border-white/30"
-              aria-label="Call now"
-              title="Call Now"
-            >
-              <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-            </a>
+          {/* Theme Toggle - Right Side */}
+          <div className="pointer-events-auto flex-shrink-0 hidden md:block">
+            <ModeToggle />
           </div>
+
+          {/* Call Button - Right Side */}
+          <a
+            href="tel:+12064553644"
+            className="pointer-events-auto flex-shrink-0 hidden md:inline-flex items-center justify-center w-9 h-9 md:w-10 md:h-10 bg-white/20 hover:bg-white/30 text-white rounded-full transition-all duration-200 border border-white/30"
+            aria-label="Call now"
+            title="Call Now"
+          >
+            <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+          </a>
         </div>
       </div>
     </>
