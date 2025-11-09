@@ -272,12 +272,14 @@ export default function Home() {
                 <span className="text-foreground font-medium">Customized activities & meaningful day programs</span>
               </li>
             </ul>
-            <Link
-              href="/services"
-              className="inline-block px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors"
-            >
-              View All Services
-            </Link>
+            <div className="flex justify-center">
+              <Link
+                href="/services"
+                className="px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+              >
+                View All Services
+              </Link>
+            </div>
           </div>
         </div>
       </section>
