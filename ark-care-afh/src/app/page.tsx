@@ -137,13 +137,13 @@ export default function Home() {
               <div className="order-1 md:order-2">
                 <div className="relative flex items-center justify-center min-h-96">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 rounded-3xl blur-2xl" />
-                  <div className="relative bg-gradient-to-br from-primary/15 to-transparent rounded-3xl p-8 border border-primary/20 dark:border-primary/10 w-full flex items-center justify-center">
+                  <div className="relative bg-gradient-to-br from-primary/15 to-transparent rounded-3xl border border-primary/20 dark:border-primary/10 w-full h-96 flex items-center justify-center">
                     <Image
                       src="/care-247.png"
                       alt="24/7 Care"
-                      width={300}
-                      height={300}
-                      className="w-full h-auto max-w-xs object-contain"
+                      width={400}
+                      height={400}
+                      className="w-full h-full object-contain p-4"
                     />
                   </div>
                 </div>
@@ -155,13 +155,13 @@ export default function Home() {
               <div>
                 <div className="relative flex items-center justify-center min-h-96">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 rounded-3xl blur-2xl" />
-                  <div className="relative bg-gradient-to-br from-primary/15 to-transparent rounded-3xl p-8 border border-primary/20 dark:border-primary/10 w-full flex items-center justify-center">
+                  <div className="relative bg-gradient-to-br from-primary/15 to-transparent rounded-3xl border border-primary/20 dark:border-primary/10 w-full h-96 flex items-center justify-center">
                     <Image
                       src="/homy.webp"
                       alt="Warm & Welcoming Home"
-                      width={300}
-                      height={300}
-                      className="w-full h-auto max-w-xs object-contain"
+                      width={400}
+                      height={400}
+                      className="w-full h-full object-contain p-4"
                     />
                   </div>
                 </div>
@@ -218,13 +218,13 @@ export default function Home() {
                 <div className="order-1 md:order-2">
                   <div className="relative flex items-center justify-center min-h-96">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 rounded-3xl blur-2xl" />
-                    <div className="relative bg-gradient-to-br from-primary/15 to-transparent rounded-3xl p-8 border border-primary/20 dark:border-primary/10 w-full flex items-center justify-center">
+                    <div className="relative bg-gradient-to-br from-primary/15 to-transparent rounded-3xl border border-primary/20 dark:border-primary/10 w-full h-96 flex items-center justify-center">
                       <Image
                         src="/activity-engagement.png"
                         alt="Activity & Engagement"
-                        width={300}
-                        height={300}
-                        className="w-full h-auto max-w-xs object-contain"
+                        width={400}
+                        height={400}
+                        className="w-full h-full object-contain p-4"
                       />
                     </div>
                   </div>
