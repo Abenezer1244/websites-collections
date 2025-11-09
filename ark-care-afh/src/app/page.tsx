@@ -72,11 +72,11 @@ export default function Home() {
 
         {/* Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          <div className="max-w-4xl">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-8 leading-tight tracking-tight">
               Compassionate Care in a Home Environment
             </h1>
-            <p className="text-lg md:text-xl mb-8 opacity-90">
+            <p className="text-base md:text-lg mb-10 opacity-80 max-w-2xl leading-relaxed">
               Ark Care AFH provides personalized adult family home care services in Algona, WA with specialized support for mental health, dementia, and developmental disabilities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
