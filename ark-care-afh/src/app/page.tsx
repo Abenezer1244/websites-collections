@@ -95,14 +95,14 @@ export default function Home() {
       <section className="py-20 md:py-40" data-section="why-choose">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
-          <div className="mb-24 animate-slideup">
+          <div className="mb-24 animate-slideup text-center">
             <span className="inline-block px-4 py-2 bg-primary/10 dark:bg-primary/20 text-primary text-sm font-semibold rounded-full mb-6">
               Why Choose Us
             </span>
-            <h2 className="text-5xl md:text-6xl font-black text-foreground mb-8 leading-tight max-w-3xl">
+            <h2 className="text-5xl md:text-6xl font-black text-foreground mb-8 leading-tight max-w-4xl mx-auto">
               Why Choose Ark Care AFH?
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               We're committed to providing compassionate, high-quality care that promotes dignity and independence.
             </p>
           </div>
