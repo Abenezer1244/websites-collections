@@ -81,12 +81,6 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/contact"
-                className="inline-block px-8 py-3 bg-white text-primary font-semibold rounded-lg hover:bg-gray-50 transition-colors text-center"
-              >
-                Schedule a Tour
-              </Link>
-              <Link
                 href="/services"
                 className="inline-block px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors text-center"
               >
