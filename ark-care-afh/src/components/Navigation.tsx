@@ -33,7 +33,7 @@ export function Navigation() {
               <div className="w-8 md:w-10 h-8 md:h-10 bg-white/20 backdrop-blur rounded-lg flex items-center justify-center font-bold text-white text-xs md:text-sm hover:bg-white/30 transition-colors">
                 A
               </div>
-              <span className="hidden sm:inline">Ark</span>
+              <span className="hidden sm:inline">Ark Care</span>
             </Link>
           </div>
 
@@ -41,7 +41,7 @@ export function Navigation() {
           <div className="flex-1 pointer-events-none"></div>
 
           {/* Floating Glassmorphic Navbar - Center */}
-          <div className="pointer-events-auto max-w-5xl bg-white/10 backdrop-blur-md border border-white/20 rounded-full shadow-2xl px-6 md:px-10 py-3 md:py-4 animate-float flex-shrink-0">
+          <div className="pointer-events-auto max-w-6xl bg-white/10 backdrop-blur-md border border-white/20 rounded-full shadow-2xl px-6 md:px-10 py-3 md:py-4 animate-float flex-shrink-0">
               <div className="hidden lg:flex items-center justify-center gap-6 md:gap-8">
                 {/* Left Navigation Links */}
                 <Link
