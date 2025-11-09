@@ -16,14 +16,9 @@ export function Navigation() {
 
   return (
     <>
-      {/* Fixed Navbar Container for spacing */}
-      <nav className="fixed top-0 left-0 right-0 z-40 pointer-events-none">
-        <div className="h-32 md:h-40"></div>
-      </nav>
-
-      {/* Main Navigation Bar - Aligned Container */}
-      <div className="fixed top-0 left-0 right-0 z-50 pointer-events-none">
-        <div className="h-full flex items-center px-2 sm:px-3 pt-5 md:pt-6">
+      {/* Main Navigation Bar - Centered Vertically */}
+      <div className="fixed top-1/2 left-0 right-0 z-50 pointer-events-none -translate-y-1/2">
+        <div className="flex items-center px-2 sm:px-3">
           <div className="w-full flex items-center gap-2 md:gap-2.5">
             {/* Logo - Left Side */}
             <div className="pointer-events-auto flex-shrink-0">
@@ -43,7 +38,7 @@ export function Navigation() {
 
             {/* Floating Glassmorphic Navbar - Center */}
             <div className="pointer-events-auto max-w-4xl w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-full shadow-2xl px-6 md:px-10 py-3 md:py-4 animate-float flex-shrink-0">
-              <div className="hidden lg:flex items-center justify-between gap-6 md:gap-8">
+              <div className="hidden lg:flex items-center justify-center gap-6 md:gap-8">
                 {/* Left Navigation Links */}
                 <Link
                   href="/about"
