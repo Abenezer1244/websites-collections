@@ -42,7 +42,7 @@ export function Navigation() {
             <div className="flex-1 pointer-events-none"></div>
 
             {/* Floating Glassmorphic Navbar - Center */}
-            <div className="pointer-events-auto max-w-4xl bg-white/10 backdrop-blur-md border border-white/20 rounded-full shadow-2xl px-3 md:px-6 py-2.5 md:py-3 animate-float flex-shrink-0">
+            <div className="pointer-events-auto max-w-4xl bg-white/10 backdrop-blur-md border border-white/20 rounded-full shadow-2xl px-6 md:px-10 py-3 md:py-4 animate-float flex-shrink-0">
               <div className="hidden lg:flex items-center justify-center gap-4 md:gap-6">
                 {/* Left Navigation Links */}
                 <Link
