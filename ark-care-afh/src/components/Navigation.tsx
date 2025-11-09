@@ -16,9 +16,14 @@ export function Navigation() {
 
   return (
     <>
-      {/* Main Navigation Bar - Centered Vertically */}
-      <div className="fixed top-1/2 left-0 right-0 z-50 pointer-events-none -translate-y-1/2">
-        <div className="flex items-center px-2 sm:px-3">
+      {/* Fixed Navbar Container for spacing */}
+      <nav className="fixed top-0 left-0 right-0 z-40 pointer-events-none">
+        <div className="h-32 md:h-40"></div>
+      </nav>
+
+      {/* Main Navigation Bar - Aligned Container */}
+      <div className="fixed top-0 left-0 right-0 z-50 pointer-events-none">
+        <div className="h-full flex items-center px-2 sm:px-3 pt-5 md:pt-6">
           <div className="w-full flex items-center gap-2 md:gap-2.5">
             {/* Logo - Left Side */}
             <div className="pointer-events-auto flex-shrink-0">
