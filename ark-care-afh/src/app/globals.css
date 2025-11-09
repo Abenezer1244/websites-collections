@@ -203,3 +203,12 @@ body {
     animation: floatingNavbar 3s ease-in-out infinite;
   }
 }
+
+/* Why Choose section - light/dark mode backgrounds */
+html:not(.dark) section[data-section="why-choose"] {
+  background-color: white !important;
+}
+
+html.dark section[data-section="why-choose"] {
+  background-color: black !important;
+}

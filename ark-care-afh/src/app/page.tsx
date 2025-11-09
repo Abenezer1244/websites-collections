@@ -92,7 +92,7 @@ export default function Home() {
       </section>
 
       {/* Key Benefits Section - Redesigned */}
-      <section className="py-20 md:py-32 bg-white dark:bg-black">
+      <section className="py-20 md:py-32" data-section="why-choose">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <span className="inline-block px-4 py-2 bg-primary/10 dark:bg-primary/20 text-primary text-sm font-semibold rounded-full mb-4">
