@@ -112,11 +112,6 @@ export default function Home() {
             {/* Feature 1 - Left Layout */}
             <div className="grid md:grid-cols-2 gap-12 items-center animate-slideup-delay-1">
               <div className="order-2 md:order-1">
-                <div className="w-24 h-24 bg-gradient-to-br from-primary/20 to-primary/10 dark:from-primary/30 dark:to-primary/20 rounded-3xl flex items-center justify-center mb-8">
-                  <svg className="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
                 <h3 className="text-4xl font-black text-foreground mb-5">
                   24/7 Professional Care
                 </h3>
@@ -165,11 +160,6 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <div className="w-24 h-24 bg-gradient-to-br from-primary/20 to-primary/10 dark:from-primary/30 dark:to-primary/20 rounded-3xl flex items-center justify-center mb-8">
-                  <svg className="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-3m0 0l7-4 7 4M5 9v10a1 1 0 001 1h12a1 1 0 001-1V9m-9 9l4-4m0 0l4 4m-4-4v4" />
-                  </svg>
-                </div>
                 <h3 className="text-4xl font-black text-foreground mb-5">
                   Home-Like Environment
                 </h3>
@@ -197,11 +187,6 @@ export default function Home() {
             <div className="animate-slideup-delay-3">
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                  <div className="w-24 h-24 bg-gradient-to-br from-primary/20 to-primary/10 dark:from-primary/30 dark:to-primary/20 rounded-3xl flex items-center justify-center mb-8">
-                    <svg className="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
                   <h3 className="text-4xl font-black text-foreground mb-5">
                     Activity & Engagement
                   </h3>
