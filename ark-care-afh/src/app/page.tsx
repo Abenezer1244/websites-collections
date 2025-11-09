@@ -91,62 +91,74 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Key Benefits Section */}
-      <section className="py-16 md:py-24 bg-white">
+      {/* Key Benefits Section - Redesigned */}
+      <section className="py-20 md:py-32 bg-gradient-to-br from-slate-50 via-white to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <div className="text-center mb-20">
+            <span className="inline-block px-4 py-2 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
+              Why Choose Us
+            </span>
+            <h2 className="text-4xl md:text-5xl font-black text-foreground mb-6 leading-tight">
               Why Choose Ark Care AFH?
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               We're committed to providing compassionate, high-quality care that promotes dignity and independence.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-6">
             {/* Benefit 1 */}
-            <div className="bg-card rounded-lg shadow-sm border border-border p-8 hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-                </svg>
+            <div className="group relative bg-white rounded-2xl p-8 shadow-sm border border-border/50 hover:shadow-xl transition-all duration-300 overflow-hidden">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full -mr-12 -mt-12 group-hover:scale-150 transition-transform duration-500" />
+              <div className="relative">
+                <div className="w-14 h-14 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-foreground mb-3">
+                  24/7 Professional Care
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Our experienced staff provides round-the-clock support and personalized attention to meet your loved one's unique needs.
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-2">
-                24/7 Professional Care
-              </h3>
-              <p className="text-muted-foreground">
-                Our experienced staff provides round-the-clock support and personalized attention to meet your loved one's unique needs.
-              </p>
             </div>
 
             {/* Benefit 2 */}
-            <div className="bg-card rounded-lg shadow-sm border border-border p-8 hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-3m0 0l7-4 7 4M5 9v10a1 1 0 001 1h12a1 1 0 001-1V9m-9 9l4-4m0 0l4 4m-4-4v4" />
-                </svg>
+            <div className="group relative bg-white rounded-2xl p-8 shadow-sm border border-border/50 hover:shadow-xl transition-all duration-300 overflow-hidden md:translate-y-6">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full -mr-12 -mt-12 group-hover:scale-150 transition-transform duration-500" />
+              <div className="relative">
+                <div className="w-14 h-14 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-3m0 0l7-4 7 4M5 9v10a1 1 0 001 1h12a1 1 0 001-1V9m-9 9l4-4m0 0l4 4m-4-4v4" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-foreground mb-3">
+                  Home-Like Environment
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Our residence provides a warm, welcoming home setting that promotes comfort, dignity, and a sense of belonging.
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-2">
-                Home-Like Environment
-              </h3>
-              <p className="text-muted-foreground">
-                Our residence provides a warm, welcoming home setting that promotes comfort, dignity, and a sense of belonging.
-              </p>
             </div>
 
             {/* Benefit 3 */}
-            <div className="bg-card rounded-lg shadow-sm border border-border p-8 hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10h-2m0 0H8m4 0v2m0-2v-2m6 6l-1.5-1.5M7.5 18l-3-3m12-6l-3 3m3-3l1.5-1.5m-9 9l-1.5 1.5" />
-                </svg>
+            <div className="group relative bg-white rounded-2xl p-8 shadow-sm border border-border/50 hover:shadow-xl transition-all duration-300 overflow-hidden">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full -mr-12 -mt-12 group-hover:scale-150 transition-transform duration-500" />
+              <div className="relative">
+                <div className="w-14 h-14 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-foreground mb-3">
+                  Activity & Engagement
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  We provide meaningful activities and social engagement to support physical and mental well-being.
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-2">
-                Activity & Engagement
-              </h3>
-              <p className="text-muted-foreground">
-                We provide meaningful activities and social engagement to support physical and mental well-being.
-              </p>
             </div>
           </div>
         </div>
