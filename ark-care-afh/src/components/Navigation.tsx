@@ -23,7 +23,7 @@ export function Navigation() {
 
       {/* Main Navigation Bar - Centered Container */}
       <div className="fixed top-0 left-0 right-0 z-50 pointer-events-none">
-        <div className="h-full flex items-center justify-center px-2 sm:px-3 pt-5 md:pt-6">
+        <div className="h-full max-w-7xl mx-auto px-2 sm:px-3 pt-5 md:pt-6 flex items-center justify-center w-full">
           <div className="flex items-center gap-2 md:gap-2.5">
             {/* Logo - Left Side */}
             <div className="pointer-events-auto flex-shrink-0">
