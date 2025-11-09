@@ -274,21 +274,10 @@ export default function Home() {
             </ul>
             <Link
               href="/services"
-              className="inline-block px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors mb-12"
+              className="inline-block px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors"
             >
               View All Services
             </Link>
-          </div>
-
-          {/* Image */}
-          <div className="relative flex items-center justify-center">
-            <Image
-              src="/comprehensive-care.png"
-              alt="Comprehensive Care Services"
-              width={600}
-              height={400}
-              className="w-full h-auto rounded-lg"
-            />
           </div>
         </div>
       </section>
