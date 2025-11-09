@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { AnimatedBlob, AnimatedBlobSecondary } from '@/components/AnimatedBlob'
 import { JsonLd } from '@/components/JsonLd'
 import { pageMetadata, generateWebPageSchema, generateBreadcrumbSchema, siteConfig } from '@/lib/seo'
@@ -134,13 +135,16 @@ export default function Home() {
                 </ul>
               </div>
               <div className="order-1 md:order-2">
-                <div className="relative">
+                <div className="relative flex items-center justify-center min-h-96">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 rounded-3xl blur-2xl" />
-                  <div className="relative bg-gradient-to-br from-primary/15 to-transparent rounded-3xl p-12 border border-primary/20 dark:border-primary/10 min-h-96 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-7xl font-black text-primary/20 mb-4">01</div>
-                      <p className="text-lg text-muted-foreground">Round-the-Clock Support</p>
-                    </div>
+                  <div className="relative bg-gradient-to-br from-primary/15 to-transparent rounded-3xl p-8 border border-primary/20 dark:border-primary/10 w-full flex items-center justify-center">
+                    <Image
+                      src="/care-247.png"
+                      alt="24/7 Care"
+                      width={300}
+                      height={300}
+                      className="w-full h-auto max-w-xs object-contain"
+                    />
                   </div>
                 </div>
               </div>
