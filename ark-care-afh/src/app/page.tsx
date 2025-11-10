@@ -67,10 +67,10 @@ export default function Home() {
         {/* Dark Overlay for Text Visibility */}
         <div className="absolute inset-0 bg-black/40 z-5" />
 
-        {/* Animated Background Orbs */}
-        <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-primary/40 to-primary/20 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-10" />
-        <div className="absolute bottom-32 left-10 w-80 h-80 bg-gradient-to-br from-cyan-400/35 to-cyan-500/15 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-10" style={{animationDelay: '0.5s'}} />
-        <div className="absolute top-1/2 right-1/3 w-72 h-72 bg-gradient-to-br from-blue-400/30 to-blue-400/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-10" style={{animationDelay: '1s'}} />
+        {/* Animated Background Orbs - Large and Vibrant */}
+        <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-gradient-to-br from-primary/60 to-primary/30 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-10" />
+        <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-gradient-to-br from-cyan-400/50 to-cyan-500/25 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-10" style={{animationDelay: '0.5s'}} />
+        <div className="absolute top-1/3 -right-20 w-[450px] h-[450px] bg-gradient-to-br from-blue-500/50 to-blue-400/25 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-10" style={{animationDelay: '1s'}} />
 
         {/* Animated Blobs */}
         <AnimatedBlob position="top-right" size="lg" opacity="medium" />
