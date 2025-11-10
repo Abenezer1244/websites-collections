@@ -9,9 +9,9 @@ export function Footer() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-gradient-to-br from-primary/20 to-primary/5 rounded-full blur-3xl pointer-events-none z-0" style={{opacity: 0.5}} />
 
       {/* Main Footer Content */}
-      <div className="relative z-10 pt-20 pb-12">
+      <div className="relative z-10 pt-12 pb-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
             {/* Brand Section */}
             <div>
               <div className="flex items-center gap-3 mb-6">
@@ -91,7 +91,7 @@ export function Footer() {
           </div>
 
           {/* Divider */}
-          <div className="h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent mb-12" />
+          <div className="h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent mb-8" />
 
           {/* Bottom Section */}
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
@@ -115,7 +115,7 @@ export function Footer() {
 
       {/* Footer Bottom Bar */}
       <div className="relative z-10 border-t border-slate-800/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <p className="text-center text-slate-500 text-xs">
             Ark Care AFH is a state-licensed adult family home providing compassionate, personalized care to residents in Algona, Washington.
           </p>

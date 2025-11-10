@@ -298,26 +298,26 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section - Grid Cards */}
-      <section className="relative py-16 md:py-24 bg-gradient-to-b from-white via-slate-50 to-white overflow-hidden">
+      <section className="relative py-12 md:py-16 bg-gradient-to-b from-white via-slate-50 to-white overflow-hidden">
         {/* Animated Background Orbs */}
         <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-gradient-to-br from-primary/15 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.2s'}} />
         <div className="absolute -bottom-40 -right-40 w-[450px] h-[450px] bg-gradient-to-br from-cyan-400/10 to-cyan-500/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.6s'}} />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="mb-16 text-center animate-slideup">
-            <span className="inline-block px-4 py-2 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-6">
+          <div className="mb-10 text-center animate-slideup">
+            <span className="inline-block px-4 py-2 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
               Client Success Stories
             </span>
-            <h2 className="text-4xl md:text-5xl font-black text-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-black text-foreground mb-2">
               Stories From Our Community
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base text-muted-foreground max-w-2xl mx-auto">
               Hear directly from residents and families about their experiences at Ark Care AFH
             </p>
           </div>
 
           {/* Testimonials Grid */}
-          <div className="grid md:grid-cols-3 gap-8 animate-slideup-delay-1">
+          <div className="grid md:grid-cols-3 gap-6 animate-slideup-delay-1">
             {[
               {
                 text: "Ark Care AFH has been wonderful for my mother. She feels at home here, the staff treats her with genuine care and respect.",
@@ -366,7 +366,7 @@ export default function Home() {
                 key={index}
                 className="group"
               >
-                <div className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-8 h-full hover:shadow-xl transition-all duration-300 hover:border-primary/40 flex flex-col relative overflow-hidden">
+                <div className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 h-full hover:shadow-xl transition-all duration-300 hover:border-primary/40 flex flex-col relative overflow-hidden">
                   {/* Gradient accent top */}
                   <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${testimonial.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
 
@@ -406,26 +406,26 @@ export default function Home() {
       </section>
 
       {/* FAQ Section - 2 Column Layout */}
-      <section className="relative py-16 md:py-24 bg-slate-900 overflow-hidden">
+      <section className="relative py-12 md:py-16 bg-slate-900 overflow-hidden">
         {/* Animated Background Orbs */}
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gradient-to-br from-cyan-500/20 to-cyan-400/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.3s'}} />
         <div className="absolute bottom-0 left-0 w-[380px] h-[380px] bg-gradient-to-br from-primary/15 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.5s'}} />
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="mb-16 text-center animate-slideup">
-            <span className="inline-block px-4 py-2 bg-primary/20 text-primary text-sm font-semibold rounded-full mb-6">
+          <div className="mb-10 text-center animate-slideup">
+            <span className="inline-block px-4 py-2 bg-primary/20 text-primary text-sm font-semibold rounded-full mb-4">
               Help & Support
             </span>
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-black text-white mb-2">
               Common Questions Answered
             </h2>
-            <p className="text-lg text-slate-300 max-w-2xl mx-auto">
+            <p className="text-base text-slate-300 max-w-2xl mx-auto">
               Get answers to help you make the best decision for your loved one
             </p>
           </div>
 
           {/* 2 Column FAQ Grid */}
-          <div className="grid md:grid-cols-2 gap-8 animate-slideup-delay-1">
+          <div className="grid md:grid-cols-2 gap-6 animate-slideup-delay-1">
             {[
               {
                 q: "What is the admission process?",
@@ -456,7 +456,7 @@ export default function Home() {
                 key={idx}
                 className="group"
               >
-                <div className="bg-gradient-to-br from-slate-800/80 to-slate-900/60 backdrop-blur-sm rounded-2xl border border-slate-700/50 p-8 h-full hover:border-primary/40 transition-all duration-300 hover:shadow-2xl">
+                <div className="bg-gradient-to-br from-slate-800/80 to-slate-900/60 backdrop-blur-sm rounded-2xl border border-slate-700/50 p-6 h-full hover:border-primary/40 transition-all duration-300 hover:shadow-2xl">
                   {/* Number Badge */}
                   <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-primary to-cyan-400 text-slate-900 font-bold mb-4 group-hover:scale-110 transition-transform duration-300">
                     {idx + 1}
@@ -477,8 +477,8 @@ export default function Home() {
           </div>
 
           {/* CTA Box */}
-          <div className="mt-16 text-center animate-slideup-delay-2">
-            <div className="bg-gradient-to-r from-primary/20 to-cyan-500/20 rounded-2xl border border-primary/40 p-10 md:p-14">
+          <div className="mt-10 text-center animate-slideup-delay-2">
+            <div className="bg-gradient-to-r from-primary/20 to-cyan-500/20 rounded-2xl border border-primary/40 p-8">
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
                 Didn't find your answer?
               </h3>
@@ -500,43 +500,43 @@ export default function Home() {
       </section>
 
       {/* CTA Section - Hero Style */}
-      <section className="relative py-20 md:py-28 bg-gradient-to-b from-white to-primary/5 overflow-hidden">
+      <section className="relative py-12 md:py-16 bg-gradient-to-b from-white to-primary/5 overflow-hidden">
         {/* Animated Background Orbs */}
         <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-br from-primary/30 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.1s'}} />
         <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-gradient-to-br from-cyan-400/15 to-cyan-500/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.5s'}} />
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center animate-slideup mb-16">
-            <span className="inline-block px-4 py-2 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-6">
+          <div className="text-center animate-slideup mb-10">
+            <span className="inline-block px-4 py-2 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
               Take Action Today
             </span>
-            <h2 className="text-5xl md:text-6xl font-black text-foreground mb-6 leading-tight">
+            <h2 className="text-3xl md:text-4xl font-black text-foreground mb-4 leading-tight">
               Ready to Give Your Loved One the Care They Deserve?
             </h2>
-            <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
               Ark Care AFH offers the compassionate, professional care your family member needs. Take the first step today—schedule your tour.
             </p>
 
             {/* Main CTA Button */}
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-primary to-cyan-500 text-white font-bold text-lg rounded-xl hover:shadow-2xl transition-all duration-300 shadow-lg hover:scale-105 mb-12 group"
+              className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-primary to-cyan-500 text-white font-bold rounded-xl hover:shadow-2xl transition-all duration-300 shadow-lg hover:scale-105 mb-8 group"
             >
               Schedule Your Tour Now
-              <svg className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
             </Link>
           </div>
 
           {/* Three Feature Cards */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16 animate-slideup-delay-1">
+          <div className="grid md:grid-cols-3 gap-6 mb-10 animate-slideup-delay-1">
             <div className="group relative">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-cyan-400 rounded-2xl blur opacity-40 group-hover:opacity-60 transition duration-500" />
-              <div className="relative bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700">
-                <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">👥</div>
-                <h3 className="text-xl font-bold text-foreground mb-3">Expert Care Team</h3>
-                <p className="text-muted-foreground">
+              <div className="relative bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
+                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">👥</div>
+                <h3 className="text-lg font-bold text-foreground mb-2">Expert Care Team</h3>
+                <p className="text-sm text-muted-foreground">
                   Licensed professionals with years of experience in compassionate care and specialized support.
                 </p>
               </div>
@@ -544,10 +544,10 @@ export default function Home() {
 
             <div className="group relative">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl blur opacity-40 group-hover:opacity-60 transition duration-500" />
-              <div className="relative bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700">
-                <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">🏡</div>
-                <h3 className="text-xl font-bold text-foreground mb-3">Home-Like Environment</h3>
-                <p className="text-muted-foreground">
+              <div className="relative bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
+                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">🏡</div>
+                <h3 className="text-lg font-bold text-foreground mb-2">Home-Like Environment</h3>
+                <p className="text-sm text-muted-foreground">
                   A warm, welcoming space where residents feel safe, comfortable, and genuinely cared for.
                 </p>
               </div>
@@ -555,10 +555,10 @@ export default function Home() {
 
             <div className="group relative">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-primary rounded-2xl blur opacity-40 group-hover:opacity-60 transition duration-500" />
-              <div className="relative bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700">
-                <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">💙</div>
-                <h3 className="text-xl font-bold text-foreground mb-3">Personalized Care Plans</h3>
-                <p className="text-muted-foreground">
+              <div className="relative bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
+                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">💙</div>
+                <h3 className="text-lg font-bold text-foreground mb-2">Personalized Care Plans</h3>
+                <p className="text-sm text-muted-foreground">
                   Customized services tailored to each resident's unique needs, preferences, and health requirements.
                 </p>
               </div>
@@ -567,7 +567,7 @@ export default function Home() {
 
           {/* Bottom CTA Row */}
           <div className="text-center animate-slideup-delay-2">
-            <p className="text-muted-foreground mb-6 text-lg">
+            <p className="text-muted-foreground mb-4 text-sm">
               Have questions? Contact us anytime.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
