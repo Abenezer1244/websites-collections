@@ -109,10 +109,10 @@ export default function Home() {
             <span className="inline-block px-4 py-2 bg-primary/10 dark:bg-primary/20 text-primary text-sm font-semibold rounded-full mb-6">
               Why Choose Us
             </span>
-            <h2 className="text-5xl md:text-6xl font-black text-foreground mb-8 leading-tight max-w-4xl mx-auto">
+            <h2 className="text-5xl md:text-6xl font-black text-slate-900 dark:text-white mb-8 leading-tight max-w-4xl mx-auto">
               Why Choose Ark Care AFH?
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl text-slate-700 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
               We're committed to providing compassionate, high-quality care that promotes dignity and independence.
             </p>
           </div>
@@ -122,24 +122,24 @@ export default function Home() {
             {/* Feature 1 - Left Layout */}
             <div className="grid md:grid-cols-2 gap-12 items-center animate-slideup-delay-1">
               <div className="order-2 md:order-1">
-                <h3 className="text-4xl font-black text-foreground mb-5">
+                <h3 className="text-4xl font-black text-slate-900 dark:text-white mb-5">
                   24/7 Professional Care
                 </h3>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
                   Our experienced staff provides round-the-clock support and personalized attention to meet your loved one's unique needs. We maintain the highest standards of care quality.
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-primary" />
-                    <span className="text-foreground font-medium">Licensed nursing professionals</span>
+                    <span className="text-slate-900 dark:text-white font-medium">Licensed nursing professionals</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-primary" />
-                    <span className="text-foreground font-medium">Emergency response systems</span>
+                    <span className="text-slate-900 dark:text-white font-medium">Emergency response systems</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-primary" />
-                    <span className="text-foreground font-medium">Medication management</span>
+                    <span className="text-slate-900 dark:text-white font-medium">Medication management</span>
                   </li>
                 </ul>
               </div>
@@ -176,24 +176,24 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <h3 className="text-4xl font-black text-foreground mb-5">
+                <h3 className="text-4xl font-black text-slate-900 dark:text-white mb-5">
                   Home-Like Environment
                 </h3>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
                   Our residence provides a warm, welcoming home setting that promotes comfort, dignity, and a sense of belonging. Every detail is thoughtfully designed.
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-primary" />
-                    <span className="text-foreground font-medium">Comfortable private rooms</span>
+                    <span className="text-slate-900 dark:text-white font-medium">Comfortable private rooms</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-primary" />
-                    <span className="text-foreground font-medium">Community gathering spaces</span>
+                    <span className="text-slate-900 dark:text-white font-medium">Community gathering spaces</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-primary" />
-                    <span className="text-foreground font-medium">Beautiful outdoor areas</span>
+                    <span className="text-slate-900 dark:text-white font-medium">Beautiful outdoor areas</span>
                   </li>
                 </ul>
               </div>
@@ -203,24 +203,24 @@ export default function Home() {
             <div className="animate-slideup-delay-3">
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                  <h3 className="text-4xl font-black text-foreground mb-5">
+                  <h3 className="text-4xl font-black text-slate-900 dark:text-white mb-5">
                     Activity & Engagement
                   </h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                  <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
                     We provide meaningful activities and social engagement to support physical and mental well-being. Staying active is key to quality of life.
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-center gap-3">
                       <div className="w-2 h-2 rounded-full bg-primary" />
-                      <span className="text-foreground font-medium">Daily social activities</span>
+                      <span className="text-slate-900 dark:text-white font-medium">Daily social activities</span>
                     </li>
                     <li className="flex items-center gap-3">
                       <div className="w-2 h-2 rounded-full bg-primary" />
-                      <span className="text-foreground font-medium">Recreational programs</span>
+                      <span className="text-slate-900 dark:text-white font-medium">Recreational programs</span>
                     </li>
                     <li className="flex items-center gap-3">
                       <div className="w-2 h-2 rounded-full bg-primary" />
-                      <span className="text-foreground font-medium">Mental wellness support</span>
+                      <span className="text-slate-900 dark:text-white font-medium">Mental wellness support</span>
                     </li>
                   </ul>
                 </div>
@@ -253,10 +253,10 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             {/* Content */}
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6">
               Comprehensive Care Services
             </h2>
-            <p className="text-muted-foreground mb-8 text-lg max-w-2xl mx-auto">
+            <p className="text-slate-700 dark:text-slate-300 mb-8 text-lg max-w-2xl mx-auto">
               Ark Care AFH offers a complete range of services to support your loved one's health, safety, and quality of life.
             </p>
             <ul className="space-y-3 mb-8 inline-block text-left">
@@ -264,25 +264,25 @@ export default function Home() {
                 <svg className="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
-                <span className="text-foreground font-medium">Medication management with pharmacy oversight</span>
+                <span className="text-slate-900 dark:text-white font-medium">Medication management with pharmacy oversight</span>
               </li>
               <li className="flex items-start gap-3">
                 <svg className="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
-                <span className="text-foreground font-medium">Assistance with daily living & hygiene</span>
+                <span className="text-slate-900 dark:text-white font-medium">Assistance with daily living & hygiene</span>
               </li>
               <li className="flex items-start gap-3">
                 <svg className="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
-                <span className="text-foreground font-medium">Specialized support for mental health, dementia & developmental disabilities</span>
+                <span className="text-slate-900 dark:text-white font-medium">Specialized support for mental health, dementia & developmental disabilities</span>
               </li>
               <li className="flex items-start gap-3">
                 <svg className="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
-                <span className="text-foreground font-medium">Customized activities & meaningful day programs</span>
+                <span className="text-slate-900 dark:text-white font-medium">Customized activities & meaningful day programs</span>
               </li>
             </ul>
             <div className="flex justify-center">
@@ -366,7 +366,7 @@ export default function Home() {
                 key={index}
                 className="group"
               >
-                <div className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 h-full hover:shadow-xl transition-all duration-300 hover:border-primary/40 flex flex-col relative overflow-hidden">
+                <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 h-full hover:shadow-xl transition-all duration-300 hover:border-primary/40 flex flex-col relative overflow-hidden">
                   {/* Gradient accent top */}
                   <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${testimonial.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
 
@@ -527,7 +527,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6 mb-10 animate-slideup-delay-1">
             <div className="group relative">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-cyan-400 rounded-2xl blur opacity-40 group-hover:opacity-60 transition duration-500" />
-              <div className="relative bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
+              <div className="relative bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
                 <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Expert Care Team</h3>
                 <p className="text-sm text-slate-700 dark:text-slate-300">
                   Licensed professionals with years of experience in compassionate care and specialized support.
@@ -537,7 +537,7 @@ export default function Home() {
 
             <div className="group relative">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl blur opacity-40 group-hover:opacity-60 transition duration-500" />
-              <div className="relative bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
+              <div className="relative bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
                 <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Home-Like Environment</h3>
                 <p className="text-sm text-slate-700 dark:text-slate-300">
                   A warm, welcoming space where residents feel safe, comfortable, and genuinely cared for.
@@ -547,7 +547,7 @@ export default function Home() {
 
             <div className="group relative">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-primary rounded-2xl blur opacity-40 group-hover:opacity-60 transition duration-500" />
-              <div className="relative bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
+              <div className="relative bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
                 <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Personalized Care Plans</h3>
                 <p className="text-sm text-slate-700 dark:text-slate-300">
                   Customized services tailored to each resident's unique needs, preferences, and health requirements.

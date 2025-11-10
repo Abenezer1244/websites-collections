@@ -112,12 +112,12 @@ export default function Services() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-card rounded-lg shadow-sm border border-border p-8 hover:shadow-md transition-shadow"
+                className="bg-white dark:bg-slate-900 rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-8 hover:shadow-md transition-shadow"
               >
-                <h3 className="text-2xl font-semibold text-foreground mb-3">
+                <h3 className="text-2xl font-semibold text-slate-900 dark:text-white mb-3">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground mb-4">
+                <p className="text-slate-700 dark:text-slate-300 mb-4">
                   {service.description}
                 </p>
                 <ul className="space-y-2">
@@ -134,7 +134,7 @@ export default function Services() {
                           clipRule="evenodd"
                         />
                       </svg>
-                      <span className="text-foreground">{feature}</span>
+                      <span className="text-slate-900 dark:text-white">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -147,55 +147,55 @@ export default function Services() {
       {/* Amenities Section */}
       <section className="py-16 md:py-24 bg-white dark:bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
             Facility Amenities
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-card rounded-lg p-6 border border-border">
-              <h3 className="text-xl font-semibold text-foreground mb-3">
+            <div className="bg-white dark:bg-slate-900 rounded-lg p-6 border border-slate-200 dark:border-slate-800">
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">
                 Comfortable Living Spaces
               </h3>
-              <p className="text-muted-foreground">
+              <p className="text-slate-700 dark:text-slate-300">
                 Private bedrooms with comfortable furnishings and personal décor options.
               </p>
             </div>
-            <div className="bg-card rounded-lg p-6 border border-border">
-              <h3 className="text-xl font-semibold text-foreground mb-3">
+            <div className="bg-white dark:bg-slate-900 rounded-lg p-6 border border-slate-200 dark:border-slate-800">
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">
                 Accessible Design
               </h3>
-              <p className="text-muted-foreground">
+              <p className="text-slate-700 dark:text-slate-300">
                 Accessible facilities with grab bars, ramps, and other safety features.
               </p>
             </div>
-            <div className="bg-card rounded-lg p-6 border border-border">
-              <h3 className="text-xl font-semibold text-foreground mb-3">
+            <div className="bg-white dark:bg-slate-900 rounded-lg p-6 border border-slate-200 dark:border-slate-800">
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">
                 Common Areas
               </h3>
-              <p className="text-muted-foreground">
+              <p className="text-slate-700 dark:text-slate-300">
                 Living room, dining area, and outdoor spaces for relaxation and activities.
               </p>
             </div>
-            <div className="bg-card rounded-lg p-6 border border-border">
-              <h3 className="text-xl font-semibold text-foreground mb-3">
+            <div className="bg-white dark:bg-slate-900 rounded-lg p-6 border border-slate-200 dark:border-slate-800">
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">
                 Safety Features
               </h3>
-              <p className="text-muted-foreground">
+              <p className="text-slate-700 dark:text-slate-300">
                 Security systems, fire safety equipment, and emergency response protocols.
               </p>
             </div>
-            <div className="bg-card rounded-lg p-6 border border-border">
-              <h3 className="text-xl font-semibold text-foreground mb-3">
+            <div className="bg-white dark:bg-slate-900 rounded-lg p-6 border border-slate-200 dark:border-slate-800">
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">
                 Technology
               </h3>
-              <p className="text-muted-foreground">
+              <p className="text-slate-700 dark:text-slate-300">
                 WiFi access, TV, and modern conveniences for comfort and connection.
               </p>
             </div>
-            <div className="bg-card rounded-lg p-6 border border-border">
-              <h3 className="text-xl font-semibold text-foreground mb-3">
+            <div className="bg-white dark:bg-slate-900 rounded-lg p-6 border border-slate-200 dark:border-slate-800">
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">
                 Professional Environment
               </h3>
-              <p className="text-muted-foreground">
+              <p className="text-slate-700 dark:text-slate-300">
                 Clean, well-maintained facility with professional staffing and care protocols.
               </p>
             </div>
@@ -206,13 +206,13 @@ export default function Services() {
       {/* Specialized Services */}
       <section className="py-16 md:py-24 bg-white dark:bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
             Our Specialties
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-card rounded-lg border border-border p-8">
-              <h3 className="text-2xl font-semibold text-foreground mb-4">Mental Health Support</h3>
-              <p className="text-muted-foreground mb-4">
+            <div className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 p-8">
+              <h3 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">Mental Health Support</h3>
+              <p className="text-slate-700 dark:text-slate-300 mb-4">
                 Specialized behavioral health support and mental health services for individuals with psychiatric or emotional health needs.
               </p>
               <ul className="space-y-2">
@@ -220,20 +220,20 @@ export default function Services() {
                   <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-foreground text-sm">Behavior support services</span>
+                  <span className="text-slate-900 dark:text-white text-sm">Behavior support services</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-foreground text-sm">Mental health monitoring</span>
+                  <span className="text-slate-900 dark:text-white text-sm">Mental health monitoring</span>
                 </li>
               </ul>
             </div>
 
-            <div className="bg-card rounded-lg border border-border p-8">
-              <h3 className="text-2xl font-semibold text-foreground mb-4">Dementia Care</h3>
-              <p className="text-muted-foreground mb-4">
+            <div className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 p-8">
+              <h3 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">Dementia Care</h3>
+              <p className="text-slate-700 dark:text-slate-300 mb-4">
                 Specialized care and support for individuals living with dementia and cognitive decline.
               </p>
               <ul className="space-y-2">
@@ -241,20 +241,20 @@ export default function Services() {
                   <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-foreground text-sm">Memory care support</span>
+                  <span className="text-slate-900 dark:text-white text-sm">Memory care support</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-foreground text-sm">Safe, supportive environment</span>
+                  <span className="text-slate-900 dark:text-white text-sm">Safe, supportive environment</span>
                 </li>
               </ul>
             </div>
 
-            <div className="bg-card rounded-lg border border-border p-8">
-              <h3 className="text-2xl font-semibold text-foreground mb-4">Developmental Disabilities</h3>
-              <p className="text-muted-foreground mb-4">
+            <div className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 p-8">
+              <h3 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">Developmental Disabilities</h3>
+              <p className="text-slate-700 dark:text-slate-300 mb-4">
                 Comprehensive support for adults with intellectual and developmental disabilities.
               </p>
               <ul className="space-y-2">
@@ -262,13 +262,13 @@ export default function Services() {
                   <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-foreground text-sm">Life skills support</span>
+                  <span className="text-slate-900 dark:text-white text-sm">Life skills support</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-foreground text-sm">Community integration activities</span>
+                  <span className="text-slate-900 dark:text-white text-sm">Community integration activities</span>
                 </li>
               </ul>
             </div>
@@ -279,20 +279,20 @@ export default function Services() {
       {/* Care Approach */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-8">
             Our Care Approach
           </h2>
-          <p className="text-lg text-muted-foreground mb-6">
+          <p className="text-lg text-slate-700 dark:text-slate-300 mb-6">
             At Ark Care AFH, we believe in a person-centered care approach that respects individuality and promotes independence. Our services are designed around each resident's unique needs, preferences, and goals.
           </p>
-          <p className="text-lg text-muted-foreground mb-8">
+          <p className="text-lg text-slate-700 dark:text-slate-300 mb-8">
             We work closely with families, healthcare providers, and residents to develop comprehensive care plans that ensure the highest quality of life possible. We accept multiple programs including HCS (Home and Community Services), DDA Meaningful Day Services, Expanded Community Services, and Specialized Behavior Support.
           </p>
-          <div className="bg-card rounded-lg border border-border p-8">
-            <h3 className="text-2xl font-semibold text-foreground mb-4">
+          <div className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 p-8">
+            <h3 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
               Personalized Care Plans
             </h3>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-slate-700 dark:text-slate-300 mb-4">
               Each resident receives an individualized care plan developed in consultation with family members and healthcare providers. Our plans include:
             </p>
             <ul className="space-y-2 text-left inline-block">

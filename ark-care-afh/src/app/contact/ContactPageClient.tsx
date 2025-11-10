@@ -54,15 +54,15 @@ export default function ContactPageClient() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Info */}
             <div>
-              <h2 className="text-2xl font-bold text-foreground mb-8">Get in Touch</h2>
+              <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-8">Get in Touch</h2>
 
               <div className="mb-8">
-                <h3 className="text-lg font-semibold text-foreground mb-2">Phone</h3>
-                <p className="text-muted-foreground">Coming soon</p>
+                <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">Phone</h3>
+                <p className="text-slate-700 dark:text-slate-300">Coming soon</p>
               </div>
 
               <div className="mb-8">
-                <h3 className="text-lg font-semibold text-foreground mb-2">Email</h3>
+                <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">Email</h3>
                 <a
                   href="mailto:contact@arkcare.local"
                   className="text-primary hover:underline"
@@ -72,21 +72,21 @@ export default function ContactPageClient() {
               </div>
 
               <div className="mb-8">
-                <h3 className="text-lg font-semibold text-foreground mb-2">Address</h3>
-                <p className="text-muted-foreground">Coming soon</p>
+                <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">Address</h3>
+                <p className="text-slate-700 dark:text-slate-300">Coming soon</p>
               </div>
 
               <div className="mb-8">
-                <h3 className="text-lg font-semibold text-foreground mb-2">Hours</h3>
-                <p className="text-muted-foreground">Available 24/7 for emergencies</p>
-                <p className="text-muted-foreground">Office hours: Coming soon</p>
+                <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">Hours</h3>
+                <p className="text-slate-700 dark:text-slate-300">Available 24/7 for emergencies</p>
+                <p className="text-slate-700 dark:text-slate-300">Office hours: Coming soon</p>
               </div>
             </div>
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <div className="bg-card rounded-lg border border-border p-8">
-                <h2 className="text-2xl font-bold text-foreground mb-6">Send us a Message</h2>
+              <div className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 p-8">
+                <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Send us a Message</h2>
 
                 {submitted && (
                   <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
@@ -99,7 +99,7 @@ export default function ContactPageClient() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Name */}
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                    <label htmlFor="name" className="block text-sm font-medium text-slate-900 dark:text-white mb-2">
                       Name *
                     </label>
                     <input
@@ -109,14 +109,14 @@ export default function ContactPageClient() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-foreground"
+                      className="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-slate-900 dark:text-white"
                       placeholder="Your name"
                     />
                   </div>
 
                   {/* Email */}
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                    <label htmlFor="email" className="block text-sm font-medium text-slate-900 dark:text-white mb-2">
                       Email *
                     </label>
                     <input
@@ -126,14 +126,14 @@ export default function ContactPageClient() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-foreground"
+                      className="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-slate-900 dark:text-white"
                       placeholder="your@email.com"
                     />
                   </div>
 
                   {/* Phone */}
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                    <label htmlFor="phone" className="block text-sm font-medium text-slate-900 dark:text-white mb-2">
                       Phone
                     </label>
                     <input
@@ -142,14 +142,14 @@ export default function ContactPageClient() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-foreground"
+                      className="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-slate-900 dark:text-white"
                       placeholder="(123) 456-7890"
                     />
                   </div>
 
                   {/* Subject */}
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
+                    <label htmlFor="subject" className="block text-sm font-medium text-slate-900 dark:text-white mb-2">
                       Subject *
                     </label>
                     <select
@@ -158,7 +158,7 @@ export default function ContactPageClient() {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-foreground"
+                      className="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-slate-900 dark:text-white"
                     >
                       <option value="">Select a subject</option>
                       <option value="general">General Inquiry</option>
@@ -171,7 +171,7 @@ export default function ContactPageClient() {
 
                   {/* Message */}
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                    <label htmlFor="message" className="block text-sm font-medium text-slate-900 dark:text-white mb-2">
                       Message *
                     </label>
                     <textarea
@@ -181,7 +181,7 @@ export default function ContactPageClient() {
                       onChange={handleChange}
                       required
                       rows={6}
-                      className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-foreground resize-none"
+                      className="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-slate-900 dark:text-white resize-none"
                       placeholder="Please tell us how we can help..."
                     />
                   </div>
@@ -196,7 +196,7 @@ export default function ContactPageClient() {
                   </button>
                 </form>
 
-                <p className="text-sm text-muted-foreground mt-4">
+                <p className="text-sm text-slate-700 dark:text-slate-300 mt-4">
                   * Required fields
                 </p>
               </div>
@@ -208,46 +208,46 @@ export default function ContactPageClient() {
       {/* FAQ Section */}
       <section className="py-16 md:py-24 bg-white dark:bg-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-foreground mb-12 text-center">
+          <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 text-center">
             Frequently Asked Questions
           </h2>
           <div className="space-y-6">
-            <details className="bg-card rounded-lg border border-border p-6">
-              <summary className="cursor-pointer font-semibold text-foreground flex justify-between items-center">
+            <details className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 p-6">
+              <summary className="cursor-pointer font-semibold text-slate-900 dark:text-white flex justify-between items-center">
                 How do I schedule a tour?
                 <span className="ml-2">▶</span>
               </summary>
-              <p className="text-muted-foreground mt-4">
+              <p className="text-slate-700 dark:text-slate-300 mt-4">
                 You can schedule a tour by calling us, emailing, or using the contact form above. We're happy to arrange a time that works best for you.
               </p>
             </details>
 
-            <details className="bg-card rounded-lg border border-border p-6">
-              <summary className="cursor-pointer font-semibold text-foreground flex justify-between items-center">
+            <details className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 p-6">
+              <summary className="cursor-pointer font-semibold text-slate-900 dark:text-white flex justify-between items-center">
                 What is the admission process?
                 <span className="ml-2">▶</span>
               </summary>
-              <p className="text-muted-foreground mt-4">
+              <p className="text-slate-700 dark:text-slate-300 mt-4">
                 The admission process begins with a tour and consultation. We'll discuss your needs, answer questions, and work with you to determine if we're the right fit.
               </p>
             </details>
 
-            <details className="bg-card rounded-lg border border-border p-6">
-              <summary className="cursor-pointer font-semibold text-foreground flex justify-between items-center">
+            <details className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 p-6">
+              <summary className="cursor-pointer font-semibold text-slate-900 dark:text-white flex justify-between items-center">
                 What services are included?
                 <span className="ml-2">▶</span>
               </summary>
-              <p className="text-muted-foreground mt-4">
+              <p className="text-slate-700 dark:text-slate-300 mt-4">
                 We offer comprehensive care services including 24/7 support, medication management, personal care, meals, activities, and more. See our Services page for details.
               </p>
             </details>
 
-            <details className="bg-card rounded-lg border border-border p-6">
-              <summary className="cursor-pointer font-semibold text-foreground flex justify-between items-center">
+            <details className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 p-6">
+              <summary className="cursor-pointer font-semibold text-slate-900 dark:text-white flex justify-between items-center">
                 Can family members visit?
                 <span className="ml-2">▶</span>
               </summary>
-              <p className="text-muted-foreground mt-4">
+              <p className="text-slate-700 dark:text-slate-300 mt-4">
                 Yes! We encourage family involvement and have flexible visiting hours to accommodate family schedules and activities.
               </p>
             </details>

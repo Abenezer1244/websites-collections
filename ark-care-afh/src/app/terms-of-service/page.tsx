@@ -66,19 +66,19 @@ export default function TermsOfService() {
       {/* Terms Content */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none text-muted-foreground">
-            <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">1. Agreement to Terms</h2>
+          <div className="prose prose-lg max-w-none text-slate-700 dark:text-slate-300">
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-8 mb-4">1. Agreement to Terms</h2>
             <p>
               By accessing and using the Ark Care AFH website and services, you agree to comply with these Terms of Service and all applicable laws and regulations. If you do not agree with any part of these terms, please do not use our website or services.
             </p>
 
-            <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">2. Services Overview</h2>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-8 mb-4">2. Services Overview</h2>
             <p>
               Ark Care AFH is a licensed adult family home located in Algona, Washington, providing residential care services for seniors, adults with developmental disabilities, and individuals requiring specialized behavioral health support. Our services include 24/7 care, medication management, personal care, meals, activities, and transportation.
             </p>
 
-            <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">3. Admission & Care Agreements</h2>
-            <p className="font-semibold text-foreground">Admission Requirements:</p>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-8 mb-4">3. Admission & Care Agreements</h2>
+            <p className="font-semibold text-slate-900 dark:text-white">Admission Requirements:</p>
             <ul className="space-y-3 ml-6 list-disc">
               <li>Completion of admission application and documentation</li>
               <li>Provision of medical history and current medications</li>
@@ -90,8 +90,8 @@ export default function TermsOfService() {
               A separate Care Agreement will be executed at the time of admission outlining specific care services, costs, payment terms, and resident rights and responsibilities.
             </p>
 
-            <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">4. Resident Rights & Responsibilities</h2>
-            <p className="font-semibold text-foreground">Resident Rights:</p>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-8 mb-4">4. Resident Rights & Responsibilities</h2>
+            <p className="font-semibold text-slate-900 dark:text-white">Resident Rights:</p>
             <ul className="space-y-3 ml-6 list-disc">
               <li>Right to receive quality care in a safe, clean environment</li>
               <li>Right to dignity, respect, and privacy</li>
@@ -101,7 +101,7 @@ export default function TermsOfService() {
               <li>Right to voice complaints and concerns</li>
               <li>Right to refuse treatment (within legal limits)</li>
             </ul>
-            <p className="font-semibold text-foreground mt-6">Resident Responsibilities:</p>
+            <p className="font-semibold text-slate-900 dark:text-white mt-6">Resident Responsibilities:</p>
             <ul className="space-y-3 ml-6 list-disc">
               <li>Comply with facility policies and procedures</li>
               <li>Treat staff and other residents with respect</li>
@@ -111,7 +111,7 @@ export default function TermsOfService() {
               <li>Notify staff of changes in health condition</li>
             </ul>
 
-            <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">5. Payment & Fees</h2>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-8 mb-4">5. Payment & Fees</h2>
             <p>
               Residents or their representatives are responsible for paying all charges for services provided. Payment terms, rates, and methods will be agreed upon at the time of admission. We accept private pay, insurance, and certain government programs.
             </p>
@@ -119,7 +119,7 @@ export default function TermsOfService() {
               Failure to pay fees may result in discharge from the facility in accordance with Washington state regulations and our admission agreement.
             </p>
 
-            <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">6. Discharge Policy</h2>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-8 mb-4">6. Discharge Policy</h2>
             <p>
               Ark Care AFH reserves the right to discharge residents when:
             </p>
@@ -135,7 +135,7 @@ export default function TermsOfService() {
               All discharges will be conducted in accordance with Washington state regulations and will include advance notice when possible. We will assist with transition planning and coordination with other facilities.
             </p>
 
-            <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">7. Health & Safety</h2>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-8 mb-4">7. Health & Safety</h2>
             <p>
               Ark Care AFH maintains health and safety standards in compliance with state regulations. Our facility includes:
             </p>
@@ -147,7 +147,7 @@ export default function TermsOfService() {
               <li>Staff trained in first aid and emergency response</li>
             </ul>
 
-            <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">8. Medical Care Coordination</h2>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-8 mb-4">8. Medical Care Coordination</h2>
             <p>
               Ark Care AFH coordinates with residents' healthcare providers for medical care and treatment. Residents must provide:
             </p>
@@ -161,8 +161,8 @@ export default function TermsOfService() {
               We administer medications as prescribed and maintain detailed health records. Residents or representatives must inform us of any medication changes or health concerns.
             </p>
 
-            <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">9. Website Terms</h2>
-            <p className="font-semibold text-foreground">Website Use:</p>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-8 mb-4">9. Website Terms</h2>
+            <p className="font-semibold text-slate-900 dark:text-white">Website Use:</p>
             <ul className="space-y-3 ml-6 list-disc">
               <li>Information provided is for informational purposes only</li>
               <li>You agree not to use the website for illegal or unauthorized purposes</li>
@@ -171,7 +171,7 @@ export default function TermsOfService() {
               <li>You will not attempt to gain unauthorized access to systems</li>
             </ul>
 
-            <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">10. Limitation of Liability</h2>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-8 mb-4">10. Limitation of Liability</h2>
             <p>
               Ark Care AFH provides services in accordance with applicable laws and regulations. While we maintain high standards of care, we are not liable for:
             </p>
@@ -182,7 +182,7 @@ export default function TermsOfService() {
               <li>Third-party actions outside our control</li>
             </ul>
 
-            <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">11. Complaint & Dispute Resolution</h2>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-8 mb-4">11. Complaint & Dispute Resolution</h2>
             <p>
               Residents and families are encouraged to voice concerns directly to staff or management. For unresolved complaints:
             </p>
@@ -193,32 +193,32 @@ export default function TermsOfService() {
               <li>Legal disputes will be resolved according to Washington state law</li>
             </ul>
 
-            <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">12. Intellectual Property</h2>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-8 mb-4">12. Intellectual Property</h2>
             <p>
               All content on the Ark Care AFH website, including text, images, logos, and graphics, is the property of Ark Care AFH and protected by copyright laws. You may not reproduce, distribute, or transmit any content without our written permission.
             </p>
 
-            <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">13. Third-Party Links</h2>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-8 mb-4">13. Third-Party Links</h2>
             <p>
               Our website may contain links to third-party websites. We are not responsible for the content, accuracy, or practices of external websites. Use of third-party sites is at your own risk and subject to their terms of service.
             </p>
 
-            <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">14. Governing Law</h2>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-8 mb-4">14. Governing Law</h2>
             <p>
               These Terms of Service are governed by the laws of the State of Washington, without regard to conflicts of law principles. Any legal action or proceeding related to these terms shall be brought exclusively in the state or federal courts located in King County, Washington.
             </p>
 
-            <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">15. Contact & Questions</h2>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-8 mb-4">15. Contact & Questions</h2>
             <p>
               For questions about these Terms of Service or our policies:
             </p>
-            <div className="bg-card border border-border p-6 rounded-lg mt-4">
+            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 rounded-lg mt-4">
               <p><strong>Phone:</strong> (206) 455-3644</p>
               <p><strong>Address:</strong> 127 4th Ave N, Algona, WA 98001</p>
               <p><strong>Email:</strong> contact@arkcare.local</p>
             </div>
 
-            <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">16. Effective Date & Updates</h2>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-8 mb-4">16. Effective Date & Updates</h2>
             <p>
               These Terms of Service are effective as of {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}. We may update these terms at any time. Changes will be posted on our website with an updated effective date. Your continued use of our services constitutes acceptance of updated terms.
             </p>
@@ -229,10 +229,10 @@ export default function TermsOfService() {
       {/* CTA Section */}
       <section className="py-16 md:py-24 bg-white dark:bg-black">
         <div className="max-w-3xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6">
             Questions About Our Terms?
           </h2>
-          <p className="text-lg text-muted-foreground mb-8">
+          <p className="text-lg text-slate-700 dark:text-slate-300 mb-8">
             We're happy to clarify any part of our Terms of Service. Please reach out with any questions.
           </p>
           <a

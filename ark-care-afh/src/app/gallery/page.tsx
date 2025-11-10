@@ -80,21 +80,21 @@ export default function Gallery() {
       {/* Gallery Grid */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-foreground mb-4 text-center">
+          <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4 text-center">
             Our Activities
           </h2>
-          <p className="text-lg text-muted-foreground mb-12 text-center max-w-2xl mx-auto">
+          <p className="text-lg text-slate-700 dark:text-slate-300 mb-12 text-center max-w-2xl mx-auto">
             We offer a variety of engaging activities designed to promote physical wellness, mental stimulation, and social connection for all our residents.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {galleryPlaceholders.map((item) => (
               <div
                 key={item.id}
-                className="group relative bg-card rounded-lg overflow-hidden border border-border hover:shadow-md transition-all cursor-pointer"
+                className="group relative bg-white dark:bg-slate-900 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-md transition-all cursor-pointer"
               >
                 <div className="aspect-square bg-white dark:bg-black flex items-center justify-center">
                   <svg
-                    className="w-16 h-16 text-muted-foreground"
+                    className="w-16 h-16 text-slate-700 dark:text-slate-300"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -108,7 +108,7 @@ export default function Gallery() {
                   </svg>
                 </div>
                 <div className="p-4 group-hover:bg-primary/5 transition-colors">
-                  <h3 className="text-sm font-semibold text-foreground">{item.title}</h3>
+                  <h3 className="text-sm font-semibold text-slate-900 dark:text-white">{item.title}</h3>
                 </div>
               </div>
             ))}
@@ -119,10 +119,10 @@ export default function Gallery() {
       {/* Info Section */}
       <section className="py-16 md:py-24 bg-white dark:bg-black">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-6">
             Schedule a Tour
           </h2>
-          <p className="text-lg text-muted-foreground mb-8">
+          <p className="text-lg text-slate-700 dark:text-slate-300 mb-8">
             We'd love to show you around Ark Care AFH! Contact us to schedule a personalized tour of our facility and meet our caring staff.
           </p>
           <a
