@@ -92,7 +92,7 @@ export default function Gallery() {
                 key={item.id}
                 className="group relative bg-card rounded-lg overflow-hidden border border-border hover:shadow-md transition-all cursor-pointer"
               >
-                <div className="aspect-square bg-muted flex items-center justify-center">
+                <div className="aspect-square bg-white dark:bg-black flex items-center justify-center">
                   <svg
                     className="w-16 h-16 text-muted-foreground"
                     fill="none"
@@ -117,7 +117,7 @@ export default function Gallery() {
       </section>
 
       {/* Info Section */}
-      <section className="py-16 md:py-24 bg-muted">
+      <section className="py-16 md:py-24 bg-white dark:bg-black">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-foreground mb-6">
             Schedule a Tour

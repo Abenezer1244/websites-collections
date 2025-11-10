@@ -98,7 +98,7 @@ export default function Home() {
       </section>
 
       {/* Key Benefits Section - Brand New Design */}
-      <section className="relative py-20 md:py-40 overflow-hidden" data-section="why-choose">
+      <section className="relative py-20 md:py-40 overflow-hidden bg-white dark:bg-black" data-section="why-choose">
         {/* Animated Background Orbs */}
         <div className="absolute -top-40 -left-40 w-[400px] h-[400px] bg-gradient-to-br from-primary/30 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.2s'}} />
         <div className="absolute -bottom-32 -right-32 w-[350px] h-[350px] bg-gradient-to-br from-cyan-400/25 to-cyan-500/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.7s'}} />
@@ -245,7 +245,7 @@ export default function Home() {
       </section>
 
       {/* Services Overview Section */}
-      <section className="relative py-16 md:py-24 bg-muted overflow-hidden">
+      <section className="relative py-16 md:py-24 bg-white dark:bg-black overflow-hidden">
         {/* Animated Background Orbs */}
         <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-gradient-to-br from-blue-400/25 to-blue-500/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.4s'}} />
         <div className="absolute bottom-0 left-0 w-[380px] h-[380px] bg-gradient-to-br from-primary/25 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.9s'}} />
@@ -298,7 +298,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section - Grid Cards */}
-      <section className="relative py-12 md:py-16 bg-white/30 dark:bg-slate-900/30 overflow-hidden" style={{ backgroundImage: "url('/lilac-bg.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
+      <section className="relative py-12 md:py-16 bg-white dark:bg-black overflow-hidden">
         {/* Animated Background Orbs */}
         <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-gradient-to-br from-primary/15 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.2s'}} />
         <div className="absolute -bottom-40 -right-40 w-[450px] h-[450px] bg-gradient-to-br from-cyan-400/10 to-cyan-500/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.6s'}} />
@@ -406,7 +406,7 @@ export default function Home() {
       </section>
 
       {/* FAQ Section - 2 Column Layout */}
-      <section className="relative py-12 md:py-16 bg-slate-900/30 dark:bg-slate-900/50 overflow-hidden" style={{ backgroundImage: "url('/lilac-bg.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
+      <section className="relative py-12 md:py-16 bg-white dark:bg-black overflow-hidden">
         {/* Animated Background Orbs */}
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gradient-to-br from-cyan-500/20 to-cyan-400/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.3s'}} />
         <div className="absolute bottom-0 left-0 w-[380px] h-[380px] bg-gradient-to-br from-primary/15 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.5s'}} />
@@ -497,7 +497,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section - Hero Style */}
-      <section className="relative py-12 md:py-16 bg-white/30 dark:bg-slate-900/30 overflow-hidden" style={{ backgroundImage: "url('/lilac-bg.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
+      <section className="relative py-12 md:py-16 bg-white dark:bg-black overflow-hidden">
         {/* Animated Background Orbs */}
         <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-br from-primary/30 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.1s'}} />
         <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-gradient-to-br from-cyan-400/15 to-cyan-500/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.5s'}} />

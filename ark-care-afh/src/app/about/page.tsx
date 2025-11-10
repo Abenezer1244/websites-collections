@@ -90,7 +90,7 @@ export default function About() {
       </section>
 
       {/* Our Story */}
-      <section className="py-16 md:py-24 bg-muted">
+      <section className="py-16 md:py-24 bg-white dark:bg-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
             Our Story
@@ -162,7 +162,7 @@ export default function About() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 md:py-24 bg-muted">
+      <section className="py-16 md:py-24 bg-white dark:bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
             Why Choose Ark Care AFH?

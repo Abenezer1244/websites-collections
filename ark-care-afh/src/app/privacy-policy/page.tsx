@@ -172,7 +172,7 @@ export default function PrivacyPolicy() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-muted">
+      <section className="py-16 md:py-24 bg-white dark:bg-black">
         <div className="max-w-3xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
             Questions About Privacy?
