@@ -298,7 +298,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section - Grid Cards */}
-      <section className="relative py-12 md:py-16 bg-gradient-to-b from-white via-slate-50 to-white overflow-hidden">
+      <section className="relative py-12 md:py-16 bg-gradient-to-b from-white via-slate-50 to-white overflow-hidden" style={{ backgroundImage: "url('/lilac-bg.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
         {/* Animated Background Orbs */}
         <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-gradient-to-br from-primary/15 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.2s'}} />
         <div className="absolute -bottom-40 -right-40 w-[450px] h-[450px] bg-gradient-to-br from-cyan-400/10 to-cyan-500/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.6s'}} />
@@ -406,7 +406,7 @@ export default function Home() {
       </section>
 
       {/* FAQ Section - 2 Column Layout */}
-      <section className="relative py-12 md:py-16 bg-slate-900 overflow-hidden">
+      <section className="relative py-12 md:py-16 bg-slate-900 overflow-hidden" style={{ backgroundImage: "url('/lilac-bg.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
         {/* Animated Background Orbs */}
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gradient-to-br from-cyan-500/20 to-cyan-400/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.3s'}} />
         <div className="absolute bottom-0 left-0 w-[380px] h-[380px] bg-gradient-to-br from-primary/15 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.5s'}} />
@@ -500,7 +500,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section - Hero Style */}
-      <section className="relative py-12 md:py-16 bg-gradient-to-b from-white to-primary/5 overflow-hidden">
+      <section className="relative py-12 md:py-16 bg-gradient-to-b from-white to-primary/5 overflow-hidden" style={{ backgroundImage: "url('/lilac-bg.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
         {/* Animated Background Orbs */}
         <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-br from-primary/30 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.1s'}} />
         <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-gradient-to-br from-cyan-400/15 to-cyan-500/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.5s'}} />
