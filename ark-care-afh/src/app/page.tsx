@@ -98,8 +98,12 @@ export default function Home() {
       </section>
 
       {/* Key Benefits Section - Brand New Design */}
-      <section className="py-20 md:py-40" data-section="why-choose">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 md:py-40 overflow-hidden" data-section="why-choose">
+        {/* Animated Background Orbs */}
+        <div className="absolute -top-40 -left-40 w-[400px] h-[400px] bg-gradient-to-br from-primary/30 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.2s'}} />
+        <div className="absolute -bottom-32 -right-32 w-[350px] h-[350px] bg-gradient-to-br from-cyan-400/25 to-cyan-500/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.7s'}} />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Header */}
           <div className="mb-24 animate-slideup text-center">
             <span className="inline-block px-4 py-2 bg-primary/10 dark:bg-primary/20 text-primary text-sm font-semibold rounded-full mb-6">
@@ -241,8 +245,12 @@ export default function Home() {
       </section>
 
       {/* Services Overview Section */}
-      <section className="py-16 md:py-24 bg-muted">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-16 md:py-24 bg-muted overflow-hidden">
+        {/* Animated Background Orbs */}
+        <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-gradient-to-br from-blue-400/25 to-blue-500/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.4s'}} />
+        <div className="absolute bottom-0 left-0 w-[380px] h-[380px] bg-gradient-to-br from-primary/25 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.9s'}} />
+
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             {/* Content */}
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
@@ -290,8 +298,12 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section - Auto-Scrolling Carousel */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-white to-slate-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-16 md:py-24 bg-gradient-to-b from-white to-slate-50 overflow-hidden">
+        {/* Animated Background Orbs */}
+        <div className="absolute -top-32 -right-40 w-[420px] h-[420px] bg-gradient-to-br from-cyan-400/25 to-cyan-500/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.3s'}} />
+        <div className="absolute -bottom-32 -left-40 w-[400px] h-[400px] bg-gradient-to-br from-blue-400/20 to-blue-500/8 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.8s'}} />
+
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="mb-16 text-center">
             <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
               What People Are Saying
@@ -381,8 +393,12 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 md:py-24 bg-muted">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-16 md:py-24 bg-muted overflow-hidden">
+        {/* Animated Background Orbs */}
+        <div className="absolute top-0 left-0 w-[380px] h-[380px] bg-gradient-to-br from-primary/25 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.1s'}} />
+        <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-gradient-to-br from-cyan-400/25 to-cyan-500/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.6s'}} />
+
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="mb-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Frequently Asked Questions
