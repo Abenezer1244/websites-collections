@@ -66,8 +66,8 @@ export default function PrivacyPolicy() {
       {/* Privacy Policy Content */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none text-slate-700 dark:text-slate-300">
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-8 mb-4">1. Introduction</h2>
+          <div className="prose prose-lg max-w-none text-slate-800 dark:text-slate-200">
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-50 mt-8 mb-4">1. Introduction</h2>
             <p>
               Ark Care AFH ("we," "us," "our," or "Company") is committed to protecting your privacy and ensuring you have a positive experience on our website and in receiving our services. This Privacy Policy explains our information practices, what types of information we collect, how we use it, and the choices you have regarding your information.
             </p>
@@ -75,7 +75,7 @@ export default function PrivacyPolicy() {
               This policy applies to information we collect through our website, in person, by phone, and through our communications with you.
             </p>
 
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-8 mb-4">2. Health Information & HIPAA Compliance</h2>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-50 mt-8 mb-4">2. Health Information & HIPAA Compliance</h2>
             <p>
               Ark Care AFH is regulated by the State of Washington and complies with the Health Insurance Portability and Accountability Act (HIPAA) and all applicable federal and state privacy laws. We maintain strict confidentiality of all protected health information (PHI) and medical records.
             </p>
@@ -83,8 +83,8 @@ export default function PrivacyPolicy() {
               All resident health information is maintained securely and accessed only by authorized personnel who need the information to provide care, conduct operations, or fulfill legal obligations.
             </p>
 
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-8 mb-4">3. Information We Collect</h2>
-            <p className="font-semibold text-slate-900 dark:text-white">We may collect the following types of information:</p>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-50 mt-8 mb-4">3. Information We Collect</h2>
+            <p className="font-semibold text-slate-900 dark:text-slate-50">We may collect the following types of information:</p>
             <ul className="space-y-3 ml-6 list-disc">
               <li><strong>Personal Information</strong>: Name, address, phone number, email address, date of birth, and Social Security number</li>
               <li><strong>Health Information</strong>: Medical history, current medications, allergies, healthcare provider information, and health conditions</li>
@@ -93,8 +93,8 @@ export default function PrivacyPolicy() {
               <li><strong>Website Information</strong>: IP address, browser type, pages visited, and time spent on our website (through cookies and analytics)</li>
             </ul>
 
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-8 mb-4">4. How We Use Your Information</h2>
-            <p className="font-semibold text-slate-900 dark:text-white">We use the information we collect for:</p>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-50 mt-8 mb-4">4. How We Use Your Information</h2>
+            <p className="font-semibold text-slate-900 dark:text-slate-50">We use the information we collect for:</p>
             <ul className="space-y-3 ml-6 list-disc">
               <li>Providing care services and medical treatment</li>
               <li>Communicating with residents and families about care plans and updates</li>
@@ -106,7 +106,7 @@ export default function PrivacyPolicy() {
               <li>Responding to inquiries and requests</li>
             </ul>
 
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-8 mb-4">5. Information Sharing & Disclosure</h2>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-50 mt-8 mb-4">5. Information Sharing & Disclosure</h2>
             <p>
               We do not sell, trade, or rent your personal or health information to third parties. We may share information only in the following circumstances:
             </p>
@@ -118,7 +118,7 @@ export default function PrivacyPolicy() {
               <li><strong>Business Associates</strong>: With vendors who assist in our operations under confidentiality agreements</li>
             </ul>
 
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-8 mb-4">6. Data Security</h2>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-50 mt-8 mb-4">6. Data Security</h2>
             <p>
               We implement administrative, physical, and technical safeguards to protect your information from unauthorized access, disclosure, modification, or destruction. These include:
             </p>
@@ -130,12 +130,12 @@ export default function PrivacyPolicy() {
               <li>Staff training on privacy and confidentiality procedures</li>
             </ul>
 
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-8 mb-4">7. Cookies & Website Tracking</h2>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-50 mt-8 mb-4">7. Cookies & Website Tracking</h2>
             <p>
               Our website uses cookies to enhance your browsing experience and analyze website traffic. Cookies are small files stored on your device that help us recognize you and remember your preferences. You can control cookie settings through your browser, though some features may not function properly without them.
             </p>
 
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-8 mb-4">8. Your Rights</h2>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-50 mt-8 mb-4">8. Your Rights</h2>
             <p>
               Under HIPAA and state privacy laws, you have the right to:
             </p>
@@ -148,7 +148,7 @@ export default function PrivacyPolicy() {
               <li>File a complaint with us or with state authorities</li>
             </ul>
 
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-8 mb-4">9. Contact Us</h2>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-50 mt-8 mb-4">9. Contact Us</h2>
             <p>
               If you have questions about this Privacy Policy, wish to exercise your privacy rights, or have privacy concerns, please contact us:
             </p>
@@ -158,12 +158,12 @@ export default function PrivacyPolicy() {
               <p><strong>Email:</strong> contact@arkcare.local</p>
             </div>
 
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-8 mb-4">10. Policy Changes</h2>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-50 mt-8 mb-4">10. Policy Changes</h2>
             <p>
               We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. Any changes will be posted on our website with an updated effective date. Your continued use of our services constitutes acceptance of the updated policy.
             </p>
 
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-8 mb-4">11. Effective Date</h2>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-50 mt-8 mb-4">11. Effective Date</h2>
             <p>
               This Privacy Policy is effective as of {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}.
             </p>
@@ -172,12 +172,12 @@ export default function PrivacyPolicy() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-white dark:bg-black">
+      <section className="py-16 md:py-24 bg-white dark:bg-slate-950">
         <div className="max-w-3xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-50 mb-6">
             Questions About Privacy?
           </h2>
-          <p className="text-lg text-slate-700 dark:text-slate-300 mb-8">
+          <p className="text-lg text-slate-800 dark:text-slate-200 mb-8">
             We're committed to protecting your privacy. Please don't hesitate to reach out if you have any questions or concerns.
           </p>
           <a

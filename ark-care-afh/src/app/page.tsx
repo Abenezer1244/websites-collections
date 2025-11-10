@@ -98,7 +98,7 @@ export default function Home() {
       </section>
 
       {/* Key Benefits Section - Brand New Design */}
-      <section className="relative py-20 md:py-40 overflow-hidden bg-white dark:bg-black" data-section="why-choose">
+      <section className="relative py-20 md:py-40 overflow-hidden bg-white dark:bg-slate-950" data-section="why-choose">
         {/* Animated Background Orbs */}
         <div className="absolute -top-40 -left-40 w-[400px] h-[400px] bg-gradient-to-br from-primary/30 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.2s'}} />
         <div className="absolute -bottom-32 -right-32 w-[350px] h-[350px] bg-gradient-to-br from-cyan-400/25 to-cyan-500/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.7s'}} />
@@ -109,10 +109,10 @@ export default function Home() {
             <span className="inline-block px-4 py-2 bg-primary/10 dark:bg-primary/20 text-primary text-sm font-semibold rounded-full mb-6">
               Why Choose Us
             </span>
-            <h2 className="text-5xl md:text-6xl font-black text-slate-900 dark:text-white mb-8 leading-tight max-w-4xl mx-auto">
+            <h2 className="text-5xl md:text-6xl font-black text-slate-900 dark:text-slate-50 mb-8 leading-tight max-w-4xl mx-auto">
               Why Choose Ark Care AFH?
             </h2>
-            <p className="text-xl text-slate-700 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl text-slate-800 dark:text-slate-200 max-w-2xl mx-auto leading-relaxed">
               We're committed to providing compassionate, high-quality care that promotes dignity and independence.
             </p>
           </div>
@@ -122,24 +122,24 @@ export default function Home() {
             {/* Feature 1 - Left Layout */}
             <div className="grid md:grid-cols-2 gap-12 items-center animate-slideup-delay-1">
               <div className="order-2 md:order-1">
-                <h3 className="text-4xl font-black text-slate-900 dark:text-white mb-5">
+                <h3 className="text-4xl font-black text-slate-900 dark:text-slate-50 mb-5">
                   24/7 Professional Care
                 </h3>
-                <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
+                <p className="text-lg text-slate-800 dark:text-slate-200 leading-relaxed mb-6">
                   Our experienced staff provides round-the-clock support and personalized attention to meet your loved one's unique needs. We maintain the highest standards of care quality.
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-primary" />
-                    <span className="text-slate-900 dark:text-white font-medium">Licensed nursing professionals</span>
+                    <span className="text-slate-900 dark:text-slate-50 font-medium">Licensed nursing professionals</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-primary" />
-                    <span className="text-slate-900 dark:text-white font-medium">Emergency response systems</span>
+                    <span className="text-slate-900 dark:text-slate-50 font-medium">Emergency response systems</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-primary" />
-                    <span className="text-slate-900 dark:text-white font-medium">Medication management</span>
+                    <span className="text-slate-900 dark:text-slate-50 font-medium">Medication management</span>
                   </li>
                 </ul>
               </div>
@@ -176,24 +176,24 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <h3 className="text-4xl font-black text-slate-900 dark:text-white mb-5">
+                <h3 className="text-4xl font-black text-slate-900 dark:text-slate-50 mb-5">
                   Home-Like Environment
                 </h3>
-                <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
+                <p className="text-lg text-slate-800 dark:text-slate-200 leading-relaxed mb-6">
                   Our residence provides a warm, welcoming home setting that promotes comfort, dignity, and a sense of belonging. Every detail is thoughtfully designed.
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-primary" />
-                    <span className="text-slate-900 dark:text-white font-medium">Comfortable private rooms</span>
+                    <span className="text-slate-900 dark:text-slate-50 font-medium">Comfortable private rooms</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-primary" />
-                    <span className="text-slate-900 dark:text-white font-medium">Community gathering spaces</span>
+                    <span className="text-slate-900 dark:text-slate-50 font-medium">Community gathering spaces</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-primary" />
-                    <span className="text-slate-900 dark:text-white font-medium">Beautiful outdoor areas</span>
+                    <span className="text-slate-900 dark:text-slate-50 font-medium">Beautiful outdoor areas</span>
                   </li>
                 </ul>
               </div>
@@ -203,24 +203,24 @@ export default function Home() {
             <div className="animate-slideup-delay-3">
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                  <h3 className="text-4xl font-black text-slate-900 dark:text-white mb-5">
+                  <h3 className="text-4xl font-black text-slate-900 dark:text-slate-50 mb-5">
                     Activity & Engagement
                   </h3>
-                  <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
+                  <p className="text-lg text-slate-800 dark:text-slate-200 leading-relaxed mb-6">
                     We provide meaningful activities and social engagement to support physical and mental well-being. Staying active is key to quality of life.
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-center gap-3">
                       <div className="w-2 h-2 rounded-full bg-primary" />
-                      <span className="text-slate-900 dark:text-white font-medium">Daily social activities</span>
+                      <span className="text-slate-900 dark:text-slate-50 font-medium">Daily social activities</span>
                     </li>
                     <li className="flex items-center gap-3">
                       <div className="w-2 h-2 rounded-full bg-primary" />
-                      <span className="text-slate-900 dark:text-white font-medium">Recreational programs</span>
+                      <span className="text-slate-900 dark:text-slate-50 font-medium">Recreational programs</span>
                     </li>
                     <li className="flex items-center gap-3">
                       <div className="w-2 h-2 rounded-full bg-primary" />
-                      <span className="text-slate-900 dark:text-white font-medium">Mental wellness support</span>
+                      <span className="text-slate-900 dark:text-slate-50 font-medium">Mental wellness support</span>
                     </li>
                   </ul>
                 </div>
@@ -245,7 +245,7 @@ export default function Home() {
       </section>
 
       {/* Services Overview Section */}
-      <section className="relative py-16 md:py-24 bg-white dark:bg-black overflow-hidden">
+      <section className="relative py-16 md:py-24 bg-white dark:bg-slate-950 overflow-hidden">
         {/* Animated Background Orbs */}
         <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-gradient-to-br from-blue-400/25 to-blue-500/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.4s'}} />
         <div className="absolute bottom-0 left-0 w-[380px] h-[380px] bg-gradient-to-br from-primary/25 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.9s'}} />
@@ -253,10 +253,10 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             {/* Content */}
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-50 mb-6">
               Comprehensive Care Services
             </h2>
-            <p className="text-slate-700 dark:text-slate-300 mb-8 text-lg max-w-2xl mx-auto">
+            <p className="text-slate-800 dark:text-slate-200 mb-8 text-lg max-w-2xl mx-auto">
               Ark Care AFH offers a complete range of services to support your loved one's health, safety, and quality of life.
             </p>
             <ul className="space-y-3 mb-8 inline-block text-left">
@@ -264,25 +264,25 @@ export default function Home() {
                 <svg className="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
-                <span className="text-slate-900 dark:text-white font-medium">Medication management with pharmacy oversight</span>
+                <span className="text-slate-900 dark:text-slate-50 font-medium">Medication management with pharmacy oversight</span>
               </li>
               <li className="flex items-start gap-3">
                 <svg className="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
-                <span className="text-slate-900 dark:text-white font-medium">Assistance with daily living & hygiene</span>
+                <span className="text-slate-900 dark:text-slate-50 font-medium">Assistance with daily living & hygiene</span>
               </li>
               <li className="flex items-start gap-3">
                 <svg className="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
-                <span className="text-slate-900 dark:text-white font-medium">Specialized support for mental health, dementia & developmental disabilities</span>
+                <span className="text-slate-900 dark:text-slate-50 font-medium">Specialized support for mental health, dementia & developmental disabilities</span>
               </li>
               <li className="flex items-start gap-3">
                 <svg className="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
-                <span className="text-slate-900 dark:text-white font-medium">Customized activities & meaningful day programs</span>
+                <span className="text-slate-900 dark:text-slate-50 font-medium">Customized activities & meaningful day programs</span>
               </li>
             </ul>
             <div className="flex justify-center">
@@ -298,7 +298,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section - Grid Cards */}
-      <section className="relative py-12 md:py-16 bg-white dark:bg-black overflow-hidden">
+      <section className="relative py-12 md:py-16 bg-white dark:bg-slate-950 overflow-hidden">
         {/* Animated Background Orbs */}
         <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-gradient-to-br from-primary/15 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.2s'}} />
         <div className="absolute -bottom-40 -right-40 w-[450px] h-[450px] bg-gradient-to-br from-cyan-400/10 to-cyan-500/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.6s'}} />
@@ -308,10 +308,10 @@ export default function Home() {
             <span className="inline-block px-4 py-2 bg-primary/20 text-primary dark:text-primary text-sm font-semibold rounded-full mb-4">
               Client Success Stories
             </span>
-            <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-2">
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-slate-50 mb-2">
               Stories From Our Community
             </h2>
-            <p className="text-base text-slate-700 dark:text-slate-300 max-w-2xl mx-auto">
+            <p className="text-base text-slate-800 dark:text-slate-200 max-w-2xl mx-auto">
               Hear directly from residents and families about their experiences at Ark Care AFH
             </p>
           </div>
@@ -385,13 +385,13 @@ export default function Home() {
                   </div>
 
                   {/* Quote */}
-                  <p className="text-slate-700 dark:text-slate-300 leading-relaxed mb-6 flex-grow">
+                  <p className="text-slate-800 dark:text-slate-200 leading-relaxed mb-6 flex-grow">
                     "{testimonial.text}"
                   </p>
 
                   {/* Author Info */}
                   <div className="border-t border-slate-200 dark:border-slate-700 pt-4">
-                    <p className="font-bold text-slate-900 dark:text-white">
+                    <p className="font-bold text-slate-900 dark:text-slate-50">
                       {testimonial.author}
                     </p>
                     <p className="text-sm text-primary font-medium">
@@ -406,7 +406,7 @@ export default function Home() {
       </section>
 
       {/* FAQ Section - 2 Column Layout */}
-      <section className="relative py-12 md:py-16 bg-white dark:bg-black overflow-hidden">
+      <section className="relative py-12 md:py-16 bg-white dark:bg-slate-950 overflow-hidden">
         {/* Animated Background Orbs */}
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gradient-to-br from-cyan-500/20 to-cyan-400/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.3s'}} />
         <div className="absolute bottom-0 left-0 w-[380px] h-[380px] bg-gradient-to-br from-primary/15 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.5s'}} />
@@ -416,10 +416,10 @@ export default function Home() {
             <span className="inline-block px-4 py-2 bg-primary/20 text-primary text-sm font-semibold rounded-full mb-4">
               Help & Support
             </span>
-            <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-2">
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-slate-50 mb-2">
               Common Questions Answered
             </h2>
-            <p className="text-base text-slate-700 dark:text-slate-300 max-w-2xl mx-auto">
+            <p className="text-base text-slate-800 dark:text-slate-200 max-w-2xl mx-auto">
               Get answers to help you make the best decision for your loved one
             </p>
           </div>
@@ -462,10 +462,10 @@ export default function Home() {
                     {idx + 1}
                   </div>
 
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4 group-hover:text-primary transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-slate-50 mb-4 group-hover:text-primary transition-colors duration-300">
                     {item.q}
                   </h3>
-                  <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
+                  <p className="text-slate-800 dark:text-slate-200 leading-relaxed">
                     {item.a}
                   </p>
 
@@ -479,10 +479,10 @@ export default function Home() {
           {/* CTA Box */}
           <div className="mt-10 text-center animate-slideup-delay-2">
             <div className="bg-gradient-to-r from-primary/20 to-cyan-500/20 rounded-2xl border border-primary/40 p-8">
-              <h3 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">
+              <h3 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-slate-50 mb-4">
                 Didn't find your answer?
               </h3>
-              <p className="text-slate-700 dark:text-slate-300 mb-8 max-w-xl mx-auto text-lg">
+              <p className="text-slate-800 dark:text-slate-200 mb-8 max-w-xl mx-auto text-lg">
                 Our caring team is here to answer any questions and help you find the right care solution.
               </p>
               <Link
@@ -497,7 +497,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section - Hero Style */}
-      <section className="relative py-12 md:py-16 bg-white dark:bg-black overflow-hidden">
+      <section className="relative py-12 md:py-16 bg-white dark:bg-slate-950 overflow-hidden">
         {/* Animated Background Orbs */}
         <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-br from-primary/30 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.1s'}} />
         <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-gradient-to-br from-cyan-400/15 to-cyan-500/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.5s'}} />
@@ -507,10 +507,10 @@ export default function Home() {
             <span className="inline-block px-4 py-2 bg-primary/20 text-primary text-sm font-semibold rounded-full mb-4">
               Take Action Today
             </span>
-            <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-4 leading-tight">
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-slate-50 mb-4 leading-tight">
               Ready to Give Your Loved One the Care They Deserve?
             </h2>
-            <p className="text-base text-slate-700 dark:text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base text-slate-800 dark:text-slate-200 mb-8 max-w-3xl mx-auto leading-relaxed">
               Ark Care AFH offers the compassionate, professional care your family member needs. Take the first step today—schedule your tour.
             </p>
 
@@ -528,8 +528,8 @@ export default function Home() {
             <div className="group relative">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-cyan-400 rounded-2xl blur opacity-40 group-hover:opacity-60 transition duration-500" />
               <div className="relative bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Expert Care Team</h3>
-                <p className="text-sm text-slate-700 dark:text-slate-300">
+                <h3 className="text-lg font-bold text-slate-900 dark:text-slate-50 mb-2">Expert Care Team</h3>
+                <p className="text-sm text-slate-800 dark:text-slate-200">
                   Licensed professionals with years of experience in compassionate care and specialized support.
                 </p>
               </div>
@@ -538,8 +538,8 @@ export default function Home() {
             <div className="group relative">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl blur opacity-40 group-hover:opacity-60 transition duration-500" />
               <div className="relative bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Home-Like Environment</h3>
-                <p className="text-sm text-slate-700 dark:text-slate-300">
+                <h3 className="text-lg font-bold text-slate-900 dark:text-slate-50 mb-2">Home-Like Environment</h3>
+                <p className="text-sm text-slate-800 dark:text-slate-200">
                   A warm, welcoming space where residents feel safe, comfortable, and genuinely cared for.
                 </p>
               </div>
@@ -548,8 +548,8 @@ export default function Home() {
             <div className="group relative">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-primary rounded-2xl blur opacity-40 group-hover:opacity-60 transition duration-500" />
               <div className="relative bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Personalized Care Plans</h3>
-                <p className="text-sm text-slate-700 dark:text-slate-300">
+                <h3 className="text-lg font-bold text-slate-900 dark:text-slate-50 mb-2">Personalized Care Plans</h3>
+                <p className="text-sm text-slate-800 dark:text-slate-200">
                   Customized services tailored to each resident's unique needs, preferences, and health requirements.
                 </p>
               </div>
@@ -558,7 +558,7 @@ export default function Home() {
 
           {/* Bottom CTA Row */}
           <div className="text-center animate-slideup-delay-2">
-            <p className="text-slate-700 dark:text-slate-300 mb-4 text-sm">
+            <p className="text-slate-800 dark:text-slate-200 mb-4 text-sm">
               Have questions? Contact us anytime.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">

@@ -68,20 +68,20 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-6">Our Mission</h2>
-              <p className="text-lg text-slate-700 dark:text-slate-300 mb-4">
+              <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-50 mb-6">Our Mission</h2>
+              <p className="text-lg text-slate-800 dark:text-slate-200 mb-4">
                 At Ark Care AFH, we are dedicated to providing compassionate, high-quality adult family home care that honors the dignity, independence, and individual needs of each resident.
               </p>
-              <p className="text-lg text-slate-700 dark:text-slate-300">
+              <p className="text-lg text-slate-800 dark:text-slate-200">
                 We create a warm, supportive home environment where residents receive personalized care and meaningful engagement, supported by trained, caring staff.
               </p>
             </div>
             <div>
-              <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-6">Our Vision</h2>
-              <p className="text-lg text-slate-700 dark:text-slate-300 mb-4">
+              <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-50 mb-6">Our Vision</h2>
+              <p className="text-lg text-slate-800 dark:text-slate-200 mb-4">
                 We envision a future where every individual receives care that promotes their well-being, respects their choices, and enables them to live with dignity and purpose.
               </p>
-              <p className="text-lg text-slate-700 dark:text-slate-300">
+              <p className="text-lg text-slate-800 dark:text-slate-200">
                 Our home is a place where quality care, professional expertise, and genuine compassion come together to create the best possible outcomes for our residents.
               </p>
             </div>
@@ -90,22 +90,22 @@ export default function About() {
       </section>
 
       {/* Our Story */}
-      <section className="py-16 md:py-24 bg-white dark:bg-black">
+      <section className="py-16 md:py-24 bg-white dark:bg-slate-950">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-50 mb-8 text-center">
             Our Story
           </h2>
           <div className="bg-white dark:bg-slate-900 rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-8 md:p-12">
-            <p className="text-lg text-slate-700 dark:text-slate-300 mb-6 leading-relaxed">
+            <p className="text-lg text-slate-800 dark:text-slate-200 mb-6 leading-relaxed">
               Ark Care AFH is a licensed adult family home located in Algona, Washington, dedicated to providing compassionate, personalized care in a home-like environment. We specialize in caring for individuals with diverse needs, including seniors, adults with developmental disabilities, and those requiring specialized behavioral health support.
             </p>
-            <p className="text-lg text-slate-700 dark:text-slate-300 mb-6 leading-relaxed">
+            <p className="text-lg text-slate-800 dark:text-slate-200 mb-6 leading-relaxed">
               Our facility at 127 4th Ave N, Algona, WA 98001 was designed from the ground up to provide a safe, comfortable, and welcoming home. We carefully selected our location and designed our spaces to promote independence, dignity, and quality of life for our residents.
             </p>
-            <p className="text-lg text-slate-700 dark:text-slate-300 mb-6 leading-relaxed">
+            <p className="text-lg text-slate-800 dark:text-slate-200 mb-6 leading-relaxed">
               We offer comprehensive services under multiple programs including HCS (Home and Community Services), DDA Meaningful Day programs, and Expanded Community Services. Our specialized support includes care for individuals with mental health needs, dementia support, and developmental disability services.
             </p>
-            <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
+            <p className="text-lg text-slate-800 dark:text-slate-200 leading-relaxed">
               Today, we are proud to serve residents in our community, providing comprehensive care services that allow individuals to maintain their independence while receiving the support they need. Our team is committed to exceeding expectations and making a positive difference in the lives of those we serve. For more information or to schedule a tour, please call us at (206) 455-3644.
             </p>
           </div>
@@ -115,7 +115,7 @@ export default function About() {
       {/* Core Values */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-50 mb-12 text-center">
             Our Core Values
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -126,8 +126,8 @@ export default function About() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">Compassion</h3>
-              <p className="text-slate-700 dark:text-slate-300">
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-slate-50 mb-3">Compassion</h3>
+              <p className="text-slate-800 dark:text-slate-200">
                 We care deeply about our residents' well-being and are committed to treating each person with kindness and empathy.
               </p>
             </div>
@@ -139,8 +139,8 @@ export default function About() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">Quality</h3>
-              <p className="text-slate-700 dark:text-slate-300">
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-slate-50 mb-3">Quality</h3>
+              <p className="text-slate-800 dark:text-slate-200">
                 Excellence is our standard. We maintain the highest quality in care, services, and our facility.
               </p>
             </div>
@@ -152,8 +152,8 @@ export default function About() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">Respect</h3>
-              <p className="text-slate-700 dark:text-slate-300">
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-slate-50 mb-3">Respect</h3>
+              <p className="text-slate-800 dark:text-slate-200">
                 We honor the dignity and autonomy of each resident, respecting their choices and preferences.
               </p>
             </div>
@@ -162,9 +162,9 @@ export default function About() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 md:py-24 bg-white dark:bg-black">
+      <section className="py-16 md:py-24 bg-white dark:bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-50 mb-12 text-center">
             Why Choose Ark Care AFH?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -177,8 +177,8 @@ export default function About() {
                 </div>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Experienced Staff</h3>
-                <p className="mt-2 text-slate-700 dark:text-slate-300">
+                <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-50">Experienced Staff</h3>
+                <p className="mt-2 text-slate-800 dark:text-slate-200">
                   Our team consists of trained, caring professionals with experience in adult family home care.
                 </p>
               </div>
@@ -193,8 +193,8 @@ export default function About() {
                 </div>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Personalized Care</h3>
-                <p className="mt-2 text-slate-700 dark:text-slate-300">
+                <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-50">Personalized Care</h3>
+                <p className="mt-2 text-slate-800 dark:text-slate-200">
                   Each resident receives a customized care plan tailored to their unique needs and preferences.
                 </p>
               </div>
@@ -209,8 +209,8 @@ export default function About() {
                 </div>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Home Environment</h3>
-                <p className="mt-2 text-slate-700 dark:text-slate-300">
+                <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-50">Home Environment</h3>
+                <p className="mt-2 text-slate-800 dark:text-slate-200">
                   Our facility is designed to feel like home, promoting comfort and a sense of belonging.
                 </p>
               </div>
@@ -225,8 +225,8 @@ export default function About() {
                 </div>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Community Focus</h3>
-                <p className="mt-2 text-slate-700 dark:text-slate-300">
+                <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-50">Community Focus</h3>
+                <p className="mt-2 text-slate-800 dark:text-slate-200">
                   We foster a sense of community and encourage meaningful engagement within our home.
                 </p>
               </div>
@@ -239,10 +239,10 @@ export default function About() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-50 mb-4">
               Our Care Team
             </h2>
-            <p className="text-lg text-slate-700 dark:text-slate-300 max-w-3xl mx-auto">
+            <p className="text-lg text-slate-800 dark:text-slate-200 max-w-3xl mx-auto">
               Our team consists of trained, certified professionals who are passionate about providing quality care. Every staff member is committed to treating residents with dignity, respect, and compassion. All staff members maintain current CPR/First Aid certification and participate in ongoing professional development.
             </p>
           </div>
@@ -303,18 +303,18 @@ export default function About() {
 
                 {/* Info */}
                 <div className="p-6">
-                  <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-1">
+                  <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-50 mb-1">
                     {member.name}
                   </h3>
                   <p className="text-primary font-medium text-sm mb-3">
                     {member.title}
                   </p>
-                  <p className="text-sm text-slate-700 dark:text-slate-300 mb-4 leading-relaxed">
+                  <p className="text-sm text-slate-800 dark:text-slate-200 mb-4 leading-relaxed">
                     {member.bio}
                   </p>
                   <div className="border-t border-slate-200 dark:border-slate-800 pt-4">
-                    <p className="text-xs font-semibold text-slate-900 dark:text-white mb-2">Qualifications:</p>
-                    <ul className="text-xs text-slate-700 dark:text-slate-300 space-y-1">
+                    <p className="text-xs font-semibold text-slate-900 dark:text-slate-50 mb-2">Qualifications:</p>
+                    <ul className="text-xs text-slate-800 dark:text-slate-200 space-y-1">
                       {member.qualifications.map((qual, idx) => (
                         <li key={idx}>• {qual}</li>
                       ))}
