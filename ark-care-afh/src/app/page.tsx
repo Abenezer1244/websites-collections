@@ -297,340 +297,292 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section - Modern Auto-Scrolling Carousel */}
-      <section className="relative py-16 md:py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
+      {/* Testimonials Section - Grid Cards */}
+      <section className="relative py-16 md:py-24 bg-gradient-to-b from-white via-slate-50 to-white overflow-hidden">
         {/* Animated Background Orbs */}
-        <div className="absolute -top-32 -right-40 w-[420px] h-[420px] bg-gradient-to-br from-primary/30 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.3s'}} />
-        <div className="absolute -bottom-32 -left-40 w-[400px] h-[400px] bg-gradient-to-br from-cyan-500/20 to-cyan-400/8 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.8s'}} />
+        <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-gradient-to-br from-primary/15 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.2s'}} />
+        <div className="absolute -bottom-40 -right-40 w-[450px] h-[450px] bg-gradient-to-br from-cyan-400/10 to-cyan-500/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.6s'}} />
 
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="mb-16 text-center animate-slideup">
-            <span className="inline-block px-4 py-2 bg-primary/20 text-primary text-sm font-semibold rounded-full mb-6">
-              Client Stories
+            <span className="inline-block px-4 py-2 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-6">
+              Client Success Stories
             </span>
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
-              What People Are Saying
+            <h2 className="text-4xl md:text-5xl font-black text-foreground mb-4">
+              Stories From Our Community
             </h2>
-            <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-              Real stories from residents, families, and caregivers who trust Ark Care AFH
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Hear directly from residents and families about their experiences at Ark Care AFH
             </p>
           </div>
 
-          {/* Carousel Container */}
-          <div className="relative overflow-hidden">
-            <div className="carousel-slide flex">
-              {[
-                {
-                  text: "Ark Care AFH has been wonderful for my mother. She feels at home here, the staff treats her with genuine care and respect, and I feel confident knowing she's in good hands. The whole team goes above and beyond.",
-                  author: "Margaret S.",
-                  relation: "Daughter",
-                  type: "Family"
-                },
-                {
-                  text: "I moved here 6 months ago and it's been the best decision. The caregivers are patient and kind, the meals are delicious, and there's always something to do. I feel like part of a family here.",
-                  author: "Henry P.",
-                  relation: "Resident",
-                  type: "Resident"
-                },
-                {
-                  text: "We can't thank Sarah and her team enough. The level of personalized attention my father receives is exceptional. They communicate with us regularly and truly care about his well-being.",
-                  author: "Jennifer K.",
-                  relation: "Daughter",
-                  type: "Family"
-                },
-                {
-                  text: "The staff here is professional, compassionate, and attentive. My wife receives excellent care for her specific needs, and I'm grateful for the peace of mind and support we receive.",
-                  author: "Robert M.",
-                  relation: "Spouse",
-                  type: "Family"
-                }
-              ].map((testimonial, index) => (
-                <div
-                  key={index}
-                  className="w-full flex-shrink-0 px-4 md:px-8"
-                >
-                  <div className="group bg-gradient-to-br from-slate-700/80 to-slate-800/60 backdrop-blur-sm rounded-2xl shadow-2xl border border-slate-600/40 p-8 md:p-12 h-full hover:shadow-2xl transition-all duration-500 hover:border-primary/40">
-                    {/* Top Accent Line */}
-                    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-cyan-400 to-transparent rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          {/* Testimonials Grid */}
+          <div className="grid md:grid-cols-3 gap-8 animate-slideup-delay-1">
+            {[
+              {
+                text: "Ark Care AFH has been wonderful for my mother. She feels at home here, the staff treats her with genuine care and respect.",
+                author: "Margaret S.",
+                relation: "Daughter",
+                initials: "MS",
+                color: "from-primary to-cyan-400"
+              },
+              {
+                text: "I moved here 6 months ago and it's been the best decision. The caregivers are patient and kind, and I feel like part of a family.",
+                author: "Henry P.",
+                relation: "Resident",
+                initials: "HP",
+                color: "from-cyan-400 to-blue-500"
+              },
+              {
+                text: "The level of personalized attention my father receives is exceptional. They communicate regularly and truly care about his well-being.",
+                author: "Jennifer K.",
+                relation: "Daughter",
+                initials: "JK",
+                color: "from-blue-500 to-indigo-500"
+              },
+              {
+                text: "Professional, compassionate, and attentive. My wife receives excellent care for her specific needs. Very grateful for the support.",
+                author: "Robert M.",
+                relation: "Spouse",
+                initials: "RM",
+                color: "from-indigo-500 to-purple-500"
+              },
+              {
+                text: "The staff goes above and beyond. They listen to our concerns and always have time to chat. It's truly like a home.",
+                author: "Patricia L.",
+                relation: "Family Member",
+                initials: "PL",
+                color: "from-purple-500 to-pink-500"
+              },
+              {
+                text: "Best decision we made for our father's care. Safe, loving environment with activities and excellent medical management.",
+                author: "David T.",
+                relation: "Son",
+                initials: "DT",
+                color: "from-pink-500 to-primary"
+              }
+            ].map((testimonial, index) => (
+              <div
+                key={index}
+                className="group"
+              >
+                <div className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-8 h-full hover:shadow-xl transition-all duration-300 hover:border-primary/40 flex flex-col relative overflow-hidden">
+                  {/* Gradient accent top */}
+                  <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${testimonial.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
 
-                    {/* Badge & Stars Row */}
-                    <div className="flex justify-between items-center mb-6">
-                      <div className="flex gap-1">
-                        {[...Array(5)].map((_, i) => (
-                          <svg
-                            key={i}
-                            className="w-5 h-5 text-yellow-400 fill-current transition-transform group-hover:scale-110"
-                            style={{transitionDelay: `${i * 50}ms`}}
-                            viewBox="0 0 20 20"
-                          >
-                            <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                          </svg>
-                        ))}
-                      </div>
-                      <span className={`text-xs font-bold px-3 py-1 rounded-full ${
-                        testimonial.type === 'Resident'
-                          ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/30'
-                          : 'bg-primary/20 text-primary border border-primary/30'
-                      }`}>
-                        {testimonial.type}
-                      </span>
-                    </div>
+                  {/* Avatar Circle */}
+                  <div className={`w-14 h-14 rounded-full bg-gradient-to-br ${testimonial.color} flex items-center justify-center text-white font-bold text-lg mb-6 group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
+                    {testimonial.initials}
+                  </div>
 
-                    {/* Testimonial Text */}
-                    <p className="text-lg text-slate-100 mb-8 leading-relaxed font-medium">
-                      "{testimonial.text}"
+                  {/* Stars */}
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                      </svg>
+                    ))}
+                  </div>
+
+                  {/* Quote */}
+                  <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
+                    "{testimonial.text}"
+                  </p>
+
+                  {/* Author Info */}
+                  <div className="border-t border-slate-200 dark:border-slate-700 pt-4">
+                    <p className="font-bold text-foreground">
+                      {testimonial.author}
                     </p>
-
-                    {/* Author Section */}
-                    <div className="border-t border-slate-600/40 pt-6">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <p className="font-bold text-white text-lg">
-                            {testimonial.author}
-                          </p>
-                          <p className="text-sm text-primary/80 font-medium">
-                            {testimonial.relation}
-                          </p>
-                        </div>
-                        <svg className="w-5 h-5 text-primary opacity-40" fill="currentColor" viewBox="0 0 20 20">
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      </div>
-                    </div>
+                    <p className="text-sm text-primary font-medium">
+                      {testimonial.relation}
+                    </p>
                   </div>
                 </div>
-              ))}
-            </div>
-
-            {/* Carousel Gradient Fade */}
-            <div className="absolute left-0 top-0 bottom-0 w-12 md:w-24 bg-gradient-to-r from-slate-900 via-slate-900/50 to-transparent pointer-events-none z-10" />
-            <div className="absolute right-0 top-0 bottom-0 w-12 md:w-24 bg-gradient-to-l from-slate-900 via-slate-900/50 to-transparent pointer-events-none z-10" />
-          </div>
-
-          {/* Indicators */}
-          <div className="flex justify-center gap-3 mt-12">
-            {[0, 1, 2, 3].map((_, i) => (
-              <div
-                key={i}
-                className="group/indicator cursor-pointer"
-              >
-                <div className={`h-2 rounded-full transition-all duration-500 ${
-                  i === 0 ? 'w-8 bg-primary' : 'w-2 bg-slate-500 group-hover/indicator:bg-primary/60'
-                }`} />
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* FAQ Section - Modern Accordion Design */}
-      <section className="relative py-16 md:py-24 bg-gradient-to-b from-white to-slate-50 overflow-hidden">
+      {/* FAQ Section - 2 Column Layout */}
+      <section className="relative py-16 md:py-24 bg-slate-900 overflow-hidden">
         {/* Animated Background Orbs */}
-        <div className="absolute top-0 left-0 w-[380px] h-[380px] bg-gradient-to-br from-primary/25 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.1s'}} />
-        <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-gradient-to-br from-cyan-400/25 to-cyan-500/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.6s'}} />
+        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gradient-to-br from-cyan-500/20 to-cyan-400/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.3s'}} />
+        <div className="absolute bottom-0 left-0 w-[380px] h-[380px] bg-gradient-to-br from-primary/15 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.5s'}} />
 
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="mb-16 text-center animate-slideup">
-            <span className="inline-block px-4 py-2 bg-primary/10 dark:bg-primary/20 text-primary text-sm font-semibold rounded-full mb-6">
-              Questions?
+            <span className="inline-block px-4 py-2 bg-primary/20 text-primary text-sm font-semibold rounded-full mb-6">
+              Help & Support
             </span>
-            <h2 className="text-4xl md:text-5xl font-black text-foreground mb-4">
-              Frequently Asked Questions
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
+              Common Questions Answered
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Everything you need to know about Ark Care AFH
+            <p className="text-lg text-slate-300 max-w-2xl mx-auto">
+              Get answers to help you make the best decision for your loved one
             </p>
           </div>
 
-          <div className="space-y-4 animate-slideup-delay-1">
+          {/* 2 Column FAQ Grid */}
+          <div className="grid md:grid-cols-2 gap-8 animate-slideup-delay-1">
             {[
               {
                 q: "What is the admission process?",
-                a: "The admission process begins with a tour of our facility and a consultation with our team. During this visit, we discuss your care needs, answer your questions, and determine if Ark Care AFH is the right fit. If both parties agree to move forward, we complete paperwork and schedule a start date.",
-                icon: "📋"
+                a: "We begin with a tour of our facility and a consultation to discuss care needs. We answer all your questions and determine the best fit for your loved one."
               },
               {
-                q: "What services are included in the care plan?",
-                a: "Services include 24/7 professional care, medication management, personal care, meal preparation, laundry, housekeeping, activities, and transportation. We create customized care plans based on individual needs.",
-                icon: "🏥"
+                q: "What services are included?",
+                a: "Our comprehensive services include 24/7 professional care, medication management, personal care, meal preparation, laundry, activities, and transportation."
               },
               {
-                q: "Can family members visit anytime?",
-                a: "We have flexible visiting hours to accommodate family schedules. We encourage regular family involvement and communication. Please discuss visiting preferences during the admission process.",
-                icon: "👨‍👩‍👧"
+                q: "Can family visit anytime?",
+                a: "We have flexible visiting hours to accommodate family schedules. Regular family involvement is encouraged and we maintain open communication."
               },
               {
-                q: "Are you licensed and regulated?",
-                a: "Yes, we comply with all state and local regulations for adult family homes. Our owner holds necessary licenses and certifications.",
-                icon: "✅"
+                q: "Are you licensed?",
+                a: "Yes, we fully comply with all state and local regulations for adult family homes. Our owner holds all necessary licenses and certifications."
               },
               {
-                q: "What kinds of activities are available?",
-                a: "We offer a variety of activities including games, crafts, outdoor outings, movies, reading, and social gatherings. Activities are tailored to individual interests and abilities.",
-                icon: "🎨"
+                q: "What activities are offered?",
+                a: "We provide games, crafts, outdoor outings, movies, reading, and social gatherings. All activities are tailored to individual interests and abilities."
               },
               {
-                q: "What if I have concerns about the care?",
-                a: "We take all concerns seriously. Please speak with our staff or owner directly. We're committed to addressing concerns promptly and working together for the best outcome.",
-                icon: "💬"
+                q: "How do we handle concerns?",
+                a: "We take all concerns seriously and address them promptly. Please speak with our staff directly - we're committed to working together for the best outcome."
               }
             ].map((item, idx) => (
-              <details
+              <div
                 key={idx}
-                className="group bg-white rounded-2xl border border-slate-200 dark:border-slate-700 dark:bg-slate-800/50 hover:shadow-lg transition-all duration-300 overflow-hidden open:shadow-lg open:border-primary/20"
+                className="group"
               >
-                <summary className="cursor-pointer p-6 md:p-8 flex justify-between items-center hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
-                  <div className="flex items-center gap-4 flex-1">
-                    <span className="text-2xl md:text-3xl">{item.icon}</span>
-                    <span className="font-bold text-lg text-foreground group-open:text-primary transition-colors">
-                      {item.q}
-                    </span>
+                <div className="bg-gradient-to-br from-slate-800/80 to-slate-900/60 backdrop-blur-sm rounded-2xl border border-slate-700/50 p-8 h-full hover:border-primary/40 transition-all duration-300 hover:shadow-2xl">
+                  {/* Number Badge */}
+                  <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-primary to-cyan-400 text-slate-900 font-bold mb-4 group-hover:scale-110 transition-transform duration-300">
+                    {idx + 1}
                   </div>
-                  <svg
-                    className="w-6 h-6 text-primary flex-shrink-0 transition-transform duration-300 group-open:rotate-180"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2.5}
-                      d="M19 14l-7 7m0 0l-7-7m7 7V3"
-                    />
-                  </svg>
-                </summary>
-                <div className="px-6 md:px-8 pb-6 md:pb-8 border-t border-slate-200 dark:border-slate-700 bg-gradient-to-b from-slate-50/50 to-transparent dark:from-slate-900/20">
-                  <p className="text-muted-foreground leading-relaxed text-lg">
+
+                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-primary transition-colors duration-300">
+                    {item.q}
+                  </h3>
+                  <p className="text-slate-300 leading-relaxed">
                     {item.a}
                   </p>
+
+                  {/* Bottom accent line */}
+                  <div className="mt-6 h-1 w-12 bg-gradient-to-r from-primary to-cyan-400 rounded-full group-hover:w-full transition-all duration-300" />
                 </div>
-              </details>
+              </div>
             ))}
           </div>
 
+          {/* CTA Box */}
           <div className="mt-16 text-center animate-slideup-delay-2">
-            <div className="bg-gradient-to-r from-primary/5 to-cyan-400/5 dark:from-primary/10 dark:to-cyan-400/10 rounded-2xl border border-primary/20 p-8 md:p-12">
-              <p className="text-lg text-foreground font-semibold mb-4">
-                Still have questions?
-              </p>
-              <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
-                Our caring team is ready to answer any questions and help you find the perfect care solution for your loved one.
+            <div className="bg-gradient-to-r from-primary/20 to-cyan-500/20 rounded-2xl border border-primary/40 p-10 md:p-14">
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                Didn't find your answer?
+              </h3>
+              <p className="text-slate-300 mb-8 max-w-xl mx-auto text-lg">
+                Our caring team is here to answer any questions and help you find the right care solution.
               </p>
               <Link
                 href="/contact"
-                className="inline-block px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl hover:scale-105 duration-300"
+                className="inline-block px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-xl hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 group"
               >
-                Get in Touch Today
+                Contact Us Today
+                <svg className="w-5 h-5 ml-2 inline group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section - Modern Engagement */}
-      <section className="relative py-24 md:py-32 overflow-hidden">
-        {/* Background Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-white to-cyan-400/5" />
-
+      {/* CTA Section - Hero Style */}
+      <section className="relative py-20 md:py-28 bg-gradient-to-b from-white to-primary/5 overflow-hidden">
         {/* Animated Background Orbs */}
-        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-gradient-to-br from-primary/20 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.2s'}} />
-        <div className="absolute -bottom-40 -left-40 w-[450px] h-[450px] bg-gradient-to-br from-cyan-400/15 to-cyan-500/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.7s'}} />
+        <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-br from-primary/30 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.1s'}} />
+        <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-gradient-to-br from-cyan-400/15 to-cyan-500/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.5s'}} />
 
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
-            <div className="animate-slideup">
-              <span className="inline-block px-4 py-2 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-6">
-                Next Steps
-              </span>
-              <h2 className="text-4xl md:text-5xl font-black text-foreground mb-6 leading-tight">
-                Ready to Give Your Loved One the Care They Deserve?
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Join families who trust Ark Care AFH for compassionate, personalized care. Schedule a tour today and see why our residents and families choose us.
-              </p>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center animate-slideup mb-16">
+            <span className="inline-block px-4 py-2 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-6">
+              Take Action Today
+            </span>
+            <h2 className="text-5xl md:text-6xl font-black text-foreground mb-6 leading-tight">
+              Ready to Give Your Loved One the Care They Deserve?
+            </h2>
+            <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
+              Ark Care AFH offers the compassionate, professional care your family member needs. Take the first step today—schedule your tour.
+            </p>
 
-              {/* Benefit List */}
-              <ul className="space-y-4 mb-10">
-                <li className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-foreground font-medium">Personalized tour of our facility</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-foreground font-medium">One-on-one consultation with our team</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-foreground font-medium">Customized care plan discussion</span>
-                </li>
-              </ul>
+            {/* Main CTA Button */}
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-primary to-cyan-500 text-white font-bold text-lg rounded-xl hover:shadow-2xl transition-all duration-300 shadow-lg hover:scale-105 mb-12 group"
+            >
+              Schedule Your Tour Now
+              <svg className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </Link>
+          </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-xl hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 group"
-                >
-                  Schedule a Tour
-                  <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </Link>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-primary font-semibold rounded-xl hover:bg-primary/5 transition-all duration-300"
-                >
-                  Ask a Question
-                </Link>
+          {/* Three Feature Cards */}
+          <div className="grid md:grid-cols-3 gap-8 mb-16 animate-slideup-delay-1">
+            <div className="group relative">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-cyan-400 rounded-2xl blur opacity-40 group-hover:opacity-60 transition duration-500" />
+              <div className="relative bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700">
+                <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">👥</div>
+                <h3 className="text-xl font-bold text-foreground mb-3">Expert Care Team</h3>
+                <p className="text-muted-foreground">
+                  Licensed professionals with years of experience in compassionate care and specialized support.
+                </p>
               </div>
             </div>
 
-            {/* Right Visual Element */}
-            <div className="relative animate-slideup-delay-1">
-              <div className="relative bg-gradient-to-br from-primary/10 to-cyan-400/10 rounded-3xl p-8 md:p-12 border border-primary/20 shadow-xl">
-                <div className="absolute inset-0 rounded-3xl overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent" />
-                </div>
-
-                <div className="relative z-10">
-                  {/* Stats Grid */}
-                  <div className="grid grid-cols-2 gap-6 mb-10">
-                    <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur rounded-2xl p-6 text-center border border-primary/10">
-                      <div className="text-3xl font-black text-primary mb-2">24/7</div>
-                      <p className="text-sm text-muted-foreground font-medium">Professional Care</p>
-                    </div>
-                    <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur rounded-2xl p-6 text-center border border-primary/10">
-                      <div className="text-3xl font-black text-primary mb-2">10+</div>
-                      <p className="text-sm text-muted-foreground font-medium">Years Experience</p>
-                    </div>
-                    <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur rounded-2xl p-6 text-center border border-primary/10">
-                      <div className="text-3xl font-black text-cyan-500 mb-2">100%</div>
-                      <p className="text-sm text-muted-foreground font-medium">Family Satisfaction</p>
-                    </div>
-                    <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur rounded-2xl p-6 text-center border border-primary/10">
-                      <div className="text-3xl font-black text-cyan-500 mb-2">50+</div>
-                      <p className="text-sm text-muted-foreground font-medium">Care Members</p>
-                    </div>
-                  </div>
-
-                  {/* Trust Badge */}
-                  <div className="bg-gradient-to-r from-primary/20 to-cyan-400/20 rounded-2xl p-6 border border-primary/30 text-center">
-                    <p className="text-sm text-muted-foreground font-medium mb-2">
-                      ✨ Licensed & Regulated
-                    </p>
-                    <p className="text-foreground font-bold text-sm">
-                      State-Compliant Adult Family Home
-                    </p>
-                  </div>
-                </div>
+            <div className="group relative">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl blur opacity-40 group-hover:opacity-60 transition duration-500" />
+              <div className="relative bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700">
+                <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">🏡</div>
+                <h3 className="text-xl font-bold text-foreground mb-3">Home-Like Environment</h3>
+                <p className="text-muted-foreground">
+                  A warm, welcoming space where residents feel safe, comfortable, and genuinely cared for.
+                </p>
               </div>
+            </div>
+
+            <div className="group relative">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-primary rounded-2xl blur opacity-40 group-hover:opacity-60 transition duration-500" />
+              <div className="relative bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700">
+                <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">💙</div>
+                <h3 className="text-xl font-bold text-foreground mb-3">Personalized Care Plans</h3>
+                <p className="text-muted-foreground">
+                  Customized services tailored to each resident's unique needs, preferences, and health requirements.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom CTA Row */}
+          <div className="text-center animate-slideup-delay-2">
+            <p className="text-muted-foreground mb-6 text-lg">
+              Have questions? Contact us anytime.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-xl hover:bg-primary/90 transition-all duration-300"
+              >
+                Contact Information
+              </Link>
+              <Link
+                href="/services"
+                className="inline-flex items-center justify-center px-8 py-3 border-2 border-primary text-primary font-semibold rounded-xl hover:bg-primary/5 transition-all duration-300"
+              >
+                Learn About Services
+              </Link>
             </div>
           </div>
         </div>
