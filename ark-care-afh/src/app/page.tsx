@@ -289,80 +289,93 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+      {/* Testimonials Section - Auto-Scrolling Carousel */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-white to-slate-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-16 text-center">
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
               What People Are Saying
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Real reviews from residents and their families about the care they receive at Ark Care AFH
+              Real stories from residents and families
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            {[
-              {
-                text: "Ark Care AFH has been wonderful for my mother. She feels at home here, the staff treats her with genuine care and respect, and I feel confident knowing she's in good hands. The whole team goes above and beyond.",
-                author: "Margaret S.",
-                relation: "Daughter"
-              },
-              {
-                text: "I moved here 6 months ago and it's been the best decision. The caregivers are patient and kind, the meals are delicious, and there's always something to do. I feel like part of a family here.",
-                author: "Henry P.",
-                relation: "Resident"
-              },
-              {
-                text: "We can't thank Sarah and her team enough. The level of personalized attention my father receives is exceptional. They communicate with us regularly and truly care about his well-being.",
-                author: "Jennifer K.",
-                relation: "Daughter"
-              },
-              {
-                text: "The staff here is professional, compassionate, and attentive. My wife receives excellent care for her specific needs, and I'm grateful for the peace of mind and support we receive.",
-                author: "Robert M.",
-                relation: "Spouse"
-              }
-            ].map((testimonial, index) => (
+          {/* Carousel Container */}
+          <div className="relative overflow-hidden">
+            <div className="carousel-slide flex">
+              {[
+                {
+                  text: "Ark Care AFH has been wonderful for my mother. She feels at home here, the staff treats her with genuine care and respect, and I feel confident knowing she's in good hands. The whole team goes above and beyond.",
+                  author: "Margaret S.",
+                  relation: "Daughter"
+                },
+                {
+                  text: "I moved here 6 months ago and it's been the best decision. The caregivers are patient and kind, the meals are delicious, and there's always something to do. I feel like part of a family here.",
+                  author: "Henry P.",
+                  relation: "Resident"
+                },
+                {
+                  text: "We can't thank Sarah and her team enough. The level of personalized attention my father receives is exceptional. They communicate with us regularly and truly care about his well-being.",
+                  author: "Jennifer K.",
+                  relation: "Daughter"
+                },
+                {
+                  text: "The staff here is professional, compassionate, and attentive. My wife receives excellent care for her specific needs, and I'm grateful for the peace of mind and support we receive.",
+                  author: "Robert M.",
+                  relation: "Spouse"
+                }
+              ].map((testimonial, index) => (
+                <div
+                  key={index}
+                  className="w-full flex-shrink-0 px-4 md:px-8"
+                >
+                  <div className="bg-white rounded-2xl shadow-lg border border-slate-100 p-8 md:p-12 h-full">
+                    {/* Stars */}
+                    <div className="flex gap-1 mb-6">
+                      {[...Array(5)].map((_, i) => (
+                        <svg
+                          key={i}
+                          className="w-6 h-6 text-yellow-400 fill-current"
+                          viewBox="0 0 20 20"
+                        >
+                          <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                        </svg>
+                      ))}
+                    </div>
+
+                    {/* Testimonial Text */}
+                    <p className="text-lg text-muted-foreground mb-8 leading-relaxed italic">
+                      "{testimonial.text}"
+                    </p>
+
+                    {/* Author */}
+                    <div className="border-t border-slate-200 pt-6">
+                      <p className="font-bold text-foreground text-lg">
+                        {testimonial.author}
+                      </p>
+                      <p className="text-sm text-primary font-medium">
+                        {testimonial.relation}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Carousel Gradient Fade */}
+            <div className="absolute left-0 top-0 bottom-0 w-8 md:w-16 bg-gradient-to-r from-white to-transparent pointer-events-none z-10" />
+            <div className="absolute right-0 top-0 bottom-0 w-8 md:w-16 bg-gradient-to-l from-slate-50 to-transparent pointer-events-none z-10" />
+          </div>
+
+          {/* Indicators */}
+          <div className="flex justify-center gap-2 mt-12">
+            {[0, 1, 2, 3].map((_, i) => (
               <div
-                key={index}
-                className="bg-card rounded-lg shadow-sm border border-border p-8 hover:shadow-md transition-shadow"
-              >
-                {/* Stars */}
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <svg
-                      key={i}
-                      className="w-5 h-5 text-yellow-400 fill-current"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                    </svg>
-                  ))}
-                </div>
-
-                {/* Testimonial Text */}
-                <p className="text-muted-foreground mb-6 leading-relaxed italic">
-                  "{testimonial.text}"
-                </p>
-
-                {/* Author */}
-                <div className="border-t border-border pt-4">
-                  <p className="font-semibold text-foreground">
-                    {testimonial.author}
-                  </p>
-                  <p className="text-sm text-muted-foreground">
-                    {testimonial.relation}
-                  </p>
-                </div>
-              </div>
+                key={i}
+                className="h-2 w-2 rounded-full bg-slate-300 hover:bg-primary transition-colors"
+              />
             ))}
-          </div>
-
-          <div className="text-center">
-            <p className="text-muted-foreground mb-6">
-              Want to hear more? View all testimonials from our community.
-            </p>
           </div>
         </div>
       </section>

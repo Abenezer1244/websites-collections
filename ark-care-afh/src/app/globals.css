@@ -351,3 +351,26 @@ html.dark section[data-section="why-choose"] {
 .animate-orb-3 {
   animation: floatingOrb3 22s ease-in-out infinite;
 }
+
+/* Testimonial Carousel Animations */
+@keyframes carouselSlide {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(-300%);
+  }
+}
+
+.carousel-slide {
+  animation: carouselSlide 16s ease-in-out infinite;
+}
