@@ -67,6 +67,11 @@ export default function Home() {
         {/* Dark Overlay for Text Visibility */}
         <div className="absolute inset-0 bg-black/40" />
 
+        {/* Animated Background Orbs */}
+        <div className="absolute top-20 right-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-orb-1 pointer-events-none" />
+        <div className="absolute bottom-32 left-10 w-80 h-80 bg-cyan-500/15 rounded-full blur-3xl animate-orb-2 pointer-events-none" />
+        <div className="absolute top-1/2 right-1/3 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl animate-orb-3 pointer-events-none" />
+
         {/* Animated Blobs */}
         <AnimatedBlob position="top-right" size="lg" opacity="medium" />
         <AnimatedBlobSecondary position="bottom-left" size="md" opacity="light" />

@@ -280,3 +280,74 @@ html.dark section[data-section="why-choose"] {
 .group:hover {
   animation: cardLift 2s ease-in-out infinite;
 }
+
+/* Hero Background Animations */
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes floatingOrb1 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translate(100px, -100px) scale(1.2);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(200px, 50px) scale(1);
+    opacity: 0.3;
+  }
+  75% {
+    transform: translate(50px, 150px) scale(1.1);
+    opacity: 0.4;
+  }
+}
+
+@keyframes floatingOrb2 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.2;
+  }
+  33% {
+    transform: translate(-150px, 100px) scale(1.15);
+    opacity: 0.4;
+  }
+  66% {
+    transform: translate(100px, -150px) scale(0.9);
+    opacity: 0.3;
+  }
+}
+
+@keyframes floatingOrb3 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.25;
+  }
+  40% {
+    transform: translate(150px, 100px) scale(1.1);
+    opacity: 0.35;
+  }
+  80% {
+    transform: translate(-100px, -120px) scale(1.05);
+    opacity: 0.3;
+  }
+}
+
+.animate-orb-1 {
+  animation: floatingOrb1 20s ease-in-out infinite;
+}
+
+.animate-orb-2 {
+  animation: floatingOrb2 25s ease-in-out infinite;
+}
+
+.animate-orb-3 {
+  animation: floatingOrb3 22s ease-in-out infinite;
+}
