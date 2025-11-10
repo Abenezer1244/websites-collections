@@ -298,20 +298,20 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section - Grid Cards */}
-      <section className="relative py-12 md:py-16 bg-gradient-to-b from-white via-slate-50 to-white overflow-hidden" style={{ backgroundImage: "url('/lilac-bg.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
+      <section className="relative py-12 md:py-16 bg-white/30 dark:bg-slate-900/30 overflow-hidden" style={{ backgroundImage: "url('/lilac-bg.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
         {/* Animated Background Orbs */}
         <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-gradient-to-br from-primary/15 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.2s'}} />
         <div className="absolute -bottom-40 -right-40 w-[450px] h-[450px] bg-gradient-to-br from-cyan-400/10 to-cyan-500/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.6s'}} />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="mb-10 text-center animate-slideup">
-            <span className="inline-block px-4 py-2 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
+            <span className="inline-block px-4 py-2 bg-primary/20 text-primary dark:text-primary text-sm font-semibold rounded-full mb-4">
               Client Success Stories
             </span>
-            <h2 className="text-3xl md:text-4xl font-black text-foreground mb-2">
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-2">
               Stories From Our Community
             </h2>
-            <p className="text-base text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base text-slate-700 dark:text-slate-300 max-w-2xl mx-auto">
               Hear directly from residents and families about their experiences at Ark Care AFH
             </p>
           </div>
@@ -385,13 +385,13 @@ export default function Home() {
                   </div>
 
                   {/* Quote */}
-                  <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
+                  <p className="text-slate-700 dark:text-slate-300 leading-relaxed mb-6 flex-grow">
                     "{testimonial.text}"
                   </p>
 
                   {/* Author Info */}
                   <div className="border-t border-slate-200 dark:border-slate-700 pt-4">
-                    <p className="font-bold text-foreground">
+                    <p className="font-bold text-slate-900 dark:text-white">
                       {testimonial.author}
                     </p>
                     <p className="text-sm text-primary font-medium">
@@ -406,7 +406,7 @@ export default function Home() {
       </section>
 
       {/* FAQ Section - 2 Column Layout */}
-      <section className="relative py-12 md:py-16 bg-slate-900 overflow-hidden" style={{ backgroundImage: "url('/lilac-bg.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
+      <section className="relative py-12 md:py-16 bg-slate-900/30 dark:bg-slate-900/50 overflow-hidden" style={{ backgroundImage: "url('/lilac-bg.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
         {/* Animated Background Orbs */}
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gradient-to-br from-cyan-500/20 to-cyan-400/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.3s'}} />
         <div className="absolute bottom-0 left-0 w-[380px] h-[380px] bg-gradient-to-br from-primary/15 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.5s'}} />
@@ -416,10 +416,10 @@ export default function Home() {
             <span className="inline-block px-4 py-2 bg-primary/20 text-primary text-sm font-semibold rounded-full mb-4">
               Help & Support
             </span>
-            <h2 className="text-3xl md:text-4xl font-black text-white mb-2">
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-2">
               Common Questions Answered
             </h2>
-            <p className="text-base text-slate-300 max-w-2xl mx-auto">
+            <p className="text-base text-slate-700 dark:text-slate-300 max-w-2xl mx-auto">
               Get answers to help you make the best decision for your loved one
             </p>
           </div>
@@ -462,10 +462,10 @@ export default function Home() {
                     {idx + 1}
                   </div>
 
-                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-primary transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4 group-hover:text-primary transition-colors duration-300">
                     {item.q}
                   </h3>
-                  <p className="text-slate-300 leading-relaxed">
+                  <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
                     {item.a}
                   </p>
 
@@ -479,20 +479,17 @@ export default function Home() {
           {/* CTA Box */}
           <div className="mt-10 text-center animate-slideup-delay-2">
             <div className="bg-gradient-to-r from-primary/20 to-cyan-500/20 rounded-2xl border border-primary/40 p-8">
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              <h3 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">
                 Didn't find your answer?
               </h3>
-              <p className="text-slate-300 mb-8 max-w-xl mx-auto text-lg">
+              <p className="text-slate-700 dark:text-slate-300 mb-8 max-w-xl mx-auto text-lg">
                 Our caring team is here to answer any questions and help you find the right care solution.
               </p>
               <Link
                 href="/contact"
-                className="inline-block px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-xl hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 group"
+                className="inline-block px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-xl hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
               >
                 Contact Us Today
-                <svg className="w-5 h-5 ml-2 inline group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
               </Link>
             </div>
           </div>
@@ -500,32 +497,29 @@ export default function Home() {
       </section>
 
       {/* CTA Section - Hero Style */}
-      <section className="relative py-12 md:py-16 bg-gradient-to-b from-white to-primary/5 overflow-hidden" style={{ backgroundImage: "url('/lilac-bg.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
+      <section className="relative py-12 md:py-16 bg-white/30 dark:bg-slate-900/30 overflow-hidden" style={{ backgroundImage: "url('/lilac-bg.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
         {/* Animated Background Orbs */}
         <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-br from-primary/30 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.1s'}} />
         <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-gradient-to-br from-cyan-400/15 to-cyan-500/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.5s'}} />
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center animate-slideup mb-10">
-            <span className="inline-block px-4 py-2 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
+            <span className="inline-block px-4 py-2 bg-primary/20 text-primary text-sm font-semibold rounded-full mb-4">
               Take Action Today
             </span>
-            <h2 className="text-3xl md:text-4xl font-black text-foreground mb-4 leading-tight">
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-4 leading-tight">
               Ready to Give Your Loved One the Care They Deserve?
             </h2>
-            <p className="text-base text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base text-slate-700 dark:text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Ark Care AFH offers the compassionate, professional care your family member needs. Take the first step today—schedule your tour.
             </p>
 
             {/* Main CTA Button */}
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-primary to-cyan-500 text-white font-bold rounded-xl hover:shadow-2xl transition-all duration-300 shadow-lg hover:scale-105 mb-8 group"
+              className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-primary to-cyan-500 text-white font-bold rounded-xl hover:shadow-2xl transition-all duration-300 shadow-lg hover:scale-105 mb-8"
             >
               Schedule Your Tour Now
-              <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
             </Link>
           </div>
 
@@ -534,9 +528,8 @@ export default function Home() {
             <div className="group relative">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-cyan-400 rounded-2xl blur opacity-40 group-hover:opacity-60 transition duration-500" />
               <div className="relative bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
-                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">👥</div>
-                <h3 className="text-lg font-bold text-foreground mb-2">Expert Care Team</h3>
-                <p className="text-sm text-muted-foreground">
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Expert Care Team</h3>
+                <p className="text-sm text-slate-700 dark:text-slate-300">
                   Licensed professionals with years of experience in compassionate care and specialized support.
                 </p>
               </div>
@@ -545,9 +538,8 @@ export default function Home() {
             <div className="group relative">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl blur opacity-40 group-hover:opacity-60 transition duration-500" />
               <div className="relative bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
-                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">🏡</div>
-                <h3 className="text-lg font-bold text-foreground mb-2">Home-Like Environment</h3>
-                <p className="text-sm text-muted-foreground">
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Home-Like Environment</h3>
+                <p className="text-sm text-slate-700 dark:text-slate-300">
                   A warm, welcoming space where residents feel safe, comfortable, and genuinely cared for.
                 </p>
               </div>
@@ -556,9 +548,8 @@ export default function Home() {
             <div className="group relative">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-primary rounded-2xl blur opacity-40 group-hover:opacity-60 transition duration-500" />
               <div className="relative bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
-                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">💙</div>
-                <h3 className="text-lg font-bold text-foreground mb-2">Personalized Care Plans</h3>
-                <p className="text-sm text-muted-foreground">
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Personalized Care Plans</h3>
+                <p className="text-sm text-slate-700 dark:text-slate-300">
                   Customized services tailored to each resident's unique needs, preferences, and health requirements.
                 </p>
               </div>
@@ -567,7 +558,7 @@ export default function Home() {
 
           {/* Bottom CTA Row */}
           <div className="text-center animate-slideup-delay-2">
-            <p className="text-muted-foreground mb-4 text-sm">
+            <p className="text-slate-700 dark:text-slate-300 mb-4 text-sm">
               Have questions? Contact us anytime.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
