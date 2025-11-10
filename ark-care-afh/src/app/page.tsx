@@ -456,9 +456,9 @@ export default function Home() {
                 key={idx}
                 className="group"
               >
-                <div className="bg-gradient-to-br from-slate-800/80 to-slate-900/60 backdrop-blur-sm rounded-2xl border border-slate-700/50 p-6 h-full hover:border-primary/40 transition-all duration-300 hover:shadow-2xl">
+                <div className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 h-full hover:border-primary/40 transition-all duration-300 hover:shadow-2xl">
                   {/* Number Badge */}
-                  <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-primary to-cyan-400 text-slate-900 font-bold mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-primary to-cyan-400 text-white font-bold mb-4 group-hover:scale-110 transition-transform duration-300">
                     {idx + 1}
                   </div>
 

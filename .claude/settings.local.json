@@ -18,7 +18,11 @@
       "Bash(git -C ark-care-afh log -1 --oneline)",
       "Bash(dir \"C:\\Users\\Windows\\OneDrive - Seattle Colleges\\Desktop\")",
       "Bash(findstr:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(curl:*)",
+      "Bash(npm run dev:*)",
+      "Bash(timeout 10 bash:*)",
+      "Bash(node screenshot.js)"
     ],
     "deny": [],
     "ask": []

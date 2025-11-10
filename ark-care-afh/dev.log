@@ -1,0 +1,12 @@
+
+> ark-care-next@0.1.0 dev
+> next dev
+
+   ▲ Next.js 16.0.1 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://172.20.10.3:3000
+
+ ✓ Starting...
+ ✓ Ready in 7.2s
+ ○ Compiling / ...
+ GET / 200 in 6.2s (compile: 5.5s, render: 670ms)
