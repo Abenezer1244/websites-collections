@@ -18,3 +18,13 @@
  GET / 200 in 219ms (compile: 13ms, render: 206ms)
  GET / 200 in 285ms (compile: 8ms, render: 277ms)
  GET / 200 in 347ms (compile: 7ms, render: 340ms)
+ ⚠ Failed to reload dynamic routes: Error: UNKNOWN: unknown error, open 'C:\Users\Windows\OneDrive - Seattle Colleges\Desktop\websites-collections\ark-care-afh\.next\dev\types\validator.ts'
+    at ignore-listed frames {
+  errno: -4094,
+  code: 'UNKNOWN',
+  syscall: 'open',
+  path: 'C:\\Users\\Windows\\OneDrive - Seattle Colleges\\Desktop\\websites-collections\\ark-care-afh\\.next\\dev\\types\\validator.ts'
+}
+ ✓ Compiled in 575ms
+ GET / 200 in 2.0s (compile: 1010ms, render: 1017ms)
+ GET / 200 in 313ms (compile: 15ms, render: 298ms)

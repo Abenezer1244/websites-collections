@@ -245,7 +245,7 @@ export default function Home() {
       </section>
 
       {/* Services Overview Section */}
-      <section className="relative py-16 md:py-24 bg-white dark:bg-slate-950 overflow-hidden">
+      <section className="relative py-16 md:py-24 bg-white dark:bg-slate-900 overflow-hidden">
         {/* Animated Background Orbs */}
         <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-gradient-to-br from-blue-400/25 to-blue-500/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.4s'}} />
         <div className="absolute bottom-0 left-0 w-[380px] h-[380px] bg-gradient-to-br from-primary/25 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.9s'}} />
