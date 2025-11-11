@@ -4,6 +4,8 @@ import Image from 'next/image'
 import { AnimatedBlob, AnimatedBlobSecondary } from '@/components/AnimatedBlob'
 import { JsonLd } from '@/components/JsonLd'
 import { pageMetadata, generateWebPageSchema, generateBreadcrumbSchema, siteConfig } from '@/lib/seo'
+import { TestimonialCard } from '@/components/cards/testimonial-card'
+import { Accordion } from '@/components/ui/accordion'
 
 export const metadata: Metadata = {
   title: pageMetadata.home.title,
@@ -320,86 +322,49 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6 animate-slideup-delay-1">
             {[
               {
-                text: "Ark Care AFH has been wonderful for my mother. She feels at home here, the staff treats her with genuine care and respect.",
+                quote: "Ark Care AFH has been wonderful for my mother. She feels at home here, the staff treats her with genuine care and respect.",
                 author: "Margaret S.",
-                relation: "Daughter",
-                initials: "MS",
-                color: "from-primary to-cyan-400"
+                role: "Daughter",
+                rating: 5
               },
               {
-                text: "I moved here 6 months ago and it's been the best decision. The caregivers are patient and kind, and I feel like part of a family.",
+                quote: "I moved here 6 months ago and it's been the best decision. The caregivers are patient and kind, and I feel like part of a family.",
                 author: "Henry P.",
-                relation: "Resident",
-                initials: "HP",
-                color: "from-cyan-400 to-blue-500"
+                role: "Resident",
+                rating: 5
               },
               {
-                text: "The level of personalized attention my father receives is exceptional. They communicate regularly and truly care about his well-being.",
+                quote: "The level of personalized attention my father receives is exceptional. They communicate regularly and truly care about his well-being.",
                 author: "Jennifer K.",
-                relation: "Daughter",
-                initials: "JK",
-                color: "from-blue-500 to-indigo-500"
+                role: "Daughter",
+                rating: 5
               },
               {
-                text: "Professional, compassionate, and attentive. My wife receives excellent care for her specific needs. Very grateful for the support.",
+                quote: "Professional, compassionate, and attentive. My wife receives excellent care for her specific needs. Very grateful for the support.",
                 author: "Robert M.",
-                relation: "Spouse",
-                initials: "RM",
-                color: "from-indigo-500 to-purple-500"
+                role: "Spouse",
+                rating: 5
               },
               {
-                text: "The staff goes above and beyond. They listen to our concerns and always have time to chat. It's truly like a home.",
+                quote: "The staff goes above and beyond. They listen to our concerns and always have time to chat. It's truly like a home.",
                 author: "Patricia L.",
-                relation: "Family Member",
-                initials: "PL",
-                color: "from-purple-500 to-pink-500"
+                role: "Family Member",
+                rating: 5
               },
               {
-                text: "Best decision we made for our father's care. Safe, loving environment with activities and excellent medical management.",
+                quote: "Best decision we made for our father's care. Safe, loving environment with activities and excellent medical management.",
                 author: "David T.",
-                relation: "Son",
-                initials: "DT",
-                color: "from-pink-500 to-primary"
+                role: "Son",
+                rating: 5
               }
             ].map((testimonial, index) => (
-              <div
+              <TestimonialCard
                 key={index}
-                className="group"
-              >
-                <div className="bg-white rounded-2xl border border-slate-200 p-6 h-full hover:shadow-xl transition-all duration-300 hover:border-primary/40 flex flex-col relative overflow-hidden">
-                  {/* Gradient accent top */}
-                  <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${testimonial.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
-
-                  {/* Avatar Circle */}
-                  <div className={`w-14 h-14 rounded-full bg-gradient-to-br ${testimonial.color} flex items-center justify-center text-white font-bold text-lg mb-6 group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
-                    {testimonial.initials}
-                  </div>
-
-                  {/* Stars */}
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
-                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                      </svg>
-                    ))}
-                  </div>
-
-                  {/* Quote */}
-                  <p className="text-slate-800 leading-relaxed mb-6 flex-grow">
-                    "{testimonial.text}"
-                  </p>
-
-                  {/* Author Info */}
-                  <div className="border-t border-slate-200 pt-4">
-                    <p className="font-bold text-slate-900">
-                      {testimonial.author}
-                    </p>
-                    <p className="text-sm text-primary font-medium">
-                      {testimonial.relation}
-                    </p>
-                  </div>
-                </div>
-              </div>
+                quote={testimonial.quote}
+                author={testimonial.author}
+                role={testimonial.role}
+                rating={testimonial.rating}
+              />
             ))}
           </div>
         </div>
@@ -424,56 +389,43 @@ export default function Home() {
             </p>
           </div>
 
-          {/* 2 Column FAQ Grid */}
-          <div className="grid md:grid-cols-2 gap-6 animate-slideup-delay-1">
-            {[
-              {
-                q: "What is the admission process?",
-                a: "We begin with a tour of our facility and a consultation to discuss care needs. We answer all your questions and determine the best fit for your loved one."
-              },
-              {
-                q: "What services are included?",
-                a: "Our comprehensive services include 24/7 professional care, medication management, personal care, meal preparation, laundry, activities, and transportation."
-              },
-              {
-                q: "Can family visit anytime?",
-                a: "We have flexible visiting hours to accommodate family schedules. Regular family involvement is encouraged and we maintain open communication."
-              },
-              {
-                q: "Are you licensed?",
-                a: "Yes, we fully comply with all state and local regulations for adult family homes. Our owner holds all necessary licenses and certifications."
-              },
-              {
-                q: "What activities are offered?",
-                a: "We provide games, crafts, outdoor outings, movies, reading, and social gatherings. All activities are tailored to individual interests and abilities."
-              },
-              {
-                q: "How do we handle concerns?",
-                a: "We take all concerns seriously and address them promptly. Please speak with our staff directly - we're committed to working together for the best outcome."
-              }
-            ].map((item, idx) => (
-              <div
-                key={idx}
-                className="group"
-              >
-                <div className="bg-white rounded-2xl border border-slate-200 p-6 h-full hover:border-primary/40 transition-all duration-300 hover:shadow-2xl">
-                  {/* Number Badge */}
-                  <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-primary to-cyan-400 text-white font-bold mb-4 group-hover:scale-110 transition-transform duration-300">
-                    {idx + 1}
-                  </div>
-
-                  <h3 className="text-xl font-bold text-slate-900 mb-4 group-hover:text-primary transition-colors duration-300">
-                    {item.q}
-                  </h3>
-                  <p className="text-slate-800 leading-relaxed">
-                    {item.a}
-                  </p>
-
-                  {/* Bottom accent line */}
-                  <div className="mt-6 h-1 w-12 bg-gradient-to-r from-primary to-cyan-400 rounded-full group-hover:w-full transition-all duration-300" />
-                </div>
-              </div>
-            ))}
+          {/* Accordion FAQ */}
+          <div className="animate-slideup-delay-1 max-w-3xl mx-auto">
+            <Accordion
+              items={[
+                {
+                  id: "admission",
+                  title: "What is the admission process?",
+                  content: "We begin with a tour of our facility and a consultation to discuss care needs. We answer all your questions and determine the best fit for your loved one."
+                },
+                {
+                  id: "services",
+                  title: "What services are included?",
+                  content: "Our comprehensive services include 24/7 professional care, medication management, personal care, meal preparation, laundry, activities, and transportation."
+                },
+                {
+                  id: "visits",
+                  title: "Can family visit anytime?",
+                  content: "We have flexible visiting hours to accommodate family schedules. Regular family involvement is encouraged and we maintain open communication."
+                },
+                {
+                  id: "licensed",
+                  title: "Are you licensed?",
+                  content: "Yes, we fully comply with all state and local regulations for adult family homes. Our owner holds all necessary licenses and certifications."
+                },
+                {
+                  id: "activities",
+                  title: "What activities are offered?",
+                  content: "We provide games, crafts, outdoor outings, movies, reading, and social gatherings. All activities are tailored to individual interests and abilities."
+                },
+                {
+                  id: "concerns",
+                  title: "How do we handle concerns?",
+                  content: "We take all concerns seriously and address them promptly. Please speak with our staff directly - we're committed to working together for the best outcome."
+                }
+              ]}
+              allowMultiple={false}
+            />
           </div>
 
           {/* CTA Box */}

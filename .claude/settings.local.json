@@ -22,7 +22,8 @@
       "Bash(curl:*)",
       "Bash(npm run dev:*)",
       "Bash(timeout 10 bash:*)",
-      "Bash(node screenshot.js)"
+      "Bash(node screenshot.js)",
+      "Bash(dir \"C:\\Users\\Windows\\OneDrive - Seattle Colleges\\Desktop\\websites-collections\\ark-care-afh\\src\" /s /b)"
     ],
     "deny": [],
     "ask": []
