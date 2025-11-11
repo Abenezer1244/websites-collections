@@ -2,7 +2,6 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import { ModeToggle } from './mode-toggle'
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -114,8 +113,6 @@ export function Navigation() {
                 >
                   Home
                 </Link>
-
-                <ModeToggle />
               </div>
 
               {/* Mobile Navigation Menu Dropdown */}
@@ -147,11 +144,6 @@ export function Navigation() {
 
           {/* Right spacer for balance - flex-1 to push buttons to right */}
           <div className="flex-1 pointer-events-none"></div>
-
-          {/* Theme Toggle - Right Side */}
-          <div className="pointer-events-auto flex-shrink-0 hidden md:block">
-            <ModeToggle />
-          </div>
 
           {/* Call Button - Right Side */}
           <a

@@ -28,3 +28,6 @@
  ✓ Compiled in 575ms
  GET / 200 in 2.0s (compile: 1010ms, render: 1017ms)
  GET / 200 in 313ms (compile: 15ms, render: 298ms)
+ ✓ Compiled in 275ms
+ GET / 200 in 750ms (compile: 356ms, render: 394ms)
+ GET / 200 in 227ms (compile: 9ms, render: 219ms)

@@ -4,7 +4,6 @@ import "./globals.css";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
-import { ThemeProvider } from "@/components/theme-provider";
 import { generateOrganizationSchema, siteConfig } from "@/lib/seo";
 
 const outfit = Outfit({
@@ -87,18 +86,11 @@ export default function RootLayout({
       <body
         className={`${outfit.variable} antialiased flex flex-col min-h-screen`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Navigation />
-          <main className="flex-grow">
-            {children}
-          </main>
-          <Footer />
-        </ThemeProvider>
+        <Navigation />
+        <main className="flex-grow">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );
