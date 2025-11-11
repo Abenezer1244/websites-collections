@@ -134,7 +134,7 @@ export default function Services() {
                           clipRule="evenodd"
                         />
                       </svg>
-                      <span className="text-slate-900
+                      <span className="text-slate-900">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -145,57 +145,57 @@ export default function Services() {
       </section>
 
       {/* Amenities Section */}
-      <section className="py-16 md:py-24 bg-white
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">
             Facility Amenities
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg p-6 border border-slate-200
+            <div className="bg-white rounded-lg p-6 border border-slate-200">
               <h3 className="text-xl font-semibold text-slate-900 mb-3">
                 Comfortable Living Spaces
               </h3>
-              <p className="text-slate-800
+              <p className="text-slate-800">
                 Private bedrooms with comfortable furnishings and personal décor options.
               </p>
             </div>
-            <div className="bg-white rounded-lg p-6 border border-slate-200
+            <div className="bg-white rounded-lg p-6 border border-slate-200">
               <h3 className="text-xl font-semibold text-slate-900 mb-3">
                 Accessible Design
               </h3>
-              <p className="text-slate-800
+              <p className="text-slate-800">
                 Accessible facilities with grab bars, ramps, and other safety features.
               </p>
             </div>
-            <div className="bg-white rounded-lg p-6 border border-slate-200
+            <div className="bg-white rounded-lg p-6 border border-slate-200">
               <h3 className="text-xl font-semibold text-slate-900 mb-3">
                 Common Areas
               </h3>
-              <p className="text-slate-800
+              <p className="text-slate-800">
                 Living room, dining area, and outdoor spaces for relaxation and activities.
               </p>
             </div>
-            <div className="bg-white rounded-lg p-6 border border-slate-200
+            <div className="bg-white rounded-lg p-6 border border-slate-200">
               <h3 className="text-xl font-semibold text-slate-900 mb-3">
                 Safety Features
               </h3>
-              <p className="text-slate-800
+              <p className="text-slate-800">
                 Security systems, fire safety equipment, and emergency response protocols.
               </p>
             </div>
-            <div className="bg-white rounded-lg p-6 border border-slate-200
+            <div className="bg-white rounded-lg p-6 border border-slate-200">
               <h3 className="text-xl font-semibold text-slate-900 mb-3">
                 Technology
               </h3>
-              <p className="text-slate-800
+              <p className="text-slate-800">
                 WiFi access, TV, and modern conveniences for comfort and connection.
               </p>
             </div>
-            <div className="bg-white rounded-lg p-6 border border-slate-200
+            <div className="bg-white rounded-lg p-6 border border-slate-200">
               <h3 className="text-xl font-semibold text-slate-900 mb-3">
                 Professional Environment
               </h3>
-              <p className="text-slate-800
+              <p className="text-slate-800">
                 Clean, well-maintained facility with professional staffing and care protocols.
               </p>
             </div>
@@ -204,7 +204,7 @@ export default function Services() {
       </section>
 
       {/* Specialized Services */}
-      <section className="py-16 md:py-24 bg-white
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">
             Our Specialties

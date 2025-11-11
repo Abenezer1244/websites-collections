@@ -66,7 +66,7 @@ export default function TermsOfService() {
       {/* Terms Content */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none text-slate-800
+          <div className="prose prose-lg max-w-none text-slate-800">
             <h2 className="text-3xl font-bold text-slate-900 mt-8 mb-4">1. Agreement to Terms</h2>
             <p>
               By accessing and using the Ark Care AFH website and services, you agree to comply with these Terms of Service and all applicable laws and regulations. If you do not agree with any part of these terms, please do not use our website or services.
@@ -78,7 +78,7 @@ export default function TermsOfService() {
             </p>
 
             <h2 className="text-3xl font-bold text-slate-900 mt-8 mb-4">3. Admission & Care Agreements</h2>
-            <p className="font-semibold text-slate-900 Requirements:</p>
+            <p className="font-semibold text-slate-900">Requirements:</p>
             <ul className="space-y-3 ml-6 list-disc">
               <li>Completion of admission application and documentation</li>
               <li>Provision of medical history and current medications</li>
@@ -91,7 +91,7 @@ export default function TermsOfService() {
             </p>
 
             <h2 className="text-3xl font-bold text-slate-900 mt-8 mb-4">4. Resident Rights & Responsibilities</h2>
-            <p className="font-semibold text-slate-900 Rights:</p>
+            <p className="font-semibold text-slate-900">Rights:</p>
             <ul className="space-y-3 ml-6 list-disc">
               <li>Right to receive quality care in a safe, clean environment</li>
               <li>Right to dignity, respect, and privacy</li>
@@ -162,7 +162,7 @@ export default function TermsOfService() {
             </p>
 
             <h2 className="text-3xl font-bold text-slate-900 mt-8 mb-4">9. Website Terms</h2>
-            <p className="font-semibold text-slate-900 Use:</p>
+            <p className="font-semibold text-slate-900">Acceptable Use:</p>
             <ul className="space-y-3 ml-6 list-disc">
               <li>Information provided is for informational purposes only</li>
               <li>You agree not to use the website for illegal or unauthorized purposes</li>
@@ -227,7 +227,7 @@ export default function TermsOfService() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-white
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-3xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
             Questions About Our Terms?

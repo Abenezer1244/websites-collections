@@ -72,7 +72,7 @@ export default function About() {
               <p className="text-lg text-slate-800 mb-4">
                 At Ark Care AFH, we are dedicated to providing compassionate, high-quality adult family home care that honors the dignity, independence, and individual needs of each resident.
               </p>
-              <p className="text-lg text-slate-800
+              <p className="text-lg text-slate-800">
                 We create a warm, supportive home environment where residents receive personalized care and meaningful engagement, supported by trained, caring staff.
               </p>
             </div>
@@ -81,7 +81,7 @@ export default function About() {
               <p className="text-lg text-slate-800 mb-4">
                 We envision a future where every individual receives care that promotes their well-being, respects their choices, and enables them to live with dignity and purpose.
               </p>
-              <p className="text-lg text-slate-800
+              <p className="text-lg text-slate-800">
                 Our home is a place where quality care, professional expertise, and genuine compassion come together to create the best possible outcomes for our residents.
               </p>
             </div>
@@ -90,7 +90,7 @@ export default function About() {
       </section>
 
       {/* Our Story */}
-      <section className="py-16 md:py-24 bg-white
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">
             Our Story
@@ -127,7 +127,7 @@ export default function About() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">Compassion</h3>
-              <p className="text-slate-800
+              <p className="text-slate-800">
                 We care deeply about our residents' well-being and are committed to treating each person with kindness and empathy.
               </p>
             </div>
@@ -140,7 +140,7 @@ export default function About() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">Quality</h3>
-              <p className="text-slate-800
+              <p className="text-slate-800">
                 Excellence is our standard. We maintain the highest quality in care, services, and our facility.
               </p>
             </div>
@@ -153,7 +153,7 @@ export default function About() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">Respect</h3>
-              <p className="text-slate-800
+              <p className="text-slate-800">
                 We honor the dignity and autonomy of each resident, respecting their choices and preferences.
               </p>
             </div>
@@ -162,7 +162,7 @@ export default function About() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 md:py-24 bg-white
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">
             Why Choose Ark Care AFH?
@@ -177,8 +177,8 @@ export default function About() {
                 </div>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-slate-900 Staff</h3>
-                <p className="mt-2 text-slate-800
+                <h3 className="text-lg font-semibold text-slate-900">Staff</h3>
+                <p className="mt-2 text-slate-800">
                   Our team consists of trained, caring professionals with experience in adult family home care.
                 </p>
               </div>
@@ -193,8 +193,8 @@ export default function About() {
                 </div>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-slate-900 Care</h3>
-                <p className="mt-2 text-slate-800
+                <h3 className="text-lg font-semibold text-slate-900">Care</h3>
+                <p className="mt-2 text-slate-800">
                   Each resident receives a customized care plan tailored to their unique needs and preferences.
                 </p>
               </div>
@@ -209,8 +209,8 @@ export default function About() {
                 </div>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-slate-900 Environment</h3>
-                <p className="mt-2 text-slate-800
+                <h3 className="text-lg font-semibold text-slate-900">Environment</h3>
+                <p className="mt-2 text-slate-800">
                   Our facility is designed to feel like home, promoting comfort and a sense of belonging.
                 </p>
               </div>
@@ -225,8 +225,8 @@ export default function About() {
                 </div>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-slate-900 Focus</h3>
-                <p className="mt-2 text-slate-800
+                <h3 className="text-lg font-semibold text-slate-900">Focus</h3>
+                <p className="mt-2 text-slate-800">
                   We foster a sense of community and encourage meaningful engagement within our home.
                 </p>
               </div>

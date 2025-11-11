@@ -94,7 +94,7 @@ export default function Gallery() {
               >
                 <div className="aspect-square bg-white flex items-center justify-center">
                   <svg
-                    className="w-16 h-16 text-slate-800
+                    className="w-16 h-16 text-slate-800"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -108,7 +108,7 @@ export default function Gallery() {
                   </svg>
                 </div>
                 <div className="p-4 group-hover:bg-primary/5 transition-colors">
-                  <h3 className="text-sm font-semibold text-slate-900
+                  <h3 className="text-sm font-semibold text-slate-900">{item.title}</h3>
                 </div>
               </div>
             ))}
@@ -117,7 +117,7 @@ export default function Gallery() {
       </section>
 
       {/* Info Section */}
-      <section className="py-16 md:py-24 bg-white
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">
             Schedule a Tour

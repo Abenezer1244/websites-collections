@@ -58,7 +58,7 @@ export default function ContactPageClient() {
 
               <div className="mb-8">
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">Phone</h3>
-                <p className="text-slate-800 soon</p>
+                <p className="text-slate-800">Coming soon</p>
               </div>
 
               <div className="mb-8">
@@ -73,13 +73,13 @@ export default function ContactPageClient() {
 
               <div className="mb-8">
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">Address</h3>
-                <p className="text-slate-800 soon</p>
+                <p className="text-slate-800">Coming soon</p>
               </div>
 
               <div className="mb-8">
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">Hours</h3>
-                <p className="text-slate-800 24/7 for emergencies</p>
-                <p className="text-slate-800 hours: Coming soon</p>
+                <p className="text-slate-800">24/7 for emergencies</p>
+                <p className="text-slate-800">Hours: Coming soon</p>
               </div>
             </div>
 
@@ -109,7 +109,7 @@ export default function ContactPageClient() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-slate-900
+                      className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-slate-900"
                       placeholder="Your name"
                     />
                   </div>
@@ -126,7 +126,7 @@ export default function ContactPageClient() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-slate-900
+                      className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-slate-900"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -142,7 +142,7 @@ export default function ContactPageClient() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-slate-900
+                      className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-slate-900"
                       placeholder="(123) 456-7890"
                     />
                   </div>
@@ -158,7 +158,7 @@ export default function ContactPageClient() {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-slate-900
+                      className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-slate-900"
                     >
                       <option value="">Select a subject</option>
                       <option value="general">General Inquiry</option>
@@ -206,7 +206,7 @@ export default function ContactPageClient() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 md:py-24 bg-white
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
             Frequently Asked Questions

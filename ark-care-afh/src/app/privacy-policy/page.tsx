@@ -66,7 +66,7 @@ export default function PrivacyPolicy() {
       {/* Privacy Policy Content */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none text-slate-800
+          <div className="prose prose-lg max-w-none text-slate-800">
             <h2 className="text-3xl font-bold text-slate-900 mt-8 mb-4">1. Introduction</h2>
             <p>
               Ark Care AFH ("we," "us," "our," or "Company") is committed to protecting your privacy and ensuring you have a positive experience on our website and in receiving our services. This Privacy Policy explains our information practices, what types of information we collect, how we use it, and the choices you have regarding your information.
@@ -84,7 +84,7 @@ export default function PrivacyPolicy() {
             </p>
 
             <h2 className="text-3xl font-bold text-slate-900 mt-8 mb-4">3. Information We Collect</h2>
-            <p className="font-semibold text-slate-900 may collect the following types of information:</p>
+            <p className="font-semibold text-slate-900">We may collect the following types of information:</p>
             <ul className="space-y-3 ml-6 list-disc">
               <li><strong>Personal Information</strong>: Name, address, phone number, email address, date of birth, and Social Security number</li>
               <li><strong>Health Information</strong>: Medical history, current medications, allergies, healthcare provider information, and health conditions</li>
@@ -94,7 +94,7 @@ export default function PrivacyPolicy() {
             </ul>
 
             <h2 className="text-3xl font-bold text-slate-900 mt-8 mb-4">4. How We Use Your Information</h2>
-            <p className="font-semibold text-slate-900 use the information we collect for:</p>
+            <p className="font-semibold text-slate-900">We use the information we collect for:</p>
             <ul className="space-y-3 ml-6 list-disc">
               <li>Providing care services and medical treatment</li>
               <li>Communicating with residents and families about care plans and updates</li>
@@ -172,7 +172,7 @@ export default function PrivacyPolicy() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-white
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-3xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
             Questions About Privacy?
