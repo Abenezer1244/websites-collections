@@ -100,14 +100,14 @@ export default function Home() {
       </section>
 
       {/* Key Benefits Section - Brand New Design */}
-      <section className="relative py-20 md:py-40 overflow-hidden bg-white" data-section="why-choose">
+      <section className="relative py-12 md:py-20 overflow-hidden bg-white" data-section="why-choose">
         {/* Animated Background Orbs */}
         <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-gradient-to-br from-primary/25 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.4s'}} />
         <div className="absolute bottom-0 left-0 w-[380px] h-[380px] bg-gradient-to-br from-cyan-400/15 to-cyan-500/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.9s'}} />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Header */}
-          <div className="mb-24 animate-slideup text-center">
+          <div className="mb-12 animate-slideup text-center">
             <span className="inline-block px-4 py-2 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-6">
               Why Choose Us
             </span>
@@ -120,9 +120,9 @@ export default function Home() {
           </div>
 
           {/* Feature Grid - New Layout */}
-          <div className="space-y-16">
+          <div className="space-y-10">
             {/* Feature 1 - Left Layout */}
-            <div className="grid md:grid-cols-2 gap-12 items-center animate-slideup-delay-1">
+            <div className="grid md:grid-cols-2 gap-8 items-center animate-slideup-delay-1">
               <div className="order-2 md:order-1">
                 <h3 className="text-4xl font-black text-slate-900 mb-5">
                   24/7 Professional Care
@@ -146,9 +146,9 @@ export default function Home() {
                 </ul>
               </div>
               <div className="order-1 md:order-2">
-                <div className="relative flex items-center justify-center min-h-96">
+                <div className="relative flex items-center justify-center min-h-80">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 rounded-3xl blur-2xl" />
-                  <div className="relative bg-gradient-to-br from-primary/15 to-transparent rounded-3xl border border-primary/20 w-full h-96 flex items-center justify-center overflow-hidden">
+                  <div className="relative bg-gradient-to-br from-primary/15 to-transparent rounded-3xl border border-primary/20 w-full h-80 flex items-center justify-center overflow-hidden">
                     <Image
                       src="/care-247.png"
                       alt="24/7 Care"
@@ -162,11 +162,11 @@ export default function Home() {
             </div>
 
             {/* Feature 2 - Right Layout */}
-            <div className="grid md:grid-cols-2 gap-12 items-center animate-slideup-delay-2">
+            <div className="grid md:grid-cols-2 gap-8 items-center animate-slideup-delay-2">
               <div>
-                <div className="relative flex items-center justify-center min-h-96">
+                <div className="relative flex items-center justify-center min-h-80">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 rounded-3xl blur-2xl" />
-                  <div className="relative bg-gradient-to-br from-primary/15 to-transparent rounded-3xl border border-primary/20 w-full h-96 flex items-center justify-center overflow-hidden">
+                  <div className="relative bg-gradient-to-br from-primary/15 to-transparent rounded-3xl border border-primary/20 w-full h-80 flex items-center justify-center overflow-hidden">
                     <Image
                       src="/homy.webp"
                       alt="Warm & Welcoming Home"
@@ -203,7 +203,7 @@ export default function Home() {
 
             {/* Feature 3 - Center Layout */}
             <div className="animate-slideup-delay-3">
-              <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
                   <h3 className="text-4xl font-black text-slate-900 mb-5">
                     Activity & Engagement
@@ -227,9 +227,9 @@ export default function Home() {
                   </ul>
                 </div>
                 <div className="order-1 md:order-2">
-                  <div className="relative flex items-center justify-center min-h-96">
+                  <div className="relative flex items-center justify-center min-h-80">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 rounded-3xl blur-2xl" />
-                    <div className="relative bg-gradient-to-br from-primary/15 to-transparent rounded-3xl border border-primary/20 w-full h-96 flex items-center justify-center overflow-hidden">
+                    <div className="relative bg-gradient-to-br from-primary/15 to-transparent rounded-3xl border border-primary/20 w-full h-80 flex items-center justify-center overflow-hidden">
                       <Image
                         src="/activity-engagement.png"
                         alt="Activity & Engagement"
@@ -247,7 +247,7 @@ export default function Home() {
       </section>
 
       {/* Services Overview Section */}
-      <section className="relative py-16 md:py-24 bg-white overflow-hidden">
+      <section className="relative py-10 md:py-16 bg-white overflow-hidden">
         {/* Animated Background Orbs */}
         <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-gradient-to-br from-blue-400/25 to-blue-500/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.4s'}} />
         <div className="absolute bottom-0 left-0 w-[380px] h-[380px] bg-gradient-to-br from-primary/25 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.9s'}} />
@@ -300,7 +300,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section - Grid Cards */}
-      <section className="relative py-12 md:py-16 bg-white overflow-hidden">
+      <section className="relative py-8 md:py-12 bg-white overflow-hidden">
         {/* Animated Background Orbs */}
         <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-gradient-to-br from-primary/15 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.2s'}} />
         <div className="absolute -bottom-40 -right-40 w-[450px] h-[450px] bg-gradient-to-br from-cyan-400/10 to-cyan-500/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.6s'}} />
@@ -371,7 +371,7 @@ export default function Home() {
       </section>
 
       {/* FAQ Section - 2 Column Layout */}
-      <section className="relative py-12 md:py-16 bg-white overflow-hidden">
+      <section className="relative py-8 md:py-12 bg-white overflow-hidden">
         {/* Animated Background Orbs */}
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gradient-to-br from-cyan-500/20 to-cyan-400/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.3s'}} />
         <div className="absolute bottom-0 left-0 w-[380px] h-[380px] bg-gradient-to-br from-primary/15 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.5s'}} />
@@ -449,7 +449,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section - Hero Style */}
-      <section className="relative py-12 md:py-16 bg-white overflow-hidden">
+      <section className="relative py-8 md:py-12 bg-white overflow-hidden">
         {/* Animated Background Orbs */}
         <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-br from-primary/30 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.1s'}} />
         <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-gradient-to-br from-cyan-400/15 to-cyan-500/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.5s'}} />
