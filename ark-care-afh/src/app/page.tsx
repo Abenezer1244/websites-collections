@@ -150,6 +150,7 @@ export default function Home() {
                       width={400}
                       height={400}
                       className="w-full h-full object-cover"
+                      style={{filter: 'hue-rotate(96deg)'}}
                     />
                   </div>
                 </div>
@@ -231,6 +232,7 @@ export default function Home() {
                         width={400}
                         height={400}
                         className="w-full h-full object-cover"
+                        style={{filter: 'hue-rotate(96deg)'}}
                       />
                     </div>
                   </div>
