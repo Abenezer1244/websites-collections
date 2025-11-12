@@ -66,8 +66,8 @@ export default function Home() {
 
         {/* Animated Background Orbs - Large and Vibrant */}
         <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-gradient-to-br from-primary/60 to-primary/30 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-10" />
-        <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-gradient-to-br from-cyan-400/50 to-cyan-500/25 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-10" style={{animationDelay: '0.5s'}} />
-        <div className="absolute top-1/3 -right-20 w-[450px] h-[450px] bg-gradient-to-br from-blue-500/50 to-blue-400/25 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-10" style={{animationDelay: '1s'}} />
+        <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-gradient-to-br from-primary/50 to-primary/25 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-10" style={{animationDelay: '0.5s'}} />
+        <div className="absolute top-1/3 -right-20 w-[450px] h-[450px] bg-gradient-to-br from-primary/50 to-primary/25 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-10" style={{animationDelay: '1s'}} />
 
         {/* Animated Blobs */}
         <AnimatedBlob position="top-right" size="lg" opacity="medium" />
@@ -98,7 +98,7 @@ export default function Home() {
       <section className="relative py-12 md:py-20 overflow-hidden bg-white" data-section="why-choose">
         {/* Animated Background Orbs */}
         <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-gradient-to-br from-primary/25 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.4s'}} />
-        <div className="absolute bottom-0 left-0 w-[380px] h-[380px] bg-gradient-to-br from-cyan-400/15 to-cyan-500/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.9s'}} />
+        <div className="absolute bottom-0 left-0 w-[380px] h-[380px] bg-gradient-to-br from-primary/15 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.9s'}} />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Header */}
@@ -244,7 +244,7 @@ export default function Home() {
       {/* Services Overview Section */}
       <section className="relative py-10 md:py-16 bg-white overflow-hidden">
         {/* Animated Background Orbs */}
-        <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-gradient-to-br from-blue-400/25 to-blue-500/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.4s'}} />
+        <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-gradient-to-br from-primary/25 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.4s'}} />
         <div className="absolute bottom-0 left-0 w-[380px] h-[380px] bg-gradient-to-br from-primary/25 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.9s'}} />
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -298,7 +298,7 @@ export default function Home() {
       <section className="relative py-8 md:py-12 bg-white overflow-hidden">
         {/* Animated Background Orbs */}
         <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-gradient-to-br from-primary/15 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.2s'}} />
-        <div className="absolute -bottom-40 -right-40 w-[450px] h-[450px] bg-gradient-to-br from-cyan-400/10 to-cyan-500/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.6s'}} />
+        <div className="absolute -bottom-40 -right-40 w-[450px] h-[450px] bg-gradient-to-br from-primary/10 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.6s'}} />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="mb-10 text-center animate-slideup">
@@ -368,7 +368,7 @@ export default function Home() {
       {/* FAQ Section - 2 Column Layout */}
       <section className="relative py-8 md:py-12 bg-white overflow-hidden">
         {/* Animated Background Orbs */}
-        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gradient-to-br from-cyan-500/20 to-cyan-400/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.3s'}} />
+        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gradient-to-br from-primary/20 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.3s'}} />
         <div className="absolute bottom-0 left-0 w-[380px] h-[380px] bg-gradient-to-br from-primary/15 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.5s'}} />
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -425,7 +425,7 @@ export default function Home() {
 
           {/* CTA Box */}
           <div className="mt-10 text-center animate-slideup-delay-2">
-            <div className="bg-gradient-to-r from-primary/20 to-cyan-500/20 rounded-2xl border border-primary/40 p-8">
+            <div className="bg-gradient-to-r from-primary/20 to-primary/20 rounded-2xl border border-primary/40 p-8">
               <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
                 Didn't find your answer?
               </h3>
@@ -447,7 +447,7 @@ export default function Home() {
       <section className="relative py-8 md:py-12 bg-white overflow-hidden">
         {/* Animated Background Orbs */}
         <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-br from-primary/30 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.1s'}} />
-        <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-gradient-to-br from-cyan-400/15 to-cyan-500/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.5s'}} />
+        <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-gradient-to-br from-primary/15 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.5s'}} />
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center animate-slideup mb-10">
@@ -464,7 +464,7 @@ export default function Home() {
             {/* Main CTA Button */}
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-primary to-cyan-500 text-white font-bold rounded-xl hover:shadow-2xl transition-all duration-300 shadow-lg hover:scale-105 mb-8"
+              className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-primary to-primary text-white font-bold rounded-xl hover:shadow-2xl transition-all duration-300 shadow-lg hover:scale-105 mb-8"
             >
               Schedule Your Tour Now
             </Link>
@@ -473,7 +473,7 @@ export default function Home() {
           {/* Three Feature Cards */}
           <div className="grid md:grid-cols-3 gap-6 mb-10 animate-slideup-delay-1">
             <div className="group relative">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-cyan-400 rounded-2xl blur opacity-40 group-hover:opacity-60 transition duration-500" />
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-primary rounded-2xl blur opacity-40 group-hover:opacity-60 transition duration-500" />
               <div className="relative bg-white rounded-2xl p-6 border border-slate-200">
                 <h3 className="text-lg font-bold text-slate-900 mb-2">Expert Care Team</h3>
                 <p className="text-sm text-slate-800">
@@ -483,7 +483,7 @@ export default function Home() {
             </div>
 
             <div className="group relative">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl blur opacity-40 group-hover:opacity-60 transition duration-500" />
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-primary rounded-2xl blur opacity-40 group-hover:opacity-60 transition duration-500" />
               <div className="relative bg-white rounded-2xl p-6 border border-slate-200">
                 <h3 className="text-lg font-bold text-slate-900 mb-2">Home-Like Environment</h3>
                 <p className="text-sm text-slate-800">
@@ -493,7 +493,7 @@ export default function Home() {
             </div>
 
             <div className="group relative">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-primary rounded-2xl blur opacity-40 group-hover:opacity-60 transition duration-500" />
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-primary rounded-2xl blur opacity-40 group-hover:opacity-60 transition duration-500" />
               <div className="relative bg-white rounded-2xl p-6 border border-slate-200">
                 <h3 className="text-lg font-bold text-slate-900 mb-2">Personalized Care Plans</h3>
                 <p className="text-sm text-slate-800">
