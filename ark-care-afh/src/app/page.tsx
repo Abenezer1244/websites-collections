@@ -53,18 +53,13 @@ export default function Home() {
       <JsonLd data={pageSchema} />
       <JsonLd data={breadcrumbSchema} />
 
-      {/* Hero Section with Video Background - Full Screen Height */}
-      <section className="relative overflow-hidden text-white min-h-screen flex items-center">
-        {/* Video Background */}
-        <video
-          className="absolute inset-0 w-full h-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-        >
-          <source src="/hero-video.mp4" type="video/mp4" />
-        </video>
+      {/* Hero Section with Image Background - Full Screen Height */}
+      <section className="relative overflow-hidden text-white min-h-screen flex items-center" style={{backgroundImage: 'url(/hero-bg.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed'}}>
+        {/* Image Background */}
+        <div
+          className="absolute inset-0 w-full h-full"
+          style={{backgroundImage: 'url(/hero-bg.jpg)', backgroundSize: 'cover', backgroundPosition: 'center'}}
+        />
 
         {/* Dark Overlay for Text Visibility */}
         <div className="absolute inset-0 bg-black/40 z-5" />
