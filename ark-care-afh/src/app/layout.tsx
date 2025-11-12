@@ -71,6 +71,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
+  // Force rebuild: violet-bloom theme v1
 };
 
 export default function RootLayout({
