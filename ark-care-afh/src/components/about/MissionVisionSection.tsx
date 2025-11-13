@@ -60,10 +60,10 @@ export function MissionVisionSection() {
                 </svg>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Our Mission</h2>
-              <p className="text-lg text-slate-700 mb-4 leading-relaxed">
+              <p className="text-lg text-slate-800 mb-4 leading-relaxed">
                 At Ark Care AFH, we are dedicated to providing compassionate, high-quality adult family home care that honors the dignity, independence, and individual needs of each resident.
               </p>
-              <p className="text-lg text-slate-700 leading-relaxed">
+              <p className="text-lg text-slate-800 leading-relaxed">
                 We create a warm, supportive home environment where residents receive personalized care and meaningful engagement, supported by trained, caring staff.
               </p>
             </div>
@@ -79,10 +79,10 @@ export function MissionVisionSection() {
                 </svg>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Our Vision</h2>
-              <p className="text-lg text-slate-700 mb-4 leading-relaxed">
+              <p className="text-lg text-slate-800 mb-4 leading-relaxed">
                 We envision a future where every individual receives care that promotes their well-being, respects their choices, and enables them to live with dignity and purpose.
               </p>
-              <p className="text-lg text-slate-700 leading-relaxed">
+              <p className="text-lg text-slate-800 leading-relaxed">
                 Our home is a place where quality care, professional expertise, and genuine compassion come together to create the best possible outcomes for our residents.
               </p>
             </div>

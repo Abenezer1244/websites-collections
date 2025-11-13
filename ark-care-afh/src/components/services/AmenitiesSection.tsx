@@ -85,7 +85,7 @@ export function AmenitiesSection() {
   ]
 
   return (
-    <section ref={sectionRef} className="relative py-20 md:py-28 bg-gradient-to-br from-white via-primary/8 to-slate-50 overflow-hidden">
+    <section ref={sectionRef} className="relative py-20 md:py-28 bg-gradient-to-br from-primary/15 via-slate-100 to-primary/25 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}} />

@@ -46,12 +46,24 @@ export function SpecializedServicesSection() {
   ]
 
   return (
-    <section ref={sectionRef} className="relative py-20 md:py-28 bg-gradient-to-br from-primary/6 via-white to-slate-50 overflow-hidden">
-      {/* Animated Background */}
+    <section ref={sectionRef} className="relative py-20 md:py-28 bg-gradient-to-br from-slate-50 via-primary/20 to-slate-100 overflow-hidden">
+      {/* Rich Patterned Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary/12 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}} />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-primary/10 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '5s', animationDelay: '1s'}} />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--primary)_0%,_transparent_50%)] opacity-12" />
+        {/* Base gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-primary/25 to-slate-100" />
+        
+        {/* Animated orbs */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-primary/30 to-primary/10 rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}} />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-primary/25 to-slate-200/60 rounded-full blur-3xl animate-pulse" style={{animationDuration: '5s', animationDelay: '1s'}} />
+        <div className="absolute top-1/3 left-1/3 w-[450px] h-[450px] bg-gradient-to-br from-primary/20 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '6s', animationDelay: '2s'}} />
+        
+        {/* Diagonal pattern */}
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.03) 10px, rgba(0,0,0,0.03) 20px)',
+        }} />
+        
+        {/* Radial accent */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--primary)_0%,_transparent_60%)] opacity-20" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -69,7 +81,7 @@ export function SpecializedServicesSection() {
           {specialties.map((specialty, index) => (
             <div
               key={index}
-              className={`group bg-white rounded-2xl border-2 border-slate-200/50 p-8 shadow-lg transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              className={`group bg-gradient-to-br from-white via-slate-50 to-primary/5 rounded-2xl border-2 border-primary/20 p-8 shadow-xl transition-all duration-700 hover:shadow-2xl hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               style={{transitionDelay: `${(index + 1) * 100}ms`}}
             >
               <h3 className="text-2xl font-bold text-slate-900 mb-4">{specialty.title}</h3>
