@@ -121,7 +121,7 @@ export default function Home() {
           {/* Main Features Grid - Modern Card Design */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12 relative z-10 py-4" style={{overflow: 'visible', isolation: 'isolate'}}>
             {/* Feature Card 1 */}
-            <div className="group relative animate-slideup-delay-1 z-20" style={{overflow: 'visible', transform: 'translateY(0)', transition: 'transform 0.3s ease', willChange: 'transform', position: 'relative'}} onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-8px)'; e.currentTarget.style.zIndex = '50'; }} onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.zIndex = '20'; }}>
+            <div className="group relative animate-slideup-delay-1 z-20" style={{overflow: 'visible', transform: 'translateY(0)', transition: 'transform 0.3s ease', willChange: 'transform', position: 'relative'}} onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-8px)'; e.currentTarget.style.zIndex = '100'; }} onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.zIndex = '20'; }}>
               <div className="relative h-full bg-white rounded-2xl p-8 border border-slate-200/60 shadow-sm hover:shadow-2xl hover:border-primary/30 transition-all duration-300 overflow-hidden" style={{position: 'relative', zIndex: 1}}>
                 {/* Decorative gradient corner */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/20 to-transparent rounded-bl-full opacity-50 group-hover:opacity-100 transition-opacity" />
@@ -168,7 +168,7 @@ export default function Home() {
             </div>
 
             {/* Feature Card 2 */}
-            <div className="group relative animate-slideup-delay-2 z-20" style={{overflow: 'visible', transform: 'translateY(0)', transition: 'transform 0.3s ease', willChange: 'transform', position: 'relative'}} onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-8px)'; e.currentTarget.style.zIndex = '50'; }} onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.zIndex = '20'; }}>
+            <div className="group relative animate-slideup-delay-2 z-20" style={{overflow: 'visible', transform: 'translateY(0)', transition: 'transform 0.3s ease', willChange: 'transform', position: 'relative'}} onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-8px)'; e.currentTarget.style.zIndex = '100'; }} onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.zIndex = '20'; }}>
               <div className="relative h-full bg-white rounded-2xl p-8 border border-slate-200/60 shadow-sm hover:shadow-2xl hover:border-primary/30 transition-all duration-300 overflow-hidden" style={{position: 'relative', zIndex: 1}}>
                 {/* Decorative gradient corner */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/20 to-transparent rounded-bl-full opacity-50 group-hover:opacity-100 transition-opacity" />
@@ -215,7 +215,7 @@ export default function Home() {
             </div>
 
             {/* Feature Card 3 */}
-            <div className="group relative animate-slideup-delay-3 z-20" style={{overflow: 'visible', transform: 'translateY(0)', transition: 'transform 0.3s ease', willChange: 'transform', position: 'relative'}} onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-8px)'; e.currentTarget.style.zIndex = '50'; }} onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.zIndex = '20'; }}>
+            <div className="group relative animate-slideup-delay-3 z-20" style={{overflow: 'visible', transform: 'translateY(0)', transition: 'transform 0.3s ease', willChange: 'transform', position: 'relative'}} onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-8px)'; e.currentTarget.style.zIndex = '100'; }} onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.zIndex = '20'; }}>
               <div className="relative h-full bg-white rounded-2xl p-8 border border-slate-200/60 shadow-sm hover:shadow-2xl hover:border-primary/30 transition-all duration-300 overflow-hidden" style={{position: 'relative', zIndex: 1}}>
                 {/* Decorative gradient corner */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/20 to-transparent rounded-bl-full opacity-50 group-hover:opacity-100 transition-opacity" />
