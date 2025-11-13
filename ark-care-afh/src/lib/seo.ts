@@ -61,7 +61,7 @@ export function generateOrganizationSchema() {
       'Mental health support',
       'Dementia care',
       'Developmental disability services',
-      ' 24/7 residential care',
+      '24/7 residential care',
     ],
     areaServed: {
       '@type': 'AdministrativeArea',
@@ -141,27 +141,27 @@ export const pageMetadata = {
   home: {
     title: 'Ark Care AFH | Compassionate Adult Family Home Care in Algona, WA',
     description: 'Ark Care AFH provides personalized adult family home care in Algona, Washington. Specializing in 24/7 care, mental health support, dementia care, and developmental disabilities.',
-    keywords: ['adult family home', 'care services', 'Algona WA', 'dementia care', 'mental health support'],
+    keywords: ['adult family home', 'adult family home Algona', 'care services Washington', 'Algona WA', 'dementia care', 'mental health support', '24/7 care', 'residential care', 'licensed facility'],
   },
   about: {
     title: 'About Ark Care AFH | Our Mission & Values',
     description: 'Learn about Ark Care AFH\'s mission to provide compassionate, personalized care in a home-like environment. Meet our team and discover our core values.',
-    keywords: ['about us', 'our mission', 'care philosophy', 'our team', 'licensed facility'],
+    keywords: ['about us', 'our mission', 'care philosophy', 'our team', 'licensed facility', 'Algona adult family home', 'caregivers'],
   },
   services: {
     title: 'Our Services | Ark Care AFH',
     description: 'Comprehensive care services including 24/7 support, medication management, personal care, mental health support, dementia care, and more.',
-    keywords: ['services', 'care services', 'HCS', 'DDA Meaningful Day', 'specialized care', 'behavior support'],
+    keywords: ['services', 'care services', 'HCS', 'DDA Meaningful Day', 'specialized care', 'behavior support', 'medication management', 'personal care', 'residential care services'],
   },
   contact: {
     title: 'Contact Us | Ark Care AFH',
     description: 'Get in touch with Ark Care AFH to schedule a tour, ask questions, or learn more about our services. Call (206) 455-3644 or visit us in Algona.',
-    keywords: ['contact', 'schedule tour', 'inquiry', 'phone', 'address'],
+    keywords: ['contact', 'schedule tour', 'inquiry', 'phone', 'address', 'Algona adult family home', 'visit us', 'tour facility'],
   },
   gallery: {
     title: 'Activities & Facilities | Ark Care AFH Gallery',
     description: 'Explore our facility and the engaging activities we offer residents. From barbecues to movie nights, we provide meaningful experiences.',
-    keywords: ['activities', 'facilities', 'gallery', 'recreation', 'community'],
+    keywords: ['activities', 'facilities', 'gallery', 'recreation', 'community', 'resident activities', 'facility tour', 'Algona facility'],
   },
   faq: {
     title: 'FAQ | Ark Care AFH',
