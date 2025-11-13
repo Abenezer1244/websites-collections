@@ -96,12 +96,12 @@ export default function Home() {
       </section>
 
       {/* Key Benefits Section - Brand New Design */}
-      <section className="relative py-12 md:py-20 overflow-hidden bg-gradient-to-br from-slate-50 via-white to-primary/5" data-section="why-choose">
+      <section className="relative py-12 md:py-20 overflow-hidden bg-gradient-to-br from-slate-100 via-slate-50 to-primary/10" data-section="why-choose">
         {/* Animated Background Orbs */}
         <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-gradient-to-br from-primary/25 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.4s'}} />
         <div className="absolute bottom-0 left-0 w-[380px] h-[380px] bg-gradient-to-br from-primary/15 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.9s'}} />
-        {/* Subtle pattern overlay */}
-        <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(circle_at_1px_1px,rgb(0,0,0)_1px,transparent_0)] bg-[length:40px_40px] pointer-events-none z-0" />
+        {/* Visible pattern overlay */}
+        <div className="absolute inset-0 opacity-[0.04] bg-[radial-gradient(circle_at_1px_1px,rgb(0,0,0)_1px,transparent_0)] bg-[length:40px_40px] pointer-events-none z-0" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Header */}
@@ -246,12 +246,12 @@ export default function Home() {
       </section>
 
       {/* Services Overview Section */}
-      <section className="relative py-10 md:py-16 bg-gradient-to-br from-white via-primary/3 to-slate-50/80 overflow-hidden">
+      <section className="relative py-10 md:py-16 bg-gradient-to-br from-primary/8 via-white to-slate-100 overflow-hidden">
         {/* Animated Background Orbs */}
         <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-gradient-to-br from-primary/25 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.4s'}} />
         <div className="absolute bottom-0 left-0 w-[380px] h-[380px] bg-gradient-to-br from-primary/25 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.9s'}} />
-        {/* Diagonal stripes effect */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent opacity-30 pointer-events-none z-0" style={{backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.03) 10px, rgba(0,0,0,0.03) 20px)'}} />
+        {/* Visible diagonal stripes effect */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/8 to-transparent opacity-50 pointer-events-none z-0" style={{backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.05) 10px, rgba(0,0,0,0.05) 20px)'}} />
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
@@ -301,13 +301,13 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section - Grid Cards */}
-      <section className="relative py-8 md:py-12 bg-gradient-to-br from-slate-50/60 via-white to-primary/8 overflow-hidden">
+      <section className="relative py-8 md:py-12 bg-gradient-to-br from-slate-100 via-white to-primary/12 overflow-hidden">
         {/* Animated Background Orbs */}
         <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-gradient-to-br from-primary/15 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.2s'}} />
         <div className="absolute -bottom-40 -right-40 w-[450px] h-[450px] bg-gradient-to-br from-primary/10 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.6s'}} />
-        {/* Mesh gradient effect */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--primary)_0%,_transparent_50%)] opacity-10 pointer-events-none z-0" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--primary)_0%,_transparent_50%)] opacity-10 pointer-events-none z-0" />
+        {/* More visible mesh gradient effect */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--primary)_0%,_transparent_60%)] opacity-20 pointer-events-none z-0" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--primary)_0%,_transparent_60%)] opacity-20 pointer-events-none z-0" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="mb-10 text-center animate-slideup">
@@ -370,12 +370,12 @@ export default function Home() {
       </section>
 
       {/* FAQ Section - 2 Column Layout */}
-      <section className="relative py-8 md:py-12 bg-gradient-to-br from-white via-slate-50/40 to-primary/4 overflow-hidden">
+      <section className="relative py-8 md:py-12 bg-gradient-to-br from-primary/6 via-slate-50 to-white overflow-hidden">
         {/* Animated Background Orbs */}
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gradient-to-br from-primary/20 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.3s'}} />
         <div className="absolute bottom-0 left-0 w-[380px] h-[380px] bg-gradient-to-br from-primary/15 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.5s'}} />
-        {/* Subtle wave pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,_transparent_0%,_rgba(0,0,0,0.02)_50%,_transparent_100%)] opacity-40 pointer-events-none z-0" style={{backgroundSize: '200% 100%', backgroundPosition: '0% 0%', animation: 'wave 20s ease-in-out infinite'}} />
+        {/* More visible wave pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,_transparent_0%,_rgba(0,0,0,0.04)_50%,_transparent_100%)] opacity-60 pointer-events-none z-0" style={{backgroundSize: '200% 100%', backgroundPosition: '0% 0%', animation: 'wave 20s ease-in-out infinite'}} />
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="mb-10 text-center animate-slideup">
@@ -450,14 +450,14 @@ export default function Home() {
       </section>
 
       {/* CTA Section - Hero Style */}
-      <section className="relative py-8 md:py-12 bg-gradient-to-br from-primary/8 via-white to-slate-50/70 overflow-hidden">
+      <section className="relative py-8 md:py-12 bg-gradient-to-br from-primary/12 via-white to-slate-100 overflow-hidden">
         {/* Animated Background Orbs */}
         <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-br from-primary/30 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.1s'}} />
         <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-gradient-to-br from-primary/15 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.5s'}} />
-        {/* Radial spotlight effect */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--primary)_0%,_transparent_70%)] opacity-5 pointer-events-none z-0" />
-        {/* Subtle grid pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,_transparent_1px),linear-gradient(90deg,_rgba(0,0,0,0.02)_1px,_transparent_1px)] bg-[size:50px_50px] opacity-30 pointer-events-none z-0" />
+        {/* More visible radial spotlight effect */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--primary)_0%,_transparent_70%)] opacity-12 pointer-events-none z-0" />
+        {/* More visible grid pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,_transparent_1px),linear-gradient(90deg,_rgba(0,0,0,0.03)_1px,_transparent_1px)] bg-[size:50px_50px] opacity-50 pointer-events-none z-0" />
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center animate-slideup mb-10">
