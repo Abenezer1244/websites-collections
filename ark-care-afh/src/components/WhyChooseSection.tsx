@@ -1,16 +1,47 @@
 'use client'
 
 import Link from 'next/link'
+import { useEffect, useRef, useState } from 'react'
 
 export function WhyChooseSection() {
+  const [isVisible, setIsVisible] = useState(false)
+  const sectionRef = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current)
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current)
+      }
+    }
+  }, [])
+
   return (
-    <section className="relative py-20 md:py-28 bg-white" data-section="why-choose">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section ref={sectionRef} className="relative py-20 md:py-28 bg-white overflow-hidden" data-section="why-choose">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary/5 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}} />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-primary/5 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '5s', animationDelay: '1s'}} />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Professional Header */}
-        <div className="text-center mb-16">
+        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="inline-block mb-6">
             <span className="text-sm font-semibold text-primary uppercase tracking-wider">Why Choose Us</span>
-            <div className="mt-2 h-1 w-20 bg-primary mx-auto" />
+            <div className={`mt-2 h-1 bg-primary mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'w-20' : 'w-0'}`} />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
             Why Families Trust Ark Care AFH
@@ -23,10 +54,10 @@ export function WhyChooseSection() {
         {/* Professional Features Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {/* Feature 1 */}
-          <div className="bg-white border border-slate-200 rounded-lg p-8 shadow-sm">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className={`bg-white border border-slate-200 rounded-lg p-8 shadow-sm transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className="flex items-center gap-4 mb-6 group">
+              <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:bg-primary/20 group-hover:scale-110">
+                <svg className="w-7 h-7 text-primary transition-transform duration-300 group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
@@ -61,10 +92,10 @@ export function WhyChooseSection() {
           </div>
 
           {/* Feature 2 */}
-          <div className="bg-white border border-slate-200 rounded-lg p-8 shadow-sm">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className={`bg-white border border-slate-200 rounded-lg p-8 shadow-sm transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className="flex items-center gap-4 mb-6 group">
+              <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:bg-primary/20 group-hover:scale-110">
+                <svg className="w-7 h-7 text-primary transition-transform duration-300 group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                 </svg>
               </div>
@@ -99,10 +130,10 @@ export function WhyChooseSection() {
           </div>
 
           {/* Feature 3 */}
-          <div className="bg-white border border-slate-200 rounded-lg p-8 shadow-sm">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className={`bg-white border border-slate-200 rounded-lg p-8 shadow-sm transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className="flex items-center gap-4 mb-6 group">
+              <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:bg-primary/20 group-hover:scale-110">
+                <svg className="w-7 h-7 text-primary transition-transform duration-300 group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
@@ -138,27 +169,27 @@ export function WhyChooseSection() {
         </div>
 
         {/* Trust Indicators */}
-        <div className="grid md:grid-cols-4 gap-6 mb-16 pt-12 border-t border-slate-200">
-          <div className="text-center">
-            <div className="text-3xl font-bold text-primary mb-2">Licensed</div>
+        <div className={`grid md:grid-cols-4 gap-6 mb-16 pt-12 border-t border-slate-200 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className="text-center group">
+            <div className="text-3xl font-bold text-primary mb-2 transition-all duration-300 group-hover:scale-110">Licensed</div>
             <div className="text-sm text-slate-600">State Certified Facility</div>
           </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-primary mb-2">24/7</div>
+          <div className="text-center group">
+            <div className="text-3xl font-bold text-primary mb-2 transition-all duration-300 group-hover:scale-110">24/7</div>
             <div className="text-sm text-slate-600">Professional Care</div>
           </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-primary mb-2">Personalized</div>
+          <div className="text-center group">
+            <div className="text-3xl font-bold text-primary mb-2 transition-all duration-300 group-hover:scale-110">Personalized</div>
             <div className="text-sm text-slate-600">Individual Care Plans</div>
           </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-primary mb-2">Experienced</div>
+          <div className="text-center group">
+            <div className="text-3xl font-bold text-primary mb-2 transition-all duration-300 group-hover:scale-110">Experienced</div>
             <div className="text-sm text-slate-600">Trained Staff</div>
           </div>
         </div>
 
         {/* Professional CTA */}
-        <div className="bg-gradient-to-r from-primary to-primary/90 rounded-xl p-8 md:p-12 text-white text-center">
+        <div className={`bg-gradient-to-r from-primary to-primary/90 rounded-xl p-8 md:p-12 text-white text-center transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h3 className="text-2xl md:text-3xl font-bold mb-4">
             Ready to Learn More?
           </h3>
@@ -168,13 +199,13 @@ export function WhyChooseSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="px-8 py-4 bg-white text-primary font-semibold rounded-lg shadow-lg"
+              className="px-8 py-4 bg-white text-primary font-semibold rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105"
             >
               Schedule a Tour
             </Link>
             <Link
               href="/contact"
-              className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg"
+              className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg transition-all duration-300 hover:bg-white hover:text-primary"
             >
               Contact Us
             </Link>
