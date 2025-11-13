@@ -115,11 +115,25 @@ export default function ContactPageClient() {
       <ContactHeroSection />
 
       {/* Contact Section */}
-      <section className="relative py-16 md:py-24 bg-gradient-to-br from-slate-50 via-white to-primary/8 overflow-hidden">
-        {/* Animated Background */}
+      <section className="relative py-16 md:py-24 bg-gradient-to-br from-primary/10 via-slate-100 to-primary/20 overflow-hidden">
+        {/* Rich Colorful Background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}} />
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-primary/8 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '5s', animationDelay: '1s'}} />
+          {/* Base gradient */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-slate-100 to-primary/25" />
+          
+          {/* Animated orbs */}
+          <div className="absolute top-0 right-0 w-[550px] h-[550px] bg-gradient-to-br from-primary/25 to-primary/10 rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}} />
+          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-primary/20 to-slate-200/60 rounded-full blur-3xl animate-pulse" style={{animationDuration: '5s', animationDelay: '1s'}} />
+          <div className="absolute top-1/3 left-1/3 w-[450px] h-[450px] bg-gradient-to-br from-primary/15 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '6s', animationDelay: '2s'}} />
+          
+          {/* Pattern overlay */}
+          <div className="absolute inset-0 opacity-8" style={{
+            backgroundImage: 'linear-gradient(45deg, transparent 30%, rgba(0,0,0,0.03) 50%, transparent 70%), linear-gradient(-45deg, transparent 30%, rgba(0,0,0,0.03) 50%, transparent 70%)',
+            backgroundSize: '50px 50px'
+          }} />
+          
+          {/* Radial accent */}
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--primary)_0%,_transparent_70%)] opacity-15" />
         </div>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
@@ -164,7 +178,7 @@ export default function ContactPageClient() {
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <div className="bg-white rounded-lg border border-slate-200 p-8">
+              <div className="bg-gradient-to-br from-white via-slate-50 to-primary/5 rounded-lg border-2 border-primary/20 p-8 shadow-xl backdrop-blur-sm">
                 <h2 className="text-2xl font-bold text-slate-900 mb-6">Send us a Message</h2>
 
                 {submitStatus === 'success' && (
@@ -350,13 +364,13 @@ export default function ContactPageClient() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-primary/15 to-slate-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
             Frequently Asked Questions
           </h2>
           <div className="space-y-6">
-            <details className="bg-white rounded-lg border border-slate-200 p-6">
+            <details className="bg-gradient-to-br from-white via-slate-50 to-primary/5 rounded-lg border-2 border-primary/20 p-6 shadow-lg backdrop-blur-sm">
               <summary className="cursor-pointer font-semibold text-slate-900 flex justify-between items-center">
                 How do I schedule a tour?
                 <span className="ml-2">▶</span>
@@ -366,7 +380,7 @@ export default function ContactPageClient() {
               </p>
             </details>
 
-            <details className="bg-white rounded-lg border border-slate-200 p-6">
+            <details className="bg-gradient-to-br from-white via-slate-50 to-primary/5 rounded-lg border-2 border-primary/20 p-6 shadow-lg backdrop-blur-sm">
               <summary className="cursor-pointer font-semibold text-slate-900 flex justify-between items-center">
                 What is the admission process?
                 <span className="ml-2">▶</span>
@@ -376,7 +390,7 @@ export default function ContactPageClient() {
               </p>
             </details>
 
-            <details className="bg-white rounded-lg border border-slate-200 p-6">
+            <details className="bg-gradient-to-br from-white via-slate-50 to-primary/5 rounded-lg border-2 border-primary/20 p-6 shadow-lg backdrop-blur-sm">
               <summary className="cursor-pointer font-semibold text-slate-900 flex justify-between items-center">
                 What services are included?
                 <span className="ml-2">▶</span>
@@ -386,7 +400,7 @@ export default function ContactPageClient() {
               </p>
             </details>
 
-            <details className="bg-white rounded-lg border border-slate-200 p-6">
+            <details className="bg-gradient-to-br from-white via-slate-50 to-primary/5 rounded-lg border-2 border-primary/20 p-6 shadow-lg backdrop-blur-sm">
               <summary className="cursor-pointer font-semibold text-slate-900 flex justify-between items-center">
                 Can family members visit?
                 <span className="ml-2">▶</span>
