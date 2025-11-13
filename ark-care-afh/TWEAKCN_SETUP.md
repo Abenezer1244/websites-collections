@@ -7,6 +7,7 @@ This guide will help you use Tweakcn to customize themes for your Ark Care AFH w
 1. Your website must be accessible via a URL (either deployed or using a local tunnel)
 2. The `components.json` file is configured to use the Tweakcn registry
 3. CSS variables are properly set up in `globals.css`
+4. **The tweakcn live preview script is included in your layout** (already configured ✅)
 
 ## Step 1: Make Your Website Accessible
 
@@ -85,6 +86,7 @@ Some versions of Tweakcn allow direct integration. Check Tweakcn's documentation
 - **CSS File**: `src/app/globals.css`
 - **Tailwind Config**: `tailwind.config.ts`
 - **CSS Variables**: Enabled (`cssVariables: true`)
+- **Live Preview Script**: ✅ Added to `src/app/layout.tsx` (loads from `https://tweakcn.com/live-preview.js`)
 
 ## Notes
 
