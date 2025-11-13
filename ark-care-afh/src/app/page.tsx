@@ -6,7 +6,7 @@ import { JsonLd } from '@/components/JsonLd'
 import { pageMetadata, generateWebPageSchema, generateBreadcrumbSchema, siteConfig } from '@/lib/seo'
 import { TestimonialCarousel } from '@/components/TestimonialCarousel'
 import { Accordion } from '@/components/ui/accordion'
-import { WhyChooseCards } from '@/components/WhyChooseCards'
+import { WhyChooseSection } from '@/components/WhyChooseSection'
 
 export const metadata: Metadata = {
   title: pageMetadata.home.title,
@@ -96,104 +96,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Key Benefits Section - Completely Redesigned */}
-      <section className="relative py-16 md:py-24 bg-gradient-to-b from-white via-slate-50/50 to-white" data-section="why-choose" style={{overflow: 'visible', paddingTop: '4rem', paddingBottom: '4rem'}}>
-        {/* Decorative Background Elements */}
-        <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0" style={{overflow: 'hidden'}}>
-          <div className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse-glow" style={{animationDelay: '0.4s'}} />
-          <div className="absolute bottom-20 left-10 w-96 h-96 bg-primary/8 rounded-full blur-3xl animate-pulse-glow" style={{animationDelay: '0.8s'}} />
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10" style={{overflow: 'visible'}}>
-          {/* Header Section */}
-          <div className="text-center mb-16 animate-slideup">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-6">
-              <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-              <span className="text-primary text-sm font-semibold uppercase tracking-wide">Why Choose Us</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-6 leading-tight">
-              Why Choose Ark Care AFH?
-            </h2>
-            <p className="text-lg md:text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed">
-              Experience the difference of compassionate, personalized care in a warm, home-like environment
-            </p>
-          </div>
-
-          {/* Main Features Grid - Modern Card Design */}
-          <WhyChooseCards 
-            cards={[
-              {
-                icon: (
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                ),
-                title: "24/7 Professional Care",
-                description: "Round-the-clock support from licensed professionals ensuring safety and comfort at all times.",
-                features: [
-                  "Licensed nursing professionals",
-                  "Emergency response systems",
-                  "Medication management"
-                ],
-                delay: "1"
-              },
-              {
-                icon: (
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                  </svg>
-                ),
-                title: "Home-Like Environment",
-                description: "A warm, welcoming setting designed to feel like home while providing professional care.",
-                features: [
-                  "Comfortable private rooms",
-                  "Community gathering spaces",
-                  "Beautiful outdoor areas"
-                ],
-                delay: "2"
-              },
-              {
-                icon: (
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                ),
-                title: "Activity & Engagement",
-                description: "Meaningful activities and social engagement to support physical and mental well-being.",
-                features: [
-                  "Daily social activities",
-                  "Recreational programs",
-                  "Mental wellness support"
-                ],
-                delay: "3"
-              }
-            ]}
-          />
-
-          {/* Bottom CTA Section */}
-          <div className="text-center animate-slideup-delay-3">
-            <div className="inline-flex flex-col sm:flex-row items-center gap-4 px-8 py-6 bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 rounded-2xl border border-primary/20">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div className="text-left">
-                  <p className="text-sm font-semibold text-slate-900">Ready to learn more?</p>
-                  <p className="text-xs text-slate-600">Schedule a tour and see our facility</p>
-                </div>
-              </div>
-              <Link
-                href="/contact"
-                className="px-6 py-3 bg-primary text-white font-semibold rounded-xl hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-              >
-                Schedule Tour
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Why Choose Us Section - Completely Redesigned */}
+      <WhyChooseSection />
 
       {/* Services Overview Section */}
       <section className="relative py-10 md:py-16 bg-gradient-to-br from-primary/8 via-white to-slate-100 overflow-hidden">
