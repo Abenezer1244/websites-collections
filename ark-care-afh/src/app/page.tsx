@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { AnimatedBlob, AnimatedBlobSecondary } from '@/components/AnimatedBlob'
 import { JsonLd } from '@/components/JsonLd'
 import { pageMetadata, generateWebPageSchema, generateBreadcrumbSchema, siteConfig } from '@/lib/seo'
 import { TestimonialCarousel } from '@/components/TestimonialCarousel'
 import { Accordion } from '@/components/ui/accordion'
 import { WhyChooseSection } from '@/components/WhyChooseSection'
+import { HeroSection } from '@/components/HeroSection'
+import { ServicesOverviewSection } from '@/components/ServicesOverviewSection'
 
 export const metadata: Metadata = {
   title: pageMetadata.home.title,
@@ -54,105 +55,14 @@ export default function Home() {
       <JsonLd data={pageSchema} />
       <JsonLd data={breadcrumbSchema} />
 
-      {/* Hero Section with Image Background - Full Screen Height */}
-      <section className="relative overflow-hidden text-white min-h-screen flex items-center" style={{backgroundImage: 'url(/hero-bg.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed'}}>
-        {/* Image Background - Decorative */}
-        <div
-          className="absolute inset-0 w-full h-full"
-          style={{backgroundImage: 'url(/hero-bg.jpg)', backgroundSize: 'cover', backgroundPosition: 'center'}}
-          aria-hidden="true"
-        />
-
-        {/* Dark Overlay for Text Visibility */}
-        <div className="absolute inset-0 bg-black/40 z-5" />
-
-        {/* Animated Background Orbs - Large and Vibrant */}
-        <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-gradient-to-br from-primary/60 to-primary/30 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-10" />
-        <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-gradient-to-br from-primary/50 to-primary/25 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-10" style={{animationDelay: '0.5s'}} />
-        <div className="absolute top-1/3 -right-20 w-[450px] h-[450px] bg-gradient-to-br from-primary/50 to-primary/25 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-10" style={{animationDelay: '1s'}} />
-
-        {/* Animated Blobs */}
-        <AnimatedBlob position="top-right" size="lg" opacity="medium" />
-        <AnimatedBlobSecondary position="bottom-left" size="md" opacity="light" />
-
-        {/* Content */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex items-center justify-center">
-          <div className="max-w-4xl text-center">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-8 leading-tight tracking-tight">
-              Compassionate Care in a Home Environment
-            </h1>
-            <p className="text-base md:text-lg mb-10 opacity-80 mx-auto leading-relaxed max-w-2xl">
-              Ark Care AFH provides personalized adult family home care services in Algona, WA with specialized support for mental health, dementia, and developmental disabilities.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/services"
-                className="inline-block px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors text-center"
-              >
-                Learn More
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Hero Section - Modern Redesign */}
+      <HeroSection />
 
       {/* Why Choose Us Section - Completely Redesigned */}
       <WhyChooseSection />
 
-      {/* Services Overview Section */}
-      <section className="relative py-10 md:py-16 bg-gradient-to-br from-primary/8 via-white to-slate-100 overflow-hidden">
-        {/* Animated Background Orbs */}
-        <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-gradient-to-br from-primary/25 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.4s'}} />
-        <div className="absolute bottom-0 left-0 w-[380px] h-[380px] bg-gradient-to-br from-primary/25 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.9s'}} />
-        {/* Visible diagonal stripes effect */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/8 to-transparent opacity-50 pointer-events-none z-0" style={{backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.05) 10px, rgba(0,0,0,0.05) 20px)'}} />
-
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center">
-            {/* Content */}
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-              Comprehensive Care Services
-            </h2>
-            <p className="text-slate-800 mb-8 text-lg max-w-2xl mx-auto">
-              Ark Care AFH offers a complete range of services to support your loved one's health, safety, and quality of life.
-            </p>
-            <ul className="space-y-3 mb-8 inline-block text-left">
-              <li className="flex items-start gap-3">
-                <svg className="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-                <span className="text-slate-900 font-medium">Medication management with pharmacy oversight</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <svg className="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-                <span className="text-slate-900 font-medium">Assistance with daily living & hygiene</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <svg className="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-                <span className="text-slate-900 font-medium">Specialized support for mental health, dementia & developmental disabilities</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <svg className="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-                <span className="text-slate-900 font-medium">Customized activities & Meaningful Day programs</span>
-              </li>
-            </ul>
-            <div className="flex justify-center">
-              <Link
-                href="/services"
-                className="px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors"
-              >
-                View All Services
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Services Overview Section - Modern Redesign */}
+      <ServicesOverviewSection />
 
       {/* Testimonials Section - Grid Cards */}
       <section className="relative py-8 md:py-12 bg-gradient-to-br from-slate-100 via-white to-primary/12 overflow-hidden">
