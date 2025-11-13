@@ -43,7 +43,12 @@ Website is functional with all major pages implemented. Below are tasks to compl
   - [ ] Update Open Graph images URL
   - [ ] Update sitemap.xml with production URL
 - [ ] Verify all meta descriptions and keywords are optimized
-- [ ] Add alt text to all images
+- [x] Add alt text to all images
+  - [x] Verify all Image components have proper alt text
+  - [x] Convert team-member-card to use Next.js Image component
+  - [x] Enhance alt text to include role information
+  - [x] Add aria-hidden to decorative background images
+  - [x] Add aria-label to placeholder elements
 
 ### 5. Functionality Enhancements
 - [x] Add loading states for form submissions
@@ -154,5 +159,26 @@ Website is functional with all major pages implemented. Below are tasks to compl
 - Example: `image: "/team/sarah-johnson.jpg"` for Sarah Johnson
 - Next.js Image component will automatically optimize images when added
 - Structure supports both placeholder and real image states seamlessly
+- All changes committed and pushed to GitHub
+
+#### Image Accessibility Improvements (Task 4.3)
+**Date:** Current session
+**Changes Made:**
+- Converted team-member-card component from regular `<img>` to Next.js `<Image>` component for optimization
+- Enhanced alt text format from just name to `${name} - ${role}` for better context
+- Added aria-label to placeholder divs for accessibility when no image is present
+- Added aria-hidden="true" to decorative hero background image div
+- All images now have proper alt text attributes
+- Improved image optimization with proper `sizes` attribute for responsive loading
+
+**Files Modified:**
+- `src/components/cards/team-member-card.tsx`
+- `src/app/page.tsx`
+
+**Notes:**
+- All Image components throughout the site now have proper alt text
+- Team member card component now uses Next.js Image for automatic optimization
+- Decorative background images are properly marked with aria-hidden
+- Placeholder elements have aria-label for screen reader accessibility
 - All changes committed and pushed to GitHub
 
