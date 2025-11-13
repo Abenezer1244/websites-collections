@@ -1,9 +1,9 @@
 'use client'
 
 import { FormEvent, useState } from 'react'
-import { AnimatedBlob, AnimatedBlobSecondary } from '@/components/AnimatedBlob'
 import { businessInfo } from '@/lib/seo'
 import { submitContactForm } from '@/lib/api/contact'
+import { ContactHeroSection } from '@/components/contact/ContactHeroSection'
 
 export default function ContactPageClient() {
   const [formData, setFormData] = useState({
@@ -111,18 +111,8 @@ export default function ContactPageClient() {
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-primary/90 to-primary/70 text-white py-16">
-        <AnimatedBlob position="top-right" size="lg" opacity="medium" />
-        <AnimatedBlobSecondary position="bottom-left" size="md" opacity="light" />
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold">Contact Us</h1>
-          <p className="text-lg mt-4 opacity-90 max-w-2xl">
-            Get in touch with us for inquiries, to schedule a tour, or to learn more about our services
-          </p>
-        </div>
-      </section>
+      {/* Hero Section - Modern Redesign */}
+      <ContactHeroSection />
 
       {/* Contact Section */}
       <section className="py-16 md:py-24 bg-white">
