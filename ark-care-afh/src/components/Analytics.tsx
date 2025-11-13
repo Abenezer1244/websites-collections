@@ -1,11 +1,11 @@
 'use client'
 
 import Script from 'next/script'
-import { useEffect } from 'react'
+import { Suspense, useEffect } from 'react'
 import { usePathname, useSearchParams } from 'next/navigation'
 import { GA_TRACKING_ID, GTM_ID, FB_PIXEL_ID, isAnalyticsEnabled, pageview } from '@/lib/analytics'
 
-export function Analytics() {
+function AnalyticsContent() {
   const pathname = usePathname()
   const searchParams = useSearchParams()
 
@@ -16,12 +16,20 @@ export function Analytics() {
     pageview(url)
   }, [pathname, searchParams])
 
+  return null
+}
+
+export function Analytics() {
   if (!isAnalyticsEnabled()) {
     return null
   }
 
   return (
     <>
+      <Suspense fallback={null}>
+        <AnalyticsContent />
+      </Suspense>
+
       {/* Google Analytics */}
       {GA_TRACKING_ID && (
         <>
