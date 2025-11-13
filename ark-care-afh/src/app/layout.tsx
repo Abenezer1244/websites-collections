@@ -90,7 +90,7 @@ export default function RootLayout({
       >
         <Analytics />
         <Navigation />
-        <main className="flex-grow">
+        <main className="flex-grow overflow-visible">
           {children}
         </main>
         <Footer />
