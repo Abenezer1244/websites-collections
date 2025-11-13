@@ -80,12 +80,25 @@ export function TeamSection() {
   ]
 
   return (
-    <section ref={sectionRef} className="relative py-20 md:py-28 bg-gradient-to-br from-slate-50 via-white to-primary/8 overflow-hidden">
-      {/* Animated Background */}
+    <section ref={sectionRef} className="relative py-20 md:py-28 bg-gradient-to-br from-primary/10 via-slate-100 to-primary/20 overflow-hidden">
+      {/* Rich Colorful Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary/12 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}} />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-primary/10 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '5s', animationDelay: '1s'}} />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--primary)_0%,_transparent_50%)] opacity-15" />
+        {/* Base gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-slate-100 to-primary/25" />
+        
+        {/* Animated orbs */}
+        <div className="absolute top-0 right-0 w-[550px] h-[550px] bg-gradient-to-br from-primary/25 to-primary/10 rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}} />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-primary/20 to-slate-200/50 rounded-full blur-3xl animate-pulse" style={{animationDuration: '5s', animationDelay: '1s'}} />
+        <div className="absolute top-1/3 right-1/3 w-[450px] h-[450px] bg-gradient-to-br from-primary/15 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '6s', animationDelay: '2s'}} />
+        
+        {/* Pattern overlay */}
+        <div className="absolute inset-0 opacity-8" style={{
+          backgroundImage: 'linear-gradient(45deg, transparent 30%, rgba(0,0,0,0.03) 50%, transparent 70%), linear-gradient(-45deg, transparent 30%, rgba(0,0,0,0.03) 50%, transparent 70%)',
+          backgroundSize: '50px 50px'
+        }} />
+        
+        {/* Radial accent */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--primary)_0%,_transparent_60%)] opacity-25" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -106,7 +119,7 @@ export function TeamSection() {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className={`group bg-white rounded-2xl shadow-lg border border-slate-200/50 overflow-hidden transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              className={`group bg-gradient-to-br from-white via-white to-primary/5 rounded-2xl shadow-xl border-2 border-primary/20 overflow-hidden transition-all duration-700 hover:shadow-2xl hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               style={{transitionDelay: `${(index + 1) * 100}ms`}}
             >
               {/* Team Member Photo */}
