@@ -52,7 +52,12 @@ Website is functional with all major pages implemented. Below are tasks to compl
 
 ### 5. Functionality Enhancements
 - [x] Add loading states for form submissions
-- [ ] Add error boundaries for better error handling
+- [x] Add error boundaries for better error handling
+  - [x] Create error.tsx for application-level error handling
+  - [x] Create global-error.tsx for root-level error handling
+  - [x] Add user-friendly error messages with recovery options
+  - [x] Add error logging for debugging
+  - [x] Include development error details
 - [ ] Implement analytics tracking (if needed)
 - [x] Add accessibility improvements (ARIA labels, keyboard navigation)
   - [x] Add ARIA labels to navigation elements
@@ -214,5 +219,30 @@ Website is functional with all major pages implemented. Below are tasks to compl
 - Screen readers will properly announce navigation state changes
 - Social media links are properly labeled for assistive technologies
 - All changes follow WCAG 2.1 accessibility guidelines
+- All changes committed and pushed to GitHub
+
+#### Error Boundaries Implementation (Task 5.2)
+**Date:** Current session
+**Changes Made:**
+- Created `error.tsx` file for application-level error handling in Next.js App Router
+- Created `global-error.tsx` file for root-level error handling (catches errors in root layout)
+- Implemented user-friendly error UI with clear messaging
+- Added "Try Again" button to reset error state
+- Added navigation options: "Go Home" and "Contact Us" links
+- Added error logging to console for debugging
+- Included development-only error details display (error message and digest)
+- Styled error pages to match site design with proper accessibility
+
+**Files Created:**
+- `src/app/error.tsx`
+- `src/app/global-error.tsx`
+
+**Notes:**
+- Error boundaries catch React errors and prevent entire app crashes
+- Users see friendly error messages instead of blank screens
+- Error pages include recovery options (try again, go home, contact)
+- Development mode shows detailed error information for debugging
+- Production mode shows user-friendly messages without exposing technical details
+- Follows Next.js 13+ App Router error handling patterns
 - All changes committed and pushed to GitHub
 
