@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
+import { Analytics } from "@/components/Analytics";
 import { generateOrganizationSchema, siteConfig } from "@/lib/seo";
 
 const outfit = Outfit({
@@ -87,6 +88,7 @@ export default function RootLayout({
       <body
         className={`${outfit.variable} antialiased flex flex-col min-h-screen`}
       >
+        <Analytics />
         <Navigation />
         <main className="flex-grow">
           {children}

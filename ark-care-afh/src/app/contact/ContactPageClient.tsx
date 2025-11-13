@@ -3,6 +3,7 @@
 import { FormEvent, useState } from 'react'
 import { AnimatedBlob, AnimatedBlobSecondary } from '@/components/AnimatedBlob'
 import { businessInfo } from '@/lib/seo'
+import { submitContactForm } from '@/lib/api/contact'
 
 export default function ContactPageClient() {
   const [formData, setFormData] = useState({
@@ -76,19 +77,25 @@ export default function ContactPageClient() {
     setSubmitStatus('idle')
 
     try {
-      // TODO: Replace with actual API endpoint when backend is ready
-      // For now, simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500))
+      // Submit form using API integration
+      const response = await submitContactForm(formData)
       
-      // Simulate success
-      console.log('Form submitted:', formData)
-      setSubmitStatus('success')
-      setFormData({ name: '', email: '', phone: '', subject: '', message: '' })
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setSubmitStatus('idle')
-      }, 5000)
+      if (response.success) {
+        setSubmitStatus('success')
+        setFormData({ name: '', email: '', phone: '', subject: '', message: '' })
+        
+        // Reset success message after 5 seconds
+        setTimeout(() => {
+          setSubmitStatus('idle')
+        }, 5000)
+      } else {
+        setSubmitStatus('error')
+        
+        // Reset error message after 5 seconds
+        setTimeout(() => {
+          setSubmitStatus('idle')
+        }, 5000)
+      }
     } catch (error) {
       console.error('Form submission error:', error)
       setSubmitStatus('error')

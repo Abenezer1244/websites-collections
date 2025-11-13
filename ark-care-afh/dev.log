@@ -39,3 +39,16 @@
  ✓ Compiled in 411ms
  ✓ Compiled in 984ms
  ✓ Compiled in 624ms
+ ✓ Compiled in 293ms
+ ✓ Compiled in 255ms
+ ✓ Compiled in 243ms
+ ✓ Compiled in 155ms
+ ✓ Compiled in 198ms
+ ✓ Compiled in 137ms
+ ✓ Compiled in 199ms
+ ✓ Compiled in 151ms
+ ✓ Compiled in 125ms
+ ✓ Compiled in 109ms
+ ○ Compiling /_not-found/page ...
+ GET /api/health 404 in 4.4s (compile: 4.1s, render: 236ms)
+[?25h
