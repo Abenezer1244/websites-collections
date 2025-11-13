@@ -72,11 +72,12 @@ export function ServicesGridSection() {
   ]
 
   return (
-    <section ref={sectionRef} className="relative py-20 md:py-28 bg-gradient-to-b from-white via-slate-50/30 to-white overflow-hidden">
+    <section ref={sectionRef} className="relative py-20 md:py-28 bg-gradient-to-br from-slate-50 via-white to-primary/10 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary/5 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}} />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-primary/5 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '5s', animationDelay: '1s'}} />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary/12 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}} />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-primary/10 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '5s', animationDelay: '1s'}} />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--primary)_0%,_transparent_50%)] opacity-15" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
