@@ -81,12 +81,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning style={{overflow: 'visible'}}>
       <head>
         <JsonLd data={generateOrganizationSchema()} />
       </head>
       <body
         className={`${outfit.variable} antialiased flex flex-col min-h-screen`}
+        style={{overflow: 'visible'}}
       >
         <Analytics />
         <Navigation />
