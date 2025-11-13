@@ -639,6 +639,16 @@ html.dark section[data-section="why-choose"] {
   }
 }
 
+/* Wave animation for FAQ section */
+@keyframes wave {
+  0%, 100% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+}
+
 /* Utility Classes */
 @layer utilities {
   /* Fade animations */
