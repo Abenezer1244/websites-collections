@@ -29,12 +29,6 @@ export function TestimonialCarousel({ testimonials, autoPlayDelay = 5000 }: Test
     return () => clearInterval(interval)
   }, [isAutoPlaying, autoPlayDelay, testimonials.length])
 
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index)
-    setIsAutoPlaying(false)
-    setTimeout(() => setIsAutoPlaying(true), autoPlayDelay)
-  }
-
   const goToPrevious = () => {
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
     setIsAutoPlaying(false)
@@ -47,45 +41,38 @@ export function TestimonialCarousel({ testimonials, autoPlayDelay = 5000 }: Test
     setTimeout(() => setIsAutoPlaying(true), autoPlayDelay)
   }
 
-  const currentTestimonial = testimonials[currentIndex]
+  const firstTestimonial = testimonials[currentIndex]
+  const secondTestimonial = testimonials[(currentIndex + 1) % testimonials.length]
 
   return (
     <div className="w-full">
-      {/* Carousel Container */}
+      {/* Carousel Container - 2 Testimonials */}
       <div className="relative overflow-hidden">
-        {/* Slide */}
-        <div className="animate-slideIn">
+        <div className="grid md:grid-cols-2 gap-6 animate-slideIn">
+          {/* First Testimonial */}
           <TestimonialCard
-            quote={currentTestimonial.quote}
-            author={currentTestimonial.author}
-            role={currentTestimonial.role}
-            rating={currentTestimonial.rating}
+            quote={firstTestimonial.quote}
+            author={firstTestimonial.author}
+            role={firstTestimonial.role}
+            rating={firstTestimonial.rating}
+          />
+
+          {/* Second Testimonial */}
+          <TestimonialCard
+            quote={secondTestimonial.quote}
+            author={secondTestimonial.author}
+            role={secondTestimonial.role}
+            rating={secondTestimonial.rating}
           />
         </div>
       </div>
 
-      {/* Navigation Dots */}
-      <div className="flex justify-center gap-2 mt-8">
-        {testimonials.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentIndex
-                ? 'bg-primary w-8'
-                : 'bg-primary/40 hover:bg-primary/60'
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
-
       {/* Previous/Next Buttons */}
-      <div className="flex justify-center gap-4 mt-6">
+      <div className="flex justify-center gap-4 mt-8">
         <button
           onClick={goToPrevious}
           className="p-2 rounded-full border border-primary/30 text-primary hover:bg-primary/10 transition-colors"
-          aria-label="Previous testimonial"
+          aria-label="Previous testimonials"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -94,7 +81,7 @@ export function TestimonialCarousel({ testimonials, autoPlayDelay = 5000 }: Test
         <button
           onClick={goToNext}
           className="p-2 rounded-full border border-primary/30 text-primary hover:bg-primary/10 transition-colors"
-          aria-label="Next testimonial"
+          aria-label="Next testimonials"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -105,7 +92,7 @@ export function TestimonialCarousel({ testimonials, autoPlayDelay = 5000 }: Test
       {/* Auto-play indicator */}
       <div className="flex justify-center mt-4 text-sm text-slate-600">
         <span>
-          {currentIndex + 1} / {testimonials.length}
+          {currentIndex + 1} - {((currentIndex + 1) % testimonials.length) + 1} of {testimonials.length}
         </span>
       </div>
     </div>
