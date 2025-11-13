@@ -95,153 +95,193 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Key Benefits Section - Brand New Design */}
-      <section className="relative py-12 md:py-20 overflow-hidden bg-gradient-to-br from-primary/15 via-slate-50 to-slate-100" data-section="why-choose">
-        {/* Animated Background Orbs */}
-        <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-gradient-to-br from-primary/30 to-primary/15 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.4s'}} />
-        <div className="absolute bottom-0 left-0 w-[380px] h-[380px] bg-gradient-to-br from-primary/20 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.9s'}} />
-        {/* More visible pattern overlay */}
-        <div className="absolute inset-0 opacity-[0.06] bg-[radial-gradient(circle_at_1px_1px,rgb(0,0,0)_1px,transparent_0)] bg-[length:40px_40px] pointer-events-none z-0" />
-        {/* Additional gradient overlay for more depth */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/8 opacity-60 pointer-events-none z-0" />
+      {/* Key Benefits Section - Completely Redesigned */}
+      <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-white via-slate-50/50 to-white" data-section="why-choose">
+        {/* Decorative Background Elements */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+          <div className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse-glow" style={{animationDelay: '0.4s'}} />
+          <div className="absolute bottom-20 left-10 w-96 h-96 bg-primary/8 rounded-full blur-3xl animate-pulse-glow" style={{animationDelay: '0.8s'}} />
+        </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Header */}
-          <div className="mb-12 animate-slideup text-center">
-            <span className="inline-block px-4 py-2 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-6">
-              Why Choose Us
-            </span>
-            <h2 className="text-5xl md:text-6xl font-black text-slate-900 mb-8 leading-tight max-w-4xl mx-auto">
+          {/* Header Section */}
+          <div className="text-center mb-16 animate-slideup">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-6">
+              <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+              <span className="text-primary text-sm font-semibold uppercase tracking-wide">Why Choose Us</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-6 leading-tight">
               Why Choose Ark Care AFH?
             </h2>
-            <p className="text-xl text-slate-800 max-w-2xl mx-auto leading-relaxed">
-              We're committed to providing compassionate, high-quality care that promotes dignity and independence.
+            <p className="text-lg md:text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed">
+              Experience the difference of compassionate, personalized care in a warm, home-like environment
             </p>
           </div>
 
-          {/* Feature Grid - New Layout */}
-          <div className="space-y-10">
-            {/* Feature 1 - Left Layout */}
-            <div className="grid md:grid-cols-2 gap-8 items-center animate-slideup-delay-1">
-              <div className="order-2 md:order-1">
-                <h3 className="text-4xl font-black text-slate-900 mb-5">
+          {/* Main Features Grid - Modern Card Design */}
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-12">
+            {/* Feature Card 1 */}
+            <div className="group relative animate-slideup-delay-1">
+              <div className="relative h-full bg-white rounded-2xl p-8 border border-slate-200/60 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+                {/* Decorative gradient corner */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/20 to-transparent rounded-bl-full opacity-50 group-hover:opacity-100 transition-opacity" />
+                
+                {/* Icon */}
+                <div className="relative mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/70 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <h3 className="text-2xl font-black text-slate-900 mb-4 group-hover:text-primary transition-colors">
                   24/7 Professional Care
                 </h3>
-                <p className="text-lg text-slate-800 leading-relaxed mb-6">
-                  Our experienced staff provides round-the-clock support and personalized attention to meet your loved one's unique needs. We maintain the highest standards of care quality.
+                <p className="text-slate-700 leading-relaxed mb-6">
+                  Round-the-clock support from licensed professionals ensuring safety and comfort at all times.
                 </p>
+                
+                {/* Feature List */}
                 <ul className="space-y-3">
-                  <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-primary" />
-                    <span className="text-slate-900 font-medium">Licensed nursing professionals</span>
+                  <li className="flex items-start gap-3">
+                    <svg className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-slate-700 text-sm">Licensed nursing professionals</span>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-primary" />
-                    <span className="text-slate-900 font-medium">Emergency response systems</span>
+                  <li className="flex items-start gap-3">
+                    <svg className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-slate-700 text-sm">Emergency response systems</span>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-primary" />
-                    <span className="text-slate-900 font-medium">Medication management</span>
+                  <li className="flex items-start gap-3">
+                    <svg className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-slate-700 text-sm">Medication management</span>
                   </li>
                 </ul>
               </div>
-              <div className="order-1 md:order-2">
-                <div className="relative flex items-center justify-center min-h-80">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 rounded-3xl blur-2xl" />
-                  <div className="relative bg-gradient-to-br from-primary/15 to-transparent rounded-3xl border border-primary/20 w-full h-80 flex items-center justify-center overflow-hidden shadow-lg">
-                    <Image
-                      src="/care-247.png"
-                      alt="24/7 Care"
-                      width={400}
-                      height={400}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-              </div>
             </div>
 
-            {/* Feature 2 - Right Layout */}
-            <div className="grid md:grid-cols-2 gap-8 items-center animate-slideup-delay-2">
-              <div>
-                <div className="relative flex items-center justify-center min-h-80">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 rounded-3xl blur-2xl" />
-                  <div className="relative bg-gradient-to-br from-primary/15 to-transparent rounded-3xl border border-primary/20 w-full h-80 flex items-center justify-center overflow-hidden shadow-lg">
-                    <Image
-                      src="/homy.webp"
-                      alt="Warm & Welcoming Home"
-                      width={400}
-                      height={400}
-                      className="w-full h-full object-cover"
-                    />
+            {/* Feature Card 2 */}
+            <div className="group relative animate-slideup-delay-2">
+              <div className="relative h-full bg-white rounded-2xl p-8 border border-slate-200/60 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+                {/* Decorative gradient corner */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/20 to-transparent rounded-bl-full opacity-50 group-hover:opacity-100 transition-opacity" />
+                
+                {/* Icon */}
+                <div className="relative mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/70 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
                   </div>
                 </div>
-              </div>
-              <div>
-                <h3 className="text-4xl font-black text-slate-900 mb-5">
+
+                {/* Content */}
+                <h3 className="text-2xl font-black text-slate-900 mb-4 group-hover:text-primary transition-colors">
                   Home-Like Environment
                 </h3>
-                <p className="text-lg text-slate-800 leading-relaxed mb-6">
-                  Our residence provides a warm, welcoming home setting that promotes comfort, dignity, and a sense of belonging. Every detail is thoughtfully designed.
+                <p className="text-slate-700 leading-relaxed mb-6">
+                  A warm, welcoming setting designed to feel like home while providing professional care.
                 </p>
+                
+                {/* Feature List */}
                 <ul className="space-y-3">
-                  <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-primary" />
-                    <span className="text-slate-900 font-medium">Comfortable private rooms</span>
+                  <li className="flex items-start gap-3">
+                    <svg className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-slate-700 text-sm">Comfortable private rooms</span>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-primary" />
-                    <span className="text-slate-900 font-medium">Community gathering spaces</span>
+                  <li className="flex items-start gap-3">
+                    <svg className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-slate-700 text-sm">Community gathering spaces</span>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-primary" />
-                    <span className="text-slate-900 font-medium">Beautiful outdoor areas</span>
+                  <li className="flex items-start gap-3">
+                    <svg className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-slate-700 text-sm">Beautiful outdoor areas</span>
                   </li>
                 </ul>
               </div>
             </div>
 
-            {/* Feature 3 - Center Layout */}
-            <div className="animate-slideup-delay-3">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                  <h3 className="text-4xl font-black text-slate-900 mb-5">
-                    Activity & Engagement
-                  </h3>
-                  <p className="text-lg text-slate-800 leading-relaxed mb-6">
-                    We provide meaningful activities and social engagement to support physical and mental well-being. Staying active is key to quality of life.
-                  </p>
-                  <ul className="space-y-3">
-                    <li className="flex items-center gap-3">
-                      <div className="w-2 h-2 rounded-full bg-primary" />
-                      <span className="text-slate-900 font-medium">Daily social activities</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <div className="w-2 h-2 rounded-full bg-primary" />
-                      <span className="text-slate-900 font-medium">Recreational programs</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <div className="w-2 h-2 rounded-full bg-primary" />
-                      <span className="text-slate-900 font-medium">Mental wellness support</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="order-1 md:order-2">
-                  <div className="relative flex items-center justify-center min-h-80">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 rounded-3xl blur-2xl" />
-                    <div className="relative bg-gradient-to-br from-primary/15 to-transparent rounded-3xl border border-primary/20 w-full h-80 flex items-center justify-center overflow-hidden shadow-lg">
-                      <Image
-                        src="/activity-engagement.png"
-                        alt="Activity & Engagement"
-                        width={400}
-                        height={400}
-                        className="w-full h-full object-cover"
-                        style={{filter: 'hue-rotate(60deg)'}}
-                      />
-                    </div>
+            {/* Feature Card 3 */}
+            <div className="group relative animate-slideup-delay-3">
+              <div className="relative h-full bg-white rounded-2xl p-8 border border-slate-200/60 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+                {/* Decorative gradient corner */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/20 to-transparent rounded-bl-full opacity-50 group-hover:opacity-100 transition-opacity" />
+                
+                {/* Icon */}
+                <div className="relative mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/70 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
                   </div>
                 </div>
+
+                {/* Content */}
+                <h3 className="text-2xl font-black text-slate-900 mb-4 group-hover:text-primary transition-colors">
+                  Activity & Engagement
+                </h3>
+                <p className="text-slate-700 leading-relaxed mb-6">
+                  Meaningful activities and social engagement to support physical and mental well-being.
+                </p>
+                
+                {/* Feature List */}
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <svg className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-slate-700 text-sm">Daily social activities</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <svg className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-slate-700 text-sm">Recreational programs</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <svg className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-slate-700 text-sm">Mental wellness support</span>
+                  </li>
+                </ul>
               </div>
+            </div>
+          </div>
+
+          {/* Bottom CTA Section */}
+          <div className="text-center animate-slideup-delay-3">
+            <div className="inline-flex flex-col sm:flex-row items-center gap-4 px-8 py-6 bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 rounded-2xl border border-primary/20">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div className="text-left">
+                  <p className="text-sm font-semibold text-slate-900">Ready to learn more?</p>
+                  <p className="text-xs text-slate-600">Schedule a tour and see our facility</p>
+                </div>
+              </div>
+              <Link
+                href="/contact"
+                className="px-6 py-3 bg-primary text-white font-semibold rounded-xl hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                Schedule Tour
+              </Link>
             </div>
           </div>
         </div>
