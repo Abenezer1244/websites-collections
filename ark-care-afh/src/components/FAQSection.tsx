@@ -30,12 +30,27 @@ export function FAQSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative py-20 md:py-28 bg-gradient-to-br from-white via-primary/6 to-slate-50 overflow-hidden" data-section="faq">
-      {/* Animated Background */}
+    <section ref={sectionRef} className="relative py-20 md:py-28 bg-gradient-to-br from-primary/5 via-white to-primary/15 overflow-hidden" data-section="faq">
+      {/* Rich Textured Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary/12 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}} />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-primary/10 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '5s', animationDelay: '1s'}} />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--primary)_0%,_transparent_60%)] opacity-10" />
+        {/* Base gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-white to-primary/20" />
+        
+        {/* Animated orbs */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-primary/20 to-primary/5 rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}} />
+        <div className="absolute bottom-0 left-0 w-[550px] h-[550px] bg-gradient-to-tr from-primary/15 to-slate-100/50 rounded-full blur-3xl animate-pulse" style={{animationDuration: '5s', animationDelay: '1s'}} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial from-primary/10 via-transparent to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '6s', animationDelay: '2s'}} />
+        
+        {/* Dot pattern */}
+        <div className="absolute inset-0 opacity-8" style={{
+          backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(0,0,0,0.1) 1px, transparent 0)',
+          backgroundSize: '30px 30px'
+        }} />
+        
+        {/* Wave pattern */}
+        <div className="absolute inset-0 opacity-5" style={{
+          backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.05) 2px, rgba(0,0,0,0.05) 4px)',
+        }} />
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

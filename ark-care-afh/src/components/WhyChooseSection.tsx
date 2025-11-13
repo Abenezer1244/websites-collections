@@ -29,12 +29,25 @@ export function WhyChooseSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative py-20 md:py-28 bg-gradient-to-br from-slate-50 via-white to-primary/5 overflow-hidden" data-section="why-choose">
-      {/* Animated Background Elements */}
+    <section ref={sectionRef} className="relative py-20 md:py-28 bg-gradient-to-br from-slate-900 via-slate-800 to-primary/20 overflow-hidden" data-section="why-choose">
+      {/* Rich Dark Background with Patterns */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary/12 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}} />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-primary/10 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '5s', animationDelay: '1s'}} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial from-primary/6 via-primary/3 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '6s', animationDelay: '2s'}} />
+        {/* Base gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-primary/30" />
+        
+        {/* Animated orbs */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-primary/30 to-primary/10 rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}} />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-primary/25 to-slate-700/50 rounded-full blur-3xl animate-pulse" style={{animationDuration: '5s', animationDelay: '1s'}} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-radial from-primary/15 via-slate-700/30 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '6s', animationDelay: '2s'}} />
+        
+        {/* Pattern overlay */}
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(255,255,255,0.15) 1px, transparent 0)',
+          backgroundSize: '40px 40px'
+        }} />
+        
+        {/* Mesh gradient */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -44,10 +57,10 @@ export function WhyChooseSection() {
             <span className="text-sm font-semibold text-primary uppercase tracking-wider">Why Choose Us</span>
             <div className={`mt-2 h-1 bg-primary mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'w-20' : 'w-0'}`} />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
             Why Families Trust Ark Care AFH
           </h2>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
             Licensed, professional care in a warm, home-like setting. Experience the peace of mind that comes with expert care for your loved ones.
           </p>
         </div>
@@ -55,7 +68,7 @@ export function WhyChooseSection() {
         {/* Professional Features Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {/* Feature 1 */}
-          <div className={`bg-white border border-slate-200 rounded-lg p-8 shadow-sm transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className={`bg-gradient-to-br from-white via-slate-50 to-primary/5 border border-white/20 rounded-xl p-8 shadow-2xl backdrop-blur-sm transition-all duration-700 delay-100 hover:shadow-primary/20 hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <div className="flex items-center gap-4 mb-6 group">
               <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:bg-primary/20 group-hover:scale-110">
                 <svg className="w-7 h-7 text-primary transition-transform duration-300 group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -93,7 +106,7 @@ export function WhyChooseSection() {
           </div>
 
           {/* Feature 2 */}
-          <div className={`bg-white border border-slate-200 rounded-lg p-8 shadow-sm transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className={`bg-gradient-to-br from-white via-slate-50 to-primary/5 border border-white/20 rounded-xl p-8 shadow-2xl backdrop-blur-sm transition-all duration-700 delay-200 hover:shadow-primary/20 hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <div className="flex items-center gap-4 mb-6 group">
               <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:bg-primary/20 group-hover:scale-110">
                 <svg className="w-7 h-7 text-primary transition-transform duration-300 group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -131,7 +144,7 @@ export function WhyChooseSection() {
           </div>
 
           {/* Feature 3 */}
-          <div className={`bg-white border border-slate-200 rounded-lg p-8 shadow-sm transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className={`bg-gradient-to-br from-white via-slate-50 to-primary/5 border border-white/20 rounded-xl p-8 shadow-2xl backdrop-blur-sm transition-all duration-700 delay-300 hover:shadow-primary/20 hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <div className="flex items-center gap-4 mb-6 group">
               <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:bg-primary/20 group-hover:scale-110">
                 <svg className="w-7 h-7 text-primary transition-transform duration-300 group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -170,22 +183,22 @@ export function WhyChooseSection() {
         </div>
 
         {/* Trust Indicators */}
-        <div className={`grid md:grid-cols-4 gap-6 mb-16 pt-12 border-t border-slate-200 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className={`grid md:grid-cols-4 gap-6 mb-16 pt-12 border-t border-white/20 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="text-center group">
             <div className="text-3xl font-bold text-primary mb-2 transition-all duration-300 group-hover:scale-110">Licensed</div>
-            <div className="text-sm text-slate-600">State Certified Facility</div>
+            <div className="text-sm text-slate-300">State Certified Facility</div>
           </div>
           <div className="text-center group">
             <div className="text-3xl font-bold text-primary mb-2 transition-all duration-300 group-hover:scale-110">24/7</div>
-            <div className="text-sm text-slate-600">Professional Care</div>
+            <div className="text-sm text-slate-300">Professional Care</div>
           </div>
           <div className="text-center group">
             <div className="text-3xl font-bold text-primary mb-2 transition-all duration-300 group-hover:scale-110">Personalized</div>
-            <div className="text-sm text-slate-600">Individual Care Plans</div>
+            <div className="text-sm text-slate-300">Individual Care Plans</div>
           </div>
           <div className="text-center group">
             <div className="text-3xl font-bold text-primary mb-2 transition-all duration-300 group-hover:scale-110">Experienced</div>
-            <div className="text-sm text-slate-600">Trained Staff</div>
+            <div className="text-sm text-slate-300">Trained Staff</div>
           </div>
         </div>
 
