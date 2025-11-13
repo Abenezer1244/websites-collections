@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { AnimatedBlob, AnimatedBlobSecondary } from '@/components/AnimatedBlob'
 import { JsonLd } from '@/components/JsonLd'
 import { pageMetadata, generateWebPageSchema, generateBreadcrumbSchema, siteConfig } from '@/lib/seo'
-import { TestimonialCard } from '@/components/cards/testimonial-card'
+import { TestimonialCarousel } from '@/components/TestimonialCarousel'
 import { Accordion } from '@/components/ui/accordion'
 
 export const metadata: Metadata = {
@@ -314,54 +314,49 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Testimonials Grid */}
-          <div className="grid md:grid-cols-3 gap-6 animate-slideup-delay-1">
-            {[
-              {
-                quote: "Ark Care AFH has been wonderful for my mother. She feels at home here, the staff treats her with genuine care and respect.",
-                author: "Margaret S.",
-                role: "Daughter",
-                rating: 5
-              },
-              {
-                quote: "I moved here 6 months ago and it's been the best decision. The caregivers are patient and kind, and I feel like part of a family.",
-                author: "Henry P.",
-                role: "Resident",
-                rating: 5
-              },
-              {
-                quote: "The level of personalized attention my father receives is exceptional. They communicate regularly and truly care about his well-being.",
-                author: "Jennifer K.",
-                role: "Daughter",
-                rating: 5
-              },
-              {
-                quote: "Professional, compassionate, and attentive. My wife receives excellent care for her specific needs. Very grateful for the support.",
-                author: "Robert M.",
-                role: "Spouse",
-                rating: 5
-              },
-              {
-                quote: "The staff goes above and beyond. They listen to our concerns and always have time to chat. It's truly like a home.",
-                author: "Patricia L.",
-                role: "Family Member",
-                rating: 5
-              },
-              {
-                quote: "Best decision we made for our father's care. Safe, loving environment with activities and excellent medical management.",
-                author: "David T.",
-                role: "Son",
-                rating: 5
-              }
-            ].map((testimonial, index) => (
-              <TestimonialCard
-                key={index}
-                quote={testimonial.quote}
-                author={testimonial.author}
-                role={testimonial.role}
-                rating={testimonial.rating}
-              />
-            ))}
+          {/* Testimonials Carousel */}
+          <div className="animate-slideup-delay-1">
+            <TestimonialCarousel
+              testimonials={[
+                {
+                  quote: "Ark Care AFH has been wonderful for my mother. She feels at home here, the staff treats her with genuine care and respect.",
+                  author: "Margaret S.",
+                  role: "Daughter",
+                  rating: 5
+                },
+                {
+                  quote: "I moved here 6 months ago and it's been the best decision. The caregivers are patient and kind, and I feel like part of a family.",
+                  author: "Henry P.",
+                  role: "Resident",
+                  rating: 5
+                },
+                {
+                  quote: "The level of personalized attention my father receives is exceptional. They communicate regularly and truly care about his well-being.",
+                  author: "Jennifer K.",
+                  role: "Daughter",
+                  rating: 5
+                },
+                {
+                  quote: "Professional, compassionate, and attentive. My wife receives excellent care for her specific needs. Very grateful for the support.",
+                  author: "Robert M.",
+                  role: "Spouse",
+                  rating: 5
+                },
+                {
+                  quote: "The staff goes above and beyond. They listen to our concerns and always have time to chat. It's truly like a home.",
+                  author: "Patricia L.",
+                  role: "Family Member",
+                  rating: 5
+                },
+                {
+                  quote: "Best decision we made for our father's care. Safe, loving environment with activities and excellent medical management.",
+                  author: "David T.",
+                  role: "Son",
+                  rating: 5
+                }
+              ]}
+              autoPlayDelay={5000}
+            />
           </div>
         </div>
       </section>
