@@ -28,6 +28,11 @@ Website is functional with all major pages implemented. Below are tasks to compl
   - [ ] Add image lightbox/modal for viewing larger images
 
 ### 3. About Page - Team Section
+- [x] Improve team section structure and prepare for photos
+  - [x] Implement Next.js Image component for optimization
+  - [x] Add alt text for all team members (accessibility)
+  - [x] Improve placeholder design with better visual feedback
+  - [x] Add image field to team member data structure
 - [ ] Replace avatar placeholders with actual team member photos
   - [ ] Add photos for all 6 team members
   - [ ] Ensure photos are optimized and properly sized
@@ -124,6 +129,29 @@ Website is functional with all major pages implemented. Below are tasks to compl
 **Notes:**
 - Gallery is now ready for images - just add image paths to galleryItems array
 - Images should be placed in `/public/gallery/` directory
+- Next.js Image component will automatically optimize images when added
+- Structure supports both placeholder and real image states seamlessly
+- All changes committed and pushed to GitHub
+
+#### About Page - Team Section Improvements (Task 3.1)
+**Date:** Current session
+**Changes Made:**
+- Replaced placeholder avatar with improved structure using Next.js Image component
+- Added image and alt fields to all 6 team member objects
+- Improved placeholder design with gradient background and centered avatar icon
+- Increased photo area height from h-40 to h-64 for better proportions
+- Enhanced hover effect with shadow-lg transition
+- Added proper alt text for accessibility (e.g., "Sarah Johnson - Owner & Care Coordinator")
+- Structured team data to easily accept image paths when photos are available
+- Added comments in code showing example image paths for each team member
+
+**Files Modified:**
+- `src/app/about/page.tsx`
+
+**Notes:**
+- Team section is now ready for photos - just add image paths to team member objects
+- Images should be placed in `/public/team/` directory
+- Example: `image: "/team/sarah-johnson.jpg"` for Sarah Johnson
 - Next.js Image component will automatically optimize images when added
 - Structure supports both placeholder and real image states seamlessly
 - All changes committed and pushed to GitHub
