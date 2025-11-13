@@ -8,6 +8,9 @@ import { Accordion } from '@/components/ui/accordion'
 import { WhyChooseSection } from '@/components/WhyChooseSection'
 import { HeroSection } from '@/components/HeroSection'
 import { ServicesOverviewSection } from '@/components/ServicesOverviewSection'
+import { TestimonialsSection } from '@/components/TestimonialsSection'
+import { FAQSection } from '@/components/FAQSection'
+import { CTASection } from '@/components/CTASection'
 
 export const metadata: Metadata = {
   title: pageMetadata.home.title,
@@ -64,74 +67,8 @@ export default function Home() {
       {/* Services Overview Section - Modern Redesign */}
       <ServicesOverviewSection />
 
-      {/* Testimonials Section - Grid Cards */}
-      <section className="relative py-8 md:py-12 bg-gradient-to-br from-slate-100 via-white to-primary/12 overflow-hidden">
-        {/* Animated Background Orbs */}
-        <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-gradient-to-br from-primary/15 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.2s'}} />
-        <div className="absolute -bottom-40 -right-40 w-[450px] h-[450px] bg-gradient-to-br from-primary/10 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.6s'}} />
-        {/* More visible mesh gradient effect */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--primary)_0%,_transparent_60%)] opacity-20 pointer-events-none z-0" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--primary)_0%,_transparent_60%)] opacity-20 pointer-events-none z-0" />
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="mb-10 text-center animate-slideup">
-            <span className="inline-block px-4 py-2 bg-primary/20 text-primary text-sm font-semibold rounded-full mb-4">
-              Client Success Stories
-            </span>
-            <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-2">
-              Stories From Our Community
-            </h2>
-            <p className="text-base text-slate-800 max-w-2xl mx-auto">
-              Hear directly from residents and families about their experiences at Ark Care AFH
-            </p>
-          </div>
-
-          {/* Testimonials Carousel */}
-          <div className="animate-slideup-delay-1">
-            <TestimonialCarousel
-              testimonials={[
-                {
-                  quote: "Ark Care AFH has been wonderful for my mother. She feels at home here, the staff treats her with genuine care and respect.",
-                  author: "Margaret S.",
-                  role: "Daughter",
-                  rating: 5
-                },
-                {
-                  quote: "I moved here 6 months ago and it's been the best decision. The caregivers are patient and kind, and I feel like part of a family.",
-                  author: "Henry P.",
-                  role: "Resident",
-                  rating: 5
-                },
-                {
-                  quote: "The level of personalized attention my father receives is exceptional. They communicate regularly and truly care about his well-being.",
-                  author: "Jennifer K.",
-                  role: "Daughter",
-                  rating: 5
-                },
-                {
-                  quote: "Professional, compassionate, and attentive. My wife receives excellent care for her specific needs. Very grateful for the support.",
-                  author: "Robert M.",
-                  role: "Spouse",
-                  rating: 5
-                },
-                {
-                  quote: "The staff goes above and beyond. They listen to our concerns and always have time to chat. It's truly like a home.",
-                  author: "Patricia L.",
-                  role: "Family Member",
-                  rating: 5
-                },
-                {
-                  quote: "Best decision we made for our father's care. Safe, loving environment with activities and excellent medical management.",
-                  author: "David T.",
-                  role: "Son",
-                  rating: 5
-                }
-              ]}
-              autoPlayDelay={5000}
-            />
-          </div>
-        </div>
-      </section>
+      {/* Testimonials Section - Modern Redesign */}
+      <TestimonialsSection />
 
       {/* FAQ Section - 2 Column Layout */}
       <section className="relative py-8 md:py-12 bg-gradient-to-br from-primary/6 via-slate-50 to-white overflow-hidden">
