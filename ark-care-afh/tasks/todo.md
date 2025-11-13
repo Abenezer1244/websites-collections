@@ -18,9 +18,13 @@ Website is functional with all major pages implemented. Below are tasks to compl
   - [x] Add success/error feedback messages
 
 ### 2. Gallery Page
+- [x] Improve gallery structure and prepare for images
+  - [x] Implement Next.js Image component for optimization
+  - [x] Add alt text for all gallery items (accessibility)
+  - [x] Improve placeholder design with better visual feedback
+  - [x] Add hover effects and transitions
 - [ ] Replace placeholder images with actual photos
   - [ ] Add photos for each activity category (12 categories total)
-  - [ ] Implement image optimization
   - [ ] Add image lightbox/modal for viewing larger images
 
 ### 3. About Page - Team Section
@@ -101,5 +105,26 @@ Website is functional with all major pages implemented. Below are tasks to compl
 - Loading state prevents double submissions
 - Success/error messages auto-dismiss after 5 seconds
 - Form is ready for backend integration (TODO comment added for API endpoint)
+- All changes committed and pushed to GitHub
+
+#### Gallery Page Improvements (Task 2.1)
+**Date:** Current session
+**Changes Made:**
+- Replaced placeholder SVG icons with improved structure using Next.js Image component
+- Added proper alt text for all 12 gallery items for accessibility
+- Improved placeholder design with gradient background and "Photo Coming Soon" message
+- Added hover effects: scale transform on images, shadow elevation, overlay effect
+- Changed from `<a>` to Next.js `<Link>` component for better navigation
+- Structured gallery items to easily accept image paths when photos are available
+- Added responsive image sizing with proper `sizes` attribute for optimization
+
+**Files Modified:**
+- `src/app/gallery/page.tsx`
+
+**Notes:**
+- Gallery is now ready for images - just add image paths to galleryItems array
+- Images should be placed in `/public/gallery/` directory
+- Next.js Image component will automatically optimize images when added
+- Structure supports both placeholder and real image states seamlessly
 - All changes committed and pushed to GitHub
 
