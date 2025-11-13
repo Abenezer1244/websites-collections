@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { AnimatedBlob, AnimatedBlobSecondary } from '@/components/AnimatedBlob'
 import { JsonLd } from '@/components/JsonLd'
 import { pageMetadata, generateWebPageSchema, generateBreadcrumbSchema, siteConfig } from '@/lib/seo'
@@ -252,53 +253,79 @@ export default function About() {
               {
                 name: "Sarah Johnson",
                 title: "Owner & Care Coordinator",
+                image: null, // Add image path when available: "/team/sarah-johnson.jpg"
+                alt: "Sarah Johnson - Owner & Care Coordinator",
                 qualifications: ["RN License", "10+ years AFH experience", "CPR/First Aid Certified"],
                 bio: "Sarah founded Ark Care AFH with a passion for providing quality, compassionate care in a home setting. Her nursing background and dedication to excellence ensure the highest standards of care."
               },
               {
                 name: "Michelle Chen",
                 title: "Lead Caregiver",
+                image: null, // Add image path when available: "/team/michelle-chen.jpg"
+                alt: "Michelle Chen - Lead Caregiver",
                 qualifications: ["HCA Certification", "Dementia Care Specialist", "CPR/First Aid"],
                 bio: "Michelle brings 8 years of professional caregiving experience and a genuine commitment to supporting residents with compassion and respect. She specializes in person-centered care."
               },
               {
                 name: "David Martinez",
                 title: "Caregiver",
+                image: null, // Add image path when available: "/team/david-martinez.jpg"
+                alt: "David Martinez - Caregiver",
                 qualifications: ["HCA Certification", "Physical Therapy Assistant", "CPR/First Aid"],
                 bio: "David is dedicated to helping residents maintain independence and mobility. His background in rehabilitation support enables him to provide specialized care for residents with mobility needs."
               },
               {
                 name: "Jennifer Williams",
                 title: "Caregiver",
+                image: null, // Add image path when available: "/team/jennifer-williams.jpg"
+                alt: "Jennifer Williams - Caregiver",
                 qualifications: ["HCA Certification", "Activity Coordinator", "CPR/First Aid"],
                 bio: "Jennifer creates meaningful activities and social opportunities for residents. Her enthusiasm for engaging activities helps residents enjoy enriching experiences at our home."
               },
               {
                 name: "Robert Taylor",
                 title: "Caregiver",
+                image: null, // Add image path when available: "/team/robert-taylor.jpg"
+                alt: "Robert Taylor - Caregiver",
                 qualifications: ["HCA Certification", "Nutrition Support", "CPR/First Aid"],
                 bio: "Robert ensures residents receive nutritious, delicious meals prepared with care. His background in nutrition helps support the health and wellness of all residents."
               },
               {
                 name: "Lisa Anderson",
                 title: "Administrative Coordinator",
+                image: null, // Add image path when available: "/team/lisa-anderson.jpg"
+                alt: "Lisa Anderson - Administrative Coordinator",
                 qualifications: ["Healthcare Administration Certification", "HIPAA Training"],
                 bio: "Lisa manages administrative operations and ensures smooth communication with families and healthcare providers. She maintains detailed records and coordinates care planning."
               }
             ].map((member, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow"
+                className="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg transition-all duration-300"
               >
-                {/* Avatar Placeholder */}
-                <div className="h-40 bg-primary/10 flex items-center justify-center">
-                  <svg
-                    className="w-16 h-16 text-primary/30"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-                  </svg>
+                {/* Team Member Photo */}
+                <div className="h-64 bg-gradient-to-br from-primary/10 to-primary/5 relative overflow-hidden">
+                  {member.image ? (
+                    <Image
+                      src={member.image}
+                      alt={member.alt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <div className="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center">
+                        <svg
+                          className="w-12 h-12 text-primary/40"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                        </svg>
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 {/* Info */}
