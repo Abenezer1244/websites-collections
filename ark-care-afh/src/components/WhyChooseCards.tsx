@@ -1,7 +1,5 @@
 'use client'
 
-import { useState } from 'react'
-
 interface CardData {
   icon: React.ReactNode
   title: string
@@ -15,26 +13,14 @@ interface WhyChooseCardsProps {
 }
 
 export function WhyChooseCards({ cards }: WhyChooseCardsProps) {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
-
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12 relative z-10 py-4" style={{overflow: 'visible', isolation: 'isolate'}}>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12 relative z-10 py-4">
       {cards.map((card, index) => (
         <div 
           key={index}
           className={`group relative animate-slideup-delay-${index + 1}`}
-          style={{
-            overflow: 'visible', 
-            transform: hoveredIndex === index ? 'scale(1.03)' : 'scale(1)', 
-            transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
-            willChange: 'transform', 
-            position: 'relative',
-            zIndex: hoveredIndex === index ? 100 : 20
-          }} 
-          onMouseEnter={() => setHoveredIndex(index)} 
-          onMouseLeave={() => setHoveredIndex(null)}
         >
-          <div className="relative h-full bg-white rounded-2xl p-8 border border-slate-200/60 shadow-sm hover:shadow-2xl hover:border-primary/30 transition-all duration-300 overflow-hidden" style={{position: 'relative'}}>
+          <div className="relative h-full bg-white rounded-2xl p-8 border border-slate-200/60 shadow-sm transition-all duration-300 overflow-hidden">
             {/* Decorative gradient corner */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/20 to-transparent rounded-bl-full opacity-50 group-hover:opacity-100 transition-opacity" />
             
