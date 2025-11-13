@@ -54,7 +54,14 @@ Website is functional with all major pages implemented. Below are tasks to compl
 - [x] Add loading states for form submissions
 - [ ] Add error boundaries for better error handling
 - [ ] Implement analytics tracking (if needed)
-- [ ] Add accessibility improvements (ARIA labels, keyboard navigation)
+- [x] Add accessibility improvements (ARIA labels, keyboard navigation)
+  - [x] Add ARIA labels to navigation elements
+  - [x] Add keyboard navigation (Escape key to close mobile menu)
+  - [x] Add focus states to all interactive elements
+  - [x] Add aria-expanded and aria-controls to mobile menu button
+  - [x] Add aria-labels to social media links in footer
+  - [x] Add aria-labels to phone links
+  - [x] Mark decorative SVG icons with aria-hidden
 
 ### 6. Testing & Quality Assurance
 - [ ] Test all forms and interactions
@@ -180,5 +187,32 @@ Website is functional with all major pages implemented. Below are tasks to compl
 - Team member card component now uses Next.js Image for automatic optimization
 - Decorative background images are properly marked with aria-hidden
 - Placeholder elements have aria-label for screen reader accessibility
+- All changes committed and pushed to GitHub
+
+#### Accessibility Improvements (Task 5.4)
+**Date:** Current session
+**Changes Made:**
+- Added comprehensive ARIA labels throughout Navigation component
+- Implemented keyboard navigation: Escape key closes mobile menu
+- Added focus states with visible focus rings to all interactive elements
+- Added aria-expanded and aria-controls attributes to mobile menu button
+- Added role="menu" and role="menuitem" to mobile navigation dropdown
+- Added aria-label to logo link: "Ark Care AFH Home"
+- Enhanced phone link aria-labels with full phone number context
+- Added aria-labels to all social media links in Footer
+- Marked decorative SVG icons with aria-hidden="true"
+- Added focus states to Footer links and social media buttons
+- Improved semantic HTML with proper nav elements and aria-label attributes
+
+**Files Modified:**
+- `src/components/Navigation.tsx`
+- `src/components/Footer.tsx`
+
+**Notes:**
+- All interactive elements now have visible focus indicators for keyboard navigation
+- Mobile menu can be closed with Escape key for better keyboard accessibility
+- Screen readers will properly announce navigation state changes
+- Social media links are properly labeled for assistive technologies
+- All changes follow WCAG 2.1 accessibility guidelines
 - All changes committed and pushed to GitHub
 
