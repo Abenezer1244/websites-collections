@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Outfit } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
@@ -95,6 +96,11 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        {/* Tweakcn Live Preview Script */}
+        <Script
+          src="https://tweakcn.com/live-preview.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
