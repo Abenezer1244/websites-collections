@@ -1,5 +1,7 @@
 'use client'
 
+import { useState } from 'react'
+
 interface CardData {
   icon: React.ReactNode
   title: string
@@ -13,29 +15,26 @@ interface WhyChooseCardsProps {
 }
 
 export function WhyChooseCards({ cards }: WhyChooseCardsProps) {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12 relative z-10 py-4" style={{overflow: 'visible', isolation: 'isolate'}}>
       {cards.map((card, index) => (
         <div 
           key={index}
-          className={`group relative z-20 animate-slideup-delay-${index + 1}`}
+          className={`group relative animate-slideup-delay-${index + 1}`}
           style={{
             overflow: 'visible', 
-            transform: 'translateY(0)', 
-            transition: 'transform 0.3s ease', 
+            transform: hoveredIndex === index ? 'translateY(-8px)' : 'translateY(0)', 
+            transition: 'transform 0.3s ease, z-index 0s', 
             willChange: 'transform', 
-            position: 'relative'
+            position: 'relative',
+            zIndex: hoveredIndex === index ? 100 : 20
           }} 
-          onMouseEnter={(e) => { 
-            e.currentTarget.style.transform = 'translateY(-8px)'; 
-            e.currentTarget.style.zIndex = '100'; 
-          }} 
-          onMouseLeave={(e) => { 
-            e.currentTarget.style.transform = 'translateY(0)'; 
-            e.currentTarget.style.zIndex = '20'; 
-          }}
+          onMouseEnter={() => setHoveredIndex(index)} 
+          onMouseLeave={() => setHoveredIndex(null)}
         >
-          <div className="relative h-full bg-white rounded-2xl p-8 border border-slate-200/60 shadow-sm hover:shadow-2xl hover:border-primary/30 transition-all duration-300 overflow-hidden" style={{position: 'relative', zIndex: 1}}>
+          <div className="relative h-full bg-white rounded-2xl p-8 border border-slate-200/60 shadow-sm hover:shadow-2xl hover:border-primary/30 transition-all duration-300 overflow-hidden" style={{position: 'relative'}}>
             {/* Decorative gradient corner */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/20 to-transparent rounded-bl-full opacity-50 group-hover:opacity-100 transition-opacity" />
             
