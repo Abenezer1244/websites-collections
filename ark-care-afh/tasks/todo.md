@@ -14,8 +14,8 @@ Website is functional with all major pages implemented. Below are tasks to compl
   - [x] Update business hours information
 - [ ] Integrate contact form with backend/email service
   - [ ] Set up form submission handler (email service or API endpoint)
-  - [ ] Add form validation and error handling
-  - [ ] Add success/error feedback messages
+  - [x] Add form validation and error handling
+  - [x] Add success/error feedback messages
 
 ### 2. Gallery Page
 - [ ] Replace placeholder images with actual photos
@@ -37,7 +37,7 @@ Website is functional with all major pages implemented. Below are tasks to compl
 - [ ] Add alt text to all images
 
 ### 5. Functionality Enhancements
-- [ ] Add loading states for form submissions
+- [x] Add loading states for form submissions
 - [ ] Add error boundaries for better error handling
 - [ ] Implement analytics tracking (if needed)
 - [ ] Add accessibility improvements (ARIA labels, keyboard navigation)
@@ -78,4 +78,28 @@ Website is functional with all major pages implemented. Below are tasks to compl
 - Contact information is now dynamically pulled from the SEO config file, ensuring single source of truth
 - Phone number is formatted consistently with Footer component
 - Address uses proper line breaks for better readability
+
+#### Contact Form Enhancements (Task 1.2 & 5.1)
+**Date:** Current session
+**Changes Made:**
+- Added comprehensive form validation with real-time error clearing
+- Implemented field-level validation for all inputs (name, email, phone, subject, message)
+- Added visual error indicators (red borders) for invalid fields
+- Added error messages displayed below each field
+- Implemented loading state with spinner animation during form submission
+- Added success message with checkmark icon
+- Added error message with X icon for failed submissions
+- Improved submit button states (loading, success, idle)
+- Form now validates before submission and shows helpful error messages
+- Auto-clears errors when user starts typing in a field
+
+**Files Modified:**
+- `src/app/contact/ContactPageClient.tsx`
+
+**Notes:**
+- Form validation includes: name length check, email format validation, phone format validation, subject selection, message length check
+- Loading state prevents double submissions
+- Success/error messages auto-dismiss after 5 seconds
+- Form is ready for backend integration (TODO comment added for API endpoint)
+- All changes committed and pushed to GitHub
 
