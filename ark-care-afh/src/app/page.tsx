@@ -96,12 +96,14 @@ export default function Home() {
       </section>
 
       {/* Key Benefits Section - Brand New Design */}
-      <section className="relative py-12 md:py-20 overflow-hidden bg-gradient-to-br from-slate-100 via-slate-50 to-primary/10" data-section="why-choose">
+      <section className="relative py-12 md:py-20 overflow-hidden bg-gradient-to-br from-primary/15 via-slate-50 to-slate-100" data-section="why-choose">
         {/* Animated Background Orbs */}
-        <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-gradient-to-br from-primary/25 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.4s'}} />
-        <div className="absolute bottom-0 left-0 w-[380px] h-[380px] bg-gradient-to-br from-primary/15 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.9s'}} />
-        {/* Visible pattern overlay */}
-        <div className="absolute inset-0 opacity-[0.04] bg-[radial-gradient(circle_at_1px_1px,rgb(0,0,0)_1px,transparent_0)] bg-[length:40px_40px] pointer-events-none z-0" />
+        <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-gradient-to-br from-primary/30 to-primary/15 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.4s'}} />
+        <div className="absolute bottom-0 left-0 w-[380px] h-[380px] bg-gradient-to-br from-primary/20 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.9s'}} />
+        {/* More visible pattern overlay */}
+        <div className="absolute inset-0 opacity-[0.06] bg-[radial-gradient(circle_at_1px_1px,rgb(0,0,0)_1px,transparent_0)] bg-[length:40px_40px] pointer-events-none z-0" />
+        {/* Additional gradient overlay for more depth */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/8 opacity-60 pointer-events-none z-0" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Header */}
