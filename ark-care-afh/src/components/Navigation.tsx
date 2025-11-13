@@ -1,10 +1,21 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+
+  // Close menu on Escape key
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isOpen) {
+        setIsOpen(false)
+      }
+    }
+    document.addEventListener('keydown', handleEscape)
+    return () => document.removeEventListener('keydown', handleEscape)
+  }, [isOpen])
 
   const navLinks = [
     { href: '/about', label: 'About Us' },
@@ -16,18 +27,19 @@ export function Navigation() {
   return (
     <>
       {/* Fixed Navbar Container for spacing */}
-      <nav className="fixed top-0 left-0 right-0 z-40 pointer-events-none">
+      <nav className="fixed top-0 left-0 right-0 z-40 pointer-events-none" aria-hidden="true">
         <div className="h-32 md:h-40"></div>
       </nav>
 
       {/* Main Navigation Bar - Centered Container */}
-      <div className="fixed top-0 left-0 right-0 z-50 pointer-events-none">
+      <nav className="fixed top-0 left-0 right-0 z-50 pointer-events-none" aria-label="Main navigation">
         <div className="h-full px-4 sm:px-6 lg:px-8 pt-5 md:pt-6 flex items-center w-full">
           {/* Logo - Left Side */}
           <div className="pointer-events-auto flex-shrink-0">
             <Link
               href="/"
-              className="flex items-center gap-1.5 md:gap-2 font-bold text-xs md:text-sm text-white group transition-transform hover:scale-105"
+              className="flex items-center gap-1.5 md:gap-2 font-bold text-xs md:text-sm text-white group transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent rounded-lg"
+              aria-label="Ark Care AFH Home"
             >
               <div className="w-8 md:w-10 h-8 md:h-10 bg-white/20 backdrop-blur rounded-lg flex items-center justify-center font-bold text-white text-xs md:text-sm hover:bg-white/30 transition-colors">
                 A
@@ -45,14 +57,14 @@ export function Navigation() {
                 {/* Left Navigation Links */}
                 <Link
                   href="/about"
-                  className="px-2.5 md:px-3 py-1.5 text-xs md:text-sm font-medium text-white/80 hover:text-white transition-all duration-200 rounded-lg hover:bg-white/10"
+                  className="px-2.5 md:px-3 py-1.5 text-xs md:text-sm font-medium text-white/80 hover:text-white transition-all duration-200 rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
                 >
                   About Us
                 </Link>
 
                 <Link
                   href="/gallery"
-                  className="px-2.5 md:px-3 py-1.5 text-xs md:text-sm font-medium text-white/80 hover:text-white transition-all duration-200 rounded-lg hover:bg-white/10"
+                  className="px-2.5 md:px-3 py-1.5 text-xs md:text-sm font-medium text-white/80 hover:text-white transition-all duration-200 rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
                 >
                   Gallery
                 </Link>
@@ -60,7 +72,8 @@ export function Navigation() {
                 {/* Home - Center and Larger */}
                 <Link
                   href="/"
-                  className="px-3 md:px-5 py-1.5 text-sm md:text-lg font-bold text-white transition-all duration-200 rounded-lg hover:bg-white/10"
+                  className="px-3 md:px-5 py-1.5 text-sm md:text-lg font-bold text-white transition-all duration-200 rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
+                  aria-label="Home"
                 >
                   Home
                 </Link>
@@ -68,14 +81,14 @@ export function Navigation() {
                 {/* Right Navigation Links */}
                 <Link
                   href="/services"
-                  className="px-2.5 md:px-3 py-1.5 text-xs md:text-sm font-medium text-white/80 hover:text-white transition-all duration-200 rounded-lg hover:bg-white/10"
+                  className="px-2.5 md:px-3 py-1.5 text-xs md:text-sm font-medium text-white/80 hover:text-white transition-all duration-200 rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
                 >
                   Services
                 </Link>
 
                 <Link
                   href="/contact"
-                  className="px-2.5 md:px-3 py-1.5 text-xs md:text-sm font-medium text-white/80 hover:text-white transition-all duration-200 rounded-lg hover:bg-white/10"
+                  className="px-2.5 md:px-3 py-1.5 text-xs md:text-sm font-medium text-white/80 hover:text-white transition-all duration-200 rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
                 >
                   Contact Us
                 </Link>
@@ -85,8 +98,10 @@ export function Navigation() {
               <div className="lg:hidden flex items-center justify-between">
                 <button
                   onClick={() => setIsOpen(!isOpen)}
-                  className="text-white/80 hover:text-white transition-colors duration-200 rounded-lg p-1.5 hover:bg-white/10"
-                  aria-label="Toggle menu"
+                  className="text-white/80 hover:text-white transition-colors duration-200 rounded-lg p-1.5 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
+                  aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+                  aria-expanded={isOpen}
+                  aria-controls="mobile-menu"
                 >
                   <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     {isOpen ? (
@@ -109,7 +124,8 @@ export function Navigation() {
 
                 <Link
                   href="/"
-                  className="px-4 py-2 text-sm md:text-base font-bold text-white transition-all duration-200 rounded-lg hover:bg-white/10"
+                  className="px-4 py-2 text-sm md:text-base font-bold text-white transition-all duration-200 rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
+                  aria-label="Home"
                 >
                   Home
                 </Link>
@@ -117,21 +133,28 @@ export function Navigation() {
 
               {/* Mobile Navigation Menu Dropdown */}
               {isOpen && (
-                <div className="lg:hidden border-t border-white/20 mt-3 pt-3 space-y-2">
+                <div 
+                  id="mobile-menu"
+                  className="lg:hidden border-t border-white/20 mt-3 pt-3 space-y-2"
+                  role="menu"
+                >
                   {navLinks.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="block px-4 py-2.5 text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200"
+                      className="block px-4 py-2.5 text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
                       onClick={() => setIsOpen(false)}
+                      role="menuitem"
                     >
                       {link.label}
                     </Link>
                   ))}
                   <a
                     href="tel:+12064553644"
-                    className="flex items-center gap-2 px-4 py-2.5 bg-white/20 hover:bg-white/30 text-white text-sm font-medium rounded-lg transition-all duration-200 border border-white/30 mt-2"
+                    className="flex items-center gap-2 px-4 py-2.5 bg-white/20 hover:bg-white/30 text-white text-sm font-medium rounded-lg transition-all duration-200 border border-white/30 mt-2 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
                     onClick={() => setIsOpen(false)}
+                    aria-label="Call Ark Care AFH at (206) 455-3644"
+                    role="menuitem"
                   >
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -148,8 +171,8 @@ export function Navigation() {
           {/* Call Button - Right Side */}
           <a
             href="tel:+12064553644"
-            className="pointer-events-auto flex-shrink-0 hidden md:inline-flex items-center justify-center w-9 h-9 md:w-10 md:h-10 bg-white/20 hover:bg-white/30 text-white rounded-full transition-all duration-200 border border-white/30"
-            aria-label="Call now"
+            className="pointer-events-auto flex-shrink-0 hidden md:inline-flex items-center justify-center w-9 h-9 md:w-10 md:h-10 bg-white/20 hover:bg-white/30 text-white rounded-full transition-all duration-200 border border-white/30 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
+            aria-label="Call Ark Care AFH at (206) 455-3644"
             title="Call Now"
           >
             <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -157,7 +180,7 @@ export function Navigation() {
             </svg>
           </a>
         </div>
-      </div>
+      </nav>
     </>
   )
 }
