@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from 'react'
 import { AnimatedBlob, AnimatedBlobSecondary } from '@/components/AnimatedBlob'
+import { businessInfo } from '@/lib/seo'
 
 export default function ContactPageClient() {
   const [formData, setFormData] = useState({
@@ -11,7 +12,42 @@ export default function ContactPageClient() {
     subject: '',
     message: '',
   })
-  const [submitted, setSubmitted] = useState(false)
+  const [errors, setErrors] = useState<Record<string, string>>({})
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+
+  const validateForm = (): boolean => {
+    const newErrors: Record<string, string> = {}
+
+    if (!formData.name.trim()) {
+      newErrors.name = 'Name is required'
+    } else if (formData.name.trim().length < 2) {
+      newErrors.name = 'Name must be at least 2 characters'
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required'
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address'
+    }
+
+    if (formData.phone && !/^[\d\s\-\(\)]+$/.test(formData.phone.replace(/\s/g, ''))) {
+      newErrors.phone = 'Please enter a valid phone number'
+    }
+
+    if (!formData.subject) {
+      newErrors.subject = 'Please select a subject'
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required'
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = 'Message must be at least 10 characters'
+    }
+
+    setErrors(newErrors)
+    return Object.keys(newErrors).length === 0
+  }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
@@ -19,18 +55,51 @@ export default function ContactPageClient() {
       ...prev,
       [name]: value
     }))
+    // Clear error for this field when user starts typing
+    if (errors[name]) {
+      setErrors(prev => {
+        const newErrors = { ...prev }
+        delete newErrors[name]
+        return newErrors
+      })
+    }
   }
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    // For now, just show success message
-    // In a production app, this would send to a backend service
-    console.log('Form submitted:', formData)
-    setSubmitted(true)
-    setTimeout(() => {
+    
+    if (!validateForm()) {
+      return
+    }
+
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+
+    try {
+      // TODO: Replace with actual API endpoint when backend is ready
+      // For now, simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1500))
+      
+      // Simulate success
+      console.log('Form submitted:', formData)
+      setSubmitStatus('success')
       setFormData({ name: '', email: '', phone: '', subject: '', message: '' })
-      setSubmitted(false)
-    }, 3000)
+      
+      // Reset success message after 5 seconds
+      setTimeout(() => {
+        setSubmitStatus('idle')
+      }, 5000)
+    } catch (error) {
+      console.error('Form submission error:', error)
+      setSubmitStatus('error')
+      
+      // Reset error message after 5 seconds
+      setTimeout(() => {
+        setSubmitStatus('idle')
+      }, 5000)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -58,28 +127,36 @@ export default function ContactPageClient() {
 
               <div className="mb-8">
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">Phone</h3>
-                <p className="text-slate-800">Coming soon</p>
+                <a
+                  href={`tel:${businessInfo.telephone.replace(/[^0-9]/g, '')}`}
+                  className="text-primary hover:underline font-semibold"
+                >
+                  (206) 455-3644
+                </a>
               </div>
 
               <div className="mb-8">
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">Email</h3>
                 <a
-                  href="mailto:contact@arkcare.local"
+                  href={`mailto:${businessInfo.email}`}
                   className="text-primary hover:underline"
                 >
-                  contact@arkcare.local
+                  {businessInfo.email}
                 </a>
               </div>
 
               <div className="mb-8">
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">Address</h3>
-                <p className="text-slate-800">Coming soon</p>
+                <p className="text-slate-800">
+                  {businessInfo.address.streetAddress}<br />
+                  {businessInfo.address.addressLocality}, {businessInfo.address.addressRegion} {businessInfo.address.postalCode}
+                </p>
               </div>
 
               <div className="mb-8">
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">Hours</h3>
-                <p className="text-slate-800">24/7 for emergencies</p>
-                <p className="text-slate-800">Hours: Coming soon</p>
+                <p className="text-slate-800">Available 24/7</p>
+                <p className="text-slate-800 text-sm mt-1">We're always here to help</p>
               </div>
             </div>
 
@@ -88,11 +165,29 @@ export default function ContactPageClient() {
               <div className="bg-white rounded-lg border border-slate-200 p-8">
                 <h2 className="text-2xl font-bold text-slate-900 mb-6">Send us a Message</h2>
 
-                {submitted && (
+                {submitStatus === 'success' && (
                   <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-                    <p className="text-green-800 font-medium">
-                      Thank you for your message! We'll get back to you soon.
-                    </p>
+                    <div className="flex items-center gap-2">
+                      <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <p className="text-green-800 font-medium">
+                        Thank you for your message! We'll get back to you soon.
+                      </p>
+                    </div>
+                  </div>
+                )}
+
+                {submitStatus === 'error' && (
+                  <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+                    <div className="flex items-center gap-2">
+                      <svg className="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                      <p className="text-red-800 font-medium">
+                        Something went wrong. Please try again or call us directly at (206) 455-3644.
+                      </p>
+                    </div>
                   </div>
                 )}
 
@@ -109,9 +204,16 @@ export default function ContactPageClient() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-slate-900"
+                      className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 bg-background text-slate-900 ${
+                        errors.name 
+                          ? 'border-red-300 focus:ring-red-500' 
+                          : 'border-slate-200 focus:ring-primary'
+                      }`}
                       placeholder="Your name"
                     />
+                    {errors.name && (
+                      <p className="mt-1 text-sm text-red-600">{errors.name}</p>
+                    )}
                   </div>
 
                   {/* Email */}
@@ -126,9 +228,16 @@ export default function ContactPageClient() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-slate-900"
+                      className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 bg-background text-slate-900 ${
+                        errors.email 
+                          ? 'border-red-300 focus:ring-red-500' 
+                          : 'border-slate-200 focus:ring-primary'
+                      }`}
                       placeholder="your@email.com"
                     />
+                    {errors.email && (
+                      <p className="mt-1 text-sm text-red-600">{errors.email}</p>
+                    )}
                   </div>
 
                   {/* Phone */}
@@ -142,9 +251,16 @@ export default function ContactPageClient() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-slate-900"
+                      className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 bg-background text-slate-900 ${
+                        errors.phone 
+                          ? 'border-red-300 focus:ring-red-500' 
+                          : 'border-slate-200 focus:ring-primary'
+                      }`}
                       placeholder="(123) 456-7890"
                     />
+                    {errors.phone && (
+                      <p className="mt-1 text-sm text-red-600">{errors.phone}</p>
+                    )}
                   </div>
 
                   {/* Subject */}
@@ -158,7 +274,11 @@ export default function ContactPageClient() {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-slate-900"
+                      className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 bg-background text-slate-900 ${
+                        errors.subject 
+                          ? 'border-red-300 focus:ring-red-500' 
+                          : 'border-slate-200 focus:ring-primary'
+                      }`}
                     >
                       <option value="">Select a subject</option>
                       <option value="general">General Inquiry</option>
@@ -167,6 +287,9 @@ export default function ContactPageClient() {
                       <option value="admission">Admission Inquiry</option>
                       <option value="other">Other</option>
                     </select>
+                    {errors.subject && (
+                      <p className="mt-1 text-sm text-red-600">{errors.subject}</p>
+                    )}
                   </div>
 
                   {/* Message */}
@@ -181,18 +304,37 @@ export default function ContactPageClient() {
                       onChange={handleChange}
                       required
                       rows={6}
-                      className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-slate-900 resize-none"
+                      className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 bg-background text-slate-900 resize-none ${
+                        errors.message 
+                          ? 'border-red-300 focus:ring-red-500' 
+                          : 'border-slate-200 focus:ring-primary'
+                      }`}
                       placeholder="Please tell us how we can help..."
                     />
+                    {errors.message && (
+                      <p className="mt-1 text-sm text-red-600">{errors.message}</p>
+                    )}
                   </div>
 
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    disabled={submitted}
-                    className="w-full px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                    disabled={isSubmitting || submitStatus === 'success'}
+                    className="w-full px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   >
-                    {submitted ? 'Message Sent!' : 'Send Message'}
+                    {isSubmitting ? (
+                      <>
+                        <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        <span>Sending...</span>
+                      </>
+                    ) : submitStatus === 'success' ? (
+                      'Message Sent!'
+                    ) : (
+                      'Send Message'
+                    )}
                   </button>
                 </form>
 
