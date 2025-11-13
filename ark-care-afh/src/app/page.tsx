@@ -70,7 +70,17 @@ export default function Home() {
       {/* Testimonials Section - Modern Redesign */}
       <TestimonialsSection />
 
-      {/* FAQ Section - 2 Column Layout */}
+      {/* FAQ Section - Modern Redesign */}
+      <FAQSection />
+
+      {/* CTA Section - Modern Redesign */}
+      <CTASection />
+    </>
+  )
+}
+
+// Old FAQ Section - Removed
+const _oldFAQSection = () => (
       <section className="relative py-8 md:py-12 bg-gradient-to-br from-primary/6 via-slate-50 to-white overflow-hidden">
         {/* Animated Background Orbs */}
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gradient-to-br from-primary/20 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.3s'}} />
