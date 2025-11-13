@@ -3,9 +3,17 @@
   "style": "default",
   "rsc": true,
   "tsx": true,
+  "tailwind": {
+    "config": "tailwind.config.ts",
+    "css": "src/app/globals.css",
+    "baseColor": "slate",
+    "cssVariables": true,
+    "prefix": ""
+  },
   "aliasPrefix": "@",
   "aliases": {
     "components": "@/components",
     "utils": "@/lib/utils"
-  }
+  },
+  "registry": "https://tweakcn.com/r/themes/registry.json"
 }
