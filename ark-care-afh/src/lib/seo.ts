@@ -151,7 +151,7 @@ export const pageMetadata = {
   services: {
     title: 'Our Services | Ark Care AFH',
     description: 'Comprehensive care services including 24/7 support, medication management, personal care, mental health support, dementia care, and more.',
-    keywords: ['services', 'care services', 'HCS', 'DDA meaningful day', 'specialized care', 'behavior support'],
+    keywords: ['services', 'care services', 'HCS', 'DDA Meaningful Day', 'specialized care', 'behavior support'],
   },
   contact: {
     title: 'Contact Us | Ark Care AFH',

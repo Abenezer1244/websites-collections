@@ -102,7 +102,7 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold">Our Services</h1>
           <p className="text-lg mt-4 opacity-90 max-w-2xl">
-            Comprehensive care services including HCS, DDA meaningful day, expanded community services, and specialized behavioral health support
+            Comprehensive care services including HCS, DDA Meaningful Day, Expanded Community Services, and specialized behavioral health support
           </p>
         </div>
       </section>
