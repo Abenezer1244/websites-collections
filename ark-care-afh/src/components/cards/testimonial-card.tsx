@@ -24,7 +24,7 @@ export function TestimonialCard({
   return (
     <div
       className={cn(
-        'group relative p-6 rounded-xl border transition-all duration-300 ease-out',
+        'group relative p-6 rounded-xl border transition-all duration-300 ease-out shadow-md',
         gradient
           ? 'bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20 hover:border-primary/40'
           : 'bg-white border-slate-200 hover:border-primary/30',

@@ -45,7 +45,7 @@ export function Accordion({
       {items.map((item) => (
         <div
           key={item.id}
-          className="border border-slate-200 rounded-lg overflow-hidden transition-all duration-300 hover:border-primary/30"
+          className="border border-slate-200 rounded-lg overflow-hidden transition-all duration-300 hover:border-primary/30 shadow-md hover:shadow-lg"
         >
           {/* Header */}
           <button

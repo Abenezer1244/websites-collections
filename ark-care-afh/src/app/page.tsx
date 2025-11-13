@@ -143,7 +143,7 @@ export default function Home() {
               <div className="order-1 md:order-2">
                 <div className="relative flex items-center justify-center min-h-80">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 rounded-3xl blur-2xl" />
-                  <div className="relative bg-gradient-to-br from-primary/15 to-transparent rounded-3xl border border-primary/20 w-full h-80 flex items-center justify-center overflow-hidden">
+                  <div className="relative bg-gradient-to-br from-primary/15 to-transparent rounded-3xl border border-primary/20 w-full h-80 flex items-center justify-center overflow-hidden shadow-lg">
                     <Image
                       src="/care-247.png"
                       alt="24/7 Care"
@@ -161,7 +161,7 @@ export default function Home() {
               <div>
                 <div className="relative flex items-center justify-center min-h-80">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 rounded-3xl blur-2xl" />
-                  <div className="relative bg-gradient-to-br from-primary/15 to-transparent rounded-3xl border border-primary/20 w-full h-80 flex items-center justify-center overflow-hidden">
+                  <div className="relative bg-gradient-to-br from-primary/15 to-transparent rounded-3xl border border-primary/20 w-full h-80 flex items-center justify-center overflow-hidden shadow-lg">
                     <Image
                       src="/homy.webp"
                       alt="Warm & Welcoming Home"
@@ -224,7 +224,7 @@ export default function Home() {
                 <div className="order-1 md:order-2">
                   <div className="relative flex items-center justify-center min-h-80">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 rounded-3xl blur-2xl" />
-                    <div className="relative bg-gradient-to-br from-primary/15 to-transparent rounded-3xl border border-primary/20 w-full h-80 flex items-center justify-center overflow-hidden">
+                    <div className="relative bg-gradient-to-br from-primary/15 to-transparent rounded-3xl border border-primary/20 w-full h-80 flex items-center justify-center overflow-hidden shadow-lg">
                       <Image
                         src="/activity-engagement.png"
                         alt="Activity & Engagement"

@@ -51,7 +51,7 @@ export function ServiceCard({
       <a
         href={href}
         className={cn(
-          'group block h-full p-6 rounded-xl border border-slate-200 bg-white',
+          'group block h-full p-6 rounded-xl border border-slate-200 bg-white shadow-md',
           'transition-all duration-300 ease-out',
           'hover:shadow-xl hover:border-primary/30 hover:scale-105',
           'active:scale-95',
@@ -66,7 +66,7 @@ export function ServiceCard({
   return (
     <div
       className={cn(
-        'group h-full p-6 rounded-xl border border-slate-200 bg-white',
+        'group h-full p-6 rounded-xl border border-slate-200 bg-white shadow-md',
         'transition-all duration-300 ease-out',
         'hover:shadow-xl hover:border-primary/30 hover:scale-105',
         className

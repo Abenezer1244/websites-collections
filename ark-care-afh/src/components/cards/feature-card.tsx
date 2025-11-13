@@ -24,7 +24,7 @@ export function FeatureCard({
   return (
     <div
       className={cn(
-        'relative p-6 rounded-xl border transition-all duration-300 ease-out',
+        'relative p-6 rounded-xl border transition-all duration-300 ease-out shadow-md',
         highlighted
           ? 'border-primary/30 bg-gradient-to-br from-primary/5 to-primary/10 ring-2 ring-primary/20'
           : 'border-slate-200 bg-white hover:border-primary/20',

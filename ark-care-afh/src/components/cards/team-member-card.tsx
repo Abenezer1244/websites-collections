@@ -23,7 +23,7 @@ export function TeamMemberCard({
   return (
     <div
       className={cn(
-        'group relative rounded-xl overflow-hidden bg-white border border-slate-200',
+        'group relative rounded-xl overflow-hidden bg-white border border-slate-200 shadow-md',
         'transition-all duration-300 ease-out hover:shadow-xl hover:border-primary/30',
         'animate-slideup',
         className
