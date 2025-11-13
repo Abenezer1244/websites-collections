@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import { cn } from '@/lib/utils'
 
 interface TeamMemberCardProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -33,13 +34,15 @@ export function TeamMemberCard({
       {/* Image Container */}
       <div className="relative h-64 overflow-hidden bg-gradient-to-br from-primary/10 to-primary/5">
         {image ? (
-          <img
+          <Image
             src={image}
-            alt={name}
-            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+            alt={`${name} - ${role}`}
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-110"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center">
+          <div className="w-full h-full flex items-center justify-center" aria-label={`${name} - ${role}`}>
             <div className="text-6xl font-bold text-primary/20">{name.charAt(0)}</div>
           </div>
         )}

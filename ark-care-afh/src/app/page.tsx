@@ -55,10 +55,11 @@ export default function Home() {
 
       {/* Hero Section with Image Background - Full Screen Height */}
       <section className="relative overflow-hidden text-white min-h-screen flex items-center" style={{backgroundImage: 'url(/hero-bg.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed'}}>
-        {/* Image Background */}
+        {/* Image Background - Decorative */}
         <div
           className="absolute inset-0 w-full h-full"
           style={{backgroundImage: 'url(/hero-bg.jpg)', backgroundSize: 'cover', backgroundPosition: 'center'}}
+          aria-hidden="true"
         />
 
         {/* Dark Overlay for Text Visibility */}
