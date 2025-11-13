@@ -97,6 +97,10 @@ export default function Home() {
 
       {/* Key Benefits Section - Brand New Design */}
       <section className="relative py-12 md:py-20 overflow-hidden bg-white" data-section="why-choose">
+        {/* Animated Background Orbs */}
+        <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-gradient-to-br from-primary/25 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.4s'}} />
+        <div className="absolute bottom-0 left-0 w-[380px] h-[380px] bg-gradient-to-br from-primary/15 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.9s'}} />
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Header */}
           <div className="mb-12 animate-slideup text-center">
@@ -241,6 +245,10 @@ export default function Home() {
 
       {/* Services Overview Section */}
       <section className="relative py-10 md:py-16 bg-white overflow-hidden">
+        {/* Animated Background Orbs */}
+        <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-gradient-to-br from-primary/25 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.4s'}} />
+        <div className="absolute bottom-0 left-0 w-[380px] h-[380px] bg-gradient-to-br from-primary/25 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.9s'}} />
+
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             {/* Content */}
@@ -290,6 +298,10 @@ export default function Home() {
 
       {/* Testimonials Section - Grid Cards */}
       <section className="relative py-8 md:py-12 bg-white overflow-hidden">
+        {/* Animated Background Orbs */}
+        <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-gradient-to-br from-primary/15 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.2s'}} />
+        <div className="absolute -bottom-40 -right-40 w-[450px] h-[450px] bg-gradient-to-br from-primary/10 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.6s'}} />
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="mb-10 text-center animate-slideup">
             <span className="inline-block px-4 py-2 bg-primary/20 text-primary text-sm font-semibold rounded-full mb-4">
@@ -352,6 +364,10 @@ export default function Home() {
 
       {/* FAQ Section - 2 Column Layout */}
       <section className="relative py-8 md:py-12 bg-white overflow-hidden">
+        {/* Animated Background Orbs */}
+        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gradient-to-br from-primary/20 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.3s'}} />
+        <div className="absolute bottom-0 left-0 w-[380px] h-[380px] bg-gradient-to-br from-primary/15 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.5s'}} />
+
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="mb-10 text-center animate-slideup">
             <span className="inline-block px-4 py-2 bg-primary/20 text-primary text-sm font-semibold rounded-full mb-4">
@@ -426,6 +442,10 @@ export default function Home() {
 
       {/* CTA Section - Hero Style */}
       <section className="relative py-8 md:py-12 bg-white overflow-hidden">
+        {/* Animated Background Orbs */}
+        <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-br from-primary/30 to-primary/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.1s'}} />
+        <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-gradient-to-br from-primary/15 to-primary/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none z-0" style={{animationDelay: '0.5s'}} />
+
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center animate-slideup mb-10">
             <span className="inline-block px-4 py-2 bg-primary/20 text-primary text-sm font-semibold rounded-full mb-4">
