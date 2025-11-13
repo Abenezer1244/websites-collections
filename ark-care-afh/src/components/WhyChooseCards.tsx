@@ -20,19 +20,19 @@ export function WhyChooseCards({ cards }: WhyChooseCardsProps) {
           key={index}
           className={`group relative animate-slideup-delay-${index + 1}`}
         >
-          <div className="relative h-full bg-white rounded-2xl p-8 border border-slate-200/60 shadow-sm transition-all duration-300 overflow-hidden">
+          <div className="relative h-full bg-white rounded-2xl p-8 border border-slate-200/60 shadow-sm overflow-hidden">
             {/* Decorative gradient corner */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/20 to-transparent rounded-bl-full opacity-50 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/20 to-transparent rounded-bl-full opacity-50" />
             
             {/* Icon */}
             <div className="relative mb-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/70 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/70 rounded-2xl flex items-center justify-center shadow-lg">
                 {card.icon}
               </div>
             </div>
 
             {/* Content */}
-            <h3 className="text-2xl font-black text-slate-900 mb-4 group-hover:text-primary transition-colors">
+            <h3 className="text-2xl font-black text-slate-900 mb-4">
               {card.title}
             </h3>
             <p className="text-slate-700 leading-relaxed mb-6">
