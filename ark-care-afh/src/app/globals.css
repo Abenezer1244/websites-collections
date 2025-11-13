@@ -172,14 +172,7 @@ body {
   }
 }
 
-/* Why Choose section - light/dark mode backgrounds */
-html:not(.dark) section[data-section="why-choose"] {
-  background-color: white !important;
-}
-
-html.dark section[data-section="why-choose"] {
-  background-color: black !important;
-}
+/* Why Choose section - light/dark mode backgrounds - REMOVED to allow gradient backgrounds */
 
 /* Why Choose Section Animations */
 @keyframes slideUpFade {
