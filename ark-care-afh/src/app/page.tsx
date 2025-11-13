@@ -97,7 +97,7 @@ export default function Home() {
       </section>
 
       {/* Key Benefits Section - Completely Redesigned */}
-      <section className="relative py-16 md:py-24 bg-gradient-to-b from-white via-slate-50/50 to-white" data-section="why-choose" style={{overflow: 'visible'}}>
+      <section className="relative py-16 md:py-24 bg-gradient-to-b from-white via-slate-50/50 to-white" data-section="why-choose" style={{overflow: 'visible', paddingTop: '4rem', paddingBottom: '4rem'}}>
         {/* Decorative Background Elements */}
         <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0" style={{overflow: 'hidden'}}>
           <div className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse-glow" style={{animationDelay: '0.4s'}} />

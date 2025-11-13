@@ -25,11 +25,13 @@ export function WhyChooseCards({ cards }: WhyChooseCardsProps) {
           className={`group relative animate-slideup-delay-${index + 1}`}
           style={{
             overflow: 'visible', 
-            transform: hoveredIndex === index ? 'translateY(-8px)' : 'translateY(0)', 
+            transform: hoveredIndex === index ? 'translateY(-4px) scale(1.02)' : 'translateY(0) scale(1)', 
             transition: 'transform 0.3s ease, z-index 0s', 
             willChange: 'transform', 
             position: 'relative',
-            zIndex: hoveredIndex === index ? 100 : 20
+            zIndex: hoveredIndex === index ? 100 : 20,
+            marginTop: hoveredIndex === index ? '-4px' : '0',
+            marginBottom: hoveredIndex === index ? '4px' : '0'
           }} 
           onMouseEnter={() => setHoveredIndex(index)} 
           onMouseLeave={() => setHoveredIndex(null)}
