@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
-import { AnimatedBlob, AnimatedBlobSecondary } from '@/components/AnimatedBlob'
 import { JsonLd } from '@/components/JsonLd'
 import { pageMetadata, generateWebPageSchema, generateBreadcrumbSchema, siteConfig } from '@/lib/seo'
 import { GalleryClient } from './GalleryClient'
+import { GalleryHeroSection } from '@/components/gallery/GalleryHeroSection'
+import { GalleryCTASection } from '@/components/gallery/GalleryCTASection'
 
 export const metadata: Metadata = {
   title: pageMetadata.gallery.title,
@@ -69,49 +69,36 @@ export default function Gallery() {
       <JsonLd data={pageSchema} />
       <JsonLd data={breadcrumbSchema} />
 
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-primary/90 to-primary/70 text-white pt-32 md:pt-40 pb-16">
-        <AnimatedBlob position="top-right" size="lg" opacity="medium" />
-        <AnimatedBlobSecondary position="bottom-left" size="md" opacity="light" />
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold">Gallery</h1>
-          <p className="text-lg mt-4 opacity-90 max-w-2xl">
-            Take a tour of Ark Care AFH and see our comfortable, welcoming home environment
-          </p>
-        </div>
-      </section>
+      {/* Hero Section - Modern Redesign */}
+      <GalleryHeroSection />
 
       {/* Gallery Grid */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-            Our Activities
-          </h2>
-          <p className="text-lg text-slate-800 mb-12 text-center max-w-2xl mx-auto">
-            We offer a variety of engaging activities designed to promote physical wellness, mental stimulation, and social connection for all our residents.
-          </p>
+      <section className="relative py-20 md:py-28 bg-gradient-to-b from-white via-slate-50/30 to-white overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary/5 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}} />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-primary/5 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '5s', animationDelay: '1s'}} />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-12">
+            <div className="inline-block mb-6">
+              <span className="text-sm font-semibold text-primary uppercase tracking-wider">Activities</span>
+              <div className="mt-2 h-1 w-20 bg-primary mx-auto" />
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+              Our Activities
+            </h2>
+            <p className="text-lg text-slate-700 max-w-3xl mx-auto leading-relaxed">
+              We offer a variety of engaging activities designed to promote physical wellness, mental stimulation, and social connection for all our residents.
+            </p>
+          </div>
           <GalleryClient items={galleryItems} />
         </div>
       </section>
 
-      {/* Info Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-slate-900 mb-6">
-            Schedule a Tour
-          </h2>
-          <p className="text-lg text-slate-800 mb-8">
-            We'd love to show you around Ark Care AFH! Contact us to schedule a personalized tour of our facility and meet our caring staff.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-block px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors"
-          >
-            Schedule Your Tour
-          </Link>
-        </div>
-      </section>
+      {/* CTA Section - Modern Redesign */}
+      <GalleryCTASection />
     </>
   )
 }
