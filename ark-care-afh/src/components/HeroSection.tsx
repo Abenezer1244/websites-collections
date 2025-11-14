@@ -71,7 +71,7 @@ export function HeroSection() {
         <div className="max-w-4xl mx-auto text-center">
 
           {/* Main Heading */}
-          <h1 className={`text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-8 leading-tight tracking-tight transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h1 className={`text-4xl md:text-5xl lg:text-6xl font-black mb-8 leading-tight tracking-tight transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <span className="block drop-shadow-2xl">Compassionate</span>
             <span className="block bg-gradient-to-r from-white via-primary/30 to-white bg-clip-text text-transparent drop-shadow-lg">
               Care
