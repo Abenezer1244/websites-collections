@@ -10,10 +10,8 @@
     "cssVariables": true,
     "prefix": ""
   },
-  "aliasPrefix": "@",
   "aliases": {
     "components": "@/components",
     "utils": "@/lib/utils"
-  },
-  "registry": "https://tweakcn.com/r/themes/registry.json"
+  }
 }
