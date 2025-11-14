@@ -241,33 +241,6 @@ export function Footer() {
             </div>
           </div>
 
-          {/* CTA Section */}
-          <div className="bg-gradient-to-r from-primary/20 via-primary/10 to-primary/20 backdrop-blur-sm rounded-2xl p-8 mb-12 border border-primary/20">
-            <div className="text-center">
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
-                Ready to Learn More?
-              </h3>
-              <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
-                Contact us today to schedule a tour or discuss how we can provide compassionate care for your loved one.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="px-8 py-3 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/30 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-slate-800"
-                >
-                  Schedule a Tour
-                </Link>
-                <a
-                  href={`tel:${businessInfo.telephone}`}
-                  className="px-8 py-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-semibold rounded-lg border border-white/20 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-slate-800"
-                  aria-label={`Call Ark Care AFH at ${businessInfo.telephone}`}
-                >
-                  Call Now
-                </a>
-              </div>
-            </div>
-          </div>
-
           {/* Divider */}
           <div className="h-px bg-gradient-to-r from-transparent via-slate-700/50 to-transparent mb-8" />
 
