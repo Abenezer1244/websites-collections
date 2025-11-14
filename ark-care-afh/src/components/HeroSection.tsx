@@ -67,8 +67,8 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-        {/* Badge - Left Middle */}
-        <div className={`absolute left-8 top-1/2 -translate-y-1/2 z-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
+        {/* Badge - Left Top Corner */}
+        <div className={`absolute left-8 top-8 z-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/15 backdrop-blur-lg rounded-full border-2 border-white/30 shadow-xl">
             <div className="w-2 h-2 bg-primary rounded-full animate-pulse shadow-lg shadow-primary/50" />
             <span className="text-xs font-bold uppercase tracking-wider">Licensed Adult Family Home</span>
