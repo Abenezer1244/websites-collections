@@ -86,8 +86,8 @@ export default function Gallery() {
       <GalleryHeroSection />
 
       {/* Full House Tour Section */}
-      <section className="relative py-20 md:py-28 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="relative py-12 sm:py-16 md:py-20 lg:py-28 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-5 md:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12">
             <div className="inline-block mb-6">
               <span className="text-sm font-semibold text-primary uppercase tracking-wider">Facility Tour</span>
@@ -105,7 +105,7 @@ export default function Gallery() {
       </section>
 
       {/* Activities Gallery Section */}
-      <section className="relative py-20 md:py-28 bg-gradient-to-br from-primary/15 via-slate-100 to-primary/25 overflow-hidden">
+      <section className="relative py-12 sm:py-16 md:py-20 lg:py-28 bg-gradient-to-br from-primary/15 via-slate-100 to-primary/25 overflow-hidden">
         {/* Rich Colorful Background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {/* Base gradient */}
