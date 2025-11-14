@@ -160,7 +160,7 @@ export function Navigation() {
           <div className="flex-1 pointer-events-none"></div>
 
           {/* Floating Glassmorphic Navbar - Center */}
-          <div className="pointer-events-auto max-w-7xl bg-white/90 backdrop-blur-md border border-black/20 rounded-full shadow-2xl px-6 md:px-10 py-3 md:py-4 transition-all duration-300 hover:bg-white hover:border-black/30">
+          <div className="pointer-events-auto max-w-7xl bg-white/10 backdrop-blur-md border border-black/20 rounded-full shadow-2xl px-6 md:px-10 py-3 md:py-4 transition-all duration-300 hover:bg-white/15 hover:border-black/30">
               <div className="hidden lg:flex items-center justify-center gap-6 md:gap-8">
                 {/* Left Navigation Links */}
                 <Link
