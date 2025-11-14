@@ -113,10 +113,10 @@ export function ServicesOverviewSection() {
             <span className="text-sm font-semibold text-primary uppercase tracking-wider">Our Services</span>
             <div className={`mt-2 h-1 bg-primary mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'w-20' : 'w-0'}`} />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight" style={{ color: '#000000' }}>
             Comprehensive Care Services
           </h2>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg max-w-3xl mx-auto leading-relaxed" style={{ color: '#000000' }}>
             Ark Care AFH offers a complete range of services to support your loved one's health, safety, and quality of life.
           </p>
         </div>
