@@ -16,7 +16,7 @@ export function HeroSection() {
       ref={heroRef}
       className="relative overflow-hidden text-white min-h-screen flex items-center"
       style={{
-        backgroundImage: 'url(/hero-care-hands.jpg)',
+        backgroundImage: 'url(/elderly-care-facilities.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed'
@@ -26,7 +26,7 @@ export function HeroSection() {
       <div
         className="absolute inset-0 w-full h-full"
         style={{
-          backgroundImage: 'url(/hero-care-hands.jpg)',
+          backgroundImage: 'url(/elderly-care-facilities.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
