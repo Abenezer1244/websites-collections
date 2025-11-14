@@ -1,7 +1,8 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { TestimonialCarousel } from '@/components/TestimonialCarousel'
+import { AnimatedTestimonials } from '@/components/ui/shadcn-io/animated-testimonials'
+import type { Testimonial } from '@/components/ui/shadcn-io/animated-testimonials'
 
 export function TestimonialsSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -28,8 +29,82 @@ export function TestimonialsSection() {
     }
   }, [])
 
+  const testimonials: Testimonial[] = [
+    {
+      quote: "Ark Care AFH has been wonderful for my mother. She feels at home here, the staff treats her with genuine care and respect.",
+      name: "Margaret S.",
+      designation: "Daughter",
+      src: "/elderly-care-facilities.jpg"
+    },
+    {
+      quote: "I moved here 6 months ago and it's been the best decision. The caregivers are patient and kind, and I feel like part of a family.",
+      name: "Henry P.",
+      designation: "Resident",
+      src: "/homy.webp"
+    },
+    {
+      quote: "The level of personalized attention my father receives is exceptional. They communicate regularly and truly care about his well-being.",
+      name: "Jennifer K.",
+      designation: "Daughter",
+      src: "/activity-engagement.png"
+    },
+    {
+      quote: "Professional, compassionate, and attentive. My wife receives excellent care for her specific needs. Very grateful for the support.",
+      name: "Robert M.",
+      designation: "Spouse",
+      src: "/comprehensive-care.png"
+    },
+    {
+      quote: "The staff goes above and beyond. They listen to our concerns and always have time to chat. It's truly like a home.",
+      name: "Patricia L.",
+      designation: "Family Member",
+      src: "/care-247.png"
+    },
+    {
+      quote: "Best decision we made for our father's care. Safe, loving environment with activities and excellent medical management.",
+      name: "David T.",
+      designation: "Son",
+      src: "/elderly-care-facilities.jpg"
+    }
+  ]
+
   return (
-    <section ref={sectionRef} className="relative py-20 md:py-28 bg-white overflow-hidden" data-section="testimonials">
+    <section ref={sectionRef} className="relative py-20 md:py-28 overflow-hidden" data-section="testimonials" style={{
+      backgroundImage: 'url(/white_background_4.jpg)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundAttachment: 'fixed'
+    }}>
+      {/* Background Image Layer */}
+      <div
+        className="absolute inset-0 w-full h-full"
+        style={{
+          backgroundImage: 'url(/white_background_4.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+        aria-hidden="true"
+      />
+
+      {/* Rich Textured Background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Base gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-50/80 via-primary/10 to-slate-100/80" />
+        
+        {/* Animated orbs */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-primary/20 to-primary/5 rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}} />
+        <div className="absolute bottom-0 left-0 w-[550px] h-[550px] bg-gradient-to-tr from-primary/15 to-slate-100/50 rounded-full blur-3xl animate-pulse" style={{animationDuration: '5s', animationDelay: '1s'}} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial from-primary/10 via-transparent to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '6s', animationDelay: '2s'}} />
+        
+        {/* Diagonal pattern */}
+        <div className="absolute inset-0 opacity-5" style={{
+          backgroundImage: 'linear-gradient(45deg, transparent 30%, rgba(0,0,0,0.05) 50%, transparent 70%), linear-gradient(-45deg, transparent 30%, rgba(0,0,0,0.05) 50%, transparent 70%)',
+          backgroundSize: '50px 50px'
+        }} />
+        
+        {/* Radial accent */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--primary)_0%,_transparent_70%)] opacity-10" />
+      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
@@ -51,48 +126,12 @@ export function TestimonialsSection() {
           </p>
         </div>
 
-        {/* Testimonials Carousel */}
+        {/* Animated Testimonials */}
         <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <TestimonialCarousel
-            testimonials={[
-              {
-                quote: "Ark Care AFH has been wonderful for my mother. She feels at home here, the staff treats her with genuine care and respect.",
-                author: "Margaret S.",
-                role: "Daughter",
-                rating: 5
-              },
-              {
-                quote: "I moved here 6 months ago and it's been the best decision. The caregivers are patient and kind, and I feel like part of a family.",
-                author: "Henry P.",
-                role: "Resident",
-                rating: 5
-              },
-              {
-                quote: "The level of personalized attention my father receives is exceptional. They communicate regularly and truly care about his well-being.",
-                author: "Jennifer K.",
-                role: "Daughter",
-                rating: 5
-              },
-              {
-                quote: "Professional, compassionate, and attentive. My wife receives excellent care for her specific needs. Very grateful for the support.",
-                author: "Robert M.",
-                role: "Spouse",
-                rating: 5
-              },
-              {
-                quote: "The staff goes above and beyond. They listen to our concerns and always have time to chat. It's truly like a home.",
-                author: "Patricia L.",
-                role: "Family Member",
-                rating: 5
-              },
-              {
-                quote: "Best decision we made for our father's care. Safe, loving environment with activities and excellent medical management.",
-                author: "David T.",
-                role: "Son",
-                rating: 5
-              }
-            ]}
-            autoPlayDelay={5000}
+          <AnimatedTestimonials 
+            testimonials={testimonials}
+            autoplay={true}
+            className="max-w-6xl mx-auto"
           />
         </div>
       </div>
