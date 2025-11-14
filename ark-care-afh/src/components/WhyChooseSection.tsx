@@ -202,19 +202,19 @@ export function WhyChooseSection() {
         <div className={`grid md:grid-cols-4 gap-6 mb-16 pt-12 border-t border-white/20 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="text-center group">
             <div className="text-3xl font-bold text-primary mb-2 transition-all duration-300 group-hover:scale-110">Licensed</div>
-            <div className="text-sm text-slate-300">State Certified Facility</div>
+            <div className="text-sm" style={{ color: '#000000' }}>State Certified Facility</div>
           </div>
           <div className="text-center group">
             <div className="text-3xl font-bold text-primary mb-2 transition-all duration-300 group-hover:scale-110">24/7</div>
-            <div className="text-sm text-slate-300">Professional Care</div>
+            <div className="text-sm" style={{ color: '#000000' }}>Professional Care</div>
           </div>
           <div className="text-center group">
             <div className="text-3xl font-bold text-primary mb-2 transition-all duration-300 group-hover:scale-110">Personalized</div>
-            <div className="text-sm text-slate-300">Individual Care Plans</div>
+            <div className="text-sm" style={{ color: '#000000' }}>Individual Care Plans</div>
           </div>
           <div className="text-center group">
             <div className="text-3xl font-bold text-primary mb-2 transition-all duration-300 group-hover:scale-110">Experienced</div>
-            <div className="text-sm text-slate-300">Trained Staff</div>
+            <div className="text-sm" style={{ color: '#000000' }}>Trained Staff</div>
           </div>
         </div>
 
