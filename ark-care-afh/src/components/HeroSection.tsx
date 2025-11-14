@@ -35,11 +35,11 @@ export function HeroSection() {
 
       {/* Rich Gradient Overlay Layers */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/70 via-primary/50 to-slate-800/75" />
+        {/* Dark overlay for text readability - reduced opacity to show image */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/50 via-primary/30 to-slate-800/55" />
         
         {/* Secondary gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
         
         {/* Animated Background Orbs */}
         <div className="absolute -top-40 -right-40 w-[800px] h-[800px] bg-gradient-to-br from-primary/40 to-primary/20 rounded-full blur-3xl animate-pulse-glow pointer-events-none" style={{animationDuration: '4s'}} />
