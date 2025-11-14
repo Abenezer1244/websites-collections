@@ -47,21 +47,34 @@ export default function Gallery() {
 
   const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs)
   
-  // Gallery items - add image paths to /public/gallery/ when photos are available
-  // Example: { id: 1, title: "Barbecues & Picnics", image: "/gallery/barbecues.jpg" }
-  const galleryItems = [
-    { id: 1, title: "Barbecues & Picnics", image: null, alt: "Residents enjoying outdoor barbecues and picnics" },
-    { id: 2, title: "Bible Study Groups", image: null, alt: "Residents participating in Bible study groups" },
-    { id: 3, title: "Birthday Celebrations", image: null, alt: "Birthday celebrations for residents" },
-    { id: 4, title: "Board & Card Games", image: null, alt: "Residents playing board and card games" },
-    { id: 5, title: "Arts & Crafts", image: null, alt: "Residents engaged in arts and crafts activities" },
-    { id: 6, title: "Cooking Activities", image: null, alt: "Residents participating in cooking activities" },
-    { id: 7, title: "Holiday Events", image: null, alt: "Holiday celebrations and events" },
-    { id: 8, title: "Movie Nights", image: null, alt: "Residents enjoying movie nights together" },
-    { id: 9, title: "Music & Entertainment", image: null, alt: "Music and entertainment activities" },
-    { id: 10, title: "Puzzle Activities", image: null, alt: "Residents working on puzzles" },
-    { id: 11, title: "Exercise & Wellness", image: null, alt: "Exercise and wellness activities" },
-    { id: 12, title: "Tea Time & Social Events", image: null, alt: "Tea time and social gathering events" },
+  // Activity Gallery items - add image paths to /public/gallery/ when photos are available
+  const activityItems = [
+    { id: 1, title: "Barbecues & Picnics", image: "/activity-engagement.png", alt: "Residents enjoying outdoor barbecues and picnics" },
+    { id: 2, title: "Bible Study Groups", image: "/comprehensive-care.png", alt: "Residents participating in Bible study groups" },
+    { id: 3, title: "Birthday Celebrations", image: "/care-247.png", alt: "Birthday celebrations for residents" },
+    { id: 4, title: "Board & Card Games", image: "/activity-engagement.png", alt: "Residents playing board and card games" },
+    { id: 5, title: "Arts & Crafts", image: "/comprehensive-care.png", alt: "Residents engaged in arts and crafts activities" },
+    { id: 6, title: "Cooking Activities", image: "/care-247.png", alt: "Residents participating in cooking activities" },
+    { id: 7, title: "Holiday Events", image: "/activity-engagement.png", alt: "Holiday celebrations and events" },
+    { id: 8, title: "Movie Nights", image: "/comprehensive-care.png", alt: "Residents enjoying movie nights together" },
+    { id: 9, title: "Music & Entertainment", image: "/care-247.png", alt: "Music and entertainment activities" },
+    { id: 10, title: "Puzzle Activities", image: "/activity-engagement.png", alt: "Residents working on puzzles" },
+    { id: 11, title: "Exercise & Wellness", image: "/comprehensive-care.png", alt: "Exercise and wellness activities" },
+    { id: 12, title: "Tea Time & Social Events", image: "/care-247.png", alt: "Tea time and social gathering events" },
+  ]
+
+  // Full House Tour Gallery items
+  const houseTourItems = [
+    { id: 101, title: "Living Room", image: "/homy.webp", alt: "Comfortable living room with seating area" },
+    { id: 102, title: "Bedroom", image: "/elderly-care-facilities.jpg", alt: "Cozy bedroom with comfortable furnishings" },
+    { id: 103, title: "Kitchen", image: "/homy.webp", alt: "Well-equipped kitchen for meal preparation" },
+    { id: 104, title: "Dining Room", image: "/elderly-care-facilities.jpg", alt: "Spacious dining room for meals" },
+    { id: 105, title: "Backyard", image: "/activity-engagement.png", alt: "Beautiful backyard and outdoor space" },
+    { id: 106, title: "Bathroom", image: "/homy.webp", alt: "Accessible bathroom facilities" },
+    { id: 107, title: "Common Area", image: "/elderly-care-facilities.jpg", alt: "Common area for socializing" },
+    { id: 108, title: "Garden", image: "/activity-engagement.png", alt: "Peaceful garden area" },
+    { id: 109, title: "Hallway", image: "/homy.webp", alt: "Wide, accessible hallway" },
+    { id: 110, title: "Front Entrance", image: "/elderly-care-facilities.jpg", alt: "Welcoming front entrance" },
   ]
 
   return (
@@ -72,7 +85,26 @@ export default function Gallery() {
       {/* Hero Section - Modern Redesign */}
       <GalleryHeroSection />
 
-      {/* Gallery Grid */}
+      {/* Full House Tour Section */}
+      <section className="relative py-20 md:py-28 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-12">
+            <div className="inline-block mb-6">
+              <span className="text-sm font-semibold text-primary uppercase tracking-wider">Facility Tour</span>
+              <div className="mt-2 h-1 w-20 bg-primary mx-auto" />
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+              Full House Tour
+            </h2>
+            <p className="text-lg text-slate-700 max-w-3xl mx-auto leading-relaxed">
+              Take a virtual tour of our comfortable, home-like facility. See our spacious rooms, common areas, and beautiful outdoor spaces.
+            </p>
+          </div>
+          <GalleryClient items={houseTourItems} />
+        </div>
+      </section>
+
+      {/* Activities Gallery Section */}
       <section className="relative py-20 md:py-28 bg-gradient-to-br from-primary/15 via-slate-100 to-primary/25 overflow-hidden">
         {/* Rich Colorful Background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -107,7 +139,7 @@ export default function Gallery() {
               We offer a variety of engaging activities designed to promote physical wellness, mental stimulation, and social connection for all our residents.
             </p>
           </div>
-          <GalleryClient items={galleryItems} />
+          <GalleryClient items={activityItems} />
         </div>
       </section>
 
