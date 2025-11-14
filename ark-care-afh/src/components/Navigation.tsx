@@ -1,10 +1,95 @@
 'use client'
 
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0)
+  const heroSectionRef = useRef<HTMLElement | null>(null)
+
+  // Find hero section and track scroll position
+  useEffect(() => {
+    const findHeroSection = () => {
+      // Try to find hero section by common selectors
+      const heroSelectors = [
+        'section[data-section="hero"]',
+        'section:first-of-type',
+        '[class*="Hero"]',
+      ]
+      
+      for (const selector of heroSelectors) {
+        const hero = document.querySelector(selector) as HTMLElement
+        if (hero) {
+          heroSectionRef.current = hero
+          return hero
+        }
+      }
+      
+      // Fallback: use first section on page
+      const firstSection = document.querySelector('main > section:first-of-type') as HTMLElement
+      if (firstSection) {
+        heroSectionRef.current = firstSection
+        return firstSection
+      }
+      
+      return null
+    }
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+      const hero = heroSectionRef.current || findHeroSection()
+      
+      if (hero) {
+        const heroHeight = hero.offsetHeight
+        const heroBottom = hero.offsetTop + heroHeight
+        
+        // Show nav when in hero section or scrolling up, hide when past hero and scrolling down
+        if (currentScrollY < heroBottom) {
+          // Still in hero section - always show
+          setIsVisible(true)
+        } else {
+          // Past hero section - hide when scrolling down, show when scrolling up
+          if (currentScrollY > lastScrollY && currentScrollY > heroBottom) {
+            setIsVisible(false)
+          } else if (currentScrollY < lastScrollY) {
+            setIsVisible(true)
+          }
+        }
+      } else {
+        // If no hero found, show nav when scrolling up, hide when scrolling down
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+          setIsVisible(false)
+        } else if (currentScrollY < lastScrollY) {
+          setIsVisible(true)
+        }
+      }
+      
+      setLastScrollY(currentScrollY)
+    }
+
+    // Initial check
+    findHeroSection()
+    
+    // Add scroll listener
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    
+    // Re-check hero section on route change
+    const checkHero = () => {
+      setTimeout(() => {
+        findHeroSection()
+        handleScroll()
+      }, 100)
+    }
+    
+    window.addEventListener('popstate', checkHero)
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('popstate', checkHero)
+    }
+  }, [lastScrollY])
 
   // Close menu on Escape key
   useEffect(() => {
@@ -32,7 +117,12 @@ export function Navigation() {
       </nav>
 
       {/* Main Navigation Bar - Centered Container */}
-      <nav className="fixed top-0 left-0 right-0 z-50 pointer-events-none" aria-label="Main navigation">
+      <nav 
+        className={`fixed top-0 left-0 right-0 z-50 pointer-events-none transition-transform duration-300 ease-in-out ${
+          isVisible ? 'translate-y-0' : '-translate-y-full'
+        }`}
+        aria-label="Main navigation"
+      >
         <div className="h-full px-4 sm:px-6 lg:px-8 pt-5 md:pt-6 flex items-center w-full">
           {/* Logo - Left Side */}
           <div className="pointer-events-auto flex-shrink-0">
