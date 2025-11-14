@@ -71,23 +71,41 @@ export function Navigation() {
 
     // Initial check
     findHeroSection()
+    handleScroll()
     
     // Add scroll listener
     window.addEventListener('scroll', handleScroll, { passive: true })
     
-    // Re-check hero section on route change
+    // Re-check hero section on route change (Next.js client-side routing)
     const checkHero = () => {
       setTimeout(() => {
+        heroSectionRef.current = null // Reset ref
         findHeroSection()
         handleScroll()
-      }, 100)
+      }, 300) // Delay to allow DOM to update
     }
     
+    // Listen for route changes via DOM mutations
+    const observer = new MutationObserver(() => {
+      checkHero()
+    })
+    
+    // Observe main content area for changes
+    const mainElement = document.querySelector('main')
+    if (mainElement) {
+      observer.observe(mainElement, {
+        childList: true,
+        subtree: true
+      })
+    }
+    
+    // Also listen for popstate (browser back/forward)
     window.addEventListener('popstate', checkHero)
     
     return () => {
       window.removeEventListener('scroll', handleScroll)
       window.removeEventListener('popstate', checkHero)
+      observer.disconnect()
     }
   }, [lastScrollY])
 
