@@ -218,30 +218,8 @@ export function WhyChooseSection() {
           </div>
         </div>
 
-        {/* Professional CTA */}
-        <div className={`bg-gradient-to-r from-primary to-primary/90 rounded-xl p-8 md:p-12 text-white text-center transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h3 className="text-2xl md:text-3xl font-bold mb-4">
-            Ready to Learn More?
-          </h3>
-          <p className="text-lg mb-8 text-white/90 max-w-2xl mx-auto">
-            Schedule a tour to see our facility and meet our team. We're here to answer your questions and help you make the best decision for your loved one.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="px-8 py-4 bg-white text-primary font-semibold rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105"
-            >
-              Schedule a Tour
-            </Link>
-            <Link
-              href="/contact"
-              className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg transition-all duration-300 hover:bg-white hover:text-primary"
-            >
-              Contact Us
-            </Link>
-          </div>
-        </div>
       </div>
     </section>
   )
 }
+
