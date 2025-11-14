@@ -73,10 +73,10 @@ export function WhyChooseSection() {
             <span className="text-sm font-semibold text-primary uppercase tracking-wider">Why Choose Us</span>
             <div className={`mt-2 h-1 bg-primary mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'w-20' : 'w-0'}`} />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight" style={{ color: '#8d9d4f' }}>
             Why Families Trust Ark Care AFH
           </h2>
-          <p className="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg max-w-3xl mx-auto leading-relaxed" style={{ color: '#8d9d4f' }}>
             Licensed, professional care in a warm, home-like setting. Experience the peace of mind that comes with expert care for your loved ones.
           </p>
         </div>
