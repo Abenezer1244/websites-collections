@@ -89,7 +89,7 @@ export function ServicesOverviewSection() {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Base gradient overlay layers - removed dark overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-transparent to-slate-50/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-transparent" />
         
         {/* Animated orbs */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-primary/25 to-primary/10 rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}} />
