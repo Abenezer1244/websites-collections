@@ -48,8 +48,8 @@ export function WhyChooseSection() {
 
       {/* Rich Dark Background with Patterns */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Base gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/70 via-slate-800/60 to-primary/20" />
+        {/* Base gradient overlay - removed dark overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-transparent" />
         
         {/* Animated orbs */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-primary/30 to-primary/10 rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}} />

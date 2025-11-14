@@ -87,8 +87,8 @@ export function ServicesOverviewSection() {
 
       {/* Rich Colorful Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Base gradient overlay layers */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-slate-100/90 to-primary/15" />
+        {/* Base gradient overlay layers - removed dark overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-transparent to-slate-50/50" />
         
         {/* Animated orbs */}
