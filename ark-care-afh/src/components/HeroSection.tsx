@@ -14,12 +14,29 @@ export function HeroSection() {
   return (
     <section 
       ref={heroRef}
-      className="relative overflow-hidden text-white min-h-screen flex items-center bg-gradient-to-br from-slate-900 via-primary/40 to-slate-800"
+      className="relative overflow-hidden text-white min-h-screen flex items-center"
+      style={{
+        backgroundImage: 'url(/hero-care-hands.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}
     >
-      {/* Rich Gradient Background Layers */}
+      {/* Background Image Layer */}
+      <div
+        className="absolute inset-0 w-full h-full"
+        style={{
+          backgroundImage: 'url(/hero-care-hands.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+        aria-hidden="true"
+      />
+
+      {/* Rich Gradient Overlay Layers */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Base gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-primary/50 to-slate-800" />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/70 via-primary/50 to-slate-800/75" />
         
         {/* Secondary gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
