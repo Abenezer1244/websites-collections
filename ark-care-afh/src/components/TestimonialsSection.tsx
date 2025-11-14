@@ -173,12 +173,12 @@ export function TestimonialsSection() {
                 {testimonials.map((testimonial, index) => (
                   <div
                     key={index}
-                    className="min-w-full flex-shrink-0 px-4"
+                    className="min-w-full flex-shrink-0 px-4 py-2"
                   >
-                    <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl border-2 border-primary/20 p-8 md:p-12">
-                      <div className="flex flex-col md:flex-row gap-8 items-center">
+                    <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl border-2 border-primary/20 p-8 md:p-12 min-h-[300px] md:min-h-[250px]">
+                      <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start md:items-center">
                         {/* Image */}
-                        <div className="flex-shrink-0">
+                        <div className="flex-shrink-0 mx-auto md:mx-0">
                           <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden ring-4 ring-primary/20 shadow-lg">
                             <Image
                               src={testimonial.image}
@@ -191,22 +191,22 @@ export function TestimonialsSection() {
                         </div>
                         
                         {/* Content */}
-                        <div className="flex-1 text-center md:text-left">
+                        <div className="flex-1 w-full text-center md:text-left min-w-0">
                           {/* Quote Icon */}
                           <div className="mb-4 flex justify-center md:justify-start">
-                            <svg className="w-12 h-12 text-primary/30" fill="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-12 h-12 text-primary/30 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
                               <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.996 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.985zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                             </svg>
                           </div>
                           
                           {/* Quote */}
-                          <p className="text-lg md:text-xl text-slate-700 mb-6 leading-relaxed italic">
+                          <p className="text-base md:text-lg lg:text-xl text-slate-700 mb-6 leading-relaxed italic break-words overflow-wrap-anywhere">
                             "{testimonial.quote}"
                           </p>
                           
                           {/* Author Info */}
-                          <div>
-                            <h4 className="text-xl font-bold text-slate-900 mb-1">
+                          <div className="mt-auto">
+                            <h4 className="text-lg md:text-xl font-bold text-slate-900 mb-1">
                               {testimonial.name}
                             </h4>
                             <p className="text-sm text-slate-600">
