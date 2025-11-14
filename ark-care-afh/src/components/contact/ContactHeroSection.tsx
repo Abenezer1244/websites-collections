@@ -24,7 +24,7 @@ export function ContactHeroSection() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full mb-8 border border-white/20">
             <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
@@ -36,7 +36,7 @@ export function ContactHeroSection() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">
             Contact Us
           </h1>
-          <p className="text-lg md:text-xl text-white/90 max-w-3xl leading-relaxed">
+          <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
             We're here to answer your questions and help you learn more about our compassionate care services. Reach out today!
           </p>
         </div>
