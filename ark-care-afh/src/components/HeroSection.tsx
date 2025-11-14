@@ -67,12 +67,12 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-5 md:px-6 lg:px-8 relative z-10 w-full">
         <div className="max-w-4xl mx-auto text-center">
 
           {/* Main Heading */}
-          <h1 className={`text-4xl md:text-5xl lg:text-6xl font-black mb-8 leading-tight tracking-tight transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <span className="block drop-shadow-2xl text-5xl md:text-6xl lg:text-7xl">Compassionate</span>
+          <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6 sm:mb-7 md:mb-8 leading-tight tracking-tight transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <span className="block drop-shadow-2xl text-4xl sm:text-5xl md:text-6xl lg:text-7xl">Compassionate</span>
             <span className="block bg-gradient-to-r from-white via-primary/30 to-white bg-clip-text text-transparent drop-shadow-lg">
               Care
             </span>
@@ -80,15 +80,15 @@ export function HeroSection() {
           </h1>
 
           {/* Subheading */}
-          <p className={`text-sm md:text-base lg:text-lg mb-10 text-white/95 mx-auto leading-relaxed max-w-3xl font-medium transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <p className={`text-xs sm:text-sm md:text-base lg:text-lg mb-8 sm:mb-9 md:mb-10 text-white/95 mx-auto leading-relaxed max-w-3xl font-medium px-2 sm:px-0 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Ark Care AFH provides personalized adult family home care services in Algona, WA with specialized support for mental health, dementia, and developmental disabilities.
           </p>
 
           {/* CTA Buttons */}
-          <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className={`flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <Link
               href="/contact"
-              className="group relative px-8 py-4 bg-primary text-white font-bold rounded-xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-primary/50 hover:scale-105 text-base"
+              className="group relative px-6 sm:px-7 md:px-8 py-3 sm:py-3.5 md:py-4 bg-primary text-white font-bold rounded-xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-primary/50 hover:scale-105 text-sm sm:text-base w-full sm:w-auto touch-target"
             >
               <span className="relative z-10 flex items-center gap-2">
                 Schedule a Tour
@@ -100,7 +100,7 @@ export function HeroSection() {
             </Link>
             <Link
               href="/services"
-              className="group px-8 py-4 bg-white/15 backdrop-blur-lg border-2 border-white/40 text-white font-bold rounded-xl transition-all duration-300 hover:bg-white/25 hover:border-white/60 hover:scale-105 shadow-xl text-base"
+              className="group px-6 sm:px-7 md:px-8 py-3 sm:py-3.5 md:py-4 bg-white/15 backdrop-blur-lg border-2 border-white/40 text-white font-bold rounded-xl transition-all duration-300 hover:bg-white/25 hover:border-white/60 hover:scale-105 shadow-xl text-sm sm:text-base w-full sm:w-auto touch-target"
             >
               <span className="flex items-center gap-2">
                 Learn More
@@ -112,8 +112,8 @@ export function HeroSection() {
           </div>
 
           {/* Trust Indicators */}
-          <div className={`mt-12 flex flex-wrap justify-center gap-6 text-sm transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
+          <div className={`mt-8 sm:mt-10 md:mt-12 flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 text-xs sm:text-sm transition-all duration-1000 delay-800 px-2 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
               <div className="w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center">
                 <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />

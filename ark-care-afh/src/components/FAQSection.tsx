@@ -29,7 +29,7 @@ export function FAQSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative py-20 md:py-28 overflow-hidden" data-section="faq" style={{
+    <section ref={sectionRef} className="relative py-12 sm:py-16 md:py-20 lg:py-28 overflow-hidden" data-section="faq" style={{
       backgroundImage: 'url(/white_background_4.jpg)',
       backgroundSize: 'cover',
       backgroundPosition: 'center',

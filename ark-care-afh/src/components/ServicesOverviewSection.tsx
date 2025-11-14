@@ -68,7 +68,7 @@ export function ServicesOverviewSection() {
   ]
 
   return (
-    <section ref={sectionRef} className="relative py-20 md:py-28 overflow-hidden" data-section="services-overview" style={{
+    <section ref={sectionRef} className="relative py-12 sm:py-16 md:py-20 lg:py-28 overflow-hidden" data-section="services-overview" style={{
       backgroundImage: 'url(/white_background_4.jpg)',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
@@ -122,7 +122,7 @@ export function ServicesOverviewSection() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 mb-10 sm:mb-11 md:mb-12">
           {services.map((service, index) => (
             <div
               key={index}

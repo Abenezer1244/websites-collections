@@ -135,8 +135,8 @@ export default function ContactPageClient() {
           {/* Radial accent */}
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--primary)_0%,_transparent_70%)] opacity-15" />
         </div>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="max-w-6xl mx-auto px-4 sm:px-5 md:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-10 md:gap-12">
             {/* Contact Info */}
             <div>
               <h2 className="text-2xl font-bold text-slate-900 mb-8">Get in Touch</h2>
@@ -178,7 +178,7 @@ export default function ContactPageClient() {
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <div className="bg-gradient-to-br from-white via-slate-50 to-primary/5 rounded-lg border-2 border-primary/20 p-8 shadow-xl backdrop-blur-sm">
+              <div className="bg-gradient-to-br from-white via-slate-50 to-primary/5 rounded-lg border-2 border-primary/20 p-6 sm:p-7 md:p-8 shadow-xl backdrop-blur-sm">
                 <h2 className="text-2xl font-bold text-slate-900 mb-6">Send us a Message</h2>
 
                 {submitStatus === 'success' && (

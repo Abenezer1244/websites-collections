@@ -29,7 +29,7 @@ export function WhyChooseSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative py-20 md:py-28 overflow-hidden" data-section="why-choose" style={{
+    <section ref={sectionRef} className="relative py-12 sm:py-16 md:py-20 lg:py-28 overflow-hidden" data-section="why-choose" style={{
       backgroundImage: 'url(/white_background_4.jpg)',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
@@ -82,7 +82,7 @@ export function WhyChooseSection() {
         </div>
 
         {/* Professional Features Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 md:gap-8 mb-12 sm:mb-14 md:mb-16">
           {/* Feature 1 */}
           <div className={`bg-gradient-to-br from-white via-slate-50 to-primary/5 border border-white/20 rounded-xl p-8 shadow-2xl backdrop-blur-sm transition-all duration-700 delay-100 hover:shadow-primary/20 hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <div className="flex items-center gap-4 mb-6 group">

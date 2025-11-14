@@ -131,7 +131,7 @@ export function Navigation() {
     <>
       {/* Fixed Navbar Container for spacing */}
       <nav className="fixed top-0 left-0 right-0 z-40 pointer-events-none" aria-hidden="true">
-        <div className="h-32 md:h-40"></div>
+        <div className="h-24 sm:h-28 md:h-32 lg:h-40"></div>
       </nav>
 
       {/* Main Navigation Bar - Centered Container */}
@@ -141,7 +141,7 @@ export function Navigation() {
         }`}
         aria-label="Main navigation"
       >
-        <div className="h-full px-4 sm:px-6 lg:px-8 pt-5 md:pt-6 flex items-center w-full">
+        <div className="h-full px-3 sm:px-4 md:px-6 lg:px-8 pt-3 sm:pt-4 md:pt-5 lg:pt-6 flex items-center w-full">
           {/* Logo - Left Side */}
           <div className="pointer-events-auto flex-shrink-0">
             <Link
@@ -160,8 +160,8 @@ export function Navigation() {
           <div className="flex-1 pointer-events-none"></div>
 
           {/* Floating Glassmorphic Navbar - Center */}
-          <div className="pointer-events-auto max-w-7xl bg-white/10 backdrop-blur-md border border-black/20 rounded-full shadow-2xl px-6 md:px-10 py-3 md:py-4 transition-all duration-300 hover:bg-white/15 hover:border-black/30">
-              <div className="hidden lg:flex items-center justify-center gap-6 md:gap-8">
+          <div className="pointer-events-auto max-w-7xl bg-white/10 backdrop-blur-md border border-black/20 rounded-full shadow-2xl px-4 sm:px-6 md:px-8 lg:px-10 py-2.5 sm:py-3 md:py-3.5 lg:py-4 transition-all duration-300 hover:bg-white/15 hover:border-black/30">
+              <div className="hidden md:flex items-center justify-center gap-4 sm:gap-5 md:gap-6 lg:gap-8">
                 {/* Left Navigation Links */}
                 <Link
                   href="/about"
@@ -203,15 +203,15 @@ export function Navigation() {
               </div>
 
               {/* Mobile Navigation Menu */}
-              <div className="lg:hidden flex items-center justify-between">
+              <div className="md:hidden flex items-center justify-between w-full">
                 <button
                   onClick={() => setIsOpen(!isOpen)}
-                  className="text-black/80 hover:text-black transition-colors duration-200 rounded-lg p-1.5 hover:bg-black/10 focus:outline-none focus:ring-2 focus:ring-black/50 focus:ring-offset-2 focus:ring-offset-transparent"
+                  className="text-black/80 hover:text-black transition-colors duration-200 rounded-lg p-1.5 hover:bg-black/10 focus:outline-none focus:ring-2 focus:ring-black/50 focus:ring-offset-2 focus:ring-offset-transparent touch-target"
                   aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
                   aria-expanded={isOpen}
                   aria-controls="mobile-menu"
                 >
-                  <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     {isOpen ? (
                       <path
                         strokeLinecap="round"
@@ -243,7 +243,7 @@ export function Navigation() {
               {isOpen && (
                 <div 
                   id="mobile-menu"
-                  className="lg:hidden border-t border-black/20 mt-3 pt-3 space-y-2"
+                  className="md:hidden border-t border-black/20 mt-3 pt-3 space-y-2 w-full"
                   role="menu"
                 >
                   {navLinks.map((link) => (

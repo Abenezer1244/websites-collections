@@ -29,7 +29,7 @@ export function CTASection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative py-12 md:py-16 bg-gradient-to-br from-primary via-primary/95 to-primary overflow-hidden" data-section="cta">
+    <section ref={sectionRef} className="relative py-10 sm:py-12 md:py-14 lg:py-16 bg-gradient-to-br from-primary via-primary/95 to-primary overflow-hidden" data-section="cta">
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white/10 rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}} />
