@@ -13,10 +13,34 @@ export function ServicesHeroSection() {
   return (
     <section 
       ref={heroRef}
-      className="relative overflow-hidden bg-gradient-to-br from-primary via-primary/90 to-primary/80 text-white pt-32 md:pt-40 pb-20"
+      className="relative overflow-hidden text-white pt-32 md:pt-40 pb-20 min-h-[60vh] flex items-center"
+      style={{
+        backgroundImage: 'url(/activity-engagement.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}
     >
-      {/* Animated Background */}
+      {/* Background Image Layer */}
+      <div
+        className="absolute inset-0 w-full h-full"
+        style={{
+          backgroundImage: 'url(/activity-engagement.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+        aria-hidden="true"
+      />
+
+      {/* Gradient Overlay Layers */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-primary/40 to-slate-800/65" />
+        
+        {/* Secondary gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent" />
+        
+        {/* Animated Background Orbs */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}} />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse" style={{animationDuration: '5s', animationDelay: '1s'}} />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.1)_0%,_transparent_70%)]" />
