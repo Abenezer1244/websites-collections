@@ -160,9 +160,9 @@ export function TestimonialsSection() {
 
         {/* Auto-Gliding Testimonials Carousel */}
         <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="relative max-w-5xl mx-auto">
+          <div className="relative max-w-6xl mx-auto">
             {/* Carousel Container */}
-            <div className="relative overflow-hidden rounded-2xl">
+            <div className="relative overflow-hidden">
               {/* Testimonials Track */}
               <div 
                 className="flex transition-transform duration-700 ease-in-out"
@@ -173,45 +173,61 @@ export function TestimonialsSection() {
                 {testimonials.map((testimonial, index) => (
                   <div
                     key={index}
-                    className="min-w-full flex-shrink-0 px-4 py-2"
+                    className="min-w-full flex-shrink-0 px-4"
                   >
-                    <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl border-2 border-primary/20 p-8 md:p-12 min-h-[300px] md:min-h-[250px]">
-                      <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start md:items-center">
-                        {/* Image */}
-                        <div className="flex-shrink-0 mx-auto md:mx-0">
-                          <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden ring-4 ring-primary/20 shadow-lg">
-                            <Image
-                              src={testimonial.image}
-                              alt={testimonial.name}
-                              fill
-                              className="object-cover"
-                              sizes="(max-width: 768px) 128px, 160px"
-                            />
+                    <div className="relative bg-gradient-to-br from-white via-slate-50 to-primary/5 rounded-3xl shadow-2xl border border-primary/10 p-10 md:p-14 overflow-hidden">
+                      {/* Decorative Background Elements */}
+                      <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-primary/5 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+                      <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-primary/10 to-transparent rounded-full blur-2xl translate-y-1/2 -translate-x-1/2" />
+                      
+                      <div className="relative z-10">
+                        <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
+                          {/* Star Rating */}
+                          <div className="flex gap-1 mb-6">
+                            {[...Array(5)].map((_, i) => (
+                              <svg
+                                key={i}
+                                className="w-6 h-6 text-yellow-400 fill-current"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            ))}
                           </div>
-                        </div>
-                        
-                        {/* Content */}
-                        <div className="flex-1 w-full text-center md:text-left min-w-0">
-                          {/* Quote Icon */}
-                          <div className="mb-4 flex justify-center md:justify-start">
-                            <svg className="w-12 h-12 text-primary/30 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+
+                          {/* Quote */}
+                          <div className="mb-8">
+                            <svg className="w-16 h-16 text-primary/20 mx-auto mb-6" fill="currentColor" viewBox="0 0 24 24">
                               <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.996 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.985zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                             </svg>
-                          </div>
-                          
-                          {/* Quote */}
-                          <p className="text-base md:text-lg lg:text-xl text-slate-700 mb-6 leading-relaxed italic break-words overflow-wrap-anywhere">
-                            "{testimonial.quote}"
-                          </p>
-                          
-                          {/* Author Info */}
-                          <div className="mt-auto">
-                            <h4 className="text-lg md:text-xl font-bold text-slate-900 mb-1">
-                              {testimonial.name}
-                            </h4>
-                            <p className="text-sm text-slate-600">
-                              {testimonial.designation}
+                            <p className="text-lg md:text-xl lg:text-2xl text-slate-800 leading-relaxed font-medium break-words overflow-wrap-anywhere">
+                              {testimonial.quote}
                             </p>
+                          </div>
+
+                          {/* Author Section */}
+                          <div className="flex flex-col md:flex-row items-center gap-6 pt-8 border-t border-primary/10 w-full">
+                            {/* Image */}
+                            <div className="relative w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden shadow-lg ring-2 ring-primary/20">
+                              <Image
+                                src={testimonial.image}
+                                alt={testimonial.name}
+                                fill
+                                className="object-cover"
+                                sizes="(max-width: 768px) 80px, 96px"
+                              />
+                            </div>
+                            
+                            {/* Author Info */}
+                            <div className="flex-1">
+                              <h4 className="text-xl md:text-2xl font-bold text-slate-900 mb-2">
+                                {testimonial.name}
+                              </h4>
+                              <p className="text-base text-slate-600 font-medium">
+                                {testimonial.designation}
+                              </p>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -222,15 +238,15 @@ export function TestimonialsSection() {
             </div>
 
             {/* Navigation Dots */}
-            <div className="flex justify-center gap-2 mt-8">
+            <div className="flex justify-center items-center gap-3 mt-10">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
                   className={`transition-all duration-300 rounded-full ${
                     index === currentIndex
-                      ? 'w-8 h-3 bg-primary'
-                      : 'w-3 h-3 bg-primary/30 hover:bg-primary/50'
+                      ? 'w-10 h-3 bg-primary shadow-lg shadow-primary/30'
+                      : 'w-3 h-3 bg-primary/20 hover:bg-primary/40'
                   }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />
