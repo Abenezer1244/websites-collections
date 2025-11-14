@@ -30,11 +30,27 @@ export function FAQSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative py-20 md:py-28 bg-gradient-to-br from-primary/5 via-white to-primary/15 overflow-hidden" data-section="faq">
+    <section ref={sectionRef} className="relative py-20 md:py-28 overflow-hidden" data-section="faq" style={{
+      backgroundImage: 'url(/white_background_4.jpg)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundAttachment: 'fixed'
+    }}>
+      {/* Background Image Layer */}
+      <div
+        className="absolute inset-0 w-full h-full"
+        style={{
+          backgroundImage: 'url(/white_background_4.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+        aria-hidden="true"
+      />
+
       {/* Rich Textured Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Base gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-white to-primary/20" />
+        {/* Base gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-white/95 to-primary/10" />
         
         {/* Animated orbs */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-primary/20 to-primary/5 rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}} />

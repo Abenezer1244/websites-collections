@@ -68,11 +68,27 @@ export function ServicesOverviewSection() {
   ]
 
   return (
-    <section ref={sectionRef} className="relative py-20 md:py-28 bg-gradient-to-br from-primary/10 via-slate-100 to-primary/20 overflow-hidden" data-section="services-overview">
+    <section ref={sectionRef} className="relative py-20 md:py-28 overflow-hidden" data-section="services-overview" style={{
+      backgroundImage: 'url(/white_background_4.jpg)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundAttachment: 'fixed'
+    }}>
+      {/* Background Image Layer */}
+      <div
+        className="absolute inset-0 w-full h-full"
+        style={{
+          backgroundImage: 'url(/white_background_4.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+        aria-hidden="true"
+      />
+
       {/* Rich Colorful Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Base gradient layers */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-slate-100 to-primary/25" />
+        {/* Base gradient overlay layers */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-slate-100/90 to-primary/15" />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-transparent to-slate-50/50" />
         
         {/* Animated orbs */}

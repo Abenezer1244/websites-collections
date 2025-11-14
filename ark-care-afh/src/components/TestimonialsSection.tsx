@@ -29,11 +29,27 @@ export function TestimonialsSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative py-20 md:py-28 bg-gradient-to-br from-slate-50 via-primary/15 to-slate-100 overflow-hidden" data-section="testimonials">
+    <section ref={sectionRef} className="relative py-20 md:py-28 overflow-hidden" data-section="testimonials" style={{
+      backgroundImage: 'url(/white_background_4.jpg)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundAttachment: 'fixed'
+    }}>
+      {/* Background Image Layer */}
+      <div
+        className="absolute inset-0 w-full h-full"
+        style={{
+          backgroundImage: 'url(/white_background_4.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+        aria-hidden="true"
+      />
+
       {/* Rich Patterned Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Base gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-primary/20 to-slate-100" />
+        {/* Base gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-50/80 via-primary/10 to-slate-100/80" />
         
         {/* Animated orbs */}
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-primary/25 to-primary/10 rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}} />

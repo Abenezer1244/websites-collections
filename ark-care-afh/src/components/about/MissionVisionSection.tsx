@@ -28,11 +28,27 @@ export function MissionVisionSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative py-20 md:py-28 bg-gradient-to-br from-slate-800 via-primary/30 to-slate-900 overflow-hidden">
+    <section ref={sectionRef} className="relative py-20 md:py-28 overflow-hidden" style={{
+      backgroundImage: 'url(/white_background_4.jpg)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundAttachment: 'fixed'
+    }}>
+      {/* Background Image Layer */}
+      <div
+        className="absolute inset-0 w-full h-full"
+        style={{
+          backgroundImage: 'url(/white_background_4.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+        aria-hidden="true"
+      />
+
       {/* Rich Dark Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Base gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-primary/25 to-slate-900" />
+        {/* Base gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-800/60 via-primary/20 to-slate-900/70" />
         
         {/* Animated orbs */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-primary/30 to-primary/10 rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}} />
