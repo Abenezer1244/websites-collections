@@ -1,12 +1,59 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { AnimatedTestimonials } from '@/components/ui/shadcn-io/animated-testimonials'
-import type { Testimonial } from '@/components/ui/shadcn-io/animated-testimonials'
+import Image from 'next/image'
+
+interface Testimonial {
+  quote: string
+  name: string
+  designation: string
+  image: string
+}
 
 export function TestimonialsSection() {
   const [isVisible, setIsVisible] = useState(false)
+  const [currentIndex, setCurrentIndex] = useState(0)
   const sectionRef = useRef<HTMLElement>(null)
+  const intervalRef = useRef<NodeJS.Timeout | null>(null)
+
+  const testimonials: Testimonial[] = [
+    {
+      quote: "Ark Care AFH has been wonderful for my mother. She feels at home here, the staff treats her with genuine care and respect.",
+      name: "Margaret S.",
+      designation: "Daughter",
+      image: "/elderly-care-facilities.jpg"
+    },
+    {
+      quote: "I moved here 6 months ago and it's been the best decision. The caregivers are patient and kind, and I feel like part of a family.",
+      name: "Henry P.",
+      designation: "Resident",
+      image: "/homy.webp"
+    },
+    {
+      quote: "The level of personalized attention my father receives is exceptional. They communicate regularly and truly care about his well-being.",
+      name: "Jennifer K.",
+      designation: "Daughter",
+      image: "/activity-engagement.png"
+    },
+    {
+      quote: "Professional, compassionate, and attentive. My wife receives excellent care for her specific needs. Very grateful for the support.",
+      name: "Robert M.",
+      designation: "Spouse",
+      image: "/comprehensive-care.png"
+    },
+    {
+      quote: "The staff goes above and beyond. They listen to our concerns and always have time to chat. It's truly like a home.",
+      name: "Patricia L.",
+      designation: "Family Member",
+      image: "/care-247.png"
+    },
+    {
+      quote: "Best decision we made for our father's care. Safe, loving environment with activities and excellent medical management.",
+      name: "David T.",
+      designation: "Son",
+      image: "/elderly-care-facilities.jpg"
+    }
+  ]
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -29,44 +76,29 @@ export function TestimonialsSection() {
     }
   }, [])
 
-  const testimonials: Testimonial[] = [
-    {
-      quote: "Ark Care AFH has been wonderful for my mother. She feels at home here, the staff treats her with genuine care and respect.",
-      name: "Margaret S.",
-      designation: "Daughter",
-      src: "/elderly-care-facilities.jpg"
-    },
-    {
-      quote: "I moved here 6 months ago and it's been the best decision. The caregivers are patient and kind, and I feel like part of a family.",
-      name: "Henry P.",
-      designation: "Resident",
-      src: "/homy.webp"
-    },
-    {
-      quote: "The level of personalized attention my father receives is exceptional. They communicate regularly and truly care about his well-being.",
-      name: "Jennifer K.",
-      designation: "Daughter",
-      src: "/activity-engagement.png"
-    },
-    {
-      quote: "Professional, compassionate, and attentive. My wife receives excellent care for her specific needs. Very grateful for the support.",
-      name: "Robert M.",
-      designation: "Spouse",
-      src: "/comprehensive-care.png"
-    },
-    {
-      quote: "The staff goes above and beyond. They listen to our concerns and always have time to chat. It's truly like a home.",
-      name: "Patricia L.",
-      designation: "Family Member",
-      src: "/care-247.png"
-    },
-    {
-      quote: "Best decision we made for our father's care. Safe, loving environment with activities and excellent medical management.",
-      name: "David T.",
-      designation: "Son",
-      src: "/elderly-care-facilities.jpg"
+  // Auto-glide functionality
+  useEffect(() => {
+    intervalRef.current = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length)
+    }, 5000) // Change every 5 seconds
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current)
+      }
     }
-  ]
+  }, [testimonials.length])
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index)
+    // Reset auto-play timer
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current)
+    }
+    intervalRef.current = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length)
+    }, 5000)
+  }
 
   return (
     <section ref={sectionRef} className="relative py-20 md:py-28 overflow-hidden" data-section="testimonials" style={{
@@ -126,13 +158,85 @@ export function TestimonialsSection() {
           </p>
         </div>
 
-        {/* Animated Testimonials */}
+        {/* Auto-Gliding Testimonials Carousel */}
         <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <AnimatedTestimonials 
-            testimonials={testimonials}
-            autoplay={true}
-            className="max-w-6xl mx-auto"
-          />
+          <div className="relative max-w-5xl mx-auto">
+            {/* Carousel Container */}
+            <div className="relative overflow-hidden rounded-2xl">
+              {/* Testimonials Track */}
+              <div 
+                className="flex transition-transform duration-700 ease-in-out"
+                style={{
+                  transform: `translateX(-${currentIndex * 100}%)`
+                }}
+              >
+                {testimonials.map((testimonial, index) => (
+                  <div
+                    key={index}
+                    className="min-w-full flex-shrink-0 px-4"
+                  >
+                    <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl border-2 border-primary/20 p-8 md:p-12">
+                      <div className="flex flex-col md:flex-row gap-8 items-center">
+                        {/* Image */}
+                        <div className="flex-shrink-0">
+                          <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden ring-4 ring-primary/20 shadow-lg">
+                            <Image
+                              src={testimonial.image}
+                              alt={testimonial.name}
+                              fill
+                              className="object-cover"
+                              sizes="(max-width: 768px) 128px, 160px"
+                            />
+                          </div>
+                        </div>
+                        
+                        {/* Content */}
+                        <div className="flex-1 text-center md:text-left">
+                          {/* Quote Icon */}
+                          <div className="mb-4 flex justify-center md:justify-start">
+                            <svg className="w-12 h-12 text-primary/30" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.996 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.985zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                            </svg>
+                          </div>
+                          
+                          {/* Quote */}
+                          <p className="text-lg md:text-xl text-slate-700 mb-6 leading-relaxed italic">
+                            "{testimonial.quote}"
+                          </p>
+                          
+                          {/* Author Info */}
+                          <div>
+                            <h4 className="text-xl font-bold text-slate-900 mb-1">
+                              {testimonial.name}
+                            </h4>
+                            <p className="text-sm text-slate-600">
+                              {testimonial.designation}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Navigation Dots */}
+            <div className="flex justify-center gap-2 mt-8">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`transition-all duration-300 rounded-full ${
+                    index === currentIndex
+                      ? 'w-8 h-3 bg-primary'
+                      : 'w-3 h-3 bg-primary/30 hover:bg-primary/50'
+                  }`}
+                  aria-label={`Go to testimonial ${index + 1}`}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
