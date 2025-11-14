@@ -13,6 +13,7 @@ export function ServicesHeroSection() {
   return (
     <section 
       ref={heroRef}
+      data-section="hero"
       className="relative overflow-hidden text-white pt-32 md:pt-40 pb-20 min-h-[60vh] flex items-center"
       style={{
         backgroundImage: 'url(/activity-engagement.png)',

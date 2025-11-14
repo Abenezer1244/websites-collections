@@ -14,6 +14,7 @@ export function HeroSection() {
   return (
     <section 
       ref={heroRef}
+      data-section="hero"
       className="relative overflow-hidden text-white min-h-screen flex items-center"
       style={{
         backgroundImage: 'url(/elderly-care-facilities.jpg)',

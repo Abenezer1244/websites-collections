@@ -13,6 +13,7 @@ export function GalleryHeroSection() {
   return (
     <section 
       ref={heroRef}
+      data-section="hero"
       className="relative overflow-hidden bg-gradient-to-br from-primary via-primary/90 to-primary/80 text-white pt-32 md:pt-40 pb-20"
     >
       {/* Animated Background */}
