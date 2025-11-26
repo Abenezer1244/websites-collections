@@ -7,6 +7,14 @@ import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
 import { Analytics } from "@/components/Analytics";
 import { generateOrganizationSchema, siteConfig } from "@/lib/seo";
+import "@/lib/env-validation"; // Validate environment variables on startup
+
+// Initialize Sentry on client side
+if (typeof window !== 'undefined' && process.env.NEXT_PUBLIC_SENTRY_DSN) {
+  import('../../sentry.client.config').catch(() => {
+    // Silently fail if Sentry not configured
+  })
+}
 
 const outfit = Outfit({
   variable: "--font-sans",

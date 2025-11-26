@@ -4,6 +4,7 @@ import { FormEvent, useState } from 'react'
 import { businessInfo } from '@/lib/seo'
 import { submitContactForm } from '@/lib/api/contact'
 import { ContactHeroSection } from '@/components/contact/ContactHeroSection'
+import { logger } from '@/lib/logger'
 
 export default function ContactPageClient() {
   const [formData, setFormData] = useState({
@@ -97,7 +98,7 @@ export default function ContactPageClient() {
         }, 5000)
       }
     } catch (error) {
-      console.error('Form submission error:', error)
+      logger.error('Form submission error:', error)
       setSubmitStatus('error')
       
       // Reset error message after 5 seconds

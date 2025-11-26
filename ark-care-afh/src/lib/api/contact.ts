@@ -1,6 +1,8 @@
 // Contact Form API Integration
 // This file provides a structure for integrating the contact form with various backend services
 
+import { logger } from '@/lib/logger'
+
 export interface ContactFormData {
   name: string
   email: string
@@ -66,7 +68,7 @@ export async function submitContactForm(
       message: data.message || 'Thank you! Your message has been sent successfully.',
     }
   } catch (error) {
-    console.error('Contact form submission error:', error)
+    logger.error('Contact form submission error:', error)
     return {
       success: false,
       message: error instanceof Error ? error.message : 'An unexpected error occurred. Please try again later.',
