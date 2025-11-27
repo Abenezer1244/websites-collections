@@ -38,7 +38,7 @@ export function MissionVisionSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.4) 3px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.4) 2px, transparent 0)',
             backgroundSize: '52px 52px',
             opacity: 0.4,
             animation: 'dotGridRotate 19s ease-in-out infinite',
@@ -48,7 +48,7 @@ export function MissionVisionSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.35) 2.5px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.35) 1.5px, transparent 0)',
             backgroundSize: '70px 70px',
             opacity: 0.3,
             animation: 'dotGridRotate 23s ease-in-out infinite reverse',
@@ -58,7 +58,7 @@ export function MissionVisionSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 2px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 1px, transparent 0)',
             backgroundSize: '88px 88px',
             opacity: 0.2,
             animation: 'dotGridRotate 27s ease-in-out infinite',

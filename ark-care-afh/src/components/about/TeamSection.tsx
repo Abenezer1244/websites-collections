@@ -90,7 +90,7 @@ export function TeamSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.4) 3px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.4) 2px, transparent 0)',
             backgroundSize: '48px 48px',
             opacity: 0.4,
             animation: 'dotGridTeam 18s ease-in-out infinite',
@@ -100,7 +100,7 @@ export function TeamSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.35) 2.5px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.35) 1.5px, transparent 0)',
             backgroundSize: '65px 65px',
             opacity: 0.3,
             animation: 'dotGridTeam 22s ease-in-out infinite reverse',
@@ -110,7 +110,7 @@ export function TeamSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 2px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 1px, transparent 0)',
             backgroundSize: '82px 82px',
             opacity: 0.2,
             animation: 'dotGridTeam 26s ease-in-out infinite',

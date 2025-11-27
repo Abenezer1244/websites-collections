@@ -112,7 +112,7 @@ export function TestimonialsSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.4) 3px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.4) 2px, transparent 0)',
             backgroundSize: '48px 48px',
             opacity: 0.4,
             animation: 'dotGridFloat 16s ease-in-out infinite',
@@ -123,7 +123,7 @@ export function TestimonialsSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.35) 2.5px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.35) 1.5px, transparent 0)',
             backgroundSize: '64px 64px',
             opacity: 0.3,
             animation: 'dotGridFloat 20s ease-in-out infinite reverse',
@@ -134,7 +134,7 @@ export function TestimonialsSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 2px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 1px, transparent 0)',
             backgroundSize: '80px 80px',
             opacity: 0.2,
             animation: 'dotGridFloat 24s ease-in-out infinite',

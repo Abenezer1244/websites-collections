@@ -39,7 +39,7 @@ export function WhyChooseSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.4) 3px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.4) 2px, transparent 0)',
             backgroundSize: '40px 40px',
             opacity: 0.4,
             animation: 'dotGridMove 20s linear infinite',
@@ -50,7 +50,7 @@ export function WhyChooseSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.35) 2.5px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.35) 1.5px, transparent 0)',
             backgroundSize: '56px 56px',
             opacity: 0.3,
             animation: 'dotGridMove 25s linear infinite reverse',
@@ -61,7 +61,7 @@ export function WhyChooseSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.3) 2px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.3) 1px, transparent 0)',
             backgroundSize: '72px 72px',
             opacity: 0.2,
             animation: 'dotGridMove 30s linear infinite',
