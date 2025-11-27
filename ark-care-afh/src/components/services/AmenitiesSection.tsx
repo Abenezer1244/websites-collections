@@ -129,7 +129,6 @@ export function AmenitiesSection() {
           className="absolute inset-0"
           style={{
             opacity: 0.08,
-          style={{
             backgroundImage: `
               linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
               linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px)
