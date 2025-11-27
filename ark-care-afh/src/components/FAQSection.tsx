@@ -49,7 +49,7 @@ export function FAQSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.25) 2.5px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.35) 1.5px, transparent 0)',
             backgroundSize: '52px 52px',
             opacity: 0.3,
             animation: 'dotGridPulse 18s ease-in-out infinite reverse',
@@ -59,7 +59,7 @@ export function FAQSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 2px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.3) 1px, transparent 0)',
             backgroundSize: '68px 68px',
             opacity: 0.2,
             animation: 'dotGridPulse 22s ease-in-out infinite',
