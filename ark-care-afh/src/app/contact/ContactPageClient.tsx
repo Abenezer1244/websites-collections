@@ -12,6 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Button } from '@/components/ui/button'
 import { QRCode } from '@/components/kibo-ui/qr-code'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { GoogleMap } from '@/components/GoogleMap'
 
 export default function ContactPageClient() {
   const [formData, setFormData] = useState({
@@ -207,7 +208,7 @@ export default function ContactPageClient() {
               </div>
 
               {/* QR Code Card */}
-              <Card className="border-primary/20">
+              <Card className="border-primary/20 mb-8">
                 <CardHeader>
                   <CardTitle className="text-lg">Quick Contact</CardTitle>
                   <CardDescription>Scan to save our contact info</CardDescription>
@@ -220,6 +221,17 @@ export default function ContactPageClient() {
                     />
                   </div>
                   <p className="text-xs text-slate-600 mt-4 text-center">Scan with your phone camera</p>
+                </CardContent>
+              </Card>
+
+              {/* Google Map Card */}
+              <Card className="border-primary/20">
+                <CardHeader>
+                  <CardTitle className="text-lg">Find Us</CardTitle>
+                  <CardDescription>Visit our location</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <GoogleMap height="300px" className="w-full" />
                 </CardContent>
               </Card>
             </div>

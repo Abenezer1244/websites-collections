@@ -30,7 +30,8 @@ const nextConfig = {
         https://*.googletagmanager.com
         https://*.google-analytics.com;
       frame-src 'self'
-        https://www.googletagmanager.com;
+        https://www.googletagmanager.com
+        https://www.google.com;
       object-src 'none';
       base-uri 'self';
       form-action 'self';
