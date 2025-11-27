@@ -87,34 +87,6 @@ export function CareApproachSection() {
         {/* Center radial glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[850px] bg-gradient-radial from-primary/4 via-primary/1 to-transparent rounded-full blur-3xl opacity-40 animate-pulse" style={{animationDuration: '25s'}} />
       </div>
-      
-      {/* CSS Animations */}
-      <style jsx>{`
-        @keyframes dotGridApproach {
-          0%, 100% {
-            transform: translate(0, 0) rotate(0deg);
-          }
-          25% {
-            transform: translate(11px, -11px) rotate(0.9deg);
-          }
-          50% {
-            transform: translate(-11px, 11px) rotate(-0.9deg);
-          }
-          75% {
-            transform: translate(9px, 9px) rotate(0.7deg);
-          }
-        }
-        @keyframes gridApproach {
-          0%, 100% {
-            transform: translate(0, 0);
-            opacity: 0.025;
-          }
-          50% {
-            transform: translate(4px, 4px);
-            opacity: 0.04;
-          }
-        }
-      `}</style>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="inline-block mb-6">

@@ -158,32 +158,6 @@ export function TestimonialsSection() {
         {/* Light mesh overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/1.5 to-transparent" />
       </div>
-      
-      {/* CSS Animations */}
-      <style jsx>{`
-        @keyframes dotGridFloat {
-          0%, 100% {
-            transform: translate(0, 0) rotate(0deg);
-          }
-          25% {
-            transform: translate(12px, -8px) rotate(1deg);
-          }
-          50% {
-            transform: translate(-8px, 12px) rotate(-1deg);
-          }
-          75% {
-            transform: translate(8px, 8px) rotate(0.5deg);
-          }
-        }
-        @keyframes gridPulse2 {
-          0%, 100% {
-            opacity: 0.02;
-          }
-          50% {
-            opacity: 0.035;
-          }
-        }
-      `}</style>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}

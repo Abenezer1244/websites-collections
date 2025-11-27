@@ -134,34 +134,6 @@ export function TeamSection() {
         {/* Light radial glow */}
         <div className="absolute top-1/3 right-1/3 w-[800px] h-[800px] bg-gradient-radial from-primary/3 via-primary/1 to-transparent rounded-full blur-3xl opacity-40 animate-pulse" style={{animationDuration: '28s'}} />
       </div>
-      
-      {/* CSS Animations */}
-      <style jsx>{`
-        @keyframes dotGridTeam {
-          0%, 100% {
-            transform: translate(0, 0) rotate(0deg);
-          }
-          25% {
-            transform: translate(11px, -9px) rotate(0.6deg);
-          }
-          50% {
-            transform: translate(-9px, 11px) rotate(-0.6deg);
-          }
-          75% {
-            transform: translate(7px, 7px) rotate(0.4deg);
-          }
-        }
-        @keyframes gridTeam {
-          0%, 100% {
-            transform: translate(0, 0);
-            opacity: 0.02;
-          }
-          50% {
-            transform: translate(4px, 4px);
-            opacity: 0.035;
-          }
-        }
-      `}</style>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>

@@ -83,30 +83,6 @@ export function FAQSection() {
         {/* Radial glow */}
         <div className="absolute top-1/3 left-1/3 w-[750px] h-[750px] bg-gradient-radial from-primary/4 via-primary/1 to-transparent rounded-full blur-3xl opacity-50 animate-pulse" style={{animationDuration: '24s'}} />
       </div>
-      
-      {/* CSS Animations */}
-      <style jsx>{`
-        @keyframes dotGridPulse {
-          0%, 100% {
-            transform: translate(0, 0) scale(1);
-            opacity: 0.06;
-          }
-          50% {
-            transform: translate(8px, -8px) scale(1.02);
-            opacity: 0.08;
-          }
-        }
-        @keyframes gridWave {
-          0%, 100% {
-            transform: translate(0, 0);
-            opacity: 0.025;
-          }
-          50% {
-            transform: translate(3px, 3px);
-            opacity: 0.04;
-          }
-        }
-      `}</style>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}

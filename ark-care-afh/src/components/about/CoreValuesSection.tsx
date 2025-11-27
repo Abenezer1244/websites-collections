@@ -114,34 +114,6 @@ export function CoreValuesSection() {
         {/* Light mesh gradient */}
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/1 to-transparent" />
       </div>
-      
-      {/* CSS Animations */}
-      <style jsx>{`
-        @keyframes dotGridHex {
-          0%, 100% {
-            transform: translate(0, 0) rotate(0deg);
-          }
-          25% {
-            transform: translate(12px, -8px) rotate(0.75deg);
-          }
-          50% {
-            transform: translate(-8px, 12px) rotate(-0.75deg);
-          }
-          75% {
-            transform: translate(8px, 8px) rotate(0.5deg);
-          }
-        }
-        @keyframes gridHex {
-          0%, 100% {
-            transform: translate(0, 0);
-            opacity: 0.025;
-          }
-          50% {
-            transform: translate(4px, 4px);
-            opacity: 0.04;
-          }
-        }
-      `}</style>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>

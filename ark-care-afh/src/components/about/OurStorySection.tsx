@@ -84,34 +84,6 @@ export function OurStorySection() {
         {/* Light mesh overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/1.5 to-transparent" />
       </div>
-      
-      {/* CSS Animations */}
-      <style jsx>{`
-        @keyframes dotGridFlow {
-          0%, 100% {
-            transform: translate(0, 0) rotate(0deg);
-          }
-          25% {
-            transform: translate(10px, -12px) rotate(0.5deg);
-          }
-          50% {
-            transform: translate(-12px, 10px) rotate(-0.5deg);
-          }
-          75% {
-            transform: translate(8px, 8px) rotate(0.25deg);
-          }
-        }
-        @keyframes gridFlow {
-          0%, 100% {
-            transform: translate(0, 0);
-            opacity: 0.02;
-          }
-          50% {
-            transform: translate(4px, 4px);
-            opacity: 0.035;
-          }
-        }
-      `}</style>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="inline-block mb-6">

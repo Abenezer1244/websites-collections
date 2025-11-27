@@ -82,31 +82,6 @@ export function MissionVisionSection() {
         {/* Light radial burst */}
         <div className="absolute top-1/2 right-1/4 w-[750px] h-[750px] bg-gradient-radial from-primary/3 via-primary/1 to-transparent rounded-full blur-3xl opacity-50 animate-pulse" style={{animationDuration: '26s'}} />
       </div>
-      
-      {/* CSS Animations */}
-      <style jsx>{`
-        @keyframes dotGridRotate {
-          0%, 100% {
-            transform: translate(0, 0) rotate(0deg) scale(1);
-          }
-          33% {
-            transform: translate(14px, -10px) rotate(1deg) scale(1.03);
-          }
-          66% {
-            transform: translate(-10px, 14px) rotate(-1deg) scale(0.97);
-          }
-        }
-        @keyframes gridRotate {
-          0%, 100% {
-            transform: translate(0, 0) rotate(0deg);
-            opacity: 0.02;
-          }
-          50% {
-            transform: translate(5px, 5px) rotate(0.5deg);
-            opacity: 0.04;
-          }
-        }
-      `}</style>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">

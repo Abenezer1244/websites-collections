@@ -141,34 +141,6 @@ export function AmenitiesSection() {
         {/* Light mesh overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/1.5 to-transparent" />
       </div>
-      
-      {/* CSS Animations */}
-      <style jsx>{`
-        @keyframes dotGridAmenities {
-          0%, 100% {
-            transform: translate(0, 0) rotate(0deg);
-          }
-          25% {
-            transform: translate(10px, -10px) rotate(0.7deg);
-          }
-          50% {
-            transform: translate(-10px, 10px) rotate(-0.7deg);
-          }
-          75% {
-            transform: translate(8px, 8px) rotate(0.5deg);
-          }
-        }
-        @keyframes gridAmenities {
-          0%, 100% {
-            transform: translate(0, 0);
-            opacity: 0.025;
-          }
-          50% {
-            transform: translate(3px, 3px);
-            opacity: 0.04;
-          }
-        }
-      `}</style>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="inline-block mb-6">

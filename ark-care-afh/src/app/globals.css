@@ -642,6 +642,305 @@ body {
   }
 }
 
+/* Futuristic Animated Dot Grid Animations */
+@keyframes dotGridMove {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(10px, 10px);
+  }
+  50% {
+    transform: translate(0, 20px);
+  }
+  75% {
+    transform: translate(-10px, 10px);
+  }
+}
+
+@keyframes gridPulse {
+  0%, 100% {
+    opacity: 0.02;
+  }
+  50% {
+    opacity: 0.04;
+  }
+}
+
+@keyframes dotGridMove2 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(15px, -10px) scale(1.05);
+  }
+  66% {
+    transform: translate(-10px, 15px) scale(0.95);
+  }
+}
+
+@keyframes gridShift {
+  0%, 100% {
+    transform: translate(0, 0);
+    opacity: 0.025;
+  }
+  50% {
+    transform: translate(5px, 5px);
+    opacity: 0.04;
+  }
+}
+
+@keyframes dotGridFloat {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(12px, -8px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-8px, 12px) rotate(-1deg);
+  }
+  75% {
+    transform: translate(8px, 8px) rotate(0.5deg);
+  }
+}
+
+@keyframes gridPulse2 {
+  0%, 100% {
+    opacity: 0.02;
+  }
+  50% {
+    opacity: 0.035;
+  }
+}
+
+@keyframes dotGridPulse {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.06;
+  }
+  50% {
+    transform: translate(8px, -8px) scale(1.02);
+    opacity: 0.08;
+  }
+}
+
+@keyframes gridWave {
+  0%, 100% {
+    transform: translate(0, 0);
+    opacity: 0.025;
+  }
+  50% {
+    transform: translate(3px, 3px);
+    opacity: 0.04;
+  }
+}
+
+@keyframes dotGridFlow {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(10px, -12px) rotate(0.5deg);
+  }
+  50% {
+    transform: translate(-12px, 10px) rotate(-0.5deg);
+  }
+  75% {
+    transform: translate(8px, 8px) rotate(0.25deg);
+  }
+}
+
+@keyframes gridFlow {
+  0%, 100% {
+    transform: translate(0, 0);
+    opacity: 0.02;
+  }
+  50% {
+    transform: translate(4px, 4px);
+    opacity: 0.035;
+  }
+}
+
+@keyframes dotGridRotate {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  33% {
+    transform: translate(14px, -10px) rotate(1deg) scale(1.03);
+  }
+  66% {
+    transform: translate(-10px, 14px) rotate(-1deg) scale(0.97);
+  }
+}
+
+@keyframes gridRotate {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.02;
+  }
+  50% {
+    transform: translate(5px, 5px) rotate(0.5deg);
+    opacity: 0.04;
+  }
+}
+
+@keyframes dotGridHex {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(12px, -8px) rotate(0.75deg);
+  }
+  50% {
+    transform: translate(-8px, 12px) rotate(-0.75deg);
+  }
+  75% {
+    transform: translate(8px, 8px) rotate(0.5deg);
+  }
+}
+
+@keyframes gridHex {
+  0%, 100% {
+    transform: translate(0, 0);
+    opacity: 0.025;
+  }
+  50% {
+    transform: translate(4px, 4px);
+    opacity: 0.04;
+  }
+}
+
+@keyframes dotGridTeam {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(11px, -9px) rotate(0.6deg);
+  }
+  50% {
+    transform: translate(-9px, 11px) rotate(-0.6deg);
+  }
+  75% {
+    transform: translate(7px, 7px) rotate(0.4deg);
+  }
+}
+
+@keyframes gridTeam {
+  0%, 100% {
+    transform: translate(0, 0);
+    opacity: 0.02;
+  }
+  50% {
+    transform: translate(4px, 4px);
+    opacity: 0.035;
+  }
+}
+
+@keyframes dotGridAmenities {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(10px, -10px) rotate(0.7deg);
+  }
+  50% {
+    transform: translate(-10px, 10px) rotate(-0.7deg);
+  }
+  75% {
+    transform: translate(8px, 8px) rotate(0.5deg);
+  }
+}
+
+@keyframes gridAmenities {
+  0%, 100% {
+    transform: translate(0, 0);
+    opacity: 0.025;
+  }
+  50% {
+    transform: translate(3px, 3px);
+    opacity: 0.04;
+  }
+}
+
+@keyframes dotGridSpecialties {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(13px, -9px) rotate(0.8deg);
+  }
+  50% {
+    transform: translate(-9px, 13px) rotate(-0.8deg);
+  }
+  75% {
+    transform: translate(9px, 9px) rotate(0.6deg);
+  }
+}
+
+@keyframes gridSpecialties {
+  0%, 100% {
+    transform: translate(0, 0);
+    opacity: 0.02;
+  }
+  50% {
+    transform: translate(5px, 5px);
+    opacity: 0.04;
+  }
+}
+
+@keyframes dotGridApproach {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(11px, -11px) rotate(0.9deg);
+  }
+  50% {
+    transform: translate(-11px, 11px) rotate(-0.9deg);
+  }
+  75% {
+    transform: translate(9px, 9px) rotate(0.7deg);
+  }
+}
+
+@keyframes gridApproach {
+  0%, 100% {
+    transform: translate(0, 0);
+    opacity: 0.025;
+  }
+  50% {
+    transform: translate(4px, 4px);
+    opacity: 0.04;
+  }
+}
+
+@keyframes dotGridContact {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(12px, -10px) rotate(0.85deg);
+  }
+  50% {
+    transform: translate(-10px, 12px) rotate(-0.85deg);
+  }
+  75% {
+    transform: translate(9px, 9px) rotate(0.65deg);
+  }
+}
+
+@keyframes gridContact {
+  0%, 100% {
+    transform: translate(0, 0);
+    opacity: 0.025;
+  }
+  50% {
+    transform: translate(5px, 5px);
+    opacity: 0.04;
+  }
+}
+
 /* Utility Classes */
 @layer utilities {
   /* Fade animations */

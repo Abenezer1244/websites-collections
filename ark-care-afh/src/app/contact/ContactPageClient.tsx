@@ -195,34 +195,6 @@ export default function ContactPageClient() {
           {/* Light mesh overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/1.5 to-transparent" />
         </div>
-        
-        {/* CSS Animations */}
-        <style jsx>{`
-          @keyframes dotGridContact {
-            0%, 100% {
-              transform: translate(0, 0) rotate(0deg);
-            }
-            25% {
-              transform: translate(12px, -10px) rotate(0.85deg);
-            }
-            50% {
-              transform: translate(-10px, 12px) rotate(-0.85deg);
-            }
-            75% {
-              transform: translate(9px, 9px) rotate(0.65deg);
-            }
-          }
-          @keyframes gridContact {
-            0%, 100% {
-              transform: translate(0, 0);
-              opacity: 0.025;
-            }
-            50% {
-              transform: translate(5px, 5px);
-              opacity: 0.04;
-            }
-          }
-        `}</style>
         <div className="max-w-7xl mx-auto px-4 sm:px-5 md:px-6 lg:px-8 relative z-10">
           {/* Top Section: Contact Info and Form Side by Side */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 mb-12">

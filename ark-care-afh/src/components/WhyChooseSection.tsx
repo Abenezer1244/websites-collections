@@ -85,32 +85,6 @@ export function WhyChooseSection() {
         {/* Subtle radial glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-gradient-radial from-primary/3 via-primary/1 to-transparent rounded-full blur-3xl opacity-50 animate-pulse" style={{animationDuration: '20s'}} />
       </div>
-      
-      {/* CSS Animation for dot grid movement */}
-      <style jsx>{`
-        @keyframes dotGridMove {
-          0%, 100% {
-            transform: translate(0, 0);
-          }
-          25% {
-            transform: translate(10px, 10px);
-          }
-          50% {
-            transform: translate(0, 20px);
-          }
-          75% {
-            transform: translate(-10px, 10px);
-          }
-        }
-        @keyframes gridPulse {
-          0%, 100% {
-            opacity: 0.02;
-          }
-          50% {
-            opacity: 0.04;
-          }
-        }
-      `}</style>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Professional Header */}

@@ -122,31 +122,6 @@ export function ServicesOverviewSection() {
         {/* Radial glow effect */}
         <div className="absolute top-1/3 left-1/3 w-[900px] h-[900px] bg-gradient-radial from-primary/4 via-primary/1 to-transparent rounded-full blur-3xl opacity-40 animate-pulse" style={{animationDuration: '22s'}} />
       </div>
-      
-      {/* CSS Animations */}
-      <style jsx>{`
-        @keyframes dotGridMove2 {
-          0%, 100% {
-            transform: translate(0, 0) scale(1);
-          }
-          33% {
-            transform: translate(15px, -10px) scale(1.05);
-          }
-          66% {
-            transform: translate(-10px, 15px) scale(0.95);
-          }
-        }
-        @keyframes gridShift {
-          0%, 100% {
-            transform: translate(0, 0);
-            opacity: 0.025;
-          }
-          50% {
-            transform: translate(5px, 5px);
-            opacity: 0.04;
-          }
-        }
-      `}</style>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}

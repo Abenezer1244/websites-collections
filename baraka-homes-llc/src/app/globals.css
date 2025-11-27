@@ -1,49 +1,51 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  :root {
-    /* Futuristic Dark Theme - Deep Space & Neon */
-    --background: 240 30% 6%; /* #0b0b14 */
-    --foreground: 210 40% 98%; /* #f0f4f8 */
+@theme {
+  /* Futuristic Dark Theme - Deep Space & Neon */
+  --color-background: oklch(0.15 0.02 240);
+  --color-foreground: oklch(0.98 0.01 210);
 
-    --card: 240 25% 10%;
-    --card-foreground: 210 40% 98%;
+  --color-card: oklch(0.2 0.02 240);
+  --color-card-foreground: oklch(0.98 0.01 210);
 
-    --popover: 240 25% 10%;
-    --popover-foreground: 210 40% 98%;
+  --color-popover: oklch(0.2 0.02 240);
+  --color-popover-foreground: oklch(0.98 0.01 210);
 
-    --primary: 190 100% 50%; /* Neon Cyan #00f0ff */
-    --primary-foreground: 240 30% 6%;
+  --color-primary: oklch(0.7 0.2 190);
+  /* Neon Cyan */
+  --color-primary-foreground: oklch(0.15 0.02 240);
 
-    --secondary: 270 100% 60%; /* Neon Purple #8a2be2 */
-    --secondary-foreground: 210 40% 98%;
+  --color-secondary: oklch(0.6 0.25 270);
+  /* Neon Purple */
+  --color-secondary-foreground: oklch(0.98 0.01 210);
 
-    --muted: 240 20% 15%;
-    --muted-foreground: 215 20% 65%;
+  --color-muted: oklch(0.25 0.02 240);
+  --color-muted-foreground: oklch(0.65 0.02 215);
 
-    --accent: 320 100% 55%; /* Neon Pink #ff1493 */
-    --accent-foreground: 210 40% 98%;
+  --color-accent: oklch(0.65 0.3 320);
+  /* Neon Pink */
+  --color-accent-foreground: oklch(0.98 0.01 210);
 
-    --destructive: 0 100% 50%;
-    --destructive-foreground: 210 40% 98%;
+  --color-destructive: oklch(0.55 0.25 0);
+  --color-destructive-foreground: oklch(0.98 0.01 210);
 
-    --border: 240 20% 20%;
-    --input: 240 20% 20%;
-    --ring: 190 100% 50%;
+  --color-border: oklch(0.3 0.02 240);
+  --color-input: oklch(0.3 0.02 240);
+  --color-ring: oklch(0.7 0.2 190);
 
-    --radius: 0.75rem;
-  }
+  --radius-lg: 0.75rem;
+  --radius-md: calc(0.75rem - 2px);
+  --radius-sm: calc(0.75rem - 4px);
 }
 
 @layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground antialiased selection:bg-primary selection:text-primary-foreground;
-    background-image: 
+    background-image:
       radial-gradient(circle at 15% 50%, rgba(138, 43, 226, 0.15), transparent 25%),
       radial-gradient(circle at 85% 30%, rgba(0, 240, 255, 0.15), transparent 25%);
     background-attachment: fixed;
@@ -54,7 +56,7 @@
   .glass {
     @apply bg-white/5 backdrop-blur-lg border border-white/10 shadow-xl;
   }
-  
+
   .glass-card {
     @apply bg-card/40 backdrop-blur-md border border-white/5 hover:border-primary/50 transition-colors duration-300;
   }
@@ -62,7 +64,7 @@
   .text-glow {
     text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
   }
-  
+
   .box-glow {
     box-shadow: 0 0 20px rgba(138, 43, 226, 0.3);
   }

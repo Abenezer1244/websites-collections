@@ -100,34 +100,6 @@ export function SpecializedServicesSection() {
         {/* Light radial burst */}
         <div className="absolute bottom-0 right-0 w-[750px] h-[750px] bg-gradient-radial from-primary/3 via-primary/1 to-transparent rounded-full blur-3xl opacity-50 animate-pulse" style={{animationDuration: '27s'}} />
       </div>
-      
-      {/* CSS Animations */}
-      <style jsx>{`
-        @keyframes dotGridSpecialties {
-          0%, 100% {
-            transform: translate(0, 0) rotate(0deg);
-          }
-          25% {
-            transform: translate(13px, -9px) rotate(0.8deg);
-          }
-          50% {
-            transform: translate(-9px, 13px) rotate(-0.8deg);
-          }
-          75% {
-            transform: translate(9px, 9px) rotate(0.6deg);
-          }
-        }
-        @keyframes gridSpecialties {
-          0%, 100% {
-            transform: translate(0, 0);
-            opacity: 0.02;
-          }
-          50% {
-            transform: translate(5px, 5px);
-            opacity: 0.04;
-          }
-        }
-      `}</style>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
