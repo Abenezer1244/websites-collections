@@ -37,15 +37,10 @@ async function checkRateLimitUpstash(
 ): Promise<RateLimitResult> {
   try {
     // Dynamic import to avoid build errors if packages aren't installed
-    const ratelimitModule = await import('@upstash/ratelimit').catch(() => null)
-    const redisModule = await import('@upstash/redis').catch(() => null)
-    
-    if (!ratelimitModule || !redisModule) {
-      throw new Error('Upstash packages not installed')
-    }
-    
-    const { Ratelimit } = ratelimitModule
-    const { Redis } = redisModule
+    // @ts-ignore - Optional dependency, may not be installed
+    const { Ratelimit } = await import('@upstash/ratelimit')
+    // @ts-ignore - Optional dependency, may not be installed
+    const { Redis } = await import('@upstash/redis')
 
     const ratelimit = new Ratelimit({
       redis: Redis.fromEnv(),
@@ -67,8 +62,7 @@ async function checkRateLimitUpstash(
       rateLimited: !success,
     }
   } catch (error) {
-    // Fallback to in-memory if Upstash fails
-    console.error('Upstash rate limit error, falling back to in-memory:', error)
+    // Fallback to in-memory if Upstash fails or packages not installed
     return checkRateLimitInMemory(identifier)
   }
 }
