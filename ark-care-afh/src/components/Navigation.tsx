@@ -146,10 +146,10 @@ export function Navigation() {
           <div className="pointer-events-auto flex-shrink-0">
             <Link
               href="/"
-              className="flex items-center gap-1.5 md:gap-2 font-bold text-xs md:text-sm text-black group transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-black/50 focus:ring-offset-2 focus:ring-offset-transparent rounded-lg"
+              className="flex items-center gap-1.5 md:gap-2 font-bold text-xs md:text-sm text-white group transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent rounded-lg"
               aria-label="Ark Care AFH Home"
             >
-              <div className="w-8 md:w-10 h-8 md:h-10 bg-black/10 backdrop-blur rounded-lg flex items-center justify-center font-bold text-black text-xs md:text-sm hover:bg-black/20 transition-colors">
+              <div className="w-8 md:w-10 h-8 md:h-10 bg-white/10 backdrop-blur rounded-lg flex items-center justify-center font-bold text-white text-xs md:text-sm hover:bg-white/20 transition-colors">
                 A
               </div>
               <span className="hidden sm:inline">Ark Care</span>
@@ -160,19 +160,19 @@ export function Navigation() {
           <div className="flex-1 pointer-events-none"></div>
 
           {/* Floating Glassmorphic Navbar - Center */}
-          <div className="pointer-events-auto max-w-7xl bg-white/10 backdrop-blur-md border border-black/20 rounded-full shadow-2xl px-4 sm:px-6 md:px-8 lg:px-10 py-2.5 sm:py-3 md:py-3.5 lg:py-4 transition-all duration-300 hover:bg-white/15 hover:border-black/30">
+          <div className="pointer-events-auto max-w-7xl bg-white/10 backdrop-blur-md border border-white/20 rounded-full shadow-2xl px-4 sm:px-6 md:px-8 lg:px-10 py-2.5 sm:py-3 md:py-3.5 lg:py-4 transition-all duration-300 hover:bg-white/15 hover:border-white/30">
               <div className="hidden md:flex items-center justify-center gap-4 sm:gap-5 md:gap-6 lg:gap-8">
                 {/* Left Navigation Links */}
                 <Link
                   href="/about"
-                  className="px-2.5 md:px-3 py-1.5 text-xs md:text-sm font-medium text-black/80 hover:text-black transition-all duration-200 rounded-lg hover:bg-black/10 focus:outline-none focus:ring-2 focus:ring-black/50 focus:ring-offset-2 focus:ring-offset-transparent"
+                  className="px-2.5 md:px-3 py-1.5 text-xs md:text-sm font-medium text-white/80 hover:text-white transition-all duration-200 rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
                 >
                   About Us
                 </Link>
 
                 <Link
                   href="/gallery"
-                  className="px-2.5 md:px-3 py-1.5 text-xs md:text-sm font-medium text-black/80 hover:text-black transition-all duration-200 rounded-lg hover:bg-black/10 focus:outline-none focus:ring-2 focus:ring-black/50 focus:ring-offset-2 focus:ring-offset-transparent"
+                  className="px-2.5 md:px-3 py-1.5 text-xs md:text-sm font-medium text-white/80 hover:text-white transition-all duration-200 rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
                 >
                   Gallery
                 </Link>
@@ -180,7 +180,7 @@ export function Navigation() {
                 {/* Home - Center and Larger */}
                 <Link
                   href="/"
-                  className="px-3 md:px-5 py-1.5 text-sm md:text-lg font-bold text-black transition-all duration-200 rounded-lg hover:bg-black/10 focus:outline-none focus:ring-2 focus:ring-black/50 focus:ring-offset-2 focus:ring-offset-transparent"
+                  className="px-3 md:px-5 py-1.5 text-sm md:text-lg font-bold text-white transition-all duration-200 rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
                   aria-label="Home"
                 >
                   Home
@@ -189,14 +189,14 @@ export function Navigation() {
                 {/* Right Navigation Links */}
                 <Link
                   href="/services"
-                  className="px-2.5 md:px-3 py-1.5 text-xs md:text-sm font-medium text-black/80 hover:text-black transition-all duration-200 rounded-lg hover:bg-black/10 focus:outline-none focus:ring-2 focus:ring-black/50 focus:ring-offset-2 focus:ring-offset-transparent"
+                  className="px-2.5 md:px-3 py-1.5 text-xs md:text-sm font-medium text-white/80 hover:text-white transition-all duration-200 rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
                 >
                   Services
                 </Link>
 
                 <Link
                   href="/contact"
-                  className="px-2.5 md:px-3 py-1.5 text-xs md:text-sm font-medium text-black/80 hover:text-black transition-all duration-200 rounded-lg hover:bg-black/10 focus:outline-none focus:ring-2 focus:ring-black/50 focus:ring-offset-2 focus:ring-offset-transparent"
+                  className="px-2.5 md:px-3 py-1.5 text-xs md:text-sm font-medium text-white/80 hover:text-white transition-all duration-200 rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
                 >
                   Contact Us
                 </Link>
@@ -206,7 +206,7 @@ export function Navigation() {
               <div className="md:hidden flex items-center justify-between w-full">
                 <button
                   onClick={() => setIsOpen(!isOpen)}
-                  className="text-black/80 hover:text-black transition-colors duration-200 rounded-lg p-1.5 hover:bg-black/10 focus:outline-none focus:ring-2 focus:ring-black/50 focus:ring-offset-2 focus:ring-offset-transparent touch-target"
+                  className="text-white/80 hover:text-white transition-colors duration-200 rounded-lg p-1.5 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent touch-target"
                   aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
                   aria-expanded={isOpen}
                   aria-controls="mobile-menu"
@@ -232,7 +232,7 @@ export function Navigation() {
 
                 <Link
                   href="/"
-                  className="px-4 py-2 text-sm md:text-base font-bold text-black transition-all duration-200 rounded-lg hover:bg-black/10 focus:outline-none focus:ring-2 focus:ring-black/50 focus:ring-offset-2 focus:ring-offset-transparent"
+                  className="px-4 py-2 text-sm md:text-base font-bold text-white transition-all duration-200 rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
                   aria-label="Home"
                 >
                   Home
@@ -243,14 +243,14 @@ export function Navigation() {
               {isOpen && (
                 <div 
                   id="mobile-menu"
-                  className="md:hidden border-t border-black/20 mt-3 pt-3 space-y-2 w-full"
+                  className="md:hidden border-t border-white/20 mt-3 pt-3 space-y-2 w-full"
                   role="menu"
                 >
                   {navLinks.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="block px-4 py-2.5 text-sm font-medium text-black/80 hover:text-black hover:bg-black/10 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-black/50 focus:ring-offset-2 focus:ring-offset-transparent"
+                      className="block px-4 py-2.5 text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
                       onClick={() => setIsOpen(false)}
                       role="menuitem"
                     >
@@ -259,7 +259,7 @@ export function Navigation() {
                   ))}
                   <a
                     href="tel:+12064553644"
-                    className="flex items-center gap-2 px-4 py-2.5 bg-black/20 hover:bg-black/30 text-black text-sm font-medium rounded-lg transition-all duration-200 border border-black/30 mt-2 focus:outline-none focus:ring-2 focus:ring-black/50 focus:ring-offset-2 focus:ring-offset-transparent"
+                    className="flex items-center gap-2 px-4 py-2.5 bg-white/20 hover:bg-white/30 text-white text-sm font-medium rounded-lg transition-all duration-200 border border-white/30 mt-2 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
                     onClick={() => setIsOpen(false)}
                     aria-label="Call Ark Care AFH at (206) 455-3644"
                     role="menuitem"
@@ -279,7 +279,7 @@ export function Navigation() {
           {/* Call Button - Right Side */}
           <a
             href="tel:+12064553644"
-            className="pointer-events-auto flex-shrink-0 hidden md:inline-flex items-center justify-center w-9 h-9 md:w-10 md:h-10 bg-black/10 hover:bg-black/20 text-black rounded-full transition-all duration-200 border border-black/30 focus:outline-none focus:ring-2 focus:ring-black/50 focus:ring-offset-2 focus:ring-offset-transparent"
+            className="pointer-events-auto flex-shrink-0 hidden md:inline-flex items-center justify-center w-9 h-9 md:w-10 md:h-10 bg-white/10 hover:bg-white/20 text-white rounded-full transition-all duration-200 border border-white/30 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
             aria-label="Call Ark Care AFH at (206) 455-3644"
             title="Call Now"
           >
