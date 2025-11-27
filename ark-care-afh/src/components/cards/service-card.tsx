@@ -26,7 +26,7 @@ export function ServiceCard({
       {icon && <div className="mb-4 text-4xl">{icon}</div>}
       {badge && (
         <div className="mb-4">
-          <Badge variant="success" size="sm">{badge}</Badge>
+          <Badge variant="secondary">{badge}</Badge>
         </div>
       )}
       <h3 className="text-xl font-semibold text-slate-900 mb-3">{title}</h3>

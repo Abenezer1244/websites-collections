@@ -5,6 +5,13 @@ import { businessInfo } from '@/lib/seo'
 import { submitContactForm } from '@/lib/api/contact'
 import { ContactHeroSection } from '@/components/contact/ContactHeroSection'
 import { logger } from '@/lib/logger'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+import { Label } from '@/components/ui/label'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+import { Button } from '@/components/ui/button'
+import { QRCode } from '@/components/kibo-ui/qr-code'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 
 export default function ContactPageClient() {
   const [formData, setFormData] = useState({
@@ -51,7 +58,7 @@ export default function ContactPageClient() {
     return Object.keys(newErrors).length === 0
   }
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
@@ -62,6 +69,21 @@ export default function ContactPageClient() {
       setErrors(prev => {
         const newErrors = { ...prev }
         delete newErrors[name]
+        return newErrors
+      })
+    }
+  }
+
+  const handleSelectChange = (value: string) => {
+    setFormData(prev => ({
+      ...prev,
+      subject: value
+    }))
+    // Clear error for this field
+    if (errors.subject) {
+      setErrors(prev => {
+        const newErrors = { ...prev }
+        delete newErrors.subject
         return newErrors
       })
     }
@@ -175,6 +197,23 @@ export default function ContactPageClient() {
                 <p className="text-slate-800">Available 24/7</p>
                 <p className="text-slate-800 text-sm mt-1">We're always here to help</p>
               </div>
+
+              {/* QR Code Card */}
+              <Card className="border-primary/20">
+                <CardHeader>
+                  <CardTitle className="text-lg">Quick Contact</CardTitle>
+                  <CardDescription>Scan to save our contact info</CardDescription>
+                </CardHeader>
+                <CardContent className="flex flex-col items-center">
+                  <div className="w-48 h-48 bg-white p-4 rounded-lg border-2 border-primary/20">
+                    <QRCode 
+                      data={`BEGIN:VCARD\nVERSION:3.0\nFN:Ark Care AFH\nORG:Ark Care AFH\nTEL:${businessInfo.telephone.replace(/[^0-9]/g, '')}\nEMAIL:${businessInfo.email}\nADR:;;${businessInfo.address.streetAddress};${businessInfo.address.addressLocality};${businessInfo.address.addressRegion} ${businessInfo.address.postalCode};;\nEND:VCARD`}
+                      className="w-full h-full"
+                    />
+                  </div>
+                  <p className="text-xs text-slate-600 mt-4 text-center">Scan with your phone camera</p>
+                </CardContent>
+              </Card>
             </div>
 
             {/* Contact Form */}
@@ -210,149 +249,129 @@ export default function ContactPageClient() {
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Name */}
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-slate-900 mb-2">
-                      Name *
-                    </label>
-                    <input
+                  <div className="space-y-2">
+                    <Label htmlFor="name">
+                      Name <span className="text-red-500">*</span>
+                    </Label>
+                    <Input
                       type="text"
                       id="name"
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 bg-background text-slate-900 ${
-                        errors.name 
-                          ? 'border-red-300 focus:ring-red-500' 
-                          : 'border-slate-200 focus:ring-primary'
-                      }`}
+                      className={errors.name ? 'border-red-300 focus-visible:ring-red-500' : ''}
                       placeholder="Your name"
                     />
                     {errors.name && (
-                      <p className="mt-1 text-sm text-red-600">{errors.name}</p>
+                      <p className="text-sm text-red-600">{errors.name}</p>
                     )}
                   </div>
 
                   {/* Email */}
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-slate-900 mb-2">
-                      Email *
-                    </label>
-                    <input
+                  <div className="space-y-2">
+                    <Label htmlFor="email">
+                      Email <span className="text-red-500">*</span>
+                    </Label>
+                    <Input
                       type="email"
                       id="email"
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 bg-background text-slate-900 ${
-                        errors.email 
-                          ? 'border-red-300 focus:ring-red-500' 
-                          : 'border-slate-200 focus:ring-primary'
-                      }`}
+                      className={errors.email ? 'border-red-300 focus-visible:ring-red-500' : ''}
                       placeholder="your@email.com"
                     />
                     {errors.email && (
-                      <p className="mt-1 text-sm text-red-600">{errors.email}</p>
+                      <p className="text-sm text-red-600">{errors.email}</p>
                     )}
                   </div>
 
                   {/* Phone */}
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-slate-900 mb-2">
-                      Phone
-                    </label>
-                    <input
+                  <div className="space-y-2">
+                    <Label htmlFor="phone">Phone</Label>
+                    <Input
                       type="tel"
                       id="phone"
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 bg-background text-slate-900 ${
-                        errors.phone 
-                          ? 'border-red-300 focus:ring-red-500' 
-                          : 'border-slate-200 focus:ring-primary'
-                      }`}
+                      className={errors.phone ? 'border-red-300 focus-visible:ring-red-500' : ''}
                       placeholder="(123) 456-7890"
                     />
                     {errors.phone && (
-                      <p className="mt-1 text-sm text-red-600">{errors.phone}</p>
+                      <p className="text-sm text-red-600">{errors.phone}</p>
                     )}
                   </div>
 
                   {/* Subject */}
-                  <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-slate-900 mb-2">
-                      Subject *
-                    </label>
-                    <select
-                      id="subject"
-                      name="subject"
+                  <div className="space-y-2">
+                    <Label htmlFor="subject">
+                      Subject <span className="text-red-500">*</span>
+                    </Label>
+                    <Select
                       value={formData.subject}
-                      onChange={handleChange}
+                      onValueChange={handleSelectChange}
                       required
-                      className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 bg-background text-slate-900 ${
-                        errors.subject 
-                          ? 'border-red-300 focus:ring-red-500' 
-                          : 'border-slate-200 focus:ring-primary'
-                      }`}
                     >
-                      <option value="">Select a subject</option>
-                      <option value="general">General Inquiry</option>
-                      <option value="tour">Schedule a Tour</option>
-                      <option value="services">Services Question</option>
-                      <option value="admission">Admission Inquiry</option>
-                      <option value="other">Other</option>
-                    </select>
+                      <SelectTrigger className={errors.subject ? 'border-red-300 focus:ring-red-500' : ''}>
+                        <SelectValue placeholder="Select a subject" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="general">General Inquiry</SelectItem>
+                        <SelectItem value="tour">Schedule a Tour</SelectItem>
+                        <SelectItem value="services">Services Question</SelectItem>
+                        <SelectItem value="admission">Admission Inquiry</SelectItem>
+                        <SelectItem value="other">Other</SelectItem>
+                      </SelectContent>
+                    </Select>
                     {errors.subject && (
-                      <p className="mt-1 text-sm text-red-600">{errors.subject}</p>
+                      <p className="text-sm text-red-600">{errors.subject}</p>
                     )}
                   </div>
 
                   {/* Message */}
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-slate-900 mb-2">
-                      Message *
-                    </label>
-                    <textarea
+                  <div className="space-y-2">
+                    <Label htmlFor="message">
+                      Message <span className="text-red-500">*</span>
+                    </Label>
+                    <Textarea
                       id="message"
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
                       required
                       rows={6}
-                      className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 bg-background text-slate-900 resize-none ${
-                        errors.message 
-                          ? 'border-red-300 focus:ring-red-500' 
-                          : 'border-slate-200 focus:ring-primary'
-                      }`}
+                      className={errors.message ? 'border-red-300 focus-visible:ring-red-500' : ''}
                       placeholder="Please tell us how we can help..."
                     />
                     {errors.message && (
-                      <p className="mt-1 text-sm text-red-600">{errors.message}</p>
+                      <p className="text-sm text-red-600">{errors.message}</p>
                     )}
                   </div>
 
                   {/* Submit Button */}
-                  <button
+                  <Button
                     type="submit"
                     disabled={isSubmitting || submitStatus === 'success'}
-                    className="w-full px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="w-full"
+                    size="lg"
                   >
                     {isSubmitting ? (
                       <>
-                        <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <svg className="animate-spin h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                         </svg>
-                        <span>Sending...</span>
+                        Sending...
                       </>
                     ) : submitStatus === 'success' ? (
                       'Message Sent!'
                     ) : (
                       'Send Message'
                     )}
-                  </button>
+                  </Button>
                 </form>
 
                 <p className="text-sm text-slate-800 mt-4">

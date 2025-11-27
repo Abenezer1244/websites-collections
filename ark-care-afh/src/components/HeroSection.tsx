@@ -2,6 +2,8 @@
 
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
+import { Announcement, AnnouncementTag, AnnouncementTitle } from '@/components/kibo-ui/announcement'
+import { ArrowUpRightIcon } from 'lucide-react'
 
 export function HeroSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -69,6 +71,16 @@ export function HeroSection() {
       {/* Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-5 md:px-6 lg:px-8 relative z-10 w-full">
         <div className="max-w-4xl mx-auto text-center">
+          {/* Announcement Banner */}
+          <div className={`mb-6 sm:mb-8 transition-all duration-1000 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <Announcement className="mx-auto max-w-fit" themed>
+              <AnnouncementTag>New</AnnouncementTag>
+              <AnnouncementTitle>
+                Now Accepting New Residents
+                <ArrowUpRightIcon size={16} className="shrink-0 text-muted-foreground" />
+              </AnnouncementTitle>
+            </Announcement>
+          </div>
 
           {/* Main Heading */}
           <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6 sm:mb-7 md:mb-8 leading-tight tracking-tight transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>

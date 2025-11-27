@@ -55,7 +55,7 @@ export function FeatureCard({
       {/* Badge */}
       {badge && (
         <div className="mb-3">
-          <Badge variant="success" size="sm">{badge}</Badge>
+          <Badge variant="secondary">{badge}</Badge>
         </div>
       )}
 

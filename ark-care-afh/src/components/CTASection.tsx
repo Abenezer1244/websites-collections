@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
+import { Marquee, MarqueeContent, MarqueeItem } from '@/components/kibo-ui/marquee'
 
 export function CTASection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -71,26 +72,29 @@ export function CTASection() {
             </Link>
           </div>
 
-          {/* Trust Indicators */}
-          <div className="mt-8 flex flex-wrap justify-center gap-6 text-white/90">
-            <div className="flex items-center gap-1.5">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span className="text-xs">Free Consultation</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span className="text-xs">No Obligation</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span className="text-xs">Expert Guidance</span>
-            </div>
+          {/* Trust Indicators Marquee */}
+          <div className="mt-8">
+            <Marquee className="[--duration:30s]">
+              <MarqueeContent>
+                {[
+                  { icon: '✓', text: 'Free Consultation' },
+                  { icon: '✓', text: 'No Obligation' },
+                  { icon: '✓', text: 'Expert Guidance' },
+                  { icon: '✓', text: 'Licensed Facility' },
+                  { icon: '✓', text: '24/7 Care' },
+                  { icon: '✓', text: 'Personalized Plans' },
+                ].map((item, index) => (
+                  <MarqueeItem key={index} className="px-6">
+                    <div className="flex items-center gap-2 text-white/90">
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-xs font-medium whitespace-nowrap">{item.text}</span>
+                    </div>
+                  </MarqueeItem>
+                ))}
+              </MarqueeContent>
+            </Marquee>
           </div>
         </div>
       </div>

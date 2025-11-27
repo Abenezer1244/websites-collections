@@ -1,6 +1,8 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import { Announcement, AnnouncementTag, AnnouncementTitle } from '@/components/kibo-ui/announcement'
+import { ArrowUpRightIcon } from 'lucide-react'
 
 export function ServicesHeroSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -49,11 +51,15 @@ export function ServicesHeroSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-5 md:px-6 lg:px-8 relative z-10 w-full">
         <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-white/10 backdrop-blur-md rounded-full mb-6 sm:mb-7 md:mb-8 border border-white/20">
-            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full animate-pulse" />
-            <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">Our Services</span>
-            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full animate-pulse" style={{animationDelay: '0.5s'}} />
+          {/* Announcement Badge */}
+          <div className="mb-6 sm:mb-7 md:mb-8 flex justify-center">
+            <Announcement className="bg-white/10 backdrop-blur-md border-white/20 text-white" themed>
+              <AnnouncementTag className="bg-white/20 text-white">Our Services</AnnouncementTag>
+              <AnnouncementTitle className="text-white">
+                Comprehensive Care Available
+                <ArrowUpRightIcon size={16} className="shrink-0 text-white/70" />
+              </AnnouncementTitle>
+            </Announcement>
           </div>
 
           {/* Heading */}
