@@ -167,8 +167,9 @@ export default function ContactPageClient() {
           {/* Light mesh overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/1.5 to-transparent" />
         </div>
-        <div className="max-w-6xl mx-auto px-4 sm:px-5 md:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-10 md:gap-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-5 md:px-6 lg:px-8 relative z-10">
+          {/* Top Section: Contact Info and Form Side by Side */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 mb-12">
             {/* Contact Info */}
             <div>
               <h2 className="text-2xl font-bold text-slate-900 mb-8">Get in Touch</h2>
@@ -208,7 +209,7 @@ export default function ContactPageClient() {
               </div>
 
               {/* QR Code Card */}
-              <Card className="border-primary/20 mb-8">
+              <Card className="border-primary/20">
                 <CardHeader>
                   <CardTitle className="text-lg">Quick Contact</CardTitle>
                   <CardDescription>Scan to save our contact info</CardDescription>
@@ -223,21 +224,10 @@ export default function ContactPageClient() {
                   <p className="text-xs text-slate-600 mt-4 text-center">Scan with your phone camera</p>
                 </CardContent>
               </Card>
-
-              {/* Google Map Card */}
-              <Card className="border-primary/20">
-                <CardHeader>
-                  <CardTitle className="text-lg">Find Us</CardTitle>
-                  <CardDescription>Visit our location</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <GoogleMap height="300px" className="w-full" />
-                </CardContent>
-              </Card>
             </div>
 
             {/* Contact Form */}
-            <div className="lg:col-span-2">
+            <div>
               <div className="bg-gradient-to-br from-white via-slate-50 to-primary/5 rounded-lg border-2 border-primary/20 p-6 sm:p-7 md:p-8 shadow-xl backdrop-blur-sm">
                 <h2 className="text-2xl font-bold text-slate-900 mb-6">Send us a Message</h2>
 
@@ -398,6 +388,19 @@ export default function ContactPageClient() {
                   * Required fields
                 </p>
               </div>
+            </div>
+          </div>
+
+          {/* Google Maps Section - Full Width Prominent Display */}
+          <div className="mt-12">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">Find Us</h2>
+              <p className="text-lg text-slate-700">
+                Visit our facility at {businessInfo.address.streetAddress}, {businessInfo.address.addressLocality}, {businessInfo.address.addressRegion}
+              </p>
+            </div>
+            <div className="max-w-5xl mx-auto">
+              <GoogleMap height="500px" className="w-full" />
             </div>
           </div>
         </div>
