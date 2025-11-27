@@ -38,9 +38,9 @@ export function CareApproachSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.3) 3px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.4) 3px, transparent 0)',
             backgroundSize: '46px 46px',
-            opacity: 0.25,
+            opacity: 0.4,
             animation: 'dotGridApproach 18s ease-in-out infinite',
           }}
         />
@@ -49,9 +49,9 @@ export function CareApproachSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.25) 2.5px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.35) 2.5px, transparent 0)',
             backgroundSize: '62px 62px',
-            opacity: 0.18,
+            opacity: 0.3,
             animation: 'dotGridApproach 22s ease-in-out infinite reverse',
           }}
         />
@@ -62,7 +62,7 @@ export function CareApproachSection() {
           style={{
             backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 2px, transparent 0)',
             backgroundSize: '78px 78px',
-            opacity: 0.12,
+            opacity: 0.2,
             animation: 'dotGridApproach 26s ease-in-out infinite',
           }}
         />
@@ -71,10 +71,10 @@ export function CareApproachSection() {
         <div 
           className="absolute inset-0"
           style={{
-            opacity: 0.08,
+            opacity: 0.15,
             backgroundImage: `
-              linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px)
+              linear-gradient(to right, rgba(0,0,0,0.2) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(0,0,0,0.2) 1px, transparent 1px)
             `,
             backgroundSize: '46px 46px',
             animation: 'gridApproach 12s ease-in-out infinite',

@@ -95,9 +95,9 @@ export function AmenitiesSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.3) 3px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.4) 3px, transparent 0)',
             backgroundSize: '42px 42px',
-            opacity: 0.25,
+            opacity: 0.4,
             animation: 'dotGridAmenities 16s ease-in-out infinite',
           }}
         />
@@ -106,9 +106,9 @@ export function AmenitiesSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.25) 2.5px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.35) 2.5px, transparent 0)',
             backgroundSize: '58px 58px',
-            opacity: 0.18,
+            opacity: 0.3,
             animation: 'dotGridAmenities 20s ease-in-out infinite reverse',
           }}
         />
@@ -119,7 +119,7 @@ export function AmenitiesSection() {
           style={{
             backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 2px, transparent 0)',
             backgroundSize: '74px 74px',
-            opacity: 0.12,
+            opacity: 0.2,
             animation: 'dotGridAmenities 24s ease-in-out infinite',
           }}
         />
@@ -128,10 +128,10 @@ export function AmenitiesSection() {
         <div 
           className="absolute inset-0"
           style={{
-            opacity: 0.08,
+            opacity: 0.15,
             backgroundImage: `
-              linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px)
+              linear-gradient(to right, rgba(0,0,0,0.2) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(0,0,0,0.2) 1px, transparent 1px)
             `,
             backgroundSize: '42px 42px',
             animation: 'gridAmenities 10s ease-in-out infinite',

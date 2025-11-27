@@ -68,9 +68,9 @@ export function CoreValuesSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.3) 3px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.4) 3px, transparent 0)',
             backgroundSize: '40px 40px',
-            opacity: 0.25,
+            opacity: 0.4,
             animation: 'dotGridHex 15s ease-in-out infinite',
           }}
         />
@@ -79,9 +79,9 @@ export function CoreValuesSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.25) 2.5px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.35) 2.5px, transparent 0)',
             backgroundSize: '56px 56px',
-            opacity: 0.18,
+            opacity: 0.3,
             animation: 'dotGridHex 19s ease-in-out infinite reverse',
           }}
         />
@@ -92,7 +92,7 @@ export function CoreValuesSection() {
           style={{
             backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 2px, transparent 0)',
             backgroundSize: '72px 72px',
-            opacity: 0.12,
+            opacity: 0.2,
             animation: 'dotGridHex 23s ease-in-out infinite',
           }}
         />
@@ -101,10 +101,10 @@ export function CoreValuesSection() {
         <div 
           className="absolute inset-0"
           style={{
-            opacity: 0.08,
+            opacity: 0.15,
             backgroundImage: `
-              linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px)
+              linear-gradient(to right, rgba(0,0,0,0.2) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(0,0,0,0.2) 1px, transparent 1px)
             `,
             backgroundSize: '40px 40px',
             animation: 'gridHex 11s ease-in-out infinite',

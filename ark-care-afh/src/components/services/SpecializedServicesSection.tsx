@@ -56,9 +56,9 @@ export function SpecializedServicesSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.3) 3px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.4) 3px, transparent 0)',
             backgroundSize: '50px 50px',
-            opacity: 0.25,
+            opacity: 0.4,
             animation: 'dotGridSpecialties 17s ease-in-out infinite',
           }}
         />
@@ -66,9 +66,9 @@ export function SpecializedServicesSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.25) 2.5px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.35) 2.5px, transparent 0)',
             backgroundSize: '75px 75px',
-            opacity: 0.18,
+            opacity: 0.3,
             animation: 'dotGridSpecialties 21s ease-in-out infinite reverse',
           }}
         />
@@ -78,7 +78,7 @@ export function SpecializedServicesSection() {
           style={{
             backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 2px, transparent 0)',
             backgroundSize: '100px 100px',
-            opacity: 0.12,
+            opacity: 0.2,
             animation: 'dotGridSpecialties 25s ease-in-out infinite',
           }}
         />
@@ -87,10 +87,10 @@ export function SpecializedServicesSection() {
         <div 
           className="absolute inset-0"
           style={{
-            opacity: 0.08,
+            opacity: 0.15,
             backgroundImage: `
-              linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px)
+              linear-gradient(to right, rgba(0,0,0,0.2) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(0,0,0,0.2) 1px, transparent 1px)
             `,
             backgroundSize: '50px 50px',
             animation: 'gridSpecialties 11s ease-in-out infinite',

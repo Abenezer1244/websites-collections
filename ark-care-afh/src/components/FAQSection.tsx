@@ -41,7 +41,7 @@ export function FAQSection() {
           style={{
             backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.3) 3px, transparent 0)',
             backgroundSize: '36px 36px',
-            opacity: 0.25,
+            opacity: 0.4,
             animation: 'dotGridPulse 14s ease-in-out infinite',
           }}
         />
@@ -51,7 +51,7 @@ export function FAQSection() {
           style={{
             backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.25) 2.5px, transparent 0)',
             backgroundSize: '52px 52px',
-            opacity: 0.18,
+            opacity: 0.3,
             animation: 'dotGridPulse 18s ease-in-out infinite reverse',
           }}
         />
@@ -61,7 +61,7 @@ export function FAQSection() {
           style={{
             backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 2px, transparent 0)',
             backgroundSize: '68px 68px',
-            opacity: 0.12,
+            opacity: 0.2,
             animation: 'dotGridPulse 22s ease-in-out infinite',
           }}
         />
@@ -70,10 +70,10 @@ export function FAQSection() {
         <div 
           className="absolute inset-0"
           style={{
-            opacity: 0.08,
+            opacity: 0.15,
             backgroundImage: `
-              linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px)
+              linear-gradient(to right, rgba(0,0,0,0.2) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(0,0,0,0.2) 1px, transparent 1px)
             `,
             backgroundSize: '36px 36px',
             animation: 'gridWave 11s ease-in-out infinite',

@@ -149,9 +149,9 @@ export default function ContactPageClient() {
           <div 
             className="absolute inset-0"
             style={{
-              backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.3) 3px, transparent 0)',
+              backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.4) 3px, transparent 0)',
               backgroundSize: '44px 44px',
-              opacity: 0.25,
+              opacity: 0.4,
               animation: 'dotGridContact 19s ease-in-out infinite',
             }}
           />
@@ -160,9 +160,9 @@ export default function ContactPageClient() {
           <div 
             className="absolute inset-0"
             style={{
-              backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.25) 2.5px, transparent 0)',
+              backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.35) 2.5px, transparent 0)',
               backgroundSize: '68px 68px',
-              opacity: 0.18,
+              opacity: 0.3,
               animation: 'dotGridContact 23s ease-in-out infinite reverse',
             }}
           />
@@ -173,7 +173,7 @@ export default function ContactPageClient() {
             style={{
               backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 2px, transparent 0)',
               backgroundSize: '92px 92px',
-              opacity: 0.12,
+              opacity: 0.2,
               animation: 'dotGridContact 27s ease-in-out infinite',
             }}
           />
@@ -182,7 +182,7 @@ export default function ContactPageClient() {
           <div 
             className="absolute inset-0"
             style={{
-              opacity: 0.08,
+              opacity: 0.15,
               backgroundImage: `
                 linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
                 linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px)

@@ -78,9 +78,9 @@ export function ServicesOverviewSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.3) 3px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.4) 3px, transparent 0)',
             backgroundSize: '44px 44px',
-            opacity: 0.25,
+            opacity: 0.4,
             animation: 'dotGridMove2 18s linear infinite',
           }}
         />
@@ -88,9 +88,9 @@ export function ServicesOverviewSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.25) 2.5px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.35) 2.5px, transparent 0)',
             backgroundSize: '60px 60px',
-            opacity: 0.18,
+            opacity: 0.3,
             animation: 'dotGridMove2 22s linear infinite reverse',
           }}
         />
@@ -100,7 +100,7 @@ export function ServicesOverviewSection() {
           style={{
             backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 2px, transparent 0)',
             backgroundSize: '76px 76px',
-            opacity: 0.12,
+            opacity: 0.2,
             animation: 'dotGridMove2 28s linear infinite',
           }}
         />
@@ -109,10 +109,10 @@ export function ServicesOverviewSection() {
         <div 
           className="absolute inset-0"
           style={{
-            opacity: 0.08,
+            opacity: 0.15,
             backgroundImage: `
-              linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px)
+              linear-gradient(to right, rgba(0,0,0,0.2) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(0,0,0,0.2) 1px, transparent 1px)
             `,
             backgroundSize: '44px 44px',
             animation: 'gridShift 10s ease-in-out infinite',
