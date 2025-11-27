@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Futuristic Dark Theme - Deep Space & Neon */
+    --background: 240 30% 6%; /* #0b0b14 */
+    --foreground: 210 40% 98%; /* #f0f4f8 */
+
+    --card: 240 25% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 240 25% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 190 100% 50%; /* Neon Cyan #00f0ff */
+    --primary-foreground: 240 30% 6%;
+
+    --secondary: 270 100% 60%; /* Neon Purple #8a2be2 */
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 240 20% 15%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 320 100% 55%; /* Neon Pink #ff1493 */
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 20% 20%;
+    --input: 240 20% 20%;
+    --ring: 190 100% 50%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary selection:text-primary-foreground;
+    background-image: 
+      radial-gradient(circle at 15% 50%, rgba(138, 43, 226, 0.15), transparent 25%),
+      radial-gradient(circle at 85% 30%, rgba(0, 240, 255, 0.15), transparent 25%);
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10 shadow-xl;
+  }
+  
+  .glass-card {
+    @apply bg-card/40 backdrop-blur-md border border-white/5 hover:border-primary/50 transition-colors duration-300;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+  }
+  
+  .box-glow {
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.3);
+  }
+}

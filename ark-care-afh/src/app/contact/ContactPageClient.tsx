@@ -140,33 +140,89 @@ export default function ContactPageClient() {
 
       {/* Contact Section - Get in Touch */}
       <section className="relative py-16 md:py-24 bg-white overflow-hidden">
-        {/* Modern Whitish Background */}
+        {/* Futuristic Animated Dot Grid Background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {/* Clean white base */}
-          <div className="absolute inset-0 bg-gradient-to-br from-white via-slate-50/40 to-white" />
+          {/* Base white gradient */}
+          <div className="absolute inset-0 bg-gradient-to-br from-white via-slate-50/35 to-white" />
           
-          {/* Modern geometric grid */}
-          <div className="absolute inset-0 opacity-[0.025]" style={{
-            backgroundImage: `
-              linear-gradient(to right, rgba(0,0,0,0.06) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(0,0,0,0.06) 1px, transparent 1px)
-            `,
-            backgroundSize: '68px 68px'
-          }} />
+          {/* Animated Dot Grid - Primary Layer */}
+          <div 
+            className="absolute inset-0 opacity-[0.055]"
+            style={{
+              backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 1.5px, transparent 0)',
+              backgroundSize: '44px 44px',
+              animation: 'dotGridContact 19s ease-in-out infinite',
+            }}
+          />
           
-          {/* Soft floating gradients */}
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-primary/5 via-primary/2 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '20s'}} />
-          <div className="absolute bottom-0 left-0 w-[650px] h-[650px] bg-gradient-to-tr from-slate-100/30 via-primary/3 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '24s', animationDelay: '7s'}} />
+          {/* Animated Dot Grid - Secondary Layer */}
+          <div 
+            className="absolute inset-0 opacity-[0.04]"
+            style={{
+              backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.18) 1px, transparent 0)',
+              backgroundSize: '68px 68px',
+              animation: 'dotGridContact 23s ease-in-out infinite reverse',
+            }}
+          />
           
-          {/* Subtle dot pattern */}
-          <div className="absolute inset-0 opacity-[0.02]" style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.1) 1px, transparent 0)',
-            backgroundSize: '44px 44px'
-          }} />
+          {/* Animated Dot Grid - Tertiary Layer */}
+          <div 
+            className="absolute inset-0 opacity-[0.03]"
+            style={{
+              backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.16) 1px, transparent 0)',
+              backgroundSize: '92px 92px',
+              animation: 'dotGridContact 27s ease-in-out infinite',
+            }}
+          />
+          
+          {/* Animated connecting grid */}
+          <div 
+            className="absolute inset-0 opacity-[0.025]"
+            style={{
+              backgroundImage: `
+                linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px)
+              `,
+              backgroundSize: '44px 44px',
+              animation: 'gridContact 13s ease-in-out infinite',
+            }}
+          />
+          
+          {/* Floating gradient orbs */}
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-primary/5 via-primary/2 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '21s'}} />
+          <div className="absolute bottom-0 left-0 w-[650px] h-[650px] bg-gradient-to-tr from-slate-100/30 via-primary/3 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '25s', animationDelay: '8s'}} />
           
           {/* Light mesh overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/1.5 to-transparent" />
         </div>
+        
+        {/* CSS Animations */}
+        <style jsx>{`
+          @keyframes dotGridContact {
+            0%, 100% {
+              transform: translate(0, 0) rotate(0deg);
+            }
+            25% {
+              transform: translate(12px, -10px) rotate(0.85deg);
+            }
+            50% {
+              transform: translate(-10px, 12px) rotate(-0.85deg);
+            }
+            75% {
+              transform: translate(9px, 9px) rotate(0.65deg);
+            }
+          }
+          @keyframes gridContact {
+            0%, 100% {
+              transform: translate(0, 0);
+              opacity: 0.025;
+            }
+            50% {
+              transform: translate(5px, 5px);
+              opacity: 0.04;
+            }
+          }
+        `}</style>
         <div className="max-w-7xl mx-auto px-4 sm:px-5 md:px-6 lg:px-8 relative z-10">
           {/* Top Section: Contact Info and Form Side by Side */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 mb-12">

@@ -30,35 +30,87 @@ export function WhyChooseSection() {
 
   return (
     <section ref={sectionRef} className="relative py-12 sm:py-16 md:py-20 lg:py-28 overflow-hidden bg-white" data-section="why-choose">
-      {/* Modern Whitish Background with Creative Patterns */}
+      {/* Futuristic Animated Dot Grid Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Base white gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white via-slate-50/50 to-white" />
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-slate-50/40 to-white" />
         
-        {/* Subtle geometric grid */}
-        <div className="absolute inset-0 opacity-[0.03]" style={{
-          backgroundImage: `
-            linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px)
-          `,
-          backgroundSize: '60px 60px'
-        }} />
+        {/* Animated Dot Grid Pattern - Primary Layer */}
+        <div 
+          className="absolute inset-0 opacity-[0.06]"
+          style={{
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 1.5px, transparent 0)',
+            backgroundSize: '40px 40px',
+            animation: 'dotGridMove 20s linear infinite',
+          }}
+        />
         
-        {/* Soft circular gradients */}
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-primary/8 via-primary/4 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '8s'}} />
-        <div className="absolute bottom-0 left-0 w-[700px] h-[700px] bg-gradient-to-tr from-primary/6 via-slate-100/40 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '10s', animationDelay: '2s'}} />
+        {/* Animated Dot Grid Pattern - Secondary Layer (offset) */}
+        <div 
+          className="absolute inset-0 opacity-[0.04]"
+          style={{
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.15) 1px, transparent 0)',
+            backgroundSize: '56px 56px',
+            animation: 'dotGridMove 25s linear infinite reverse',
+          }}
+        />
         
-        {/* Modern dot pattern */}
-        <div className="absolute inset-0 opacity-[0.04]" style={{
-          backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.15) 1px, transparent 0)',
-          backgroundSize: '32px 32px'
-        }} />
+        {/* Animated Dot Grid Pattern - Tertiary Layer */}
+        <div 
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.1) 1px, transparent 0)',
+            backgroundSize: '72px 72px',
+            animation: 'dotGridMove 30s linear infinite',
+          }}
+        />
         
-        {/* Subtle diagonal lines */}
-        <div className="absolute inset-0 opacity-[0.02]" style={{
-          backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(0,0,0,0.05) 20px, rgba(0,0,0,0.05) 40px)',
-        }} />
+        {/* Floating gradient orbs with animation */}
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-primary/6 via-primary/2 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '12s'}} />
+        <div className="absolute bottom-0 left-0 w-[700px] h-[700px] bg-gradient-to-tr from-primary/5 via-slate-100/30 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '15s', animationDelay: '3s'}} />
+        
+        {/* Animated connecting lines between dots */}
+        <div 
+          className="absolute inset-0 opacity-[0.02]"
+          style={{
+            backgroundImage: `
+              linear-gradient(to right, rgba(0,0,0,0.08) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(0,0,0,0.08) 1px, transparent 1px)
+            `,
+            backgroundSize: '40px 40px',
+            animation: 'gridPulse 8s ease-in-out infinite',
+          }}
+        />
+        
+        {/* Subtle radial glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-gradient-radial from-primary/3 via-primary/1 to-transparent rounded-full blur-3xl opacity-50 animate-pulse" style={{animationDuration: '20s'}} />
       </div>
+      
+      {/* CSS Animation for dot grid movement */}
+      <style jsx>{`
+        @keyframes dotGridMove {
+          0%, 100% {
+            transform: translate(0, 0);
+          }
+          25% {
+            transform: translate(10px, 10px);
+          }
+          50% {
+            transform: translate(0, 20px);
+          }
+          75% {
+            transform: translate(-10px, 10px);
+          }
+        }
+        @keyframes gridPulse {
+          0%, 100% {
+            opacity: 0.02;
+          }
+          50% {
+            opacity: 0.04;
+          }
+        }
+      `}</style>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Professional Header */}

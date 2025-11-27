@@ -68,31 +68,85 @@ export function ServicesOverviewSection() {
   ]
 
   return (
-    <section ref={sectionRef} className="relative py-12 sm:py-16 md:py-20 lg:py-28 overflow-hidden bg-gradient-to-b from-white to-slate-50/30" data-section="services-overview">
-      {/* Modern Whitish Background */}
+    <section ref={sectionRef} className="relative py-12 sm:py-16 md:py-20 lg:py-28 overflow-hidden bg-white" data-section="services-overview">
+      {/* Futuristic Animated Dot Grid Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Clean white base with subtle gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white via-white to-slate-50/40" />
+        {/* Base white gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-slate-50/30 to-white" />
         
-        {/* Modern hexagon pattern */}
-        <div className="absolute inset-0 opacity-[0.025]" style={{
-          backgroundImage: `
-            repeating-linear-gradient(30deg, transparent, transparent 50px, rgba(0,0,0,0.1) 50px, rgba(0,0,0,0.1) 51px, transparent 51px, transparent 100px)
-          `,
-        }} />
+        {/* Animated Dot Grid Pattern - Multiple Layers */}
+        <div 
+          className="absolute inset-0 opacity-[0.05]"
+          style={{
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 1.5px, transparent 0)',
+            backgroundSize: '44px 44px',
+            animation: 'dotGridMove2 18s linear infinite',
+          }}
+        />
         
-        {/* Soft floating orbs */}
-        <div className="absolute top-20 right-20 w-[500px] h-[500px] bg-gradient-to-br from-primary/6 via-primary/3 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '12s'}} />
-        <div className="absolute bottom-20 left-20 w-[600px] h-[600px] bg-gradient-to-tr from-slate-200/30 via-primary/4 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '14s', animationDelay: '3s'}} />
+        <div 
+          className="absolute inset-0 opacity-[0.04]"
+          style={{
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.18) 1px, transparent 0)',
+            backgroundSize: '60px 60px',
+            animation: 'dotGridMove2 22s linear infinite reverse',
+          }}
+        />
         
-        {/* Subtle wave pattern */}
-        <div className="absolute inset-0 opacity-[0.02]" style={{
-          backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.05) 2px, rgba(0,0,0,0.05) 4px)',
-        }} />
+        <div 
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.15) 1px, transparent 0)',
+            backgroundSize: '76px 76px',
+            animation: 'dotGridMove2 28s linear infinite',
+          }}
+        />
         
-        {/* Light radial burst */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-primary/5 via-primary/2 to-transparent rounded-full blur-3xl opacity-50" />
+        {/* Animated connecting grid lines */}
+        <div 
+          className="absolute inset-0 opacity-[0.025]"
+          style={{
+            backgroundImage: `
+              linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '44px 44px',
+            animation: 'gridShift 10s ease-in-out infinite',
+          }}
+        />
+        
+        {/* Floating gradient orbs */}
+        <div className="absolute top-20 right-20 w-[600px] h-[600px] bg-gradient-to-br from-primary/5 via-primary/2 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '14s'}} />
+        <div className="absolute bottom-20 left-20 w-[650px] h-[650px] bg-gradient-to-tr from-slate-200/25 via-primary/3 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '18s', animationDelay: '4s'}} />
+        
+        {/* Radial glow effect */}
+        <div className="absolute top-1/3 left-1/3 w-[900px] h-[900px] bg-gradient-radial from-primary/4 via-primary/1 to-transparent rounded-full blur-3xl opacity-40 animate-pulse" style={{animationDuration: '22s'}} />
       </div>
+      
+      {/* CSS Animations */}
+      <style jsx>{`
+        @keyframes dotGridMove2 {
+          0%, 100% {
+            transform: translate(0, 0) scale(1);
+          }
+          33% {
+            transform: translate(15px, -10px) scale(1.05);
+          }
+          66% {
+            transform: translate(-10px, 15px) scale(0.95);
+          }
+        }
+        @keyframes gridShift {
+          0%, 100% {
+            transform: translate(0, 0);
+            opacity: 0.025;
+          }
+          50% {
+            transform: translate(5px, 5px);
+            opacity: 0.04;
+          }
+        }
+      `}</style>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}

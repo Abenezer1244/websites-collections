@@ -103,33 +103,87 @@ export function TestimonialsSection() {
 
   return (
     <section ref={sectionRef} className="relative py-12 sm:py-16 md:py-20 lg:py-28 overflow-hidden bg-white" data-section="testimonials">
-      {/* Modern Whitish Background */}
+      {/* Futuristic Animated Dot Grid Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Clean white base */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50/20 to-white" />
+        {/* Base white gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50/25 to-white" />
         
-        {/* Elegant grid pattern */}
-        <div className="absolute inset-0 opacity-[0.02]" style={{
-          backgroundImage: `
-            linear-gradient(to right, rgba(0,0,0,0.08) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(0,0,0,0.08) 1px, transparent 1px)
-          `,
-          backgroundSize: '80px 80px'
-        }} />
+        {/* Animated Dot Grid - Primary Layer */}
+        <div 
+          className="absolute inset-0 opacity-[0.055]"
+          style={{
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.22) 1.5px, transparent 0)',
+            backgroundSize: '48px 48px',
+            animation: 'dotGridFloat 16s ease-in-out infinite',
+          }}
+        />
         
-        {/* Soft gradient orbs */}
-        <div className="absolute top-10 right-10 w-[600px] h-[600px] bg-gradient-to-br from-primary/7 via-primary/3 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '15s'}} />
-        <div className="absolute bottom-10 left-10 w-[650px] h-[650px] bg-gradient-to-tr from-slate-100/40 via-primary/4 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '18s', animationDelay: '4s'}} />
+        {/* Animated Dot Grid - Secondary Layer */}
+        <div 
+          className="absolute inset-0 opacity-[0.04]"
+          style={{
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.18) 1px, transparent 0)',
+            backgroundSize: '64px 64px',
+            animation: 'dotGridFloat 20s ease-in-out infinite reverse',
+          }}
+        />
         
-        {/* Subtle circle pattern */}
-        <div className="absolute inset-0 opacity-[0.015]" style={{
-          backgroundImage: 'radial-gradient(circle at 3px 3px, rgba(0,0,0,0.1) 1.5px, transparent 0)',
-          backgroundSize: '48px 48px'
-        }} />
+        {/* Animated Dot Grid - Tertiary Layer */}
+        <div 
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.15) 1px, transparent 0)',
+            backgroundSize: '80px 80px',
+            animation: 'dotGridFloat 24s ease-in-out infinite',
+          }}
+        />
+        
+        {/* Animated grid lines connecting dots */}
+        <div 
+          className="absolute inset-0 opacity-[0.02]"
+          style={{
+            backgroundImage: `
+              linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '48px 48px',
+            animation: 'gridPulse2 9s ease-in-out infinite',
+          }}
+        />
+        
+        {/* Floating gradient orbs */}
+        <div className="absolute top-10 right-10 w-[600px] h-[600px] bg-gradient-to-br from-primary/6 via-primary/2 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '16s'}} />
+        <div className="absolute bottom-10 left-10 w-[650px] h-[650px] bg-gradient-to-tr from-slate-100/35 via-primary/3 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '20s', animationDelay: '5s'}} />
         
         {/* Light mesh overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/2 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/1.5 to-transparent" />
       </div>
+      
+      {/* CSS Animations */}
+      <style jsx>{`
+        @keyframes dotGridFloat {
+          0%, 100% {
+            transform: translate(0, 0) rotate(0deg);
+          }
+          25% {
+            transform: translate(12px, -8px) rotate(1deg);
+          }
+          50% {
+            transform: translate(-8px, 12px) rotate(-1deg);
+          }
+          75% {
+            transform: translate(8px, 8px) rotate(0.5deg);
+          }
+        }
+        @keyframes gridPulse2 {
+          0%, 100% {
+            opacity: 0.02;
+          }
+          50% {
+            opacity: 0.035;
+          }
+        }
+      `}</style>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}

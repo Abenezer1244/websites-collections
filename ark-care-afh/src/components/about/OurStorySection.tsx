@@ -29,32 +29,89 @@ export function OurStorySection() {
 
   return (
     <section ref={sectionRef} className="relative py-20 md:py-28 bg-white overflow-hidden">
-      {/* Modern Whitish Background */}
+      {/* Futuristic Animated Dot Grid Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Clean white base */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white via-slate-50/40 to-white" />
+        {/* Base white gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-slate-50/35 to-white" />
         
-        {/* Modern geometric pattern */}
-        <div className="absolute inset-0 opacity-[0.025]" style={{
-          backgroundImage: `
-            repeating-linear-gradient(60deg, transparent, transparent 40px, rgba(0,0,0,0.08) 40px, rgba(0,0,0,0.08) 41px, transparent 41px, transparent 80px),
-            repeating-linear-gradient(-60deg, transparent, transparent 40px, rgba(0,0,0,0.08) 40px, rgba(0,0,0,0.08) 41px, transparent 41px, transparent 80px)
-          `,
-        }} />
+        {/* Animated Dot Grid - Primary Layer */}
+        <div 
+          className="absolute inset-0 opacity-[0.05]"
+          style={{
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 1.5px, transparent 0)',
+            backgroundSize: '44px 44px',
+            animation: 'dotGridFlow 17s ease-in-out infinite',
+          }}
+        />
         
-        {/* Soft gradient orbs */}
-        <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-gradient-to-br from-primary/6 via-primary/2 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '14s'}} />
-        <div className="absolute bottom-0 right-0 w-[650px] h-[650px] bg-gradient-to-tr from-slate-100/35 via-primary/3 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '17s', animationDelay: '3s'}} />
+        {/* Animated Dot Grid - Secondary Layer */}
+        <div 
+          className="absolute inset-0 opacity-[0.04]"
+          style={{
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.18) 1px, transparent 0)',
+            backgroundSize: '60px 60px',
+            animation: 'dotGridFlow 21s ease-in-out infinite reverse',
+          }}
+        />
         
-        {/* Subtle dot pattern */}
-        <div className="absolute inset-0 opacity-[0.02]" style={{
-          backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.1) 1px, transparent 0)',
-          backgroundSize: '44px 44px'
-        }} />
+        {/* Animated Dot Grid - Tertiary Layer */}
+        <div 
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.16) 1px, transparent 0)',
+            backgroundSize: '76px 76px',
+            animation: 'dotGridFlow 25s ease-in-out infinite',
+          }}
+        />
+        
+        {/* Animated connecting grid */}
+        <div 
+          className="absolute inset-0 opacity-[0.02]"
+          style={{
+            backgroundImage: `
+              linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '44px 44px',
+            animation: 'gridFlow 12s ease-in-out infinite',
+          }}
+        />
+        
+        {/* Floating gradient orbs */}
+        <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-gradient-to-br from-primary/5 via-primary/2 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '15s'}} />
+        <div className="absolute bottom-0 right-0 w-[650px] h-[650px] bg-gradient-to-tr from-slate-100/30 via-primary/3 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '18s', animationDelay: '4s'}} />
         
         {/* Light mesh overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/1.5 to-transparent" />
       </div>
+      
+      {/* CSS Animations */}
+      <style jsx>{`
+        @keyframes dotGridFlow {
+          0%, 100% {
+            transform: translate(0, 0) rotate(0deg);
+          }
+          25% {
+            transform: translate(10px, -12px) rotate(0.5deg);
+          }
+          50% {
+            transform: translate(-12px, 10px) rotate(-0.5deg);
+          }
+          75% {
+            transform: translate(8px, 8px) rotate(0.25deg);
+          }
+        }
+        @keyframes gridFlow {
+          0%, 100% {
+            transform: translate(0, 0);
+            opacity: 0.02;
+          }
+          50% {
+            transform: translate(4px, 4px);
+            opacity: 0.035;
+          }
+        }
+      `}</style>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="inline-block mb-6">
