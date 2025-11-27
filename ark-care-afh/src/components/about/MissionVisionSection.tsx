@@ -28,41 +28,33 @@ export function MissionVisionSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative py-20 md:py-28 overflow-hidden" style={{
-      backgroundImage: 'url(/white_background_4.jpg)',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundAttachment: 'fixed'
-    }}>
-      {/* Background Image Layer */}
-      <div
-        className="absolute inset-0 w-full h-full"
-        style={{
-          backgroundImage: 'url(/white_background_4.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}
-        aria-hidden="true"
-      />
-
-      {/* Rich Dark Background */}
+    <section ref={sectionRef} className="relative py-20 md:py-28 overflow-hidden bg-gradient-to-b from-white to-slate-50/30">
+      {/* Modern Whitish Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Base gradient overlay - removed dark overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-transparent" />
+        {/* Clean white gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-white to-slate-50/50" />
         
-        {/* Animated orbs */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-primary/30 to-primary/10 rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}} />
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-primary/25 to-slate-700/50 rounded-full blur-3xl animate-pulse" style={{animationDuration: '5s', animationDelay: '1s'}} />
-        <div className="absolute top-1/2 right-1/4 w-[400px] h-[400px] bg-gradient-to-br from-primary/20 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '6s', animationDelay: '2s'}} />
-        
-        {/* Pattern overlay */}
-        <div className="absolute inset-0 opacity-10" style={{
-          backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(255,255,255,0.1) 1px, transparent 0)',
-          backgroundSize: '50px 50px'
+        {/* Elegant grid pattern */}
+        <div className="absolute inset-0 opacity-[0.02]" style={{
+          backgroundImage: `
+            linear-gradient(to right, rgba(0,0,0,0.06) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(0,0,0,0.06) 1px, transparent 1px)
+          `,
+          backgroundSize: '70px 70px'
         }} />
         
-        {/* Radial accent */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--primary)_0%,_transparent_60%)] opacity-20" />
+        {/* Soft floating gradients */}
+        <div className="absolute top-0 right-0 w-[550px] h-[550px] bg-gradient-to-br from-primary/5 via-primary/2 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '18s'}} />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-slate-100/30 via-primary/3 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '22s', animationDelay: '4s'}} />
+        
+        {/* Subtle circle pattern */}
+        <div className="absolute inset-0 opacity-[0.015]" style={{
+          backgroundImage: 'radial-gradient(circle at 3px 3px, rgba(0,0,0,0.08) 1.5px, transparent 0)',
+          backgroundSize: '52px 52px'
+        }} />
+        
+        {/* Light radial burst */}
+        <div className="absolute top-1/2 right-1/4 w-[700px] h-[700px] bg-gradient-radial from-primary/3 via-primary/1 to-transparent rounded-full blur-3xl opacity-50" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

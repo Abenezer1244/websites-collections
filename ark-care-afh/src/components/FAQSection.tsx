@@ -29,43 +29,29 @@ export function FAQSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative py-12 sm:py-16 md:py-20 lg:py-28 overflow-hidden" data-section="faq" style={{
-      backgroundImage: 'url(/white_background_4.jpg)',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundAttachment: 'fixed'
-    }}>
-      {/* Background Image Layer */}
-      <div
-        className="absolute inset-0 w-full h-full"
-        style={{
-          backgroundImage: 'url(/white_background_4.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}
-        aria-hidden="true"
-      />
-
-      {/* Rich Textured Background */}
+    <section ref={sectionRef} className="relative py-12 sm:py-16 md:py-20 lg:py-28 overflow-hidden bg-gradient-to-b from-slate-50/50 to-white" data-section="faq">
+      {/* Modern Whitish Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Base gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-white/95 to-primary/10" />
+        {/* Clean white gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-slate-50/30 to-white" />
         
-        {/* Animated orbs */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-primary/20 to-primary/5 rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}} />
-        <div className="absolute bottom-0 left-0 w-[550px] h-[550px] bg-gradient-to-tr from-primary/15 to-slate-100/50 rounded-full blur-3xl animate-pulse" style={{animationDuration: '5s', animationDelay: '1s'}} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial from-primary/10 via-transparent to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '6s', animationDelay: '2s'}} />
-        
-        {/* Dot pattern */}
-        <div className="absolute inset-0 opacity-8" style={{
-          backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(0,0,0,0.1) 1px, transparent 0)',
-          backgroundSize: '30px 30px'
+        {/* Modern dot grid */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{
+          backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.12) 1px, transparent 0)',
+          backgroundSize: '36px 36px'
         }} />
         
-        {/* Wave pattern */}
-        <div className="absolute inset-0 opacity-5" style={{
-          backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.05) 2px, rgba(0,0,0,0.05) 4px)',
+        {/* Soft floating gradients */}
+        <div className="absolute top-0 right-0 w-[550px] h-[550px] bg-gradient-to-br from-primary/5 via-primary/2 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '16s'}} />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-slate-100/30 via-primary/3 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '20s', animationDelay: '5s'}} />
+        
+        {/* Subtle line pattern */}
+        <div className="absolute inset-0 opacity-[0.015]" style={{
+          backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 25px, rgba(0,0,0,0.05) 25px, rgba(0,0,0,0.05) 26px, transparent 26px, transparent 50px)',
         }} />
+        
+        {/* Light radial glow */}
+        <div className="absolute top-1/3 left-1/3 w-[700px] h-[700px] bg-gradient-radial from-primary/4 via-primary/1 to-transparent rounded-full blur-3xl opacity-60" />
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

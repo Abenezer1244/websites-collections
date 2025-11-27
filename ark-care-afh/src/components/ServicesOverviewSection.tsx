@@ -68,42 +68,30 @@ export function ServicesOverviewSection() {
   ]
 
   return (
-    <section ref={sectionRef} className="relative py-12 sm:py-16 md:py-20 lg:py-28 overflow-hidden" data-section="services-overview" style={{
-      backgroundImage: 'url(/white_background_4.jpg)',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundAttachment: 'fixed'
-    }}>
-      {/* Background Image Layer */}
-      <div
-        className="absolute inset-0 w-full h-full"
-        style={{
-          backgroundImage: 'url(/white_background_4.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}
-        aria-hidden="true"
-      />
-
-      {/* Rich Colorful Background */}
+    <section ref={sectionRef} className="relative py-12 sm:py-16 md:py-20 lg:py-28 overflow-hidden bg-gradient-to-b from-white to-slate-50/30" data-section="services-overview">
+      {/* Modern Whitish Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Base gradient overlay layers - removed dark overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-transparent" />
+        {/* Clean white base with subtle gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-white to-slate-50/40" />
         
-        {/* Animated orbs */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-primary/25 to-primary/10 rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}} />
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-primary/20 to-slate-200/50 rounded-full blur-3xl animate-pulse" style={{animationDuration: '5s', animationDelay: '1s'}} />
-        <div className="absolute top-1/3 left-1/3 w-[400px] h-[400px] bg-gradient-to-br from-primary/15 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '6s', animationDelay: '2s'}} />
-        
-        {/* Pattern overlay */}
-        <div className="absolute inset-0 opacity-5" style={{
-          backgroundImage: 'linear-gradient(45deg, transparent 30%, rgba(0,0,0,0.1) 50%, transparent 70%), linear-gradient(-45deg, transparent 30%, rgba(0,0,0,0.1) 50%, transparent 70%)',
-          backgroundSize: '60px 60px'
+        {/* Modern hexagon pattern */}
+        <div className="absolute inset-0 opacity-[0.025]" style={{
+          backgroundImage: `
+            repeating-linear-gradient(30deg, transparent, transparent 50px, rgba(0,0,0,0.1) 50px, rgba(0,0,0,0.1) 51px, transparent 51px, transparent 100px)
+          `,
         }} />
         
-        {/* Radial gradient accent */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--primary)_0%,_transparent_60%)] opacity-30" />
+        {/* Soft floating orbs */}
+        <div className="absolute top-20 right-20 w-[500px] h-[500px] bg-gradient-to-br from-primary/6 via-primary/3 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '12s'}} />
+        <div className="absolute bottom-20 left-20 w-[600px] h-[600px] bg-gradient-to-tr from-slate-200/30 via-primary/4 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '14s', animationDelay: '3s'}} />
+        
+        {/* Subtle wave pattern */}
+        <div className="absolute inset-0 opacity-[0.02]" style={{
+          backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.05) 2px, rgba(0,0,0,0.05) 4px)',
+        }} />
+        
+        {/* Light radial burst */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-primary/5 via-primary/2 to-transparent rounded-full blur-3xl opacity-50" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

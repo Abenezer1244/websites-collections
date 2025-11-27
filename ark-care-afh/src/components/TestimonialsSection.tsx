@@ -102,41 +102,33 @@ export function TestimonialsSection() {
   }
 
   return (
-    <section ref={sectionRef} className="relative py-12 sm:py-16 md:py-20 lg:py-28 overflow-hidden" data-section="testimonials" style={{
-      backgroundImage: 'url(/white_background_4.jpg)',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundAttachment: 'fixed'
-    }}>
-      {/* Background Image Layer */}
-      <div
-        className="absolute inset-0 w-full h-full"
-        style={{
-          backgroundImage: 'url(/white_background_4.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}
-        aria-hidden="true"
-      />
-
-      {/* Rich Textured Background */}
+    <section ref={sectionRef} className="relative py-12 sm:py-16 md:py-20 lg:py-28 overflow-hidden bg-white" data-section="testimonials">
+      {/* Modern Whitish Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Base gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-50/80 via-primary/10 to-slate-100/80" />
+        {/* Clean white base */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50/20 to-white" />
         
-        {/* Animated orbs */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-primary/20 to-primary/5 rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}} />
-        <div className="absolute bottom-0 left-0 w-[550px] h-[550px] bg-gradient-to-tr from-primary/15 to-slate-100/50 rounded-full blur-3xl animate-pulse" style={{animationDuration: '5s', animationDelay: '1s'}} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial from-primary/10 via-transparent to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '6s', animationDelay: '2s'}} />
-        
-        {/* Diagonal pattern */}
-        <div className="absolute inset-0 opacity-5" style={{
-          backgroundImage: 'linear-gradient(45deg, transparent 30%, rgba(0,0,0,0.05) 50%, transparent 70%), linear-gradient(-45deg, transparent 30%, rgba(0,0,0,0.05) 50%, transparent 70%)',
-          backgroundSize: '50px 50px'
+        {/* Elegant grid pattern */}
+        <div className="absolute inset-0 opacity-[0.02]" style={{
+          backgroundImage: `
+            linear-gradient(to right, rgba(0,0,0,0.08) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(0,0,0,0.08) 1px, transparent 1px)
+          `,
+          backgroundSize: '80px 80px'
         }} />
         
-        {/* Radial accent */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--primary)_0%,_transparent_70%)] opacity-10" />
+        {/* Soft gradient orbs */}
+        <div className="absolute top-10 right-10 w-[600px] h-[600px] bg-gradient-to-br from-primary/7 via-primary/3 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '15s'}} />
+        <div className="absolute bottom-10 left-10 w-[650px] h-[650px] bg-gradient-to-tr from-slate-100/40 via-primary/4 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '18s', animationDelay: '4s'}} />
+        
+        {/* Subtle circle pattern */}
+        <div className="absolute inset-0 opacity-[0.015]" style={{
+          backgroundImage: 'radial-gradient(circle at 3px 3px, rgba(0,0,0,0.1) 1.5px, transparent 0)',
+          backgroundSize: '48px 48px'
+        }} />
+        
+        {/* Light mesh overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/2 to-transparent" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

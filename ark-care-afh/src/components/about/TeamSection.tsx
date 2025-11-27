@@ -80,25 +80,33 @@ export function TeamSection() {
   ]
 
   return (
-    <section ref={sectionRef} className="relative py-20 md:py-28 bg-gradient-to-br from-primary/10 via-slate-100 to-primary/20 overflow-hidden">
-      {/* Rich Colorful Background */}
+    <section ref={sectionRef} className="relative py-20 md:py-28 bg-gradient-to-b from-slate-50/40 to-white overflow-hidden">
+      {/* Modern Whitish Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Base gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-slate-100 to-primary/25" />
+        {/* Clean white gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-slate-50/20 to-white" />
         
-        {/* Animated orbs */}
-        <div className="absolute top-0 right-0 w-[550px] h-[550px] bg-gradient-to-br from-primary/25 to-primary/10 rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}} />
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-primary/20 to-slate-200/50 rounded-full blur-3xl animate-pulse" style={{animationDuration: '5s', animationDelay: '1s'}} />
-        <div className="absolute top-1/3 right-1/3 w-[450px] h-[450px] bg-gradient-to-br from-primary/15 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '6s', animationDelay: '2s'}} />
-        
-        {/* Pattern overlay */}
-        <div className="absolute inset-0 opacity-8" style={{
-          backgroundImage: 'linear-gradient(45deg, transparent 30%, rgba(0,0,0,0.03) 50%, transparent 70%), linear-gradient(-45deg, transparent 30%, rgba(0,0,0,0.03) 50%, transparent 70%)',
-          backgroundSize: '50px 50px'
+        {/* Elegant grid pattern */}
+        <div className="absolute inset-0 opacity-[0.02]" style={{
+          backgroundImage: `
+            linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px)
+          `,
+          backgroundSize: '65px 65px'
         }} />
         
-        {/* Radial accent */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--primary)_0%,_transparent_60%)] opacity-25" />
+        {/* Soft floating gradients */}
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-primary/5 via-primary/2 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '20s'}} />
+        <div className="absolute bottom-0 left-0 w-[650px] h-[650px] bg-gradient-to-tr from-slate-100/30 via-primary/3 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '24s', animationDelay: '6s'}} />
+        
+        {/* Subtle circle pattern */}
+        <div className="absolute inset-0 opacity-[0.015]" style={{
+          backgroundImage: 'radial-gradient(circle at 3px 3px, rgba(0,0,0,0.08) 1.5px, transparent 0)',
+          backgroundSize: '48px 48px'
+        }} />
+        
+        {/* Light radial glow */}
+        <div className="absolute top-1/3 right-1/3 w-[750px] h-[750px] bg-gradient-radial from-primary/3 via-primary/1 to-transparent rounded-full blur-3xl opacity-40" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

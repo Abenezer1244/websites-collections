@@ -137,26 +137,34 @@ export default function ContactPageClient() {
       {/* Hero Section - Modern Redesign */}
       <ContactHeroSection />
 
-      {/* Contact Section */}
-      <section className="relative py-16 md:py-24 bg-gradient-to-br from-primary/10 via-slate-100 to-primary/20 overflow-hidden">
-        {/* Rich Colorful Background */}
+      {/* Contact Section - Get in Touch */}
+      <section className="relative py-16 md:py-24 bg-white overflow-hidden">
+        {/* Modern Whitish Background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {/* Base gradient */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-slate-100 to-primary/25" />
+          {/* Clean white base */}
+          <div className="absolute inset-0 bg-gradient-to-br from-white via-slate-50/40 to-white" />
           
-          {/* Animated orbs */}
-          <div className="absolute top-0 right-0 w-[550px] h-[550px] bg-gradient-to-br from-primary/25 to-primary/10 rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}} />
-          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-primary/20 to-slate-200/60 rounded-full blur-3xl animate-pulse" style={{animationDuration: '5s', animationDelay: '1s'}} />
-          <div className="absolute top-1/3 left-1/3 w-[450px] h-[450px] bg-gradient-to-br from-primary/15 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '6s', animationDelay: '2s'}} />
-          
-          {/* Pattern overlay */}
-          <div className="absolute inset-0 opacity-8" style={{
-            backgroundImage: 'linear-gradient(45deg, transparent 30%, rgba(0,0,0,0.03) 50%, transparent 70%), linear-gradient(-45deg, transparent 30%, rgba(0,0,0,0.03) 50%, transparent 70%)',
-            backgroundSize: '50px 50px'
+          {/* Modern geometric grid */}
+          <div className="absolute inset-0 opacity-[0.025]" style={{
+            backgroundImage: `
+              linear-gradient(to right, rgba(0,0,0,0.06) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(0,0,0,0.06) 1px, transparent 1px)
+            `,
+            backgroundSize: '68px 68px'
           }} />
           
-          {/* Radial accent */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--primary)_0%,_transparent_70%)] opacity-15" />
+          {/* Soft floating gradients */}
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-primary/5 via-primary/2 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '20s'}} />
+          <div className="absolute bottom-0 left-0 w-[650px] h-[650px] bg-gradient-to-tr from-slate-100/30 via-primary/3 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '24s', animationDelay: '7s'}} />
+          
+          {/* Subtle dot pattern */}
+          <div className="absolute inset-0 opacity-[0.02]" style={{
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.1) 1px, transparent 0)',
+            backgroundSize: '44px 44px'
+          }} />
+          
+          {/* Light mesh overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/1.5 to-transparent" />
         </div>
         <div className="max-w-6xl mx-auto px-4 sm:px-5 md:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-10 md:gap-12">
@@ -384,8 +392,33 @@ export default function ContactPageClient() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-primary/15 to-slate-100">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-16 md:py-24 bg-white overflow-hidden">
+        {/* Modern Whitish Background */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* Clean white base */}
+          <div className="absolute inset-0 bg-gradient-to-br from-white via-slate-50/30 to-white" />
+          
+          {/* Modern geometric pattern */}
+          <div className="absolute inset-0 opacity-[0.025]" style={{
+            backgroundImage: `
+              repeating-linear-gradient(60deg, transparent, transparent 45px, rgba(0,0,0,0.06) 45px, rgba(0,0,0,0.06) 46px, transparent 46px, transparent 90px)
+            `,
+          }} />
+          
+          {/* Soft gradient orbs */}
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-primary/5 via-primary/2 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '21s'}} />
+          <div className="absolute bottom-0 left-0 w-[650px] h-[650px] bg-gradient-to-tr from-slate-100/30 via-primary/3 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '25s', animationDelay: '8s'}} />
+          
+          {/* Subtle dot grid */}
+          <div className="absolute inset-0 opacity-[0.02]" style={{
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.1) 1px, transparent 0)',
+            backgroundSize: '42px 42px'
+          }} />
+          
+          {/* Light mesh gradient */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/1 to-transparent" />
+        </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
             Frequently Asked Questions
           </h2>

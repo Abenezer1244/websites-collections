@@ -10,6 +10,75 @@
       "env": {
         "REGISTRY_URL": "https://tweakcn.com/r/themes/registry.json"
       }
+    },
+    "ref": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-ref"
+      ],
+      "env": {
+        "REF_API_KEY": "ref-9e7304974c8d64b8f095"
+      }
+    },
+    "semgrep": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "semgrep-mcp"
+      ],
+      "env": {
+        "SEMGREP_APP_TOKEN": "b3d5cb0fdc2c6a52b7b1ed0d7a84e1961e8a30523675ca698faf29c2f0afab1c"
+      }
+    },
+    "pieces": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "pieces-mcp"
+      ]
+    },
+    "exa-search": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "exa-search-mcp"
+      ],
+      "env": {
+        "EXA_API_KEY": "385ef11d-302f-45a3-8203-7155019aaf8e"
+      }
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "playwright-mcp"
+      ]
+    },
+    "magic": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@21st-dev/magic-mcp"
+      ]
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ],
+      "env": {
+        "CONTEXT7_API_KEY": "ctx7sk-a792309f-1b19-4d52-9ad1-f170d823394"
+      }
+    },
+    "kibo-ui": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://www.kibo-ui.com/api/mcp/mcp"
+      ]
     }
   }
 }
