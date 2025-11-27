@@ -66,37 +66,42 @@ export function CoreValuesSection() {
         
         {/* Animated Dot Grid - Primary Layer */}
         <div 
-          className="absolute inset-0 opacity-[0.06]"
+          className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.22) 1.5px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.3) 3px, transparent 0)',
             backgroundSize: '40px 40px',
+            opacity: 0.25,
             animation: 'dotGridHex 15s ease-in-out infinite',
           }}
         />
         
         {/* Animated Dot Grid - Secondary Layer */}
         <div 
-          className="absolute inset-0 opacity-[0.045]"
+          className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 1px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.25) 2.5px, transparent 0)',
             backgroundSize: '56px 56px',
+            opacity: 0.18,
             animation: 'dotGridHex 19s ease-in-out infinite reverse',
           }}
         />
         
         {/* Animated Dot Grid - Tertiary Layer */}
         <div 
-          className="absolute inset-0 opacity-[0.035]"
+          className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.18) 1px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 2px, transparent 0)',
             backgroundSize: '72px 72px',
+            opacity: 0.12,
             animation: 'dotGridHex 23s ease-in-out infinite',
           }}
         />
         
         {/* Animated connecting grid */}
         <div 
-          className="absolute inset-0 opacity-[0.025]"
+          className="absolute inset-0"
+          style={{
+            opacity: 0.08,
           style={{
             backgroundImage: `
               linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),

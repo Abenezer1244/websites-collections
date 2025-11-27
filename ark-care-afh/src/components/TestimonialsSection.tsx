@@ -110,37 +110,42 @@ export function TestimonialsSection() {
         
         {/* Animated Dot Grid - Primary Layer */}
         <div 
-          className="absolute inset-0 opacity-[0.055]"
+          className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.22) 1.5px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.3) 3px, transparent 0)',
             backgroundSize: '48px 48px',
+            opacity: 0.25,
             animation: 'dotGridFloat 16s ease-in-out infinite',
           }}
         />
         
         {/* Animated Dot Grid - Secondary Layer */}
         <div 
-          className="absolute inset-0 opacity-[0.04]"
+          className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.18) 1px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.25) 2.5px, transparent 0)',
             backgroundSize: '64px 64px',
+            opacity: 0.18,
             animation: 'dotGridFloat 20s ease-in-out infinite reverse',
           }}
         />
         
         {/* Animated Dot Grid - Tertiary Layer */}
         <div 
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.15) 1px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 2px, transparent 0)',
             backgroundSize: '80px 80px',
+            opacity: 0.12,
             animation: 'dotGridFloat 24s ease-in-out infinite',
           }}
         />
         
         {/* Animated grid lines connecting dots */}
         <div 
-          className="absolute inset-0 opacity-[0.02]"
+          className="absolute inset-0"
+          style={{
+            opacity: 0.08,
           style={{
             backgroundImage: `
               linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),

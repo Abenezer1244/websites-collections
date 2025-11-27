@@ -37,35 +37,40 @@ export function FAQSection() {
         
         {/* Animated Dot Grid - Multiple Layers */}
         <div 
-          className="absolute inset-0 opacity-[0.06]"
+          className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 1.5px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.3) 3px, transparent 0)',
             backgroundSize: '36px 36px',
+            opacity: 0.25,
             animation: 'dotGridPulse 14s ease-in-out infinite',
           }}
         />
         
         <div 
-          className="absolute inset-0 opacity-[0.045]"
+          className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.18) 1px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.25) 2.5px, transparent 0)',
             backgroundSize: '52px 52px',
+            opacity: 0.18,
             animation: 'dotGridPulse 18s ease-in-out infinite reverse',
           }}
         />
         
         <div 
-          className="absolute inset-0 opacity-[0.035]"
+          className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.16) 1px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 2px, transparent 0)',
             backgroundSize: '68px 68px',
+            opacity: 0.12,
             animation: 'dotGridPulse 22s ease-in-out infinite',
           }}
         />
         
         {/* Animated connecting lines */}
         <div 
-          className="absolute inset-0 opacity-[0.025]"
+          className="absolute inset-0"
+          style={{
+            opacity: 0.08,
           style={{
             backgroundImage: `
               linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),

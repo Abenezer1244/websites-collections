@@ -36,37 +36,42 @@ export function CareApproachSection() {
         
         {/* Animated Dot Grid - Primary Layer */}
         <div 
-          className="absolute inset-0 opacity-[0.05]"
+          className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 1.5px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.3) 3px, transparent 0)',
             backgroundSize: '46px 46px',
+            opacity: 0.25,
             animation: 'dotGridApproach 18s ease-in-out infinite',
           }}
         />
         
         {/* Animated Dot Grid - Secondary Layer */}
         <div 
-          className="absolute inset-0 opacity-[0.04]"
+          className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.18) 1px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.25) 2.5px, transparent 0)',
             backgroundSize: '62px 62px',
+            opacity: 0.18,
             animation: 'dotGridApproach 22s ease-in-out infinite reverse',
           }}
         />
         
         {/* Animated Dot Grid - Tertiary Layer */}
         <div 
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.16) 1px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 2px, transparent 0)',
             backgroundSize: '78px 78px',
+            opacity: 0.12,
             animation: 'dotGridApproach 26s ease-in-out infinite',
           }}
         />
         
         {/* Animated connecting grid */}
         <div 
-          className="absolute inset-0 opacity-[0.025]"
+          className="absolute inset-0"
+          style={{
+            opacity: 0.08,
           style={{
             backgroundImage: `
               linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),

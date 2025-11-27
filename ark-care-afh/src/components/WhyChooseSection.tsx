@@ -37,30 +37,33 @@ export function WhyChooseSection() {
         
         {/* Animated Dot Grid Pattern - Primary Layer */}
         <div 
-          className="absolute inset-0 opacity-[0.06]"
+          className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 1.5px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.3) 3px, transparent 0)',
             backgroundSize: '40px 40px',
+            opacity: 0.25,
             animation: 'dotGridMove 20s linear infinite',
           }}
         />
         
         {/* Animated Dot Grid Pattern - Secondary Layer (offset) */}
         <div 
-          className="absolute inset-0 opacity-[0.04]"
+          className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.15) 1px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.25) 2.5px, transparent 0)',
             backgroundSize: '56px 56px',
+            opacity: 0.18,
             animation: 'dotGridMove 25s linear infinite reverse',
           }}
         />
         
         {/* Animated Dot Grid Pattern - Tertiary Layer */}
         <div 
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.1) 1px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 2px, transparent 0)',
             backgroundSize: '72px 72px',
+            opacity: 0.12,
             animation: 'dotGridMove 30s linear infinite',
           }}
         />
@@ -71,13 +74,14 @@ export function WhyChooseSection() {
         
         {/* Animated connecting lines between dots */}
         <div 
-          className="absolute inset-0 opacity-[0.02]"
+          className="absolute inset-0"
           style={{
             backgroundImage: `
-              linear-gradient(to right, rgba(0,0,0,0.08) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(0,0,0,0.08) 1px, transparent 1px)
+              linear-gradient(to right, rgba(0,0,0,0.15) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(0,0,0,0.15) 1px, transparent 1px)
             `,
             backgroundSize: '40px 40px',
+            opacity: 0.08,
             animation: 'gridPulse 8s ease-in-out infinite',
           }}
         />
