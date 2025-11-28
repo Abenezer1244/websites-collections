@@ -44,7 +44,8 @@ export function MarqueeLogos({ logos, speed = 'slow', className = '' }: MarqueeL
             </MarqueeItem>
           ))}
         </MarqueeContent>
-        <MarqueeFade />
+        <MarqueeFade side="left" />
+        <MarqueeFade side="right" />
       </Marquee>
     </div>
   )
