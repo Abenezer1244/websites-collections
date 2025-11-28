@@ -95,7 +95,7 @@ export function AmenitiesSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.4) 2px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.4) 1.5px, transparent 0)',
             backgroundSize: '42px 42px',
             opacity: 0.4,
             animation: 'dotGridAmenities 16s ease-in-out infinite',
@@ -106,7 +106,7 @@ export function AmenitiesSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.35) 1.5px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.35) 1px, transparent 0)',
             backgroundSize: '58px 58px',
             opacity: 0.3,
             animation: 'dotGridAmenities 20s ease-in-out infinite reverse',
@@ -117,7 +117,7 @@ export function AmenitiesSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 1px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 0.5px, transparent 0)',
             backgroundSize: '74px 74px',
             opacity: 0.2,
             animation: 'dotGridAmenities 24s ease-in-out infinite',

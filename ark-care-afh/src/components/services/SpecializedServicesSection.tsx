@@ -56,7 +56,7 @@ export function SpecializedServicesSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.4) 2px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.4) 1.5px, transparent 0)',
             backgroundSize: '50px 50px',
             opacity: 0.4,
             animation: 'dotGridSpecialties 17s ease-in-out infinite',
@@ -66,7 +66,7 @@ export function SpecializedServicesSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.35) 1.5px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.35) 1px, transparent 0)',
             backgroundSize: '75px 75px',
             opacity: 0.3,
             animation: 'dotGridSpecialties 21s ease-in-out infinite reverse',
@@ -76,7 +76,7 @@ export function SpecializedServicesSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 1px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 0.5px, transparent 0)',
             backgroundSize: '100px 100px',
             opacity: 0.2,
             animation: 'dotGridSpecialties 25s ease-in-out infinite',

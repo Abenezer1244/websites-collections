@@ -68,7 +68,7 @@ export function CoreValuesSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.4) 2px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.4) 1.5px, transparent 0)',
             backgroundSize: '40px 40px',
             opacity: 0.4,
             animation: 'dotGridHex 15s ease-in-out infinite',
@@ -79,7 +79,7 @@ export function CoreValuesSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.35) 1.5px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.35) 1px, transparent 0)',
             backgroundSize: '56px 56px',
             opacity: 0.3,
             animation: 'dotGridHex 19s ease-in-out infinite reverse',
@@ -90,7 +90,7 @@ export function CoreValuesSection() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 1px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 0.5px, transparent 0)',
             backgroundSize: '72px 72px',
             opacity: 0.2,
             animation: 'dotGridHex 23s ease-in-out infinite',
