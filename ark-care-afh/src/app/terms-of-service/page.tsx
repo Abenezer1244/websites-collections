@@ -55,21 +55,18 @@ export default function TermsOfService() {
       <JsonLd data={breadcrumbSchema} />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-primary/90 to-primary/70 text-white py-16">
-        <AnimatedBlob position="top-right" size="lg" opacity="medium" />
-        <AnimatedBlobSecondary position="bottom-left" size="md" opacity="light" />
-
+      <section className="relative overflow-hidden bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex justify-center mb-6">
-            <Announcement className="bg-white/10 backdrop-blur-md border-white/20 text-white" themed>
-              <AnnouncementTag className="bg-white/20 text-white">Terms</AnnouncementTag>
-              <AnnouncementTitle className="text-white">
+            <Announcement className="bg-primary/10 backdrop-blur-md border-primary/20 text-slate-900" themed>
+              <AnnouncementTag className="bg-primary/20 text-slate-900">Terms</AnnouncementTag>
+              <AnnouncementTitle className="text-slate-900">
                 Terms & Conditions
               </AnnouncementTitle>
             </Announcement>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold">Terms of Service</h1>
-          <p className="text-lg mt-4 opacity-90 max-w-2xl">
+          <h1 className="text-4xl md:text-5xl font-bold text-slate-900">Terms of Service</h1>
+          <p className="text-lg mt-4 text-slate-700 max-w-2xl">
             Terms and conditions for using Ark Care AFH services and website
           </p>
         </div>

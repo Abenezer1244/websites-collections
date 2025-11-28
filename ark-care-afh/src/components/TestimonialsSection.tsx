@@ -103,65 +103,6 @@ export function TestimonialsSection() {
 
   return (
     <section ref={sectionRef} className="relative py-12 sm:py-16 md:py-20 lg:py-28 overflow-hidden bg-white" data-section="testimonials">
-      {/* Futuristic Animated Dot Grid Background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Base white gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50/25 to-white" />
-        
-        {/* Animated Dot Grid - Primary Layer */}
-        <div 
-          className="absolute inset-0"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.4) 1.5px, transparent 0)',
-            backgroundSize: '48px 48px',
-            opacity: 0.4,
-            animation: 'dotGridFloat 16s ease-in-out infinite',
-          }}
-        />
-        
-        {/* Animated Dot Grid - Secondary Layer */}
-        <div 
-          className="absolute inset-0"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.35) 1px, transparent 0)',
-            backgroundSize: '64px 64px',
-            opacity: 0.3,
-            animation: 'dotGridFloat 20s ease-in-out infinite reverse',
-          }}
-        />
-        
-        {/* Animated Dot Grid - Tertiary Layer */}
-        <div 
-          className="absolute inset-0"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 0.5px, transparent 0)',
-            backgroundSize: '80px 80px',
-            opacity: 0.2,
-            animation: 'dotGridFloat 24s ease-in-out infinite',
-          }}
-        />
-        
-        {/* Animated grid lines connecting dots */}
-        <div 
-          className="absolute inset-0"
-          style={{
-            opacity: 0.15,
-            backgroundImage: `
-              linear-gradient(to right, rgba(0,0,0,0.2) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(0,0,0,0.2) 1px, transparent 1px)
-            `,
-            backgroundSize: '48px 48px',
-            animation: 'gridPulse2 9s ease-in-out infinite',
-          }}
-        />
-        
-        {/* Floating gradient orbs */}
-        <div className="absolute top-10 right-10 w-[600px] h-[600px] bg-gradient-to-br from-primary/6 via-primary/2 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '16s'}} />
-        <div className="absolute bottom-10 left-10 w-[650px] h-[650px] bg-gradient-to-tr from-slate-100/35 via-primary/3 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '20s', animationDelay: '5s'}} />
-        
-        {/* Light mesh overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/1.5 to-transparent" />
-      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}

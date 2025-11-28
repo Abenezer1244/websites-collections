@@ -32,68 +32,6 @@ export function CareApproachSection() {
 
   return (
     <section ref={sectionRef} className="relative py-20 md:py-28 bg-white overflow-hidden">
-      {/* Futuristic Animated Dot Grid Background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Base white gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white via-slate-50/25 to-white" />
-        
-        {/* Animated Dot Grid - Primary Layer */}
-        <div 
-          className="absolute inset-0"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.4) 1.5px, transparent 0)',
-            backgroundSize: '46px 46px',
-            opacity: 0.4,
-            animation: 'dotGridApproach 18s ease-in-out infinite',
-          }}
-        />
-        
-        {/* Animated Dot Grid - Secondary Layer */}
-        <div 
-          className="absolute inset-0"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.35) 1px, transparent 0)',
-            backgroundSize: '62px 62px',
-            opacity: 0.3,
-            animation: 'dotGridApproach 22s ease-in-out infinite reverse',
-          }}
-        />
-        
-        {/* Animated Dot Grid - Tertiary Layer */}
-        <div 
-          className="absolute inset-0"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 0.5px, transparent 0)',
-            backgroundSize: '78px 78px',
-            opacity: 0.2,
-            animation: 'dotGridApproach 26s ease-in-out infinite',
-          }}
-        />
-        
-        {/* Animated connecting grid */}
-        <div 
-          className="absolute inset-0"
-          style={{
-            opacity: 0.15,
-            backgroundImage: `
-              linear-gradient(to right, rgba(0,0,0,0.2) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(0,0,0,0.2) 1px, transparent 1px)
-            `,
-            backgroundSize: '46px 46px',
-            animation: 'gridApproach 12s ease-in-out infinite',
-          }}
-        />
-        
-        {/* Floating gradient orbs */}
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-primary/5 via-primary/2 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '19s'}} />
-        <div className="absolute bottom-0 left-0 w-[650px] h-[650px] bg-gradient-to-tr from-slate-100/30 via-primary/3 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '23s', animationDelay: '7s'}} />
-        
-        {/* Light mesh gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/1 to-transparent" />
-        
-        {/* Center radial glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[850px] bg-gradient-radial from-primary/4 via-primary/1 to-transparent rounded-full blur-3xl opacity-40 animate-pulse" style={{animationDuration: '25s'}} />
-      </div>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <Announcement className="mx-auto max-w-fit mb-4" themed>

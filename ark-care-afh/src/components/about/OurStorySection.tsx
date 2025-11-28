@@ -31,65 +31,6 @@ export function OurStorySection() {
 
   return (
     <section ref={sectionRef} className="relative py-20 md:py-28 bg-white overflow-hidden">
-      {/* Futuristic Animated Dot Grid Background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Base white gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white via-slate-50/35 to-white" />
-        
-        {/* Animated Dot Grid - Primary Layer */}
-        <div 
-          className="absolute inset-0"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.4) 1.5px, transparent 0)',
-            backgroundSize: '44px 44px',
-            opacity: 0.4,
-            animation: 'dotGridFlow 17s ease-in-out infinite',
-          }}
-        />
-        
-        {/* Animated Dot Grid - Secondary Layer */}
-        <div 
-          className="absolute inset-0"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.35) 1px, transparent 0)',
-            backgroundSize: '60px 60px',
-            opacity: 0.3,
-            animation: 'dotGridFlow 21s ease-in-out infinite reverse',
-          }}
-        />
-        
-        {/* Animated Dot Grid - Tertiary Layer */}
-        <div 
-          className="absolute inset-0"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 0.5px, transparent 0)',
-            backgroundSize: '76px 76px',
-            opacity: 0.2,
-            animation: 'dotGridFlow 25s ease-in-out infinite',
-          }}
-        />
-        
-        {/* Animated connecting grid */}
-        <div 
-          className="absolute inset-0"
-          style={{
-            opacity: 0.15,
-            backgroundImage: `
-              linear-gradient(to right, rgba(0,0,0,0.2) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(0,0,0,0.2) 1px, transparent 1px)
-            `,
-            backgroundSize: '44px 44px',
-            animation: 'gridFlow 12s ease-in-out infinite',
-          }}
-        />
-        
-        {/* Floating gradient orbs */}
-        <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-gradient-to-br from-primary/5 via-primary/2 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '15s'}} />
-        <div className="absolute bottom-0 right-0 w-[650px] h-[650px] bg-gradient-to-tr from-slate-100/30 via-primary/3 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '18s', animationDelay: '4s'}} />
-        
-        {/* Light mesh overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/1.5 to-transparent" />
-      </div>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="inline-block mb-6">

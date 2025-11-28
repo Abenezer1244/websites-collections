@@ -10,31 +10,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
-      {/* Background Image Layer */}
-      <div
-        className="absolute inset-0 w-full h-full opacity-10"
-        style={{
-          backgroundImage: 'url(/white_background_4.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}
-        aria-hidden="true"
-      />
-
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-slate-800/90 to-slate-900/95" />
-
-      {/* Animated Background Orbs */}
-      <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-gradient-to-br from-primary/20 to-primary/5 rounded-full blur-3xl pointer-events-none z-0 animate-pulse" style={{opacity: 0.4, animationDuration: '6s'}} />
-      <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-gradient-to-tl from-primary/15 to-primary/5 rounded-full blur-3xl pointer-events-none z-0 animate-pulse" style={{opacity: 0.3, animationDuration: '7s', animationDelay: '1s'}} />
-      <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-gradient-to-bl from-primary/10 to-transparent rounded-full blur-3xl pointer-events-none z-0 animate-pulse" style={{opacity: 0.25, animationDuration: '8s', animationDelay: '2s'}} />
-
-      {/* Pattern Overlay */}
-      <div className="absolute inset-0 opacity-5" style={{
-        backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(255,255,255,0.1) 1px, transparent 0)',
-        backgroundSize: '50px 50px'
-      }} />
+    <footer className="relative bg-white text-slate-900 overflow-hidden">
 
       {/* Main Footer Content */}
       <div className="relative z-10 pt-12 sm:pt-14 md:pt-16 pb-6 sm:pb-7 md:pb-8">
@@ -42,15 +18,15 @@ export function Footer() {
           {/* Top Section */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-10 lg:mb-12">
             {/* Brand Section */}
-            <Card className="lg:col-span-1 bg-transparent border-white/20">
+            <Card className="lg:col-span-1 bg-transparent border-slate-200">
               <CardHeader>
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/70 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-primary/30">
                     A
                   </div>
-                  <CardTitle className="text-2xl font-black text-white">Ark Care AFH</CardTitle>
+                  <CardTitle className="text-2xl font-black text-slate-900">Ark Care AFH</CardTitle>
                 </div>
-                <CardDescription className="text-slate-300 leading-relaxed mb-6">
+                <CardDescription className="text-slate-600 leading-relaxed mb-6">
                   Providing compassionate, personalized adult family home care in Algona, Washington. Licensed and certified for your peace of mind.
                 </CardDescription>
               </CardHeader>
@@ -61,7 +37,7 @@ export function Footer() {
                     asChild
                     variant="ghost"
                     size="icon"
-                    className="w-10 h-10 bg-white/10 hover:bg-primary/40 text-slate-300 hover:text-white"
+                    className="w-10 h-10 bg-slate-100 hover:bg-primary/40 text-slate-600 hover:text-white"
                   >
                     <a 
                       href={businessInfo.sameAs[0]} 
@@ -79,7 +55,7 @@ export function Footer() {
                     asChild
                     variant="ghost"
                     size="icon"
-                    className="w-10 h-10 bg-white/10 hover:bg-primary/40 text-slate-300 hover:text-white"
+                    className="w-10 h-10 bg-slate-100 hover:bg-primary/40 text-slate-600 hover:text-white"
                   >
                     <a 
                       href={businessInfo.sameAs[2]} 
@@ -97,7 +73,7 @@ export function Footer() {
                     asChild
                     variant="ghost"
                     size="icon"
-                    className="w-10 h-10 bg-white/10 hover:bg-primary/40 text-slate-300 hover:text-white"
+                    className="w-10 h-10 bg-slate-100 hover:bg-primary/40 text-slate-600 hover:text-white"
                   >
                     <a 
                       href={businessInfo.sameAs[1]} 
@@ -116,9 +92,9 @@ export function Footer() {
             </Card>
 
             {/* Quick Navigation */}
-            <Card className="bg-transparent border-white/20">
+            <Card className="bg-transparent border-slate-200">
               <CardHeader>
-                <CardTitle className="font-bold text-white text-lg relative inline-block">
+                <CardTitle className="font-bold text-slate-900 text-lg relative inline-block">
                   Navigation
                   <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-transparent"></span>
                 </CardTitle>
@@ -133,7 +109,7 @@ export function Footer() {
                     { href: '/contact', label: 'Contact' }
                   ].map((link) => (
                     <li key={link.href}>
-                      <Button asChild variant="ghost" className="text-slate-300 hover:text-primary p-0 h-auto justify-start">
+                      <Button asChild variant="ghost" className="text-slate-600 hover:text-primary p-0 h-auto justify-start">
                         <Link href={link.href}>
                           {link.label}
                         </Link>
@@ -145,9 +121,9 @@ export function Footer() {
             </Card>
 
             {/* Services */}
-            <Card className="bg-transparent border-white/20">
+            <Card className="bg-transparent border-slate-200">
               <CardHeader>
-                <CardTitle className="font-bold text-white text-lg relative inline-block">
+                <CardTitle className="font-bold text-slate-900 text-lg relative inline-block">
                   Our Services
                   <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-transparent"></span>
                 </CardTitle>
@@ -161,7 +137,7 @@ export function Footer() {
                     'Activities & Engagement',
                     'Specialized Care Programs'
                   ].map((service, index) => (
-                    <li key={index} className="text-slate-300 flex items-start gap-2">
+                    <li key={index} className="text-slate-600 flex items-start gap-2">
                       <Badge variant="outline" className="w-5 h-5 p-0 rounded-full border-primary bg-primary/20 flex items-center justify-center mt-0.5 flex-shrink-0">
                         <svg className="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -175,9 +151,9 @@ export function Footer() {
             </Card>
 
             {/* Contact & Info */}
-            <Card className="bg-transparent border-white/20">
+            <Card className="bg-transparent border-slate-200">
               <CardHeader>
-                <CardTitle className="font-bold text-white text-lg relative inline-block">
+                <CardTitle className="font-bold text-slate-900 text-lg relative inline-block">
                   Get in Touch
                   <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-transparent"></span>
                 </CardTitle>
@@ -190,8 +166,8 @@ export function Footer() {
                     </svg>
                   </Badge>
                   <div>
-                    <p className="text-slate-400 text-xs font-medium mb-1 uppercase tracking-wider">Phone</p>
-                    <Button asChild variant="link" className="text-white hover:text-primary p-0 h-auto font-semibold text-lg">
+                    <p className="text-slate-500 text-xs font-medium mb-1 uppercase tracking-wider">Phone</p>
+                    <Button asChild variant="link" className="text-slate-700 hover:text-primary p-0 h-auto font-semibold text-lg">
                       <a 
                         href={`tel:${businessInfo.telephone}`}
                         aria-label={`Call Ark Care AFH at ${businessInfo.telephone}`}
@@ -209,8 +185,8 @@ export function Footer() {
                     </svg>
                   </Badge>
                   <div>
-                    <p className="text-slate-400 text-xs font-medium mb-1 uppercase tracking-wider">Address</p>
-                    <p className="text-slate-300 leading-relaxed">
+                    <p className="text-slate-500 text-xs font-medium mb-1 uppercase tracking-wider">Address</p>
+                    <p className="text-slate-600 leading-relaxed">
                       {businessInfo.address.streetAddress}<br />
                       {businessInfo.address.addressLocality}, {businessInfo.address.addressRegion} {businessInfo.address.postalCode}
                     </p>
@@ -223,8 +199,8 @@ export function Footer() {
                     </svg>
                   </Badge>
                   <div>
-                    <p className="text-slate-400 text-xs font-medium mb-1 uppercase tracking-wider">Hours</p>
-                    <p className="text-slate-300 font-semibold">Available 24/7</p>
+                    <p className="text-slate-500 text-xs font-medium mb-1 uppercase tracking-wider">Hours</p>
+                    <p className="text-slate-600 font-semibold">Available 24/7</p>
                   </div>
                 </div>
               </CardContent>
@@ -232,12 +208,12 @@ export function Footer() {
           </div>
 
           {/* Divider */}
-          <div className="h-px bg-gradient-to-r from-transparent via-slate-700/50 to-transparent mb-8" />
+          <div className="h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent mb-8" />
 
           {/* Bottom Section */}
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="text-center md:text-left">
-              <p className="text-slate-400 text-sm mb-2">
+              <p className="text-slate-600 text-sm mb-2">
                 © {currentYear} Ark Care AFH. All rights reserved.
               </p>
               <p className="text-slate-500 text-xs">
@@ -245,17 +221,17 @@ export function Footer() {
               </p>
             </div>
             <div className="flex flex-wrap gap-6 text-sm justify-center md:justify-end">
-              <Button asChild variant="ghost" size="sm" className="text-slate-400 hover:text-primary">
+              <Button asChild variant="ghost" size="sm" className="text-slate-600 hover:text-primary">
                 <Link href="/privacy-policy">
                   Privacy Policy
                 </Link>
               </Button>
-              <Button asChild variant="ghost" size="sm" className="text-slate-400 hover:text-primary">
+              <Button asChild variant="ghost" size="sm" className="text-slate-600 hover:text-primary">
                 <Link href="/terms-of-service">
                   Terms of Service
                 </Link>
               </Button>
-              <Button asChild variant="ghost" size="sm" className="text-slate-400 hover:text-primary">
+              <Button asChild variant="ghost" size="sm" className="text-slate-600 hover:text-primary">
                 <a href="#" aria-label="Accessibility information">
                   Accessibility
                 </a>
@@ -266,9 +242,9 @@ export function Footer() {
       </div>
 
       {/* Footer Bottom Bar */}
-      <div className="relative z-10 border-t border-slate-700/50 bg-slate-900/50 backdrop-blur-sm">
+      <div className="relative z-10 border-t border-slate-200 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <p className="text-center text-slate-500 text-xs leading-relaxed">
+          <p className="text-center text-slate-600 text-xs leading-relaxed">
             Ark Care AFH is a state-licensed adult family home providing compassionate, personalized care to residents in Algona, Washington. 
             We specialize in mental health support, dementia care, and developmental disabilities.
           </p>

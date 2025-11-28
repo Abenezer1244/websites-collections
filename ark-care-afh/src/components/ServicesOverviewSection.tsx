@@ -64,63 +64,6 @@ export function ServicesOverviewSection() {
 
   return (
     <section ref={sectionRef} className="relative py-12 sm:py-16 md:py-20 lg:py-28 overflow-hidden bg-white" data-section="services-overview">
-      {/* Futuristic Animated Dot Grid Background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Base white gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white via-slate-50/30 to-white" />
-        
-        {/* Animated Dot Grid Pattern - Multiple Layers */}
-        <div 
-          className="absolute inset-0"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.4) 1.5px, transparent 0)',
-            backgroundSize: '44px 44px',
-            opacity: 0.4,
-            animation: 'dotGridMove2 18s linear infinite',
-          }}
-        />
-        
-        <div 
-          className="absolute inset-0"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.35) 1px, transparent 0)',
-            backgroundSize: '60px 60px',
-            opacity: 0.3,
-            animation: 'dotGridMove2 22s linear infinite reverse',
-          }}
-        />
-        
-        <div 
-          className="absolute inset-0"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.2) 0.5px, transparent 0)',
-            backgroundSize: '76px 76px',
-            opacity: 0.2,
-            animation: 'dotGridMove2 28s linear infinite',
-          }}
-        />
-        
-        {/* Animated connecting grid lines */}
-        <div 
-          className="absolute inset-0"
-          style={{
-            opacity: 0.15,
-            backgroundImage: `
-              linear-gradient(to right, rgba(0,0,0,0.2) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(0,0,0,0.2) 1px, transparent 1px)
-            `,
-            backgroundSize: '44px 44px',
-            animation: 'gridShift 10s ease-in-out infinite',
-          }}
-        />
-        
-        {/* Floating gradient orbs */}
-        <div className="absolute top-20 right-20 w-[600px] h-[600px] bg-gradient-to-br from-primary/5 via-primary/2 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '14s'}} />
-        <div className="absolute bottom-20 left-20 w-[650px] h-[650px] bg-gradient-to-tr from-slate-200/25 via-primary/3 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '18s', animationDelay: '4s'}} />
-        
-        {/* Radial glow effect */}
-        <div className="absolute top-1/3 left-1/3 w-[900px] h-[900px] bg-gradient-radial from-primary/4 via-primary/1 to-transparent rounded-full blur-3xl opacity-40 animate-pulse" style={{animationDuration: '22s'}} />
-      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header with Kibo UI Announcement */}
