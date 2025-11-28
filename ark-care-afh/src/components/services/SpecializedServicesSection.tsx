@@ -121,8 +121,12 @@ export function SpecializedServicesSection() {
           {specialties.map((specialty, index) => (
             <Card
               key={index}
-              className={`group h-full bg-gradient-to-br from-white via-slate-50 to-primary/5 border-2 border-primary/20 shadow-xl transition-all duration-700 hover:shadow-2xl hover:scale-105 hover:border-primary/40 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              style={{transitionDelay: `${(index + 1) * 100}ms`}}
+              className={`group h-full bg-gradient-to-br from-white via-slate-50 to-primary/5 border-2 border-primary/20 shadow-xl transition-all duration-700 hover:shadow-2xl hover:scale-105 hover:border-primary/40 flashlight-card animate-on-scroll ${isVisible ? 'opacity-100 translate-y-0' : ''}`}
+              style={{
+                transitionDelay: `${(index + 1) * 100}ms`,
+                animationDelay: `${(index + 1) * 100}ms`,
+                animationFillMode: 'both'
+              }}
             >
               <CardHeader>
                 <Badge variant="secondary" className="w-fit mb-2">Specialized</Badge>

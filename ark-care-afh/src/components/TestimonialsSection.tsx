@@ -183,24 +183,19 @@ export function TestimonialsSection() {
           </p>
         </div>
 
-        {/* Auto-Gliding Testimonials Carousel */}
+        {/* Marquee Testimonials */}
         <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="relative max-w-6xl mx-auto">
-            {/* Carousel Container */}
-            <div className="relative overflow-hidden">
-              {/* Testimonials Track */}
-              <div 
-                className="flex transition-transform duration-700 ease-in-out"
-                style={{
-                  transform: `translateX(-${currentIndex * 100}%)`
-                }}
-              >
-                {testimonials.map((testimonial, index) => (
+          <div className="relative max-w-7xl mx-auto overflow-hidden">
+            {/* Marquee Container with Alpha Mask */}
+            <div className="marquee-container">
+              <div className="testimonial-marquee">
+                {/* Duplicate testimonials for seamless loop */}
+                {[...testimonials, ...testimonials].map((testimonial, index) => (
                   <div
                     key={index}
                     className="min-w-full flex-shrink-0 px-4"
                   >
-                    <div className="relative bg-gradient-to-br from-white via-slate-50 to-primary/5 rounded-3xl shadow-2xl border border-primary/10 p-10 md:p-14 overflow-hidden">
+                    <div className="relative bg-gradient-to-br from-white via-slate-50 to-primary/5 rounded-3xl shadow-2xl border border-primary/10 p-10 md:p-14 overflow-hidden flashlight-card min-w-[90%] md:min-w-[45%] lg:min-w-[35%] mx-4">
                       {/* Decorative Background Elements */}
                       <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-primary/5 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
                       <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-primary/10 to-transparent rounded-full blur-2xl translate-y-1/2 -translate-x-1/2" />
@@ -261,22 +256,8 @@ export function TestimonialsSection() {
                 ))}
               </div>
             </div>
+          </div>
 
-            {/* Navigation Dots */}
-            <div className="flex justify-center items-center gap-3 mt-10">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`transition-all duration-300 rounded-full ${
-                    index === currentIndex
-                      ? 'w-10 h-3 bg-primary shadow-lg shadow-primary/30'
-                      : 'w-3 h-3 bg-primary/20 hover:bg-primary/40'
-                  }`}
-                  aria-label={`Go to testimonial ${index + 1}`}
-                />
-              ))}
-            </div>
           </div>
         </div>
 

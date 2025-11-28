@@ -5,31 +5,11 @@ import { useEffect, useRef, useState } from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Announcement, AnnouncementTag, AnnouncementTitle } from '@/components/kibo-ui/announcement'
+import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+import { AnimatedText } from '@/components/AnimatedText'
 
 export function WhyChooseSection() {
-  const [isVisible, setIsVisible] = useState(false)
-  const sectionRef = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      { threshold: 0.1 }
-    )
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current)
-      }
-    }
-  }, [])
+  const { ref: sectionRef, isVisible } = useScrollAnimation({ threshold: 0.1, triggerOnce: true })
 
   const features = [
     {
@@ -161,9 +141,12 @@ export function WhyChooseSection() {
             </Announcement>
             <div className={`mt-2 h-1 bg-primary mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'w-20' : 'w-0'}`} />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-slate-900">
-            Why Families Trust Ark Care AFH
-          </h2>
+          <AnimatedText
+            text="Why Families Trust Ark Care AFH"
+            className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-slate-900 block"
+            delay={0.2}
+            animationType="clip-slide"
+          />
           <p className="text-lg max-w-3xl mx-auto leading-relaxed text-slate-700">
             Licensed, professional care in a warm, home-like setting. Experience the peace of mind that comes with expert care for your loved ones.
           </p>
@@ -174,8 +157,12 @@ export function WhyChooseSection() {
           {features.map((feature, index) => (
             <Card
               key={index}
-              className={`group h-full bg-gradient-to-br from-white via-slate-50 to-primary/5 border-primary/20 shadow-xl backdrop-blur-sm transition-all duration-700 hover:shadow-2xl hover:shadow-primary/20 hover:scale-105 hover:border-primary/40 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              style={{transitionDelay: `${(index + 1) * 100}ms`}}
+              className={`group h-full bg-gradient-to-br from-white via-slate-50 to-primary/5 border-primary/20 shadow-xl backdrop-blur-sm transition-all duration-700 hover:shadow-2xl hover:shadow-primary/20 hover:scale-105 hover:border-primary/40 flashlight-card animate-on-scroll ${isVisible ? 'opacity-100 translate-y-0' : ''}`}
+              style={{
+                transitionDelay: `${(index + 1) * 100}ms`,
+                animationDelay: `${(index + 1) * 100}ms`,
+                animationFillMode: 'both'
+              }}
             >
               <CardHeader>
                 <div className="flex items-center gap-4 mb-4">

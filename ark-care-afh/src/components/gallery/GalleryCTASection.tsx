@@ -41,7 +41,7 @@ export function GalleryCTASection() {
       </div>
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <Card className={`bg-white/10 backdrop-blur-md border-white/20 shadow-2xl transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <Card className={`bg-white/10 backdrop-blur-md border-white/20 shadow-2xl flashlight-card animate-on-scroll ${isVisible ? 'opacity-100 translate-y-0' : ''}`} style={{ animationFillMode: 'both' }}>
           <CardContent className="pt-8 pb-8 text-center">
             <Announcement className="mx-auto max-w-fit mb-6 bg-white/20 backdrop-blur-md border-white/30" themed>
               <AnnouncementTag className="bg-white/30 text-white">Tour</AnnouncementTag>
@@ -63,7 +63,7 @@ export function GalleryCTASection() {
               We'd love to show you around Ark Care AFH! Contact us to schedule a personalized tour of our facility and meet our caring staff.
             </CardDescription>
             
-            <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 shadow-2xl">
+            <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 shadow-2xl button-border-beam rounded-full">
               <Link href="/contact" className="inline-flex items-center gap-2">
                 <span>Schedule Your Tour</span>
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

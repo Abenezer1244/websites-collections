@@ -11,6 +11,7 @@ import { ServicesOverviewSection } from '@/components/ServicesOverviewSection'
 import { TestimonialsSection } from '@/components/TestimonialsSection'
 import { FAQSection } from '@/components/FAQSection'
 import { CTASection } from '@/components/CTASection'
+import { TrustedBySection } from '@/components/TrustedBySection'
 
 export const metadata: Metadata = {
   title: pageMetadata.home.title,
@@ -66,6 +67,9 @@ export default function Home() {
 
       {/* Services Overview Section - Modern Redesign */}
       <ServicesOverviewSection />
+
+      {/* Trusted By Section - Logos Marquee */}
+      <TrustedBySection />
 
       {/* Testimonials Section - Modern Redesign */}
       <TestimonialsSection />

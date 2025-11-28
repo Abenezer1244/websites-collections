@@ -160,8 +160,12 @@ export function AmenitiesSection() {
           {amenities.map((amenity, index) => (
             <Card
               key={index}
-              className={`group h-full bg-gradient-to-br from-white via-slate-50 to-primary/5 border-2 border-primary/20 shadow-xl transition-all duration-700 hover:shadow-2xl hover:scale-105 hover:border-primary/40 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              style={{transitionDelay: `${(index + 1) * 100}ms`}}
+              className={`group h-full bg-gradient-to-br from-white via-slate-50 to-primary/5 border-2 border-primary/20 shadow-xl transition-all duration-700 hover:shadow-2xl hover:scale-105 hover:border-primary/40 flashlight-card animate-on-scroll ${isVisible ? 'opacity-100 translate-y-0' : ''}`}
+              style={{
+                transitionDelay: `${(index + 1) * 100}ms`,
+                animationDelay: `${(index + 1) * 100}ms`,
+                animationFillMode: 'both'
+              }}
             >
               <CardHeader>
                 <div className="w-16 h-16 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl flex items-center justify-center mb-6 text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-white group-hover:scale-110">

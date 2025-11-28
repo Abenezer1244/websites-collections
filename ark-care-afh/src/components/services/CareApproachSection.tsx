@@ -104,7 +104,7 @@ export function CareApproachSection() {
         </div>
 
         <div className={`space-y-8 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <Card className="bg-gradient-to-br from-white via-slate-50 to-primary/5 border-primary/20 shadow-xl">
+          <Card className="bg-gradient-to-br from-white via-slate-50 to-primary/5 border-primary/20 shadow-xl flashlight-card animate-on-scroll" style={{ animationFillMode: 'both' }}>
             <CardContent className="pt-6 space-y-6">
               <p className="text-lg text-slate-800 leading-relaxed">
                 At Ark Care AFH, we believe in a person-centered care approach that respects individuality and promotes independence. Our services are designed around each resident's unique needs, preferences, and goals.
@@ -115,7 +115,7 @@ export function CareApproachSection() {
             </CardContent>
           </Card>
 
-          <Card className="bg-gradient-to-br from-white via-slate-50 to-primary/10 border-2 border-primary/20 shadow-xl backdrop-blur-sm">
+          <Card className="bg-gradient-to-br from-white via-slate-50 to-primary/10 border-2 border-primary/20 shadow-xl backdrop-blur-sm flashlight-card animate-on-scroll" style={{ animationDelay: '0.3s', animationFillMode: 'both' }}>
             <CardHeader>
               <Badge variant="secondary" className="w-fit mb-2">Care Planning</Badge>
               <CardTitle className="text-2xl font-bold text-slate-900">

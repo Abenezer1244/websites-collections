@@ -138,8 +138,12 @@ export function CoreValuesSection() {
           {values.map((value, index) => (
             <Card
               key={index}
-              className={`text-center group h-full bg-gradient-to-br from-white via-white to-primary/5 border-2 border-primary/20 shadow-xl transition-all duration-700 hover:shadow-2xl hover:scale-105 hover:border-primary/40 backdrop-blur-sm ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              style={{transitionDelay: `${(index + 1) * 100}ms`}}
+              className={`text-center group h-full bg-gradient-to-br from-white via-white to-primary/5 border-2 border-primary/20 shadow-xl transition-all duration-700 hover:shadow-2xl hover:scale-105 hover:border-primary/40 backdrop-blur-sm flashlight-card animate-on-scroll ${isVisible ? 'opacity-100 translate-y-0' : ''}`}
+              style={{
+                transitionDelay: `${(index + 1) * 100}ms`,
+                animationDelay: `${(index + 1) * 100}ms`,
+                animationFillMode: 'both'
+              }}
             >
               <CardHeader>
                 <div className="w-20 h-20 bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl flex items-center justify-center mx-auto mb-6 text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-white group-hover:scale-110">

@@ -224,7 +224,7 @@ export default function TermsOfService() {
             <p>
               For questions about these Terms of Service or our policies:
             </p>
-            <Card className="mt-4 border-primary/20">
+            <Card className="mt-4 border-primary/20 flashlight-card animate-on-scroll" style={{ animationFillMode: 'both' }}>
               <CardContent className="pt-6">
                 <p><strong>Phone:</strong> (206) 455-3644</p>
                 <p><strong>Address:</strong> 127 4th Ave N, Algona, WA 98001</p>
@@ -243,7 +243,7 @@ export default function TermsOfService() {
       {/* CTA Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="bg-gradient-to-br from-white via-slate-50 to-primary/5 border-primary/20 shadow-xl">
+          <Card className="bg-gradient-to-br from-white via-slate-50 to-primary/5 border-primary/20 shadow-xl flashlight-card animate-on-scroll" style={{ animationFillMode: 'both' }}>
             <CardHeader className="text-center">
               <CardTitle className="text-3xl md:text-4xl font-bold text-slate-900">
                 Questions About Our Terms?

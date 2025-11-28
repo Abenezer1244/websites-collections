@@ -6,6 +6,8 @@ import { Announcement, AnnouncementTag, AnnouncementTitle } from '@/components/k
 import { ArrowUpRightIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
+import { AnimatedText } from '@/components/AnimatedText'
+import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 
 export function HeroSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -27,13 +29,14 @@ export function HeroSection() {
         backgroundAttachment: 'fixed'
       }}
     >
-      {/* Background Image Layer */}
+      {/* Background Image Layer with Clip Animation */}
       <div
-        className="absolute inset-0 w-full h-full"
+        className="absolute inset-0 w-full h-full animate-clip-columns"
         style={{
           backgroundImage: 'url(/elderly-care-facilities.jpg)',
           backgroundSize: 'cover',
-          backgroundPosition: 'center'
+          backgroundPosition: 'center',
+          animationFillMode: 'both'
         }}
         aria-hidden="true"
       />
@@ -84,13 +87,26 @@ export function HeroSection() {
             </Announcement>
           </div>
 
-          {/* Main Heading */}
-          <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6 sm:mb-7 md:mb-8 leading-tight tracking-tight transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <span className="block drop-shadow-2xl text-4xl sm:text-5xl md:text-6xl lg:text-7xl">Compassionate</span>
-            <span className="block bg-gradient-to-r from-white via-primary/30 to-white bg-clip-text text-transparent drop-shadow-lg">
-              Care
-            </span>
-            <span className="block drop-shadow-2xl">in a Home Environment</span>
+          {/* Main Heading with Text Clip Animation */}
+          <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6 sm:mb-7 md:mb-8 leading-tight tracking-tight ${isVisible ? 'opacity-100' : ''}`}>
+            <AnimatedText 
+              text="Compassionate" 
+              className="block drop-shadow-2xl text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
+              delay={0.2}
+              animationType="clip-slide"
+            />
+            <AnimatedText 
+              text="Care" 
+              className="block bg-gradient-to-r from-white via-primary/30 to-white bg-clip-text text-transparent drop-shadow-lg"
+              delay={0.5}
+              animationType="clip-slide"
+            />
+            <AnimatedText 
+              text="in a Home Environment" 
+              className="block drop-shadow-2xl"
+              delay={0.8}
+              animationType="clip-slide"
+            />
           </h1>
 
           {/* Subheading */}
@@ -98,9 +114,9 @@ export function HeroSection() {
             Ark Care AFH provides personalized adult family home care services in Algona, WA with specialized support for mental health, dementia, and developmental disabilities.
           </p>
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons with Border Beam Animation */}
           <div className={`flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <Button asChild size="lg" className="w-full sm:w-auto shadow-2xl hover:shadow-primary/50">
+            <Button asChild size="lg" className="w-full sm:w-auto shadow-2xl hover:shadow-primary/50 button-border-beam rounded-full">
               <Link href="/contact" className="group">
                 Schedule a Tour
                 <svg className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -108,7 +124,7 @@ export function HeroSection() {
                 </svg>
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="w-full sm:w-auto bg-white/15 backdrop-blur-lg border-2 border-white/40 text-white hover:bg-white/25 hover:border-white/60 shadow-xl">
+            <Button asChild size="lg" variant="outline" className="w-full sm:w-auto bg-white/15 backdrop-blur-lg border-2 border-white/40 text-white hover:bg-white/25 hover:border-white/60 shadow-xl button-border-beam rounded-full">
               <Link href="/services" className="group">
                 Learn More
                 <svg className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">

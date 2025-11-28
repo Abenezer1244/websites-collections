@@ -4,31 +4,11 @@ import { useEffect, useRef, useState } from 'react'
 import { Accordion } from '@/components/ui/accordion'
 import { Announcement, AnnouncementTag, AnnouncementTitle } from '@/components/kibo-ui/announcement'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+import { AnimatedText } from '@/components/AnimatedText'
 
 export function FAQSection() {
-  const [isVisible, setIsVisible] = useState(false)
-  const sectionRef = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      { threshold: 0.1 }
-    )
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current)
-      }
-    }
-  }, [])
+  const { ref: sectionRef, isVisible } = useScrollAnimation({ threshold: 0.1, triggerOnce: true })
 
   const faqItems = [
     {
@@ -163,16 +143,19 @@ export function FAQSection() {
               <AnnouncementTitle>Common Questions</AnnouncementTitle>
             </Announcement>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-            Common Questions Answered
-          </h2>
+          <AnimatedText
+            text="Common Questions Answered"
+            className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-slate-900 block"
+            delay={0.2}
+            animationType="clip-slide"
+          />
           <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Get answers to help you make the best decision for your loved one
           </p>
         </div>
 
         {/* Accordion FAQ with Enhanced Cards */}
-        <Card className={`max-w-3xl mx-auto mb-12 bg-gradient-to-br from-white via-slate-50 to-primary/5 border-primary/20 shadow-xl transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <Card className={`max-w-3xl mx-auto mb-12 bg-gradient-to-br from-white via-slate-50 to-primary/5 border-primary/20 shadow-xl flashlight-card animate-on-scroll ${isVisible ? 'opacity-100 translate-y-0' : ''}`} style={{ animationDelay: '0.3s', animationFillMode: 'both' }}>
           <CardHeader>
             <CardTitle className="text-center text-2xl font-bold text-slate-900">Frequently Asked Questions</CardTitle>
             <CardDescription className="text-center">Click on any question to see the answer</CardDescription>

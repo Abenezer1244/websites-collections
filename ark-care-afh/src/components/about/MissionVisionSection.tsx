@@ -99,7 +99,7 @@ export function MissionVisionSection() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Mission */}
-          <Card className={`h-full bg-gradient-to-br from-white via-white to-primary/5 border-primary/20 shadow-xl transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
+          <Card className={`h-full bg-gradient-to-br from-white via-white to-primary/5 border-primary/20 shadow-xl flashlight-card animate-slide-in-left ${isVisible ? 'opacity-100 translate-x-0' : ''}`} style={{ animationFillMode: 'both' }}>
             <CardHeader>
               <div className="w-16 h-16 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -120,7 +120,7 @@ export function MissionVisionSection() {
           </Card>
 
           {/* Vision */}
-          <Card className={`h-full bg-gradient-to-br from-white via-white to-primary/5 border-primary/20 shadow-xl transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
+          <Card className={`h-full bg-gradient-to-br from-white via-white to-primary/5 border-primary/20 shadow-xl flashlight-card animate-slide-in-right ${isVisible ? 'opacity-100 translate-x-0' : ''}`} style={{ animationDelay: '0.3s', animationFillMode: 'both' }}>
             <CardHeader>
               <div className="w-16 h-16 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">

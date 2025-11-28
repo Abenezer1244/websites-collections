@@ -40,7 +40,8 @@ export function GalleryClient({ items }: GalleryClientProps) {
         {items.map((item) => (
           <Card
             key={item.id}
-            className="group relative overflow-hidden border-primary/20 hover:border-primary/40 shadow-lg hover:shadow-xl transition-all cursor-pointer h-full"
+            className="group relative overflow-hidden border-primary/20 hover:border-primary/40 shadow-lg hover:shadow-xl transition-all cursor-pointer h-full flashlight-card animate-on-scroll"
+            style={{ animationFillMode: 'both' }}
             onClick={() => handleImageClick(item)}
             role={item.image ? 'button' : undefined}
             tabIndex={item.image ? 0 : undefined}

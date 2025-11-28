@@ -6,31 +6,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge'
 import { Announcement, AnnouncementTag, AnnouncementTitle } from '@/components/kibo-ui/announcement'
 import { Button } from '@/components/ui/button'
+import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+import { AnimatedText } from '@/components/AnimatedText'
 
 export function ServicesOverviewSection() {
-  const [isVisible, setIsVisible] = useState(false)
-  const sectionRef = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      { threshold: 0.1 }
-    )
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current)
-      }
-    }
-  }, [])
+  const { ref: sectionRef, isVisible } = useScrollAnimation({ threshold: 0.1, triggerOnce: true })
 
   const services = [
     {
@@ -165,8 +145,12 @@ export function ServicesOverviewSection() {
           {services.map((service, index) => (
             <Card
               key={index}
-              className={`group h-full bg-gradient-to-br from-white via-white to-primary/5 border-2 border-primary/20 shadow-lg backdrop-blur-sm transition-all duration-700 hover:shadow-xl hover:scale-105 hover:border-primary/40 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              style={{transitionDelay: `${(index + 1) * 100}ms`}}
+              className={`group h-full bg-gradient-to-br from-white via-white to-primary/5 border-2 border-primary/20 shadow-lg backdrop-blur-sm transition-all duration-700 hover:shadow-xl hover:scale-105 hover:border-primary/40 flashlight-card animate-on-scroll ${isVisible ? 'opacity-100 translate-y-0' : ''}`}
+              style={{
+                transitionDelay: `${(index + 1) * 100}ms`,
+                animationDelay: `${(index + 1) * 100}ms`,
+                animationFillMode: 'both'
+              }}
             >
               <CardHeader>
                 <div className="w-14 h-14 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg flex items-center justify-center mb-4 text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-white group-hover:scale-110">
@@ -183,7 +167,7 @@ export function ServicesOverviewSection() {
         </div>
 
         {/* Feature List with Kibo UI Card Component */}
-        <Card className={`bg-gradient-to-br from-white via-slate-50 to-primary/10 border-2 border-primary/20 shadow-2xl mb-12 backdrop-blur-sm transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <Card className={`bg-gradient-to-br from-white via-slate-50 to-primary/10 border-2 border-primary/20 shadow-2xl mb-12 backdrop-blur-sm flashlight-card animate-on-scroll ${isVisible ? 'opacity-100 translate-y-0' : ''}`} style={{ animationDelay: '0.5s', animationFillMode: 'both' }}>
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-slate-900 text-center">What's Included</CardTitle>
             <CardDescription className="text-center">All services are included in our comprehensive care plan</CardDescription>
@@ -206,7 +190,7 @@ export function ServicesOverviewSection() {
 
         {/* CTA with Kibo UI Button */}
         <div className={`text-center transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <Button asChild size="lg" className="shadow-lg hover:shadow-xl">
+          <Button asChild size="lg" className="shadow-lg hover:shadow-xl button-border-beam rounded-full">
             <Link href="/services" className="inline-flex items-center gap-2">
               <span>View All Services</span>
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

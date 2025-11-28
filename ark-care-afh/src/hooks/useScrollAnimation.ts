@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 
 interface UseScrollAnimationOptions {
-  threshold?: number | number[]
+  threshold?: number
   rootMargin?: string
   triggerOnce?: boolean
 }
@@ -12,57 +12,41 @@ export function useScrollAnimation(options: UseScrollAnimationOptions = {}) {
   const {
     threshold = 0.1,
     rootMargin = '0px',
-    triggerOnce = true
+    triggerOnce = false
   } = options
 
-  const elementRef = useRef<HTMLElement>(null)
   const [isVisible, setIsVisible] = useState(false)
-  const [hasTriggered, setHasTriggered] = useState(false)
+  const ref = useRef<HTMLElement>(null)
 
   useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setIsVisible(true)
-        if (triggerOnce) {
-          setHasTriggered(true)
-          observer.unobserve(entry.target)
-        }
-      } else if (!triggerOnce) {
-        setIsVisible(false)
-      }
-    }, {
-      threshold,
-      rootMargin
-    })
+    const element = ref.current
+    if (!element) return
 
-    const currentElement = elementRef.current
-    if (currentElement) {
-      observer.observe(currentElement)
-    }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          if (triggerOnce) {
+            observer.unobserve(element)
+          }
+        } else if (!triggerOnce) {
+          setIsVisible(false)
+        }
+      },
+      {
+        threshold,
+        rootMargin
+      }
+    )
+
+    observer.observe(element)
 
     return () => {
-      if (currentElement) {
-        observer.unobserve(currentElement)
+      if (element) {
+        observer.unobserve(element)
       }
     }
   }, [threshold, rootMargin, triggerOnce])
 
-  return {
-    elementRef,
-    isVisible: triggerOnce ? hasTriggered : isVisible
-  }
-}
-
-interface UseStaggerAnimationOptions {
-  itemCount: number
-  baseDelay?: number
-  delayIncrement?: number
-}
-
-export function useStaggerAnimation({ itemCount, baseDelay = 0, delayIncrement = 100 }: UseStaggerAnimationOptions) {
-  const getItemDelay = (index: number) => {
-    return baseDelay + index * delayIncrement
-  }
-
-  return { getItemDelay }
+  return { ref, isVisible }
 }

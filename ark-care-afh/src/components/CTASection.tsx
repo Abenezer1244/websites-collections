@@ -6,31 +6,11 @@ import { Marquee, MarqueeContent, MarqueeItem, MarqueeFade } from '@/components/
 import { Announcement, AnnouncementTag, AnnouncementTitle } from '@/components/kibo-ui/announcement'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
+import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+import { AnimatedText } from '@/components/AnimatedText'
 
 export function CTASection() {
-  const [isVisible, setIsVisible] = useState(false)
-  const sectionRef = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      { threshold: 0.1 }
-    )
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current)
-      }
-    }
-  }, [])
+  const { ref: sectionRef, isVisible } = useScrollAnimation({ threshold: 0.1, triggerOnce: true })
 
   const trustIndicators = [
     { icon: '✓', text: 'Free Consultation' },
@@ -61,17 +41,20 @@ export function CTASection() {
               </AnnouncementTitle>
             </Announcement>
 
-            {/* Heading */}
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-white mb-4 leading-tight">
-              Ready to Get Started?
-            </h2>
+            {/* Heading with Text Animation */}
+            <AnimatedText
+              text="Ready to Get Started?"
+              className="text-2xl md:text-3xl lg:text-4xl font-black mb-4 leading-tight text-white block"
+              delay={0.3}
+              animationType="clip-slide"
+            />
             <p className="text-base md:text-lg text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
               Schedule a tour to see our facility and meet our team. We're here to answer your questions and help you make the best decision for your loved one.
             </p>
 
-            {/* CTA Buttons with Kibo UI Button Components */}
+            {/* CTA Buttons with Border Beam Animation */}
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-8">
-              <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 shadow-xl">
+              <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 shadow-xl button-border-beam rounded-full">
                 <Link href="/contact" className="inline-flex items-center gap-2">
                   Schedule a Tour
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -79,7 +62,7 @@ export function CTASection() {
                   </svg>
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="bg-transparent border-2 border-white/50 text-white hover:bg-white/10 hover:border-white backdrop-blur-sm">
+              <Button asChild size="lg" variant="outline" className="bg-transparent border-2 border-white/50 text-white hover:bg-white/10 hover:border-white backdrop-blur-sm button-border-beam rounded-full">
                 <Link href="/contact">
                   Contact Us
                 </Link>

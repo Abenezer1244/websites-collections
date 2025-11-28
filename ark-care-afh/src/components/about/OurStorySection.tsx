@@ -107,7 +107,7 @@ export function OurStorySection() {
           </p>
         </div>
 
-        <Card className={`bg-gradient-to-br from-white via-slate-50 to-primary/10 border-2 border-primary/20 shadow-2xl backdrop-blur-sm transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <Card className={`bg-gradient-to-br from-white via-slate-50 to-primary/10 border-2 border-primary/20 shadow-2xl backdrop-blur-sm flashlight-card animate-on-scroll ${isVisible ? 'opacity-100 translate-y-0' : ''}`} style={{ animationDelay: '0.3s', animationFillMode: 'both' }}>
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-slate-900 text-center">Our Journey</CardTitle>
             <CardDescription className="text-center">Committed to excellence in care</CardDescription>
