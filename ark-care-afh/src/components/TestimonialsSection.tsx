@@ -257,8 +257,6 @@ export function TestimonialsSection() {
               </div>
             </div>
           </div>
-
-          </div>
         </div>
 
         {/* Scrolling Testimonials Marquee */}

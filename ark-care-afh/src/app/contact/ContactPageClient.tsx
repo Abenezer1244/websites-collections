@@ -485,7 +485,7 @@ export default function ContactPageClient() {
             </CardHeader>
           </Card>
           <div className="space-y-6">
-            <Card className="bg-gradient-to-br from-white via-slate-50 to-primary/5 border-2 border-primary/20 shadow-lg backdrop-blur-sm flashlight-card animate-on-scroll"
+            <Card className="bg-gradient-to-br from-white via-slate-50 to-primary/5 border-2 border-primary/20 shadow-lg backdrop-blur-sm flashlight-card animate-on-scroll" style={{ animationFillMode: 'both' }}>
               <CardHeader>
                 <CardTitle className="text-lg font-semibold text-slate-900">How do I schedule a tour?</CardTitle>
               </CardHeader>
@@ -496,7 +496,7 @@ export default function ContactPageClient() {
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-to-br from-white via-slate-50 to-primary/5 border-2 border-primary/20 shadow-lg backdrop-blur-sm flashlight-card animate-on-scroll"
+            <Card className="bg-gradient-to-br from-white via-slate-50 to-primary/5 border-2 border-primary/20 shadow-lg backdrop-blur-sm flashlight-card animate-on-scroll" style={{ animationFillMode: 'both' }}>
               <CardHeader>
                 <CardTitle className="text-lg font-semibold text-slate-900">What is the admission process?</CardTitle>
               </CardHeader>
@@ -507,7 +507,7 @@ export default function ContactPageClient() {
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-to-br from-white via-slate-50 to-primary/5 border-2 border-primary/20 shadow-lg backdrop-blur-sm flashlight-card animate-on-scroll"
+            <Card className="bg-gradient-to-br from-white via-slate-50 to-primary/5 border-2 border-primary/20 shadow-lg backdrop-blur-sm flashlight-card animate-on-scroll" style={{ animationFillMode: 'both' }}>
               <CardHeader>
                 <CardTitle className="text-lg font-semibold text-slate-900">What services are included?</CardTitle>
               </CardHeader>
@@ -518,7 +518,7 @@ export default function ContactPageClient() {
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-to-br from-white via-slate-50 to-primary/5 border-2 border-primary/20 shadow-lg backdrop-blur-sm flashlight-card animate-on-scroll"
+            <Card className="bg-gradient-to-br from-white via-slate-50 to-primary/5 border-2 border-primary/20 shadow-lg backdrop-blur-sm flashlight-card animate-on-scroll" style={{ animationFillMode: 'both' }}>
               <CardHeader>
                 <CardTitle className="text-lg font-semibold text-slate-900">Can family members visit?</CardTitle>
               </CardHeader>
