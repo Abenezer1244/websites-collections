@@ -5,249 +5,312 @@ import { businessInfo } from '@/lib/seo'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { Announcement, AnnouncementTag, AnnouncementTitle } from '@/components/kibo-ui/announcement'
+import { MapPin, Phone, Clock, Mail, Facebook, Twitter, Linkedin, ArrowRight, Heart, Shield, Award, Users } from 'lucide-react'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
 
+  const quickLinks = [
+    { href: '/', label: 'Home', icon: '🏠' },
+    { href: '/about', label: 'About Us', icon: '👥' },
+    { href: '/services', label: 'Services', icon: '🛠️' },
+    { href: '/gallery', label: 'Gallery', icon: '📸' },
+    { href: '/contact', label: 'Contact', icon: '📞' }
+  ]
+
+  const services = [
+    '24/7 Professional Care',
+    'Medication Management',
+    'Personal Care Assistance',
+    'Activities & Engagement',
+    'Specialized Care Programs',
+    'Mental Health Support'
+  ]
+
+  const certifications = [
+    { icon: Shield, label: 'State Licensed', color: 'text-blue-600' },
+    { icon: Award, label: 'HIPAA Compliant', color: 'text-green-600' },
+    { icon: Users, label: 'Certified Staff', color: 'text-purple-600' }
+  ]
+
+  const socialLinks = [
+    { 
+      href: businessInfo.sameAs[0], 
+      icon: Facebook, 
+      label: 'Facebook',
+      color: 'hover:bg-blue-500 hover:text-white'
+    },
+    { 
+      href: businessInfo.sameAs[2], 
+      icon: Twitter, 
+      label: 'Twitter',
+      color: 'hover:bg-sky-400 hover:text-white'
+    },
+    { 
+      href: businessInfo.sameAs[1], 
+      icon: Linkedin, 
+      label: 'LinkedIn',
+      color: 'hover:bg-blue-700 hover:text-white'
+    }
+  ]
+
   return (
-    <footer className="relative bg-white text-slate-900 overflow-hidden">
+    <footer className="relative bg-white border-t-2 border-slate-100 overflow-hidden">
+      {/* Decorative Top Border */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-primary/50 to-primary" />
 
       {/* Main Footer Content */}
-      <div className="relative z-10 pt-12 sm:pt-14 md:pt-16 pb-6 sm:pb-7 md:pb-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-5 md:px-6 lg:px-8">
-          {/* Top Section */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-10 lg:mb-12">
-            {/* Brand Section */}
-            <Card className="lg:col-span-1 bg-transparent border-slate-200">
-              <CardHeader>
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/70 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-primary/30">
+      <div className="relative z-10 pt-16 pb-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Top Section - Brand & CTA */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+            {/* Brand Section - Enhanced */}
+            <div className="lg:col-span-1 space-y-6">
+              <div className="flex items-center gap-4">
+                <div className="relative group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary via-primary/90 to-primary/70 rounded-2xl flex items-center justify-center text-white font-black text-2xl shadow-lg shadow-primary/20 group-hover:shadow-xl group-hover:shadow-primary/30 transition-all duration-300 group-hover:scale-110">
                     A
                   </div>
-                  <CardTitle className="text-2xl font-black text-slate-900">Ark Care AFH</CardTitle>
+                  <div className="absolute -inset-1 bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
                 </div>
-                <CardDescription className="text-slate-600 leading-relaxed mb-6">
-                  Providing compassionate, personalized adult family home care in Algona, Washington. Licensed and certified for your peace of mind.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                {/* Social Links */}
-                <div className="flex gap-3" role="list" aria-label="Social media links">
-                  <Button
-                    asChild
-                    variant="ghost"
-                    size="icon"
-                    className="w-10 h-10 bg-slate-100 hover:bg-primary/40 text-slate-600 hover:text-white"
-                  >
-                    <a 
-                      href={businessInfo.sameAs[0]} 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Visit our Facebook page"
-                      role="listitem"
-                    >
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                      </svg>
-                    </a>
-                  </Button>
-                  <Button
-                    asChild
-                    variant="ghost"
-                    size="icon"
-                    className="w-10 h-10 bg-slate-100 hover:bg-primary/40 text-slate-600 hover:text-white"
-                  >
-                    <a 
-                      href={businessInfo.sameAs[2]} 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Visit our Twitter page"
-                      role="listitem"
-                    >
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 7-7 7-7" />
-                      </svg>
-                    </a>
-                  </Button>
-                  <Button
-                    asChild
-                    variant="ghost"
-                    size="icon"
-                    className="w-10 h-10 bg-slate-100 hover:bg-primary/40 text-slate-600 hover:text-white"
-                  >
-                    <a 
-                      href={businessInfo.sameAs[1]} 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Visit our LinkedIn page"
-                      role="listitem"
-                    >
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.722-2.004 1.418-.103.249-.129.597-.129.946v5.441h-3.554s.047-8.825 0-9.744h3.554v1.378c-.009.015-.021.029-.031.042h.031v-.042c.429-.661 1.196-1.6 2.905-1.6 2.12 0 3.709 1.384 3.709 4.365v5.601zM5.337 9.433c-1.144 0-1.915-.758-1.915-1.708 0-.951.77-1.708 1.915-1.708 1.144 0 1.915.757 1.915 1.708 0 .95-.771 1.708-1.915 1.708zm1.575 10.019H3.762V9.708h3.15v9.744zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
-                      </svg>
-                    </a>
-                  </Button>
+                <div>
+                  <h3 className="text-2xl font-black text-slate-900 mb-1">Ark Care AFH</h3>
+                  <p className="text-sm text-slate-500 font-medium">Licensed & Certified</p>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+              
+              <p className="text-slate-600 leading-relaxed text-sm">
+                Providing compassionate, personalized adult family home care in Algona, Washington. 
+                Licensed and certified for your peace of mind.
+              </p>
 
-            {/* Quick Navigation */}
-            <Card className="bg-transparent border-slate-200">
-              <CardHeader>
-                <CardTitle className="font-bold text-slate-900 text-lg relative inline-block">
-                  Navigation
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-transparent"></span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3">
-                  {[
-                    { href: '/', label: 'Home' },
-                    { href: '/about', label: 'About Us' },
-                    { href: '/services', label: 'Services' },
-                    { href: '/gallery', label: 'Gallery' },
-                    { href: '/contact', label: 'Contact' }
-                  ].map((link) => (
-                    <li key={link.href}>
-                      <Button asChild variant="ghost" className="text-slate-600 hover:text-primary p-0 h-auto justify-start">
-                        <Link href={link.href}>
-                          {link.label}
-                        </Link>
+              {/* Certifications Badges */}
+              <div className="flex flex-wrap gap-3">
+                {certifications.map((cert, index) => (
+                  <Badge 
+                    key={index} 
+                    variant="outline" 
+                    className="flex items-center gap-2 px-3 py-1.5 border-slate-200 bg-slate-50 hover:bg-slate-100 transition-colors"
+                  >
+                    <cert.icon className={`w-4 h-4 ${cert.color}`} />
+                    <span className="text-xs font-medium text-slate-700">{cert.label}</span>
+                  </Badge>
+                ))}
+              </div>
+
+              {/* Social Links - Enhanced */}
+              <div className="flex gap-3 pt-2">
+                {socialLinks.map((social, index) => (
+                  <Button
+                    key={index}
+                    asChild
+                    variant="outline"
+                    size="icon"
+                    className={`w-11 h-11 rounded-xl border-slate-200 bg-white hover:border-transparent transition-all duration-300 ${social.color} shadow-sm hover:shadow-md`}
+                    aria-label={social.label}
+                  >
+                    <a 
+                      href={social.href} 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <social.icon className="w-5 h-5" />
+                    </a>
+                  </Button>
+                ))}
+              </div>
+            </div>
+
+            {/* Quick Links - Modern Grid */}
+            <div className="lg:col-span-1">
+              <h4 className="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
+                <span className="w-1 h-6 bg-primary rounded-full" />
+                Quick Links
+              </h4>
+              <div className="grid grid-cols-2 gap-3">
+                {quickLinks.map((link) => (
+                  <Button
+                    key={link.href}
+                    asChild
+                    variant="ghost"
+                    className="justify-start h-auto py-3 px-4 rounded-xl hover:bg-primary/5 hover:text-primary group transition-all duration-200"
+                  >
+                    <Link href={link.href} className="flex items-center gap-3 w-full">
+                      <span className="text-xl group-hover:scale-110 transition-transform duration-200">{link.icon}</span>
+                      <span className="font-medium text-slate-700 group-hover:text-primary">{link.label}</span>
+                      <ArrowRight className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200 text-primary" />
+                    </Link>
+                  </Button>
+                ))}
+              </div>
+            </div>
+
+            {/* Contact Card - Prominent */}
+            <div className="lg:col-span-1">
+              <Card className="bg-gradient-to-br from-primary/5 via-white to-primary/5 border-2 border-primary/10 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <CardHeader className="pb-4">
+                  <CardTitle className="text-lg font-bold text-slate-900 flex items-center gap-2">
+                    <span className="w-1 h-6 bg-primary rounded-full" />
+                    Get in Touch
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="flex items-start gap-3 group">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:scale-110 transition-all duration-200">
+                      <Phone className="w-5 h-5 text-primary group-hover:text-white transition-colors" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Phone</p>
+                      <Button asChild variant="link" className="p-0 h-auto text-base font-bold text-slate-900 hover:text-primary">
+                        <a href={`tel:${businessInfo.telephone.replace(/[^0-9]/g, '')}`}>
+                          {businessInfo.telephone.replace('+1-', '').replace(/-/g, ' ')}
+                        </a>
                       </Button>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
+                    </div>
+                  </div>
 
-            {/* Services */}
-            <Card className="bg-transparent border-slate-200">
-              <CardHeader>
-                <CardTitle className="font-bold text-slate-900 text-lg relative inline-block">
-                  Our Services
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-transparent"></span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3">
-                  {[
-                    '24/7 Professional Care',
-                    'Medication Management',
-                    'Personal Care Assistance',
-                    'Activities & Engagement',
-                    'Specialized Care Programs'
-                  ].map((service, index) => (
-                    <li key={index} className="text-slate-600 flex items-start gap-2">
-                      <Badge variant="outline" className="w-5 h-5 p-0 rounded-full border-primary bg-primary/20 flex items-center justify-center mt-0.5 flex-shrink-0">
-                        <svg className="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                      </Badge>
-                      <span>{service}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
+                  <div className="flex items-start gap-3 group">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:scale-110 transition-all duration-200">
+                      <Mail className="w-5 h-5 text-primary group-hover:text-white transition-colors" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Email</p>
+                      <Button asChild variant="link" className="p-0 h-auto text-sm font-medium text-slate-700 hover:text-primary break-all">
+                        <a href={`mailto:${businessInfo.email}`}>
+                          {businessInfo.email}
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
 
-            {/* Contact & Info */}
-            <Card className="bg-transparent border-slate-200">
-              <CardHeader>
-                <CardTitle className="font-bold text-slate-900 text-lg relative inline-block">
-                  Get in Touch
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-transparent"></span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <Badge variant="outline" className="w-10 h-10 p-0 rounded-lg border-primary/30 bg-primary/20 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                  </Badge>
-                  <div>
-                    <p className="text-slate-500 text-xs font-medium mb-1 uppercase tracking-wider">Phone</p>
-                    <Button asChild variant="link" className="text-slate-700 hover:text-primary p-0 h-auto font-semibold text-lg">
-                      <a 
-                        href={`tel:${businessInfo.telephone}`}
-                        aria-label={`Call Ark Care AFH at ${businessInfo.telephone}`}
-                      >
-                        {businessInfo.telephone.replace('+1-', '').replace(/-/g, ' ')}
-                      </a>
-                    </Button>
+                  <div className="flex items-start gap-3 group">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:scale-110 transition-all duration-200">
+                      <MapPin className="w-5 h-5 text-primary group-hover:text-white transition-colors" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Location</p>
+                      <p className="text-sm text-slate-700 leading-relaxed">
+                        {businessInfo.address.streetAddress}<br />
+                        {businessInfo.address.addressLocality}, {businessInfo.address.addressRegion} {businessInfo.address.postalCode}
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Badge variant="outline" className="w-10 h-10 p-0 rounded-lg border-primary/30 bg-primary/20 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </Badge>
-                  <div>
-                    <p className="text-slate-500 text-xs font-medium mb-1 uppercase tracking-wider">Address</p>
-                    <p className="text-slate-600 leading-relaxed">
-                      {businessInfo.address.streetAddress}<br />
-                      {businessInfo.address.addressLocality}, {businessInfo.address.addressRegion} {businessInfo.address.postalCode}
-                    </p>
+
+                  <div className="flex items-start gap-3 group pt-2 border-t border-slate-200">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:scale-110 transition-all duration-200">
+                      <Clock className="w-5 h-5 text-primary group-hover:text-white transition-colors" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Hours</p>
+                      <p className="text-sm font-bold text-primary">Available 24/7</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Badge variant="outline" className="w-10 h-10 p-0 rounded-lg border-primary/30 bg-primary/20 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </Badge>
-                  <div>
-                    <p className="text-slate-500 text-xs font-medium mb-1 uppercase tracking-wider">Hours</p>
-                    <p className="text-slate-600 font-semibold">Available 24/7</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </div>
           </div>
 
-          {/* Divider */}
-          <div className="h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent mb-8" />
+          {/* Services Section - Horizontal Scroll on Mobile */}
+          <div className="mb-12">
+            <h4 className="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
+              <span className="w-1 h-6 bg-primary rounded-full" />
+              Our Services
+            </h4>
+            <div className="flex flex-wrap gap-3">
+              {services.map((service, index) => (
+                <Badge 
+                  key={index}
+                  variant="outline"
+                  className="px-4 py-2 rounded-full border-slate-200 bg-white hover:bg-primary/5 hover:border-primary/30 hover:text-primary transition-all duration-200 cursor-default text-sm font-medium"
+                >
+                  <span className="mr-2">✓</span>
+                  {service}
+                </Badge>
+              ))}
+            </div>
+          </div>
 
-          {/* Bottom Section */}
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="text-center md:text-left">
-              <p className="text-slate-600 text-sm mb-2">
+          {/* Divider with Pattern */}
+          <div className="relative mb-12">
+            <div className="absolute inset-0 flex items-center">
+              <div className="w-full border-t border-slate-200"></div>
+            </div>
+            <div className="relative flex justify-center">
+              <div className="bg-white px-4">
+                <Heart className="w-5 h-5 text-primary fill-primary" />
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Section - Enhanced */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            {/* Copyright & Info */}
+            <div className="space-y-2">
+              <p className="text-slate-700 font-semibold text-sm">
                 © {currentYear} Ark Care AFH. All rights reserved.
               </p>
-              <p className="text-slate-500 text-xs">
-                State-licensed adult family home • Licensed in Washington State
+              <p className="text-slate-500 text-xs leading-relaxed">
+                State-licensed adult family home • Licensed in Washington State • 
+                Specializing in mental health support, dementia care, and developmental disabilities.
               </p>
             </div>
-            <div className="flex flex-wrap gap-6 text-sm justify-center md:justify-end">
-              <Button asChild variant="ghost" size="sm" className="text-slate-600 hover:text-primary">
-                <Link href="/privacy-policy">
+
+            {/* Legal Links - Modern Layout */}
+            <div className="flex flex-wrap gap-4 justify-start md:justify-end">
+              <Button asChild variant="ghost" size="sm" className="text-slate-600 hover:text-primary hover:bg-primary/5 rounded-lg font-medium">
+                <Link href="/privacy-policy" className="flex items-center gap-2">
                   Privacy Policy
+                  <ArrowRight className="w-3 h-3" />
                 </Link>
               </Button>
-              <Button asChild variant="ghost" size="sm" className="text-slate-600 hover:text-primary">
-                <Link href="/terms-of-service">
+              <Button asChild variant="ghost" size="sm" className="text-slate-600 hover:text-primary hover:bg-primary/5 rounded-lg font-medium">
+                <Link href="/terms-of-service" className="flex items-center gap-2">
                   Terms of Service
+                  <ArrowRight className="w-3 h-3" />
                 </Link>
               </Button>
-              <Button asChild variant="ghost" size="sm" className="text-slate-600 hover:text-primary">
-                <a href="#" aria-label="Accessibility information">
+              <Button asChild variant="ghost" size="sm" className="text-slate-600 hover:text-primary hover:bg-primary/5 rounded-lg font-medium">
+                <a href="#" className="flex items-center gap-2">
                   Accessibility
+                  <ArrowRight className="w-3 h-3" />
                 </a>
               </Button>
             </div>
           </div>
-        </div>
-      </div>
 
-      {/* Footer Bottom Bar */}
-      <div className="relative z-10 border-t border-slate-200 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <p className="text-center text-slate-600 text-xs leading-relaxed">
-            Ark Care AFH is a state-licensed adult family home providing compassionate, personalized care to residents in Algona, Washington. 
-            We specialize in mental health support, dementia care, and developmental disabilities.
-          </p>
+          {/* Call to Action Banner */}
+          <div className="mt-12 pt-8 border-t border-slate-200">
+            <Card className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border-2 border-primary/20 shadow-lg">
+              <CardContent className="pt-6 pb-6">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                  <div className="flex-1 text-center md:text-left">
+                    <h4 className="text-xl font-bold text-slate-900 mb-2">
+                      Ready to Learn More?
+                    </h4>
+                    <p className="text-slate-600 text-sm">
+                      Schedule a tour or contact us today to discuss how we can help your loved one.
+                    </p>
+                  </div>
+                  <div className="flex gap-3">
+                    <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-full button-border-beam">
+                      <Link href="/contact" className="flex items-center gap-2">
+                        Schedule a Tour
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    </Button>
+                    <Button asChild size="lg" variant="outline" className="border-2 border-primary/30 hover:border-primary hover:bg-primary/5 rounded-full">
+                      <a href={`tel:${businessInfo.telephone.replace(/[^0-9]/g, '')}`} className="flex items-center gap-2">
+                        <Phone className="w-4 h-4" />
+                        Call Now
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
     </footer>
