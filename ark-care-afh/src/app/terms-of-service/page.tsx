@@ -2,6 +2,10 @@ import type { Metadata } from 'next'
 import { AnimatedBlob, AnimatedBlobSecondary } from '@/components/AnimatedBlob'
 import { JsonLd } from '@/components/JsonLd'
 import { pageMetadata, generateWebPageSchema, generateBreadcrumbSchema, siteConfig } from '@/lib/seo'
+import { Announcement, AnnouncementTag, AnnouncementTitle } from '@/components/kibo-ui/announcement'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: pageMetadata.termsOfService.title,
@@ -56,6 +60,14 @@ export default function TermsOfService() {
         <AnimatedBlobSecondary position="bottom-left" size="md" opacity="light" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="flex justify-center mb-6">
+            <Announcement className="bg-white/10 backdrop-blur-md border-white/20 text-white" themed>
+              <AnnouncementTag className="bg-white/20 text-white">Terms</AnnouncementTag>
+              <AnnouncementTitle className="text-white">
+                Terms & Conditions
+              </AnnouncementTitle>
+            </Announcement>
+          </div>
           <h1 className="text-4xl md:text-5xl font-bold">Terms of Service</h1>
           <p className="text-lg mt-4 opacity-90 max-w-2xl">
             Terms and conditions for using Ark Care AFH services and website
@@ -212,11 +224,13 @@ export default function TermsOfService() {
             <p>
               For questions about these Terms of Service or our policies:
             </p>
-            <div className="bg-white border border-slate-200 p-6 rounded-lg mt-4">
-              <p><strong>Phone:</strong> (206) 455-3644</p>
-              <p><strong>Address:</strong> 127 4th Ave N, Algona, WA 98001</p>
-              <p><strong>Email:</strong> contact@arkcare.local</p>
-            </div>
+            <Card className="mt-4 border-primary/20">
+              <CardContent className="pt-6">
+                <p><strong>Phone:</strong> (206) 455-3644</p>
+                <p><strong>Address:</strong> 127 4th Ave N, Algona, WA 98001</p>
+                <p><strong>Email:</strong> contact@arkcare.local</p>
+              </CardContent>
+            </Card>
 
             <h2 className="text-3xl font-bold text-slate-900 mt-8 mb-4">16. Effective Date & Updates</h2>
             <p>
@@ -228,19 +242,24 @@ export default function TermsOfService() {
 
       {/* CTA Section */}
       <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-3xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-            Questions About Our Terms?
-          </h2>
-          <p className="text-lg text-slate-800 mb-8">
-            We're happy to clarify any part of our Terms of Service. Please reach out with any questions.
-          </p>
-          <a
-            href="/contact"
-            className="inline-block px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors"
-          >
-            Contact Us
-          </a>
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Card className="bg-gradient-to-br from-white via-slate-50 to-primary/5 border-primary/20 shadow-xl">
+            <CardHeader className="text-center">
+              <CardTitle className="text-3xl md:text-4xl font-bold text-slate-900">
+                Questions About Our Terms?
+              </CardTitle>
+              <CardDescription className="text-lg text-slate-800">
+                We're happy to clarify any part of our Terms of Service. Please reach out with any questions.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="text-center">
+              <Button asChild size="lg">
+                <Link href="/contact">
+                  Contact Us
+                </Link>
+              </Button>
+            </CardContent>
+          </Card>
         </div>
       </section>
     </>

@@ -2,6 +2,8 @@
 
 import Link from 'next/link'
 import { useState, useEffect, useRef } from 'react'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -163,43 +165,37 @@ export function Navigation() {
           <div className="pointer-events-auto max-w-7xl bg-white/10 backdrop-blur-md border border-white/20 rounded-full shadow-2xl px-4 sm:px-6 md:px-8 lg:px-10 py-2.5 sm:py-3 md:py-3.5 lg:py-4 transition-all duration-300 hover:bg-white/15 hover:border-white/30">
               <div className="hidden md:flex items-center justify-center gap-4 sm:gap-5 md:gap-6 lg:gap-8">
                 {/* Left Navigation Links */}
-                <Link
-                  href="/about"
-                  className="px-2.5 md:px-3 py-1.5 text-xs md:text-sm font-medium text-white/80 hover:text-white transition-all duration-200 rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
-                >
-                  About Us
-                </Link>
+                <Button asChild variant="ghost" size="sm" className="text-white/80 hover:text-white hover:bg-white/10">
+                  <Link href="/about">
+                    About Us
+                  </Link>
+                </Button>
 
-                <Link
-                  href="/gallery"
-                  className="px-2.5 md:px-3 py-1.5 text-xs md:text-sm font-medium text-white/80 hover:text-white transition-all duration-200 rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
-                >
-                  Gallery
-                </Link>
+                <Button asChild variant="ghost" size="sm" className="text-white/80 hover:text-white hover:bg-white/10">
+                  <Link href="/gallery">
+                    Gallery
+                  </Link>
+                </Button>
 
                 {/* Home - Center and Larger */}
-                <Link
-                  href="/"
-                  className="px-3 md:px-5 py-1.5 text-sm md:text-lg font-bold text-white transition-all duration-200 rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
-                  aria-label="Home"
-                >
-                  Home
-                </Link>
+                <Button asChild variant="ghost" size="lg" className="text-white font-bold hover:bg-white/10">
+                  <Link href="/" aria-label="Home">
+                    Home
+                  </Link>
+                </Button>
 
                 {/* Right Navigation Links */}
-                <Link
-                  href="/services"
-                  className="px-2.5 md:px-3 py-1.5 text-xs md:text-sm font-medium text-white/80 hover:text-white transition-all duration-200 rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
-                >
-                  Services
-                </Link>
+                <Button asChild variant="ghost" size="sm" className="text-white/80 hover:text-white hover:bg-white/10">
+                  <Link href="/services">
+                    Services
+                  </Link>
+                </Button>
 
-                <Link
-                  href="/contact"
-                  className="px-2.5 md:px-3 py-1.5 text-xs md:text-sm font-medium text-white/80 hover:text-white transition-all duration-200 rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
-                >
-                  Contact Us
-                </Link>
+                <Button asChild variant="ghost" size="sm" className="text-white/80 hover:text-white hover:bg-white/10">
+                  <Link href="/contact">
+                    Contact Us
+                  </Link>
+                </Button>
               </div>
 
               {/* Mobile Navigation Menu */}
@@ -247,28 +243,36 @@ export function Navigation() {
                   role="menu"
                 >
                   {navLinks.map((link) => (
-                    <Link
+                    <Button
                       key={link.href}
-                      href={link.href}
-                      className="block px-4 py-2.5 text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
+                      asChild
+                      variant="ghost"
+                      className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10"
                       onClick={() => setIsOpen(false)}
-                      role="menuitem"
                     >
-                      {link.label}
-                    </Link>
+                      <Link href={link.href} role="menuitem">
+                        {link.label}
+                      </Link>
+                    </Button>
                   ))}
-                  <a
-                    href="tel:+12064553644"
-                    className="flex items-center gap-2 px-4 py-2.5 bg-white/20 hover:bg-white/30 text-white text-sm font-medium rounded-lg transition-all duration-200 border border-white/30 mt-2 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="w-full justify-start bg-white/20 hover:bg-white/30 text-white border-white/30 mt-2"
                     onClick={() => setIsOpen(false)}
-                    aria-label="Call Ark Care AFH at (206) 455-3644"
-                    role="menuitem"
                   >
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    Call Now
-                  </a>
+                    <a
+                      href="tel:+12064553644"
+                      aria-label="Call Ark Care AFH at (206) 455-3644"
+                      role="menuitem"
+                      className="flex items-center gap-2"
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                      Call Now
+                    </a>
+                  </Button>
                 </div>
               )}
             </div>

@@ -12,6 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Button } from '@/components/ui/button'
 import { QRCode } from '@/components/kibo-ui/qr-code'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { GoogleMap } from '@/components/GoogleMap'
 
 export default function ContactPageClient() {
@@ -203,42 +204,48 @@ export default function ContactPageClient() {
           {/* Top Section: Contact Info and Form Side by Side */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 mb-12">
             {/* Contact Info */}
-            <div>
-              <h2 className="text-2xl font-bold text-slate-900 mb-8">Get in Touch</h2>
+            <div className="space-y-6">
+              <Card className="bg-gradient-to-br from-white via-slate-50 to-primary/5 border-primary/20 shadow-lg">
+                <CardHeader>
+                  <CardTitle className="text-2xl font-bold text-slate-900">Get in Touch</CardTitle>
+                  <CardDescription>We're here to help you learn more about our services</CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-900 mb-2">Phone</h3>
+                    <a
+                      href={`tel:${businessInfo.telephone.replace(/[^0-9]/g, '')}`}
+                      className="text-primary hover:underline font-semibold text-lg"
+                    >
+                      (206) 455-3644
+                    </a>
+                  </div>
 
-              <div className="mb-8">
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">Phone</h3>
-                <a
-                  href={`tel:${businessInfo.telephone.replace(/[^0-9]/g, '')}`}
-                  className="text-primary hover:underline font-semibold"
-                >
-                  (206) 455-3644
-                </a>
-              </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-900 mb-2">Email</h3>
+                    <a
+                      href={`mailto:${businessInfo.email}`}
+                      className="text-primary hover:underline"
+                    >
+                      {businessInfo.email}
+                    </a>
+                  </div>
 
-              <div className="mb-8">
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">Email</h3>
-                <a
-                  href={`mailto:${businessInfo.email}`}
-                  className="text-primary hover:underline"
-                >
-                  {businessInfo.email}
-                </a>
-              </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-900 mb-2">Address</h3>
+                    <p className="text-slate-800">
+                      {businessInfo.address.streetAddress}<br />
+                      {businessInfo.address.addressLocality}, {businessInfo.address.addressRegion} {businessInfo.address.postalCode}
+                    </p>
+                  </div>
 
-              <div className="mb-8">
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">Address</h3>
-                <p className="text-slate-800">
-                  {businessInfo.address.streetAddress}<br />
-                  {businessInfo.address.addressLocality}, {businessInfo.address.addressRegion} {businessInfo.address.postalCode}
-                </p>
-              </div>
-
-              <div className="mb-8">
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">Hours</h3>
-                <p className="text-slate-800">Available 24/7</p>
-                <p className="text-slate-800 text-sm mt-1">We're always here to help</p>
-              </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-900 mb-2">Hours</h3>
+                    <p className="text-slate-800 font-semibold">Available 24/7</p>
+                    <p className="text-slate-800 text-sm mt-1">We're always here to help</p>
+                  </div>
+                </CardContent>
+              </Card>
 
               {/* QR Code Card */}
               <Card className="border-primary/20">
@@ -260,33 +267,35 @@ export default function ContactPageClient() {
 
             {/* Contact Form */}
             <div>
-              <div className="bg-gradient-to-br from-white via-slate-50 to-primary/5 rounded-lg border-2 border-primary/20 p-6 sm:p-7 md:p-8 shadow-xl backdrop-blur-sm">
-                <h2 className="text-2xl font-bold text-slate-900 mb-6">Send us a Message</h2>
+              <Card className="bg-gradient-to-br from-white via-slate-50 to-primary/5 border-2 border-primary/20 shadow-xl backdrop-blur-sm">
+                <CardHeader>
+                  <CardTitle className="text-2xl font-bold text-slate-900">Send us a Message</CardTitle>
+                  <CardDescription>Fill out the form below and we'll get back to you soon</CardDescription>
+                </CardHeader>
+                <CardContent>
 
                 {submitStatus === 'success' && (
-                  <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-                    <div className="flex items-center gap-2">
-                      <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <p className="text-green-800 font-medium">
-                        Thank you for your message! We'll get back to you soon.
-                      </p>
-                    </div>
-                  </div>
+                  <Alert className="mb-6 bg-green-50 border-green-200">
+                    <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <AlertTitle className="text-green-800">Message Sent Successfully!</AlertTitle>
+                    <AlertDescription className="text-green-800">
+                      Thank you for your message! We'll get back to you soon.
+                    </AlertDescription>
+                  </Alert>
                 )}
 
                 {submitStatus === 'error' && (
-                  <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
-                    <div className="flex items-center gap-2">
-                      <svg className="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                      </svg>
-                      <p className="text-red-800 font-medium">
-                        Something went wrong. Please try again or call us directly at (206) 455-3644.
-                      </p>
-                    </div>
-                  </div>
+                  <Alert variant="destructive" className="mb-6">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                    <AlertTitle>Submission Error</AlertTitle>
+                    <AlertDescription>
+                      Something went wrong. Please try again or call us directly at (206) 455-3644.
+                    </AlertDescription>
+                  </Alert>
                 )}
 
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -419,7 +428,8 @@ export default function ContactPageClient() {
                 <p className="text-sm text-slate-800 mt-4">
                   * Required fields
                 </p>
-              </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
 
@@ -438,7 +448,7 @@ export default function ContactPageClient() {
         </div>
       </section>
 
-      {/* FAQ Section */}
+          {/* FAQ Section */}
       <section className="relative py-16 md:py-24 bg-white overflow-hidden">
         {/* Modern Whitish Background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -466,49 +476,58 @@ export default function ContactPageClient() {
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/1 to-transparent" />
         </div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
-            Frequently Asked Questions
-          </h2>
+          <Card className="bg-gradient-to-br from-white via-slate-50 to-primary/5 border-primary/20 shadow-xl mb-8">
+            <CardHeader className="text-center">
+              <CardTitle className="text-3xl font-bold text-slate-900">
+                Frequently Asked Questions
+              </CardTitle>
+              <CardDescription>Common questions about our services and facility</CardDescription>
+            </CardHeader>
+          </Card>
           <div className="space-y-6">
-            <details className="bg-gradient-to-br from-white via-slate-50 to-primary/5 rounded-lg border-2 border-primary/20 p-6 shadow-lg backdrop-blur-sm">
-              <summary className="cursor-pointer font-semibold text-slate-900 flex justify-between items-center">
-                How do I schedule a tour?
-                <span className="ml-2">▶</span>
-              </summary>
-              <p className="text-slate-800 mt-4">
-                You can schedule a tour by calling us, emailing, or using the contact form above. We're happy to arrange a time that works best for you.
-              </p>
-            </details>
+            <Card className="bg-gradient-to-br from-white via-slate-50 to-primary/5 border-2 border-primary/20 shadow-lg backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="text-lg font-semibold text-slate-900">How do I schedule a tour?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-800">
+                  You can schedule a tour by calling us, emailing, or using the contact form above. We're happy to arrange a time that works best for you.
+                </p>
+              </CardContent>
+            </Card>
 
-            <details className="bg-gradient-to-br from-white via-slate-50 to-primary/5 rounded-lg border-2 border-primary/20 p-6 shadow-lg backdrop-blur-sm">
-              <summary className="cursor-pointer font-semibold text-slate-900 flex justify-between items-center">
-                What is the admission process?
-                <span className="ml-2">▶</span>
-              </summary>
-              <p className="text-slate-800 mt-4">
-                The admission process begins with a tour and consultation. We'll discuss your needs, answer questions, and work with you to determine if we're the right fit.
-              </p>
-            </details>
+            <Card className="bg-gradient-to-br from-white via-slate-50 to-primary/5 border-2 border-primary/20 shadow-lg backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="text-lg font-semibold text-slate-900">What is the admission process?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-800">
+                  The admission process begins with a tour and consultation. We'll discuss your needs, answer questions, and work with you to determine if we're the right fit.
+                </p>
+              </CardContent>
+            </Card>
 
-            <details className="bg-gradient-to-br from-white via-slate-50 to-primary/5 rounded-lg border-2 border-primary/20 p-6 shadow-lg backdrop-blur-sm">
-              <summary className="cursor-pointer font-semibold text-slate-900 flex justify-between items-center">
-                What services are included?
-                <span className="ml-2">▶</span>
-              </summary>
-              <p className="text-slate-800 mt-4">
-                We offer comprehensive care services including 24/7 support, medication management, personal care, meals, activities, and more. See our Services page for details.
-              </p>
-            </details>
+            <Card className="bg-gradient-to-br from-white via-slate-50 to-primary/5 border-2 border-primary/20 shadow-lg backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="text-lg font-semibold text-slate-900">What services are included?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-800">
+                  We offer comprehensive care services including 24/7 support, medication management, personal care, meals, activities, and more. See our Services page for details.
+                </p>
+              </CardContent>
+            </Card>
 
-            <details className="bg-gradient-to-br from-white via-slate-50 to-primary/5 rounded-lg border-2 border-primary/20 p-6 shadow-lg backdrop-blur-sm">
-              <summary className="cursor-pointer font-semibold text-slate-900 flex justify-between items-center">
-                Can family members visit?
-                <span className="ml-2">▶</span>
-              </summary>
-              <p className="text-slate-800 mt-4">
-                Yes! We encourage family involvement and have flexible visiting hours to accommodate family schedules and activities.
-              </p>
-            </details>
+            <Card className="bg-gradient-to-br from-white via-slate-50 to-primary/5 border-2 border-primary/20 shadow-lg backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="text-lg font-semibold text-slate-900">Can family members visit?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-800">
+                  Yes! We encourage family involvement and have flexible visiting hours to accommodate family schedules and activities.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

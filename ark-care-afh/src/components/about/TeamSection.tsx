@@ -2,6 +2,9 @@
 
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Announcement, AnnouncementTag, AnnouncementTitle } from '@/components/kibo-ui/announcement'
+import { Badge } from '@/components/ui/badge'
 
 export function TeamSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -141,23 +144,21 @@ export function TeamSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="inline-block mb-6">
-            <span className="text-sm font-semibold text-primary uppercase tracking-wider">Our Team</span>
-            <div className={`mt-2 h-1 bg-primary mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'w-20' : 'w-0'}`} />
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-            Our Care Team
-          </h2>
-          <p className="text-lg text-slate-700 max-w-3xl mx-auto leading-relaxed">
+          <Announcement className="mx-auto max-w-fit mb-4" themed>
+            <AnnouncementTag>Team</AnnouncementTag>
+            <AnnouncementTitle>Our Care Team</AnnouncementTitle>
+          </Announcement>
+          <div className={`mt-2 h-1 bg-primary mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'w-20' : 'w-0'}`} />
+          <p className="text-lg text-slate-700 max-w-3xl mx-auto leading-relaxed mt-6">
             Our team consists of trained, certified professionals who are passionate about providing quality care. Every staff member is committed to treating residents with dignity, respect, and compassion. All staff members maintain current CPR/First Aid certification and participate in ongoing professional development.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (
-            <div
+            <Card
               key={index}
-              className={`group bg-gradient-to-br from-white via-white to-primary/5 rounded-2xl shadow-xl border-2 border-primary/20 overflow-hidden transition-all duration-700 hover:shadow-2xl hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              className={`group h-full bg-gradient-to-br from-white via-white to-primary/5 border-2 border-primary/20 shadow-xl overflow-hidden transition-all duration-700 hover:shadow-2xl hover:scale-105 hover:border-primary/40 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               style={{transitionDelay: `${(index + 1) * 100}ms`}}
             >
               {/* Team Member Photo */}
@@ -186,18 +187,20 @@ export function TeamSection() {
               </div>
 
               {/* Info */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-slate-900 mb-1">
+              <CardHeader>
+                <CardTitle className="text-xl font-bold text-slate-900 mb-1">
                   {member.name}
-                </h3>
-                <p className="text-primary font-semibold text-sm mb-4">
+                </CardTitle>
+                <CardDescription className="text-primary font-semibold">
                   {member.title}
-                </p>
-                <p className="text-sm text-slate-700 mb-4 leading-relaxed">
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-sm text-slate-700 leading-relaxed">
                   {member.bio}
                 </p>
                 <div className="border-t border-slate-200 pt-4">
-                  <p className="text-xs font-bold text-slate-900 mb-2 uppercase tracking-wider">Qualifications:</p>
+                  <Badge variant="outline" className="mb-2">Qualifications</Badge>
                   <ul className="text-xs text-slate-700 space-y-1">
                     {member.qualifications.map((qual, idx) => (
                       <li key={idx} className="flex items-center gap-2">
@@ -207,8 +210,8 @@ export function TeamSection() {
                     ))}
                   </ul>
                 </div>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>

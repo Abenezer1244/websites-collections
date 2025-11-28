@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import { Announcement, AnnouncementTag, AnnouncementTitle } from '@/components/kibo-ui/announcement'
 import { ArrowUpRightIcon } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
 
 export function HeroSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -98,57 +100,50 @@ export function HeroSection() {
 
           {/* CTA Buttons */}
           <div className={`flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <Link
-              href="/contact"
-              className="group relative px-6 sm:px-7 md:px-8 py-3 sm:py-3.5 md:py-4 bg-primary text-white font-bold rounded-xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-primary/50 hover:scale-105 text-sm sm:text-base w-full sm:w-auto touch-target"
-            >
-              <span className="relative z-10 flex items-center gap-2">
+            <Button asChild size="lg" className="w-full sm:w-auto shadow-2xl hover:shadow-primary/50">
+              <Link href="/contact" className="group">
                 Schedule a Tour
-                <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary to-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </Link>
-            <Link
-              href="/services"
-              className="group px-6 sm:px-7 md:px-8 py-3 sm:py-3.5 md:py-4 bg-white/15 backdrop-blur-lg border-2 border-white/40 text-white font-bold rounded-xl transition-all duration-300 hover:bg-white/25 hover:border-white/60 hover:scale-105 shadow-xl text-sm sm:text-base w-full sm:w-auto touch-target"
-            >
-              <span className="flex items-center gap-2">
+              </Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="w-full sm:w-auto bg-white/15 backdrop-blur-lg border-2 border-white/40 text-white hover:bg-white/25 hover:border-white/60 shadow-xl">
+              <Link href="/services" className="group">
                 Learn More
-                <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
-              </span>
-            </Link>
+              </Link>
+            </Button>
           </div>
 
           {/* Trust Indicators */}
           <div className={`mt-8 sm:mt-10 md:mt-12 flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 text-xs sm:text-sm transition-all duration-1000 delay-800 px-2 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
+            <Badge variant="outline" className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border-white/20 hover:bg-white/15 text-white">
               <div className="w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center">
                 <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
               </div>
               <span className="font-semibold">Licensed Facility</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
+            </Badge>
+            <Badge variant="outline" className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border-white/20 hover:bg-white/15 text-white">
               <div className="w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center">
                 <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
               </div>
               <span className="font-semibold">24/7 Professional Care</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
+            </Badge>
+            <Badge variant="outline" className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border-white/20 hover:bg-white/15 text-white">
               <div className="w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center">
                 <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
               </div>
               <span className="font-semibold">Personalized Care Plans</span>
-            </div>
+            </Badge>
           </div>
         </div>
       </div>

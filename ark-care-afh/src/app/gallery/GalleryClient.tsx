@@ -3,6 +3,8 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { ImageLightbox } from '@/components/ImageLightbox'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
 
 interface GalleryItem {
   id: number
@@ -36,9 +38,9 @@ export function GalleryClient({ items }: GalleryClientProps) {
     <>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
         {items.map((item) => (
-          <div
+          <Card
             key={item.id}
-            className="group relative bg-white rounded-lg overflow-hidden border border-slate-200 hover:shadow-lg transition-all cursor-pointer"
+            className="group relative overflow-hidden border-primary/20 hover:border-primary/40 shadow-lg hover:shadow-xl transition-all cursor-pointer h-full"
             onClick={() => handleImageClick(item)}
             role={item.image ? 'button' : undefined}
             tabIndex={item.image ? 0 : undefined}
@@ -62,22 +64,9 @@ export function GalleryClient({ items }: GalleryClientProps) {
                   />
                   {/* Click indicator overlay */}
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
-                    <div className="opacity-0 group-hover:opacity-100 transition-opacity">
-                      <svg
-                        className="w-12 h-12 text-white drop-shadow-lg"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
-                        />
-                      </svg>
-                    </div>
+                    <Badge className="opacity-0 group-hover:opacity-100 transition-opacity bg-white/90 text-primary">
+                      Click to View
+                    </Badge>
                   </div>
                 </>
               ) : (
@@ -98,14 +87,14 @@ export function GalleryClient({ items }: GalleryClientProps) {
                       />
                     </svg>
                   </div>
-                  <p className="text-xs text-slate-600 text-center font-medium">Photo Coming Soon</p>
+                  <Badge variant="outline" className="text-xs">Photo Coming Soon</Badge>
                 </div>
               )}
             </div>
-            <div className="p-4 group-hover:bg-primary/5 transition-colors">
-              <h3 className="text-base font-semibold text-slate-900">{item.title}</h3>
-            </div>
-          </div>
+            <CardHeader className="p-4 group-hover:bg-primary/5 transition-colors">
+              <CardTitle className="text-base font-semibold text-slate-900">{item.title}</CardTitle>
+            </CardHeader>
+          </Card>
         ))}
       </div>
 

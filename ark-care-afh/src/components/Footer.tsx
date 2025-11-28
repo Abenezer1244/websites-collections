@@ -2,6 +2,9 @@
 
 import Link from 'next/link'
 import { businessInfo } from '@/lib/seo'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -39,206 +42,193 @@ export function Footer() {
           {/* Top Section */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-10 lg:mb-12">
             {/* Brand Section */}
-            <div className="lg:col-span-1">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/70 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-primary/30">
-                  A
+            <Card className="lg:col-span-1 bg-transparent border-white/20">
+              <CardHeader>
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/70 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-primary/30">
+                    A
+                  </div>
+                  <CardTitle className="text-2xl font-black text-white">Ark Care AFH</CardTitle>
                 </div>
-                <h3 className="text-2xl font-black text-white">Ark Care AFH</h3>
-              </div>
-              <p className="text-slate-300 leading-relaxed mb-6 text-sm">
-                Providing compassionate, personalized adult family home care in Algona, Washington. Licensed and certified for your peace of mind.
-              </p>
-              
-              {/* Social Links */}
-              <div className="flex gap-3" role="list" aria-label="Social media links">
-                <a 
-                  href={businessInfo.sameAs[0]} 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-white/10 hover:bg-primary/40 backdrop-blur-sm rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/30 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-slate-800"
-                  aria-label="Visit our Facebook page"
-                  role="listitem"
-                >
-                  <svg className="w-5 h-5 text-slate-300 hover:text-white transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                  </svg>
-                </a>
-                <a 
-                  href={businessInfo.sameAs[2]} 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-white/10 hover:bg-primary/40 backdrop-blur-sm rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/30 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-slate-800"
-                  aria-label="Visit our Twitter page"
-                  role="listitem"
-                >
-                  <svg className="w-5 h-5 text-slate-300 hover:text-white transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 7-7 7-7" />
-                  </svg>
-                </a>
-                <a 
-                  href={businessInfo.sameAs[1]} 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-white/10 hover:bg-primary/40 backdrop-blur-sm rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/30 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-slate-800"
-                  aria-label="Visit our LinkedIn page"
-                  role="listitem"
-                >
-                  <svg className="w-5 h-5 text-slate-300 hover:text-white transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.722-2.004 1.418-.103.249-.129.597-.129.946v5.441h-3.554s.047-8.825 0-9.744h3.554v1.378c-.009.015-.021.029-.031.042h.031v-.042c.429-.661 1.196-1.6 2.905-1.6 2.12 0 3.709 1.384 3.709 4.365v5.601zM5.337 9.433c-1.144 0-1.915-.758-1.915-1.708 0-.951.77-1.708 1.915-1.708 1.144 0 1.915.757 1.915 1.708 0 .95-.771 1.708-1.915 1.708zm1.575 10.019H3.762V9.708h3.15v9.744zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
-                  </svg>
-                </a>
-              </div>
-            </div>
+                <CardDescription className="text-slate-300 leading-relaxed mb-6">
+                  Providing compassionate, personalized adult family home care in Algona, Washington. Licensed and certified for your peace of mind.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                {/* Social Links */}
+                <div className="flex gap-3" role="list" aria-label="Social media links">
+                  <Button
+                    asChild
+                    variant="ghost"
+                    size="icon"
+                    className="w-10 h-10 bg-white/10 hover:bg-primary/40 text-slate-300 hover:text-white"
+                  >
+                    <a 
+                      href={businessInfo.sameAs[0]} 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Visit our Facebook page"
+                      role="listitem"
+                    >
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                      </svg>
+                    </a>
+                  </Button>
+                  <Button
+                    asChild
+                    variant="ghost"
+                    size="icon"
+                    className="w-10 h-10 bg-white/10 hover:bg-primary/40 text-slate-300 hover:text-white"
+                  >
+                    <a 
+                      href={businessInfo.sameAs[2]} 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Visit our Twitter page"
+                      role="listitem"
+                    >
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 7-7 7-7" />
+                      </svg>
+                    </a>
+                  </Button>
+                  <Button
+                    asChild
+                    variant="ghost"
+                    size="icon"
+                    className="w-10 h-10 bg-white/10 hover:bg-primary/40 text-slate-300 hover:text-white"
+                  >
+                    <a 
+                      href={businessInfo.sameAs[1]} 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Visit our LinkedIn page"
+                      role="listitem"
+                    >
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.722-2.004 1.418-.103.249-.129.597-.129.946v5.441h-3.554s.047-8.825 0-9.744h3.554v1.378c-.009.015-.021.029-.031.042h.031v-.042c.429-.661 1.196-1.6 2.905-1.6 2.12 0 3.709 1.384 3.709 4.365v5.601zM5.337 9.433c-1.144 0-1.915-.758-1.915-1.708 0-.951.77-1.708 1.915-1.708 1.144 0 1.915.757 1.915 1.708 0 .95-.771 1.708-1.915 1.708zm1.575 10.019H3.762V9.708h3.15v9.744zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
+                      </svg>
+                    </a>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
 
             {/* Quick Navigation */}
-            <div>
-              <h4 className="font-bold text-white mb-6 text-lg relative inline-block">
-                Navigation
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-transparent"></span>
-              </h4>
-              <ul className="space-y-3">
-                <li>
-                  <Link 
-                    href="/" 
-                    className="text-slate-300 hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-slate-800 rounded"
-                  >
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link 
-                    href="/about" 
-                    className="text-slate-300 hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-slate-800 rounded"
-                  >
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link 
-                    href="/services" 
-                    className="text-slate-300 hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-slate-800 rounded"
-                  >
-                    Services
-                  </Link>
-                </li>
-                <li>
-                  <Link 
-                    href="/gallery" 
-                    className="text-slate-300 hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-slate-800 rounded"
-                  >
-                    Gallery
-                  </Link>
-                </li>
-                <li>
-                  <Link 
-                    href="/contact" 
-                    className="text-slate-300 hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-slate-800 rounded"
-                  >
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
+            <Card className="bg-transparent border-white/20">
+              <CardHeader>
+                <CardTitle className="font-bold text-white text-lg relative inline-block">
+                  Navigation
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-transparent"></span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3">
+                  {[
+                    { href: '/', label: 'Home' },
+                    { href: '/about', label: 'About Us' },
+                    { href: '/services', label: 'Services' },
+                    { href: '/gallery', label: 'Gallery' },
+                    { href: '/contact', label: 'Contact' }
+                  ].map((link) => (
+                    <li key={link.href}>
+                      <Button asChild variant="ghost" className="text-slate-300 hover:text-primary p-0 h-auto justify-start">
+                        <Link href={link.href}>
+                          {link.label}
+                        </Link>
+                      </Button>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
 
             {/* Services */}
-            <div>
-              <h4 className="font-bold text-white mb-6 text-lg relative inline-block">
-                Our Services
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-transparent"></span>
-              </h4>
-              <ul className="space-y-3">
-                <li className="text-slate-300 flex items-start gap-2">
-                  <svg className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>24/7 Professional Care</span>
-                </li>
-                <li className="text-slate-300 flex items-start gap-2">
-                  <svg className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Medication Management</span>
-                </li>
-                <li className="text-slate-300 flex items-start gap-2">
-                  <svg className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Personal Care Assistance</span>
-                </li>
-                <li className="text-slate-300 flex items-start gap-2">
-                  <svg className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Activities & Engagement</span>
-                </li>
-                <li className="text-slate-300 flex items-start gap-2">
-                  <svg className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Specialized Care Programs</span>
-                </li>
-              </ul>
-            </div>
+            <Card className="bg-transparent border-white/20">
+              <CardHeader>
+                <CardTitle className="font-bold text-white text-lg relative inline-block">
+                  Our Services
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-transparent"></span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3">
+                  {[
+                    '24/7 Professional Care',
+                    'Medication Management',
+                    'Personal Care Assistance',
+                    'Activities & Engagement',
+                    'Specialized Care Programs'
+                  ].map((service, index) => (
+                    <li key={index} className="text-slate-300 flex items-start gap-2">
+                      <Badge variant="outline" className="w-5 h-5 p-0 rounded-full border-primary bg-primary/20 flex items-center justify-center mt-0.5 flex-shrink-0">
+                        <svg className="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                      </Badge>
+                      <span>{service}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
 
             {/* Contact & Info */}
-            <div>
-              <h4 className="font-bold text-white mb-6 text-lg relative inline-block">
-                Get in Touch
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-transparent"></span>
-              </h4>
-              <ul className="space-y-4">
-                <li>
-                  <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-slate-400 text-xs font-medium mb-1 uppercase tracking-wider">Phone</p>
+            <Card className="bg-transparent border-white/20">
+              <CardHeader>
+                <CardTitle className="font-bold text-white text-lg relative inline-block">
+                  Get in Touch
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-transparent"></span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <Badge variant="outline" className="w-10 h-10 p-0 rounded-lg border-primary/30 bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </Badge>
+                  <div>
+                    <p className="text-slate-400 text-xs font-medium mb-1 uppercase tracking-wider">Phone</p>
+                    <Button asChild variant="link" className="text-white hover:text-primary p-0 h-auto font-semibold text-lg">
                       <a 
                         href={`tel:${businessInfo.telephone}`}
-                        className="text-white hover:text-primary transition-colors duration-300 font-semibold text-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-slate-800 rounded"
                         aria-label={`Call Ark Care AFH at ${businessInfo.telephone}`}
                       >
                         {businessInfo.telephone.replace('+1-', '').replace(/-/g, ' ')}
                       </a>
-                    </div>
+                    </Button>
                   </div>
-                </li>
-                <li>
-                  <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-slate-400 text-xs font-medium mb-1 uppercase tracking-wider">Address</p>
-                      <p className="text-slate-300 leading-relaxed">
-                        {businessInfo.address.streetAddress}<br />
-                        {businessInfo.address.addressLocality}, {businessInfo.address.addressRegion} {businessInfo.address.postalCode}
-                      </p>
-                    </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Badge variant="outline" className="w-10 h-10 p-0 rounded-lg border-primary/30 bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </Badge>
+                  <div>
+                    <p className="text-slate-400 text-xs font-medium mb-1 uppercase tracking-wider">Address</p>
+                    <p className="text-slate-300 leading-relaxed">
+                      {businessInfo.address.streetAddress}<br />
+                      {businessInfo.address.addressLocality}, {businessInfo.address.addressRegion} {businessInfo.address.postalCode}
+                    </p>
                   </div>
-                </li>
-                <li>
-                  <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-slate-400 text-xs font-medium mb-1 uppercase tracking-wider">Hours</p>
-                      <p className="text-slate-300 font-semibold">Available 24/7</p>
-                    </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Badge variant="outline" className="w-10 h-10 p-0 rounded-lg border-primary/30 bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </Badge>
+                  <div>
+                    <p className="text-slate-400 text-xs font-medium mb-1 uppercase tracking-wider">Hours</p>
+                    <p className="text-slate-300 font-semibold">Available 24/7</p>
                   </div>
-                </li>
-              </ul>
-            </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
           {/* Divider */}
@@ -255,25 +245,21 @@ export function Footer() {
               </p>
             </div>
             <div className="flex flex-wrap gap-6 text-sm justify-center md:justify-end">
-              <Link 
-                href="/privacy-policy" 
-                className="text-slate-400 hover:text-primary transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-slate-800 rounded"
-              >
-                Privacy Policy
-              </Link>
-              <Link 
-                href="/terms-of-service" 
-                className="text-slate-400 hover:text-primary transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-slate-800 rounded"
-              >
-                Terms of Service
-              </Link>
-              <a 
-                href="#" 
-                className="text-slate-400 hover:text-primary transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-slate-800 rounded"
-                aria-label="Accessibility information"
-              >
-                Accessibility
-              </a>
+              <Button asChild variant="ghost" size="sm" className="text-slate-400 hover:text-primary">
+                <Link href="/privacy-policy">
+                  Privacy Policy
+                </Link>
+              </Button>
+              <Button asChild variant="ghost" size="sm" className="text-slate-400 hover:text-primary">
+                <Link href="/terms-of-service">
+                  Terms of Service
+                </Link>
+              </Button>
+              <Button asChild variant="ghost" size="sm" className="text-slate-400 hover:text-primary">
+                <a href="#" aria-label="Accessibility information">
+                  Accessibility
+                </a>
+              </Button>
             </div>
           </div>
         </div>

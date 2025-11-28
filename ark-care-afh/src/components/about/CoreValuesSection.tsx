@@ -1,6 +1,9 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Announcement, AnnouncementTag, AnnouncementTitle } from '@/components/kibo-ui/announcement'
+import { Badge } from '@/components/ui/badge'
 
 export function CoreValuesSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -35,7 +38,8 @@ export function CoreValuesSection() {
         </svg>
       ),
       title: "Compassion",
-      description: "We care deeply about our residents' well-being and are committed to treating each person with kindness and empathy."
+      description: "We care deeply about our residents' well-being and are committed to treating each person with kindness and empathy.",
+      badge: "Core"
     },
     {
       icon: (
@@ -44,7 +48,8 @@ export function CoreValuesSection() {
         </svg>
       ),
       title: "Quality",
-      description: "Excellence is our standard. We maintain the highest quality in care, services, and our facility."
+      description: "Excellence is our standard. We maintain the highest quality in care, services, and our facility.",
+      badge: "Standard"
     },
     {
       icon: (
@@ -53,7 +58,8 @@ export function CoreValuesSection() {
         </svg>
       ),
       title: "Respect",
-      description: "We honor the dignity and autonomy of each resident, respecting their choices and preferences."
+      description: "We honor the dignity and autonomy of each resident, respecting their choices and preferences.",
+      badge: "Essential"
     }
   ]
 
@@ -121,32 +127,35 @@ export function CoreValuesSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="inline-block mb-6">
-            <span className="text-sm font-semibold text-primary uppercase tracking-wider">Our Values</span>
-            <div className={`mt-2 h-1 bg-primary mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'w-20' : 'w-0'}`} />
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-            Our Core Values
-          </h2>
+          <Announcement className="mx-auto max-w-fit mb-4" themed>
+            <AnnouncementTag>Values</AnnouncementTag>
+            <AnnouncementTitle>Our Core Values</AnnouncementTitle>
+          </Announcement>
+          <div className={`mt-2 h-1 bg-primary mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'w-20' : 'w-0'}`} />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {values.map((value, index) => (
-            <div
+            <Card
               key={index}
-              className={`text-center group transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              className={`text-center group h-full bg-gradient-to-br from-white via-white to-primary/5 border-2 border-primary/20 shadow-xl transition-all duration-700 hover:shadow-2xl hover:scale-105 hover:border-primary/40 backdrop-blur-sm ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               style={{transitionDelay: `${(index + 1) * 100}ms`}}
             >
-              <div className="bg-gradient-to-br from-white via-white to-primary/5 rounded-2xl p-8 shadow-xl border-2 border-primary/20 h-full group-hover:shadow-2xl group-hover:scale-105 transition-all duration-300 backdrop-blur-sm">
+              <CardHeader>
                 <div className="w-20 h-20 bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl flex items-center justify-center mx-auto mb-6 text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-white group-hover:scale-110">
                   {value.icon}
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-4">{value.title}</h3>
+                {value.badge && (
+                  <Badge variant="secondary" className="w-fit mx-auto mb-2">{value.badge}</Badge>
+                )}
+                <CardTitle className="text-xl font-bold text-slate-900">{value.title}</CardTitle>
+              </CardHeader>
+              <CardContent>
                 <p className="text-slate-700 leading-relaxed">
                   {value.description}
                 </p>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>

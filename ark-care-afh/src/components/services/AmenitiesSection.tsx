@@ -1,6 +1,8 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Announcement, AnnouncementTag, AnnouncementTitle } from '@/components/kibo-ui/announcement'
 
 export function AmenitiesSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -145,34 +147,36 @@ export function AmenitiesSection() {
         {/* Light mesh overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/1.5 to-transparent" />
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="inline-block mb-6">
-            <span className="text-sm font-semibold text-primary uppercase tracking-wider">Facility</span>
-            <div className={`mt-2 h-1 bg-primary mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'w-20' : 'w-0'}`} />
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-            Facility Amenities
-          </h2>
+          <Announcement className="mx-auto max-w-fit mb-4" themed>
+            <AnnouncementTag>Facility</AnnouncementTag>
+            <AnnouncementTitle>Facility Amenities</AnnouncementTitle>
+          </Announcement>
+          <div className={`mt-2 h-1 bg-primary mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'w-20' : 'w-0'}`} />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {amenities.map((amenity, index) => (
-            <div
+            <Card
               key={index}
-              className={`group bg-gradient-to-br from-white via-slate-50 to-primary/5 rounded-2xl p-8 shadow-xl border-2 border-primary/20 transition-all duration-700 hover:shadow-2xl hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              className={`group h-full bg-gradient-to-br from-white via-slate-50 to-primary/5 border-2 border-primary/20 shadow-xl transition-all duration-700 hover:shadow-2xl hover:scale-105 hover:border-primary/40 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               style={{transitionDelay: `${(index + 1) * 100}ms`}}
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl flex items-center justify-center mb-6 text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-white group-hover:scale-110">
-                {amenity.icon}
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">
-                {amenity.title}
-              </h3>
-              <p className="text-slate-700 leading-relaxed">
-                {amenity.description}
-              </p>
-            </div>
+              <CardHeader>
+                <div className="w-16 h-16 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl flex items-center justify-center mb-6 text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-white group-hover:scale-110">
+                  {amenity.icon}
+                </div>
+                <CardTitle className="text-xl font-bold text-slate-900">
+                  {amenity.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-700 leading-relaxed">
+                  {amenity.description}
+                </p>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>

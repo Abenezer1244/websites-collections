@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { ServiceCard } from '@/components/cards/service-card'
+import { Announcement, AnnouncementTag, AnnouncementTitle } from '@/components/kibo-ui/announcement'
 
 export function ServicesGridSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -32,12 +33,14 @@ export function ServicesGridSection() {
     {
       title: "24/7 Professional Care",
       description: "Round-the-clock care and support from trained staff members available at all times.",
-      features: ["Medication management", "Health monitoring", "Assistance as needed", "Emergency response"]
+      features: ["Medication management", "Health monitoring", "Assistance as needed", "Emergency response"],
+      badge: "Essential"
     },
     {
       title: "Medication Management",
       description: "Professional medication administration and management to ensure proper care.",
-      features: ["Medication reminders", "Prescription coordination", "Health records tracking", "Communication with healthcare providers"]
+      features: ["Medication reminders", "Prescription coordination", "Health records tracking", "Communication with healthcare providers"],
+      badge: "Essential"
     },
     {
       title: "Personal Care & Hygiene",
@@ -76,14 +79,15 @@ export function ServicesGridSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="inline-block mb-6">
-            <span className="text-sm font-semibold text-primary uppercase tracking-wider">Our Services</span>
-            <div className={`mt-2 h-1 bg-primary mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'w-20' : 'w-0'}`} />
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight" style={{ color: '#000000' }}>
+          <Announcement className="mx-auto max-w-fit mb-4" themed>
+            <AnnouncementTag>Services</AnnouncementTag>
+            <AnnouncementTitle>Our Care Services</AnnouncementTitle>
+          </Announcement>
+          <div className={`mt-2 h-1 bg-primary mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'w-20' : 'w-0'}`} />
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-slate-900 mt-6">
             Our Care Services
           </h2>
-          <p className="text-lg max-w-3xl mx-auto leading-relaxed" style={{ color: '#000000' }}>
+          <p className="text-lg max-w-3xl mx-auto leading-relaxed text-slate-700">
             Comprehensive services designed to support health, safety, and quality of life
           </p>
         </div>
@@ -99,7 +103,7 @@ export function ServicesGridSection() {
                 title={service.title}
                 description={service.description}
                 features={service.features}
-                badge={index < 2 ? "Essential" : undefined}
+                badge={service.badge}
               />
             </div>
           ))}
