@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --font-family-sans: Geist, Inter, sans-serif;
+  --font-family-serif: Instrument Serif, serif;
+
+  --color-stone-50: #fafaf9;
+  --color-stone-100: #f5f5f4;
+  --color-stone-200: #e7e5e4;
+  --color-stone-300: #d6d3d1;
+  --color-stone-400: #a8a29e;
+  --color-stone-500: #78716c;
+  --color-stone-600: #57534e;
+  --color-stone-800: #292524;
+  --color-stone-900: #1c1917;
+  --color-stone-950: #0c0a09;
+  --color-cream: #FDFBF7;
+  --color-pink-500: #BE185D;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-marquee: marquee 25s linear infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* Custom Range Slider */
+input[type=range] {
+  -webkit-appearance: none;
+  background: transparent;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #1c1917;
+  margin-top: -6px;
+  cursor: pointer;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  background: #e7e5e4;
+  border-radius: 2px;
+}
+
+/* Custom Toggle */
+.toggle-checkbox:checked {
+  right: 0;
+  border-color: #1c1917;
+}
+.toggle-checkbox:checked + .toggle-label {
+  background-color: #1c1917;
+}
+
+/* Smooth reveal */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
