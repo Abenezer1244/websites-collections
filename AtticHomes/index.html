@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Attic Adult Family Home — Compassionate Senior Care</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+:root {
+--font-sans: 'Inter', sans-serif;
+--font-serif: 'Playfair Display', serif;
+--font-mono: 'JetBrains Mono', monospace;
+}
+body {
+font-family: var(--font-sans);
+background-color: #050505;
+color: #e5e5e5;
+-webkit-font-smoothing: antialiased;
+}
+.font-serif { font-family: var(--font-serif); }
+.font-mono { font-family: var(--font-mono); }
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #444; }
+/* Animation Utilities */
+.animate-fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+@keyframes fadeUp {
+to { opacity: 1; transform: translateY(0); }
+}
+/* Glass Cards */
+.glass-panel {
+background: rgba(20, 20, 20, 0.6);
+backdrop-filter: blur(12px);
+border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.glass-panel-hover:hover {
+background: rgba(30, 30, 30, 0.8);
+border-color: rgba(255, 255, 255, 0.12);
+transition: all 0.3s ease;
+}
+/* Card Stack specific styles */
+.card-stack-wrapper { perspective: 1000px; }
+.stack-card {
+transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.6s ease;
+transform-origin: center bottom;
+will-change: transform, opacity;
+}
+/* Accordion Styles */
+details > summary { list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
+/* Mobile Menu Styles */
+.mobile-menu {
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu.open {
+  transform: translateX(0);
+}
+.mobile-menu-overlay {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.mobile-menu-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 768px) {
+  /* Touch-friendly targets */
+  button, a[role="button"], .clickable {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  /* Prevent zoom on iOS input focus */
+  input, textarea, select {
+    font-size: 16px !important;
+  }
+  /* Better spacing on mobile */
+  section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  /* Improved grid responsiveness */
+  .grid {
+    gap: 1rem !important;
+  }
+  /* Better card spacing */
+  .glass-panel, .rounded-3xl, .rounded-2xl {
+    margin-bottom: 1rem;
+  }
+  /* Improved button sizing */
+  button, .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+  /* Better image responsiveness */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+/* Mobile Typography Improvements */
+@media (max-width: 640px) {
+  h1 { 
+    font-size: 2rem !important; 
+    line-height: 1.1 !important; 
+    margin-bottom: 1rem !important;
+  }
+  h2 { 
+    font-size: 1.75rem !important; 
+    line-height: 1.2 !important;
+    margin-bottom: 0.75rem !important;
+  }
+  h3 {
+    font-size: 1.5rem !important;
+    line-height: 1.3 !important;
+  }
+  .text-lg { 
+    font-size: 1rem !important; 
+    line-height: 1.6 !important;
+  }
+  .text-xl {
+    font-size: 1.125rem !important;
+  }
+  .text-2xl {
+    font-size: 1.5rem !important;
+  }
+  .text-3xl {
+    font-size: 1.875rem !important;
+  }
+  .text-4xl {
+    font-size: 2.25rem !important;
+  }
+  .text-5xl {
+    font-size: 2.5rem !important;
+  }
+  /* Better padding on mobile */
+  .p-8, .px-8, .py-8 {
+    padding: 1.5rem !important;
+  }
+  .p-6, .px-6, .py-6 {
+    padding: 1.25rem !important;
+  }
+  /* Improved gap spacing */
+  .gap-8, .gap-x-8, .gap-y-8 {
+    gap: 1.5rem !important;
+  }
+  .gap-6, .gap-x-6, .gap-y-6 {
+    gap: 1rem !important;
+  }
+}
+/* Tablet optimizations */
+@media (min-width: 641px) and (max-width: 1024px) {
+  h1 {
+    font-size: 3rem !important;
+  }
+  h2 {
+    font-size: 2.25rem !important;
+  }
+}
+/* Touch-friendly targets */
+@media (max-width: 768px) {
+  button, a[role="button"], .clickable {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+/* Improved mobile typography */
+@media (max-width: 640px) {
+  h1 { font-size: 2.5rem !important; line-height: 1.1 !important; }
+  h2 { font-size: 2rem !important; }
+  .text-lg { font-size: 1rem !important; }
+}
+</style>
+<script>
+// Configure Tailwind to include custom 3D transform utilities
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+brand: {
+50: '#fff7ed',
+100: '#ffedd5',
+200: '#fed7aa',
+300: '#fdba74',
+400: '#fb923c',
+500: '#f97316', // Primary Brand Color (Warmth)
+600: '#ea580c',
+900: '#7c2d12',
+}
+}
+}
+},
+plugins: [
+function({ addUtilities }) {
+const rotateUtilities = {};
+[0, 5, 10, 12, 15, 20, 30, 45].forEach((value) => {
+rotateUtilities[`.rotate-y-${value}`] = { transform: `rotateY(${value}deg)` };
+rotateUtilities[`.rotate-x-${value}`] = { transform: `rotateX(${value}deg)` };
+rotateUtilities[`.-rotate-y-${value}`] = { transform: `rotateY(-${value}deg)` };
+});
+addUtilities({
+...rotateUtilities,
+".perspective-1000": { perspective: "1000px" },
+".transform-style-preserve-3d": { "transform-style": "preserve-3d" },
+});
+}
+]
+};
+</script>
+<link id="all-fonts-link-font-geist" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist">.font-geist { font-family: 'Geist', sans-serif !important; }</style><link id="all-fonts-link-font-roboto" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-roboto">.font-roboto { font-family: 'Roboto', sans-serif !important; }</style><link id="all-fonts-link-font-montserrat" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-montserrat">.font-montserrat { font-family: 'Montserrat', sans-serif !important; }</style><link id="all-fonts-link-font-poppins" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-poppins">.font-poppins { font-family: 'Poppins', sans-serif !important; }</style><link id="all-fonts-link-font-playfair" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&amp;display=swap"><style id="all-fonts-style-font-playfair">.font-playfair { font-family: 'Playfair Display', serif !important; }</style><link id="all-fonts-link-font-instrument-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-instrument-serif">.font-instrument-serif { font-family: 'Instrument Serif', serif !important; }</style><link id="all-fonts-link-font-merriweather" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&amp;display=swap"><style id="all-fonts-style-font-merriweather">.font-merriweather { font-family: 'Merriweather', serif !important; }</style><link id="all-fonts-link-font-bricolage" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-bricolage">.font-bricolage { font-family: 'Bricolage Grotesque', sans-serif !important; }</style><link id="all-fonts-link-font-jakarta" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-jakarta">.font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif !important; }</style><link id="all-fonts-link-font-manrope" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-manrope">.font-manrope { font-family: 'Manrope', sans-serif !important; }</style><link id="all-fonts-link-font-space-grotesk" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-space-grotesk">.font-space-grotesk { font-family: 'Space Grotesk', sans-serif !important; }</style><link id="all-fonts-link-font-work-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-work-sans">.font-work-sans { font-family: 'Work Sans', sans-serif !important; }</style><link id="all-fonts-link-font-pt-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&amp;display=swap"><style id="all-fonts-style-font-pt-serif">.font-pt-serif { font-family: 'PT Serif', serif !important; }</style><link id="all-fonts-link-font-geist-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist-mono">.font-geist-mono { font-family: 'Geist Mono', monospace !important; }</style><link id="all-fonts-link-font-space-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap"><style id="all-fonts-style-font-space-mono">.font-space-mono { font-family: 'Space Mono', monospace !important; }</style><link id="all-fonts-link-font-quicksand" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-quicksand">.font-quicksand { font-family: 'Quicksand', sans-serif !important; }</style><link id="all-fonts-link-font-nunito" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-nunito">.font-nunito { font-family: 'Nunito', sans-serif !important; }</style>  <style>
+/* 3D Transform utilities */
+.transform-style-preserve-3d { transform-style: preserve-3d !important; }
+</style></head>
+<body class="overflow-x-hidden selection:bg-brand-500/30 selection:text-brand-100">
+
+    <!-- Ambient Background -->
+    <div class="fixed inset-0 z-0 pointer-events-none">
+      <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-brand-600/10 rounded-full blur-[120px] mix-blend-screen opacity-40"></div>
+      <div class="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-teal-600/10 rounded-full blur-[120px] mix-blend-screen opacity-30"></div>
+      <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-black/50 backdrop-blur-xl">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <div class="flex items-center gap-4 sm:gap-8">
+          <a href="index.html" class="flex items-center gap-2 group">
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-neutral-800 to-black border border-white/10 flex items-center justify-center group-hover:border-brand-500/50 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="home" class="lucide lucide-home text-white w-4 h-4"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+            </div>
+            <span class="text-sm sm:text-base font-medium text-white tracking-tight font-serif">
+              Attic AFH
+            </span>
+          </a>
+          <div class="hidden md:flex gap-6 text-sm font-medium text-neutral-400 gap-x-6 gap-y-6 items-center">
+  <a href="index.html" class="hover:text-orange-400 transition-colors">Home</a>
+  <a href="about-us.html" class="hover:text-orange-400 transition-colors">About Us</a>
+  <a href="gallery.html" class="hover:text-orange-400 transition-colors">Gallery</a>
+  <a href="services.html" class="hover:text-orange-400 transition-colors">Services</a>
+  <a href="contact-us.html" class="hover:text-orange-400 transition-colors">Contact Us</a>
+</div>
+        </div>
+        <div class="flex items-center gap-2 sm:gap-4">
+          <a href="contact-us.html" class="hidden sm:flex items-center gap-2 hover:bg-neutral-200 transition-colors text-xs font-medium text-black bg-white h-9 rounded-full pr-5 pl-5 shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+            <span class="">Schedule a Visit</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="calendar" class="lucide lucide-calendar w-3.5 h-3.5"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+          </a>
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 p-2 rounded-lg hover:bg-white/5 transition-colors" aria-label="Toggle menu">
+            <span class="block w-5 h-0.5 bg-white transition-all duration-300" id="menu-line-1"></span>
+            <span class="block w-5 h-0.5 bg-white transition-all duration-300" id="menu-line-2"></span>
+            <span class="block w-5 h-0.5 bg-white transition-all duration-300" id="menu-line-3"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay fixed inset-0 bg-black/80 backdrop-blur-sm z-40 md:hidden" onclick="toggleMobileMenu()"></div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 md:hidden overflow-y-auto">
+      <div class="flex flex-col h-full">
+        <!-- Mobile Menu Header -->
+        <div class="flex items-center justify-between p-6 border-b border-white/10">
+          <span class="text-lg font-serif text-white font-medium">Menu</span>
+          <button onclick="toggleMobileMenu()" class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-white/5 transition-colors" aria-label="Close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white w-6 h-6"><path d="M18 6 6 18"></path><path d="M6 6l12 12"></path></svg>
+          </button>
+        </div>
+        <!-- Mobile Menu Links -->
+        <nav class="flex-1 p-6 space-y-1">
+          <a href="index.html" class="block px-4 py-3 rounded-lg text-white hover:bg-white/5 hover:text-orange-400 transition-all font-medium" onclick="toggleMobileMenu()">Home</a>
+          <a href="about-us.html" class="block px-4 py-3 rounded-lg text-neutral-300 hover:bg-white/5 hover:text-orange-400 transition-all font-medium" onclick="toggleMobileMenu()">About Us</a>
+          <a href="gallery.html" class="block px-4 py-3 rounded-lg text-neutral-300 hover:bg-white/5 hover:text-orange-400 transition-all font-medium" onclick="toggleMobileMenu()">Gallery</a>
+          <a href="services.html" class="block px-4 py-3 rounded-lg text-neutral-300 hover:bg-white/5 hover:text-orange-400 transition-all font-medium" onclick="toggleMobileMenu()">Services</a>
+          <a href="contact-us.html" class="block px-4 py-3 rounded-lg text-neutral-300 hover:bg-white/5 hover:text-orange-400 transition-all font-medium" onclick="toggleMobileMenu()">Contact Us</a>
+        </nav>
+        <!-- Mobile CTA Button -->
+        <div class="p-6 border-t border-white/10">
+          <a href="contact-us.html" class="block w-full text-center px-6 py-3 rounded-full bg-white text-black font-medium hover:bg-neutral-200 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.1)]" onclick="toggleMobileMenu()">
+            Schedule a Visit
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="lg:pt-40 lg:pb-32 overflow-hidden bg-[url(https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/733a7c1b-5531-492b-8b97-eba59bb9c8be_3840w.jpg)] bg-cover bg-center z-10 pt-24 sm:pt-32 pb-16 sm:pb-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row gap-16 gap-x-16 gap-y-16 items-center">
+          <!-- Hero Content -->
+          <div class="flex-1 max-w-2xl">
+    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-neutral-300 text-xs font-medium mb-8 backdrop-blur-sm shadow-sm animate-fade-up">
+        <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+        </span>
+        <span class="tracking-wide">Accepting new residents for 2024</span>
+    </div>
+
+    <div class="min-h-[6rem] sm:min-h-[7rem] md:min-h-[9rem] lg:min-h-[13rem]">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-sans font-semibold tracking-tighter leading-[1.1] text-white mb-4 sm:mb-6 md:mb-8 animate-fade-up delay-100">
+            Compassionate care,
+            <br>
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-200 via-brand-400 to-brand-600 pb-2 inline-block animate-[pulse_4s_cubic-bezier(0.4,0,0.6,1)_infinite] hover:scale-105 transition-transform duration-300 cursor-default">
+    reimagined.
+</span>
+        </h1>
+    </div>
+
+    <p class="leading-relaxed animate-fade-up delay-200 text-base sm:text-lg font-light max-w-lg mb-8 sm:mb-10">
+        A peaceful sanctuary where professional medical attention meets the warmth of a real home. Experience personalized senior care designed for dignity.
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-5 animate-fade-up delay-300">
+        <button class="group hover:bg-neutral-200 transition-all duration-300 flex hover:shadow-[0_0_30px_rgba(255,255,255,0.25)] hover:scale-[1.02] active:scale-[0.98] font-semibold text-black bg-white h-12 sm:h-12 rounded-full pr-6 sm:pr-8 pl-6 sm:pl-8 shadow-[0_0_20px_rgba(255,255,255,0.15)] gap-x-2 gap-y-2 items-center justify-center" onclick="window.location.href='gallery.html'" role="button">View Gallery</button>
+        <button class="group h-12 px-6 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 text-white font-medium transition-all duration-300 flex items-center justify-center gap-2 backdrop-blur-sm hover:border-white/20">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone group-hover:rotate-12 transition-transform duration-300 text-neutral-400 group-hover:text-white"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 .07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" class=""></path></svg>
+            <span class="text-sm sm:text-base">(469) 735-5759</span>
+        </button>
+    </div>
+
+    <div class="mt-8 sm:mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5 animate-fade-up delay-300 border-t border-white/5 pt-6 sm:pt-8 max-w-sm">
+        <div class="flex -space-x-2 sm:-space-x-3">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=64&amp;h=64&amp;fit=crop&amp;crop=faces" alt="Reviewer" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-black object-cover ring-2 ring-black bg-neutral-800">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=64&amp;h=64&amp;fit=crop&amp;crop=faces" alt="Reviewer" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-black object-cover ring-2 ring-black bg-neutral-800">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=64&amp;h=64&amp;fit=crop&amp;crop=faces" alt="Reviewer" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-black object-cover ring-2 ring-black bg-neutral-800">
+            <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-black bg-neutral-800 flex items-center justify-center text-[9px] sm:text-[10px] font-bold text-white ring-2 ring-black">+42</div>
+        </div>
+        <div class="flex flex-col gap-0.5">
+            <div class="flex items-center gap-0.5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" class="text-yellow-500"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" class="text-yellow-500"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" class="text-yellow-500"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" class=""></polygon></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" class="text-yellow-500"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" class=""></polygon></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" class="text-yellow-500"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <p class="text-[10px] sm:text-xs text-neutral-400 font-medium">Trusted by local families</p>
+        </div>
+    </div>
+</div>
+
+          <!-- Hero Visual -->
+          <div class="flex-1 w-full relative perspective-1000 animate-fade-up delay-200">
+            <!-- Main dashboard card -->
+            
+
+            <!-- Floating Card -->
+            <div class="-right-10 glass-panel shadow-brand-900/40 sm:-right-12 sm:bottom-12 bg-black/40 w-48 z-20 pointer-events-none border-brand-500/30 border rounded-xl px-4 py-3 absolute bottom-8 shadow-lg backdrop-blur-md">
+              <p class="text-[10px] uppercase tracking-[0.18em] text-brand-400 mb-1">Care Ratio</p>
+              <p class="text-xl font-semibold text-white leading-tight">1:3</p>
+              <p class="text-[11px] text-neutral-400">Staff to resident ratio, ensuring personal attention.</p>
+            </div>
+            
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logo Ticker -->
+    <section class="border-y overflow-hidden bg-black/30 border-white/5 pt-10 pb-10">
+      <div class="max-w-7xl mx-auto px-6">
+        <p class="text-center text-xs font-medium text-neutral-500 uppercase tracking-widest mb-8">
+          Partnered with premier local health providers
+        </p>
+        <div class="relative flex overflow-x-hidden group">
+          <div class="animate-marquee whitespace-nowrap flex gap-16 items-center opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+            <span class="text-xl font-serif font-semibold tracking-tight">City General Hospital</span>
+            <span class="text-xl font-sans font-bold tracking-tight">Senior Health Assoc.</span>
+            <span class="text-xl font-serif italic font-medium">Valley Hospice Care</span>
+            <span class="text-xl font-mono font-medium tracking-tighter">MED_ACCESS</span>
+            <span class="text-xl font-serif font-bold">Evergreen Pharmacy</span>
+            <span class="text-xl font-sans font-bold tracking-tight">Active Living NY</span>
+            <!-- Repeat -->
+            <span class="text-xl font-serif font-semibold tracking-tight">City General Hospital</span>
+            <span class="text-xl font-sans font-bold tracking-tight">Senior Health Assoc.</span>
+            <span class="text-xl font-serif italic font-medium">Valley Hospice Care</span>
+          </div>
+          <style>
+            .animate-marquee { animation: marquee 30s linear infinite; }
+            @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+          </style>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us (Scroll Section) -->
+    <section id="why-choose-us" class="relative z-20 bg-black">
+      <div class="sticky flex flex-col overflow-hidden w-full h-screen pt-16 sm:pt-20 px-4 sm:px-6 pb-16 sm:pb-20 top-0 items-center justify-center min-h-[500px] sm:min-h-[600px]">
+        
+        <div class="text-center mb-8 sm:mb-12 relative z-10" id="pain-header">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-serif text-white mb-3 sm:mb-4 leading-tight tracking-tight px-4">
+            Peace of mind
+            <br>
+            <span class="text-orange-400">is priceless.</span>
+          </h2>
+        </div>
+
+        <div class="card-stack-wrapper md:h-[500px] w-full h-[400px] sm:h-[450px] md:h-[480px] max-w-sm py-1 relative mx-auto">
+          <!-- Card 1 -->
+          <div class="stack-card absolute inset-0 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 flex flex-col justify-between border border-white/10 bg-[#111] shadow-2xl" id="card-1" style="transform: scale(1) rotate(-2deg); filter: brightness(0.6);">
+            <div class="relative">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="users" class="lucide lucide-users w-8 h-8 sm:w-10 sm:h-10 text-neutral-600 mb-4 sm:mb-6 opacity-50"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg>
+              <p class="text-xl sm:text-2xl md:text-3xl font-serif text-white leading-tight">
+                "I worry Mom isn't eating well alone."
+              </p>
+              <p class="mt-4 sm:mt-6 text-neutral-500 text-sm sm:text-base md:text-lg leading-relaxed">
+                We provide 3 nutritious, home-cooked meals daily, tailored to dietary needs and preferences.
+              </p>
+            </div>
+            <div>
+                <div class="w-full h-1 bg-neutral-800 rounded-full mt-4">
+                    <div class="w-1/3 h-full bg-brand-500 rounded-full"></div>
+                </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="stack-card absolute inset-0 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 flex flex-col justify-between border border-white/10 bg-[#111] shadow-2xl translate-y-[120%] opacity-0" id="card-2" style="transform: translateY(0%) scale(0.95) rotate(2deg); opacity: 0.955652; filter: brightness(0.6);">
+            <div class="relative">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="heart-pulse" class="lucide lucide-heart-pulse w-8 h-8 sm:w-10 sm:h-10 text-neutral-600 mb-4 sm:mb-6 opacity-50"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path><path d="M3.22 13H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"></path></svg>
+              <p class="text-xl sm:text-2xl md:text-3xl font-serif text-white leading-tight">
+                "Big facilities feel so impersonal."
+              </p>
+              <p class="mt-4 sm:mt-6 text-neutral-500 text-sm sm:text-base md:text-lg leading-relaxed">
+                With only 6 residents, we know everyone's favorite song, story, and morning routine.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="stack-card absolute inset-0 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 flex flex-col justify-between border border-white/10 bg-[#111] shadow-2xl translate-y-[120%] opacity-0" id="card-3" style="transform: translateY(0%) scale(1) rotate(-1deg); opacity: 1;">
+            <div class="relative">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shield-check" class="lucide lucide-shield-check w-8 h-8 sm:w-10 sm:h-10 text-neutral-600 mb-4 sm:mb-6 opacity-50"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+              <p class="text-xl sm:text-2xl md:text-3xl font-serif text-white leading-tight">
+                "Is she safe at night?"
+              </p>
+              <p class="mt-4 sm:mt-6 text-neutral-500 text-sm sm:text-base md:text-lg leading-relaxed">
+                Our staff is awake and available 24/7. We monitor safety without compromising dignity.
+              </p>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="text-brand-500 text-[10px] sm:text-xs font-bold tracking-widest uppercase">The Attic Standard</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="h-[200vh] sm:h-[250vh]"></div>
+    </section>
+
+    <!-- Our Expertise (Bento Grid) -->
+    <section id="expertise" class="py-16 sm:py-24 md:py-32 relative bg-black">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-12 sm:mb-16 md:mb-20 max-w-2xl">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 sm:mb-6">
+            Holistic care suited to
+            <br>
+            individual needs.
+          </h2>
+          <p class="text-base sm:text-lg text-neutral-400">
+            We go beyond basic needs to ensure emotional, physical, and social well-being for every resident.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 auto-rows-[minmax(280px,auto)]">
+          <!-- Card 1: Medication -->
+          <div class="sm:col-span-2 md:col-span-2 glass-panel rounded-2xl sm:rounded-3xl p-6 sm:p-8 relative overflow-hidden group flex flex-col border border-white/10 bg-[#0A0A0A] hover:scale-[1.02] hover:border-white/20 hover:shadow-2xl hover:shadow-brand-500/10 transition-all duration-300 ease-out">
+            <div class="relative z-10 flex flex-col h-full">
+              <h3 class="text-2xl font-normal font-serif text-white mb-2 tracking-tight">Medication Management</h3>
+              <p class="text-sm text-neutral-400 mb-8 font-light">Strict adherence to doctor's orders.</p>
+              
+              <div class="overflow-hidden group-hover:border-brand-500/30 transition-all duration-300 ease-out bg-neutral-900/50 border-white/10 border rounded-xl mt-auto p-4 relative shadow-2xl hover:scale-105 hover:bg-neutral-900 hover:border-brand-500/50 hover:shadow-brand-500/20">
+    <div class="flex items-center gap-3 mb-3 border-b border-white/5 pb-2">
+        <div class="w-8 h-8 rounded bg-brand-500/20 flex items-center justify-center text-brand-500">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="pill" class="lucide lucide-pill w-4 h-4"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"></path><path d="m8.5 8.5 7 7"></path></svg>
+        </div>
+        <div class="text-xs text-white">Morning Dose</div>
+        <div class="ml-auto text-xs text-green-400">Administered</div>
+    </div>
+    <div class="flex items-center gap-3 opacity-50">
+        <div class="w-8 h-8 rounded bg-neutral-800 flex items-center justify-center text-neutral-500">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="pill" class="lucide lucide-pill w-4 h-4"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"></path><path d="m8.5 8.5 7 7"></path></svg>
+        </div>
+        <div class="text-xs text-white">Evening Dose</div>
+        <div class="ml-auto text-xs text-neutral-500">8:00 PM</div>
+    </div>
+</div>
+            </div>
+            <div class="absolute top-0 right-0 w-[200px] h-[200px] bg-brand-500/10 blur-[80px] rounded-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          </div>
+
+          <!-- Card 2: Activities -->
+          <div class="sm:col-span-2 md:col-span-2 glass-panel rounded-2xl sm:rounded-3xl p-6 sm:p-8 relative overflow-hidden group flex flex-col border border-white/10 bg-[#0A0A0A] hover:scale-[1.02] hover:border-white/20 hover:shadow-2xl hover:shadow-brand-500/10 transition-all duration-300 ease-out">
+            <h3 class="text-2xl font-normal font-serif text-white mb-2 tracking-tight">Daily Activities</h3>
+            <p class="text-sm text-neutral-400 mb-8 font-light">Keeping minds and bodies active.</p>
+            
+            <div class="relative mt-auto h-40 w-full flex items-end justify-center">
+                <div class="w-full bg-neutral-900 border border-white/10 rounded-xl p-4 transform group-hover:-translate-y-2 group-hover:border-brand-500/30 transition-all duration-500">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-xs text-brand-300 font-medium uppercase">Today's Schedule</span>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-2 text-sm text-white"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="sun" class="lucide lucide-sun w-3 h-3 text-yellow-500"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg> Garden Walk</div>
+                        <div class="flex items-center gap-2 text-sm text-white"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="music" class="lucide lucide-music w-3 h-3 text-blue-500"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg> Music Therapy</div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Nutrition -->
+          <div class="sm:col-span-2 md:col-span-2 glass-panel rounded-2xl sm:rounded-3xl p-6 sm:p-8 relative overflow-hidden group flex flex-col border border-white/10 bg-[#0A0A0A] hover:scale-[1.02] hover:border-white/20 hover:shadow-2xl hover:shadow-brand-500/10 transition-all duration-300 ease-out">
+            <h3 class="text-2xl font-normal font-serif text-white mb-2 tracking-tight">Nutrition</h3>
+            <p class="text-sm text-neutral-400 mb-8 font-light">Chef-prepared healthy meals.</p>
+            <div class="relative flex-1 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="utensils" class="lucide lucide-utensils w-24 h-24 text-neutral-800 group-hover:text-brand-900/50 transition-colors duration-500"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path><path d="M7 2v20"></path><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path></svg>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="bg-black/80 backdrop-blur border border-white/10 px-4 py-2 rounded-lg group-hover:bg-brand-950/30 group-hover:border-brand-500/30 transition-all duration-300">
+                        <span class="text-brand-500 text-sm font-medium">Fresh Ingredients</span>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Specialized Care (Wide) -->
+          <div class="sm:col-span-2 md:col-span-3 glass-panel rounded-2xl sm:rounded-3xl p-6 sm:p-8 relative overflow-hidden group flex flex-col justify-between border border-white/10 bg-[#0A0A0A] min-h-[280px] sm:min-h-[300px] hover:scale-[1.02] hover:border-white/20 hover:shadow-2xl hover:shadow-brand-500/10 transition-all duration-300 ease-out">
+            <div class="relative z-10">
+              <h3 class="text-2xl font-normal font-serif text-white mb-2 tracking-tight">Dementia &amp; Memory Care</h3>
+              <p class="text-sm text-neutral-400 font-light max-w-sm">
+                Specialized training to support residents with memory impairments in a secure environment.
+              </p>
+            </div>
+            <div class="relative z-10 mt-8">
+                <div class="flex gap-4">
+                    <div class="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-xs text-neutral-300 group-hover:bg-brand-500/10 group-hover:border-brand-500/20 transition-colors duration-300">Wander Prevention</div>
+                    <div class="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-xs text-neutral-300 group-hover:bg-brand-500/10 group-hover:border-brand-500/20 transition-colors duration-300">Cognitive Exercises</div>
+                </div>
+            </div>
+            <div class="absolute right-0 bottom-0 w-64 h-64 bg-gradient-to-tl from-brand-900/20 to-transparent rounded-full blur-3xl group-hover:from-brand-600/20 transition-colors duration-500"></div>
+          </div>
+
+          <!-- Card 5: Personal Care (Wide) -->
+          <div class="sm:col-span-2 md:col-span-3 glass-panel rounded-2xl sm:rounded-3xl p-6 sm:p-8 relative overflow-hidden group flex flex-col border border-white/10 bg-[#0A0A0A] min-h-[280px] sm:min-h-[300px] hover:scale-[1.02] hover:border-white/20 hover:shadow-2xl hover:shadow-brand-500/10 transition-all duration-300 ease-out">
+             <div class="relative z-10">
+              <h3 class="text-2xl font-normal font-serif text-white mb-2 tracking-tight">Assistance with Daily Living</h3>
+              <p class="text-sm text-neutral-400 font-light max-w-sm">
+                Respectful help with bathing, dressing, and grooming to maintain dignity.
+              </p>
+            </div>
+            <div class="mt-auto flex justify-end">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="hand-heart" class="lucide lucide-hand-heart w-32 h-32 text-neutral-800 opacity-50 group-hover:opacity-100 group-hover:text-brand-500/20 transition-all duration-500"><path d="M11 14h2a2 2 0 0 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16"></path><path d="m14.45 13.39 5.05-4.694C20.196 8 21 6.85 21 5.75a2.75 2.75 0 0 0-4.797-1.837.276.276 0 0 1-.406 0A2.75 2.75 0 0 0 11 5.75c0 1.2.802 2.248 1.5 2.946L16 11.95"></path><path d="m2 15 6 6"></path><path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a1 1 0 0 0-2.75-2.91"></path></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials (Adapted Timeline) -->
+    <section id="testimonials" class="relative bg-black text-white py-16 sm:py-20 md:py-24 lg:py-32">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p class="text-xs font-semibold tracking-[0.25em] uppercase text-brand-400 mb-3 sm:mb-4">Real Stories</p>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight text-neutral-50 font-serif">
+          Families trust Attic AFH
+        </h2>
+      </div>
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 sm:mt-16 md:mt-20 relative" id="timeline-wrapper">
+        <div class="pointer-events-none absolute left-6 md:left-8 top-0 bottom-0 w-px bg-neutral-800/50"></div>
+        <div id="timeline-progress-bar" class="pointer-events-none absolute left-6 md:left-8 top-0 w-px bg-gradient-to-b from-brand-500 via-brand-500 to-brand-400 h-0 transition-[height] duration-75 ease-linear shadow-[0_0_15px_rgba(249,115,22,0.6)] z-10" style="height: 0px;"></div>
+
+        <div class="space-y-16 sm:space-y-20 md:space-y-24 lg:space-y-32 pb-8 sm:pb-12">
+          <!-- Story 1 -->
+          <div class="timeline-step flex flex-col md:flex-row items-start gap-12 md:gap-16 group" data-step-row="1">
+            <div class="relative w-full md:w-[260px] pl-12 md:pl-16">
+              <div class="step-marker-wrapper absolute top-2 left-6 md:left-8 -translate-x-1/2 z-20">
+                <div class="step-marker h-4 w-4 rounded-[4px] border transition-all duration-300 relative overflow-hidden bg-brand-500 shadow-[0_0_0_6px_rgba(249,115,22,0.15)] border-neutral-700 bg-neutral-900" data-step-marker="1">
+                  <div class="absolute inset-0 bg-brand-500 transition-opacity duration-300 step-fill opacity-0"></div>
+                </div>
+              </div>
+              <h3 class="step-title text-xl font-semibold mb-2 text-neutral-400">The Williams Family</h3>
+              <p class="step-desc text-sm text-neutral-400">Mother joined in 2022</p>
+            </div>
+            <div class="step-card transition-all duration-700 ease-out flex-1 opacity-0 translate-y-12">
+              <div class="rounded-[32px] border border-neutral-800 bg-neutral-900/80 p-8 shadow-2xl">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="quote" class="lucide lucide-quote text-brand-500 mb-4 w-8 h-8 opacity-50"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg>
+                <p class="text-lg md:text-xl text-neutral-200 font-serif italic">
+                  "The transition was our biggest fear. But within a week, Mom was calling it 'home'. The staff treats her like their own grandmother."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Story 2 -->
+          <div class="timeline-step flex flex-col md:flex-row items-start gap-12 md:gap-16 group" data-step-row="2">
+            <div class="relative w-full md:w-[260px] pl-12 md:pl-16">
+               <div class="step-marker-wrapper absolute top-2 left-6 md:left-8 -translate-x-1/2 z-20">
+                <div class="step-marker h-4 w-4 rounded-[4px] border transition-all duration-300 relative overflow-hidden border-neutral-700 bg-neutral-900" data-step-marker="2"></div>
+              </div>
+              <h3 class="step-title text-xl font-semibold mb-2 group-hover:text-white transition-colors text-neutral-400">The Chen Family</h3>
+              <p class="step-desc text-sm text-neutral-500 group-hover:text-neutral-300 transition-colors">Father joined in 2023</p>
+            </div>
+            <div class="step-card transition-all duration-700 ease-out flex-1 opacity-0 translate-y-12">
+              <div class="rounded-[32px] border border-neutral-800 bg-neutral-900/80 p-8 shadow-2xl">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="quote" class="lucide lucide-quote text-brand-500 mb-4 w-8 h-8 opacity-50"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg>
+                <p class="text-lg md:text-xl text-neutral-200 font-serif italic">
+                  "Dad loves the food. They actually listened when he said he prefers rice porridge for breakfast. It's the little details that matter."
+                </p>
+              </div>
+            </div>
+          </div>
+          
+           <!-- Story 3 -->
+          <div class="timeline-step flex flex-col md:flex-row items-start gap-12 md:gap-16 group" data-step-row="3">
+            <div class="relative w-full md:w-[260px] pl-12 md:pl-16">
+               <div class="step-marker-wrapper absolute top-2 left-6 md:left-8 -translate-x-1/2 z-20">
+                <div class="step-marker h-4 w-4 rounded-[4px] border transition-all duration-300 relative overflow-hidden border-neutral-700 bg-neutral-900" data-step-marker="3"></div>
+              </div>
+              <h3 class="step-title text-xl font-semibold mb-2 group-hover:text-white transition-colors text-neutral-400">Robert &amp; Sarah</h3>
+              <p class="step-desc text-sm text-neutral-500 group-hover:text-neutral-300 transition-colors">Aunt joined in 2021</p>
+            </div>
+            <div class="step-card transition-all duration-700 ease-out flex-1 opacity-0 translate-y-12">
+              <div class="rounded-[32px] border border-neutral-800 bg-neutral-900/80 p-8 shadow-2xl">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="quote" class="lucide lucide-quote text-brand-500 mb-4 w-8 h-8 opacity-50"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg>
+                <p class="text-lg md:text-xl text-neutral-200 font-serif italic">
+                  "Knowing there is a nurse available 24/7 gave us our sleep back. We know she is safe, happy, and loved."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 sm:py-20 md:py-24 lg:py-32 text-white bg-black relative" id="faq">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 sm:mb-16">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-orange-400 font-serif mb-3 sm:mb-4">Common Questions</h2>
+          <p class="text-sm sm:text-base text-neutral-400">Everything you need to know about our home.</p>
+        </div>
+
+        <div class="space-y-3 sm:space-y-4">
+            <!-- Q1 -->
+            <details class="group glass-panel rounded-xl sm:rounded-2xl open:bg-neutral-900/80 transition-all duration-300">
+                <summary class="flex items-center justify-between p-4 sm:p-6 cursor-pointer">
+                    <h3 class="text-lg font-medium text-white">What level of care do you provide?</h3>
+                    <span class="text-brand-500 transition-transform duration-300 group-open:rotate-180">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-5 h-5"><path d="m6 9 6 6 6-6"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-4 sm:px-6 pb-4 sm:pb-6 text-sm sm:text-base text-neutral-400 leading-relaxed">
+                    We provide levels of care ranging from assisted living to heavy care, including dementia support, hospice coordination, and diabetic management.
+                </div>
+            </details>
+
+            <!-- Q2 -->
+            <details class="group glass-panel rounded-2xl open:bg-neutral-900/80 transition-all duration-300">
+                <summary class="flex items-center justify-between p-6 cursor-pointer">
+                    <h3 class="text-lg font-medium text-white">What are the visiting hours?</h3>
+                    <span class="text-brand-500 transition-transform duration-300 group-open:rotate-180">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-5 h-5"><path d="m6 9 6 6 6-6"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-4 sm:px-6 pb-4 sm:pb-6 text-sm sm:text-base text-neutral-400 leading-relaxed">
+                    We have an open door policy for families. While we encourage visits between 9 AM and 7 PM to respect sleep schedules, we are flexible for family needs.
+                </div>
+            </details>
+
+            <!-- Q3 -->
+            <details class="group glass-panel rounded-2xl open:bg-neutral-900/80 transition-all duration-300">
+                <summary class="flex items-center justify-between p-6 cursor-pointer">
+                    <h3 class="text-lg font-medium text-white">How is the food prepared?</h3>
+                    <span class="text-brand-500 transition-transform duration-300 group-open:rotate-180">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-5 h-5"><path d="m6 9 6 6 6-6"></path></svg>
+                    </span>
+                </summary>
+                <div class="px-4 sm:px-6 pb-4 sm:pb-6 text-sm sm:text-base text-neutral-400 leading-relaxed">
+                    All meals are home-cooked daily using fresh ingredients. We cater to specific dietary restrictions including diabetic, low-sodium, and texture-modified diets.
+                </div>
+            </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA / Footer -->
+    <footer class="bg-black border-white/10 border-t pt-12 sm:pt-16 md:pt-20 pb-8 sm:pb-12" id="contact">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row justify-between items-start gap-8 sm:gap-12 mb-12 sm:mb-16 md:mb-20">
+          <div class="max-w-lg">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-orange-400 tracking-tight font-serif mb-6 sm:mb-8">
+              Welcome Home.
+            </h2>
+            <p class="text-base sm:text-lg text-neutral-400 mb-6 sm:mb-8">
+              Schedule a private tour to see if Attic Adult Family Home is the right fit for your loved one.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <button class="group flex transition-all duration-300 ease-out hover:scale-[1.03] hover:shadow-[0_0_50px_rgba(249,115,22,0.35)] active:scale-[0.98] overflow-hidden font-medium text-orange-50 bg-orange-500 h-12 rounded-full pr-6 sm:pr-8 pl-6 sm:pl-8 relative shadow-[0_0_30px_rgba(249,115,22,0.15)] gap-x-2 gap-y-x-2 items-center justify-center" onclick="window.location.href='contact-us.html'" role="button">
+                <span class="absolute inset-0 -translate-x-full group-hover:translate-x-[150%] transition-transform duration-700 ease-in-out bg-gradient-to-r from-transparent via-white/40 to-transparent z-0"></span>
+                <span class="z-10 relative">Schedule Tour</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" class="lucide lucide-arrow-right w-4 h-4 z-10"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12 lg:gap-24">
+            <div>
+              <h4 class="text-white font-medium mb-4 font-serif text-lg">Contact</h4>
+              <ul class="space-y-3 text-sm text-neutral-500">
+                <li class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" class="lucide lucide-map-pin w-4 h-4 text-brand-500"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    29836 113th Way SE, Auburn, WA 98092
+                </li>
+                <li class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" class="lucide lucide-phone w-4 h-4 text-brand-500"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+                    (469) 735-5759
+                </li>
+                
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-white font-medium mb-4 font-serif text-lg">Certifications</h4>
+              <ul class="space-y-3 text-sm text-neutral-500">
+                <li>State Licensed AFH</li>
+                <li>Dementia Specialty Certified</li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div class="flex items-center gap-2">
+            <div class="w-6 h-6 rounded bg-brand-500/20 flex items-center justify-center text-brand-500">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="home" class="lucide lucide-home w-3.5 h-3.5"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+            </div>
+            <span class="text-sm text-neutral-500">© 2024 Attic Adult Family Home. All rights reserved.</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+      lucide.createIcons();
+
+      // Mobile Menu Toggle
+      function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        const overlay = document.getElementById('mobile-menu-overlay');
+        const btn = document.getElementById('mobile-menu-btn');
+        const line1 = document.getElementById('menu-line-1');
+        const line2 = document.getElementById('menu-line-2');
+        const line3 = document.getElementById('menu-line-3');
+        
+        const isOpen = menu.classList.contains('open');
+        
+        if (isOpen) {
+          menu.classList.remove('open');
+          overlay.classList.remove('open');
+          document.body.style.overflow = '';
+          // Reset hamburger
+          line1.style.transform = '';
+          line2.style.opacity = '';
+          line3.style.transform = '';
+        } else {
+          menu.classList.add('open');
+          overlay.classList.add('open');
+          document.body.style.overflow = 'hidden';
+          // Animate to X
+          line1.style.transform = 'rotate(45deg) translate(5px, 5px)';
+          line2.style.opacity = '0';
+          line3.style.transform = 'rotate(-45deg) translate(7px, -6px)';
+        }
+      }
+
+      // Initialize mobile menu button
+      document.addEventListener('DOMContentLoaded', () => {
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        if (menuBtn) {
+          menuBtn.addEventListener('click', toggleMobileMenu);
+        }
+        
+        // Close menu on escape key
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            const menu = document.getElementById('mobile-menu');
+            if (menu && menu.classList.contains('open')) {
+              toggleMobileMenu();
+            }
+          }
+        });
+      });
+
+      // Simple typing effect for the hero
+      (function () {
+        const el = document.getElementById('hero-typing-word');
+        if (!el) return;
+
+        const words = ['dignity.', 'compassion.', 'respect.', 'love.'];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function type() {
+          const word = words[wordIndex % words.length];
+
+          if (isDeleting) {
+            charIndex--;
+          } else {
+            charIndex++;
+          }
+
+          el.textContent = word.substring(0, charIndex);
+
+          let delay = isDeleting ? 60 : 110;
+
+          if (!isDeleting && charIndex === word.length) {
+            delay = 1400;
+            isDeleting = true;
+          } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            wordIndex++;
+            delay = 400;
+          }
+
+          setTimeout(type, delay);
+        }
+        el.textContent = '';
+        type();
+      })();
+
+      // Scroll Animation for "Why Choose Us" Stack
+      document.addEventListener('DOMContentLoaded', () => {
+          const section = document.querySelector('#why-choose-us');
+          const card1 = document.querySelector('#card-1');
+          const card2 = document.querySelector('#card-2');
+          const card3 = document.querySelector('#card-3');
+
+          card1.style.transform = 'scale(1) rotate(-2deg)';
+
+          window.addEventListener('scroll', () => {
+              const rect = section.getBoundingClientRect();
+              const viewportHeight = window.innerHeight;
+              let progress = Math.min(1, Math.max(0, -rect.top / (rect.height - viewportHeight)));
+
+              // Card 1
+              if (progress < 0.4) {
+                  const scale = 1 - (progress * 0.15);
+                  card1.style.transform = `scale(${scale}) rotate(-2deg)`;
+                  card1.style.filter = `brightness(${1 - progress})`;
+              } else {
+                  card1.style.transform = `scale(0.94) rotate(-2deg)`;
+                  card1.style.filter = `brightness(0.6)`;
+              }
+
+              // Card 2
+              if (progress > 0.1) {
+                  const p2 = Math.min(1, Math.max(0, (progress - 0.1) / 0.4));
+                  const translateY = (1 - p2) * 120;
+                  const scale = 0.9 + (p2 * 0.1);
+
+                  if (p2 < 1) {
+                      card2.style.transform = `translateY(${translateY}%) scale(${scale}) rotate(2deg)`;
+                      card2.style.opacity = p2;
+                  } else {
+                      if (progress > 0.5) {
+                          const p2Exit = Math.min(1, (progress - 0.5) / 0.4);
+                          const exitScale = 1 - (p2Exit * 0.05);
+                          card2.style.transform = `translateY(0%) scale(${exitScale}) rotate(2deg)`;
+                          card2.style.filter = `brightness(${1 - (p2Exit * 0.4)})`;
+                      }
+                  }
+              } else {
+                  card2.style.transform = `translateY(120%)`;
+                  card2.style.opacity = 0;
+              }
+
+              // Card 3
+              if (progress > 0.5) {
+                  const p3 = Math.min(1, Math.max(0, (progress - 0.5) / 0.4));
+                  const translateY = (1 - p3) * 120;
+                  const scale = 0.9 + (p3 * 0.1);
+                  card3.style.transform = `translateY(${translateY}%) scale(${scale}) rotate(-1deg)`;
+                  card3.style.opacity = p3;
+              } else {
+                  card3.style.transform = `translateY(120%)`;
+                  card3.style.opacity = 0;
+              }
+          });
+      });
+
+      // Timeline Animation logic
+      (function() {
+          const wrapper = document.getElementById('timeline-wrapper');
+          const progressBar = document.getElementById('timeline-progress-bar');
+          const steps = wrapper ? wrapper.querySelectorAll('.timeline-step') : [];
+
+          function onScroll() {
+              if (!wrapper) return;
+              const rect = wrapper.getBoundingClientRect();
+              const viewportHeight = window.innerHeight;
+              const startThreshold = viewportHeight * 0.6;
+              let scrollDist = startThreshold - rect.top;
+              const maxHeight = wrapper.offsetHeight;
+              let height = Math.max(0, Math.min(maxHeight, scrollDist));
+              if (height > 0) height += 40;
+              progressBar.style.height = `${height}px`;
+
+              steps.forEach(step => {
+                  const stepRect = step.getBoundingClientRect();
+                  const stepTop = stepRect.top;
+                  const triggerPoint = viewportHeight * 0.75;
+                  const title = step.querySelector('.step-title');
+                  const desc = step.querySelector('.step-desc');
+                  const marker = step.querySelector('.step-marker');
+                  const fill = step.querySelector('.step-fill');
+                  const card = step.querySelector('.step-card');
+
+                  if (stepTop < triggerPoint) {
+                      if (title) { title.classList.remove('text-neutral-400'); title.classList.add('text-white'); }
+                      if (marker) { marker.classList.remove('border-neutral-700', 'bg-neutral-900'); marker.classList.add('border-brand-500', 'bg-brand-900'); }
+                      if (fill) fill.classList.remove('opacity-0');
+                      if (card) { card.classList.remove('opacity-0', 'translate-y-12'); card.classList.add('opacity-100', 'translate-y-0'); }
+                  } else {
+                      if (title) { title.classList.add('text-neutral-400'); title.classList.remove('text-white'); }
+                      if (marker) { marker.classList.add('border-neutral-700', 'bg-neutral-900'); marker.classList.remove('border-brand-500', 'bg-brand-900'); }
+                      if (fill) fill.classList.add('opacity-0');
+                      if (card) { card.classList.add('opacity-0', 'translate-y-12'); card.classList.remove('opacity-100', 'translate-y-0'); }
+                  }
+              });
+          }
+          window.addEventListener('scroll', onScroll, { passive: true });
+          onScroll();
+      })();
+    </script>
+
+</body></html>

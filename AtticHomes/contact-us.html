@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Attic Adult Family Home</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+:root {
+--font-sans: 'Inter', sans-serif;
+--font-serif: 'Playfair Display', serif;
+--font-mono: 'JetBrains Mono', monospace;
+}
+body {
+font-family: var(--font-sans);
+background-color: #050505;
+color: #e5e5e5;
+-webkit-font-smoothing: antialiased;
+}
+.font-serif { font-family: var(--font-serif); }
+.font-mono { font-family: var(--font-mono); }
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #444; }
+/* Animation Utilities */
+.animate-fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+@keyframes fadeUp {
+to { opacity: 1; transform: translateY(0); }
+}
+/* Glass Cards */
+.glass-panel {
+background: rgba(20, 20, 20, 0.6);
+backdrop-filter: blur(12px);
+border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.glass-input {
+background: rgba(10, 10, 10, 0.6);
+border: 1px solid rgba(255, 255, 255, 0.1);
+transition: all 0.2s ease;
+}
+.glass-input:focus {
+border-color: #f97316;
+background: rgba(20, 20, 20, 0.8);
+outline: none;
+box-shadow: 0 0 0 1px rgba(249, 115, 22, 0.2);
+}
+/* Map Filter for Dark Mode */
+.map-dark-mode {
+filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
+/* Mobile Menu Styles */
+.mobile-menu {
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu.open {
+  transform: translateX(0);
+}
+.mobile-menu-overlay {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.mobile-menu-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 768px) {
+  /* Touch-friendly targets */
+  button, a[role="button"], .clickable {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  /* Prevent zoom on iOS input focus */
+  input, textarea, select {
+    font-size: 16px !important;
+  }
+  /* Better spacing on mobile */
+  section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  /* Improved grid responsiveness */
+  .grid {
+    gap: 1rem !important;
+  }
+  /* Better card spacing */
+  .glass-panel, .rounded-3xl, .rounded-2xl {
+    margin-bottom: 1rem;
+  }
+  /* Improved button sizing */
+  button, .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+  /* Better image responsiveness */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  /* Form improvements */
+  form {
+    width: 100%;
+  }
+  .grid-cols-2 {
+    grid-template-columns: 1fr !important;
+  }
+}
+/* Mobile Typography Improvements */
+@media (max-width: 640px) {
+  h1 { 
+    font-size: 2rem !important; 
+    line-height: 1.1 !important; 
+    margin-bottom: 1rem !important;
+  }
+  h2 { 
+    font-size: 1.75rem !important; 
+    line-height: 1.2 !important;
+    margin-bottom: 0.75rem !important;
+  }
+  h3 {
+    font-size: 1.5rem !important;
+    line-height: 1.3 !important;
+  }
+  .text-lg { 
+    font-size: 1rem !important; 
+    line-height: 1.6 !important;
+  }
+  .text-xl {
+    font-size: 1.125rem !important;
+  }
+  .text-2xl {
+    font-size: 1.5rem !important;
+  }
+  .text-3xl {
+    font-size: 1.875rem !important;
+  }
+  .text-4xl {
+    font-size: 2.25rem !important;
+  }
+  .text-5xl {
+    font-size: 2.5rem !important;
+  }
+  /* Better padding on mobile */
+  .p-8, .px-8, .py-8 {
+    padding: 1.5rem !important;
+  }
+  .p-6, .px-6, .py-6 {
+    padding: 1.25rem !important;
+  }
+  /* Improved gap spacing */
+  .gap-8, .gap-x-8, .gap-y-8 {
+    gap: 1.5rem !important;
+  }
+  .gap-6, .gap-x-6, .gap-y-6 {
+    gap: 1rem !important;
+  }
+}
+/* Tablet optimizations */
+@media (min-width: 641px) and (max-width: 1024px) {
+  h1 {
+    font-size: 3rem !important;
+  }
+  h2 {
+    font-size: 2.25rem !important;
+  }
+}
+</style>
+<link id="all-fonts-link-font-geist" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist">.font-geist { font-family: 'Geist', sans-serif !important; }</style><link id="all-fonts-link-font-roboto" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-roboto">.font-roboto { font-family: 'Roboto', sans-serif !important; }</style><link id="all-fonts-link-font-montserrat" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-montserrat">.font-montserrat { font-family: 'Montserrat', sans-serif !important; }</style><link id="all-fonts-link-font-poppins" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-poppins">.font-poppins { font-family: 'Poppins', sans-serif !important; }</style><link id="all-fonts-link-font-playfair" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&amp;display=swap"><style id="all-fonts-style-font-playfair">.font-playfair { font-family: 'Playfair Display', serif !important; }</style><link id="all-fonts-link-font-instrument-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-instrument-serif">.font-instrument-serif { font-family: 'Instrument Serif', serif !important; }</style><link id="all-fonts-link-font-merriweather" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&amp;display=swap"><style id="all-fonts-style-font-merriweather">.font-merriweather { font-family: 'Merriweather', serif !important; }</style><link id="all-fonts-link-font-bricolage" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-bricolage">.font-bricolage { font-family: 'Bricolage Grotesque', sans-serif !important; }</style><link id="all-fonts-link-font-jakarta" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-jakarta">.font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif !important; }</style><link id="all-fonts-link-font-manrope" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-manrope">.font-manrope { font-family: 'Manrope', sans-serif !important; }</style><link id="all-fonts-link-font-space-grotesk" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-space-grotesk">.font-space-grotesk { font-family: 'Space Grotesk', sans-serif !important; }</style><link id="all-fonts-link-font-work-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-work-sans">.font-work-sans { font-family: 'Work Sans', sans-serif !important; }</style><link id="all-fonts-link-font-pt-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&amp;display=swap"><style id="all-fonts-style-font-pt-serif">.font-pt-serif { font-family: 'PT Serif', serif !important; }</style><link id="all-fonts-link-font-geist-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist-mono">.font-geist-mono { font-family: 'Geist Mono', monospace !important; }</style><link id="all-fonts-link-font-space-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap"><style id="all-fonts-style-font-space-mono">.font-space-mono { font-family: 'Space Mono', monospace !important; }</style><link id="all-fonts-link-font-quicksand" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-quicksand">.font-quicksand { font-family: 'Quicksand', sans-serif !important; }</style><link id="all-fonts-link-font-nunito" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-nunito">.font-nunito { font-family: 'Nunito', sans-serif !important; }</style></head>
+<body class="overflow-x-hidden selection:bg-brand-500/30 selection:text-brand-100 flex flex-col min-h-screen">
+
+    <!-- Ambient Background -->
+    <div class="fixed inset-0 z-0 pointer-events-none">
+      <div class="absolute top-0 right-1/3 w-[600px] h-[600px] bg-brand-600/5 rounded-full blur-[120px] mix-blend-screen opacity-30"></div>
+      <div class="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-teal-600/5 rounded-full blur-[120px] mix-blend-screen opacity-20"></div>
+      <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-black/50 backdrop-blur-xl">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <div class="flex items-center gap-4 sm:gap-8">
+          <a href="index.html" class="flex items-center gap-2 group">
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-neutral-800 to-black border border-white/10 flex items-center justify-center group-hover:border-brand-500/50 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="home" class="lucide lucide-home text-white w-4 h-4"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+            </div>
+            <span class="text-sm sm:text-base font-medium text-white tracking-tight font-serif">
+              Attic AFH
+            </span>
+          </a>
+          <div class="hidden md:flex gap-6 text-sm font-medium text-neutral-400 gap-x-6 gap-y-6 items-center">
+            <a href="index.html" class="hover:text-orange-400 transition-colors">Home</a>
+            <a href="about-us.html" class="hover:text-orange-400 transition-colors">About Us</a>
+            <a href="gallery.html" class="hover:text-orange-400 transition-colors">Gallery</a>
+            <a href="services.html" class="hover:text-orange-400 transition-colors">Services</a>
+            <a href="contact-us.html" class="text-white hover:text-orange-400 transition-colors">Contact Us</a>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 sm:gap-4">
+          <a href="contact-us.html" class="hidden sm:flex items-center gap-2 hover:bg-neutral-200 transition-colors text-xs font-medium text-black bg-white h-9 rounded-full pr-5 pl-5 shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+            <span class="">Schedule a Visit</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="calendar" class="lucide lucide-calendar w-3.5 h-3.5"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+          </a>
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 p-2 rounded-lg hover:bg-white/5 transition-colors" aria-label="Toggle menu">
+            <span class="block w-5 h-0.5 bg-white transition-all duration-300" id="menu-line-1"></span>
+            <span class="block w-5 h-0.5 bg-white transition-all duration-300" id="menu-line-2"></span>
+            <span class="block w-5 h-0.5 bg-white transition-all duration-300" id="menu-line-3"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay fixed inset-0 bg-black/80 backdrop-blur-sm z-40 md:hidden" onclick="toggleMobileMenu()"></div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 md:hidden overflow-y-auto">
+      <div class="flex flex-col h-full">
+        <!-- Mobile Menu Header -->
+        <div class="flex items-center justify-between p-6 border-b border-white/10">
+          <span class="text-lg font-serif text-white font-medium">Menu</span>
+          <button onclick="toggleMobileMenu()" class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-white/5 transition-colors" aria-label="Close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white w-6 h-6"><path d="M18 6 6 18"></path><path d="M6 6l12 12"></path></svg>
+          </button>
+        </div>
+        <!-- Mobile Menu Links -->
+        <nav class="flex-1 p-6 space-y-1">
+          <a href="index.html" class="block px-4 py-3 rounded-lg text-neutral-300 hover:bg-white/5 hover:text-orange-400 transition-all font-medium" onclick="toggleMobileMenu()">Home</a>
+          <a href="about-us.html" class="block px-4 py-3 rounded-lg text-neutral-300 hover:bg-white/5 hover:text-orange-400 transition-all font-medium" onclick="toggleMobileMenu()">About Us</a>
+          <a href="gallery.html" class="block px-4 py-3 rounded-lg text-neutral-300 hover:bg-white/5 hover:text-orange-400 transition-all font-medium" onclick="toggleMobileMenu()">Gallery</a>
+          <a href="services.html" class="block px-4 py-3 rounded-lg text-neutral-300 hover:bg-white/5 hover:text-orange-400 transition-all font-medium" onclick="toggleMobileMenu()">Services</a>
+          <a href="contact-us.html" class="block px-4 py-3 rounded-lg text-white hover:bg-white/5 hover:text-orange-400 transition-all font-medium" onclick="toggleMobileMenu()">Contact Us</a>
+        </nav>
+        <!-- Mobile CTA Button -->
+        <div class="p-6 border-t border-white/10">
+          <a href="contact-us.html" class="block w-full text-center px-6 py-3 rounded-full bg-white text-black font-medium hover:bg-neutral-200 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.1)]" onclick="toggleMobileMenu()">
+            Schedule a Visit
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- New Contact Hero -->
+    <section class="relative pt-24 sm:pt-32 pb-12 sm:pb-16 lg:pt-48 lg:pb-24 overflow-hidden z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-500/20 bg-brand-500/5 text-brand-300 text-xs font-medium mb-8 animate-fade-up">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse"></span>
+                <span class="">We are here to help</span>
+            </div>
+            
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-serif text-white mb-4 sm:mb-6 tracking-tight leading-[1.1] animate-fade-up delay-100">
+                Let's start the
+                <span class="lg:bg-clip-text lg:text-transparent font-playfair bg-[conic-gradient(from_180deg,var(--tw-gradient-stops))] from-orange-400 via-orange-500 to-orange-400">
+                     conversation.
+                </span>
+            </h1>
+            
+            <p class="text-base sm:text-lg text-neutral-400 max-w-2xl mx-auto leading-relaxed animate-fade-up delay-200 px-4">
+                Whether you have questions about our care levels, want to schedule a private tour, or simply need advice on senior living options, our team is ready to listen.
+            </p>
+        </div>
+        
+        <!-- Subtle decorative grid -->
+        <div class="opacity-20 bg-[url(https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/0dff1855-a4a9-4d94-849a-bd12d3911027_3840w.webp)] bg-cover bg-center -z-10 absolute top-0 right-0 bottom-0 left-0"></div>
+        <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+    </section>
+
+    <!-- Main Contact Content -->
+    <section class="relative z-10 pb-16 sm:pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 lg:gap-24 py-8 sm:py-10 gap-x-6 sm:gap-x-12 gap-y-8 sm:gap-y-12">
+                
+                <!-- Left Column: Contact Info -->
+                <div class="lg:col-span-5 space-y-8 animate-fade-up delay-300">
+                    <div class="glass-panel border-white/10 border rounded-2xl sm:rounded-3xl p-6 sm:p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_50px_-12px_rgba(255,255,255,0.15)] hover:border-white/20 hover:bg-white/[0.02] group">
+                        <h3 class="text-xl font-serif text-white mb-8 tracking-tight">Contact Information</h3>
+                        
+                        <div class="space-y-8">
+                            <!-- Phone -->
+                            <div class="flex gap-5 group/item cursor-pointer">
+                                <div class="w-12 h-12 rounded-xl bg-neutral-900 border border-white/10 flex items-center justify-center text-brand-500 group-hover/item:border-brand-500/50 group-hover/item:bg-brand-500/10 group-hover/item:scale-110 transition-all duration-300 shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" class="lucide lucide-phone w-5 h-5"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+                                </div>
+                                <div class="">
+                                    <p class="text-xs font-mono text-neutral-500 uppercase tracking-widest mb-1 group-hover/item:text-brand-400 transition-colors">Call Us Anytime</p>
+                                    <a href="tel:+14697355759" class="text-lg text-white font-medium hover:text-brand-400 transition-colors">
+                                        (469) 735-5759
+                                    </a>
+                                    <p class="text-sm text-neutral-500 mt-1">24/7 Nursing Support available</p>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="flex gap-5 group/item cursor-pointer">
+                                <div class="w-12 h-12 rounded-xl bg-neutral-900 border border-white/10 flex items-center justify-center text-brand-500 group-hover/item:border-brand-500/50 group-hover/item:bg-brand-500/10 group-hover/item:scale-110 transition-all duration-300 shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="mail" class="lucide lucide-mail w-5 h-5"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
+                                </div>
+                                <div class="">
+                                    <p class="text-xs font-mono text-neutral-500 uppercase tracking-widest mb-1 group-hover/item:text-brand-400 transition-colors">Email Us</p>
+                                    <a href="mailto:care@atticafh.com" class="text-lg text-white font-medium hover:text-brand-400 transition-colors">
+                                        care@atticafh.com
+                                    </a>
+                                    <p class="text-sm text-neutral-500 mt-1">We typically reply within 2 hours</p>
+                                </div>
+                            </div>
+
+                            <!-- Location -->
+                            <div class="flex gap-5 group/item cursor-pointer">
+                                <div class="w-12 h-12 rounded-xl bg-neutral-900 border border-white/10 flex items-center justify-center text-brand-500 group-hover/item:border-brand-500/50 group-hover/item:bg-brand-500/10 group-hover/item:scale-110 transition-all duration-300 shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" class="lucide lucide-map-pin w-5 h-5"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                </div>
+                                <div class="">
+                                    <p class="text-xs font-mono text-neutral-500 uppercase tracking-widest mb-1 group-hover/item:text-brand-400 transition-colors">Visit Us</p>
+                                    <p class="text-lg text-white font-medium">
+                                        29836 113th Way SE
+                                    </p>
+                                    <p class="text-neutral-400">Auburn, WA 98092</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-10 pt-8 border-t border-white/5">
+                            <p class="text-sm text-neutral-400 mb-4">Follow our daily stories:</p>
+                            <div class="flex gap-4">
+                                <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-neutral-400 hover:text-white hover:scale-110 hover:border-white/20 hover:bg-white/5 transition-all duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="facebook" class="lucide lucide-facebook w-4 h-4"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-neutral-400 hover:text-white hover:scale-110 hover:border-white/20 hover:bg-white/5 transition-all duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="instagram" class="lucide lucide-instagram w-4 h-4"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-neutral-400 hover:text-white hover:scale-110 hover:border-white/20 hover:bg-white/5 transition-all duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="twitter" class="lucide lucide-twitter w-4 h-4"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Send Message Form -->
+                <div class="lg:col-span-7 animate-fade-up delay-200">
+                    <div class="overflow-hidden bg-black/40 border-white/10 border rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 relative backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_50px_-12px_rgba(255,255,255,0.1)] hover:border-white/20 hover:bg-black/50">
+                        <div class="absolute top-0 right-0 p-32 bg-brand-500/5 rounded-full blur-[80px] pointer-events-none"></div>
+                        
+                        <h3 class="text-2xl font-serif text-white mb-6">Send a Message</h3>
+                        
+                        <!-- Success Message -->
+                        <div id="form-success" class="hidden mb-6 p-4 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">
+                            <div class="flex items-center gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                                <p class="text-sm font-medium">Thank you! Your message has been sent successfully. We'll get back to you soon.</p>
+                            </div>
+                        </div>
+
+                        <!-- Error Message -->
+                        <div id="form-error" class="hidden mb-6 p-4 rounded-lg bg-red-500/10 border border-red-500/30 text-red-400">
+                            <div class="flex items-center gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-alert-circle"><circle cx="12" cy="12" r="10"></circle><path d="m12 8 0 4"></path><path d="m12 16 0.01 0"></path></svg>
+                                <p class="text-sm font-medium" id="error-message">Something went wrong. Please try again or contact us directly.</p>
+                            </div>
+                        </div>
+                        
+                        <form id="contact-form" class="space-y-6 relative z-10">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                                <div class="space-y-2">
+                                    <label for="firstName" class="text-xs font-mono text-neutral-500 uppercase tracking-wider ml-1">First Name <span class="text-red-400">*</span></label>
+                                    <input type="text" id="firstName" name="firstName" required class="w-full h-12 sm:h-12 rounded-lg px-4 text-white text-base sm:text-sm glass-input" placeholder="Jane">
+                                </div>
+                                <div class="space-y-2">
+                                    <label for="lastName" class="text-xs font-mono text-neutral-500 uppercase tracking-wider ml-1">Last Name <span class="text-red-400">*</span></label>
+                                    <input type="text" id="lastName" name="lastName" required class="w-full h-12 sm:h-12 rounded-lg px-4 text-white text-base sm:text-sm glass-input" placeholder="Doe">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                                <div class="space-y-2">
+                                    <label for="email" class="text-xs font-mono text-neutral-500 uppercase tracking-wider ml-1">Email Address <span class="text-red-400">*</span></label>
+                                    <input type="email" id="email" name="email" required class="w-full h-12 sm:h-12 rounded-lg px-4 text-white text-base sm:text-sm glass-input" placeholder="jane@example.com">
+                                </div>
+                                <div class="space-y-2">
+                                    <label for="phone" class="text-xs font-mono text-neutral-500 uppercase tracking-wider ml-1">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" class="w-full h-12 sm:h-12 rounded-lg px-4 text-white text-base sm:text-sm glass-input" placeholder="(555) 000-0000">
+                                </div>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label class="text-xs font-mono text-neutral-500 uppercase tracking-wider ml-1">I am interested in...</label>
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3">
+                                    <label class="cursor-pointer">
+                                        <input type="radio" name="interest" value="Pricing" class="peer sr-only">
+                                        <div class="h-10 flex items-center justify-center rounded-lg border border-white/10 bg-white/5 text-sm text-neutral-400 peer-checked:bg-brand-500 peer-checked:text-black peer-checked:border-brand-500 transition-all hover:bg-white/10">
+                                            Pricing
+                                        </div>
+                                    </label>
+                                    <label class="cursor-pointer">
+                                        <input type="radio" name="interest" value="Tour Availability" class="peer sr-only">
+                                        <div class="h-10 flex items-center justify-center rounded-lg border border-white/10 bg-white/5 text-sm text-neutral-400 peer-checked:bg-brand-500 peer-checked:text-black peer-checked:border-brand-500 transition-all hover:bg-white/10">
+                                            Tour Availability
+                                        </div>
+                                    </label>
+                                    <label class="cursor-pointer">
+                                        <input type="radio" name="interest" value="General Question" class="peer sr-only">
+                                        <div class="h-10 flex items-center justify-center rounded-lg border border-white/10 bg-white/5 text-sm text-neutral-400 peer-checked:bg-brand-500 peer-checked:text-black peer-checked:border-brand-500 transition-all hover:bg-white/10">
+                                            General Question
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label for="message" class="text-xs font-mono text-neutral-500 uppercase tracking-wider ml-1">How can we help? <span class="text-red-400">*</span></label>
+                                <textarea id="message" name="message" rows="5" required class="w-full rounded-lg p-4 text-white text-base sm:text-sm glass-input resize-none" placeholder="Tell us about your loved one's needs..."></textarea>
+                            </div>
+
+                            <div class="pt-2">
+                                <button type="submit" id="submit-btn" class="w-full h-12 sm:h-12 rounded-lg bg-white text-black font-medium hover:bg-neutral-200 transition-colors flex items-center justify-center gap-2 text-base sm:text-sm disabled:opacity-50 disabled:cursor-not-allowed">
+                                    <span id="submit-text">Send Message</span>
+                                    <span id="submit-spinner" class="hidden">
+                                        <svg class="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                        </svg>
+                                    </span>
+                                    <svg id="submit-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send w-4 h-4"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg>
+                                </button>
+                                <p class="text-center text-[10px] text-neutral-600 mt-4">
+                                    By submitting this form, you agree to our privacy policy. Your information is kept confidential.
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Map Section -->
+    <section class="w-full h-[300px] sm:h-[400px] md:h-[500px] relative border-y border-white/5 bg-neutral-900 overflow-hidden">
+        <!-- Interactive Map Overlay (for style) -->
+        <div class="absolute inset-0 z-10 pointer-events-none bg-gradient-to-t from-black via-transparent to-transparent opacity-80 h-32 bottom-0"></div>
+        <div class="absolute inset-0 z-10 pointer-events-none bg-gradient-to-b from-black via-transparent to-transparent opacity-80 h-32 top-0"></div>
+        
+        <!-- Google Map Iframe with Dark Mode Filter -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2703.9650327653744!2d-122.19240092367845!3d47.33455420672419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549058c6588ab3df%3A0xf1ae8f50f3e44049!2s29836%20113th%20Way%20SE%2C%20Auburn%2C%20WA%2098092!5e0!3m2!1sen!2sus!4v1764824054011!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map-dark-mode w-full h-full opacity-60 hover:opacity-80 transition-opacity duration-700" title="Attic AFH Location"></iframe>
+
+        <!-- Location Badge -->
+        <div class="absolute bottom-4 sm:bottom-6 md:bottom-10 left-4 sm:left-6 lg:left-20 z-20">
+            <div class="glass-panel px-4 sm:px-6 py-3 sm:py-4 rounded-lg sm:rounded-xl flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 border border-white/10 shadow-2xl">
+                <div class="w-10 h-10 rounded-full bg-brand-500 flex items-center justify-center text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" class="lucide lucide-map-pin w-5 h-5"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div>
+                    <p class="text-xs sm:text-sm font-medium text-white">Attic Adult Family Home</p>
+                    <p class="text-[10px] sm:text-xs text-neutral-400">29836 113th Way SE, Auburn, WA 98092</p>
+                </div>
+                <a href="https://www.google.com/maps/place/29836+113th+Way+SE,+Auburn,+WA+98092" target="_blank" class="sm:ml-4 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white hover:text-black transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-up-right" class="lucide lucide-arrow-up-right w-4 h-4"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black pt-20 pb-12" id="contact">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row justify-between items-start gap-12 mb-20">
+          <div class="max-w-lg">
+            <a href="index.html" class="flex items-center gap-2 mb-8">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-neutral-800 to-black border border-white/10 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="home" class="lucide lucide-home text-white w-4 h-4"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+                </div>
+                <span class="text-lg font-medium text-orange-400 tracking-tight font-serif">
+                  Attic AFH
+                </span>
+            </a>
+            <p class="text-lg text-neutral-400 mb-8">
+              Compassionate senior care in a home-like setting. We are dedicated to providing dignity, respect, and love to every resident.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-12">
+            <div class="">
+              <h4 class="text-white font-medium mb-4 font-serif text-lg">Explore</h4>
+              <ul class="space-y-3 text-sm text-neutral-500">
+                <li class=""><a href="about-us.html" class="hover:text-brand-500 transition-colors">About Us</a></li>
+                <li class=""><a href="services.html" class="hover:text-brand-500 transition-colors">Services</a></li>
+                <li class=""><a href="index.html#testimonials" class="hover:text-brand-500 transition-colors">Testimonials</a></li>
+                <li><a href="index.html#faq" class="hover:text-brand-500 transition-colors">FAQ</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-white font-medium mb-4 font-serif text-lg">Contact</h4>
+              <ul class="space-y-3 text-sm text-neutral-500">
+                <li class="hover:text-white transition-colors cursor-pointer">29836 113th Way SE, Auburn, WA 98092</li>
+                <li class="hover:text-white transition-colors cursor-pointer">(469) 735-5759</li>
+                <li class="hover:text-white transition-colors cursor-pointer">care@atticafh.com</li>
+              </ul>
+            </div>
+             <div>
+              <h4 class="text-white font-medium mb-4 font-serif text-lg">Legal</h4>
+              <ul class="space-y-3 text-sm text-neutral-500">
+                <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                <li><a href="#" class="hover:text-white transition-colors">License Info</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-neutral-600">© 2024 Attic Adult Family Home. All rights reserved.</span>
+          </div>
+          <div class="flex gap-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="facebook" class="lucide lucide-facebook w-4 h-4 text-neutral-600 hover:text-white transition-colors cursor-pointer"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="twitter" class="lucide lucide-twitter w-4 h-4 text-neutral-600 hover:text-white transition-colors cursor-pointer"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="linkedin" class="lucide lucide-linkedin w-4 h-4 text-neutral-600 hover:text-white transition-colors cursor-pointer"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+      lucide.createIcons();
+
+      // Initialize EmailJS
+      (function() {
+        emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+      })();
+
+      // Contact Form Handler
+      document.addEventListener('DOMContentLoaded', function() {
+        const contactForm = document.getElementById('contact-form');
+        if (!contactForm) return;
+        
+        contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const form = this;
+        const submitBtn = document.getElementById('submit-btn');
+        const submitText = document.getElementById('submit-text');
+        const submitSpinner = document.getElementById('submit-spinner');
+        const submitIcon = document.getElementById('submit-icon');
+        const successMsg = document.getElementById('form-success');
+        const errorMsg = document.getElementById('form-error');
+        const errorMessage = document.getElementById('error-message');
+        
+        // Hide previous messages
+        successMsg.classList.add('hidden');
+        errorMsg.classList.add('hidden');
+        
+        // Get form values
+        const formData = {
+          firstName: document.getElementById('firstName').value.trim(),
+          lastName: document.getElementById('lastName').value.trim(),
+          email: document.getElementById('email').value.trim(),
+          phone: document.getElementById('phone').value.trim() || 'Not provided',
+          interest: document.querySelector('input[name="interest"]:checked')?.value || 'Not specified',
+          message: document.getElementById('message').value.trim()
+        };
+        
+        // Validate required fields
+        if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
+          errorMessage.textContent = 'Please fill in all required fields.';
+          errorMsg.classList.remove('hidden');
+          return;
+        }
+        
+        // Validate email format
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formData.email)) {
+          errorMessage.textContent = 'Please enter a valid email address.';
+          errorMsg.classList.remove('hidden');
+          return;
+        }
+        
+        // Show loading state
+        submitBtn.disabled = true;
+        submitText.textContent = 'Sending...';
+        submitSpinner.classList.remove('hidden');
+        submitIcon.classList.add('hidden');
+        
+        // Prepare email template parameters
+        const templateParams = {
+          from_name: `${formData.firstName} ${formData.lastName}`,
+          from_email: formData.email,
+          phone: formData.phone,
+          interest: formData.interest,
+          message: formData.message,
+          to_email: 'care@atticafh.com', // Your receiving email
+          reply_to: formData.email
+        };
+        
+        try {
+          // Send email using EmailJS
+          // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual EmailJS service and template IDs
+          const response = await emailjs.send(
+            'YOUR_SERVICE_ID',  // Replace with your EmailJS service ID
+            'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+            templateParams
+          );
+          
+          // Success
+          successMsg.classList.remove('hidden');
+          form.reset();
+          
+          // Scroll to success message
+          successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          
+        } catch (error) {
+          console.error('EmailJS Error:', error);
+          errorMessage.textContent = 'Failed to send message. Please try again or contact us directly at care@atticafh.com';
+          errorMsg.classList.remove('hidden');
+        } finally {
+          // Reset button state
+          submitBtn.disabled = false;
+          submitText.textContent = 'Send Message';
+          submitSpinner.classList.add('hidden');
+          submitIcon.classList.remove('hidden');
+        }
+      });
+      });
+      }
+
+      // Mobile Menu Toggle
+      function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        const overlay = document.getElementById('mobile-menu-overlay');
+        const btn = document.getElementById('mobile-menu-btn');
+        const line1 = document.getElementById('menu-line-1');
+        const line2 = document.getElementById('menu-line-2');
+        const line3 = document.getElementById('menu-line-3');
+        
+        const isOpen = menu.classList.contains('open');
+        
+        if (isOpen) {
+          menu.classList.remove('open');
+          overlay.classList.remove('open');
+          document.body.style.overflow = '';
+          // Reset hamburger
+          line1.style.transform = '';
+          line2.style.opacity = '';
+          line3.style.transform = '';
+        } else {
+          menu.classList.add('open');
+          overlay.classList.add('open');
+          document.body.style.overflow = 'hidden';
+          // Animate to X
+          line1.style.transform = 'rotate(45deg) translate(5px, 5px)';
+          line2.style.opacity = '0';
+          line3.style.transform = 'rotate(-45deg) translate(7px, -6px)';
+        }
+      }
+
+      // Initialize mobile menu button
+      document.addEventListener('DOMContentLoaded', () => {
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        if (menuBtn) {
+          menuBtn.addEventListener('click', toggleMobileMenu);
+        }
+        
+        // Close menu on escape key
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            const menu = document.getElementById('mobile-menu');
+            if (menu && menu.classList.contains('open')) {
+              toggleMobileMenu();
+            }
+          }
+        });
+      });
+    </script>
+
+</body></html>

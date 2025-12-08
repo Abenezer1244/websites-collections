@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — Attic Adult Family Home</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+:root {
+--font-sans: 'Inter', sans-serif;
+--font-serif: 'Playfair Display', serif;
+--font-mono: 'JetBrains Mono', monospace;
+}
+body {
+font-family: var(--font-sans);
+background-color: #050505;
+color: #e5e5e5;
+-webkit-font-smoothing: antialiased;
+}
+.font-serif { font-family: var(--font-serif); }
+.font-mono { font-family: var(--font-mono); }
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #444; }
+/* Animation Utilities */
+.animate-fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+@keyframes fadeUp {
+to { opacity: 1; transform: translateY(0); }
+}
+/* Glass Cards */
+.glass-panel {
+background: rgba(20, 20, 20, 0.6);
+backdrop-filter: blur(12px);
+border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.glass-panel-hover:hover {
+background: rgba(30, 30, 30, 0.8);
+border-color: rgba(255, 255, 255, 0.12);
+transition: all 0.3s ease;
+}
+/* Mobile Menu Styles */
+.mobile-menu {
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu.open {
+  transform: translateX(0);
+}
+.mobile-menu-overlay {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.mobile-menu-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 768px) {
+  /* Touch-friendly targets */
+  button, a[role="button"], .clickable {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  /* Prevent zoom on iOS input focus */
+  input, textarea, select {
+    font-size: 16px !important;
+  }
+  /* Better spacing on mobile */
+  section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  /* Improved grid responsiveness */
+  .grid {
+    gap: 1rem !important;
+  }
+  /* Better card spacing */
+  .glass-panel, .rounded-3xl, .rounded-2xl {
+    margin-bottom: 1rem;
+  }
+  /* Improved button sizing */
+  button, .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+  /* Better image responsiveness */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+/* Mobile Typography Improvements */
+@media (max-width: 640px) {
+  h1 { 
+    font-size: 2rem !important; 
+    line-height: 1.1 !important; 
+    margin-bottom: 1rem !important;
+  }
+  h2 { 
+    font-size: 1.75rem !important; 
+    line-height: 1.2 !important;
+    margin-bottom: 0.75rem !important;
+  }
+  h3 {
+    font-size: 1.5rem !important;
+    line-height: 1.3 !important;
+  }
+  .text-lg { 
+    font-size: 1rem !important; 
+    line-height: 1.6 !important;
+  }
+  .text-xl {
+    font-size: 1.125rem !important;
+  }
+  .text-2xl {
+    font-size: 1.5rem !important;
+  }
+  .text-3xl {
+    font-size: 1.875rem !important;
+  }
+  .text-4xl {
+    font-size: 2.25rem !important;
+  }
+  .text-5xl {
+    font-size: 2.5rem !important;
+  }
+  /* Better padding on mobile */
+  .p-8, .px-8, .py-8 {
+    padding: 1.5rem !important;
+  }
+  .p-6, .px-6, .py-6 {
+    padding: 1.25rem !important;
+  }
+  /* Improved gap spacing */
+  .gap-8, .gap-x-8, .gap-y-8 {
+    gap: 1.5rem !important;
+  }
+  .gap-6, .gap-x-6, .gap-y-6 {
+    gap: 1rem !important;
+  }
+}
+/* Tablet optimizations */
+@media (min-width: 641px) and (max-width: 1024px) {
+  h1 {
+    font-size: 3rem !important;
+  }
+  h2 {
+    font-size: 2.25rem !important;
+  }
+}
+</style>
+<link id="all-fonts-link-font-geist" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist">.font-geist { font-family: 'Geist', sans-serif !important; }</style><link id="all-fonts-link-font-roboto" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-roboto">.font-roboto { font-family: 'Roboto', sans-serif !important; }</style><link id="all-fonts-link-font-montserrat" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-montserrat">.font-montserrat { font-family: 'Montserrat', sans-serif !important; }</style><link id="all-fonts-link-font-poppins" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-poppins">.font-poppins { font-family: 'Poppins', sans-serif !important; }</style><link id="all-fonts-link-font-playfair" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&amp;display=swap"><style id="all-fonts-style-font-playfair">.font-playfair { font-family: 'Playfair Display', serif !important; }</style><link id="all-fonts-link-font-instrument-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-instrument-serif">.font-instrument-serif { font-family: 'Instrument Serif', serif !important; }</style><link id="all-fonts-link-font-merriweather" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&amp;display=swap"><style id="all-fonts-style-font-merriweather">.font-merriweather { font-family: 'Merriweather', serif !important; }</style><link id="all-fonts-link-font-bricolage" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-bricolage">.font-bricolage { font-family: 'Bricolage Grotesque', sans-serif !important; }</style><link id="all-fonts-link-font-jakarta" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-jakarta">.font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif !important; }</style><link id="all-fonts-link-font-manrope" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-manrope">.font-manrope { font-family: 'Manrope', sans-serif !important; }</style><link id="all-fonts-link-font-space-grotesk" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-space-grotesk">.font-space-grotesk { font-family: 'Space Grotesk', sans-serif !important; }</style><link id="all-fonts-link-font-work-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-work-sans">.font-work-sans { font-family: 'Work Sans', sans-serif !important; }</style><link id="all-fonts-link-font-pt-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&amp;display=swap"><style id="all-fonts-style-font-pt-serif">.font-pt-serif { font-family: 'PT Serif', serif !important; }</style><link id="all-fonts-link-font-geist-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist-mono">.font-geist-mono { font-family: 'Geist Mono', monospace !important; }</style><link id="all-fonts-link-font-space-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap"><style id="all-fonts-style-font-space-mono">.font-space-mono { font-family: 'Space Mono', monospace !important; }</style><link id="all-fonts-link-font-quicksand" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-quicksand">.font-quicksand { font-family: 'Quicksand', sans-serif !important; }</style><link id="all-fonts-link-font-nunito" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-nunito">.font-nunito { font-family: 'Nunito', sans-serif !important; }</style></head>
+<body class="overflow-x-hidden selection:bg-brand-500/30 selection:text-brand-100">
+
+    <!-- Ambient Background -->
+    <div class="fixed inset-0 z-0 pointer-events-none">
+      <div class="absolute top-0 right-1/4 w-[500px] h-[500px] bg-brand-600/5 rounded-full blur-[120px] mix-blend-screen opacity-30"></div>
+      <div class="absolute bottom-0 left-1/4 w-[600px] h-[600px] bg-teal-600/5 rounded-full blur-[120px] mix-blend-screen opacity-20"></div>
+      <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-black/50 backdrop-blur-xl">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <div class="flex items-center gap-4 sm:gap-8">
+          <a href="index.html" class="flex items-center gap-2 group">
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-neutral-800 to-black border border-white/10 flex items-center justify-center group-hover:border-brand-500/50 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="home" class="lucide lucide-home text-white w-4 h-4"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+            </div>
+            <span class="text-sm sm:text-base font-medium text-white tracking-tight font-serif">
+              Attic AFH
+            </span>
+          </a>
+          <div class="hidden md:flex gap-6 text-sm font-medium text-neutral-400 gap-x-6 gap-y-6 items-center">
+  <a href="index.html" class="hover:text-orange-400 transition-colors">Home</a>
+  <a href="about-us.html" class="hover:text-orange-400 transition-colors">About Us</a>
+  <a href="gallery.html" class="hover:text-orange-400 transition-colors">Gallery</a>
+  <a href="services.html" class="hover:text-orange-400 transition-colors">Services</a>
+  <a href="contact-us.html" class="hover:text-orange-400 transition-colors">Contact Us</a>
+</div>
+        </div>
+        <div class="flex items-center gap-2 sm:gap-4">
+          <a href="contact-us.html" class="hidden sm:flex items-center gap-2 hover:bg-neutral-200 transition-colors text-xs font-medium text-black bg-white h-9 rounded-full pr-5 pl-5 shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+            <span class="">Schedule a Visit</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="calendar" class="lucide lucide-calendar w-3.5 h-3.5"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+          </a>
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 p-2 rounded-lg hover:bg-white/5 transition-colors" aria-label="Toggle menu">
+            <span class="block w-5 h-0.5 bg-white transition-all duration-300" id="menu-line-1"></span>
+            <span class="block w-5 h-0.5 bg-white transition-all duration-300" id="menu-line-2"></span>
+            <span class="block w-5 h-0.5 bg-white transition-all duration-300" id="menu-line-3"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay fixed inset-0 bg-black/80 backdrop-blur-sm z-40 md:hidden" onclick="toggleMobileMenu()"></div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 md:hidden overflow-y-auto">
+      <div class="flex flex-col h-full">
+        <!-- Mobile Menu Header -->
+        <div class="flex items-center justify-between p-6 border-b border-white/10">
+          <span class="text-lg font-serif text-white font-medium">Menu</span>
+          <button onclick="toggleMobileMenu()" class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-white/5 transition-colors" aria-label="Close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white w-6 h-6"><path d="M18 6 6 18"></path><path d="M6 6l12 12"></path></svg>
+          </button>
+        </div>
+        <!-- Mobile Menu Links -->
+        <nav class="flex-1 p-6 space-y-1">
+          <a href="index.html" class="block px-4 py-3 rounded-lg text-neutral-300 hover:bg-white/5 hover:text-orange-400 transition-all font-medium" onclick="toggleMobileMenu()">Home</a>
+          <a href="about-us.html" class="block px-4 py-3 rounded-lg text-white hover:bg-white/5 hover:text-orange-400 transition-all font-medium" onclick="toggleMobileMenu()">About Us</a>
+          <a href="gallery.html" class="block px-4 py-3 rounded-lg text-neutral-300 hover:bg-white/5 hover:text-orange-400 transition-all font-medium" onclick="toggleMobileMenu()">Gallery</a>
+          <a href="services.html" class="block px-4 py-3 rounded-lg text-neutral-300 hover:bg-white/5 hover:text-orange-400 transition-all font-medium" onclick="toggleMobileMenu()">Services</a>
+          <a href="contact-us.html" class="block px-4 py-3 rounded-lg text-neutral-300 hover:bg-white/5 hover:text-orange-400 transition-all font-medium" onclick="toggleMobileMenu()">Contact Us</a>
+        </nav>
+        <!-- Mobile CTA Button -->
+        <div class="p-6 border-t border-white/10">
+          <a href="contact-us.html" class="block w-full text-center px-6 py-3 rounded-full bg-white text-black font-medium hover:bg-neutral-200 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.1)]" onclick="toggleMobileMenu()">
+            Schedule a Visit
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Us Hero -->
+    <section class="lg:pt-52 lg:pb-32 overflow-hidden z-10 bg-[url(https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/a82e6f8a-b39c-424b-b7e6-9f028a89e2c2_1600w.png)] bg-cover pt-24 sm:pt-32 md:pt-40 pb-12 sm:pb-16 md:pb-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+            
+            <div class="inline-flex animate-fade-up text-xs font-medium text-slate-50 bg-white/5 border-white/10 border rounded-full mb-8 px-3 py-1 backdrop-blur-md gap-x-2 gap-y-2 items-center">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span>
+                <span class="">Our Story</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-serif text-white tracking-tight leading-[1] mb-6 sm:mb-8 animate-fade-up delay-100">
+                Driven by <span class="italic text-orange-400">compassion</span>,<br>
+                defined by <span class="text-orange-400 bg-gradient-to-b from-brand-300 to-brand-600">excellence.</span>
+            </h1>
+
+            <p class="leading-relaxed animate-fade-up delay-200 text-base sm:text-lg md:text-xl font-light max-w-2xl mx-auto px-4">
+                We believe that aging isn't about slowing down—it's about finding comfort in a place that truly feels like home. At Attic AFH, we blend professional medical oversight with the warmth of family.
+            </p>
+
+            <!-- Abstract Visual -->
+            <div class="mt-20 relative w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent animate-fade-up delay-300">
+                <div class="absolute left-1/2 -translate-x-1/2 -top-3 w-6 h-6 border border-white/20 bg-black rounded-full flex items-center justify-center">
+                    <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Purpose & Vision -->
+    <section class="py-12 sm:py-16 md:py-20 lg:py-32 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
+                
+                <!-- Purpose (Mission) -->
+                <div class="glass-panel md:p-12 overflow-hidden group transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_-15px_rgba(59,130,246,0.2)] hover:border-brand-500/30 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 relative shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] backdrop-blur-lg">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-brand-500/5 blur-[80px] rounded-full pointer-events-none transition-all duration-700 group-hover:scale-150 group-hover:bg-brand-500/20"></div>
+                    <div class="flex items-start justify-between mb-8 relative z-10">
+                        <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-brand-500 group-hover:bg-brand-500 group-hover:text-white transition-colors duration-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="target" class="lucide lucide-target w-6 h-6"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                        </div>
+                        <span class="text-xs font-mono text-neutral-500 uppercase tracking-widest group-hover:text-brand-400 transition-colors">Our Purpose</span>
+                    </div>
+                    <h3 class="text-3xl font-serif text-white mb-6 relative z-10">To create a sanctuary of dignity.</h3>
+                    <p class="text-neutral-400 leading-relaxed mb-8 relative z-10">
+                        Our mission is simple yet profound: to provide senior care that prioritizes the individual. We strip away the institutional feel of traditional nursing homes and replace it with personalized attention, genuine relationships, and a safe environment where residents can age with grace.
+                    </p>
+                    <ul class="space-y-3 relative z-10">
+                        <li class="flex items-center gap-3 text-sm text-neutral-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="lucide lucide-check w-4 h-4 text-brand-500"><path d="M20 6 9 17l-5-5"></path></svg>
+                            <span class="">Unwavering respect for individual autonomy</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-neutral-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="lucide lucide-check w-4 h-4 text-brand-500"><path d="M20 6 9 17l-5-5"></path></svg>
+                            <span class="">24/7 Professional support with a personal touch</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Vision -->
+                <div class="glass-panel md:p-12 overflow-hidden group transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_-15px_rgba(20,184,166,0.2)] hover:border-teal-500/30 rounded-3xl pt-8 pr-8 pb-8 pl-8 relative shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] backdrop-blur-lg">
+                    <div class="absolute bottom-0 left-0 w-64 h-64 bg-teal-500/5 blur-[80px] rounded-full pointer-events-none transition-all duration-700 group-hover:scale-150 group-hover:bg-teal-500/20"></div>
+                     <div class="flex items-start justify-between mb-8 relative z-10">
+                        <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-teal-500 group-hover:bg-teal-500 group-hover:text-white transition-colors duration-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="telescope" class="lucide lucide-telescope w-6 h-6"><path d="m10.065 12.493-6.18 1.318a.934.934 0 0 1-1.108-.702l-.537-2.15a1.07 1.07 0 0 1 .691-1.265l13.504-4.44"></path><path d="m13.56 11.747 4.332-.924"></path><path d="m16 21-3.105-6.21"></path><path d="M16.485 5.94a2 2 0 0 1 1.455-2.425l1.09-.272a1 1 0 0 1 1.212.727l1.515 6.06a1 1 0 0 1-.727 1.213l-1.09.272a2 2 0 0 1-2.425-1.455z"></path><path d="m6.158 8.633 1.114 4.456"></path><path d="m8 21 3.105-6.21"></path><circle cx="12" cy="13" r="2"></circle></svg>
+                        </div>
+                        <span class="text-xs font-mono text-neutral-500 uppercase tracking-widest group-hover:text-teal-400 transition-colors">Our Vision</span>
+                    </div>
+                    <h3 class="text-3xl font-serif text-white mb-6 relative z-10">Redefining the standard of care.</h3>
+                    <p class="text-neutral-400 leading-relaxed mb-8 relative z-10">
+                        We envision a future where "care facilities" are a thing of the past, replaced by care homes that integrate seamlessly into the community. We strive to set the benchmark for Adult Family Homes in Washington, demonstrating that high-level medical care can coexist with a cozy, domestic lifestyle.
+                    </p>
+                     <ul class="space-y-3 relative z-10">
+                        <li class="flex items-center gap-3 text-sm text-neutral-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="lucide lucide-check w-4 h-4 text-teal-500"><path d="M20 6 9 17l-5-5"></path></svg>
+                            <span class="">Integrating advanced health technology</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-neutral-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="lucide lucide-check w-4 h-4 text-teal-500"><path d="M20 6 9 17l-5-5"></path></svg>
+                            <span class="">Fostering intergenerational community connections</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Journey -->
+    <section class="py-12 sm:py-16 md:py-20 lg:py-32 bg-black border-y border-white/5">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-2xl sm:text-3xl md:text-5xl text-orange-400 font-serif mb-3 sm:mb-4">Our Journey</h2>
+                <p class="text-sm sm:text-base text-neutral-500">A timeline of dedication and growth.</p>
+            </div>
+
+            <div class="md:pl-0 md:border-none border-white/10 border-l pl-8 relative space-y-16 group/timeline transition-all duration-700 ease-out hover:scale-[1.02] hover:border-brand-500/30">
+    <!-- Center Line for Desktop -->
+    <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-brand-500/0 via-brand-500/20 to-brand-500/0 -translate-x-1/2 group-hover/timeline:via-brand-500/60 group-hover/timeline:w-[2px] group-hover/timeline:shadow-[0_0_20px_rgba(249,115,22,0.4)] transition-all duration-700"></div>
+
+    <!-- 2018 -->
+    <div class="relative md:grid md:grid-cols-2 md:gap-16 items-center group animate-fade-up">
+        <div class="md:text-right transition-transform duration-500 group-hover/timeline:translate-x-1 md:group-hover/timeline:-translate-x-2">
+            <span class="inline-block px-3 py-1 rounded text-xs font-mono text-brand-500 bg-brand-500/10 mb-2">2018</span>
+            <h3 class="text-xl font-medium text-orange-400 mb-2">The Foundation</h3>
+            <p class="text-neutral-400 text-sm leading-relaxed">
+                Attic AFH was founded by Sarah Jenkins, an RN with 15 years of ICU experience, who realized that seniors needed more time and attention than hospitals could provide.
+            </p>
+        </div>
+        <div class="group-hover:bg-brand-500 group-hover:scale-125 transition-all duration-300 md:left-1/2 md:-translate-x-1/2 text-orange-400 bg-neutral-800 w-4 h-4 z-10 border-black border-2 rounded-full absolute left-[-37px] shadow-[0_0_0_0_rgba(249,115,22,0)] group-hover:shadow-[0_0_15px_rgba(249,115,22,0.5)]"></div>
+        <div class="hidden md:block"></div>
+    </div>
+
+    <!-- 2020 -->
+    <div class="relative md:grid md:grid-cols-2 md:gap-16 items-center group animate-fade-up delay-100">
+            <div class="hidden md:block"></div>
+            <div class="absolute left-[-37px] md:left-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full border-2 border-black bg-neutral-800 group-hover:bg-brand-500 group-hover:scale-125 transition-all duration-300 z-10 shadow-[0_0_0_0_rgba(249,115,22,0)] group-hover:shadow-[0_0_15px_rgba(249,115,22,0.5)]"></div>
+        <div class="md:text-left transition-transform duration-500 group-hover/timeline:translate-x-1 md:group-hover/timeline:translate-x-2">
+            <span class="inline-block px-3 py-1 rounded text-xs font-mono text-brand-500 bg-brand-500/10 mb-2">2020</span>
+            <h3 class="text-xl font-medium text-orange-400 mb-2">Resilience &amp; Safety</h3>
+            <p class="text-neutral-400 text-sm leading-relaxed">
+                During global challenges, we implemented hospital-grade filtration and safety protocols, keeping 100% of our residents safe and healthy without isolating them from loved ones digitally.
+            </p>
+        </div>
+    </div>
+
+    <!-- 2022 -->
+    <div class="relative md:grid md:grid-cols-2 md:gap-16 items-center group animate-fade-up delay-200">
+        <div class="md:text-right transition-transform duration-500 group-hover/timeline:translate-x-1 md:group-hover/timeline:-translate-x-2">
+            <span class="inline-block px-3 py-1 rounded text-xs font-mono text-brand-500 bg-brand-500/10 mb-2">2022</span>
+            <h3 class="text-xl font-medium text-orange-400 mb-2">Memory Care Certification</h3>
+            <p class="text-neutral-400 text-sm leading-relaxed">
+                Recognizing the growing need, our entire staff achieved advanced certification in Dementia and Alzheimer's care, transforming our home into a specialized memory support environment.
+            </p>
+        </div>
+        <div class="absolute left-[-37px] md:left-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full border-2 border-black bg-neutral-800 group-hover:bg-brand-500 group-hover:scale-125 transition-all duration-300 z-10 shadow-[0_0_0_0_rgba(249,115,22,0)] group-hover:shadow-[0_0_15px_rgba(249,115,22,0.5)]"></div>
+        <div class="hidden md:block"></div>
+    </div>
+
+        <!-- 2024 -->
+    <div class="relative md:grid md:grid-cols-2 md:gap-16 items-center group animate-fade-up delay-300">
+            <div class="hidden md:block"></div>
+            <div class="absolute left-[-37px] md:left-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full border-2 border-black bg-neutral-800 group-hover:bg-brand-500 group-hover:scale-125 transition-all duration-300 z-10 shadow-[0_0_0_0_rgba(249,115,22,0)] group-hover:shadow-[0_0_15px_rgba(249,115,22,0.5)]"></div>
+        <div class="md:text-left transition-transform duration-500 group-hover/timeline:translate-x-1 md:group-hover/timeline:translate-x-2">
+            <span class="inline-block px-3 py-1 rounded text-xs font-mono text-brand-500 bg-brand-500/10 mb-2">Today</span>
+            <h3 class="text-xl font-medium text-orange-400 mb-2">Award Winning Care</h3>
+            <p class="text-neutral-400 text-sm leading-relaxed">
+                Voted "Best Adult Family Home" in the county. We continue to expand our holistic offerings with music therapy, garden-to-table dining, and community integration.
+            </p>
+        </div>
+    </div>
+</div>
+        </div>
+    </section>
+
+    <!-- Our People -->
+    <section class="py-12 sm:py-16 md:py-20 lg:py-32 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12 sm:mb-16 max-w-2xl">
+                <h2 class="text-2xl sm:text-3xl md:text-5xl text-orange-400 font-serif mb-4 sm:mb-6">Our People</h2>
+                <p class="text-base sm:text-lg text-neutral-400">
+                    A small, dedicated team ensures consistency. Our residents don't see strangers; they see friends who know their story.
+                </p>
+            </div>
+
+            <div class="w-full relative group py-8">
+    <style>
+        @keyframes aura-infinite-scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+    
+    <div class="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] w-full">
+        <div class="flex gap-6 w-max animate-[aura-infinite-scroll_80s_linear_infinite] group-hover:[animation-play-state:paused] px-6">
+            
+            <!-- Item 1 (Original) -->
+            <div class="glass-panel p-6 rounded-2xl w-[340px] flex-shrink-0 group/card hover:-translate-y-1 transition-transform duration-300">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-neutral-700 to-neutral-900 border border-white/10 flex items-center justify-center text-xl font-serif text-white relative overflow-hidden flex-shrink-0">
+                        <span class="z-10 relative">SJ</span>
+                        <div class="absolute inset-0 bg-brand-500/20 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div class="">
+                        <h4 class="text-white font-medium">Sarah Jenkins</h4>
+                        <p class="text-sm text-brand-500">Founder &amp; RN</p>
+                    </div>
+                </div>
+                <p class="text-sm text-neutral-400 leading-relaxed mb-6">
+                    "I started Attic AFH to treat residents the way I wanted my own parents to be treated—with clinical excellence and boundless love."
+                </p>
+                <div class="flex gap-2">
+                     <span class="px-2 py-1 rounded border border-white/5 bg-white/5 text-[10px] text-neutral-500 uppercase tracking-wider">Critical Care RN</span>
+                     <span class="px-2 py-1 rounded border border-white/5 bg-white/5 text-[10px] text-neutral-500 uppercase tracking-wider">Owner</span>
+                </div>
+            </div>
+
+            <!-- Item 2 (Original) -->
+            <div class="glass-panel p-6 rounded-2xl w-[340px] flex-shrink-0 group/card hover:-translate-y-1 transition-transform duration-300">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-neutral-700 to-neutral-900 border border-white/10 flex items-center justify-center text-xl font-serif text-white relative overflow-hidden flex-shrink-0">
+                        <span class="z-10 relative">DR</span>
+                        <div class="absolute inset-0 bg-brand-500/20 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div class="">
+                        <h4 class="text-white font-medium">David Ross</h4>
+                        <p class="text-sm text-brand-500">Head Caregiver</p>
+                    </div>
+                </div>
+                <p class="text-sm text-neutral-400 leading-relaxed mb-6">
+                    "The best part of my day is the morning coffee stories. Everyone has a history, and it's an honor to listen."
+                </p>
+                <div class="flex gap-2">
+                     <span class="px-2 py-1 rounded border border-white/5 bg-white/5 text-[10px] text-neutral-500 uppercase tracking-wider">CNA Certified</span>
+                     <span class="px-2 py-1 rounded border border-white/5 bg-white/5 text-[10px] text-neutral-500 uppercase tracking-wider">Dementia Spec.</span>
+                </div>
+            </div>
+
+            <!-- Item 3 (Original) -->
+            <div class="glass-panel p-6 rounded-2xl w-[340px] flex-shrink-0 group/card hover:-translate-y-1 transition-transform duration-300">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-neutral-700 to-neutral-900 border border-white/10 flex items-center justify-center text-xl font-serif text-white relative overflow-hidden flex-shrink-0">
+                        <span class="z-10 relative">ML</span>
+                        <div class="absolute inset-0 bg-brand-500/20 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-medium">Maria Lopez</h4>
+                        <p class="text-sm text-brand-500">Activities Director</p>
+                    </div>
+                </div>
+                <p class="text-sm text-neutral-400 leading-relaxed mb-6">
+                    "We don't just pass time here; we create moments. Whether it's painting or music, engagement is key to happiness."
+                </p>
+                <div class="flex gap-2">
+                     <span class="px-2 py-1 rounded border border-white/5 bg-white/5 text-[10px] text-neutral-500 uppercase tracking-wider">Therapy Cert.</span>
+                     <span class="px-2 py-1 rounded border border-white/5 bg-white/5 text-[10px] text-neutral-500 uppercase tracking-wider">Nutrition</span>
+                </div>
+            </div>
+
+            <!-- Item 4 (New) -->
+            <div class="glass-panel p-6 rounded-2xl w-[340px] flex-shrink-0 group/card hover:-translate-y-1 transition-transform duration-300">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-neutral-700 to-neutral-900 border border-white/10 flex items-center justify-center text-xl font-serif text-white relative overflow-hidden flex-shrink-0">
+                        <span class="z-10 relative">EC</span>
+                        <div class="absolute inset-0 bg-brand-500/20 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-medium">Dr. Emily Chen</h4>
+                        <p class="text-sm text-brand-500">Geriatric Specialist</p>
+                    </div>
+                </div>
+                <p class="text-sm text-neutral-400 leading-relaxed mb-6">
+                    "Medical care works best when it's personal. Here, I know every patient's favorite song, not just their prescriptions."
+                </p>
+                <div class="flex gap-2">
+                     <span class="px-2 py-1 rounded border border-white/5 bg-white/5 text-[10px] text-neutral-500 uppercase tracking-wider">MD</span>
+                     <span class="px-2 py-1 rounded border border-white/5 bg-white/5 text-[10px] text-neutral-500 uppercase tracking-wider">Senior Care</span>
+                </div>
+            </div>
+
+            <!-- Item 5 (New) -->
+            <div class="glass-panel p-6 rounded-2xl w-[340px] flex-shrink-0 group/card hover:-translate-y-1 transition-transform duration-300">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-neutral-700 to-neutral-900 border border-white/10 flex items-center justify-center text-xl font-serif text-white relative overflow-hidden flex-shrink-0">
+                        <span class="z-10 relative">MJ</span>
+                        <div class="absolute inset-0 bg-brand-500/20 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-medium">Marcus Johnson</h4>
+                        <p class="text-sm text-brand-500">Executive Chef</p>
+                    </div>
+                </div>
+                <p class="text-sm text-neutral-400 leading-relaxed mb-6">
+                    "Nutrition is vital, but joy is essential. I cook meals that bring back memories of Sunday family dinners."
+                </p>
+                <div class="flex gap-2">
+                     <span class="px-2 py-1 rounded border border-white/5 bg-white/5 text-[10px] text-neutral-500 uppercase tracking-wider">Dietary Cert.</span>
+                     <span class="px-2 py-1 rounded border border-white/5 bg-white/5 text-[10px] text-neutral-500 uppercase tracking-wider">Culinary</span>
+                </div>
+            </div>
+
+            <!-- Item 6 (New) -->
+            <div class="glass-panel p-6 rounded-2xl w-[340px] flex-shrink-0 group/card hover:-translate-y-1 transition-transform duration-300">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-neutral-700 to-neutral-900 border border-white/10 flex items-center justify-center text-xl font-serif text-white relative overflow-hidden flex-shrink-0">
+                        <span class="z-10 relative">JB</span>
+                        <div class="absolute inset-0 bg-brand-500/20 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-medium">Jessica Bloom</h4>
+                        <p class="text-sm text-brand-500">Music Therapist</p>
+                    </div>
+                </div>
+                <p class="text-sm text-neutral-400 leading-relaxed mb-6">
+                    "Music unlocks memories that words can't reach. Seeing eyes light up during our sessions is the greatest reward."
+                </p>
+                <div class="flex gap-2">
+                     <span class="px-2 py-1 rounded border border-white/5 bg-white/5 text-[10px] text-neutral-500 uppercase tracking-wider">Therapy</span>
+                     <span class="px-2 py-1 rounded border border-white/5 bg-white/5 text-[10px] text-neutral-500 uppercase tracking-wider">Dementia</span>
+                </div>
+            </div>
+
+            <!-- Item 7 (New) -->
+            <div class="glass-panel p-6 rounded-2xl w-[340px] flex-shrink-0 group/card hover:-translate-y-1 transition-transform duration-300">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-neutral-700 to-neutral-900 border border-white/10 flex items-center justify-center text-xl font-serif text-white relative overflow-hidden flex-shrink-0">
+                        <span class="z-10 relative">TW</span>
+                        <div class="absolute inset-0 bg-brand-500/20 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-medium">Thomas Wright</h4>
+                        <p class="text-sm text-brand-500">Night Supervisor</p>
+                    </div>
+                </div>
+                <p class="text-sm text-neutral-400 leading-relaxed mb-6">
+                    "Peace of mind at 3 AM is just as important as at 3 PM. We're here, awake and watchful, so families can rest."
+                </p>
+                <div class="flex gap-2">
+                     <span class="px-2 py-1 rounded border border-white/5 bg-white/5 text-[10px] text-neutral-500 uppercase tracking-wider">Safety Lead</span>
+                     <span class="px-2 py-1 rounded border border-white/5 bg-white/5 text-[10px] text-neutral-500 uppercase tracking-wider">EMT</span>
+                </div>
+            </div>
+
+            <!-- Item 8 (New) -->
+            <div class="glass-panel p-6 rounded-2xl w-[340px] flex-shrink-0 group/card hover:-translate-y-1 transition-transform duration-300">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-neutral-700 to-neutral-900 border border-white/10 flex items-center justify-center text-xl font-serif text-white relative overflow-hidden flex-shrink-0">
+                        <span class="z-10 relative">SP</span>
+                        <div class="absolute inset-0 bg-brand-500/20 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-medium">Sophia Patel</h4>
+                        <p class="text-sm text-brand-500">Wellness Director</p>
+                    </div>
+                </div>
+                <p class="text-sm text-neutral-400 leading-relaxed mb-6">
+                    "Holistic health means treating the spirit as well as the body. Yoga, meditation, and laughter are our daily medicine."
+                </p>
+                <div class="flex gap-2">
+                     <span class="px-2 py-1 rounded border border-white/5 bg-white/5 text-[10px] text-neutral-500 uppercase tracking-wider">Yoga Cert.</span>
+                     <span class="px-2 py-1 rounded border border-white/5 bg-white/5 text-[10px] text-neutral-500 uppercase tracking-wider">Holistic</span>
+                </div>
+            </div>
+
+            <!-- DUPLICATES FOR INFINITE SCROLL -->
+            
+            <!-- Item 1 (Duplicate) -->
+            <div class="glass-panel p-6 rounded-2xl w-[340px] flex-shrink-0 group/card hover:-translate-y-1 transition-transform duration-300">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-neutral-700 to-neutral-900 border border-white/10 flex items-center justify-center text-xl font-serif text-white relative overflow-hidden flex-shrink-0">
+                        <span class="z-10 relative">SJ</span>
+                        <div class="absolute inset-0 bg-brand-500/20 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-medium">Sarah Jenkins</h4>
+                        <p class="text-sm text-brand-500">Founder &amp; RN</p>
+                    </div>
+                </div>
+                <p class="text-sm text-neutral-400 leading-relaxed mb-6">
+                    "I started Attic AFH to treat residents the way I wanted my own parents to be treated—with clinical excellence and boundless love."
+                </p>
+                <div class="flex gap-2">
+                     <span class="px-2 py-1 rounded border border-white/5 bg-white/5 text-[10px] text-neutral-500 uppercase tracking-wider">Critical Care RN</span>
+                     <span class="px-2 py-1 rounded border border-white/5 bg-white/5 text-[10px] text-neutral-500 uppercase tracking-wider">Owner</span>
+                </div>
+            </div>
+
+            <!-- Item 2 (Duplicate) -->
+            <div class="glass-panel p-6 rounded-2xl w-[340px] flex-shrink-0 group/card hover:-translate-y-1 transition-transform duration-300">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-neutral-700 to-neutral-900 border border-white/10 flex items-center justify-center text-xl font-serif text-white relative overflow-hidden flex-shrink-0">
+                        <span class="z-10 relative">DR</span>
+                        <div class="absolute inset-0 bg-brand-500/20 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-medium">David Ross</h4>
+                        <p class="text-sm text-brand-500">Head Caregiver</p>
+                    </div>
+                </div>
+                <p class="text-sm text-neutral-400 leading-relaxed mb-6">
+                    "The best part of my day is the morning coffee stories. Everyone has a history, and it's an honor to listen."
+                </p>
+                <div class="flex gap-2">
+                     <span class="px-2 py-1 rounded border border-white/5 bg-white/5 text-[10px] text-neutral-500 uppercase tracking-wider">CNA Certified</span>
+                     <span class="px-2 py-1 rounded border border-white/5 bg-white/5 text-[10px] text-neutral-500 uppercase tracking-wider">Dementia Spec.</span>
+                </div>
+            </div>
+
+            <!-- Item 3 (Duplicate) -->
+            <div class="glass-panel p-6 rounded-2xl w-[340px] flex-shrink-0 group/card hover:-translate-y-1 transition-transform duration-300">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-neutral-700 to-neutral-900 border border-white/10 flex items-center justify-center text-xl font-serif text-white relative overflow-hidden flex-shrink-0">
+                        <span class="z-10 relative">ML</span>
+                        <div class="absolute inset-0 bg-brand-500/20 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-medium">Maria Lopez</h4>
+                        <p class="text-sm text-brand-500">Activities Director</p>
+                    </div>
+                </div>
+                <p class="text-sm text-neutral-400 leading-relaxed mb-6">
+                    "We don't just pass time here; we create moments. Whether it's painting or music, engagement is key to happiness."
+                </p>
+                <div class="flex gap-2">
+                     <span class="px-2 py-1 rounded border border-white/5 bg-white/5 text-[10px] text-neutral-500 uppercase tracking-wider">Therapy Cert.</span>
+                     <span class="px-2 py-1 rounded border border-white/5 bg-white/5 text-[10px] text-neutral-500 uppercase tracking-wider">Nutrition</span>
+                </div>
+            </div>
+
+            <!-- Item 4 (Duplicate) -->
+            <div class="glass-panel p-6 rounded-2xl w-[340px] flex-shrink-0 group/card hover:-translate-y-1 transition-transform duration-300">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-neutral-700 to-neutral-900 border border-white/10 flex items-center justify-center text-xl font-serif text-white relative overflow-hidden flex-shrink-0">
+                        <span class="z-10 relative">EC</span>
+                        <div class="absolute inset-0 bg-brand-500/20 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-medium">Dr. Emily Chen</h4>
+                        <p class="text-sm text-brand-500">Geriatric Specialist</p>
+                    </div>
+                </div>
+                <p class="text-sm text-neutral-400 leading-relaxed mb-6">
+                    "Medical care works best when it's personal. Here, I know every patient's favorite song, not just their prescriptions."
+                </p>
+                <div class="flex gap-2">
+                     <span class="px-2 py-1 rounded border border-white/5 bg-white/5 text-[10px] text-neutral-500 uppercase tracking-wider">MD</span>
+                     <span class="px-2 py-1 rounded border border-white/5 bg-white/5 text-[10px] text-neutral-500 uppercase tracking-wider">Senior Care</span>
+                </div>
+            </div>
+
+            <!-- Item 5 (Duplicate) -->
+            <div class="glass-panel p-6 rounded-2xl w-[340px] flex-shrink-0 group/card hover:-translate-y-1 transition-transform duration-300">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-neutral-700 to-neutral-900 border border-white/10 flex items-center justify-center text-xl font-serif text-white relative overflow-hidden flex-shrink-0">
+                        <span class="z-10 relative">MJ</span>
+                        <div class="absolute inset-0 bg-brand-500/20 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-medium">Marcus Johnson</h4>
+                        <p class="text-sm text-brand-500">Executive Chef</p>
+                    </div>
+                </div>
+                <p class="text-sm text-neutral-400 leading-relaxed mb-6">
+                    "Nutrition is vital, but joy is essential. I cook meals that bring back memories of Sunday family dinners."
+                </p>
+                <div class="flex gap-2">
+                     <span class="px-2 py-1 rounded border border-white/5 bg-white/5 text-[10px] text-neutral-500 uppercase tracking-wider">Dietary Cert.</span>
+                     <span class="px-2 py-1 rounded border border-white/5 bg-white/5 text-[10px] text-neutral-500 uppercase tracking-wider">Culinary</span>
+                </div>
+            </div>
+
+            <!-- Item 6 (Duplicate) -->
+            <div class="glass-panel p-6 rounded-2xl w-[340px] flex-shrink-0 group/card hover:-translate-y-1 transition-transform duration-300">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-neutral-700 to-neutral-900 border border-white/10 flex items-center justify-center text-xl font-serif text-white relative overflow-hidden flex-shrink-0">
+                        <span class="z-10 relative">JB</span>
+                        <div class="absolute inset-0 bg-brand-500/20 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-medium">Jessica Bloom</h4>
+                        <p class="text-sm text-brand-500">Music Therapist</p>
+                    </div>
+                </div>
+                <p class="text-sm text-neutral-400 leading-relaxed mb-6">
+                    "Music unlocks memories that words can't reach. Seeing eyes light up during our sessions is the greatest reward."
+                </p>
+                <div class="flex gap-2">
+                     <span class="px-2 py-1 rounded border border-white/5 bg-white/5 text-[10px] text-neutral-500 uppercase tracking-wider">Therapy</span>
+                     <span class="px-2 py-1 rounded border border-white/5 bg-white/5 text-[10px] text-neutral-500 uppercase tracking-wider">Dementia</span>
+                </div>
+            </div>
+
+            <!-- Item 7 (Duplicate) -->
+            <div class="glass-panel p-6 rounded-2xl w-[340px] flex-shrink-0 group/card hover:-translate-y-1 transition-transform duration-300">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-neutral-700 to-neutral-900 border border-white/10 flex items-center justify-center text-xl font-serif text-white relative overflow-hidden flex-shrink-0">
+                        <span class="z-10 relative">TW</span>
+                        <div class="absolute inset-0 bg-brand-500/20 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-medium">Thomas Wright</h4>
+                        <p class="text-sm text-brand-500">Night Supervisor</p>
+                    </div>
+                </div>
+                <p class="text-sm text-neutral-400 leading-relaxed mb-6">
+                    "Peace of mind at 3 AM is just as important as at 3 PM. We're here, awake and watchful, so families can rest."
+                </p>
+                <div class="flex gap-2">
+                     <span class="px-2 py-1 rounded border border-white/5 bg-white/5 text-[10px] text-neutral-500 uppercase tracking-wider">Safety Lead</span>
+                     <span class="px-2 py-1 rounded border border-white/5 bg-white/5 text-[10px] text-neutral-500 uppercase tracking-wider">EMT</span>
+                </div>
+            </div>
+
+            <!-- Item 8 (Duplicate) -->
+            <div class="glass-panel p-6 rounded-2xl w-[340px] flex-shrink-0 group/card hover:-translate-y-1 transition-transform duration-300">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-neutral-700 to-neutral-900 border border-white/10 flex items-center justify-center text-xl font-serif text-white relative overflow-hidden flex-shrink-0">
+                        <span class="z-10 relative">SP</span>
+                        <div class="absolute inset-0 bg-brand-500/20 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-medium">Sophia Patel</h4>
+                        <p class="text-sm text-brand-500">Wellness Director</p>
+                    </div>
+                </div>
+                <p class="text-sm text-neutral-400 leading-relaxed mb-6">
+                    "Holistic health means treating the spirit as well as the body. Yoga, meditation, and laughter are our daily medicine."
+                </p>
+                <div class="flex gap-2">
+                     <span class="px-2 py-1 rounded border border-white/5 bg-white/5 text-[10px] text-neutral-500 uppercase tracking-wider">Yoga Cert.</span>
+                     <span class="px-2 py-1 rounded border border-white/5 bg-white/5 text-[10px] text-neutral-500 uppercase tracking-wider">Holistic</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+        </div>
+    </section>
+
+    <!-- Take Action Today -->
+    <section class="py-12 sm:py-16 md:py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-brand-900/10"></div>
+        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-500/50 to-transparent"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="heart-handshake" class="lucide lucide-heart-handshake w-12 h-12 text-brand-500 mx-auto mb-8 opacity-80"><path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762"></path></svg>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 sm:mb-6">
+                Your family is our family.
+            </h2>
+            <p class="text-base sm:text-lg text-neutral-400 mb-8 sm:mb-10 max-w-xl mx-auto px-4">
+                We know this is a big decision. Let's sit down, have a coffee, and discuss how we can support your loved one's needs.
+            </p>
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto">
+                <button class="hover:bg-brand-400 transition-all flex sm:w-auto text-sm font-semibold text-amber-50 bg-orange-600 w-full sm:w-auto h-12 sm:h-14 rounded-full pr-6 sm:pr-8 pl-6 sm:pl-8 shadow-[0_0_30px_rgba(249,115,22,0.2)] gap-x-2 gap-y-2 items-center justify-center" onclick="window.location.href='contact-us.html'" role="button">
+                    Schedule a Tour
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" class="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </button>
+                <button class="w-full sm:w-auto px-6 sm:px-8 h-12 sm:h-14 rounded-full border border-white/10 bg-white/5 text-white font-medium text-sm hover:bg-white/10 transition-all flex items-center justify-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" class="lucide lucide-phone w-4 h-4"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+                    (469) 735-5759
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-white/10 border-t pt-20 pb-12" id="contact">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row justify-between items-start gap-12 mb-20">
+          <div class="max-w-lg">
+            <h2 class="lg:text-6xl text-5xl text-orange-400 tracking-tight font-serif mb-8">
+              Welcome Home.
+            </h2>
+            <p class="text-lg text-neutral-400 mb-8">
+              Schedule a private tour to see if Attic Adult Family Home is the right fit for your loved one.
+            </p>
+            <div class="flex gap-4">
+              <button class="group flex transition-all duration-300 ease-out hover:scale-[1.03] hover:shadow-[0_0_50px_rgba(249,115,22,0.35)] active:scale-[0.98] overflow-hidden font-medium text-black bg-orange-600 h-12 rounded-full pr-8 pl-8 relative shadow-[0_0_30px_rgba(249,115,22,0.15)] gap-x-2 gap-y-x-2 items-center justify-center" onclick="window.location.href='contact-us.html'" role="button">
+                <span class="absolute inset-0 -translate-x-full group-hover:translate-x-[150%] transition-transform duration-700 ease-in-out bg-gradient-to-r from-transparent via-white/40 to-transparent z-0"></span>
+                <span class="z-10 relative">Schedule Tour</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" class="lucide lucide-arrow-right w-4 h-4 z-10"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-12 lg:gap-24">
+            <div class="">
+              <h4 class="text-white font-medium mb-4 font-serif text-lg">Contact</h4>
+              <ul class="space-y-3 text-sm text-neutral-500">
+                <li class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" class="lucide lucide-map-pin w-4 h-4 text-brand-500"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    29836 113th Way SE, Auburn, WA 98092
+                </li>
+                <li class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" class="lucide lucide-phone w-4 h-4 text-brand-500"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+                    (469) 735-5759
+                </li>
+                
+              </ul>
+            </div>
+            <div class="">
+              <h4 class="text-white font-medium mb-4 font-serif text-lg">Certifications</h4>
+              <ul class="space-y-3 text-sm text-neutral-500">
+                <li class="">State Licensed AFH</li>
+                <li class="">Dementia Specialty Certified</li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div class="flex items-center gap-2">
+            <div class="w-6 h-6 rounded bg-brand-500/20 flex items-center justify-center text-brand-500">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="home" class="lucide lucide-home w-3.5 h-3.5"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+            </div>
+            <span class="text-sm text-neutral-500">© 2024 Attic Adult Family Home. All rights reserved.</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+      lucide.createIcons();
+
+      // Mobile Menu Toggle
+      function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        const overlay = document.getElementById('mobile-menu-overlay');
+        const btn = document.getElementById('mobile-menu-btn');
+        const line1 = document.getElementById('menu-line-1');
+        const line2 = document.getElementById('menu-line-2');
+        const line3 = document.getElementById('menu-line-3');
+        
+        const isOpen = menu.classList.contains('open');
+        
+        if (isOpen) {
+          menu.classList.remove('open');
+          overlay.classList.remove('open');
+          document.body.style.overflow = '';
+          // Reset hamburger
+          line1.style.transform = '';
+          line2.style.opacity = '';
+          line3.style.transform = '';
+        } else {
+          menu.classList.add('open');
+          overlay.classList.add('open');
+          document.body.style.overflow = 'hidden';
+          // Animate to X
+          line1.style.transform = 'rotate(45deg) translate(5px, 5px)';
+          line2.style.opacity = '0';
+          line3.style.transform = 'rotate(-45deg) translate(7px, -6px)';
+        }
+      }
+
+      // Initialize mobile menu button
+      document.addEventListener('DOMContentLoaded', () => {
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        if (menuBtn) {
+          menuBtn.addEventListener('click', toggleMobileMenu);
+        }
+        
+        // Close menu on escape key
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            const menu = document.getElementById('mobile-menu');
+            if (menu && menu.classList.contains('open')) {
+              toggleMobileMenu();
+            }
+          }
+        });
+      
+        // Simple fade-up observer for elements not using the initial CSS animation
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = '1';
+              entry.target.style.transform = 'translateY(0)';
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1 });
+      });
+    </script>
+
+</body></html>

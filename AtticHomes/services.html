@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Attic Adult Family Home</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+:root {
+--font-sans: 'Inter', sans-serif;
+--font-serif: 'Playfair Display', serif;
+--font-mono: 'JetBrains Mono', monospace;
+}
+body {
+font-family: var(--font-sans);
+background-color: #050505;
+color: #e5e5e5;
+-webkit-font-smoothing: antialiased;
+}
+.font-serif { font-family: var(--font-serif); }
+.font-mono { font-family: var(--font-mono); }
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #444; }
+/* Animation Utilities */
+.animate-fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+@keyframes fadeUp {
+to { opacity: 1; transform: translateY(0); }
+}
+/* Glass Cards */
+.glass-panel {
+background: rgba(20, 20, 20, 0.6);
+backdrop-filter: blur(12px);
+border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.glass-panel-hover:hover {
+background: rgba(30, 30, 30, 0.8);
+border-color: rgba(255, 255, 255, 0.12);
+transition: all 0.3s ease;
+}
+/* Gradients & Glows */
+.text-gradient {
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-image: linear-gradient(to right, #fff, #a3a3a3);
+}
+/* Mobile Menu Styles */
+.mobile-menu {
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu.open {
+  transform: translateX(0);
+}
+.mobile-menu-overlay {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.mobile-menu-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 768px) {
+  /* Touch-friendly targets */
+  button, a[role="button"], .clickable {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  /* Prevent zoom on iOS input focus */
+  input, textarea, select {
+    font-size: 16px !important;
+  }
+  /* Better spacing on mobile */
+  section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  /* Improved grid responsiveness */
+  .grid {
+    gap: 1rem !important;
+  }
+  /* Better card spacing */
+  .glass-panel, .rounded-3xl, .rounded-2xl {
+    margin-bottom: 1rem;
+  }
+  /* Improved button sizing */
+  button, .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+}
+/* Mobile Typography Improvements */
+@media (max-width: 640px) {
+  h1 { 
+    font-size: 2rem !important; 
+    line-height: 1.1 !important; 
+    margin-bottom: 1rem !important;
+  }
+  h2 { 
+    font-size: 1.75rem !important; 
+    line-height: 1.2 !important;
+    margin-bottom: 0.75rem !important;
+  }
+  h3 {
+    font-size: 1.5rem !important;
+    line-height: 1.3 !important;
+  }
+  .text-lg { 
+    font-size: 1rem !important; 
+    line-height: 1.6 !important;
+  }
+  .text-xl {
+    font-size: 1.125rem !important;
+  }
+  .text-2xl {
+    font-size: 1.5rem !important;
+  }
+  .text-3xl {
+    font-size: 1.875rem !important;
+  }
+  .text-4xl {
+    font-size: 2.25rem !important;
+  }
+  .text-5xl {
+    font-size: 2.5rem !important;
+  }
+  /* Better padding on mobile */
+  .p-8, .px-8, .py-8 {
+    padding: 1.5rem !important;
+  }
+  .p-6, .px-6, .py-6 {
+    padding: 1.25rem !important;
+  }
+  /* Improved gap spacing */
+  .gap-8, .gap-x-8, .gap-y-8 {
+    gap: 1.5rem !important;
+  }
+  .gap-6, .gap-x-6, .gap-y-6 {
+    gap: 1rem !important;
+  }
+}
+/* Tablet optimizations */
+@media (min-width: 641px) and (max-width: 1024px) {
+  h1 {
+    font-size: 3rem !important;
+  }
+  h2 {
+    font-size: 2.25rem !important;
+  }
+}
+/* Touch-friendly targets */
+@media (max-width: 768px) {
+  button, a[role="button"], .clickable {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+/* Improved mobile typography */
+@media (max-width: 640px) {
+  h1 { font-size: 2.5rem !important; line-height: 1.1 !important; }
+  h2 { font-size: 2rem !important; }
+  .text-lg { font-size: 1rem !important; }
+}
+</style>
+<link id="all-fonts-link-font-geist" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist">.font-geist { font-family: 'Geist', sans-serif !important; }</style><link id="all-fonts-link-font-roboto" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-roboto">.font-roboto { font-family: 'Roboto', sans-serif !important; }</style><link id="all-fonts-link-font-montserrat" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-montserrat">.font-montserrat { font-family: 'Montserrat', sans-serif !important; }</style><link id="all-fonts-link-font-poppins" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-poppins">.font-poppins { font-family: 'Poppins', sans-serif !important; }</style><link id="all-fonts-link-font-playfair" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&amp;display=swap"><style id="all-fonts-style-font-playfair">.font-playfair { font-family: 'Playfair Display', serif !important; }</style><link id="all-fonts-link-font-instrument-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-instrument-serif">.font-instrument-serif { font-family: 'Instrument Serif', serif !important; }</style><link id="all-fonts-link-font-merriweather" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&amp;display=swap"><style id="all-fonts-style-font-merriweather">.font-merriweather { font-family: 'Merriweather', serif !important; }</style><link id="all-fonts-link-font-bricolage" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-bricolage">.font-bricolage { font-family: 'Bricolage Grotesque', sans-serif !important; }</style><link id="all-fonts-link-font-jakarta" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-jakarta">.font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif !important; }</style><link id="all-fonts-link-font-manrope" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-manrope">.font-manrope { font-family: 'Manrope', sans-serif !important; }</style><link id="all-fonts-link-font-space-grotesk" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-space-grotesk">.font-space-grotesk { font-family: 'Space Grotesk', sans-serif !important; }</style><link id="all-fonts-link-font-work-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-work-sans">.font-work-sans { font-family: 'Work Sans', sans-serif !important; }</style><link id="all-fonts-link-font-pt-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&amp;display=swap"><style id="all-fonts-style-font-pt-serif">.font-pt-serif { font-family: 'PT Serif', serif !important; }</style><link id="all-fonts-link-font-geist-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist-mono">.font-geist-mono { font-family: 'Geist Mono', monospace !important; }</style><link id="all-fonts-link-font-space-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap"><style id="all-fonts-style-font-space-mono">.font-space-mono { font-family: 'Space Mono', monospace !important; }</style><link id="all-fonts-link-font-quicksand" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-quicksand">.font-quicksand { font-family: 'Quicksand', sans-serif !important; }</style><link id="all-fonts-link-font-nunito" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-nunito">.font-nunito { font-family: 'Nunito', sans-serif !important; }</style>  <style>
+/* 3D Transform utilities */
+</style>
+<script>
+// Configure Tailwind to include our custom 3D transform utilities
+tailwind.config = {
+theme: {
+extend: {
+// Add any custom theme extensions here if needed
+}
+},
+plugins: [
+function({ addUtilities }) {
+const rotateXUtilities = {};
+const rotateYUtilities = {};
+const rotateZUtilities = {};
+const rotateValues = [0, 5, 10, 15, 20, 30, 45, 75];
+// Generate rotate-x utilities
+rotateValues.forEach((value) => {
+rotateXUtilities[`.rotate-x-${value}`] = {
+'--tw-rotate-x': `${value}deg`,
+transform: `
+translate3d(var(--tw-translate-x, 0), var(--tw-translate-y, 0), var(--tw-translate-z, 0))
+rotateX(var(--tw-rotate-x, 0))
+rotateY(var(--tw-rotate-y, 0))
+rotateZ(var(--tw-rotate-z, 0))
+skewX(var(--tw-skew-x, 0))
+skewY(var(--tw-skew-y, 0))
+scaleX(var(--tw-scale-x, 1))
+scaleY(var(--tw-scale-y, 1))
+`.replace(/\\s+/g, ' ').trim(),
+};
+if (value !== 0) {
+rotateXUtilities[`.-rotate-x-${value}`] = {
+'--tw-rotate-x': `-${value}deg`,
+transform: `
+translate3d(var(--tw-translate-x, 0), var(--tw-translate-y, 0), var(--tw-translate-z, 0))
+rotateX(var(--tw-rotate-x, 0))
+rotateY(var(--tw-rotate-y, 0))
+rotateZ(var(--tw-rotate-z, 0))
+skewX(var(--tw-skew-x, 0))
+skewY(var(--tw-skew-y, 0))
+scaleX(var(--tw-scale-x, 1))
+scaleY(var(--tw-scale-y, 1))
+`.replace(/\\s+/g, ' ').trim(),
+};
+}
+});
+// Generate rotate-y utilities
+rotateValues.forEach((value) => {
+rotateYUtilities[`.rotate-y-${value}`] = {
+'--tw-rotate-y': `${value}deg`,
+transform: `
+translate3d(var(--tw-translate-x, 0), var(--tw-translate-y, 0), var(--tw-translate-z, 0))
+rotateX(var(--tw-rotate-x, 0))
+rotateY(var(--tw-rotate-y, 0))
+rotateZ(var(--tw-rotate-z, 0))
+skewX(var(--tw-skew-x, 0))
+skewY(var(--tw-skew-y, 0))
+scaleX(var(--tw-scale-x, 1))
+scaleY(var(--tw-scale-y, 1))
+`.replace(/\\s+/g, ' ').trim(),
+};
+if (value !== 0) {
+rotateYUtilities[`.-rotate-y-${value}`] = {
+'--tw-rotate-y': `-${value}deg`,
+transform: `
+translate3d(var(--tw-translate-x, 0), var(--tw-translate-y, 0), var(--tw-translate-z, 0))
+rotateX(var(--tw-rotate-x, 0))
+rotateY(var(--tw-rotate-y, 0))
+rotateZ(var(--tw-rotate-z, 0))
+skewX(var(--tw-skew-x, 0))
+skewY(var(--tw-skew-y, 0))
+scaleX(var(--tw-scale-x, 1))
+scaleY(var(--tw-scale-y, 1))
+`.replace(/\\s+/g, ' ').trim(),
+};
+}
+});
+// Generate rotate-z utilities
+rotateValues.forEach((value) => {
+rotateZUtilities[`.rotate-z-${value}`] = {
+'--tw-rotate-z': `${value}deg`,
+transform: `
+translate3d(var(--tw-translate-x, 0), var(--tw-translate-y, 0), var(--tw-translate-z, 0))
+rotateX(var(--tw-rotate-x, 0))
+rotateY(var(--tw-rotate-y, 0))
+rotateZ(var(--tw-rotate-z, 0))
+skewX(var(--tw-skew-x, 0))
+skewY(var(--tw-skew-y, 0))
+scaleX(var(--tw-scale-x, 1))
+scaleY(var(--tw-scale-y, 1))
+`.replace(/\\s+/g, ' ').trim(),
+};
+if (value !== 0) {
+rotateZUtilities[`.-rotate-z-${value}`] = {
+'--tw-rotate-z': `-${value}deg`,
+transform: `
+translate3d(var(--tw-translate-x, 0), var(--tw-translate-y, 0), var(--tw-translate-z, 0))
+rotateX(var(--tw-rotate-x, 0))
+rotateY(var(--tw-rotate-y, 0))
+rotateZ(var(--tw-rotate-z, 0))
+skewX(var(--tw-skew-x, 0))
+skewY(var(--tw-skew-y, 0))
+scaleX(var(--tw-scale-x, 1))
+scaleY(var(--tw-scale-y, 1))
+`.replace(/\\s+/g, ' ').trim(),
+};
+}
+});
+// Perspective utilities
+const perspectiveUtilities = {
+".perspective-none": { perspective: "none" },
+".perspective-dramatic": { perspective: "100px" },
+".perspective-near": { perspective: "300px" },
+".perspective-normal": { perspective: "500px" },
+".perspective-midrange": { perspective: "800px" },
+".perspective-distant": { perspective: "1200px" },
+};
+// Transform style utilities
+const transformStyleUtilities = {
+".transform-style-preserve-3d": { "transform-style": "preserve-3d" },
+".transform-style-flat": { "transform-style": "flat" },
+};
+addUtilities({
+...rotateXUtilities,
+...rotateYUtilities,
+...rotateZUtilities,
+...perspectiveUtilities,
+...transformStyleUtilities,
+});
+}
+]
+};
+</script></head>
+<body class="overflow-x-hidden selection:bg-brand-500/30 selection:text-brand-100">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-black/50 backdrop-blur-xl">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <div class="flex items-center gap-4 sm:gap-8">
+          <a href="index.html" class="flex items-center gap-2 group">
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-neutral-800 to-black border border-white/10 flex items-center justify-center group-hover:border-brand-500/50 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="home" class="lucide lucide-home text-white w-4 h-4"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+            </div>
+            <span class="text-sm sm:text-base font-medium text-white tracking-tight font-serif">
+              Attic AFH
+            </span>
+          </a>
+          <div class="hidden md:flex gap-6 text-sm font-medium text-neutral-400 gap-x-6 gap-y-6 items-center">
+            <a href="index.html" class="transition-colors hover:text-orange-400">Home</a>
+            <a href="about-us.html" class="hover:text-orange-400 transition-colors">About Us</a>
+            <a href="gallery.html" class="hover:text-orange-400 transition-colors">Gallery</a>
+            <a href="services.html" class="hover:text-orange-400 transition-colors">Services</a>
+            <a href="contact-us.html" class="hover:text-orange-400 transition-colors">Contact Us</a>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 sm:gap-4">
+          <a href="contact-us.html" class="hidden sm:flex items-center gap-2 hover:bg-neutral-200 transition-colors text-xs font-medium text-black bg-white h-9 rounded-full pr-5 pl-5 shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+            <span class="">Contact Us</span>
+          </a>
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 p-2 rounded-lg hover:bg-white/5 transition-colors" aria-label="Toggle menu">
+            <span class="block w-5 h-0.5 bg-white transition-all duration-300" id="menu-line-1"></span>
+            <span class="block w-5 h-0.5 bg-white transition-all duration-300" id="menu-line-2"></span>
+            <span class="block w-5 h-0.5 bg-white transition-all duration-300" id="menu-line-3"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay fixed inset-0 bg-black/80 backdrop-blur-sm z-40 md:hidden" onclick="toggleMobileMenu()"></div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 md:hidden overflow-y-auto">
+      <div class="flex flex-col h-full">
+        <!-- Mobile Menu Header -->
+        <div class="flex items-center justify-between p-6 border-b border-white/10">
+          <span class="text-lg font-serif text-white font-medium">Menu</span>
+          <button onclick="toggleMobileMenu()" class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-white/5 transition-colors" aria-label="Close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white w-6 h-6"><path d="M18 6 6 18"></path><path d="M6 6l12 12"></path></svg>
+          </button>
+        </div>
+        <!-- Mobile Menu Links -->
+        <nav class="flex-1 p-6 space-y-1">
+          <a href="index.html" class="block px-4 py-3 rounded-lg text-neutral-300 hover:bg-white/5 hover:text-orange-400 transition-all font-medium" onclick="toggleMobileMenu()">Home</a>
+          <a href="about-us.html" class="block px-4 py-3 rounded-lg text-neutral-300 hover:bg-white/5 hover:text-orange-400 transition-all font-medium" onclick="toggleMobileMenu()">About Us</a>
+          <a href="gallery.html" class="block px-4 py-3 rounded-lg text-neutral-300 hover:bg-white/5 hover:text-orange-400 transition-all font-medium" onclick="toggleMobileMenu()">Gallery</a>
+          <a href="services.html" class="block px-4 py-3 rounded-lg text-white hover:bg-white/5 hover:text-orange-400 transition-all font-medium" onclick="toggleMobileMenu()">Services</a>
+          <a href="contact-us.html" class="block px-4 py-3 rounded-lg text-neutral-300 hover:bg-white/5 hover:text-orange-400 transition-all font-medium" onclick="toggleMobileMenu()">Contact Us</a>
+        </nav>
+        <!-- Mobile CTA Button -->
+        <div class="p-6 border-t border-white/10">
+          <a href="contact-us.html" class="block w-full text-center px-6 py-3 rounded-full bg-white text-black font-medium hover:bg-neutral-200 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.1)]" onclick="toggleMobileMenu()">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1. HERO SECTION (Services Look) -->
+    <section class="overflow-hidden lg:pt-52 lg:pb-32 bg-[url(https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/fba518f8-cd18-46f8-9e15-15a1d2c5b321_1600w.png)] bg-cover bg-center pt-24 sm:pt-32 md:pt-40 pb-16 sm:pb-20 relative">
+        <!-- Background Effects -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-brand-500/10 rounded-[100%] blur-[120px] -z-10 opacity-30 pointer-events-none mix-blend-screen"></div>
+        <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150 -z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="inline-flex animate-fade-up text-xs font-medium text-slate-50 bg-white/5 border-white/10 border rounded-full mb-8 px-3 py-1 backdrop-blur-md gap-x-2 gap-y-2 items-center">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span>
+                <span class="">Comprehensive Care Solutions</span>
+            </div>
+            
+            <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif tracking-tight text-white mb-6 sm:mb-8 animate-fade-up delay-100 leading-[1.1]">
+                Care that adapts <br>
+                <span class="inline-block cursor-pointer transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:scale-110 hover:-rotate-3 hover:text-orange-300 hover:drop-shadow-[0_0_25px_rgba(251,146,60,0.6)] text-orange-400">to your needs.</span>
+            </h1>
+
+            <p class="animate-fade-up delay-200 leading-relaxed text-base sm:text-lg md:text-xl font-light text-slate-50 max-w-2xl mx-auto mb-8 sm:mb-12">
+                We believe exceptional care is invisible—it simply feels like life, lived better. From daily assistance to specialized medical support, we handle the details so you can focus on connection.
+            </p>
+
+            <!-- Floating Service Tokens Visualization -->
+            <div class="flex flex-wrap justify-center gap-3 animate-fade-up delay-300 max-w-3xl mx-auto opacity-80">
+                <div class="px-4 py-2 rounded-full border border-white/5 bg-white/5 text-xs text-neutral-300 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="heart" class="lucide lucide-heart w-3 h-3 text-brand-500"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg> Personal Care
+                </div>
+                <div class="flex text-xs text-neutral-300 bg-white/5 border-white/5 border rounded-full pt-2 pr-4 pb-2 pl-4 gap-x-2 gap-y-2 items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="pill" class="lucide lucide-pill w-3 h-3 text-blue-400"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"></path><path d="m8.5 8.5 7 7"></path></svg> Medication
+                </div>
+                <div class="px-4 py-2 rounded-full border border-white/5 bg-white/5 text-xs text-neutral-300 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="utensils" class="lucide lucide-utensils w-3 h-3 text-green-400"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path><path d="M7 2v20"></path><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path></svg> Nutrition
+                </div>
+                <div class="px-4 py-2 rounded-full border border-white/5 bg-white/5 text-xs text-neutral-300 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="users" class="lucide lucide-users w-3 h-3 text-yellow-400"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg> Companionship
+                </div>
+                <div class="px-4 py-2 rounded-full border border-white/5 bg-white/5 text-xs text-neutral-300 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="accessibility" class="lucide lucide-accessibility w-3 h-3 text-purple-400"><circle cx="16" cy="4" r="1"></circle><path d="m18 19 1-7-6 1"></path><path d="m5 8 3-3 5.5 3-2.36 3.5"></path><path d="M4.24 14.5a5 5 0 0 0 6.88 6"></path><path d="M13.76 17.5a5 5 0 0 0-6.88-6"></path></svg> Mobility
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. OUR CARE APPROACH SECTION -->
+    <section id="approach" class="py-16 sm:py-20 md:py-24 bg-black relative border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
+                <div class="">
+                    <h2 class="text-3xl md:text-4xl font-serif text-white mb-4">The Attic Standard</h2>
+                    <p class="text-neutral-400 max-w-md">Our methodology is built on three pillars that ensure dignity, safety, and happiness for every resident.</p>
+                </div>
+                <div class="hidden md:block w-px h-16 bg-gradient-to-b from-transparent via-brand-500 to-transparent opacity-50"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 group/grid">
+                <!-- Step 1 -->
+                <div class="group relative animate-fade-up">
+                    <div class="absolute -inset-0.5 bg-gradient-to-b from-orange-500/30 to-purple-500/30 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500 blur-md group-hover:blur-lg"></div>
+                    <div class="glass-panel p-8 rounded-2xl h-full border border-white/5 bg-neutral-900/60 relative z-10 hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 hover:border-orange-500/30 hover:bg-neutral-900/80 hover:shadow-[0_0_30px_-5px_rgba(249,115,22,0.3)]">
+                        <div class="w-12 h-12 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-6 text-orange-500 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-inner">
+                            <span class="font-mono font-semibold text-lg">01</span>
+                        </div>
+                        <h3 class="text-xl font-medium tracking-tight text-orange-400 mb-3 group-hover:text-orange-300 transition-colors">Holistic Assessment</h3>
+                        <p class="text-sm text-neutral-400 leading-relaxed group-hover:text-neutral-300 transition-colors">
+                            Before admission, we conduct a deep-dive assessment not just of medical needs, but of personal preferences, history, and routines to create a truly personalized profile.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="group relative animate-fade-up delay-100">
+                     <div class="absolute -inset-0.5 bg-gradient-to-b from-orange-500/30 to-purple-500/30 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500 blur-md group-hover:blur-lg"></div>
+                    <div class="glass-panel p-8 rounded-2xl h-full border border-white/5 bg-neutral-900/60 relative z-10 hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 hover:border-orange-500/30 hover:bg-neutral-900/80 hover:shadow-[0_0_30px_-5px_rgba(249,115,22,0.3)]">
+                         <div class="w-12 h-12 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-6 text-orange-500 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-inner">
+                            <span class="font-mono font-semibold text-lg">02</span>
+                        </div>
+                        <h3 class="text-xl font-medium tracking-tight text-orange-400 mb-3 group-hover:text-orange-300 transition-colors">Dynamic Care Plan</h3>
+                        <p class="text-sm text-neutral-400 leading-relaxed group-hover:text-neutral-300 transition-colors">
+                            Health isn't static. Our care plans are living documents, reviewed weekly by our nursing staff to adapt to changes in mobility, cognition, or medication requirements immediately.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="group relative animate-fade-up delay-200">
+                     <div class="absolute -inset-0.5 bg-gradient-to-b from-orange-500/30 to-purple-500/30 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500 blur-md group-hover:blur-lg"></div>
+                    <div class="glass-panel p-8 rounded-2xl h-full border border-white/5 bg-neutral-900/60 relative z-10 hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 hover:border-orange-500/30 hover:bg-neutral-900/80 hover:shadow-[0_0_30px_-5px_rgba(249,115,22,0.3)]">
+                         <div class="w-12 h-12 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-6 text-orange-500 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-inner">
+                            <span class="font-mono font-semibold text-lg">03</span>
+                        </div>
+                        <h3 class="text-xl font-medium tracking-tight text-orange-400 mb-3 group-hover:text-orange-300 transition-colors">Family Integration</h3>
+                        <p class="text-sm text-neutral-400 leading-relaxed group-hover:text-neutral-300 transition-colors">
+                            We believe family is part of the care team. Through digital updates and open visitation, we ensure you are always connected and informed about your loved one's well-being.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. OUR SERVICES SECTION (Bento Grid) -->
+    <section class="py-16 sm:py-20 md:py-24 bg-neutral-950 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12 sm:mb-16">
+                 <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand-500 mb-4">Core Offerings</p>
+                <h2 class="text-3xl md:text-5xl font-serif text-white">Daily Living Assistance</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 auto-rows-[minmax(200px,auto)]">
+                
+                <!-- Service 1 -->
+                <div class="glass-panel flex flex-col group hover:bg-white/[0.04] hover:-translate-y-2 hover:border-white/20 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-300 border-white/10 border rounded-2xl sm:rounded-3xl p-6 sm:p-8 justify-between">
+                    <div class="mb-6">
+                        <div class="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400 mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bath" class="lucide lucide-bath w-5 h-5"><path d="M10 4 8 6"></path><path d="M17 19v2"></path><path d="M2 12h20"></path><path d="M7 19v2"></path><path d="M9 5 7.621 3.621A2.121 2.121 0 0 0 4 5v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"></path></svg>
+                        </div>
+                        <h3 class="text-base sm:text-lg font-medium text-white mb-2 group-hover:text-blue-400 transition-colors">Personal Hygiene</h3>
+                        <p class="text-xs sm:text-sm text-neutral-400 leading-relaxed">Dignified assistance with bathing, dressing, grooming, and toileting tailored to independence levels.</p>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="glass-panel p-8 rounded-3xl flex flex-col justify-between group hover:bg-white/[0.04] hover:-translate-y-2 hover:border-white/20 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-300 border border-white/10">
+                    <div class="mb-6">
+                        <div class="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center text-green-400 mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="utensils" class="lucide lucide-utensils w-5 h-5"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path><path d="M7 2v20"></path><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-medium text-white mb-2 group-hover:text-green-400 transition-colors">Nutrition Management</h3>
+                        <p class="text-sm text-neutral-400 leading-relaxed">Three home-cooked meals daily plus snacks. We manage diabetic, low-sodium, and puree diets.</p>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glass-panel p-8 rounded-3xl flex flex-col justify-between group hover:bg-white/[0.04] hover:-translate-y-2 hover:border-white/20 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-300 border border-white/10">
+                    <div class="mb-6">
+                        <div class="w-10 h-10 rounded-full bg-purple-500/10 flex items-center justify-center text-purple-400 mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="pill" class="lucide lucide-pill w-5 h-5"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"></path><path d="m8.5 8.5 7 7"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-medium text-white mb-2 group-hover:text-purple-400 transition-colors">Medication Administration</h3>
+                        <p class="text-sm text-neutral-400 leading-relaxed">Nurse-delegated staff manage prescriptions, refills, and precise timing for all medications.</p>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="glass-panel p-8 rounded-3xl flex flex-col justify-between group hover:bg-white/[0.04] hover:-translate-y-2 hover:border-white/20 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-300 border border-white/10">
+                    <div class="mb-6">
+                        <div class="w-10 h-10 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-400 mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="armchair" class="lucide lucide-armchair w-5 h-5"><path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3"></path><path d="M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z"></path><path d="M5 18v2"></path><path d="M19 18v2"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-medium text-white mb-2 group-hover:text-orange-400 transition-colors">Mobility Support</h3>
+                        <p class="text-sm text-neutral-400 leading-relaxed">Transfer assistance (1-2 person or Hoyer lift), fall prevention monitoring, and exercise prompting.</p>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="glass-panel p-8 rounded-3xl flex flex-col justify-between group hover:bg-white/[0.04] hover:-translate-y-2 hover:border-white/20 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-300 border border-white/10">
+                    <div class="mb-6">
+                        <div class="w-10 h-10 rounded-full bg-pink-500/10 flex items-center justify-center text-pink-400 mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="heart-handshake" class="lucide lucide-heart-handshake w-5 h-5"><path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-medium text-white mb-2 group-hover:text-pink-400 transition-colors">Social Engagement</h3>
+                        <p class="text-sm text-neutral-400 leading-relaxed">Structured activities, music therapy, gardening, and one-on-one companionship to prevent isolation.</p>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="glass-panel p-8 rounded-3xl flex flex-col justify-between group hover:bg-white/[0.04] hover:-translate-y-2 hover:border-white/20 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-300 border border-white/10">
+                    <div class="mb-6">
+                        <div class="w-10 h-10 rounded-full bg-teal-500/10 flex items-center justify-center text-teal-400 mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="sparkles" class="lucide lucide-sparkles w-5 h-5"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg>
+                        </div>
+                        <h3 class="text-lg font-medium text-white mb-2 group-hover:text-teal-400 transition-colors">Housekeeping &amp; Laundry</h3>
+                        <p class="text-sm text-neutral-400 leading-relaxed">Daily cleaning, fresh linens, and personal laundry service ensuring a pristine environment.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. OUR SPECIALITIES SECTION -->
+    <section id="specialities" class="py-16 sm:py-20 md:py-24 bg-black relative border-y border-white/5 overflow-hidden">
+        <div class="absolute right-0 top-0 w-1/3 h-full bg-gradient-to-l from-neutral-900 to-transparent opacity-50 pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
+                <div class="">
+                     <p class="text-xs font-semibold tracking-[0.2em] uppercase text-neutral-500 mb-4">Clinical Excellence</p>
+                    <h2 class="text-3xl md:text-5xl font-serif text-white mb-6">Specialized Medical Support</h2>
+                    <p class="text-lg text-neutral-400 mb-8 font-light">
+                        We are equipped and certified to handle complex care needs that go beyond standard assisted living, allowing residents to age in place comfortably.
+                    </p>
+                    
+                    <div class="space-y-4">
+    <!-- Specialty Item -->
+    <div class="group flex items-start gap-4 p-4 rounded-xl transition-all duration-300 border border-transparent hover:border-orange-400 hover:bg-orange-400/5 hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_rgba(251,146,60,0.2)]">
+        <div class="mt-1 w-2 h-2 rounded-full bg-brand-500 shadow-[0_0_8px_rgba(249,115,22,0.5)] shrink-0 group-hover:bg-orange-400 group-hover:shadow-[0_0_12px_rgba(249,115,22,0.8)] transition-all duration-300"></div>
+                    <div class="">
+                        <h4 class="text-white font-medium mb-1 group-hover:text-orange-400 transition-colors duration-300">Dementia &amp; Alzheimer's Care</h4>
+                        <p class="text-sm text-neutral-500 group-hover:text-neutral-400 transition-colors duration-300">Secured environment with wander management and cognitive support therapies.</p>
+                    </div>
+                </div>
+    <!-- Specialty Item -->
+    <div class="group flex items-start gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg sm:rounded-xl transition-all duration-300 border border-transparent hover:border-orange-400 hover:bg-orange-400/5 hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_rgba(251,146,60,0.2)]">
+        <div class="mt-1 w-2 h-2 rounded-full bg-brand-500 shadow-[0_0_8px_rgba(249,115,22,0.5)] shrink-0 group-hover:bg-orange-400 group-hover:shadow-[0_0_12px_rgba(249,115,22,0.8)] transition-all duration-300"></div>
+                    <div class="">
+                        <h4 class="text-white font-medium mb-1 group-hover:text-orange-400 transition-colors duration-300">Hospice &amp; Palliative Care</h4>
+                        <p class="text-sm text-neutral-500 group-hover:text-neutral-400 transition-colors duration-300">Partnering with local hospice agencies to provide comfort, pain management, and dignity at end of life.</p>
+                    </div>
+                </div>
+    <!-- Specialty Item -->
+    <div class="group flex items-start gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg sm:rounded-xl transition-all duration-300 border border-transparent hover:border-orange-400 hover:bg-orange-400/5 hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_rgba(251,146,60,0.2)]">
+        <div class="mt-1 w-2 h-2 rounded-full bg-brand-500 shadow-[0_0_8px_rgba(249,115,22,0.5)] shrink-0 group-hover:bg-orange-400 group-hover:shadow-[0_0_12px_rgba(249,115,22,0.8)] transition-all duration-300"></div>
+                    <div class="">
+                        <h4 class="text-white font-medium mb-1 group-hover:text-orange-400 transition-colors duration-300">Diabetes Management</h4>
+                        <p class="text-sm text-neutral-500 group-hover:text-neutral-400 transition-colors duration-300">Blood glucose monitoring, insulin administration, and strict dietary planning.</p>
+                    </div>
+                </div>
+    <!-- Specialty Item -->
+    <div class="group flex items-start gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg sm:rounded-xl transition-all duration-300 border border-transparent hover:border-orange-400 hover:bg-orange-400/5 hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_rgba(251,146,60,0.2)]">
+        <div class="mt-1 w-2 h-2 rounded-full bg-brand-500 shadow-[0_0_8px_rgba(249,115,22,0.5)] shrink-0 group-hover:bg-orange-400 group-hover:shadow-[0_0_12px_rgba(249,115,22,0.8)] transition-all duration-300"></div>
+        <div class="">
+            <h4 class="text-white font-medium mb-1 group-hover:text-orange-400 transition-colors duration-300">Post-Stroke Recovery</h4>
+            <p class="text-sm text-neutral-500 group-hover:text-neutral-400 transition-colors duration-300">Assistance with rehabilitation exercises and speech therapy homework.</p>
+        </div>
+    </div>
+</div>
+                </div>
+
+                <!-- Visual Element -->
+                <div class="relative perspective-1000">
+                    <div class="glass-panel rounded-2xl p-4 sm:p-6 border border-white/10 bg-neutral-900 rotate-y-12 rotate-x-6 transform transition-transform hover:rotate-0 duration-700 hidden lg:block">
+                        <div class="flex items-center gap-3 border-b border-white/5 pb-4 mb-4">
+                            <div class="w-3 h-3 rounded-full bg-red-500/20 border border-red-500/50"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500/20 border border-green-500/50"></div>
+                            <span class="ml-auto text-xs font-mono text-neutral-500">CERTIFICATIONS.MD</span>
+                        </div>
+                        <div class="space-y-3 font-mono text-xs">
+                            <div class="flex justify-between items-center bg-white/5 p-2 rounded">
+                                <span class="text-neutral-300">License #</span>
+                                <span class="text-brand-400">7829-AFH-WA</span>
+                            </div>
+                            <div class="flex justify-between items-center bg-white/5 p-2 rounded">
+                                <span class="text-neutral-300">Nurse Delegation</span>
+                                <span class="text-green-400">Active</span>
+                            </div>
+                            <div class="flex justify-between items-center bg-white/5 p-2 rounded">
+                                <span class="text-neutral-300">Mental Health</span>
+                                <span class="text-green-400">Certified</span>
+                            </div>
+                            <div class="flex justify-between items-center bg-white/5 p-2 rounded">
+                                <span class="text-neutral-300">Dementia Specialty</span>
+                                <span class="text-green-400">Level 1 &amp; 2</span>
+                            </div>
+                            <div class="mt-6 border-t border-white/5 pt-4">
+                                <p class="text-neutral-500 mb-2">// Staff Credentials</p>
+                                <div class="flex gap-2">
+                                    <span class="px-2 py-1 bg-blue-900/20 text-blue-400 rounded border border-blue-500/20">RN</span>
+                                    <span class="px-2 py-1 bg-purple-900/20 text-purple-400 rounded border border-purple-500/20">CNA</span>
+                                    <span class="px-2 py-1 bg-yellow-900/20 text-yellow-400 rounded border border-yellow-500/20">NAR</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Decorative blur -->
+                    <div class="absolute -inset-10 bg-brand-500/10 blur-[60px] -z-10 rounded-full"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FACILITY AMENITIES SECTION -->
+    <section id="amenities" class="py-16 sm:py-20 md:py-24 bg-neutral-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <style>
+                @keyframes marquee {
+                    0% { transform: translateX(0); }
+                    100% { transform: translateX(-50%); }
+                }
+                .animate-marquee {
+                    animation: marquee 50s linear infinite;
+                }
+                .animate-marquee-reverse {
+                    animation: marquee 50s linear infinite reverse;
+                }
+            </style>
+            
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-2xl sm:text-3xl md:text-5xl text-orange-400 font-serif mb-3 sm:mb-4">Facility Amenities</h2>
+                <p class="text-sm sm:text-base text-neutral-400">Designed for safety, comfort, and a homely atmosphere.</p>
+            </div>
+
+            <div class="flex flex-col gap-6 overflow-hidden w-full pt-8 pb-8 relative gap-x-6 gap-y-6">
+    <style>
+        @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        @keyframes scroll-right {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
+        .animate-scroll-left {
+            animation: scroll-left 40s linear infinite;
+        }
+        .animate-scroll-right {
+            animation: scroll-right 40s linear infinite;
+        }
+        .marquee-track:hover {
+            animation-play-state: paused;
+        }
+    </style>
+    
+    <!-- Gradient Masks -->
+    <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-neutral-950 to-transparent z-10 pointer-events-none"></div>
+    <div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-neutral-950 to-transparent z-10 pointer-events-none"></div>
+
+    <!-- Row 1: Scrolling Left -->
+    <div class="flex gap-4 animate-scroll-left marquee-track w-max">
+        <!-- Set 1 (12 Items) -->
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-door-open w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M11 20H2"></path><path d="M11 4.562v16.157a1 1 0 0 0 1.242.97L19 20V5.562a2 2 0 0 0-1.515-1.94l-4-1A2 2 0 0 0 11 4.561z"></path><path d="M11 4H8a2 2 0 0 0-2 2v14"></path><path d="M14 12h.01"></path><path d="M22 20h-3"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Private Rooms</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flower-2 w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M12 5a3 3 0 1 1 3 3m-3-3a3 3 0 1 0-3 3m3-3v1M9 8a3 3 0 1 0 3 3M9 8h1m5 0a3 3 0 1 1-3 3m3-3h-1m-2 3v-1" class=""></path><circle cx="12" cy="8" r="2"></circle><path d="M12 10v12" class=""></path><path d="M12 22c4.2 0 7-1.667 7-5-4.2 0-7 1.667-7 5Z" class=""></path><path d="M12 22c-4.2 0-7-1.667-7-5 4.2 0 7 1.667 7 5Z" class=""></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Secure Garden</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-snowflake w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="m10 20-1.25-2.5L6 18"></path><path d="M10 4 8.75 6.5 6 6"></path><path d="m14 20 1.25-2.5L18 18"></path><path d="m14 4 1.25 2.5L18 6"></path><path d="m17 21-3-6h-4"></path><path d="m17 3-3 6 1.5 3"></path><path d="M2 12h6.5L10 9"></path><path d="m20 10-1.5 2 1.5 2"></path><path d="M22 12h-6.5L14 15"></path><path d="m4 10 1.5 2L4 14"></path><path d="m7 21 3-6-1.5-3"></path><path d="m7 3 3 6h4"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Climate Control</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" class=""></path></svg>
+            <span class="text-sm font-medium text-neutral-300">24/7 Monitoring</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Housekeeping</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-car w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path><path d="M7 17h.01"></path><path d="M17 17h.01"></path><path d="M5 17h14"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Transportation</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-activity w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Physical Therapy</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scissors w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><line x1="20" x2="8.12" y1="4" y2="15.88"></line><line x1="14.47" x2="20" y1="14.48" y2="20"></line><line x1="8.12" x2="12" y1="8.12" y2="12"></line></svg>
+            <span class="text-sm font-medium text-neutral-300">Barber &amp; Beauty</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-church w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M10 9h4"></path><path d="M12 7v5"></path><path d="M6 18h12"></path><path d="M10 22v-4h4v4"></path><path d="M12 2l8 6v10a2 2 0 0 1-2 2h-2v-4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v4H6a2 2 0 0 1-2-2V8z"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Religious Services</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-utensils w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path><path d="M7 2v20"></path><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Guest Meals</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-footprints w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 11 3.8 11 8c0 2.85-1.21 4.2-2 6.73A3.99 3.99 0 0 0 8 16v2"></path><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 13 7.8 13 12c0 2.85 1.21 4.2 2 6.73A3.99 3.99 0 0 0 16 20v2"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Podiatry</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-stethoscope w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M11 2v2"></path><path d="M5 2v2"></path><path d="M5 5h6l.01.01a5.01 5.01 0 0 1 .5 9.99H5a5 5 0 0 1-.5-9.99l.5-.01"></path><path d="M22 17a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3"></path><path d="M11 15v1a3 3 0 0 0 3 3h4a3 3 0 0 0 3-3v-1"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">On-site Nursing</span>
+        </div>
+
+        <!-- Duplicated Set 1 -->
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-door-open w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M11 20H2"></path><path d="M11 4.562v16.157a1 1 0 0 0 1.242.97L19 20V5.562a2 2 0 0 0-1.515-1.94l-4-1A2 2 0 0 0 11 4.561z"></path><path d="M11 4H8a2 2 0 0 0-2 2v14"></path><path d="M14 12h.01"></path><path d="M22 20h-3"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Private Rooms</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flower-2 w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M12 5a3 3 0 1 1 3 3m-3-3a3 3 0 1 0-3 3m3-3v1M9 8a3 3 0 1 0 3 3M9 8h1m5 0a3 3 0 1 1-3 3m3-3h-1m-2 3v-1"></path><circle cx="12" cy="8" r="2"></circle><path d="M12 10v12"></path><path d="M12 22c4.2 0 7-1.667 7-5-4.2 0-7 1.667-7 5Z"></path><path d="M12 22c-4.2 0-7-1.667-7-5 4.2 0 7 1.667 7 5Z"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Secure Garden</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-snowflake w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="m10 20-1.25-2.5L6 18"></path><path d="M10 4 8.75 6.5 6 6"></path><path d="m14 20 1.25-2.5L18 18"></path><path d="m14 4 1.25 2.5L18 6"></path><path d="m17 21-3-6h-4"></path><path d="m17 3-3 6 1.5 3"></path><path d="M2 12h6.5L10 9"></path><path d="m20 10-1.5 2 1.5 2"></path><path d="M22 12h-6.5L14 15"></path><path d="m4 10 1.5 2L4 14"></path><path d="m7 21 3-6-1.5-3"></path><path d="m7 3 3 6h4"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Climate Control</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">24/7 Monitoring</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L12 3Z"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Housekeeping</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-car w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path><path d="M7 17h.01"></path><path d="M17 17h.01"></path><path d="M5 17h14"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Transportation</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-activity w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Physical Therapy</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scissors w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><line x1="20" x2="8.12" y1="4" y2="15.88"></line><line x1="14.47" x2="20" y1="14.48" y2="20"></line><line x1="8.12" x2="12" y1="8.12" y2="12"></line></svg>
+            <span class="text-sm font-medium text-neutral-300">Barber &amp; Beauty</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-church w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M10 9h4"></path><path d="M12 7v5"></path><path d="M6 18h12"></path><path d="M10 22v-4h4v4"></path><path d="M12 2l8 6v10a2 2 0 0 1-2 2h-2v-4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v4H6a2 2 0 0 1-2-2V8z"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Religious Services</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-utensils w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path><path d="M7 2v20"></path><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Guest Meals</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-footprints w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 11 3.8 11 8c0 2.85-1.21 4.2-2 6.73A3.99 3.99 0 0 0 8 16v2"></path><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 13 7.8 13 12c0 2.85 1.21 4.2 2 6.73A3.99 3.99 0 0 0 16 20v2"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Podiatry</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-stethoscope w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M11 2v2"></path><path d="M5 2v2"></path><path d="M5 5h6l.01.01a5.01 5.01 0 0 1 .5 9.99H5a5 5 0 0 1-.5-9.99l.5-.01"></path><path d="M22 17a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3"></path><path d="M11 15v1a3 3 0 0 0 3 3h4a3 3 0 0 0 3-3v-1"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">On-site Nursing</span>
+        </div>
+    </div>
+
+    <!-- Row 2: Scrolling Right -->
+    <div class="flex gap-4 animate-scroll-right marquee-track w-max">
+         <!-- Set 2 (12 Items) -->
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wifi w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M12 20h.01"></path><path d="M2 8.82a15 15 0 0 1 20 0"></path><path d="M5 12.859a10 10 0 0 1 14 0"></path><path d="M8.5 16.429a5 5 0 0 1 7 0"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">High-Speed Wi-Fi</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tv w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="m17 2-5 5-5-5"></path><rect width="20" height="15" x="2" y="7" rx="2" class=""></rect></svg>
+            <span class="text-sm font-medium text-neutral-300">Cable TV</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-armchair w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3" class=""></path><path d="M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z"></path><path d="M5 18v2"></path><path d="M19 18v2"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Roll-in Showers</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-music w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+            <span class="text-sm font-medium text-neutral-300">Common Area</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shirt w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Laundry Service</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pill w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"></path><path d="m8.5 8.5 7 7"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Medication Mgmt</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dog w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M10 5.172C10 3.782 8.423 2.679 6.5 3c-2.823.47-4.113 6.006-4 7 .08.703 1.725 1.722 3.656 1 1.261-.472 1.96-1.45 2.344-2.5"></path><path d="M14.267 5.172c0-1.39 1.577-2.493 3.5-2.172 2.823.47 4.113 6.006 4 7-.08.703-1.725 1.722-3.656 1-1.261-.472-1.96-1.45-2.344-2.5"></path><path d="M8 14v.5"></path><path d="M16 14v.5"></path><path d="M11.25 16.25h1.5L12 17l-.75-.75Z"></path><path d="M4.42 11.247A4.335 4.335 0 0 1 6 10.034c1.646-.464 2.954-.814 6-.814 3.046 0 4.354.35 6 .814a4.335 4.335 0 0 1 1.58 1.213"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Pet Friendly</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Library</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Emergency Call</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Respite Care</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"></path><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"></path><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path d="M19.938 10.5a4 4 0 0 1 .585.396"></path><path d="M6 18a4 4 0 0 1-1.97-3.465"></path><path d="M19.97 14.535A4 4 0 0 1 18 18"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Memory Care</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gamepad-2 w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><line x1="6" x2="10" y1="12" y2="12"></line><line x1="8" x2="8" y1="10" y2="14"></line><line x1="15" x2="15.01" y1="13" y2="13"></line><line x1="18" x2="18.01" y1="11" y2="11"></line><rect height="12" rx="2" width="20" x="2" y="6"></rect></svg>
+            <span class="text-sm font-medium text-neutral-300">Recreation</span>
+        </div>
+
+         <!-- Duplicated Set 2 -->
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wifi w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M12 20h.01"></path><path d="M2 8.82a15 15 0 0 1 20 0"></path><path d="M5 12.859a10 10 0 0 1 14 0"></path><path d="M8.5 16.429a5 5 0 0 1 7 0"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">High-Speed Wi-Fi</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tv w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="m17 2-5 5-5-5"></path><rect width="20" height="15" x="2" y="7" rx="2"></rect></svg>
+            <span class="text-sm font-medium text-neutral-300">Cable TV</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-armchair w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3"></path><path d="M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z"></path><path d="M5 18v2"></path><path d="M19 18v2"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Roll-in Showers</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-music w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+            <span class="text-sm font-medium text-neutral-300">Common Area</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shirt w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Laundry Service</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pill w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"></path><path d="m8.5 8.5 7 7"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Medication Mgmt</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dog w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M10 5.172C10 3.782 8.423 2.679 6.5 3c-2.823.47-4.113 6.006-4 7 .08.703 1.725 1.722 3.656 1 1.261-.472 1.96-1.45 2.344-2.5"></path><path d="M14.267 5.172c0-1.39 1.577-2.493 3.5-2.172 2.823.47 4.113 6.006 4 7-.08.703-1.725 1.722-3.656 1-1.261-.472-1.96-1.45-2.344-2.5"></path><path d="M8 14v.5"></path><path d="M16 14v.5"></path><path d="M11.25 16.25h1.5L12 17l-.75-.75Z"></path><path d="M4.42 11.247A4.335 4.335 0 0 1 6 10.034c1.646-.464 2.954-.814 6-.814 3.046 0 4.354.35 6 .814a4.335 4.335 0 0 1 1.58 1.213"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Pet Friendly</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Library</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Emergency Call</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Respite Care</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"></path><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"></path><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path d="M19.938 10.5a4 4 0 0 1 .585.396"></path><path d="M6 18a4 4 0 0 1-1.97-3.465"></path><path d="M19.97 14.535A4 4 0 0 1 18 18"></path></svg>
+            <span class="text-sm font-medium text-neutral-300">Memory Care</span>
+        </div>
+        <div class="group shrink-0 w-56 bg-black border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center hover:bg-neutral-900 hover:border-orange-400/50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gamepad-2 w-8 h-8 text-neutral-500 group-hover:text-orange-400 transition-colors"><line x1="6" x2="10" y1="12" y2="12"></line><line x1="8" x2="8" y1="10" y2="14"></line><line x1="15" x2="15.01" y1="13" y2="13"></line><line x1="18" x2="18.01" y1="11" y2="11"></line><rect height="12" rx="2" width="20" x="2" y="6"></rect></svg>
+            <span class="text-sm font-medium text-neutral-300">Recreation</span>
+        </div>
+    </div>
+</div>
+        </div>
+    </section>
+
+    <!-- 6. OUR PHILOSOPHY SECTION -->
+    <section class="py-16 sm:py-24 md:py-32 bg-black relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="quote" class="lucide lucide-quote w-12 h-12 text-brand-500 mx-auto mb-8 opacity-50"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif text-white leading-tight mb-6 sm:mb-8">
+                "We believe that aging is not a fading away, but a deepening of the human story. Every resident deserves to be the protagonist of their own life, until the very end."
+            </h2>
+            <div class="flex flex-col items-center gap-2">
+                <span class="text-lg font-medium text-white">The Attic Philosophy</span>
+                <span class="text-sm text-neutral-500 tracking-widest uppercase">Compassion • Dignity • Respect</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FOOTER SECTION -->
+    <footer class="bg-black border-white/10 border-t pt-20 pb-12" id="contact">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row justify-between items-start gap-8 sm:gap-12 mb-12 sm:mb-20">
+          <div class="max-w-lg">
+            <h2 class="lg:text-6xl text-5xl text-orange-400 tracking-tight font-serif mb-8">
+              Ready to learn more?
+            </h2>
+            <p class="text-lg text-neutral-400 mb-8">
+              Contact us to discuss your specific care needs or to schedule a tour of our facility.
+            </p>
+            <div class="flex gap-4">
+              <button class="group flex transition-all duration-300 ease-out hover:scale-[1.03] hover:shadow-[0_0_50px_rgba(249,115,22,0.35)] active:scale-[0.98] overflow-hidden font-medium text-black bg-orange-500 h-12 rounded-full pr-8 pl-8 relative shadow-[0_0_30px_rgba(249,115,22,0.15)] gap-x-2 gap-y-x-2 items-center justify-center" onclick="window.location.href='contact-us.html'" role="button">
+                <span class="absolute inset-0 -translate-x-full group-hover:translate-x-[150%] transition-transform duration-700 ease-in-out bg-gradient-to-r from-transparent via-white/40 to-transparent z-0"></span>
+                <span class="z-10 relative">Contact Us</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" class="lucide lucide-arrow-right w-4 h-4 z-10"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-12 lg:gap-24">
+            <div class="">
+              <h4 class="text-white font-medium mb-4 font-serif text-lg">Location</h4>
+              <ul class="space-y-3 text-sm text-neutral-500">
+                <li class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" class="lucide lucide-map-pin w-4 h-4 text-brand-500"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    29836 113th Way SE<br>Auburn, WA 98092
+                </li>
+                <li class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clock" class="lucide lucide-clock w-4 h-4 text-brand-500"><path d="M12 6v6l4 2"></path><circle cx="12" cy="12" r="10"></circle></svg>
+                    Visiting Hours: 9AM - 7PM
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-white font-medium mb-4 font-serif text-lg">Inquiries</h4>
+              <ul class="space-y-3 text-sm text-neutral-500">
+                <li class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" class="lucide lucide-phone w-4 h-4 text-brand-500"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+                    (469) 735-5759
+                </li>
+                <li class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="mail" class="lucide lucide-mail w-4 h-4 text-brand-500"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
+                    admissions@atticafh.com
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div class="flex items-center gap-2">
+            <div class="w-6 h-6 rounded bg-brand-500/20 flex items-center justify-center text-brand-500">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="home" class="lucide lucide-home w-3.5 h-3.5"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+            </div>
+            <span class="text-sm text-neutral-500">© 2024 Attic Adult Family Home. All rights reserved.</span>
+          </div>
+          <div class="flex gap-6 text-sm text-neutral-600">
+              <a href="#" class="hover:text-white transition-colors">Privacy</a>
+              <a href="#" class="hover:text-white transition-colors">Terms</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      lucide.createIcons();
+
+      // Mobile Menu Toggle
+      function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        const overlay = document.getElementById('mobile-menu-overlay');
+        const btn = document.getElementById('mobile-menu-btn');
+        const line1 = document.getElementById('menu-line-1');
+        const line2 = document.getElementById('menu-line-2');
+        const line3 = document.getElementById('menu-line-3');
+        
+        const isOpen = menu.classList.contains('open');
+        
+        if (isOpen) {
+          menu.classList.remove('open');
+          overlay.classList.remove('open');
+          document.body.style.overflow = '';
+          // Reset hamburger
+          line1.style.transform = '';
+          line2.style.opacity = '';
+          line3.style.transform = '';
+        } else {
+          menu.classList.add('open');
+          overlay.classList.add('open');
+          document.body.style.overflow = 'hidden';
+          // Animate to X
+          line1.style.transform = 'rotate(45deg) translate(5px, 5px)';
+          line2.style.opacity = '0';
+          line3.style.transform = 'rotate(-45deg) translate(7px, -6px)';
+        }
+      }
+
+      // Initialize mobile menu button
+      document.addEventListener('DOMContentLoaded', () => {
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        if (menuBtn) {
+          menuBtn.addEventListener('click', toggleMobileMenu);
+        }
+        
+        // Close menu on escape key
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            const menu = document.getElementById('mobile-menu');
+            if (menu && menu.classList.contains('open')) {
+              toggleMobileMenu();
+            }
+          }
+        });
+      });
+    </script>
+
+</body></html>
