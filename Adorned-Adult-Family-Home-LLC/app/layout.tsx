@@ -24,8 +24,8 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Adorned AFH - Modern Adult Family Living",
-  description: "Premium adult family living in Algona, WA. Where compassion meets luxury care.",
+  title: "Grace Adult Family Home - Compassionate Senior Care in Lake Stevens, WA",
+  description: "Licensed 6-bed adult family home in Lake Stevens, WA. Warm, family-like environment with personalized care for seniors in a tranquil, home-like setting.",
 };
 
 export default function RootLayout({

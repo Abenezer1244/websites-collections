@@ -3,8 +3,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Gallery - Life at Adorned Adult Family Home | Auburn, WA Adult Family Living",
-  description: "View our gallery showcasing daily life at Adorned Adult Family Home. See photos of our compassionate care, comfortable living spaces, activities, and the family-centered community in Auburn, WA.",
+  title: "Gallery - Life at Grace Adult Family Home | Lake Stevens, WA Senior Care",
+  description: "View our gallery showcasing daily life at Grace Adult Family Home. See photos of our compassionate care, comfortable living spaces, activities, and the family-centered community in Lake Stevens, WA.",
 };
 
 export default function LivingWithUs() {
@@ -20,7 +20,7 @@ export default function LivingWithUs() {
 
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-stone-900/10 bg-white/40 backdrop-blur-sm mb-8 reveal-on-scroll">
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-          <span className="text-[10px] uppercase tracking-widest font-semibold text-stone-600">Life at Adorned AFH</span>
+          <span className="text-[10px] uppercase tracking-widest font-semibold text-stone-600">Life at Grace AFH</span>
         </div>
 
         <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl mb-8 reveal-on-scroll leading-[0.9]">
@@ -29,7 +29,7 @@ export default function LivingWithUs() {
         </h1>
 
         <p className="max-w-xl mx-auto text-sm md:text-base text-stone-600 leading-relaxed font-medium mb-16 reveal-on-scroll">
-          A visual journey through the daily joy, comfort, and compassionate care that defines our home. From shared meals to peaceful afternoons in the garden, we create a warm and inviting environment.
+          A visual journey through the daily joy, comfort, and compassionate care that defines our home. Experience our tranquil setting by Lake Stevens where residents enjoy a warm, supportive community in picturesque surroundings.
         </p>
 
         {/* Stats Row */}
@@ -43,8 +43,8 @@ export default function LivingWithUs() {
             <div className="text-[10px] uppercase tracking-widest font-bold text-stone-500 mt-1">Staff Ratio</div>
           </div>
           <div>
-            <div className="font-serif text-3xl md:text-4xl italic text-pink-500">50+</div>
-            <div className="text-[10px] uppercase tracking-widest font-bold text-stone-500 mt-1">Monthly Activities</div>
+            <div className="font-serif text-3xl md:text-4xl italic text-pink-500">6</div>
+            <div className="text-[10px] uppercase tracking-widest font-bold text-stone-500 mt-1">Resident Capacity</div>
           </div>
         </div>
       </header>

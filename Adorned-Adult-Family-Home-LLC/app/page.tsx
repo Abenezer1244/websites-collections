@@ -24,11 +24,11 @@ export default function Home() {
                 <span className="text-[10px] uppercase tracking-widest font-semibold text-stone-600">Accepting Residents</span>
               </div>
               <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl leading-[0.9] mb-6">
-                <span className="italic text-pink-500">Loving care</span> <br />
-                <span className="not-italic font-sans tracking-tighter text-stone-900">in the warmth of home.</span>
+                <span className="italic text-pink-500">A tranquil haven</span> <br />
+                <span className="not-italic font-sans tracking-tighter text-stone-900">for your loved ones.</span>
               </h1>
               <p className="max-w-md text-sm md:text-base text-stone-600 leading-relaxed font-medium">
-                Adorned Adult Family Home provides loving and skillful care to our residents in Auburn, WA, with compassionate, professional individualized care in a pleasant and peaceful environment.
+                Grace Adult Family Home offers a warm, family-like environment in Lake Stevens, WA. Our dedicated staff provides personalized, compassionate care with dignity and respect in a peaceful, home-like setting.
               </p>
             </div>
 
@@ -36,7 +36,7 @@ export default function Home() {
               <div className="flex -space-x-3">
                 <Image src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=100&auto=format&fit=crop" width={40} height={40} className="w-10 h-10 rounded-full border-2 border-[#EBE9E4] object-cover" alt="Staff" />
                 <Image src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop" width={40} height={40} className="w-10 h-10 rounded-full border-2 border-[#EBE9E4] object-cover" alt="Staff" />
-                <div className="w-10 h-10 rounded-full border-2 border-[#EBE9E4] bg-white flex items-center justify-center text-xs font-semibold text-stone-900">+12</div>
+                <div className="w-10 h-10 rounded-full border-2 border-[#EBE9E4] bg-white flex items-center justify-center text-xs font-semibold text-stone-900">+6</div>
               </div>
               <div className="text-xs font-medium text-stone-500">
                 <span className="block text-stone-900">Dedicated Care Team</span>
@@ -93,7 +93,7 @@ export default function Home() {
                 </div>
                 <div className="text-xs">
                   <p className="font-semibold text-stone-900">WA State Licensed</p>
-                  <p className="text-stone-500">License #756441</p>
+                  <p className="text-stone-500">License #751087</p>
                 </div>
               </div>
             </div>
@@ -110,7 +110,7 @@ export default function Home() {
             </div>
             <div className="relative z-10 text-center md:text-left">
               <p className="font-serif text-2xl md:text-3xl text-stone-900 leading-tight mb-4">
-                To provide loving and skillful care to our residents, in the warmth and comfort of a real home, with compassionate, professional individualized care in a pleasant and peaceful environment.
+                Creating a sense of community and belonging where residents feel at home. We provide compassionate, personalized care in a tranquil setting by the lake, ensuring dignity and respect for each resident 24/7.
               </p>
               <p className="text-xs font-bold uppercase tracking-widest text-stone-700">Our Mission</p>
             </div>
@@ -155,9 +155,9 @@ export default function Home() {
                 </div>
                 <span className="text-[10px] font-mono text-stone-400">01</span>
               </div>
-              <h3 className="text-xl font-semibold text-stone-900 mb-3 group-hover:translate-x-2 transition-transform duration-300">24/7 Personal Care</h3>
+              <h3 className="text-xl font-semibold text-stone-900 mb-3 group-hover:translate-x-2 transition-transform duration-300">Personal Care & Daily Assistance</h3>
               <p className="text-sm text-stone-500 leading-relaxed">
-                Assistance with all Activities of Daily Living including eating, dressing, toileting, bathing, grooming, and mobility. Trained caregivers provide medication management using strict protocols.
+                Live-in caregivers provide 24/7 assistance with bathing, dressing, grooming, meals, and daily activities. Medication management and health monitoring ensure residents feel safe and comfortable around the clock.
               </p>
             </div>
 
@@ -169,9 +169,9 @@ export default function Home() {
                 </div>
                 <span className="text-[10px] font-mono text-stone-400">02</span>
               </div>
-              <h3 className="text-xl font-semibold text-stone-900 mb-3 group-hover:translate-x-2 transition-transform duration-300">Specialized Memory Care</h3>
+              <h3 className="text-xl font-semibold text-stone-900 mb-3 group-hover:translate-x-2 transition-transform duration-300">Medication & Health Support</h3>
               <p className="text-sm text-stone-500 leading-relaxed">
-                DSHS-approved training for dementia care, developmental disabilities, and mental health support. Memory-care program with routine cues and gentle activities for Alzheimer's/dementia.
+                Coordinated medication management and pharmacy services with staff assistance for medication reminders. Basic health monitoring ensures residents receive appropriate care and attention to their medical needs.
               </p>
             </div>
 
@@ -183,9 +183,9 @@ export default function Home() {
                 </div>
                 <span className="text-[10px] font-mono text-stone-400">03</span>
               </div>
-              <h3 className="text-xl font-semibold text-stone-900 mb-3 group-hover:translate-x-2 transition-transform duration-300">Activities & Amenities</h3>
+              <h3 className="text-xl font-semibold text-stone-900 mb-3 group-hover:translate-x-2 transition-transform duration-300">Engaging Social Activities</h3>
               <p className="text-sm text-stone-500 leading-relaxed">
-                In-house gym, game room, group bingo, music, and weekly outings. Nutritious meals adapted to dietary needs. A library corner and TV area keep everyone connected and entertained.
+                Regular recreational and craft activities encourage socialization and vibrant community life. In our intimate 6-resident setting, staff provides one-on-one attention that fosters meaningful connections and well-being.
               </p>
             </div>
           </div>
@@ -203,17 +203,17 @@ export default function Home() {
               <div>
                 <p className="text-stone-400 text-xs font-bold uppercase tracking-widest mb-4">Start the conversation</p>
                 <h2 className="font-serif text-4xl md:text-6xl mb-6">
-                  Is Adorned AFH right for your family?
+                  Is Grace AFH right for your family?
                 </h2>
                 <p className="text-stone-400 text-sm md:text-base max-w-md leading-relaxed">
-                  We understand this is a significant decision. Schedule a tour to meet our caregivers, see our cozy 3-bedroom home, and feel the warm atmosphere yourself.
+                  We understand this is a significant decision. Schedule a tour to meet our dedicated caregivers, see our warm 6-bed home by Lake Stevens, and experience our supportive community firsthand.
                 </p>
               </div>
 
               <div className="hidden lg:block mt-12">
                 <div className="flex items-center gap-4 text-stone-400 text-sm">
                   <div className="w-12 h-[1px] bg-stone-700"></div>
-                  <p>Located in Auburn, WA</p>
+                  <p>Located in Lake Stevens, WA</p>
                 </div>
               </div>
             </div>

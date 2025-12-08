@@ -24,7 +24,7 @@ export default function ContactUs() {
           </h1>
 
           <p className="text-lg md:text-xl text-stone-600 leading-relaxed max-w-3xl">
-            Have questions about our services or want to schedule a tour? We would love to hear from you. Reach out to us and discover how Adorned Adult Family Home can provide the care your loved one deserves.
+            Have questions about our services or want to schedule a tour? We would love to hear from you. Reach out to us and discover how Grace Adult Family Home can provide the care your loved one deserves.
           </p>
         </div>
       </section>
@@ -51,8 +51,8 @@ export default function ContactUs() {
                   </div>
                   <div>
                     <p className="text-xs uppercase tracking-widest font-semibold text-stone-400 mb-2">Phone</p>
-                    <a href="tel:+12533865737" className="text-lg font-semibold text-stone-900 hover:text-pink-500 transition-colors">
-                      (253) 386-5737
+                    <a href="tel:+14253976530" className="text-lg font-semibold text-stone-900 hover:text-pink-500 transition-colors">
+                      (425) 397-6530
                     </a>
                     <p className="text-sm text-stone-500 mt-1">Available 24/7</p>
                   </div>
@@ -65,10 +65,10 @@ export default function ContactUs() {
                   </div>
                   <div>
                     <p className="text-xs uppercase tracking-widest font-semibold text-stone-400 mb-2">Email</p>
-                    <a href="mailto:adornedafh@gmail.com" className="text-lg font-semibold text-stone-900 hover:text-blue-600 transition-colors">
-                      adornedafh@gmail.com
-                    </a>
-                    <p className="text-sm text-stone-500 mt-1">We'll respond within 24 hours</p>
+                    <p className="text-lg font-semibold text-stone-900">
+                      Contact us for email
+                    </p>
+                    <p className="text-sm text-stone-500 mt-1">Call during office hours for inquiries</p>
                   </div>
                 </div>
 
@@ -80,10 +80,10 @@ export default function ContactUs() {
                   <div>
                     <p className="text-xs uppercase tracking-widest font-semibold text-stone-400 mb-2">Location</p>
                     <p className="text-lg font-semibold text-stone-900">
-                      1115 I Street NE
+                      2415 84th Dr NE
                     </p>
-                    <p className="text-base text-stone-700">Auburn, WA 98002</p>
-                    <p className="text-sm text-stone-500 mt-1">Daily visits welcome 9 AM-8 PM</p>
+                    <p className="text-base text-stone-700">Lake Stevens, WA 98258</p>
+                    <p className="text-sm text-stone-500 mt-1">Visits welcome by appointment</p>
                   </div>
                 </div>
               </div>
@@ -97,15 +97,11 @@ export default function ContactUs() {
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
                     <span className="text-stone-400">Monday - Friday</span>
-                    <span className="font-semibold">8:00 AM - 6:00 PM</span>
+                    <span className="font-semibold">9:00 AM - 6:00 PM</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-stone-400">Saturday</span>
-                    <span className="font-semibold">9:00 AM - 4:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-stone-400">Sunday</span>
-                    <span className="font-semibold">By Appointment</span>
+                    <span className="text-stone-400">Saturday - Sunday</span>
+                    <span className="font-semibold">Closed</span>
                   </div>
                   <div className="pt-3 mt-3 border-t border-white/10">
                     <p className="text-xs text-stone-400">Emergency care available 24/7</p>
@@ -206,14 +202,14 @@ export default function ContactUs() {
         <div className="max-w-6xl mx-auto">
           <div className="bg-stone-200 rounded-3xl overflow-hidden h-[400px] relative">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2702.9!2d-122.2281!3d47.3084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490f9a9e9b9b9b9%3A0x0!2s1115%20I%20St%20NE%2C%20Auburn%2C%20WA%2098002!5e0!3m2!1sen!2sus!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2681.5!2d-122.1!3d48.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s2415%2084th%20Dr%20NE%2C%20Lake%20Stevens%2C%20WA%2098258!5e0!3m2!1sen!2sus!4v1234567890"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Adorned Adult Family Home Location"
+              title="Grace Adult Family Home Location"
             ></iframe>
           </div>
         </div>
@@ -227,14 +223,14 @@ export default function ContactUs() {
           <div className="relative z-10">
             <h2 className="font-serif text-3xl md:text-4xl mb-4 italic">Ready to Visit?</h2>
             <p className="text-white/90 mb-8 max-w-2xl mx-auto">
-              Schedule a personal tour of our cozy home and meet our caring team. See firsthand what makes Adorned Adult Family Home special.
+              Schedule a personal tour of our warm home by Lake Stevens and meet our caring team. See firsthand what makes Grace Adult Family Home special.
             </p>
             <a
-              href="tel:+12533865737"
+              href="tel:+14253976530"
               className="inline-flex items-center gap-2 bg-white text-pink-500 px-8 py-4 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-stone-100 transition-colors"
             >
               <i data-lucide="phone" className="w-4 h-4"></i>
-              Call (253) 386-5737
+              Call (425) 397-6530
             </a>
           </div>
         </div>

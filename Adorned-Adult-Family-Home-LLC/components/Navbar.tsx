@@ -15,10 +15,10 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
       <div className="px-6 py-5 md:px-10 flex items-center justify-between">
         <Link href="/" className="group flex items-center gap-2">
           <div className="relative w-8 h-8 flex items-center justify-center bg-stone-900 rounded-full text-white overflow-hidden">
-            <span className="font-serif italic text-lg relative z-10 group-hover:-translate-y-8 transition-transform duration-500">A</span>
-            <span className="font-serif italic text-lg absolute translate-y-8 group-hover:translate-y-0 transition-transform duration-500">A</span>
+            <span className="font-serif italic text-lg relative z-10 group-hover:-translate-y-8 transition-transform duration-500">G</span>
+            <span className="font-serif italic text-lg absolute translate-y-8 group-hover:translate-y-0 transition-transform duration-500">G</span>
           </div>
-          <span className="text-sm font-semibold tracking-tight uppercase text-pink-500">Adorned AFH</span>
+          <span className="text-sm font-semibold tracking-tight uppercase text-pink-500">Grace AFH</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-1 bg-stone-100/50 p-1 rounded-full border border-stone-200/50">
@@ -29,9 +29,9 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
         </div>
 
         <div className="flex items-center gap-4">
-          <a href="tel:+12533865737" className="hidden lg:flex items-center gap-2 text-xs font-medium text-stone-500 hover:text-stone-900 transition-colors">
+          <a href="tel:+14253976530" className="hidden lg:flex items-center gap-2 text-xs font-medium text-stone-500 hover:text-stone-900 transition-colors">
             <i data-lucide="phone" className="w-3.5 h-3.5"></i>
-            (253) 386-5737
+            (425) 397-6530
           </a>
           <a href="#inquire" className="hidden md:flex relative overflow-hidden rounded-full bg-stone-900 px-6 py-2.5 text-xs font-medium text-white transition-transform active:scale-95 hover:bg-stone-800">
             <span className="relative z-10">Book a Visit</span>

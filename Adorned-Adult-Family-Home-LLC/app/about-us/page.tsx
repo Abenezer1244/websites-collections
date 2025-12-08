@@ -20,11 +20,11 @@ export default function AboutUs() {
 
           <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl leading-[0.9] mb-8">
             <span className="italic text-pink-500">About</span> <br />
-            <span className="not-italic font-sans tracking-tighter text-stone-900">Adorned AFH.</span>
+            <span className="not-italic font-sans tracking-tighter text-stone-900">Grace AFH.</span>
           </h1>
 
           <p className="text-lg md:text-xl text-stone-600 leading-relaxed max-w-3xl">
-            Adorned Adult Family Home is a warm, family-run residential care home in Auburn, WA. Established in 2022, we serve up to six adults in a cozy 3-bedroom house in downtown Auburn.
+            Grace Adult Family Home is a licensed 6-bed adult family home in Lake Stevens, WA, offering a warm, family-like environment for seniors. Nestled in a quiet neighborhood by Lake Stevens, we provide a tranquil haven with picturesque surroundings.
           </p>
         </div>
       </section>
@@ -36,10 +36,10 @@ export default function AboutUs() {
             <div>
               <h2 className="font-serif text-4xl md:text-5xl text-stone-900 mb-6 italic">Our Mission</h2>
               <p className="text-base text-stone-600 leading-relaxed mb-6">
-                To provide loving and skillful care to our residents, in the warmth and comfort of a real home, with compassionate, professional individualized care in a pleasant and peaceful environment.
+                We are committed to dignity and respect in caring for each resident, ensuring they feel "at home" 24/7. Our dedicated staff helps residents with daily activities while creating a strong sense of community and belonging.
               </p>
               <p className="text-base text-stone-600 leading-relaxed">
-                Inside and out, the atmosphere feels like home. Common areas are bright and tidy, and a garden and living room with TV and Wi-Fi create a comfortable setting. As families note, "the environment is warm and inviting, creating a sense of belonging for every resident."
+                Residents enjoy a cozy, home-like atmosphere with spacious living quarters by the lake. Engaging activities promote social interaction and well-being in our small, supportive community where personalized, compassionate care is our priority.
               </p>
             </div>
 
@@ -81,7 +81,7 @@ export default function AboutUs() {
               </div>
               <h3 className="text-xl font-semibold text-stone-900 mb-3">Professionalism</h3>
               <p className="text-sm text-stone-500 leading-relaxed">
-                Fully licensed by Washington State (DSHS). Licensed nurses oversee medication systems, and caregivers are home-care-aide certified.
+                Fully licensed by Washington State DSHS (License #751087). Authorized to care for up to 6 non-related adults with professional, compassionate service.
               </p>
             </div>
 
@@ -92,7 +92,7 @@ export default function AboutUs() {
               </div>
               <h3 className="text-xl font-semibold text-stone-900 mb-3">Belonging</h3>
               <p className="text-sm text-stone-500 leading-relaxed">
-                The home is immaculately clean and beautifully maintained. Rooms are cozy and well-appointed, offering a personal touch that makes residents feel at home.
+                With capacity for 6 residents, our home provides an intimate setting where staff can give one-on-one attention, creating genuine connections and a true sense of family.
               </p>
             </div>
 
@@ -103,7 +103,7 @@ export default function AboutUs() {
               </div>
               <h3 className="text-xl font-semibold text-stone-900 mb-3">Personalized Care</h3>
               <p className="text-sm text-stone-500 leading-relaxed">
-                Low 1:2 staff-to-resident ratio ensures personalized attention. Each resident's care plan is tailored to their unique needs.
+                Every resident receives personalized care tailored to their unique needs. Our small community ensures individualized attention and respect for each person's dignity.
               </p>
             </div>
           </div>
@@ -185,7 +185,7 @@ export default function AboutUs() {
             <div>
               <h2 className="font-serif text-4xl md:text-5xl mb-6 italic">Our Location</h2>
               <p className="text-base text-stone-300 leading-relaxed mb-6">
-                Located in downtown Auburn, Washington, Adorned Adult Family Home offers a peaceful setting in a cozy 3-bedroom house with easy access to medical facilities and community amenities.
+                Located in Lake Stevens, Washington, Grace Adult Family Home offers a tranquil setting in a quiet residential area surrounded by mature trees and close to parks, with a fenced yard and garden space for residents to enjoy.
               </p>
 
               <div className="space-y-4">
@@ -195,7 +195,7 @@ export default function AboutUs() {
                   </div>
                   <div>
                     <p className="font-semibold mb-1">Address</p>
-                    <p className="text-sm text-stone-400">1115 I Street NE, Auburn, WA 98002</p>
+                    <p className="text-sm text-stone-400">2415 84th Dr NE, Lake Stevens, WA 98258</p>
                   </div>
                 </div>
 
@@ -205,8 +205,8 @@ export default function AboutUs() {
                   </div>
                   <div>
                     <p className="font-semibold mb-1">Phone</p>
-                    <a href="tel:+12533865737" className="text-sm text-stone-400 hover:text-white transition-colors">
-                      (253) 386-5737
+                    <a href="tel:+14253976530" className="text-sm text-stone-400 hover:text-white transition-colors">
+                      (425) 397-6530
                     </a>
                   </div>
                 </div>
@@ -217,9 +217,9 @@ export default function AboutUs() {
                   </div>
                   <div>
                     <p className="font-semibold mb-1">Email</p>
-                    <a href="mailto:adornedafh@gmail.com" className="text-sm text-stone-400 hover:text-white transition-colors">
-                      adornedafh@gmail.com
-                    </a>
+                    <p className="text-sm text-stone-400">
+                      Contact us for email inquiries
+                    </p>
                   </div>
                 </div>
               </div>
