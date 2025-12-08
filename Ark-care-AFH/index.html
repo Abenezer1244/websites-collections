@@ -1,0 +1,1908 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ark Care - Premium Adult Family Home | Compassionate Assisted Living</title>
+<meta name="description" content="Ark Care offers premium adult family home services with compassionate care in a loving family setting. Professional medical oversight, 24/7 care, and personalized attention for your loved ones.">
+<meta name="keywords" content="adult family home, assisted living, memory care, respite care, senior care, elderly care, Washington, Seattle">
+<meta name="author" content="Ark Care">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://arkcare.com/">
+<meta property="og:title" content="Ark Care - Premium Adult Family Home | Compassionate Assisted Living">
+<meta property="og:description" content="Ark Care offers premium adult family home services with compassionate care in a loving family setting. Professional medical oversight, 24/7 care, and personalized attention.">
+<meta property="og:image" content="https://arkcare.com/images/og-image.jpg">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://arkcare.com/">
+<meta property="twitter:title" content="Ark Care - Premium Adult Family Home">
+<meta property="twitter:description" content="Compassionate assisted living in a loving family setting with professional medical oversight and 24/7 care.">
+<meta property="twitter:image" content="https://arkcare.com/images/twitter-image.jpg">
+
+<!-- Google Business Profile -->
+<link rel="canonical" href="https://arkcare.com/">
+
+<!-- Resource Hints for Performance -->
+<link rel="preconnect" href="https://cdn.tailwindcss.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="dns-prefetch" href="https://unpkg.com">
+
+<!-- Critical CSS and Scripts -->
+<!-- Note: Tailwind CDN is used for development. For production, consider using PostCSS plugin or Tailwind CLI -->
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest" defer></script>
+
+<style>
+body { font-family: 'Inter', sans-serif; }
+@property --gradient-angle {
+syntax: "<angle>";
+initial-value: 0deg;
+inherits: false;
+}
+@property --gradient-angle-offset {
+syntax: "<angle>";
+initial-value: 0deg;
+inherits: false;
+}
+@property --gradient-percent {
+syntax: "<percentage>";
+initial-value: 20%;
+inherits: false;
+}
+@property --gradient-shine {
+syntax: "<color>";
+initial-value: #10b981;
+inherits: false;
+}
+.shiny-cta {
+--gradient-angle: 0deg;
+--gradient-angle-offset: 0deg;
+--gradient-percent: 20%;
+--gradient-shine: #10b981;
+--shadow-size: 2px;
+position: relative;
+overflow: hidden;
+border-radius: 9999px;
+padding: 1rem 2rem;
+font-size: 1rem;
+line-height: 1.2;
+font-weight: 500;
+color: #ffffff;
+display: inline-block;
+text-decoration: none;
+background: linear-gradient(#000000, #000000) padding-box,
+conic-gradient(
+from calc(var(--gradient-angle) - var(--gradient-angle-offset)),
+transparent 0%,
+#059669 5%,
+var(--gradient-shine) 15%,
+#059669 30%,
+transparent 40%,
+transparent 100%
+) border-box;
+border: 2px solid transparent;
+box-shadow: inset 0 0 0 1px #1a1818;
+outline: none;
+transition: --gradient-angle-offset 800ms cubic-bezier(0.25, 1, 0.5, 1),
+--gradient-percent 800ms cubic-bezier(0.25, 1, 0.5, 1),
+--gradient-shine 800ms cubic-bezier(0.25, 1, 0.5, 1),
+box-shadow 0.3s;
+cursor: pointer;
+isolation: isolate;
+outline-offset: 4px;
+z-index: 0;
+animation: border-spin 2.5s linear infinite;
+}
+@keyframes border-spin {
+to {
+--gradient-angle: 360deg;
+}
+}
+.shiny-cta:active {
+transform: translateY(1px);
+}
+.shiny-cta::before {
+content: '';
+pointer-events: none;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+z-index: 0;
+--size: calc(100% - 6px);
+--position: 2px;
+--space: 4px;
+width: var(--size);
+height: var(--size);
+background: radial-gradient(circle at var(--position) var(--position), white 0.5px, transparent 0) padding-box;
+background-size: var(--space) var(--space);
+background-repeat: space;
+mask-image: conic-gradient(
+from calc(var(--gradient-angle) + 45deg),
+black,
+transparent 10% 90%,
+black
+);
+border-radius: inherit;
+opacity: 0.4;
+pointer-events: none;
+}
+.shiny-cta::after {
+content: '';
+pointer-events: none;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+z-index: 1;
+width: 100%;
+aspect-ratio: 1;
+background: linear-gradient(-50deg, transparent, #10b981, transparent);
+mask-image: radial-gradient(circle at bottom, transparent 40%, black);
+opacity: 0.6;
+animation: shimmer 4s linear infinite;
+animation-play-state: running;
+}
+.shiny-cta span {
+position: relative;
+z-index: 2;
+display: inline-block;
+}
+.shiny-cta span::before {
+content: '';
+pointer-events: none;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+z-index: -1;
+--size: calc(100% + 1rem);
+width: var(--size);
+height: var(--size);
+box-shadow: inset 0 -1ex 2rem 4px #059669;
+opacity: 0;
+border-radius: inherit;
+transition: opacity 800ms cubic-bezier(0.25, 1, 0.5, 1);
+animation: breathe 4.5s linear infinite;
+}
+@keyframes shimmer {
+to {
+transform: translate(-50%, -50%) rotate(360deg);
+}
+}
+@keyframes breathe {
+0%, 100% {
+transform: translate(-50%, -50%) scale(1);
+}
+50% {
+transform: translate(-50%, -50%) scale(1.20);
+}
+}
+@keyframes marquee-vertical {
+from {
+transform: translateY(0);
+}
+to {
+transform: translateY(-50%);
+}
+}
+.animate-marquee-vertical {
+animation: marquee-vertical 40s linear infinite;
+}
+.animate-marquee-vertical:hover {
+animation-play-state: paused;
+}
+</style>
+<style>
+@keyframes fadeSlideIn{0%{opacity:0;transform:translateY(30px);filter:blur(8px)}100%{opacity:1;transform:translateY(0);filter:blur(0px)}}.animate-on-scroll{animation-play-state:paused!important}.animate-on-scroll.animate{animation-play-state:running!important}
+</style>
+<script>
+(function(){const once=true;if(!window.__inViewIO){window.__inViewIO=new IntersectionObserver((entries)=>{entries.forEach((entry)=>{if(entry.isIntersecting){entry.target.classList.add("animate");if(once)window.__inViewIO.unobserve(entry.target)}})},{threshold:0.2,rootMargin:"0px 0px -10% 0px"})}window.initInViewAnimations=function(selector=".animate-on-scroll"){document.querySelectorAll(selector).forEach((el)=>{window.__inViewIO.observe(el)})};document.addEventListener("DOMContentLoaded",()=>initInViewAnimations())})();
+</script>
+<style id="aura-editor-visibility-style">
+.invisible { visibility: hidden !important; }
+</style>
+<style id="all-fonts-style-font-instrument-serif">.font-instrument-serif { font-family: 'Instrument Serif', serif !important; }</style><style id="border-gradient-shared-style">
+[style*="--border-gradient"]::before {
+content: "";
+position: absolute;
+inset: 0;
+padding: 1px;
+border-radius: var(--border-radius-before, inherit);
+-webkit-mask: linear-gradient(#fff 0 0) content-box,
+linear-gradient(#fff 0 0);
+-webkit-mask-composite: xor;
+mask-composite: exclude;
+background: var(--border-gradient);
+pointer-events: none;
+}</style>
+
+<!-- Local Business Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://arkcare.com/#organization",
+  "name": "Ark Care",
+  "alternateName": "Ark Care Adult Family Home",
+  "description": "Premium adult family home providing compassionate assisted living services with professional medical oversight in a loving family setting.",
+  "url": "https://arkcare.com",
+  "logo": "https://arkcare.com/images/logo.png",
+  "image": "https://arkcare.com/images/og-image.jpg",
+  "telephone": "+1-206-455-3644",
+  "email": "info@arkcare.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "127 4th Ave N",
+    "addressLocality": "Algona",
+    "addressRegion": "WA",
+    "postalCode": "98001",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "47.28350377116194",
+    "longitude": "-122.25889642347786"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "00:00",
+      "closes": "23:59"
+    }
+  ],
+  "priceRange": "$$",
+  "servesCuisine": "American",
+  "amenityFeature": [
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "24/7 Care",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Memory Care",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Assisted Living",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Respite Care",
+      "value": true
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/arkcare",
+    "https://www.google.com/maps?cid=YOUR_GOOGLE_BUSINESS_CID"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "25"
+  }
+}
+</script>
+
+<!-- Service Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Adult Family Home Services",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Ark Care"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Algona"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Care Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Assisted Living",
+          "description": "Professional assistance with daily living activities"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Memory Care",
+          "description": "Specialized care for residents with memory conditions"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Respite Care",
+          "description": "Temporary care services for families"
+        }
+      }
+    ]
+  }
+}
+</script>
+</head>
+  <body class="overflow-x-hidden text-white bg-black font-sans selection:bg-emerald-500/30">
+    <!-- Background (component) -->
+    <div class="aura-background-component top-0 w-full -z-10 absolute h-[1000px]" data-alpha-mask="80" style="mask-image: linear-gradient(to bottom, transparent, black 0%, black 80%, transparent); -webkit-mask-image: linear-gradient(to bottom, transparent, black 0%, black 80%, transparent)">
+      <div data-us-project="cqcLtDwfoHqqRPttBbQE" class="absolute top-0 left-0 -z-10 w-full h-full"></div>
+      <script type="text/javascript">
+        !function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.29/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();
+      </script>
+    </div>
+
+    <div class="min-h-screen relative">
+      <!-- Navigation -->
+      <nav class="z-50 border-white/5 border-b pt-4 pb-4 pl-4 pr-4 md:pl-6 md:pr-6 relative backdrop-blur-sm bg-black/50" style="">
+        <div class="flex max-w-7xl mr-auto ml-auto items-center justify-between">
+          <a href="index.html" class="inline-flex items-center gap-2">
+            <div class="h-6 w-6 bg-emerald-500 rounded-full flex items-center justify-center">
+              <span class="font-instrument-serif italic text-black font-bold text-sm">
+                A
+              </span>
+            </div>
+            <span class="text-base md:text-lg font-bold tracking-tight text-white uppercase">
+              Ark Care
+            </span>
+          </a>
+          <div class="hidden md:flex space-x-8 text-sm font-normal text-zinc-400">
+            <a href="index.html" class="hover:text-white transition-colors">Home</a>
+            <a href="about-us.html" class="hover:text-white transition-colors">About Us</a>
+            <a href="services.html" class="hover:text-white transition-colors">Services</a>
+            <a href="gallery.html" class="hover:text-white transition-colors">Gallery</a>
+            <a href="contact-us.html" class="hover:text-white transition-colors">Contact Us</a>
+          </div>
+          <a href="contact-us.html" class="hidden md:block hover:bg-zinc-200 transition-colors text-sm font-medium text-black bg-white rounded-full pt-2 pr-4 pb-2 pl-4">
+            Schedule Tour
+          </a>
+          <button id="mobile-menu-button" class="md:hidden text-white p-2" aria-label="Toggle menu">
+            <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu w-6 h-6"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+            <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x w-6 h-6 hidden"><path d="M18 6 6 18"></path><path d="M6 6l12 12"></path></svg>
+          </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border-t border-white/5">
+          <div class="flex flex-col py-4 px-4 space-y-1">
+            <a href="index.html" class="px-4 py-3 text-base font-medium text-zinc-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Home</a>
+            <a href="about-us.html" class="px-4 py-3 text-base font-medium text-zinc-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors">About Us</a>
+            <a href="services.html" class="px-4 py-3 text-base font-medium text-zinc-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Services</a>
+            <a href="gallery.html" class="px-4 py-3 text-base font-medium text-zinc-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Gallery</a>
+            <a href="contact-us.html" class="px-4 py-3 text-base font-medium text-zinc-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Contact Us</a>
+            <a href="contact-us.html" class="mt-4 mx-4 px-4 py-3 text-base font-medium text-center text-black bg-white rounded-full hover:bg-zinc-200 transition-colors">
+              Schedule Tour
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <main class="z-10 pt-16 md:pt-20 pr-4 pb-12 md:pb-20 pl-4 md:pl-6 md:pr-6 relative">
+        <style>
+          @keyframes fadeInSlide {
+            0% {
+              opacity: 0;
+              transform: translateY(20px);
+              filter: blur(8px);
+            }
+            100% {
+              opacity: 1;
+              transform: translateY(0);
+              filter: blur(0px);
+            }
+          }
+          .animate-hero-element {
+            opacity: 0;
+            animation-fill-mode: forwards;
+          }
+          .animate-badge {
+            animation: fadeInSlide 0.6s ease-out 0.2s forwards;
+          }
+          .animate-title-1 {
+            animation: fadeInSlide 0.8s ease-out 0.4s forwards;
+          }
+          .animate-title-2 {
+            animation: fadeInSlide 0.8s ease-out 0.6s forwards;
+          }
+          .animate-description {
+            animation: fadeInSlide 0.8s ease-out 0.8s forwards;
+          }
+          .animate-install {
+            animation: fadeInSlide 0.8s ease-out 1.0s forwards;
+          }
+          .animate-terminal {
+            animation: fadeInSlide 1s ease-out 1.4s forwards;
+          }
+        </style>
+
+        <div class="max-w-7xl mx-auto">
+          <div class="flex flex-col text-center mb-16 items-center">
+            <div class="inline-flex animate-hero-element animate-badge items-center gap-2 mb-6 px-4 py-2 rounded-full border border-emerald-500/20 bg-emerald-900/10 backdrop-blur-sm text-sm" style="">
+              <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 bg-emerald-400" style=""></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" style=""></span>
+              </span>
+              <span class="text-emerald-300 font-medium" style="">
+                Accepting New Residents
+              </span>
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.05] font-semibold tracking-tight text-center max-w-4xl mb-6 md:mb-8 px-4">
+              <span class="animate-hero-element animate-title-1 block font-normal text-zinc-300 text-3xl sm:text-4xl md:text-5xl lg:text-6xl" style="mask-image: linear-gradient(180deg, transparent, black 0%, black 65%, transparent); -webkit-mask-image: linear-gradient(180deg, transparent, black 0%, black 65%, transparent);">
+                Compassionate care in a
+              </span>
+              <span class="animate-hero-element animate-title-2 block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-normal italic font-instrument-serif py-2 text-white" style="mask-image: linear-gradient(280deg, transparent, black 0%, black 25%, transparent); -webkit-mask-image: linear-gradient(280deg, transparent, black 0%, black 25%, transparent);">
+                loving family setting
+              </span>
+            </h1>
+
+            <p class="text-base sm:text-lg md:text-xl leading-relaxed font-normal text-zinc-400 text-center max-w-2xl mb-8 md:mb-12 px-4 animate-hero-element animate-description" style="">
+              Ark Care redefines assisted living by blending professional
+              medical oversight with the warmth, dignity, and comfort of a true
+              home environment.
+            </p>
+
+            <div class="animate-hero-element animate-install mb-12 md:mb-16 flex flex-col sm:flex-row gap-4 items-center px-4">
+              <a href="contact-us.html" class="shiny-cta">
+                <span class="">Schedule a Visit</span>
+              </a>
+
+              <a href="gallery.html" class="inline-flex hover:bg-zinc-800 transition-colors group bg-zinc-900/80 border-white/10 border rounded-full pt-3 pr-5 pb-3 pl-5 backdrop-blur gap-x-3 gap-y-3 items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="gallery-horizontal" class="lucide lucide-gallery-horizontal flex-shrink-0 group-hover:text-emerald-300 transition-colors w-[18px] h-[18px]" data-icon-set="lucide" data-icon-replaced="true" style="color: rgb(110, 231, 183); width: 18px; height: 18px;"><path d="M2 3v18"></path><rect width="12" height="18" x="6" y="3" rx="2"></rect><path d="M22 3v18"></path></svg>
+                <span class="group-hover:text-white/90 text-sm font-medium text-white">View Gallery</span>
+              </a>
+            </div>
+
+            <div class="animate-hero-element animate-terminal w-full max-w-5xl mr-auto ml-auto relative px-4">
+              <div class="overflow-hidden bg-zinc-900 rounded-xl md:rounded-2xl ring-white/10 ring-1 relative shadow-2xl" style="mask-image: linear-gradient(transparent, black 0%, black 50%, transparent);">
+                <div class="flex bg-zinc-900/80 border-white/10 border-b pt-3 pr-3 md:pr-4 pb-3 pl-3 md:pl-4 items-center justify-between" style="">
+                  <div class="flex items-center gap-2">
+                    <div class="w-3 h-3 rounded-full bg-red-500/50" style=""></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500/50" style=""></div>
+                    <div class="w-3 h-3 rounded-full bg-emerald-500/50" style=""></div>
+                  </div>
+                  <div class="flex items-center gap-2 text-xs text-zinc-500" style="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-emerald-500" style="">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    <span class="tracking-wide uppercase">Daily Care Log</span>
+                  </div>
+                  <div class="w-16"></div>
+                </div>
+
+                <div class="min-h-[300px] md:min-h-[400px] text-xs md:text-sm bg-zinc-950 pt-4 md:pt-6 pr-4 md:pr-6 pb-4 md:pb-6 pl-4 md:pl-6 font-mono overflow-x-auto" style="">
+                  <div class="flex items-center gap-2 mb-6 border-b border-white/5 pb-4">
+                    <span class="text-emerald-500 font-bold" style="">
+                      ACTIVE
+                    </span>
+                    <span class="text-white" style="">
+                      Household Status: Optimal
+                    </span>
+                    <span class="inline-block w-2 h-2 ml-1 animate-pulse bg-emerald-500 rounded-full" style=""></span>
+                  </div>
+
+                  <div class="space-y-4 text-zinc-400" style="">
+                    <div class="flex items-start gap-4">
+                      <span class="text-zinc-600 w-16">08:00 AM</span>
+                      <div class="flex-1">
+                        <p class="text-white flex items-center gap-2">
+                          <svg class="w-4 h-4 text-orange-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                            <line x1="6" y1="1" x2="6" y2="4"></line>
+                            <line x1="10" y1="1" x2="10" y2="4"></line>
+                            <line x1="14" y1="1" x2="14" y2="4"></line>
+                          </svg>
+                          Breakfast Service
+                        </p>
+                        <p class="text-zinc-500 text-xs mt-1">
+                          Fresh oatmeal, seasonal fruits, organic herbal tea.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                      <span class="text-zinc-600 w-16">09:30 AM</span>
+                      <div class="flex-1">
+                        <p class="text-white flex items-center gap-2">
+                          <svg class="w-4 h-4 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4.8 2.3A.3.3 0 1 0 4.5 2H12a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H4.5a.3.3 0 0 0-.3.3v2c0 1.1.9 2 2 2H12a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H4.5a.3.3 0 0 0-.3.3v2c0 1.1.9 2 2 2H12"></path>
+                          </svg>
+                          Vitals Check &amp; Medication
+                        </p>
+                        <div class="flex gap-2 mt-1">
+                          <span class="text-[10px] bg-emerald-500/10 text-emerald-400 px-1.5 py-0.5 rounded border border-emerald-500/20">
+                            BP: Stable
+                          </span>
+                          <span class="text-[10px] bg-emerald-500/10 text-emerald-400 px-1.5 py-0.5 rounded border border-emerald-500/20">
+                            Meds: Administered
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                      <span class="text-zinc-600 w-16">11:00 AM</span>
+                      <div class="flex-1">
+                        <p class="text-white flex items-center gap-2">
+                          <svg class="w-4 h-4 text-green-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"></path>
+                            <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"></path>
+                            <circle cx="12" cy="12" r="2"></circle>
+                            <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"></path>
+                            <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19.1"></path>
+                          </svg>
+                          Group Activity: Garden Therapy
+                        </p>
+                        <p class="text-zinc-500 text-xs mt-1">
+                          Residents enjoying the private courtyard sunshine.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="mt-6 p-4 rounded-lg bg-white/5 border border-white/10" style="">
+                      <p class="text-white mb-3 text-xs uppercase tracking-widest text-zinc-500">
+                        Environmental Controls
+                      </p>
+                      <div class="space-y-2 ml-2">
+                        <div class="flex items-center justify-between">
+                          <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-zinc-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"></path>
+                            </svg>
+                            <span class="text-zinc-300 text-xs">
+                              Temperature
+                            </span>
+                          </div>
+                          <span class="text-emerald-400 text-xs">
+                            72°F (Comfort)
+                          </span>
+                        </div>
+                        <div class="w-full bg-zinc-800 h-1 rounded-full mt-1">
+                          <div class="bg-emerald-500 h-1 rounded-full" style="width: 60%"></div>
+                        </div>
+                      </div>
+                      <div class="mt-4 pt-3 border-t border-white/10" style="">
+                        <div class="flex items-center justify-between text-xs">
+                          <span class="text-zinc-500" style="">
+                            Staff on shift:
+                          </span>
+                          <span class="text-white" style="">
+                            Sarah J. (RN), Mike T. (CNA)
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="absolute -right-6 top-20 hidden lg:block">
+                <div class="bg-zinc-900 w-48 rounded-xl pt-4 pr-4 pb-4 pl-4 shadow-xl backdrop-blur" style="position: relative; --border-gradient: linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1)); --border-radius-before: 12px;">
+                  <div class="flex items-center gap-2 mb-2">
+                    <div class="w-8 h-8 rounded-lg flex items-center justify-center bg-emerald-500/20" style="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-emerald-400" style="">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
+                      </svg>
+                    </div>
+                    <span class="text-xs text-white font-medium" style="">
+                      Secure
+                    </span>
+                  </div>
+                  <p class="text-xs text-zinc-400" style="">24/7 Monitoring</p>
+                </div>
+              </div>
+
+              <div class="absolute -left-6 bottom-20 hidden lg:block">
+                <div class="w-48 p-4 rounded-xl bg-zinc-900 border border-white/10 shadow-xl backdrop-blur" style="">
+                  <div class="flex items-center gap-2 mb-2">
+                    <div class="w-8 h-8 rounded-lg flex items-center justify-center bg-emerald-500/20" style="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-emerald-400" style="">
+                        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                      </svg>
+                    </div>
+                    <span class="text-xs text-white font-medium" style="">
+                      Care
+                    </span>
+                  </div>
+                  <p class="text-xs text-zinc-400" style="">
+                    Personalized Plans
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Gallery Section -->
+
+    <!-- Features Grid -->
+    <section class="[animation:fadeSlideIn_0.8s_ease-out_0.4s_both] animate-on-scroll z-10 bg-gradient-to-b from-zinc-950 to-black pt-12 md:pt-16 pr-4 md:pr-6 pb-12 md:pb-16 pl-4 md:pl-6 relative">
+      <div class="max-w-7xl mr-auto ml-auto">
+        <div class="text-center mb-12">
+          <span class="text-sm font-normal text-zinc-400 uppercase tracking-widest">
+            Why Choose Us
+          </span>
+          <h2 class="sm:text-5xl lg:text-6xl text-4xl font-semibold text-white tracking-tight mt-3 mb-6">
+            Built on trust and compassion
+          </h2>
+          <p class="text-lg text-zinc-400 max-w-2xl mx-auto">
+            We provide a holistic approach to care, ensuring physical health,
+            mental well-being, and social connection.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 gap-x-6 gap-y-6">
+          <!-- Feature 1 -->
+          <div class="w-full h-[220px] sm:h-[250px] rounded-[10px] p-[1px] relative" style="background: radial-gradient(circle 230px at 0% 0%, #10b981, #0c0d0d);">
+            <div class="aspect-square z-[2] w-[5px] rounded-full absolute bg-emerald-400" style="box-shadow: #10b981 0px 0px 10px; right: 10%; top: 10%;"></div>
+            <div class="z-[1] flex flex-col text-white w-full h-full border-[#202222] border rounded-[9px] pt-6 pr-6 pb-6 pl-6 relative items-center justify-center" style="background: radial-gradient(280px at 0% 0%, rgb(68, 68, 68), rgb(12, 13, 13));">
+              <div class="blur-[60px] transform opacity-40 w-[220px] h-[45px] rounded-full absolute top-0 left-0 rotate-[40deg]" style="background-color: #10b981; box-shadow: #10b981 0px 0px 50px; transform-origin: 10% center"></div>
+              <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl ring-1 mb-4 z-10 bg-emerald-500/10 ring-emerald-500/20" style="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-emerald-400" style="">
+                  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-medium text-white mb-2 tracking-tight z-10" style="">
+                24/7 Care
+              </h3>
+              <p class="text-sm text-zinc-400 leading-relaxed text-center z-10" style="">
+                Professional caregivers available around the clock.
+              </p>
+              <div class="w-full h-[1px] absolute" style="top: 10%; background: linear-gradient(90deg, #10b981 30%, rgb(29, 31, 31) 70%); mask-image: linear-gradient(90deg, transparent, black 0%, black 100%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, black 0%, black 100%, transparent);"></div>
+              <div class="w-[1px] h-full absolute" style="left: 10%; background: linear-gradient(180deg, #10b981 30%, #222424 70%); mask-image: linear-gradient(90deg, transparent, black 0%, black 100%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, black 0%, black 100%, transparent);"></div>
+              <div class="bg-[#2c2c2c] w-full h-[1px] absolute" style="bottom: 10%; mask-image: linear-gradient(90deg, transparent, black 0%, black 100%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, black 0%, black 100%, transparent);"></div>
+              <div class="absolute w-[1px] h-full bg-[#2c2c2c]" style="right: 10%;"></div>
+            </div>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="w-full h-[220px] sm:h-[250px] rounded-[10px] p-[1px] relative" style="background: radial-gradient(circle 230px at 0% 0%, #10b981, #0c0d0d);">
+            <div class="w-[5px] aspect-square absolute rounded-full z-[2] bg-emerald-400" style="box-shadow: #10b981 0px 0px 10px; right: 10%; top: 10%;"></div>
+            <div class="z-[1] flex relative flex-col text-white w-full h-full border-[#202222] border rounded-[9px] items-center justify-center p-6" style="background: radial-gradient(280px at 0% 0%, rgb(68, 68, 68), rgb(12, 13, 13));">
+              <div class="absolute blur-[60px] transform top-0 left-0 opacity-40 w-[220px] h-[45px] rounded-full rotate-[40deg]" style="background-color: #10b981; box-shadow: 0 0 50px #10b981; transform-origin: 10%"></div>
+              <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl ring-1 mb-4 z-10 bg-emerald-500/10 ring-emerald-500/20" style="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-emerald-400" style="">
+                  <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
+                  <path d="M7 2v20"></path>
+                  <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-medium text-white mb-2 tracking-tight z-10" style="">
+                Gourmet Dining
+              </h3>
+              <p class="text-sm text-zinc-400 leading-relaxed text-center z-10" style="">
+                Nutritious, chef-prepared meals tailored to diets.
+              </p>
+              <div class="absolute w-full h-[1px]" style="top: 10%; background: linear-gradient(90deg, #10b981 30%, #1d1f1f 70%);"></div>
+              <div class="absolute w-[1px] h-full" style="left: 10%; background: linear-gradient(180deg, #10b981 30%, #222424 70%);"></div>
+              <div class="absolute w-full h-[1px] bg-[#2c2c2c]" style="bottom: 10%;"></div>
+              <div class="absolute w-[1px] h-full bg-[#2c2c2c]" style="right: 10%;"></div>
+            </div>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="w-full h-[220px] sm:h-[250px] rounded-[10px] p-[1px] relative" style="background: radial-gradient(circle 230px at 0% 0%, #10b981, #0c0d0d);">
+            <div class="w-[5px] aspect-square absolute rounded-full z-[2] bg-emerald-400" style="box-shadow: #10b981 0px 0px 10px; right: 10%; top: 10%;"></div>
+            <div class="z-[1] flex relative flex-col text-white w-full h-full border-[#202222] border rounded-[9px] items-center justify-center p-6" style="background: radial-gradient(280px at 0% 0%, rgb(68, 68, 68), rgb(12, 13, 13));">
+              <div class="absolute blur-[60px] transform top-0 left-0 opacity-40 w-[220px] h-[45px] rounded-full rotate-[40deg]" style="background-color: #10b981; box-shadow: 0 0 50px #10b981; transform-origin: 10%"></div>
+              <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl ring-1 mb-4 z-10 bg-emerald-500/10 ring-emerald-500/20" style="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-emerald-400" style="">
+                  <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                  <path d="M2 8h20"></path>
+                  <path d="M2 17h20"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-medium text-white mb-2 tracking-tight z-10" style="">
+                Private Rooms
+              </h3>
+              <p class="text-sm text-zinc-400 leading-relaxed text-center z-10" style="">
+                Fully furnished, secure and spacious living quarters.
+              </p>
+              <div class="absolute w-full h-[1px]" style="top: 10%; background: linear-gradient(90deg, #10b981 30%, #1d1f1f 70%);"></div>
+              <div class="absolute w-[1px] h-full" style="left: 10%; background: linear-gradient(180deg, #10b981 30%, #222424 70%);"></div>
+              <div class="absolute w-full h-[1px] bg-[#2c2c2c]" style="bottom: 10%;"></div>
+              <div class="absolute w-[1px] h-full bg-[#2c2c2c]" style="right: 10%;"></div>
+            </div>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="w-full h-[250px] rounded-[10px] p-[1px] relative" style="background: radial-gradient(circle 230px at 0% 0%, #10b981, #0c0d0d);">
+            <div class="aspect-square z-[2] w-[5px] rounded-full absolute bg-emerald-400" style="box-shadow: #10b981 0px 0px 10px; right: 10%; top: 10%;"></div>
+            <div class="z-[1] flex flex-col text-white w-full h-full border-[#202222] border rounded-[9px] pt-6 pr-6 pb-6 pl-6 relative items-center justify-center" style="background: radial-gradient(280px at 0% 0%, rgb(68, 68, 68), rgb(12, 13, 13));">
+              <div class="blur-[60px] transform z-[1] rounded-full absolute top-0 left-0 opacity-40 w-[220px] h-[45px] rotate-[40deg]" style="background-color: #10b981; box-shadow: #10b981 0px 0px 50px; transform-origin: 10% center"></div>
+              <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl ring-1 mb-4 z-10 bg-emerald-500/10 ring-emerald-500/20" style="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-emerald-400" style="">
+                  <path d="M11 2a2 2 0 0 0-2 2v2H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-2V4a2 2 0 0 0-2-2Z"></path>
+                  <path d="M12 17h.01"></path>
+                  <path d="m10 11 2 2 4-4"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-medium text-white mb-2 tracking-tight z-10" style="">
+                Medication Mgmt
+              </h3>
+              <p class="text-sm text-zinc-400 leading-relaxed text-center z-10" style="">
+                Safe, timely administration and prescription tracking.
+              </p>
+              <div class="absolute w-full h-[1px]" style="top: 10%; background: linear-gradient(90deg, #10b981 30%, #1d1f1f 70%);"></div>
+              <div class="absolute w-[1px] h-full" style="left: 10%; background: linear-gradient(180deg, #10b981 30%, #222424 70%);"></div>
+              <div class="absolute w-full h-[1px] bg-[#2c2c2c]" style="bottom: 10%;"></div>
+              <div class="absolute w-[1px] h-full bg-[#2c2c2c]" style="right: 10%;"></div>
+            </div>
+          </div>
+
+          <!-- Feature 5 -->
+          <div class="w-full h-[250px] rounded-[10px] p-[1px] relative" style="background: radial-gradient(circle 230px at 0% 0%, #10b981, #0c0d0d);">
+            <div class="w-[5px] aspect-square absolute rounded-full z-[2] bg-emerald-400" style="box-shadow: #10b981 0px 0px 10px; right: 10%; top: 10%;"></div>
+            <div class="z-[1] flex relative flex-col text-white w-full h-full border-[#202222] border rounded-[9px] items-center justify-center p-6" style="background: radial-gradient(280px at 0% 0%, rgb(68, 68, 68), rgb(12, 13, 13));">
+              <div class="absolute blur-[60px] transform top-0 left-0 opacity-40 w-[220px] h-[45px] rounded-full rotate-[40deg]" style="background-color: #10b981; box-shadow: 0 0 50px #10b981; transform-origin: 10%"></div>
+              <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl ring-1 mb-4 z-10 bg-emerald-500/10 ring-emerald-500/20" style="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-emerald-400" style="">
+                  <path d="M17 20h5v-2a3 3 0 0 0-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 0 1 5.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 0 1 9.288 0M15 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM7 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-medium text-white mb-2 tracking-tight z-10" style="">
+                Social Community
+              </h3>
+              <p class="text-sm text-zinc-400 leading-relaxed text-center z-10" style="">
+                Daily planned activities to keep residents engaged.
+              </p>
+              <div class="absolute w-full h-[1px]" style="top: 10%; background: linear-gradient(90deg, #10b981 30%, #1d1f1f 70%);"></div>
+              <div class="absolute w-[1px] h-full" style="left: 10%; background: linear-gradient(180deg, #10b981 30%, #222424 70%);"></div>
+              <div class="absolute w-full h-[1px] bg-[#2c2c2c]" style="bottom: 10%;"></div>
+              <div class="absolute w-[1px] h-full bg-[#2c2c2c]" style="right: 10%;"></div>
+            </div>
+          </div>
+
+          <!-- Feature 6 -->
+          <div class="w-full h-[250px] rounded-[10px] p-[1px] relative" style="background: radial-gradient(circle 230px at 0% 0%, #10b981, #0c0d0d);">
+            <div class="w-[5px] aspect-square absolute rounded-full z-[2] bg-emerald-400" style="box-shadow: #10b981 0px 0px 10px; right: 10%; top: 10%;"></div>
+            <div class="z-[1] flex flex-col text-white w-full h-full border-[#202222] border rounded-[9px] pt-6 pr-6 pb-6 pl-6 relative items-center justify-center" style="background: radial-gradient(280px at 0% 0%, rgb(68, 68, 68), rgb(12, 13, 13));">
+              <div class="blur-[60px] transform opacity-40 w-[220px] h-[45px] z-[1] rounded-full absolute top-0 left-0 rotate-[40deg]" style="background-color: #10b981; box-shadow: 0 0 50px #10b981; transform-origin: 10%"></div>
+              <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl ring-1 mb-4 z-10 bg-emerald-500/10 ring-emerald-500/20" style="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-emerald-400" style="">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-medium text-white mb-2 tracking-tight z-10" style="">
+                Secure Facility
+              </h3>
+              <p class="text-sm text-zinc-400 leading-relaxed text-center z-10" style="">
+                State-of-the-art monitoring for peace of mind.
+              </p>
+              <div class="absolute w-full h-[1px]" style="top: 10%; background: linear-gradient(90deg, #10b981 30%, #1d1f1f 70%);"></div>
+              <div class="absolute w-[1px] h-full" style="left: 10%; background: linear-gradient(180deg, #10b981 30%, #222424 70%);"></div>
+              <div class="absolute w-full h-[1px] bg-[#2c2c2c]" style="bottom: 10%;"></div>
+              <div class="absolute w-[1px] h-full bg-[#2c2c2c]" style="right: 10%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center">
+          <button class="inline-flex gap-2 hover:bg-zinc-200 transition-all hover:shadow-xl text-sm font-medium text-black bg-white h-11 rounded-full pr-6 pl-6 shadow-lg gap-x-2 gap-y-2 items-center">
+            View Service Plan
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-[16px] h-[16px]" data-icon-replaced="true" style="color: rgb(0, 0, 0); width: 16px; height: 16px">
+              <path d="M5 12h14" class=""></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative z-10 px-4 md:px-6 py-12 md:py-16 bg-gradient-to-b from-black to-zinc-950 [animation:fadeSlideIn_0.8s_ease-out_0.2s_both] animate-on-scroll" style="">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <span class="text-sm font-normal text-zinc-400 uppercase tracking-widest">
+            Our Expertise
+          </span>
+          <h2 class="text-4xl md:text-5xl font-semibold text-white tracking-tight mt-3">
+            Professional Medical Care
+          </h2>
+        </div>
+        <div class="grid gap-12 lg:grid-cols-2">
+          <div class="relative bg-cover rounded-3xl p-5 bg-center bg-[url(https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&amp;w=1600&amp;auto=format&amp;fit=crop)]" style="">
+            <article class="group relative overflow-hidden transition-shadow hover:shadow-md bg-zinc-900/90 border-white/10 border rounded-3xl shadow-xl backdrop-blur-xl" style="">
+              <div class="p-6 sm:p-10">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
+                  <h3 class="text-2xl font-medium tracking-tight text-white" style="">
+                    Personalized Care Plans
+                  </h3>
+                  <span class="inline-flex items-center gap-2 text-xs text-zinc-300 bg-white/5 border border-white/10 rounded-full px-2.5 py-1" style="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-activity w-3 h-3 text-emerald-400" style="">
+                      <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                    </svg>
+                    Health Monitoring
+                  </span>
+                </div>
+                <div class="relative h-56 sm:h-64 rounded-2xl bg-gradient-to-b from-zinc-900 to-zinc-800 ring-1 ring-inset ring-white/5 mb-8" style="">
+                  <div class="absolute right-3 sm:right-6 top-4 sm:top-6 w-[78%] h-[68%] rounded-2xl bg-zinc-900/90 backdrop-blur border border-zinc-800 shadow-sm" style="">
+                    <div class="flex items-center justify-between px-3 py-2 border-b border-zinc-800/70" style="">
+                      <span class="text-xs tracking-widest text-zinc-400" style="">
+                        HEALTH TRENDS
+                      </span>
+                      <div class="flex items-center gap-2">
+                        <span class="text-xs text-emerald-400" style="">
+                          Normal
+                        </span>
+                        <span class="h-2 w-2 rounded-full animate-pulse bg-emerald-500" style=""></span>
+                      </div>
+                    </div>
+                    <div class="p-2">
+                      <!-- Simulated Heart Rate Graph -->
+                      <svg viewBox="0 0 300 90" class="w-full h-20 sm:h-24 text-zinc-700" style="">
+                        <defs>
+                          <pattern id="dots2" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse">
+                            <circle cx="1" cy="1" r="0.5" fill="currentColor" opacity="0.3"></circle>
+                          </pattern>
+                        </defs>
+                        <rect width="100%" height="100%" fill="url(#dots2)" class=""></rect>
+                        <polyline points="0,45 20,45 30,20 40,70 50,45 80,45 90,30 100,60 110,45 150,45 160,25 170,75 180,45 220,45" fill="none" stroke="#10b981" stroke-width="2"></polyline>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="absolute left-6 sm:left-12 bottom-10 sm:bottom-12 w-[62%] h-[52%] rounded-2xl bg-zinc-900/90 backdrop-blur border border-zinc-800 shadow-sm" style="">
+                    <div class="flex items-center justify-between px-3 py-2 border-b border-zinc-800/70" style="">
+                      <span class="text-xs tracking-widest text-zinc-400" style="">
+                        SCHEDULE
+                      </span>
+                    </div>
+                    <div class="p-2 space-y-1">
+                      <div class="flex items-center justify-between text-xs">
+                        <span class="text-zinc-300" style="">Physio</span>
+                        <span class="text-emerald-400" style="">Complete</span>
+                      </div>
+                      <div class="flex items-center justify-between text-xs">
+                        <span class="text-zinc-300" style="">Lunch</span>
+                        <span class="text-zinc-500" style="">12:30 PM</span>
+                      </div>
+                      <div class="flex items-center justify-between text-xs">
+                        <span class="text-zinc-300" style="">Family Visit</span>
+                        <span class="text-zinc-500" style="">04:00 PM</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                  <div class="">
+                    <h4 class="text-lg font-medium tracking-tight text-white" style="">
+                      Digital Health Records
+                    </h4>
+                    <p class="mt-2 text-sm text-zinc-400" style="">
+                      We use advanced systems to track medication, diet, and
+                      vitals, accessible to family members.
+                    </p>
+                  </div>
+                  <div class="">
+                    <h4 class="text-lg font-medium tracking-tight text-white" style="">
+                      Family Connection
+                    </h4>
+                    <p class="mt-2 text-sm text-zinc-400" style="">
+                      Stay updated on your loved one's day with our family app
+                      integration and regular updates.
+                    </p>
+                  </div>
+                </div>
+                <div class="">
+                  <a href="#" class="inline-flex items-center gap-2 text-xs font-medium text-zinc-100 hover:text-zinc-300" style="">
+                    Learn about our technology
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" class="lucide lucide-arrow-right h-4 w-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="">
+            <div class="mb-8">
+              <h3 class="sm:text-5xl text-4xl font-medium text-white tracking-tight mb-4" style="mask-image: linear-gradient(350deg, transparent, black 0%, black 65%, transparent); -webkit-mask-image: linear-gradient(350deg, transparent, black 0%, black 65%, transparent);">
+                Quality care, faster response
+              </h3>
+              <p class="text-lg text-zinc-400 leading-relaxed" style="">
+                With a high staff-to-resident ratio, Ark Care ensures that every
+                need is met promptly. Our caregivers are not just staff; they
+                are family.
+              </p>
+            </div>
+            <div class="border-t border-white/10 pt-6" style="">
+              <div class="grid gap-6 sm:grid-cols-2">
+                <div class="flex gap-3 hover:scale-105 transition-transform duration-200 cursor-pointer items-center">
+                  <div>
+                    <div class="flex items-baseline gap-2">
+                      <span class="text-2xl tracking-tight font-medium text-white" style="">
+                        1:3
+                      </span>
+                    </div>
+                    <p class="text-xs text-zinc-500" style="">
+                      Caregiver Ratio
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 hover:scale-105 transition-transform duration-200 cursor-pointer">
+                  <div class="">
+                    <div class="flex items-baseline gap-2">
+                      <span class="text-2xl tracking-tight font-medium text-white" style="">
+                        100%
+                      </span>
+                    </div>
+                    <p class="text-xs text-zinc-500" style="">
+                      Satisfaction Rate
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="border-t border-white/10 pt-6 mt-8" style="">
+              <a href="contact-us.html" class="inline-flex hover:bg-zinc-200 transition text-sm font-medium text-black bg-white h-10 rounded-full pr-5 pl-5 shadow-lg gap-x-2 gap-y-2 items-center">
+                Book a Consultation
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" class="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="[animation:fadeSlideIn_0.8s_ease-out_0.1s_both] animate-on-scroll z-10 mix-blend-normal bg-[url(https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?q=80&amp;w=3840&amp;auto=format&amp;fit=crop)] bg-cover pt-16 pr-6 pb-16 pl-6 relative" style="mask-image: linear-gradient(0deg, transparent, black 55%, black 85%, transparent); -webkit-mask-image: linear-gradient(0deg, transparent, black 55%, black 85%, transparent);">
+      <div class="max-w-7xl mr-auto ml-auto">
+        <div class="mb-12 text-center">
+          <p class="text-xs uppercase text-zinc-400 tracking-widest mb-2 font-normal" style="">
+            Family Testimonials
+          </p>
+          <h2 class="sm:text-4xl text-3xl font-medium text-white tracking-tight" style="mask-image: linear-gradient(90deg, transparent, black 0%, black 30%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, black 0%, black 30%, transparent);">
+            What Families Say
+          </h2>
+        </div>
+        <div class="relative flex items-center justify-center py-12 sm:py-20" style="min-height:450px">
+          <div class="w-full relative overflow-hidden py-10" style="mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);">
+  <style>
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      animation: marquee 80s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+  </style>
+  
+  <div class="flex items-center gap-6 w-max animate-marquee">
+    <!-- Original Card 1 -->
+    <div class="glass flex-shrink-0" style="position:relative;width:340px;height:340px;background:linear-gradient(rgba(255,255,255,0.1),transparent);border:1px solid rgba(255,255,255,0.05);box-shadow:rgba(0,0,0,0.3) 0px 25px 25px;display:flex;justify-content:center;align-items:center;border-radius:1rem;backdrop-filter:blur(10px);">
+      <div class="absolute inset-4 rounded-xl bg-white text-zinc-900 shadow-2xl ring-1 ring-white/20 overflow-hidden">
+        <div class="p-6">
+          <div class="inline-flex items-center justify-center h-8 w-8 rounded-lg ring-1 mb-4 bg-emerald-100 ring-emerald-200">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote h-4 w-4 text-emerald-700"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg>
+          </div>
+          <p class="leading-relaxed text-sm text-zinc-900 mb-4">
+            Ark Care transformed our lives. Knowing my father is in a
+            place that feels like a real home, with people who genuinely
+            care, is a blessing.
+          </p>
+          <div class="pt-3 border-t border-zinc-200 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div class="h-6 w-6 rounded-full bg-zinc-200"></div>
+              <div>
+                <div class="text-xs font-medium text-zinc-900">Sarah Jenkins</div>
+                <div class="text-xs text-zinc-500">Daughter</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-amber-400 text-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <span class="text-xs font-medium">5.0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Original Card 2 -->
+    <div class="glass flex-shrink-0" style="position:relative;width:340px;height:340px;background:linear-gradient(rgba(255,255,255,0.08),transparent);border:1px solid rgba(255,255,255,0.05);box-shadow:rgba(0,0,0,0.3) 0px 25px 25px;display:flex;justify-content:center;align-items:center;border-radius:1rem;backdrop-filter:blur(10px);">
+      <div class="absolute inset-4 rounded-xl bg-white/90 text-zinc-900 shadow-xl ring-1 ring-white/20 backdrop-blur overflow-hidden">
+        <div class="p-6">
+          <div class="inline-flex items-center justify-center h-8 w-8 rounded-lg ring-1 mb-4 bg-emerald-100 ring-emerald-200">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote h-4 w-4 text-emerald-700"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg>
+          </div>
+          <p class="leading-relaxed text-sm text-zinc-900 mb-4">
+            The quality of care is outstanding. The staff is attentive,
+            the food is excellent, and the environment is always clean
+            and welcoming.
+          </p>
+          <div class="pt-3 border-t border-zinc-200 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div class="h-6 w-6 rounded-full bg-zinc-200"></div>
+              <div>
+                <div class="text-xs font-medium text-zinc-900">Michael Chen</div>
+                <div class="text-xs text-zinc-500">Son</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-amber-400 text-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <span class="text-xs font-medium">5.0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Original Card 3 -->
+    <div class="glass flex-shrink-0" style="position:relative;width:340px;height:340px;background:linear-gradient(rgba(255,255,255,0.06),transparent);border:1px solid rgba(255,255,255,0.05);box-shadow:rgba(0,0,0,0.3) 0px 25px 25px;display:flex;justify-content:center;align-items:center;border-radius:1rem;backdrop-filter:blur(10px);">
+      <div class="absolute inset-4 rounded-xl bg-white/80 text-zinc-900 shadow-lg ring-1 ring-white/20 backdrop-blur overflow-hidden">
+        <div class="p-6">
+          <div class="inline-flex items-center justify-center h-8 w-8 rounded-lg ring-1 mb-4 bg-emerald-100 ring-emerald-200">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote h-4 w-4 text-emerald-700"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg>
+          </div>
+          <p class="leading-relaxed text-sm text-zinc-900 mb-4">
+            Peace of mind is priceless. Ark Care provides that and so
+            much more. It's truly a beautiful community.
+          </p>
+          <div class="pt-3 border-t border-zinc-200 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div class="h-6 w-6 rounded-full bg-zinc-200"></div>
+              <div>
+                <div class="text-xs font-medium text-zinc-900">Emma Davis</div>
+                <div class="text-xs text-zinc-500">Niece</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-amber-400 text-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <span class="text-xs font-medium">5.0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- New Card 4 -->
+    <div class="glass flex-shrink-0" style="position:relative;width:340px;height:340px;background:linear-gradient(rgba(255,255,255,0.09),transparent);border:1px solid rgba(255,255,255,0.05);box-shadow:rgba(0,0,0,0.3) 0px 25px 25px;display:flex;justify-content:center;align-items:center;border-radius:1rem;backdrop-filter:blur(10px);">
+      <div class="absolute inset-4 rounded-xl bg-white/95 text-zinc-900 shadow-xl ring-1 ring-white/20 backdrop-blur overflow-hidden">
+        <div class="p-6">
+          <div class="inline-flex items-center justify-center h-8 w-8 rounded-lg ring-1 mb-4 bg-emerald-100 ring-emerald-200">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote h-4 w-4 text-emerald-700"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg>
+          </div>
+          <p class="leading-relaxed text-sm text-zinc-900 mb-4">
+            The level of dedication from the staff is unmatched. They treat every resident with such dignity, respect, and kindness.
+          </p>
+          <div class="pt-3 border-t border-zinc-200 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div class="h-6 w-6 rounded-full bg-zinc-200"></div>
+              <div>
+                <div class="text-xs font-medium text-zinc-900">Patricia Moore</div>
+                <div class="text-xs text-zinc-500">Daughter</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-amber-400 text-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <span class="text-xs font-medium">5.0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- New Card 5 -->
+    <div class="glass flex-shrink-0" style="position:relative;width:340px;height:340px;background:linear-gradient(rgba(255,255,255,0.07),transparent);border:1px solid rgba(255,255,255,0.05);box-shadow:rgba(0,0,0,0.3) 0px 25px 25px;display:flex;justify-content:center;align-items:center;border-radius:1rem;backdrop-filter:blur(10px);">
+      <div class="absolute inset-4 rounded-xl bg-white/90 text-zinc-900 shadow-xl ring-1 ring-white/20 backdrop-blur overflow-hidden">
+        <div class="p-6">
+          <div class="inline-flex items-center justify-center h-8 w-8 rounded-lg ring-1 mb-4 bg-emerald-100 ring-emerald-200">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote h-4 w-4 text-emerald-700"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg>
+          </div>
+          <p class="leading-relaxed text-sm text-zinc-900 mb-4">
+            I was worried about the transition, but the team made it seamless. My mother is happier here than she's been in years.
+          </p>
+          <div class="pt-3 border-t border-zinc-200 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div class="h-6 w-6 rounded-full bg-zinc-200"></div>
+              <div>
+                <div class="text-xs font-medium text-zinc-900">Thomas Anderson</div>
+                <div class="text-xs text-zinc-500">Son</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-amber-400 text-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <span class="text-xs font-medium">5.0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- New Card 6 -->
+    <div class="glass flex-shrink-0" style="position:relative;width:340px;height:340px;background:linear-gradient(rgba(255,255,255,0.06),transparent);border:1px solid rgba(255,255,255,0.05);box-shadow:rgba(0,0,0,0.3) 0px 25px 25px;display:flex;justify-content:center;align-items:center;border-radius:1rem;backdrop-filter:blur(10px);">
+      <div class="absolute inset-4 rounded-xl bg-white/85 text-zinc-900 shadow-xl ring-1 ring-white/20 backdrop-blur overflow-hidden">
+        <div class="p-6">
+          <div class="inline-flex items-center justify-center h-8 w-8 rounded-lg ring-1 mb-4 bg-emerald-100 ring-emerald-200">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote h-4 w-4 text-emerald-700"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg>
+          </div>
+          <p class="leading-relaxed text-sm text-zinc-900 mb-4">
+            The facility is spotless and modern, but it's the warm, family-like atmosphere that really makes it special.
+          </p>
+          <div class="pt-3 border-t border-zinc-200 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div class="h-6 w-6 rounded-full bg-zinc-200"></div>
+              <div>
+                <div class="text-xs font-medium text-zinc-900">Elizabeth Taylor</div>
+                <div class="text-xs text-zinc-500">Resident</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-amber-400 text-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <span class="text-xs font-medium">5.0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- New Card 7 -->
+    <div class="glass flex-shrink-0" style="position:relative;width:340px;height:340px;background:linear-gradient(rgba(255,255,255,0.08),transparent);border:1px solid rgba(255,255,255,0.05);box-shadow:rgba(0,0,0,0.3) 0px 25px 25px;display:flex;justify-content:center;align-items:center;border-radius:1rem;backdrop-filter:blur(10px);">
+      <div class="absolute inset-4 rounded-xl bg-white/90 text-zinc-900 shadow-xl ring-1 ring-white/20 backdrop-blur overflow-hidden">
+        <div class="p-6">
+          <div class="inline-flex items-center justify-center h-8 w-8 rounded-lg ring-1 mb-4 bg-emerald-100 ring-emerald-200">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote h-4 w-4 text-emerald-700"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg>
+          </div>
+          <p class="leading-relaxed text-sm text-zinc-900 mb-4">
+            During my recovery, the support I received was phenomenal. The personalized care plan really works wonders for your health.
+          </p>
+          <div class="pt-3 border-t border-zinc-200 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div class="h-6 w-6 rounded-full bg-zinc-200"></div>
+              <div>
+                <div class="text-xs font-medium text-zinc-900">Richard Martin</div>
+                <div class="text-xs text-zinc-500">Resident</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-amber-400 text-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <span class="text-xs font-medium">5.0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- New Card 8 -->
+    <div class="glass flex-shrink-0" style="position:relative;width:340px;height:340px;background:linear-gradient(rgba(255,255,255,0.06),transparent);border:1px solid rgba(255,255,255,0.05);box-shadow:rgba(0,0,0,0.3) 0px 25px 25px;display:flex;justify-content:center;align-items:center;border-radius:1rem;backdrop-filter:blur(10px);">
+      <div class="absolute inset-4 rounded-xl bg-white/80 text-zinc-900 shadow-lg ring-1 ring-white/20 backdrop-blur overflow-hidden">
+        <div class="p-6">
+          <div class="inline-flex items-center justify-center h-8 w-8 rounded-lg ring-1 mb-4 bg-emerald-100 ring-emerald-200">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote h-4 w-4 text-emerald-700"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg>
+          </div>
+          <p class="leading-relaxed text-sm text-zinc-900 mb-4">
+            We visited many places, but Ark Care was the only one that felt right. It truly lives up to its name in every way.
+          </p>
+          <div class="pt-3 border-t border-zinc-200 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div class="h-6 w-6 rounded-full bg-zinc-200"></div>
+              <div>
+                <div class="text-xs font-medium text-zinc-900">Susan Clark</div>
+                <div class="text-xs text-zinc-500">Daughter</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-amber-400 text-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <span class="text-xs font-medium">5.0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Duplicated Set for Smooth Loop (Hidden from screen reader) -->
+    <div class="glass flex-shrink-0" aria-hidden="true" style="position:relative;width:340px;height:340px;background:linear-gradient(rgba(255,255,255,0.1),transparent);border:1px solid rgba(255,255,255,0.05);box-shadow:rgba(0,0,0,0.3) 0px 25px 25px;display:flex;justify-content:center;align-items:center;border-radius:1rem;backdrop-filter:blur(10px);">
+      <div class="absolute inset-4 rounded-xl bg-white text-zinc-900 shadow-2xl ring-1 ring-white/20 overflow-hidden">
+        <div class="p-6">
+          <div class="inline-flex items-center justify-center h-8 w-8 rounded-lg ring-1 mb-4 bg-emerald-100 ring-emerald-200">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote h-4 w-4 text-emerald-700"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg>
+          </div>
+          <p class="leading-relaxed text-sm text-zinc-900 mb-4">
+            Ark Care transformed our lives. Knowing my father is in a
+            place that feels like a real home, with people who genuinely
+            care, is a blessing.
+          </p>
+          <div class="pt-3 border-t border-zinc-200 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div class="h-6 w-6 rounded-full bg-zinc-200"></div>
+              <div>
+                <div class="text-xs font-medium text-zinc-900">Sarah Jenkins</div>
+                <div class="text-xs text-zinc-500">Daughter</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-amber-400 text-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <span class="text-xs font-medium">5.0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="glass flex-shrink-0" aria-hidden="true" style="position:relative;width:340px;height:340px;background:linear-gradient(rgba(255,255,255,0.08),transparent);border:1px solid rgba(255,255,255,0.05);box-shadow:rgba(0,0,0,0.3) 0px 25px 25px;display:flex;justify-content:center;align-items:center;border-radius:1rem;backdrop-filter:blur(10px);">
+      <div class="absolute inset-4 rounded-xl bg-white/90 text-zinc-900 shadow-xl ring-1 ring-white/20 backdrop-blur overflow-hidden">
+        <div class="p-6">
+          <div class="inline-flex items-center justify-center h-8 w-8 rounded-lg ring-1 mb-4 bg-emerald-100 ring-emerald-200">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote h-4 w-4 text-emerald-700"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg>
+          </div>
+          <p class="leading-relaxed text-sm text-zinc-900 mb-4">
+            The quality of care is outstanding. The staff is attentive,
+            the food is excellent, and the environment is always clean
+            and welcoming.
+          </p>
+          <div class="pt-3 border-t border-zinc-200 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div class="h-6 w-6 rounded-full bg-zinc-200"></div>
+              <div>
+                <div class="text-xs font-medium text-zinc-900">Michael Chen</div>
+                <div class="text-xs text-zinc-500">Son</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-amber-400 text-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <span class="text-xs font-medium">5.0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="glass flex-shrink-0" aria-hidden="true" style="position:relative;width:340px;height:340px;background:linear-gradient(rgba(255,255,255,0.06),transparent);border:1px solid rgba(255,255,255,0.05);box-shadow:rgba(0,0,0,0.3) 0px 25px 25px;display:flex;justify-content:center;align-items:center;border-radius:1rem;backdrop-filter:blur(10px);">
+      <div class="absolute inset-4 rounded-xl bg-white/80 text-zinc-900 shadow-lg ring-1 ring-white/20 backdrop-blur overflow-hidden">
+        <div class="p-6">
+          <div class="inline-flex items-center justify-center h-8 w-8 rounded-lg ring-1 mb-4 bg-emerald-100 ring-emerald-200">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote h-4 w-4 text-emerald-700"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg>
+          </div>
+          <p class="leading-relaxed text-sm text-zinc-900 mb-4">
+            Peace of mind is priceless. Ark Care provides that and so
+            much more. It's truly a beautiful community.
+          </p>
+          <div class="pt-3 border-t border-zinc-200 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div class="h-6 w-6 rounded-full bg-zinc-200"></div>
+              <div>
+                <div class="text-xs font-medium text-zinc-900">Emma Davis</div>
+                <div class="text-xs text-zinc-500">Niece</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-amber-400 text-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <span class="text-xs font-medium">5.0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="glass flex-shrink-0" aria-hidden="true" style="position:relative;width:340px;height:340px;background:linear-gradient(rgba(255,255,255,0.09),transparent);border:1px solid rgba(255,255,255,0.05);box-shadow:rgba(0,0,0,0.3) 0px 25px 25px;display:flex;justify-content:center;align-items:center;border-radius:1rem;backdrop-filter:blur(10px);">
+      <div class="absolute inset-4 rounded-xl bg-white/95 text-zinc-900 shadow-xl ring-1 ring-white/20 backdrop-blur overflow-hidden">
+        <div class="p-6">
+          <div class="inline-flex items-center justify-center h-8 w-8 rounded-lg ring-1 mb-4 bg-emerald-100 ring-emerald-200">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote h-4 w-4 text-emerald-700"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg>
+          </div>
+          <p class="leading-relaxed text-sm text-zinc-900 mb-4">
+            The level of dedication from the staff is unmatched. They treat every resident with such dignity, respect, and kindness.
+          </p>
+          <div class="pt-3 border-t border-zinc-200 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div class="h-6 w-6 rounded-full bg-zinc-200"></div>
+              <div>
+                <div class="text-xs font-medium text-zinc-900">Patricia Moore</div>
+                <div class="text-xs text-zinc-500">Daughter</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-amber-400 text-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <span class="text-xs font-medium">5.0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="glass flex-shrink-0" aria-hidden="true" style="position:relative;width:340px;height:340px;background:linear-gradient(rgba(255,255,255,0.07),transparent);border:1px solid rgba(255,255,255,0.05);box-shadow:rgba(0,0,0,0.3) 0px 25px 25px;display:flex;justify-content:center;align-items:center;border-radius:1rem;backdrop-filter:blur(10px);">
+      <div class="absolute inset-4 rounded-xl bg-white/90 text-zinc-900 shadow-xl ring-1 ring-white/20 backdrop-blur overflow-hidden">
+        <div class="p-6">
+          <div class="inline-flex items-center justify-center h-8 w-8 rounded-lg ring-1 mb-4 bg-emerald-100 ring-emerald-200">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote h-4 w-4 text-emerald-700"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg>
+          </div>
+          <p class="leading-relaxed text-sm text-zinc-900 mb-4">
+            I was worried about the transition, but the team made it seamless. My mother is happier here than she's been in years.
+          </p>
+          <div class="pt-3 border-t border-zinc-200 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div class="h-6 w-6 rounded-full bg-zinc-200"></div>
+              <div>
+                <div class="text-xs font-medium text-zinc-900">Thomas Anderson</div>
+                <div class="text-xs text-zinc-500">Son</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-amber-400 text-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <span class="text-xs font-medium">5.0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="glass flex-shrink-0" aria-hidden="true" style="position:relative;width:340px;height:340px;background:linear-gradient(rgba(255,255,255,0.06),transparent);border:1px solid rgba(255,255,255,0.05);box-shadow:rgba(0,0,0,0.3) 0px 25px 25px;display:flex;justify-content:center;align-items:center;border-radius:1rem;backdrop-filter:blur(10px);">
+      <div class="absolute inset-4 rounded-xl bg-white/85 text-zinc-900 shadow-xl ring-1 ring-white/20 backdrop-blur overflow-hidden">
+        <div class="p-6">
+          <div class="inline-flex items-center justify-center h-8 w-8 rounded-lg ring-1 mb-4 bg-emerald-100 ring-emerald-200">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote h-4 w-4 text-emerald-700"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg>
+          </div>
+          <p class="leading-relaxed text-sm text-zinc-900 mb-4">
+            The facility is spotless and modern, but it's the warm, family-like atmosphere that really makes it special.
+          </p>
+          <div class="pt-3 border-t border-zinc-200 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div class="h-6 w-6 rounded-full bg-zinc-200"></div>
+              <div>
+                <div class="text-xs font-medium text-zinc-900">Elizabeth Taylor</div>
+                <div class="text-xs text-zinc-500">Resident</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-amber-400 text-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <span class="text-xs font-medium">5.0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="glass flex-shrink-0" aria-hidden="true" style="position:relative;width:340px;height:340px;background:linear-gradient(rgba(255,255,255,0.08),transparent);border:1px solid rgba(255,255,255,0.05);box-shadow:rgba(0,0,0,0.3) 0px 25px 25px;display:flex;justify-content:center;align-items:center;border-radius:1rem;backdrop-filter:blur(10px);">
+      <div class="absolute inset-4 rounded-xl bg-white/90 text-zinc-900 shadow-xl ring-1 ring-white/20 backdrop-blur overflow-hidden">
+        <div class="p-6">
+          <div class="inline-flex items-center justify-center h-8 w-8 rounded-lg ring-1 mb-4 bg-emerald-100 ring-emerald-200">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote h-4 w-4 text-emerald-700"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg>
+          </div>
+          <p class="leading-relaxed text-sm text-zinc-900 mb-4">
+            During my recovery, the support I received was phenomenal. The personalized care plan really works wonders for your health.
+          </p>
+          <div class="pt-3 border-t border-zinc-200 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div class="h-6 w-6 rounded-full bg-zinc-200"></div>
+              <div>
+                <div class="text-xs font-medium text-zinc-900">Richard Martin</div>
+                <div class="text-xs text-zinc-500">Resident</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-amber-400 text-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <span class="text-xs font-medium">5.0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="glass flex-shrink-0" aria-hidden="true" style="position:relative;width:340px;height:340px;background:linear-gradient(rgba(255,255,255,0.06),transparent);border:1px solid rgba(255,255,255,0.05);box-shadow:rgba(0,0,0,0.3) 0px 25px 25px;display:flex;justify-content:center;align-items:center;border-radius:1rem;backdrop-filter:blur(10px);">
+      <div class="absolute inset-4 rounded-xl bg-white/80 text-zinc-900 shadow-lg ring-1 ring-white/20 backdrop-blur overflow-hidden">
+        <div class="p-6">
+          <div class="inline-flex items-center justify-center h-8 w-8 rounded-lg ring-1 mb-4 bg-emerald-100 ring-emerald-200">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote h-4 w-4 text-emerald-700"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg>
+          </div>
+          <p class="leading-relaxed text-sm text-zinc-900 mb-4">
+            We visited many places, but Ark Care was the only one that felt right. It truly lives up to its name in every way.
+          </p>
+          <div class="pt-3 border-t border-zinc-200 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div class="h-6 w-6 rounded-full bg-zinc-200"></div>
+              <div>
+                <div class="text-xs font-medium text-zinc-900">Susan Clark</div>
+                <div class="text-xs text-zinc-500">Daughter</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-amber-400 text-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <span class="text-xs font-medium">5.0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="py-24 relative z-10 bg-black overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-emerald-900/20 via-black to-black"></div>
+      <div class="max-w-4xl mx-auto px-6 relative text-center">
+        <h2 class="text-5xl md:text-6xl font-semibold text-white tracking-tight mb-6">
+          Take action today
+        </h2>
+        <p class="text-xl text-zinc-400 mb-10 max-w-2xl mx-auto">
+          Give your loved one the care they deserve. Schedule a private tour of
+          our residence and meet our compassionate team.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="contact-us.html" class="hover:bg-zinc-200 transition-colors sm:w-auto font-medium text-black bg-white w-full rounded-full pt-4 pr-8 pb-4 pl-8 text-center">
+            Schedule a Tour
+          </a>
+          <a href="contact-us.html" class="hover:bg-zinc-800 transition-colors sm:w-auto font-medium text-white bg-zinc-900 w-full border-zinc-800 border rounded-full pt-4 pr-8 pb-4 pl-8 text-center">
+            Contact Support
+          </a>
+        </div>
+      </div>
+    </section>
+    <footer class="relative z-10 bg-black pt-20 pb-10 border-t border-white/10 font-sans">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          <div class="space-y-6">
+            <a href="index.html" class="inline-flex items-center gap-2">
+              <div class="h-6 w-6 bg-emerald-500 rounded-full flex items-center justify-center">
+                <span class="font-instrument-serif italic text-black font-bold text-sm">
+                  A
+                </span>
+              </div>
+              <span class="text-lg font-bold tracking-tight text-white uppercase">
+                Ark Care
+              </span>
+            </a>
+            <p class="text-zinc-400 text-sm leading-relaxed">
+              Redefining assisted living with professional medical oversight in
+              a warm, dignified home environment.
+            </p>
+            <div class="flex gap-4">
+              <a href="#" class="h-10 w-10 rounded-full bg-zinc-900 flex items-center justify-center text-zinc-400 hover:bg-emerald-500 hover:text-white transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </a>
+              <a href="#" class="h-10 w-10 rounded-full bg-zinc-900 flex items-center justify-center text-zinc-400 hover:bg-emerald-500 hover:text-white transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter">
+                  <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+                </svg>
+              </a>
+              <a href="#" class="h-10 w-10 rounded-full bg-zinc-900 flex items-center justify-center text-zinc-400 hover:bg-emerald-500 hover:text-white transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="">
+            <h3 class="text-white font-medium mb-6">Services</h3>
+            <ul class="space-y-3 text-sm text-zinc-500">
+              <li class="">
+                <a href="services.html" class="hover:text-emerald-400 transition-colors flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500/0 hover:bg-emerald-500 transition-colors"></span>
+                  Assisted Living
+                </a>
+              </li>
+              <li>
+                <a href="services.html" class="hover:text-emerald-400 transition-colors flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500/0 hover:bg-emerald-500 transition-colors"></span>
+                  Memory Care
+                </a>
+              </li>
+              <li>
+                <a href="services.html" class="hover:text-emerald-400 transition-colors flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500/0 hover:bg-emerald-500 transition-colors"></span>
+                  Respite Care
+                </a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-emerald-400 transition-colors flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500/0 hover:bg-emerald-500 transition-colors"></span>
+                  Hospice Coordination
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="">
+            <h3 class="text-white font-medium mb-6">Company</h3>
+            <ul class="space-y-3 text-sm text-zinc-500">
+              <li class="">
+                <a href="about-us.html" class="hover:text-emerald-400 transition-colors">
+                  About Us
+                </a>
+              </li>
+              <li class="">
+                <a href="about-us.html#team" class="hover:text-emerald-400 transition-colors">
+                  Our Team
+                </a>
+              </li>
+              <li>
+                <a href="contact-us.html" class="hover:text-emerald-400 transition-colors">
+                  Careers
+                </a>
+              </li>
+              <li>
+                <a href="contact-us.html" class="hover:text-emerald-400 transition-colors">
+                  Contact
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-white font-medium mb-6">Newsletter</h3>
+            <p class="text-zinc-500 text-sm mb-4">
+              Subscribe to our newsletter for updates and care tips.
+            </p>
+            <form class="flex flex-col gap-3">
+              <div class="relative">
+                <input type="email" placeholder="Enter your email" class="w-full bg-zinc-900 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 transition-all">
+                <button type="submit" class="absolute right-1.5 top-1.5 p-1.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-md transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+              <p class="text-[10px] text-zinc-600">
+                By subscribing, you agree to our Privacy Policy.
+              </p>
+            </form>
+          </div>
+        </div>
+
+        <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p class="text-zinc-500 text-sm">
+            © 2024 Ark Care Home. All rights reserved.
+          </p>
+          <div class="flex gap-6 text-sm text-zinc-500">
+            <a href="#" class="hover:text-white transition-colors">
+              Privacy Policy
+            </a>
+            <a href="#" class="hover:text-white transition-colors">
+              Terms of Service
+            </a>
+            <a href="#" class="hover:text-white transition-colors">
+              Cookie Policy
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        if (mobileMenuButton && mobileMenu) {
+          mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+            document.body.style.overflow = mobileMenu.classList.contains('hidden') ? '' : 'hidden';
+          });
+
+          // Close menu when clicking on a link
+          const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+          mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+              mobileMenu.classList.add('hidden');
+              menuIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            });
+          });
+
+          // Close menu when clicking outside
+          document.addEventListener('click', function(event) {
+            if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+              mobileMenu.classList.add('hidden');
+              menuIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            }
+          });
+        }
+
+      });
+    </script>
+
+    <!-- AI Chatbot Widget -->
+    <div id="chatbot-container" class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
+      <!-- Chat Button -->
+      <button id="chatbot-toggle" class="w-12 h-12 sm:w-14 sm:h-14 bg-emerald-500 hover:bg-emerald-600 rounded-full shadow-lg flex items-center justify-center text-white transition-all duration-300 hover:scale-110" aria-label="Open chat">
+        <svg id="chat-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+        <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 hidden">
+          <path d="M18 6 6 18"></path>
+          <path d="M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <!-- Chat Window -->
+      <div id="chatbot-window" class="hidden absolute bottom-20 right-0 w-[calc(100vw-3rem)] sm:w-96 h-[600px] max-h-[calc(100vh-8rem)] bg-zinc-900 border border-white/10 rounded-2xl shadow-2xl flex flex-col overflow-hidden backdrop-blur-xl">
+        <!-- Chat Header -->
+        <div class="bg-emerald-500/20 border-b border-white/10 px-6 py-4 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold text-sm">Ark Care Assistant</h3>
+              <p class="text-emerald-300 text-xs">AI-powered support</p>
+            </div>
+          </div>
+          <button id="chatbot-minimize" class="text-zinc-400 hover:text-white transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 6 6 18"></path>
+              <path d="M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Messages Container -->
+        <div id="chatbot-messages" class="flex-1 overflow-y-auto p-6 space-y-4 bg-zinc-950">
+          <!-- Welcome Message -->
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 bg-emerald-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-400">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="bg-zinc-800/50 border border-white/5 rounded-lg px-4 py-3">
+                <p class="text-white text-sm">Hello! I'm your Ark Care assistant. How can I help you today? I can answer questions about our services, schedule tours, or provide information about assisted living.</p>
+              </div>
+              <p class="text-zinc-500 text-xs mt-1 ml-1">Just now</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Typing Indicator -->
+        <div id="chatbot-typing" class="hidden px-6 py-2">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-emerald-500/20 rounded-full flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-400">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+              </svg>
+            </div>
+            <div class="flex gap-1">
+              <div class="w-2 h-2 bg-emerald-400 rounded-full animate-bounce" style="animation-delay: 0s"></div>
+              <div class="w-2 h-2 bg-emerald-400 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+              <div class="w-2 h-2 bg-emerald-400 rounded-full animate-bounce" style="animation-delay: 0.4s"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="border-t border-white/10 p-4 bg-zinc-900">
+          <form id="chatbot-form" class="flex gap-2">
+            <input 
+              type="text" 
+              id="chatbot-input" 
+              placeholder="Type your message..." 
+              class="flex-1 bg-zinc-800/50 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white placeholder-zinc-500 focus:outline-none focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500/50 transition-all"
+              autocomplete="off"
+            >
+            <button 
+              type="submit" 
+              class="bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg px-4 py-2.5 transition-colors flex items-center justify-center"
+              aria-label="Send message"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m22 2-7 20-4-9-9-4Z"></path>
+                <path d="M22 2 11 13"></path>
+              </svg>
+            </button>
+          </form>
+          <p class="text-zinc-500 text-xs mt-2 text-center">Powered by AI • Responses may vary</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chatbot JavaScript -->
+    <script>
+      (function() {
+        const chatbotContainer = document.getElementById('chatbot-container');
+        const chatbotToggle = document.getElementById('chatbot-toggle');
+        const chatbotWindow = document.getElementById('chatbot-window');
+        const chatbotMinimize = document.getElementById('chatbot-minimize');
+        const chatbotForm = document.getElementById('chatbot-form');
+        const chatbotInput = document.getElementById('chatbot-input');
+        const chatbotMessages = document.getElementById('chatbot-messages');
+        const chatbotTyping = document.getElementById('chatbot-typing');
+        const chatIcon = document.getElementById('chat-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        let isOpen = false;
+
+        // Toggle chatbot
+        chatbotToggle.addEventListener('click', function() {
+          isOpen = !isOpen;
+          if (isOpen) {
+            chatbotWindow.classList.remove('hidden');
+            chatIcon.classList.add('hidden');
+            closeIcon.classList.remove('hidden');
+            chatbotInput.focus();
+          } else {
+            chatbotWindow.classList.add('hidden');
+            chatIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+          }
+        });
+
+        // Minimize chatbot
+        chatbotMinimize.addEventListener('click', function() {
+          isOpen = false;
+          chatbotWindow.classList.add('hidden');
+          chatIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+        });
+
+        // Add message to chat
+        function addMessage(text, isUser = false) {
+          const messageDiv = document.createElement('div');
+          messageDiv.className = `flex items-start gap-3 ${isUser ? 'flex-row-reverse' : ''}`;
+          
+          const timestamp = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+          
+          messageDiv.innerHTML = `
+            ${!isUser ? `
+              <div class="w-8 h-8 bg-emerald-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-400">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                  <path d="M2 17l10 5 10-5"></path>
+                  <path d="M2 12l10 5 10-5"></path>
+                </svg>
+              </div>
+            ` : ''}
+            <div class="flex-1 ${isUser ? 'flex flex-col items-end' : ''}">
+              <div class="${isUser ? 'bg-emerald-500' : 'bg-zinc-800/50 border border-white/5'} rounded-lg px-4 py-3 max-w-[80%]">
+                <p class="text-white text-sm whitespace-pre-wrap">${text}</p>
+              </div>
+              <p class="text-zinc-500 text-xs mt-1 ${isUser ? 'mr-1' : 'ml-1'}">${timestamp}</p>
+            </div>
+            ${isUser ? `
+              <div class="w-8 h-8 bg-zinc-700 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-white text-xs font-semibold">U</span>
+              </div>
+            ` : ''}
+          `;
+          
+          chatbotMessages.appendChild(messageDiv);
+          chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+
+        // Show typing indicator
+        function showTyping() {
+          chatbotTyping.classList.remove('hidden');
+          chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+
+        // Hide typing indicator
+        function hideTyping() {
+          chatbotTyping.classList.add('hidden');
+        }
+
+        // Get AI response (can be integrated with OpenAI API)
+        async function getAIResponse(userMessage) {
+          // Simple keyword-based responses (can be replaced with actual AI API)
+          const lowerMessage = userMessage.toLowerCase();
+          
+          // Service-related queries
+          if (lowerMessage.includes('service') || lowerMessage.includes('care') || lowerMessage.includes('assisted living')) {
+            return "We offer comprehensive care services including Assisted Living, Memory Care, Respite Care, and Hospice Coordination. Our team provides personalized care plans tailored to each resident's needs. Would you like to learn more about a specific service?";
+          }
+          
+          if (lowerMessage.includes('memory care') || lowerMessage.includes('dementia') || lowerMessage.includes('alzheimer')) {
+            return "Our Memory Care program provides specialized support for residents with Alzheimer's, dementia, and other memory conditions. We offer a safe, structured environment with trained staff, cognitive activities, and personalized care plans. Would you like to schedule a tour to see our memory care facilities?";
+          }
+          
+          if (lowerMessage.includes('tour') || lowerMessage.includes('visit') || lowerMessage.includes('schedule')) {
+            return "I'd be happy to help you schedule a tour! You can contact us at (206) 455-3644 or fill out our contact form. We're located at 127 4th Ave N, Algona, WA 98001. What time works best for you?";
+          }
+          
+          if (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('pricing') || lowerMessage.includes('fee')) {
+            return "Pricing varies based on the level of care needed and specific services required. I recommend speaking directly with our team for a personalized quote. Would you like me to connect you with someone who can provide detailed pricing information?";
+          }
+          
+          if (lowerMessage.includes('address') || lowerMessage.includes('location') || lowerMessage.includes('where')) {
+            return "We're located at 127 4th Ave N, Algona, WA 98001. You can reach us at (206) 455-3644. Would you like directions or to schedule a visit?";
+          }
+          
+          if (lowerMessage.includes('phone') || lowerMessage.includes('call') || lowerMessage.includes('contact')) {
+            return "You can reach us at (206) 455-3644. Our team is available to answer your questions and help you learn more about our services. You can also email us at info@arkcare.com or fill out our contact form on the website.";
+          }
+          
+          if (lowerMessage.includes('hello') || lowerMessage.includes('hi') || lowerMessage.includes('hey')) {
+            return "Hello! I'm here to help you learn more about Ark Care. How can I assist you today?";
+          }
+          
+          if (lowerMessage.includes('respite') || lowerMessage.includes('temporary')) {
+            return "Our Respite Care services provide temporary care for your loved one, giving primary caregivers a break. This service is perfect for short-term stays and can help families during transitions. Would you like more information about our respite care options?";
+          }
+          
+          // Default response
+          return "Thank you for your question! For more detailed information, I recommend speaking with our team directly. You can call us at (206) 455-3644, email info@arkcare.com, or schedule a tour. Is there anything specific about our services you'd like to know more about?";
+        }
+
+        // Handle form submission
+        chatbotForm.addEventListener('submit', async function(e) {
+          e.preventDefault();
+          const userMessage = chatbotInput.value.trim();
+          
+          if (!userMessage) return;
+          
+          // Add user message
+          addMessage(userMessage, true);
+          chatbotInput.value = '';
+          
+          // Show typing indicator
+          showTyping();
+          
+          // Simulate AI thinking time
+          await new Promise(resolve => setTimeout(resolve, 1000));
+          
+          // Get AI response
+          const aiResponse = await getAIResponse(userMessage);
+          
+          // Hide typing indicator
+          hideTyping();
+          
+          // Add AI response
+          addMessage(aiResponse, false);
+        });
+
+        // Enter key to send
+        chatbotInput.addEventListener('keypress', function(e) {
+          if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            chatbotForm.dispatchEvent(new Event('submit'));
+          }
+        });
+      })();
+    </script>
+  
+</body></html>
