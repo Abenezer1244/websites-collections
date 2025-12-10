@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photo Gallery | Life at CaredWell AFH | Seattle, WA</title>
+<meta name="description" content="View our photo gallery showcasing life at CaredWell AFH. See our beautiful facility, daily activities, nutritious meals, and the compassionate care we provide to residents.">
+<meta name="keywords" content="CaredWell gallery, adult family home photos, senior care facility images, Seattle care home pictures, facility tour photos">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.bonbicaserenity.com/gallery.html">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.bonbicaserenity.com/gallery.html">
+<meta property="og:title" content="Photo Gallery | Life at CaredWell AFH">
+<meta property="og:description" content="View our photo gallery showcasing life at CaredWell AFH. See our beautiful facility and compassionate care.">
+<meta property="og:image" content="https://www.bonbicaserenity.com/images/gallery-og.jpg">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.bonbicaserenity.com/gallery.html">
+<meta property="twitter:title" content="Photo Gallery | CaredWell AFH">
+<meta property="twitter:description" content="View our photo gallery showcasing life at our beautiful senior care facility.">
+
+<!-- Google Business Profile -->
+<link rel="me" href="https://g.page/bonbica-serenity-afh">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
+<style>
+* {
+-webkit-tap-highlight-color: transparent;
+}
+body {
+font-family: 'Inter', sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+.font-serif { font-family: 'Playfair Display', serif; }
+/* Touch optimization */
+.touch-manipulation {
+touch-action: manipulation;
+-webkit-tap-highlight-color: transparent;
+}
+/* Responsive text sizing */
+@media (max-width: 640px) {
+html { font-size: 14px; }
+}
+@media (min-width: 641px) and (max-width: 1024px) {
+html { font-size: 15px; }
+}
+@media (min-width: 1025px) {
+html { font-size: 16px; }
+}
+/* Waterfall Animation for Gallery */
+.waterfall-col {
+animation: scroll-vertical linear infinite;
+}
+.waterfall-col:hover {
+animation-play-state: paused;
+}
+/* Varying speeds for "crazy" effect */
+.col-speed-1 { animation-duration: 45s; }
+.col-speed-2 { animation-duration: 35s; animation-direction: reverse; }
+.col-speed-3 { animation-duration: 50s; }
+.col-speed-4 { animation-duration: 40s; animation-direction: reverse; }
+.col-speed-5 { animation-duration: 55s; }
+@keyframes scroll-vertical {
+0% { transform: translateY(0); }
+100% { transform: translateY(-50%); }
+}
+/* Smooth Image Hover */
+.gallery-img {
+transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+filter: grayscale(20%);
+}
+.gallery-img:hover {
+transform: scale(1.05);
+filter: grayscale(0%);
+z-index: 10;
+box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+</style></head>
+<body class="bg-[#0F0F11] text-[#E4E4E7] min-h-screen flex flex-col selection:bg-emerald-500/30 selection:text-white overflow-x-hidden">
+
+    <!-- Ambient Background -->
+    <div class="fixed inset-0 pointer-events-none z-0">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-white/[0.02] blur-[120px] rounded-full"></div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-[#0F0F11]/95 backdrop-blur-xl z-[60] transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center gap-8">
+        <button onclick="toggleMenu()" class="absolute top-6 right-6 p-2 text-[#E4E4E7]">
+            <iconify-icon icon="lucide:x" class="text-3xl" stroke-width="1.5"></iconify-icon>
+        </button>
+        <a href="index.html" class="text-3xl text-[#E4E4E7] hover:text-white font-serif font-medium tracking-tight">Home</a>
+        <a href="about-us.html" class="text-3xl text-[#E4E4E7] hover:text-white font-serif font-medium tracking-tight">About Us</a>
+        <a href="gallery.html" class="text-3xl text-[#E4E4E7] hover:text-white font-serif font-medium tracking-tight">Gallery</a>
+        <a href="services.html" class="text-3xl text-[#E4E4E7] hover:text-white font-serif font-medium tracking-tight">Services</a>
+        <a href="contact-us.html" class="text-3xl text-[#E4E4E7] hover:text-white font-serif font-medium tracking-tight">Contact Us</a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 px-4 sm:px-6 md:px-8 lg:px-12 py-3 sm:py-4 md:py-5 lg:py-6 bg-gradient-to-b from-[#0F0F11]/95 to-transparent backdrop-blur-sm border-b border-white/5">
+        <div class="flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 sm:gap-3 cursor-pointer group min-w-0">
+                <div class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-lg sm:rounded-xl bg-white/5 border border-white/10 group-hover:bg-white/10 transition-colors flex-shrink-0">
+                    <iconify-icon icon="lucide:heart-handshake" class="text-lg sm:text-xl text-[#E4E4E7]" stroke-width="1.5"></iconify-icon>
+                </div>
+                <div class="flex flex-col min-w-0">
+                    <span class="font-sans text-xs sm:text-sm font-bold tracking-tight text-[#E4E4E7] uppercase leading-none truncate">CaredWell</span>
+                    <span class="font-serif text-[10px] sm:text-xs italic text-[#A1A1AA] tracking-wide leading-none truncate">CaredWell AFH</span>
+                </div>
+            </a>
+            <div class="hidden lg:flex items-center gap-1 p-1 bg-white/5 border border-white/5 rounded-xl backdrop-blur-md">
+                <a href="index.html" class="px-4 xl:px-5 py-2 text-xs font-medium text-[#A1A1AA] hover:text-[#E4E4E7] hover:bg-white/5 rounded-lg transition-all">Home</a>
+                <a href="about-us.html" class="px-4 xl:px-5 py-2 text-xs font-medium text-[#A1A1AA] hover:text-[#E4E4E7] hover:bg-white/5 rounded-lg transition-all">About Us</a>
+                <a href="gallery.html" class="px-4 xl:px-5 py-2 text-xs font-medium text-[#E4E4E7] bg-white/10 rounded-lg transition-all shadow-sm">Gallery</a>
+                <a href="services.html" class="px-4 xl:px-5 py-2 text-xs font-medium text-[#A1A1AA] hover:text-[#E4E4E7] hover:bg-white/5 rounded-lg transition-all">Services</a>
+                <a href="contact-us.html" class="px-4 xl:px-5 py-2 text-xs font-medium text-[#A1A1AA] hover:text-[#E4E4E7] hover:bg-white/5 rounded-lg transition-all">Contact Us</a>
+            </div>
+            <div class="flex items-center gap-2 sm:gap-4">
+                <a href="contact-us.html" class="hidden md:flex px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 md:py-2.5 bg-white text-[#0F0F11] text-[10px] sm:text-xs font-semibold rounded-lg hover:bg-[#E4E4E7] transition-all hover:scale-105 whitespace-nowrap">
+                    Book a Tour
+                </a>
+                <button onclick="toggleMenu()" class="lg:hidden p-2 text-[#E4E4E7] touch-manipulation" aria-label="Toggle menu">
+                    <iconify-icon icon="lucide:menu" class="text-xl sm:text-2xl" stroke-width="1.5"></iconify-icon>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: HERO -->
+    <section class="relative pt-20 sm:pt-24 md:pt-32 lg:pt-40 xl:pt-48 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 md:px-8 lg:px-12 border-b border-white/5 bg-[#0F0F11] z-10">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
+            <!-- Left: Text -->
+            <div>
+                <div class="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+                    <span class="w-8 sm:w-12 h-[1px] bg-emerald-500/50"></span>
+                    <span class="text-emerald-400 text-[10px] sm:text-xs font-bold uppercase tracking-widest">Est. 2018</span>
+                </div>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-medium leading-[0.95] tracking-tight mb-4 sm:mb-6 md:mb-8 text-transparent bg-clip-text bg-gradient-to-br from-white via-[#E4E4E7] to-[#71717A]">
+                    Life at <br> CaredWell
+                </h1>
+                <p class="text-[#A1A1AA] text-sm sm:text-base md:text-lg font-light leading-relaxed max-w-md border-l border-white/10 pl-4 sm:pl-6">
+                    A visual journey through our moments of joy, compassion, and the peaceful daily life our residents enjoy.
+                </p>
+                <div class="mt-6 sm:mt-8 md:mt-10 flex gap-4 sm:gap-6 items-center">
+                     <div class="flex -space-x-2 sm:-space-x-3">
+                        <img class="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-[#0F0F11]" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&amp;fit=crop&amp;q=80&amp;w=100&amp;h=100" alt="Avatar">
+                        <img class="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-[#0F0F11]" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&amp;fit=crop&amp;q=80&amp;w=100&amp;h=100" alt="Avatar">
+                        <img class="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-[#0F0F11]" src="https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&amp;fit=crop&amp;q=80&amp;w=100&amp;h=100" alt="Avatar">
+                        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-[#0F0F11] bg-white/10 flex items-center justify-center text-[10px] sm:text-xs text-white backdrop-blur">+42</div>
+                     </div>
+                     <span class="text-[10px] sm:text-xs text-[#71717A] uppercase tracking-wider font-medium">Happy Families</span>
+                </div>
+            </div>
+
+            <!-- Right: Feature Image -->
+            <div class="relative group mt-8 lg:mt-0">
+                <div class="absolute -inset-1 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-2xl sm:rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                <div class="relative aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden border border-white/10">
+                    <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Caregiver holding hand" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+                    <div class="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8 bg-gradient-to-t from-[#0F0F11] to-transparent">
+                        <p class="text-white font-serif text-lg sm:text-xl md:text-2xl italic">"Where care feels like family"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: GALLERY (WATERFALL ANIMATION) -->
+    <section class="relative bg-[#0F0F11] overflow-hidden min-h-screen py-12 sm:py-16 md:py-20 lg:py-24">
+        
+        <!-- Section Header -->
+        <div class="text-center mb-8 sm:mb-12 md:mb-16 relative z-10 px-4 sm:px-6">
+            <h2 class="text-2xl sm:text-3xl md:text-3xl lg:text-4xl text-[#E4E4E7] font-serif mb-2 sm:mb-3 tracking-tight">Our Home &amp; Community</h2>
+            <p class="text-[#A1A1AA] text-xs sm:text-sm max-w-lg mx-auto px-4">Explore the warm interiors, nutritious dining, engaging activities, and the compassionate moments that define us.</p>
+        </div>
+
+        <!-- Gradient Masks for Infinite Scroll Illusion -->
+        <div class="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-[#0F0F11] to-transparent z-20 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-[#0F0F11] to-transparent z-20 pointer-events-none"></div>
+
+        <!-- Waterfall Container -->
+        <div class="flex gap-4 lg:gap-6 justify-center overflow-hidden h-[1200px] lg:h-[1000px] px-4 -skew-y-0">
+            
+            <!-- Column 1 -->
+            <div class="w-1/2 md:w-1/3 lg:w-1/5 relative">
+                <div class="waterfall-col col-speed-1 flex flex-col gap-6">
+                    <!-- Set 1 (Original) -->
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&amp;q=80" class="w-full h-full object-cover" alt="Interior">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Cozy Living Spaces</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1516307365426-bea591f05011?w=600&amp;q=80" class="w-full h-full object-cover" alt="Medical">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Medical Support</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg" class="w-full h-full object-cover" alt="Knitting">
+                         <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Hobbies &amp; Crafts</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=600&amp;q=80" class="w-full h-full object-cover" alt="Couple">
+                         <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Community Love</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1592419044706-39796d40f98c?w=600&amp;q=80" class="w-full h-full object-cover" alt="Garden">
+                         <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Fresh Gardens</div>
+                    </div>
+
+                    <!-- Set 2 (Duplicate for loop) -->
+                     <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&amp;q=80" class="w-full h-full object-cover" alt="Interior">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Cozy Living Spaces</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1516307365426-bea591f05011?w=600&amp;q=80" class="w-full h-full object-cover" alt="Medical">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Medical Support</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg" class="w-full h-full object-cover" alt="Knitting">
+                         <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Hobbies &amp; Crafts</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=600&amp;q=80" class="w-full h-full object-cover" alt="Couple">
+                         <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Community Love</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1592419044706-39796d40f98c?w=600&amp;q=80" class="w-full h-full object-cover" alt="Garden">
+                         <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Fresh Gardens</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2 (Hidden mobile) -->
+            <div class="hidden md:block w-1/3 lg:w-1/5 relative">
+                <div class="waterfall-col col-speed-2 flex flex-col gap-6">
+                    <!-- Set 1 -->
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=600&amp;q=80" class="w-full h-full object-cover" alt="Food">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Nutritious Meals</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/c543a9e1-f226-4ced-80b0-feb8445a75b9_1600w.jpg" class="w-full h-full object-cover" alt="Tea">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Afternoon Tea</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&amp;q=80" class="w-full h-full object-cover" alt="Walking">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Outdoor Walks</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/5bab247f-35d9-400d-a82b-fd87cfe913d2_1600w.webp" class="w-full h-full object-cover" alt="Holding hands">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Compassion</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=600&amp;q=80" class="w-full h-full object-cover" alt="Piano">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Music Therapy</div>
+                    </div>
+
+                    <!-- Set 2 -->
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=600&amp;q=80" class="w-full h-full object-cover" alt="Food">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Nutritious Meals</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/c543a9e1-f226-4ced-80b0-feb8445a75b9_1600w.jpg" class="w-full h-full object-cover" alt="Tea">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Afternoon Tea</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&amp;q=80" class="w-full h-full object-cover" alt="Walking">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Outdoor Walks</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/5bab247f-35d9-400d-a82b-fd87cfe913d2_1600w.webp" class="w-full h-full object-cover" alt="Holding hands">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Compassion</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=600&amp;q=80" class="w-full h-full object-cover" alt="Piano">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Music Therapy</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 3 (Hidden mobile) -->
+            <div class="hidden lg:block w-1/5 relative">
+                <div class="waterfall-col col-speed-3 flex flex-col gap-6">
+                     <!-- Set 1 -->
+                     <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=600&amp;q=80" class="w-full h-full object-cover" alt="Care">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Always There</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=600&amp;q=80" class="w-full h-full object-cover" alt="Health">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Expert Care</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/4734259a-bad7-422f-981e-ce01e79184f2_1600w.jpg" class="w-full h-full object-cover" alt="Reading">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Quiet Moments</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?w=600&amp;q=80" class="w-full h-full object-cover" alt="Caregiver">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Dedicated Staff</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/c543a9e1-f226-4ced-80b0-feb8445a75b9_1600w.jpg" class="w-full h-full object-cover" alt="Elderly Man">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Dignity</div>
+                    </div>
+
+                    <!-- Set 2 -->
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=600&amp;q=80" class="w-full h-full object-cover" alt="Care">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Always There</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=600&amp;q=80" class="w-full h-full object-cover" alt="Health">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Expert Care</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/4734259a-bad7-422f-981e-ce01e79184f2_1600w.jpg" class="w-full h-full object-cover" alt="Reading">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Quiet Moments</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?w=600&amp;q=80" class="w-full h-full object-cover" alt="Caregiver">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Dedicated Staff</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/c543a9e1-f226-4ced-80b0-feb8445a75b9_1600w.jpg" class="w-full h-full object-cover" alt="Elderly Man">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Dignity</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 4 (Hidden mobile) -->
+            <div class="hidden lg:block w-1/5 relative">
+                <div class="waterfall-col col-speed-4 flex flex-col gap-6">
+                    <!-- Set 1 -->
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1466695108335-44674aa2058b?w=600&amp;q=80" class="w-full h-full object-cover" alt="Visit">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Family Visits</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&amp;q=80" class="w-full h-full object-cover" alt="Yoga">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Stay Active</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&amp;q=80" class="w-full h-full object-cover" alt="Wheelchair">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Accessibility</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=600&amp;q=80" class="w-full h-full object-cover" alt="Art">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Art Therapy</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&amp;q=80" class="w-full h-full object-cover" alt="Window">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Bright &amp; Airy</div>
+                    </div>
+
+                    <!-- Set 2 -->
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1466695108335-44674aa2058b?w=600&amp;q=80" class="w-full h-full object-cover" alt="Visit">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Family Visits</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&amp;q=80" class="w-full h-full object-cover" alt="Yoga">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Stay Active</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&amp;q=80" class="w-full h-full object-cover" alt="Wheelchair">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Accessibility</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=600&amp;q=80" class="w-full h-full object-cover" alt="Art">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Art Therapy</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&amp;q=80" class="w-full h-full object-cover" alt="Window">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Bright &amp; Airy</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 5 (Hidden mobile/tablet) -->
+            <div class="w-1/2 md:w-1/3 lg:w-1/5 relative">
+                <div class="waterfall-col col-speed-5 flex flex-col gap-6">
+                    <!-- Set 1 -->
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=600&amp;q=80" class="w-full h-full object-cover" alt="Therapy">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Rehabilitation</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1528642474498-1af0c17fd8c3?w=600&amp;q=80" class="w-full h-full object-cover" alt="Grandma">
+                         <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Joyful Smiles</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=600&amp;q=80" class="w-full h-full object-cover" alt="Doctor">
+                         <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Professional Care</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1616593969747-4797dc75033e?w=600&amp;q=80" class="w-full h-full object-cover" alt="Bedroom">
+                         <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Private Suites</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg" class="w-full h-full object-cover" alt="Park">
+                         <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Peaceful Nature</div>
+                    </div>
+
+                    <!-- Set 2 -->
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=600&amp;q=80" class="w-full h-full object-cover" alt="Therapy">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Rehabilitation</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1528642474498-1af0c17fd8c3?w=600&amp;q=80" class="w-full h-full object-cover" alt="Grandma">
+                         <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Joyful Smiles</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=600&amp;q=80" class="w-full h-full object-cover" alt="Doctor">
+                         <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Professional Care</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://images.unsplash.com/photo-1616593969747-4797dc75033e?w=600&amp;q=80" class="w-full h-full object-cover" alt="Bedroom">
+                         <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Private Suites</div>
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/5 border border-white/5 gallery-img group">
+                        <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg" class="w-full h-full object-cover" alt="Park">
+                         <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center font-serif italic text-white p-4 text-center">Peaceful Nature</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="absolute bottom-12 w-full flex justify-center z-30">
+            <button class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/10 px-6 py-2 rounded-full text-xs font-semibold uppercase tracking-widest transition-all">
+                View All Photos
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0F0F11] pt-24 pb-12 px-6 lg:px-12 text-[#E4E4E7] border-t border-white/5">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between gap-12 lg:gap-24 mb-20">
+            
+            <!-- Brand / Address -->
+            <div class="lg:w-1/3">
+                <div class="flex items-center gap-2 mb-6">
+                    <div class="w-8 h-8 flex items-center justify-center rounded-lg bg-emerald-900/20 border border-emerald-500/20">
+                        <iconify-icon icon="lucide:heart-handshake" class="text-lg text-emerald-400" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <span class="font-serif text-lg font-medium text-white">CaredWell</span>
+                </div>
+                
+                <div class="space-y-4 text-sm text-[#A1A1AA]">
+                    <p class="max-w-xs leading-relaxed">Providing exceptional adult family home care with a focus on dignity, respect, and quality of life.</p>
+                    <div class="flex items-center gap-3">
+                        <iconify-icon icon="lucide:map-pin" class="text-emerald-400"></iconify-icon>
+                        <span>5427 S 296TH CT, Auburn, WA 98001</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <iconify-icon icon="lucide:mail" class="text-emerald-400"></iconify-icon>
+                        <span>care@bonbicaserenity.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Links -->
+            <div class="grid grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-16 lg:flex-1">
+                <div>
+                    <h4 class="text-white font-medium text-sm mb-4">Care Services</h4>
+                    <ul class="space-y-3 text-sm text-[#A1A1AA]">
+                        <li><a href="services.html" class="hover:text-emerald-400 transition-colors">Assisted Living</a></li>
+                        <li><a href="services.html" class="hover:text-emerald-400 transition-colors">Memory Care</a></li>
+                        <li><a href="services.html" class="hover:text-emerald-400 transition-colors">Respite Care</a></li>
+                        <li><a href="services.html" class="hover:text-emerald-400 transition-colors">Hospice Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-medium text-sm mb-4">Company</h4>
+                    <ul class="space-y-3 text-sm text-[#A1A1AA]">
+                        <li><a href="about-us.html" class="hover:text-emerald-400 transition-colors">About Us</a></li>
+                        <li><a href="about-us.html" class="hover:text-emerald-400 transition-colors">Our Team</a></li>
+                        <li><a href="contact-us.html" class="hover:text-emerald-400 transition-colors">Careers</a></li>
+                        <li><a href="contact-us.html" class="hover:text-emerald-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-medium text-sm mb-4">Resources</h4>
+                    <ul class="space-y-3 text-sm text-[#A1A1AA]">
+                        <li><a href="#" class="hover:text-emerald-400 transition-colors">Resident FAQ</a></li>
+                        <li><a href="#" class="hover:text-emerald-400 transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-emerald-400 transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-white/10 pt-8 flex flex-col lg:flex-row justify-between items-center gap-4">
+            <p class="text-xs text-[#A1A1AA]">© 2024 CaredWell AFH. All rights reserved.</p>
+            <div class="flex gap-4">
+                 <a href="#" class="text-[#A1A1AA] hover:text-white transition-colors"><iconify-icon icon="lucide:facebook"></iconify-icon></a>
+                 <a href="#" class="text-[#A1A1AA] hover:text-white transition-colors"><iconify-icon icon="lucide:instagram"></iconify-icon></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('translate-x-full')) {
+                menu.classList.remove('translate-x-full');
+            } else {
+                menu.classList.add('translate-x-full');
+            }
+        }
+    </script>
+
+    <!-- LocalBusiness Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://www.bonbicaserenity.com/#organization",
+      "name": "CaredWell AFH",
+      "url": "https://www.bonbicaserenity.com",
+      "telephone": "+1-253-737-4348",
+      "email": "care@bonbicaserenity.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "5427 S 296TH CT",
+        "addressLocality": "Auburn",
+        "addressRegion": "WA",
+        "postalCode": "98001",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "47.34059027116673",
+        "longitude": "-122.28640742362204"
+      },
+      "sameAs": [
+        "https://g.page/bonbica-serenity-afh",
+        "https://www.facebook.com/bonbicaserenity",
+        "https://www.instagram.com/bonbicaserenity"
+      ]
+    }
+    </script>
+
+</body></html>

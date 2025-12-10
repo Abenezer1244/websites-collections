@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services - Harmony AFH | Assisted Living & Memory Care in Auburn, WA</title>
+<meta name="description" content="Comprehensive senior care services at Harmony AFH. Assisted living, memory care, respite care, medication management, and 24/7 nursing support in Auburn, Washington.">
+<meta name="keywords" content="assisted living services Auburn, memory care services, senior care programs, medication management, respite care Auburn WA, dementia care services">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.auburnseniorcare.com/services.html">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.auburnseniorcare.com/services.html">
+<meta property="og:title" content="Services - Harmony AFH | Assisted Living & Memory Care">
+<meta property="og:description" content="Comprehensive senior care services including assisted living, memory care, and 24/7 nursing support in Auburn, Washington.">
+<meta property="og:image" content="https://www.auburnseniorcare.com/images/services-og.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Services - Harmony AFH">
+<meta name="twitter:description" content="Assisted living, memory care, and comprehensive senior care services in Auburn, WA.">
+
+<!-- Local Business Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Harmony AFH",
+  "image": "https://www.auburnseniorcare.com/images/logo.jpg",
+  "description": "Comprehensive senior care services including assisted living, memory care, and 24/7 nursing support in Auburn, Washington.",
+  "url": "https://www.auburnseniorcare.com",
+  "telephone": "+1-253-941-0922",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "31021 42ND AVE S",
+    "addressLocality": "Auburn",
+    "addressRegion": "WA",
+    "postalCode": "98001",
+    "addressCountry": "US"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Senior Care Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Assisted Living",
+          "description": "Personalized assistance with Activities of Daily Living including bathing, dressing, grooming, toileting, and mobility support"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Memory Care",
+          "description": "Dedicated support for residents with Dementia and Alzheimer's, featuring secured exits and cognitive engagement"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Respite Care",
+          "description": "Short-term stays for seniors recovering from surgery or when primary caregivers need a break"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Medication Management",
+          "description": "Secure storage and timely administration of all prescription medications"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Hospice Care",
+          "description": "Compassionate end-of-life care in partnership with local hospice agencies"
+        }
+      }
+    ]
+  }
+}
+</script>
+
+<!-- Additional SEO -->
+<meta name="theme-color" content="#f43f5e">
+<link rel="me" href="https://www.google.com/maps/place/Auburn+Senior+Care+LLC/@47.32374660746733,-122.28447972367888,15z">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body {
+font-family: 'Inter', sans-serif;
+background-color: #ffffff;
+color: #18181b;
+}
+/* Hide scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+display: none;
+}
+.no-scrollbar {
+-ms-overflow-style: none;
+scrollbar-width: none;
+}
+/* Animations */
+.reveal {
+opacity: 0;
+transform: translateY(20px);
+transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+will-change: transform, opacity;
+}
+.reveal.active {
+opacity: 1;
+transform: translateY(0);
+}
+.reveal-scale {
+opacity: 0;
+transform: scale(0.98) translateY(10px);
+transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-scale.active {
+opacity: 1;
+transform: scale(1) translateY(0);
+}
+/* Delays */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+/* Mobile Navigation */
+.mobile-menu {
+transform: translateX(100%);
+transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu.open {
+transform: translateX(0);
+}
+.mobile-overlay {
+opacity: 0;
+visibility: hidden;
+transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.mobile-overlay.open {
+opacity: 1;
+visibility: visible;
+}
+.hamburger-line {
+transition: all 0.3s ease;
+}
+.hamburger.active .hamburger-line:nth-child(1) {
+transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active .hamburger-line:nth-child(2) {
+opacity: 0;
+}
+.hamburger.active .hamburger-line:nth-child(3) {
+transform: rotate(-45deg) translate(7px, -6px);
+}
+@media (max-width: 768px) {
+a, button {
+min-height: 44px;
+min-width: 44px;
+}
+nav {
+top: 1rem;
+padding: 0 1rem;
+}
+nav > div {
+width: calc(100% - 2rem);
+max-width: 100%;
+}
+img {
+max-width: 100%;
+height: auto;
+}
+input, textarea, select {
+font-size: 16px; /* Prevents zoom on iOS */
+}
+}
+/* Gradients */
+.bg-mesh {
+background-image: radial-gradient(at 0% 0%, rgba(255, 228, 230, 0.3) 0px, transparent 50%),
+radial-gradient(at 100% 100%, rgba(204, 251, 241, 0.3) 0px, transparent 50%);
+}
+</style>
+<link id="all-fonts-link-font-geist" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist">.font-geist { font-family: 'Geist', sans-serif !important; }</style><link id="all-fonts-link-font-roboto" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-roboto">.font-roboto { font-family: 'Roboto', sans-serif !important; }</style><link id="all-fonts-link-font-montserrat" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-montserrat">.font-montserrat { font-family: 'Montserrat', sans-serif !important; }</style><link id="all-fonts-link-font-poppins" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-poppins">.font-poppins { font-family: 'Poppins', sans-serif !important; }</style><link id="all-fonts-link-font-playfair" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&amp;display=swap"><style id="all-fonts-style-font-playfair">.font-playfair { font-family: 'Playfair Display', serif !important; }</style><link id="all-fonts-link-font-instrument-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-instrument-serif">.font-instrument-serif { font-family: 'Instrument Serif', serif !important; }</style><link id="all-fonts-link-font-merriweather" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&amp;display=swap"><style id="all-fonts-style-font-merriweather">.font-merriweather { font-family: 'Merriweather', serif !important; }</style><link id="all-fonts-link-font-bricolage" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-bricolage">.font-bricolage { font-family: 'Bricolage Grotesque', sans-serif !important; }</style><link id="all-fonts-link-font-jakarta" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-jakarta">.font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif !important; }</style><link id="all-fonts-link-font-manrope" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-manrope">.font-manrope { font-family: 'Manrope', sans-serif !important; }</style><link id="all-fonts-link-font-space-grotesk" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-space-grotesk">.font-space-grotesk { font-family: 'Space Grotesk', sans-serif !important; }</style><link id="all-fonts-link-font-work-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-work-sans">.font-work-sans { font-family: 'Work Sans', sans-serif !important; }</style><link id="all-fonts-link-font-pt-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&amp;display=swap"><style id="all-fonts-style-font-pt-serif">.font-pt-serif { font-family: 'PT Serif', serif !important; }</style><link id="all-fonts-link-font-geist-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist-mono">.font-geist-mono { font-family: 'Geist Mono', monospace !important; }</style><link id="all-fonts-link-font-space-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap"><style id="all-fonts-style-font-space-mono">.font-space-mono { font-family: 'Space Mono', monospace !important; }</style><link id="all-fonts-link-font-quicksand" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-quicksand">.font-quicksand { font-family: 'Quicksand', sans-serif !important; }</style><link id="all-fonts-link-font-nunito" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-nunito">.font-nunito { font-family: 'Nunito', sans-serif !important; }</style></head>
+<body class="antialiased selection:bg-rose-100 selection:text-rose-900 relative">
+
+    <!-- Navigation -->
+    <nav class="fixed top-4 md:top-6 inset-x-0 z-50 flex justify-center pointer-events-none px-4">
+        <div class="pointer-events-auto reveal-scale active flex items-center gap-1 p-1.5 pl-3 md:pl-4 pr-1.5 bg-white/80 backdrop-blur-xl border border-zinc-200/50 rounded-full shadow-xl shadow-zinc-200/40 ring-1 ring-white/50 w-full max-w-7xl">
+            <a href="index.html" class="flex items-center gap-2 mr-2 md:mr-6 hover:opacity-80 transition-opacity">
+                <div class="bg-rose-100 p-1 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="heart-handshake" class="lucide lucide-heart-handshake w-4 h-4 text-rose-600 stroke-[1.5]"><path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762" class=""></path></svg>
+                </div>
+                <span class="text-sm font-semibold tracking-tight text-zinc-900">Harmony.</span>
+            </a>
+            
+            <div class="hidden md:flex gap-1 gap-x-1 gap-y-1 items-center flex-1">
+    <a href="index.html" class="hover:text-zinc-900 transition-colors hover:bg-zinc-50 text-xs font-medium text-zinc-500 rounded-full pt-1.5 pr-3 pb-1.5 pl-3">Home</a>
+    <a href="about-us.html" class="hover:text-zinc-900 transition-colors hover:bg-zinc-50 text-xs font-medium text-zinc-500 rounded-full pt-1.5 pr-3 pb-1.5 pl-3">About Us</a>
+    <a href="gallery.html" class="hover:text-zinc-900 transition-colors hover:bg-zinc-50 text-xs font-medium text-zinc-500 rounded-full pt-1.5 pr-3 pb-1.5 pl-3">Gallery</a>
+    <a href="services.html" class="hover:text-zinc-900 transition-colors hover:bg-zinc-50 text-xs font-medium text-zinc-900 bg-zinc-50 rounded-full pt-1.5 pr-3 pb-1.5 pl-3">Services</a>
+    <a href="contact-us.html" class="hover:text-zinc-900 transition-colors hover:bg-zinc-50 text-xs font-medium text-zinc-500 rounded-full pt-1.5 pr-3 pb-1.5 pl-3">Contact Us</a>
+</div>
+
+            <a href="contact-us.html" class="hidden md:flex group relative ml-2 inline-flex items-center justify-center overflow-hidden rounded-xl p-[1px] transition-transform duration-300 hover:scale-105 shadow-lg shadow-zinc-900/10">
+                <span class="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#fda4af_0%,#f43f5e_50%,#fda4af_100%)]"></span>
+                <span class="inline-flex items-center justify-center gap-2 transition-all group-hover:bg-zinc-50 text-xs font-medium text-zinc-900 bg-white w-full h-full rounded-xl pt-2.5 pr-5 pb-2.5 pl-5 backdrop-blur-xl">Schedule a tour</span>
+            </a>
+
+            <!-- Hamburger Menu Button (Mobile Only) -->
+            <button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 p-2 ml-auto" aria-label="Toggle menu">
+                <span class="hamburger-line w-5 h-0.5 bg-zinc-900 rounded"></span>
+                <span class="hamburger-line w-5 h-0.5 bg-zinc-900 rounded"></span>
+                <span class="hamburger-line w-5 h-0.5 bg-zinc-900 rounded"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-overlay" class="mobile-overlay fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden"></div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl z-50 md:hidden overflow-y-auto">
+        <div class="p-6">
+            <!-- Mobile Menu Header -->
+            <div class="flex items-center justify-between mb-8">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="bg-rose-100 p-1 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-handshake w-5 h-5 text-rose-600"><path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762"></path></svg>
+                    </div>
+                    <span class="text-lg font-semibold tracking-tight text-zinc-900">Harmony.</span>
+                </a>
+                <button id="mobile-menu-close" class="p-2 hover:bg-zinc-100 rounded-lg transition-colors" aria-label="Close menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-zinc-600"><path d="M18 6 6 18"></path><path d="M6 6l12 12"></path></svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Links -->
+            <nav class="flex flex-col gap-2">
+                <a href="index.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-zinc-50 transition-colors text-base font-medium text-zinc-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-zinc-400"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    Home
+                </a>
+                <a href="about-us.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-zinc-50 transition-colors text-base font-medium text-zinc-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-zinc-400"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    About Us
+                </a>
+                <a href="gallery.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-zinc-50 transition-colors text-base font-medium text-zinc-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-zinc-400"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+                    Gallery
+                </a>
+                <a href="services.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-zinc-50 transition-colors text-base font-medium text-zinc-900 bg-zinc-50">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-zinc-400"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                    Services
+                </a>
+                <a href="contact-us.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-zinc-50 transition-colors text-base font-medium text-zinc-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-zinc-400"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    Contact Us
+                </a>
+            </nav>
+
+            <!-- Mobile CTA -->
+            <div class="mt-8 pt-8 border-t border-zinc-200">
+                <a href="contact-us.html" class="flex items-center justify-center gap-2 w-full bg-zinc-900 text-white px-6 py-3.5 rounded-xl hover:bg-zinc-800 transition-colors font-medium">
+                    Schedule Tour
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 1. HERO SECTION -->
+    <section class="relative pt-24 md:pt-32 pb-16 md:pb-24 px-4 md:px-6 md:pt-48 md:pb-32 overflow-hidden bg-mesh">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="reveal active space-y-8">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-zinc-200 bg-white/50 backdrop-blur-sm text-zinc-500 text-[10px] font-medium tracking-wider uppercase">
+                        <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+                        Service Overview
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl md:text-7xl font-medium tracking-tight text-zinc-900 leading-[0.95]">
+                        Care designed <br class="">
+                        <span class="text-rose-700">around you.</span>
+                    </h1>
+                    <p class="text-lg text-zinc-500 max-w-md leading-relaxed">
+                        We move beyond standard assisted living to provide a bespoke care experience that adapts to the changing needs of every resident.
+                    </p>
+                    
+                    <div class="flex gap-4 pt-4">
+                        <div class="flex flex-col pl-4 border-l border-zinc-200">
+                            <span class="text-2xl font-semibold text-zinc-900">24/7</span>
+                            <span class="text-xs text-zinc-500 font-medium uppercase tracking-wide">Staffing</span>
+                        </div>
+                        <div class="flex flex-col pl-4 border-l border-zinc-200">
+                            <span class="text-2xl font-semibold text-zinc-900">1:3</span>
+                            <span class="text-xs text-zinc-500 font-medium uppercase tracking-wide">Ratio</span>
+                        </div>
+                        <div class="flex flex-col pl-4 border-l border-zinc-200">
+                            <span class="text-2xl font-semibold text-zinc-900">RN</span>
+                            <span class="text-xs text-zinc-500 font-medium uppercase tracking-wide">Oversight</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Abstract Service Visual -->
+                <div class="relative h-[400px] w-full reveal delay-200 active lg:block hidden">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-rose-50 via-white to-teal-50 rounded-3xl border border-zinc-100 shadow-2xl overflow-hidden flex items-center justify-center">
+                         <!-- Decorative Grid -->
+                         <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:2rem_2rem]"></div>
+                         
+                         <!-- Floating Cards -->
+                         <div class="absolute top-12 left-12 bg-white p-4 rounded-xl shadow-lg border border-zinc-100 animate-[bounce_4s_infinite]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-pulse w-6 h-6 text-rose-500"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"></path></svg>
+                         </div>
+                         <div class="absolute bottom-24 right-16 bg-white p-4 rounded-xl shadow-lg border border-zinc-100 animate-[bounce_5s_infinite]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-utensils w-6 h-6 text-orange-500"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path><path d="M7 2v20"></path><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path></svg>
+                         </div>
+                         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/80 backdrop-blur-md border border-zinc-200/50 p-6 rounded-2xl text-center shadow-xl">
+                            <span class="block text-sm font-semibold text-zinc-900 mb-1">Holistic Plan</span>
+                            <div class="flex gap-1 justify-center">
+                                <span class="w-1 h-1 bg-green-500 rounded-full"></span>
+                                <span class="w-1 h-1 bg-green-500 rounded-full"></span>
+                                <span class="w-1 h-1 bg-green-500 rounded-full"></span>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. OUR CARE APPROACH -->
+    <section id="approach" class="py-16 md:py-24 border-t border-zinc-100 bg-white">
+        <div class="max-w-6xl mx-auto px-4 md:px-6">
+            <div class="mb-16 md:w-2/3 reveal">
+                <h2 class="text-3xl font-medium tracking-tight text-zinc-900 mb-4">Our Approach</h2>
+                <p class="text-zinc-500 text-sm md:text-base">We believe care isn't a checklist—it's a relationship. Our process ensures that every resident feels understood, valued, and safe.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                <!-- Connector Line (Desktop) -->
+                <div class="hidden md:block absolute top-12 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-zinc-200 to-transparent z-0"></div>
+
+                <!-- Step 1 -->
+                <div class="relative z-10 group reveal delay-100">
+                    <div class="w-10 h-10 bg-white border border-zinc-200 rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:border-rose-200 group-hover:bg-rose-50 transition-colors">
+                        <span class="font-mono text-sm font-semibold text-zinc-400 group-hover:text-rose-600">01</span>
+                    </div>
+                    <h3 class="text-lg font-medium text-zinc-900 mb-2">Comprehensive Assessment</h3>
+                    <p class="text-xs text-zinc-500 leading-relaxed">Before admission, our RN performs a full health and lifestyle evaluation to understand medical needs, preferences, and personality.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative z-10 group reveal delay-200">
+                    <div class="w-10 h-10 bg-white border border-zinc-200 rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:border-rose-200 group-hover:bg-rose-50 transition-colors">
+                        <span class="font-mono text-sm font-semibold text-zinc-400 group-hover:text-rose-600">02</span>
+                    </div>
+                    <h3 class="text-lg font-medium text-zinc-900 mb-2">Personalized Care Plan</h3>
+                    <p class="text-xs text-zinc-500 leading-relaxed">We build a custom routine that balances safety with independence, including medication schedules, dietary needs, and social activities.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative z-10 group reveal delay-300">
+                    <div class="w-10 h-10 bg-white border border-zinc-200 rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:border-rose-200 group-hover:bg-rose-50 transition-colors">
+                        <span class="font-mono text-sm font-semibold text-zinc-400 group-hover:text-rose-600">03</span>
+                    </div>
+                    <h3 class="text-lg font-medium text-zinc-900 mb-2">Ongoing Adaptation</h3>
+                    <p class="text-xs text-zinc-500 leading-relaxed">Health needs change. We conduct regular re-assessments and maintain open lines of communication with families and doctors to adjust care instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. OUR SERVICES SECTION -->
+    <section id="services" class="py-16 md:py-24 bg-zinc-50/50 border-t border-zinc-100">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6 reveal">
+                <div class="">
+                    <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-zinc-900">Core Services</h2>
+                    <p class="text-zinc-500 mt-2 text-sm">Everything included in our standard level of care.</p>
+                </div>
+                <button class="text-xs font-medium text-rose-600 hover:text-rose-700 flex items-center gap-1 transition-colors">
+                    View Fee Structure <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="hover:border-zinc-300 hover:shadow-lg transition-all duration-300 group reveal-scale bg-white border-zinc-200 border rounded-2xl pt-6 pr-6 pb-6 pl-6 shadow-[0_4px_6px_rgba(0,_0,_0,_0.049),_0_9.6px_7.6px_rgba(0,_0,_0,_0.069),_0_18px_14.3px_rgba(0,_0,_0,_0.086),_0_32px_25.6px_rgba(0,_0,_0,_0.103),_0_60px_47.8px_rgba(0,_0,_0,_0.123),_0_143px_114.3px_rgba(0,_0,_0,_0.172)] backdrop-blur-xl">
+                    <div class="w-10 h-10 rounded-lg bg-zinc-50 flex items-center justify-center mb-4 text-zinc-600 group-hover:bg-rose-50 group-hover:text-rose-600 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-accessibility"><circle cx="16" cy="4" r="1"></circle><path d="m18 19 1-7-6 1"></path><path d="m5 8 3-3 5.5 3-2.36 4.68"></path><path d="M8 14h12"></path><path d="M11.68 18.84 10 22"></path></svg>
+                    </div>
+                    <h3 class="text-sm font-semibold text-zinc-900 mb-2">Assisted Living &amp; ADLs</h3>
+                    <p class="text-xs text-zinc-500 leading-relaxed">Dignified assistance with Activities of Daily Living including bathing, dressing, grooming, toileting, and mobility support.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="hover:border-zinc-300 hover:shadow-lg transition-all duration-300 group reveal-scale delay-100 bg-white border-zinc-200 border rounded-2xl pt-6 pr-6 pb-6 pl-6 shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)] backdrop-blur-xl">
+                    <div class="w-10 h-10 rounded-lg bg-zinc-50 flex items-center justify-center mb-4 text-zinc-600 group-hover:bg-teal-50 group-hover:text-teal-600 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pill"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"></path><path d="m8.5 8.5 7 7"></path></svg>
+                    </div>
+                    <h3 class="text-sm font-semibold text-zinc-900 mb-2">Medication Management</h3>
+                    <p class="text-xs text-zinc-500 leading-relaxed">Secure storage and timely administration of all prescription medications, including insulin and oxygen management.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="hover:border-zinc-300 hover:shadow-lg transition-all duration-300 group reveal-scale delay-200 bg-white border-zinc-200 border rounded-2xl pt-6 pr-6 pb-6 pl-6 shadow-[0_4px_6px_rgba(0,_0,_0,_0.049),_0_9.6px_7.6px_rgba(0,_0,_0,_0.069),_0_18px_14.3px_rgba(0,_0,_0,_0.086),_0_32px_25.6px_rgba(0,_0,_0,_0.103),_0_60px_47.8px_rgba(0,_0,_0,_0.123),_0_143px_114.3px_rgba(0,_0,_0,_0.172)] backdrop-blur-xl">
+                    <div class="w-10 h-10 rounded-lg bg-zinc-50 flex items-center justify-center mb-4 text-zinc-600 group-hover:bg-orange-50 group-hover:text-orange-600 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chef-hat"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"></path><line x1="6" x2="18" y1="17" y2="17"></line></svg>
+                    </div>
+                    <h3 class="text-sm font-semibold text-zinc-900 mb-2">Nutritious Dining</h3>
+                    <p class="text-xs text-zinc-500 leading-relaxed">Three home-cooked meals daily plus snacks. We cater to special diets (diabetic, low-sodium, pureed) with fresh ingredients.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="hover:border-zinc-300 hover:shadow-lg transition-all duration-300 group reveal-scale bg-white border-zinc-200 border rounded-2xl pt-6 pr-6 pb-6 pl-6 shadow-[0_4px_6px_rgba(0,_0,_0,_0.049),_0_9.6px_7.6px_rgba(0,_0,_0,_0.069),_0_18px_14.3px_rgba(0,_0,_0,_0.086),_0_32px_25.6px_rgba(0,_0,_0,_0.103),_0_60px_47.8px_rgba(0,_0,_0,_0.123),_0_143px_114.3px_rgba(0,_0,_0,_0.172)] backdrop-blur-xl">
+                    <div class="w-10 h-10 rounded-lg bg-zinc-50 flex items-center justify-center mb-4 text-zinc-600 group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path></svg>
+                    </div>
+                    <h3 class="text-sm font-semibold text-zinc-900 mb-2">Housekeeping &amp; Laundry</h3>
+                    <p class="text-xs text-zinc-500 leading-relaxed">Daily room tidying, weekly deep cleaning, and full personal laundry and linen services so residents can relax.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="hover:border-zinc-300 hover:shadow-lg transition-all duration-300 group reveal-scale delay-100 bg-white border-zinc-200 border rounded-2xl pt-6 pr-6 pb-6 pl-6 shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)] backdrop-blur-xl">
+                    <div class="w-10 h-10 rounded-lg bg-zinc-50 flex items-center justify-center mb-4 text-zinc-600 group-hover:bg-purple-50 group-hover:text-purple-600 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-2"><path d="M14 19a6 6 0 0 0-12 0"></path><circle cx="8" cy="9" r="4"></circle><path d="M22 19a6 6 0 0 0-6-6 4 4 0 1 0 0-8"></path></svg>
+                    </div>
+                    <h3 class="text-sm font-semibold text-zinc-900 mb-2">Engagement &amp; Activities</h3>
+                    <p class="text-xs text-zinc-500 leading-relaxed">Scheduled games, music therapy, light exercise, birthday celebrations, and holiday events to foster community.</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="hover:border-zinc-300 hover:shadow-lg transition-all duration-300 group reveal-scale delay-200 bg-white border-zinc-200 border rounded-2xl pt-6 pr-6 pb-6 pl-6 shadow-[0_4px_6px_rgba(0,_0,_0,_0.049),_0_9.6px_7.6px_rgba(0,_0,_0,_0.069),_0_18px_14.3px_rgba(0,_0,_0,_0.086),_0_32px_25.6px_rgba(0,_0,_0,_0.103),_0_60px_47.8px_rgba(0,_0,_0,_0.123),_0_143px_114.3px_rgba(0,_0,_0,_0.172)] backdrop-blur-xl">
+                    <div class="w-10 h-10 rounded-lg bg-zinc-50 flex items-center justify-center mb-4 text-zinc-600 group-hover:bg-emerald-50 group-hover:text-emerald-600 transition-colors">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-stethoscope"><path d="M4.8 2.3A.3.3 0 0 0 5 2h14a.3.3 0 0 0 .2.3v3.2a.3.3 0 0 0-.3.2l-6.6 3.4a.2.2 0 0 1-.2 0l-5-4.5a.3.3 0 0 0-.4 0"></path><path d="M11 22h2a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2Z"></path></svg>
+                    </div>
+                    <h3 class="text-sm font-semibold text-zinc-900 mb-2">Nurse Delegation</h3>
+                    <p class="text-xs text-zinc-500 leading-relaxed">Registered Nurse (RN) oversight for complex medical tasks, ensuring professional compliance and peace of mind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. OUR SPECIALTIES SECTION -->
+    <section class="py-16 md:py-24 bg-zinc-900 text-white relative overflow-hidden">
+        <!-- Background Glows -->
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-rose-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-teal-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
+            <div class="mb-16 reveal">
+                <span class="text-xs font-semibold tracking-wider text-rose-400 uppercase">Expert Care</span>
+                <h2 class="text-3xl md:text-4xl font-medium tracking-tight mt-2">Specialized Capabilities</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Spec 1 -->
+                <div class="group border-l border-zinc-700 pl-6 hover:border-rose-500 transition-colors duration-300 reveal delay-100">
+                    <h3 class="text-lg font-medium mb-3 group-hover:text-rose-400 transition-colors">Memory Care</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">Dedicated support for residents with Dementia and Alzheimer's, featuring secured exits and cognitive engagement.</p>
+                </div>
+                <!-- Spec 2 -->
+                <div class="group border-l border-zinc-700 pl-6 hover:border-rose-500 transition-colors duration-300 reveal delay-200">
+                    <h3 class="text-lg font-medium mb-3 group-hover:text-rose-400 transition-colors">Hospice Care</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">Compassionate end-of-life care in partnership with local hospice agencies to ensure comfort and dignity.</p>
+                </div>
+                <!-- Spec 3 -->
+                <div class="group border-l border-zinc-700 pl-6 hover:border-rose-500 transition-colors duration-300 reveal delay-300">
+                    <h3 class="text-lg font-medium mb-3 group-hover:text-rose-400 transition-colors">Respite Care</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">Short-term stays for seniors recovering from surgery or when primary caregivers need a break.</p>
+                </div>
+                <!-- Spec 4 -->
+                <div class="group border-l border-zinc-700 pl-6 hover:border-rose-500 transition-colors duration-300 reveal delay-300">
+                    <h3 class="text-lg font-medium mb-3 group-hover:text-rose-400 transition-colors">Diabetes Care</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">Blood glucose monitoring, insulin administration, and dietary planning managed by trained staff.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FACILITY AMENITIES -->
+    <section id="amenities" class="py-16 md:py-24 bg-white border-t border-zinc-100">
+        <div class="max-w-6xl mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <h2 class="text-3xl font-medium tracking-tight text-zinc-900 mb-6">Home Comforts &amp; Amenities</h2>
+                    <p class="text-zinc-500 text-sm mb-8 leading-relaxed">
+                        Our home is designed to be just that—a home. Not a facility. We prioritize accessibility without sacrificing warmth and style.
+                    </p>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <div class="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+                            </div>
+                            <span class="text-sm text-zinc-700 font-medium">Private &amp; Semi-Private Rooms</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+                            </div>
+                            <span class="text-sm text-zinc-700 font-medium">Wheelchair Accessible (Roll-in Showers)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+                            </div>
+                            <span class="text-sm text-zinc-700 font-medium">Secure Fenced Outdoor Garden</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+                            </div>
+                            <span class="text-sm text-zinc-700 font-medium">High-Speed Wi-Fi &amp; Cable TV</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+                            </div>
+                            <span class="text-sm text-zinc-700 font-medium">Emergency Call System in All Rooms</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="relative h-[400px] w-full bg-zinc-100 rounded-3xl overflow-hidden shadow-2xl reveal-scale delay-200 group">
+                    <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg" alt="Living Area" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 text-white">
+                        <span class="px-2 py-1 bg-white/20 backdrop-blur rounded text-[10px] font-semibold uppercase tracking-widest">Facility</span>
+                        <p class="text-xl font-medium mt-2">Spacious Living Areas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. OUR PHILOSOPHY SECTION -->
+    <section class="py-16 md:py-24 bg-zinc-50 border-t border-zinc-100">
+        <div class="max-w-4xl mx-auto px-4 md:px-6 text-center reveal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote w-12 h-12 text-rose-200 mx-auto mb-6"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1Z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1Z"></path></svg>
+            <h2 class="text-2xl md:text-3xl font-medium leading-relaxed text-zinc-800 tracking-tight">
+                "Our philosophy is simple: we treat every resident with the same love, respect, and patience we would want for our own parents. Quality of life isn't just about medical care; it's about joy, purpose, and dignity."
+            </h2>
+            <div class="mt-8 flex flex-col items-center">
+                <span class="text-sm font-semibold text-zinc-900">Administrator</span>
+                <span class="text-xs text-zinc-500">Harmony AFH</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FOOTER SECTION -->
+    <footer class="border-t border-zinc-200 bg-white pt-12 md:pt-20 pb-8 md:pb-12 px-4 md:px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+            <div class="space-y-4">
+                <div class="flex items-center gap-2">
+                    <div class="bg-rose-100 p-1 rounded-full">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="heart-handshake" class="lucide lucide-heart-handshake w-4 h-4 text-rose-600 stroke-[1.5]"><path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762"></path></svg>
+                    </div>
+                    <span class="text-lg font-semibold text-zinc-900 tracking-tight">Harmony AFH</span>
+                </div>
+                <p class="text-zinc-500 text-xs max-w-xs leading-relaxed">
+                    Providing dignified, loving care for our community's seniors in a comfortable home setting.
+                </p>
+                <div class="flex gap-4 pt-2">
+                     <a href="#" class="text-zinc-400 hover:text-rose-500 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                     <a href="#" class="text-zinc-400 hover:text-rose-500 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
+                </div>
+            </div>
+            
+            <div class="flex gap-16">
+                <div class="flex flex-col gap-3">
+                    <span class="text-[10px] font-semibold text-zinc-900 uppercase tracking-wider">Services</span>
+                    <a href="services.html" class="text-xs text-zinc-500 hover:text-zinc-900 transition-colors">Assisted Living</a>
+                    <a href="services.html" class="text-xs text-zinc-500 hover:text-zinc-900 transition-colors">Memory Care</a>
+                    <a href="services.html" class="text-xs text-zinc-500 hover:text-zinc-900 transition-colors">Respite Care</a>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <span class="text-[10px] font-semibold text-zinc-900 uppercase tracking-wider">Company</span>
+                    <a href="about-us.html" class="text-xs text-zinc-500 hover:text-zinc-900 transition-colors">About Us</a>
+                    <a href="index.html" class="text-xs text-zinc-500 hover:text-zinc-900 transition-colors">Careers</a>
+                    <a href="contact-us.html" class="text-xs text-zinc-500 hover:text-zinc-900 transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-zinc-100 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-zinc-400">
+            <span>© 2024 Harmony AFH. All rights reserved.</span>
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-zinc-800">Privacy Policy</a>
+                <a href="#" class="hover:text-zinc-800">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Animation Observer -->
+    <script>
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal, .reveal-scale').forEach((el) => {
+            observer.observe(el);
+        });
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileOverlay = document.getElementById('mobile-overlay');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const hamburger = mobileMenuBtn;
+
+        function openMobileMenu() {
+            if (mobileMenu && mobileOverlay && hamburger) {
+                mobileMenu.classList.add('open');
+                mobileOverlay.classList.add('open');
+                hamburger.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeMobileMenu() {
+            if (mobileMenu && mobileOverlay && hamburger) {
+                mobileMenu.classList.remove('open');
+                mobileOverlay.classList.remove('open');
+                hamburger.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', openMobileMenu);
+            if (mobileMenuClose) mobileMenuClose.addEventListener('click', closeMobileMenu);
+            if (mobileOverlay) mobileOverlay.addEventListener('click', closeMobileMenu);
+
+            if (mobileMenu) {
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', closeMobileMenu);
+                });
+            }
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('open')) {
+                    closeMobileMenu();
+                }
+            });
+        }
+    </script>
+
+</body></html>
