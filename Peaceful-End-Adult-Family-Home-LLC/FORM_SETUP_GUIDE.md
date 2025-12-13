@@ -27,7 +27,7 @@ Formspree is the simplest option and requires no backend setup.
 
 4. **Configure Email Notifications**
    - In Formspree dashboard, go to Settings → Notifications
-   - Add your email: `hello@peacefulendafh.com`
+   - Add your email: `hello@peacefullendafh.site`
    - Customize the email template if desired
 
 5. **Test the Form**
