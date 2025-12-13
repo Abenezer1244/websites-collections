@@ -97,6 +97,13 @@ transform: translateX(0);
 display: flex !important;
 visibility: visible !important;
 opacity: 1 !important;
+pointer-events: auto !important;
+}
+}
+/* Hide on desktop */
+@media (min-width: 768px) {
+#mobile-menu-toggle {
+display: none !important;
 }
 }
 .mobile-menu-overlay {
@@ -164,8 +171,8 @@ visibility: visible;
 /* Enhanced Touch-friendly targets */
 @media (max-width: 768px) {
   a, button, input, select, textarea {
-    min-height: 44px;
-    min-width: 44px;
+min-height: 44px;
+min-width: 44px;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
   }
   .touch-target-large {
@@ -178,10 +185,10 @@ visibility: visible;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  }
-  .gallery-card {
-    transform: rotateY(0deg) rotateX(0deg) !important;
-  }
+}
+.gallery-card {
+transform: rotateY(0deg) rotateX(0deg) !important;
+}
 }
 
 /* Advanced Responsive Typography */
@@ -322,7 +329,7 @@ body {
                     Schedule a Tour
                 </a>
                 <!-- Mobile Menu Toggle -->
-                <button id="mobile-menu-toggle" class="md:hidden w-10 h-10 flex items-center justify-center bg-white border-2 border-black rounded-lg brutal-shadow-sm active:translate-y-0.5 z-50 relative" aria-label="Toggle menu">
+                <button id="mobile-menu-toggle" class="flex md:hidden w-10 h-10 items-center justify-center bg-white border-2 border-black rounded-lg brutal-shadow-sm active:translate-y-0.5 z-50 relative" aria-label="Toggle menu" style="display: flex !important;">
                     <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
                     <i data-lucide="x" id="close-icon" class="w-6 h-6 hidden"></i>
                     <!-- Fallback text for when icons don't load -->
