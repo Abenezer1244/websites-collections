@@ -71,10 +71,14 @@ opacity: 0.03;
 .mobile-menu.open {
   transform: translateX(0);
 }
-/* Show mobile menu on mobile devices when needed */
+/* Show mobile menu container on mobile devices (but it starts off-screen) */
 @media (max-width: 767px) {
   #mobile-menu {
     display: block !important;
+    transform: translateX(100%) !important;
+  }
+  #mobile-menu.open {
+    transform: translateX(0) !important;
   }
 }
 /* Hide mobile menu on desktop */
@@ -122,10 +126,16 @@ display: none !important;
   opacity: 1;
   visibility: visible;
 }
-/* Show mobile menu overlay on mobile devices when needed */
+/* Show mobile menu overlay container on mobile (but it starts hidden) */
 @media (max-width: 767px) {
   #mobile-menu-overlay {
     display: block !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+  #mobile-menu-overlay.open {
+    opacity: 1 !important;
+    visibility: visible !important;
   }
 }
 /* Hide mobile menu overlay on desktop */
