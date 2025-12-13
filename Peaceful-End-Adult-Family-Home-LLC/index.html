@@ -280,9 +280,18 @@ display: none;
   transform: translateX(100%);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-overflow-scrolling: touch;
+  will-change: transform;
 }
 .mobile-menu.open {
   transform: translateX(0);
+}
+/* Ensure mobile menu button is always visible on mobile */
+@media (max-width: 767px) {
+  #mobile-menu-toggle {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
 }
 .mobile-menu-overlay {
   opacity: 0;
@@ -522,9 +531,11 @@ body {
                     Schedule a Tour
                 </a>
                 <!-- Mobile Menu Toggle -->
-                <button id="mobile-menu-toggle" class="md:hidden w-10 h-10 flex items-center justify-center bg-white border-2 border-black rounded-lg brutal-shadow-sm active:translate-y-0.5" aria-label="Toggle menu">
+                <button id="mobile-menu-toggle" class="md:hidden w-10 h-10 flex items-center justify-center bg-white border-2 border-black rounded-lg brutal-shadow-sm active:translate-y-0.5 z-50 relative" aria-label="Toggle menu">
                     <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
                     <i data-lucide="x" id="close-icon" class="w-6 h-6 hidden"></i>
+                    <!-- Fallback text for when icons don't load -->
+                    <span class="sr-only">Menu</span>
                 </button>
             </div>
         </div>
