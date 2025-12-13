@@ -41,7 +41,7 @@ To connect your Google Business Profile:
      - Name: Restwell AFH
      - Address: 123 Serenity Lane, Seattle, WA 98101
      - Phone: (555) 123-4567
-     - Website: https://www.restwellafh.com
+     - Website: https://restwellafh.site
 
 2. **Verify Your Business**
    - Complete the verification process (mail, phone, or email)
@@ -69,7 +69,7 @@ To connect your Google Business Profile:
 
 ### Important Notes
 
-- **Update Domain**: Replace `https://www.restwellafh.com` with your actual domain in:
+- **Domain**: All domain references have been updated to `restwellafh.site`:
   - All canonical URLs
   - Open Graph URLs
   - Schema markup URLs
@@ -109,6 +109,38 @@ To connect your Google Business Profile:
 - Safari (latest)
 - Edge (latest)
 - Mobile browsers (iOS Safari, Chrome Mobile)
+
+## Deployment
+
+This website is deployed on **Vercel** at:
+- **Production URL**: https://restwellafh.site
+- **Vercel Dashboard**: Manage deployments, domains, and settings through your Vercel account
+
+### Domain Configuration
+
+The domain `restwellafh.site` is configured to point to the Vercel deployment. All domain references in the codebase have been updated to use `restwellafh.site`.
+
+### Custom Domain Setup on Vercel
+
+1. **Add Domain in Vercel Dashboard**
+   - Go to your project settings in Vercel
+   - Navigate to "Domains"
+   - Add `restwellafh.site` and `www.restwellafh.site`
+
+2. **Configure DNS Records**
+   - Add an A record pointing to Vercel's IP (Vercel will provide this)
+   - Or add a CNAME record pointing to your Vercel deployment URL
+   - Vercel will provide specific DNS instructions in the dashboard
+
+3. **SSL Certificate**
+   - Vercel automatically provisions SSL certificates for custom domains
+   - HTTPS will be enabled automatically once DNS propagates
+
+### Automatic Deployments
+
+- **Git Integration**: Pushes to the `main` branch automatically trigger deployments
+- **Preview Deployments**: Pull requests get preview URLs automatically
+- **Build Settings**: Static HTML files are served directly (no build step required)
 
 ## License
 
