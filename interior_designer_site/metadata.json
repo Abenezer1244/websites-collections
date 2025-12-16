@@ -1,0 +1,7 @@
+{
+  "name": "Poliform Interior Design Studio",
+  "description": "A high-end, minimalist interior design platform featuring contemporary aesthetics, a premium visual gallery, and an AI-powered design consultant powered by Gemini.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
