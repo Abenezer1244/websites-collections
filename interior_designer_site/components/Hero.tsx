@@ -32,8 +32,8 @@ const Hero: React.FC = () => {
 
         {/* Video Preview / Mini Card - Center Bottom */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden lg:flex glass p-2 rounded-2xl w-48 h-32 overflow-hidden border border-white/30 cursor-pointer hover:scale-105 transition-transform">
-          <img 
-            src="https://images.unsplash.com/photo-1616486341351-79b520b0e65b?auto=format&fit=crop&q=80&w=600" 
+          <img
+            src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=400&fit=crop"
             className="w-full h-full object-cover rounded-xl"
             alt="Interior detail"
           />

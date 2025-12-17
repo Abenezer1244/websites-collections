@@ -35,9 +35,9 @@ const GalleryGrid: React.FC = () => {
 
         {/* Small Image Card */}
         <div className="relative rounded-[40px] overflow-hidden h-[230px] shadow-sm group">
-          <img 
-            src="https://images.unsplash.com/photo-1556912177-c598a5270817?auto=format&fit=crop&q=80&w=1000" 
-            alt="Interior detail" 
+          <img
+            src="https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77?w=1000&h=667&fit=crop"
+            alt="Interior detail"
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
           />
           <div className="absolute inset-0 bg-black/10 hover:bg-black/0 transition-colors"></div>
