@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hebron Care Adult Family Home LLC | Compassionate Senior Living</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&amp;family=Inter:wght@200;300;400;500&amp;display=swap" rel="stylesheet">
+<style>
+/* Custom scrollbar for luxury feel */
+::-webkit-scrollbar {
+width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+background: #FAFAF8;
+}
+::-webkit-scrollbar-thumb {
+background: #D1D5DB;
+border-radius: 0.25rem;
+}
+::-webkit-scrollbar-thumb:hover {
+background: #0F4C5C;
+}
+/* Removing default input styles */
+input:focus, textarea:focus, select:focus {
+outline: none;
+box-shadow: none;
+}
+/* Native Select appearance removal for custom styling */
+select {
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+}
+/* Marquee Animation */
+@keyframes scrollX {
+0% { transform: translateX(0); }
+100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+animation: scrollX 60s linear infinite;
+width: max-content;
+}
+.animate-marquee:hover {
+animation-play-state: paused;
+}
+/* Hide scrollbar for the marquee wrapper */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+</style></head>
+<body class="bg-[#FAFAF8] text-[#2B2B2B] font-['Inter'] font-light antialiased selection:bg-[#C9A24D] selection:text-white overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 left-0 border-b border-[#0F4C5C]/5 bg-[#FAFAF8]/95 backdrop-blur-md transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative z-50">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div class="w-8 h-8 rounded-full bg-[#0F4C5C] text-white flex items-center justify-center">
+                    <iconify-icon icon="solar:home-heart-linear" width="18" stroke-width="1.5"></iconify-icon>
+                </div>
+                <span class="font-['Cormorant_Garamond'] text-lg uppercase tracking-widest font-medium text-[#0F4C5C]">Hebron Care</span>
+            </a>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-normal text-[#2B2B2B]/80">
+                <a href="index.html" class="text-[#0F4C5C] transition-colors">Home</a>
+                <a href="about-us.html" class="hover:text-[#0F4C5C] transition-colors">About Us</a>
+                <a href="gallery.html" class="hover:text-[#0F4C5C] transition-colors">Gallery</a>
+                <a href="services.html" class="hover:text-[#0F4C5C] transition-colors">Services</a>
+                <a href="contact.html" class="hover:text-[#0F4C5C] transition-colors">Contact Us</a>
+            </div>
+
+            <a href="contact.html" class="hidden md:flex items-center gap-2 bg-[#0F4C5C] text-white px-5 py-2.5 rounded-full text-xs font-normal tracking-wide hover:bg-[#0F4C5C]/90 transition-all hover:shadow-lg hover:shadow-[#0F4C5C]/20">
+                <span>Schedule Tour</span>
+                <iconify-icon icon="solar:calendar-add-linear" width="16" stroke-width="1.5"></iconify-icon>
+            </a>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-toggle" class="md:hidden text-[#0F4C5C] p-2 hover:bg-[#0F4C5C]/5 rounded-full transition-colors focus:outline-none">
+                <iconify-icon icon="solar:hamburger-menu-linear" width="24" stroke-width="1.5"></iconify-icon>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col pt-28 px-6 pb-6 shadow-2xl">
+            <button id="menu-close" class="absolute top-6 right-6 text-[#0F4C5C] p-2 hover:bg-[#0F4C5C]/5 rounded-full transition-colors">
+                <iconify-icon icon="solar:close-circle-linear" width="32" stroke-width="1.5"></iconify-icon>
+            </button>
+
+            <div class="flex flex-col gap-6 text-xl font-['Cormorant_Garamond'] font-normal tracking-tight text-[#0F4C5C]">
+                <a href="index.html" class="mobile-link py-3 border-b border-[#0F4C5C]/10 flex justify-between items-center group">
+                    Home
+                    <iconify-icon icon="solar:arrow-right-linear" stroke-width="1.5" class="opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 duration-300"></iconify-icon>
+                </a>
+                <a href="about-us.html" class="mobile-link py-3 border-b border-[#0F4C5C]/10 flex justify-between items-center group">
+                    About Us
+                    <iconify-icon icon="solar:arrow-right-linear" stroke-width="1.5" class="opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 duration-300"></iconify-icon>
+                </a>
+                <a href="gallery.html" class="mobile-link py-3 border-b border-[#0F4C5C]/10 flex justify-between items-center group">
+                    Gallery
+                    <iconify-icon icon="solar:arrow-right-linear" stroke-width="1.5" class="opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 duration-300"></iconify-icon>
+                </a>
+                <a href="services.html" class="mobile-link py-3 border-b border-[#0F4C5C]/10 flex justify-between items-center group">
+                    Services
+                    <iconify-icon icon="solar:arrow-right-linear" stroke-width="1.5" class="opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 duration-300"></iconify-icon>
+                </a>
+                <a href="contact.html" class="mobile-link py-3 border-b border-[#0F4C5C]/10 flex justify-between items-center group">
+                    Contact Us
+                    <iconify-icon icon="solar:arrow-right-linear" stroke-width="1.5" class="opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 duration-300"></iconify-icon>
+                </a>
+            </div>
+
+            <div class="mt-auto mb-8">
+                <a href="contact.html" class="mobile-link w-full bg-[#0F4C5C] text-white py-4 rounded-xl flex items-center justify-center gap-2 text-sm font-sans font-normal tracking-wide shadow-lg shadow-[#0F4C5C]/20">
+                    <span>Schedule Tour</span>
+                    <iconify-icon icon="solar:calendar-add-linear" width="18" stroke-width="1.5"></iconify-icon>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-b from-[#C9A24D]/5 to-transparent pointer-events-none"></div>
+        <div class="absolute -left-20 top-40 w-96 h-96 bg-[#0F4C5C]/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#0F4C5C]/20 bg-white/50 backdrop-blur-sm mb-6">
+                <iconify-icon icon="solar:heart-angle-linear" class="text-[#C9A24D]" width="14" stroke-width="1.5"></iconify-icon>
+                <span class="text-xs tracking-wide uppercase font-normal text-[#0F4C5C]">Licensed Adult Family Home</span>
+            </div>
+            
+            <h1 class="font-['Cormorant_Garamond'] text-5xl md:text-7xl lg:text-8xl leading-[1.1] font-normal tracking-tight text-[#0F4C5C] mb-6">
+                Compassionate. Specialized. <br>
+                <span class="italic text-[#C9A24D]">Premium</span> Adult Care.
+            </h1>
+            
+            <p class="text-lg md:text-xl text-[#2B2B2B]/70 max-w-2xl mx-auto leading-relaxed mb-10 font-extralight">
+                Welcome to Hebron Care Adult Family Home LLC. Where dignified living meets exceptional round-the-clock care in a warm, family-like environment tailored to your loved ones.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#take-action" class="w-full sm:w-auto bg-[#0F4C5C] text-white h-12 px-8 rounded-full flex items-center justify-center gap-2 text-sm font-normal tracking-wide hover:shadow-xl hover:shadow-[#0F4C5C]/20 transition-all transform hover:-translate-y-0.5">
+                    Schedule a Tour
+                    <iconify-icon icon="solar:arrow-right-linear" width="18" stroke-width="1.5"></iconify-icon>
+                </a>
+                <a href="tel:+10000000000" class="w-full sm:w-auto h-12 px-8 rounded-full border border-[#0F4C5C]/20 text-[#0F4C5C] flex items-center justify-center gap-2 text-sm font-normal hover:bg-[#0F4C5C]/5 transition-all">
+                    <iconify-icon icon="solar:phone-calling-linear" width="18" stroke-width="1.5"></iconify-icon>
+                    Call Us Today
+                </a>
+            </div>
+
+            <!-- Trust Grid -->
+            <div class="mt-16 pt-8 border-t border-[#0F4C5C]/10 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+                <div class="flex flex-col items-center gap-2">
+                    <iconify-icon icon="solar:clock-circle-linear" class="text-[#C9A24D]" width="24" stroke-width="1.5"></iconify-icon>
+                    <span class="text-xs text-[#2B2B2B]/60 font-normal">24/7 Awake Staff</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <iconify-icon icon="solar:shield-check-linear" class="text-[#C9A24D]" width="24" stroke-width="1.5"></iconify-icon>
+                    <span class="text-xs text-[#2B2B2B]/60 font-normal">Safe Environment</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <iconify-icon icon="solar:user-heart-linear" class="text-[#C9A24D]" width="24" stroke-width="1.5"></iconify-icon>
+                    <span class="text-xs text-[#2B2B2B]/60 font-normal">Personalized Plans</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <iconify-icon icon="solar:home-smile-linear" class="text-[#C9A24D]" width="24" stroke-width="1.5"></iconify-icon>
+                    <span class="text-xs text-[#2B2B2B]/60 font-normal">Family Atmosphere</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-20 px-6 bg-white border-y border-[#0F4C5C]/5">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+            <div class="relative group">
+                <div class="aspect-[3/4] rounded-2xl overflow-hidden bg-[#FAFAF8] border border-[#0F4C5C]/10 relative">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-[#0F4C5C]/10 to-transparent"></div>
+                    <div class="absolute inset-0 flex items-center justify-center text-[#0F4C5C]/20">
+                        <iconify-icon icon="solar:users-group-two-rounded-linear" width="120" stroke-width="0.5"></iconify-icon>
+                    </div>
+                    <div class="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur p-4 rounded-xl border border-[#0F4C5C]/10 shadow-sm">
+                        <p class="font-['Cormorant_Garamond'] text-[#0F4C5C] text-lg italic tracking-tight">"A true home where dignity, respect, and independence are celebrated daily."</p>
+                    </div>
+                </div>
+                <div class="absolute -inset-4 border border-[#C9A24D]/30 rounded-[20px] -z-10 translate-x-2 translate-y-2"></div>
+            </div>
+
+            <div>
+                <span class="text-[#C9A24D] text-xs font-medium tracking-widest uppercase mb-2 block">Our Philosophy</span>
+                <h2 class="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-normal text-[#0F4C5C] mb-6 tracking-tight">Why Families Trust Hebron Care</h2>
+                <div class="space-y-6 text-[#2B2B2B]/80 font-extralight leading-relaxed">
+                    <p>
+                        At Hebron Care Adult Family Home LLC, we understand that transitioning a loved one to a care facility is a profound decision. That is why we have intentionally designed our space to feel less like a facility and exactly like a home. 
+                    </p>
+                    <p>
+                        With a low resident-to-staff ratio, we guarantee that every individual receives attentive, unwavering, and personalized care. Our highly trained caregivers are selected not just for their clinical excellence, but for their boundless empathy and dedication to senior wellbeing.
+                    </p>
+                    <p>
+                        We foster an environment that respects privacy while encouraging social engagement, ensuring your loved ones live their golden years with purpose, joy, and the highest standard of safety.
+                    </p>
+                </div>
+                
+                <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-6 h-6 rounded-full bg-[#0F4C5C]/10 flex items-center justify-center text-[#0F4C5C]">
+                            <iconify-icon icon="solar:check-circle-linear" width="14" stroke-width="1.5"></iconify-icon>
+                        </div>
+                        <span class="text-sm font-normal">State Licensed Facility</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-6 h-6 rounded-full bg-[#0F4C5C]/10 flex items-center justify-center text-[#0F4C5C]">
+                            <iconify-icon icon="solar:check-circle-linear" width="14" stroke-width="1.5"></iconify-icon>
+                        </div>
+                        <span class="text-sm font-normal">Nutritious Home Cooked Meals</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-6 h-6 rounded-full bg-[#0F4C5C]/10 flex items-center justify-center text-[#0F4C5C]">
+                            <iconify-icon icon="solar:check-circle-linear" width="14" stroke-width="1.5"></iconify-icon>
+                        </div>
+                        <span class="text-sm font-normal">Medication Management</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-6 h-6 rounded-full bg-[#0F4C5C]/10 flex items-center justify-center text-[#0F4C5C]">
+                            <iconify-icon icon="solar:check-circle-linear" width="14" stroke-width="1.5"></iconify-icon>
+                        </div>
+                        <span class="text-sm font-normal">Daily Engaging Activities</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Expertise Section -->
+    <section id="expertise" class="py-24 px-6 bg-[#FAFAF8]">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-[#C9A24D] text-xs font-medium tracking-widest uppercase mb-2 block">Comprehensive Services</span>
+                <h2 class="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-normal text-[#0F4C5C] tracking-tight mb-4">Our Expertise in Care</h2>
+                <p class="text-[#2B2B2B]/60 max-w-xl mx-auto font-light">Delivering tailored support to meet the unique physical, emotional, and cognitive needs of our residents.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-[#0F4C5C]/5 hover:border-[#C9A24D]/30 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] group">
+                    <div class="w-12 h-12 bg-[#0F4C5C]/5 rounded-xl flex items-center justify-center text-[#0F4C5C] mb-6 group-hover:bg-[#0F4C5C] group-hover:text-white transition-colors">
+                        <iconify-icon icon="solar:hand-heart-linear" width="24" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="font-['Cormorant_Garamond'] text-2xl font-normal tracking-tight text-[#0F4C5C] mb-2">Assisted Living</h3>
+                    <p class="text-sm text-[#2B2B2B]/70 font-light leading-relaxed mb-4">
+                        Providing the perfect balance of independence and support. We assist with daily routines while respecting personal autonomy.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-2xl border border-[#0F4C5C]/5 hover:border-[#C9A24D]/30 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] group">
+                    <div class="w-12 h-12 bg-[#0F4C5C]/5 rounded-xl flex items-center justify-center text-[#0F4C5C] mb-6 group-hover:bg-[#0F4C5C] group-hover:text-white transition-colors">
+                        <iconify-icon icon="solar:brain-linear" width="24" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="font-['Cormorant_Garamond'] text-2xl font-normal tracking-tight text-[#0F4C5C] mb-2">Memory Care</h3>
+                    <p class="text-sm text-[#2B2B2B]/70 font-light leading-relaxed mb-4">
+                        Specialized, compassionate care for individuals with Alzheimer's or dementia, focusing on safety, validation, and cognitive engagement.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-2xl border border-[#0F4C5C]/5 hover:border-[#C9A24D]/30 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] group">
+                    <div class="w-12 h-12 bg-[#0F4C5C]/5 rounded-xl flex items-center justify-center text-[#0F4C5C] mb-6 group-hover:bg-[#0F4C5C] group-hover:text-white transition-colors">
+                        <iconify-icon icon="solar:pill-linear" width="24" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="font-['Cormorant_Garamond'] text-2xl font-normal tracking-tight text-[#0F4C5C] mb-2">Medication Management</h3>
+                    <p class="text-sm text-[#2B2B2B]/70 font-light leading-relaxed mb-4">
+                        Strict protocols to ensure all prescriptions are administered accurately and timely, coordinating closely with physicians.
+                    </p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white p-8 rounded-2xl border border-[#0F4C5C]/5 hover:border-[#C9A24D]/30 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] group">
+                    <div class="w-12 h-12 bg-[#0F4C5C]/5 rounded-xl flex items-center justify-center text-[#0F4C5C] mb-6 group-hover:bg-[#0F4C5C] group-hover:text-white transition-colors">
+                        <iconify-icon icon="solar:calendar-linear" width="24" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="font-['Cormorant_Garamond'] text-2xl font-normal tracking-tight text-[#0F4C5C] mb-2">Respite Care</h3>
+                    <p class="text-sm text-[#2B2B2B]/70 font-light leading-relaxed mb-4">
+                        Short-term care solutions offering primary caregivers a much-needed break while ensuring their loved one remains in expert hands.
+                    </p>
+                </div>
+
+                 <!-- Service 5 -->
+                 <div class="bg-white p-8 rounded-2xl border border-[#0F4C5C]/5 hover:border-[#C9A24D]/30 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] group">
+                    <div class="w-12 h-12 bg-[#0F4C5C]/5 rounded-xl flex items-center justify-center text-[#0F4C5C] mb-6 group-hover:bg-[#0F4C5C] group-hover:text-white transition-colors">
+                        <iconify-icon icon="solar:cup-hot-linear" width="24" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="font-['Cormorant_Garamond'] text-2xl font-normal tracking-tight text-[#0F4C5C] mb-2">Daily Living Activities</h3>
+                    <p class="text-sm text-[#2B2B2B]/70 font-light leading-relaxed mb-4">
+                        Gentle assistance with bathing, dressing, grooming, and mobility, always prioritizing the resident's dignity and comfort.
+                    </p>
+                </div>
+                
+                 <!-- Service 6 -->
+                 <div class="bg-white p-8 rounded-2xl border border-[#0F4C5C]/5 hover:border-[#C9A24D]/30 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] group">
+                    <div class="w-12 h-12 bg-[#0F4C5C]/5 rounded-xl flex items-center justify-center text-[#0F4C5C] mb-6 group-hover:bg-[#0F4C5C] group-hover:text-white transition-colors">
+                        <iconify-icon icon="solar:heart-angle-linear" width="24" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="font-['Cormorant_Garamond'] text-2xl font-normal tracking-tight text-[#0F4C5C] mb-2">Hospice Support</h3>
+                    <p class="text-sm text-[#2B2B2B]/70 font-light leading-relaxed mb-4">
+                        Partnering with specialized agencies to provide end-of-life care that focuses on pain relief, comfort, and emotional support.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section (Continuous Gliding) -->
+    <section id="testimonials" class="py-24 relative bg-white overflow-hidden">
+        <div class="absolute right-0 top-0 w-64 h-64 bg-[#C9A24D]/5 rounded-bl-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 mb-12 flex flex-col items-center text-center">
+            <span class="text-[#C9A24D] text-xs font-medium tracking-widest uppercase mb-2 block">Family Stories</span>
+            <h2 class="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-normal text-[#0F4C5C] tracking-tight mb-4">Hear From Our Families</h2>
+            <div class="flex gap-1 text-[#C9A24D]">
+                <iconify-icon icon="solar:star-bold" width="20"></iconify-icon>
+                <iconify-icon icon="solar:star-bold" width="20"></iconify-icon>
+                <iconify-icon icon="solar:star-bold" width="20"></iconify-icon>
+                <iconify-icon icon="solar:star-bold" width="20"></iconify-icon>
+                <iconify-icon icon="solar:star-bold" width="20"></iconify-icon>
+            </div>
+        </div>
+
+        <!-- Marquee Container -->
+        <div class="relative w-full flex overflow-hidden no-scrollbar bg-white py-4">
+            <div class="flex animate-marquee">
+                <!-- Set of 15 Testimonials -->
+                <div class="flex w-max">
+                    <div class="w-[300px] shrink-0 bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm mx-3">
+                        <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"The care is exceptional. We finally have peace of mind knowing Dad is safe."</p>
+                        <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">Sarah M.</p>
+                    </div>
+                    <div class="w-[300px] shrink-0 bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm mx-3">
+                        <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"It truly feels just like home. The atmosphere is so warm and welcoming."</p>
+                        <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">David L.</p>
+                    </div>
+                    <div class="w-[300px] shrink-0 bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm mx-3">
+                        <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"The staff is so attentive to Mom's specific dietary and medical needs."</p>
+                        <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">Emily R.</p>
+                    </div>
+                    <div class="w-[300px] shrink-0 bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm mx-3">
+                        <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"Clean, safe, and filled with love. I couldn't ask for a better place."</p>
+                        <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">Michael T.</p>
+                    </div>
+                    <div class="w-[300px] shrink-0 bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm mx-3">
+                        <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"Mom loves the home-cooked meals. She says it's better than a restaurant."</p>
+                        <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">Jessica B.</p>
+                    </div>
+                    <div class="w-[300px] shrink-0 bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm mx-3">
+                        <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"Great communication from the caregivers. We are always kept in the loop."</p>
+                        <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">Robert W.</p>
+                    </div>
+                    <div class="w-[300px] shrink-0 bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm mx-3">
+                        <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"Highly skilled caregivers who truly treat the residents like their own family."</p>
+                        <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">Amanda K.</p>
+                    </div>
+                    <div class="w-[300px] shrink-0 bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm mx-3">
+                        <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"The environment is beautiful, calm, and perfectly suited for seniors."</p>
+                        <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">Thomas H.</p>
+                    </div>
+                    <div class="w-[300px] shrink-0 bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm mx-3">
+                        <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"They treat him with so much dignity. His mood has improved significantly."</p>
+                        <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">Linda P.</p>
+                    </div>
+                    <div class="w-[300px] shrink-0 bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm mx-3">
+                        <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"The daily activities keep her engaged and socializing with others."</p>
+                        <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">Karen S.</p>
+                    </div>
+                    <div class="w-[300px] shrink-0 bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm mx-3">
+                        <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"Medication management is spot on. We never worry about missed doses."</p>
+                        <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">Daniel C.</p>
+                    </div>
+                    <div class="w-[300px] shrink-0 bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm mx-3">
+                        <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"A very smooth transition process. They guided us every step of the way."</p>
+                        <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">Nancy V.</p>
+                    </div>
+                    <div class="w-[300px] shrink-0 bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm mx-3">
+                        <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"Always greeted with a smile. The staff's positivity is contagious."</p>
+                        <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">William J.</p>
+                    </div>
+                    <div class="w-[300px] shrink-0 bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm mx-3">
+                        <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"Finding Hebron Care was an absolute blessing for our family."</p>
+                        <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">Patricia D.</p>
+                    </div>
+                    <div class="w-[300px] shrink-0 bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm mx-3">
+                        <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"Exceptional hygiene and a truly personalized approach to caregiving."</p>
+                        <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">James E.</p>
+                    </div>
+                </div>
+                
+                <!-- Duplicate Set for Infinite Loop -->
+                <div class="flex w-max">
+                    <div class="w-[300px] shrink-0 bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm mx-3">
+                        <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"The care is exceptional. We finally have peace of mind knowing Dad is safe."</p>
+                        <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">Sarah M.</p>
+                    </div>
+                    <div class="w-[300px] shrink-0 bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm mx-3">
+                        <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"It truly feels just like home. The atmosphere is so warm and welcoming."</p>
+                        <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">David L.</p>
+                    </div>
+                    <div class="w-[300px] shrink-0 bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm mx-3">
+                        <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"The staff is so attentive to Mom's specific dietary and medical needs."</p>
+                        <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">Emily R.</p>
+                    </div>
+                    <div class="w-[300px] shrink-0 bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm mx-3">
+                        <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"Clean, safe, and filled with love. I couldn't ask for a better place."</p>
+                        <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">Michael T.</p>
+                    </div>
+                    <div class="w-[300px] shrink-0 bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm mx-3">
+                        <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"Mom loves the home-cooked meals. She says it's better than a restaurant."</p>
+                        <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">Jessica B.</p>
+                    </div>
+                    <div class="w-[300px] shrink-0 bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm mx-3">
+                        <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"Great communication from the caregivers. We are always kept in the loop."</p>
+                        <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">Robert W.</p>
+                    </div>
+                    <div class="w-[300px] shrink-0 bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm mx-3">
+                        <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"Highly skilled caregivers who truly treat the residents like their own family."</p>
+                        <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">Amanda K.</p>
+                    </div>
+                    <div class="w-[300px] shrink-0 bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm mx-3">
+                        <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"The environment is beautiful, calm, and perfectly suited for seniors."</p>
+                        <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">Thomas H.</p>
+                    </div>
+                    <div class="w-[300px] shrink-0 bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm mx-3">
+                        <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"They treat him with so much dignity. His mood has improved significantly."</p>
+                        <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">Linda P.</p>
+                    </div>
+                    <div class="w-[300px] shrink-0 bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm mx-3">
+                        <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"The daily activities keep her engaged and socializing with others."</p>
+                        <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">Karen S.</p>
+                    </div>
+                    <div class="w-[300px] shrink-0 bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm mx-3">
+                        <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"Medication management is spot on. We never worry about missed doses."</p>
+                        <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">Daniel C.</p>
+                    </div>
+                    <div class="w-[300px] shrink-0 bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm mx-3">
+                        <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"A very smooth transition process. They guided us every step of the way."</p>
+                        <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">Nancy V.</p>
+                    </div>
+                    <div class="w-[300px] shrink-0 bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm mx-3">
+                        <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"Always greeted with a smile. The staff's positivity is contagious."</p>
+                        <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">William J.</p>
+                    </div>
+                    <div class="w-[300px] shrink-0 bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm mx-3">
+                        <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"Finding Hebron Care was an absolute blessing for our family."</p>
+                        <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">Patricia D.</p>
+                    </div>
+                    <div class="w-[300px] shrink-0 bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm mx-3">
+                        <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"Exceptional hygiene and a truly personalized approach to caregiving."</p>
+                        <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">James E.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 px-6 bg-[#FAFAF8] border-t border-[#0F4C5C]/5">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-[#C9A24D] text-xs font-medium tracking-widest uppercase mb-2 block">Common Inquiries</span>
+                <h2 class="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-normal text-[#0F4C5C] tracking-tight">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <details class="group bg-white p-6 rounded-xl border border-[#0F4C5C]/5 shadow-sm [&amp;_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex justify-between items-center font-normal cursor-pointer list-none text-[#0F4C5C] text-lg md:text-xl tracking-tight">
+                        <span>What level of care do you provide?</span>
+                        <span class="transition-transform duration-300 group-open:-rotate-180 text-[#C9A24D]">
+                            <iconify-icon icon="solar:alt-arrow-down-linear" width="24" stroke-width="1.5"></iconify-icon>
+                        </span>
+                    </summary>
+                    <p class="text-[#2B2B2B]/70 mt-4 text-sm font-light leading-relaxed">
+                        We provide comprehensive adult family home care, which includes assisted living, memory care, medication management, and support with all activities of daily living (ADLs). Our skilled staff is available 24/7 to address individual needs.
+                    </p>
+                </details>
+
+                <!-- FAQ 2 -->
+                <details class="group bg-white p-6 rounded-xl border border-[#0F4C5C]/5 shadow-sm [&amp;_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex justify-between items-center font-normal cursor-pointer list-none text-[#0F4C5C] text-lg md:text-xl tracking-tight">
+                        <span>Are meals tailored to dietary needs?</span>
+                        <span class="transition-transform duration-300 group-open:-rotate-180 text-[#C9A24D]">
+                            <iconify-icon icon="solar:alt-arrow-down-linear" width="24" stroke-width="1.5"></iconify-icon>
+                        </span>
+                    </summary>
+                    <p class="text-[#2B2B2B]/70 mt-4 text-sm font-light leading-relaxed">
+                        Yes, nutrition is a priority. We prepare three delicious, home-cooked meals daily, along with healthy snacks. All meals can be customized to accommodate specific dietary restrictions, medical requirements, or personal preferences.
+                    </p>
+                </details>
+
+                <!-- FAQ 3 -->
+                <details class="group bg-white p-6 rounded-xl border border-[#0F4C5C]/5 shadow-sm [&amp;_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex justify-between items-center font-normal cursor-pointer list-none text-[#0F4C5C] text-lg md:text-xl tracking-tight">
+                        <span>What are the visiting hours for family?</span>
+                        <span class="transition-transform duration-300 group-open:-rotate-180 text-[#C9A24D]">
+                            <iconify-icon icon="solar:alt-arrow-down-linear" width="24" stroke-width="1.5"></iconify-icon>
+                        </span>
+                    </summary>
+                    <p class="text-[#2B2B2B]/70 mt-4 text-sm font-light leading-relaxed">
+                        We encourage strong family connections. We have an open-door policy for families, allowing visits at any reasonable time that is comfortable for the resident. This is their home, and family is always welcome.
+                    </p>
+                </details>
+
+                <!-- FAQ 4 -->
+                <details class="group bg-white p-6 rounded-xl border border-[#0F4C5C]/5 shadow-sm [&amp;_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex justify-between items-center font-normal cursor-pointer list-none text-[#0F4C5C] text-lg md:text-xl tracking-tight">
+                        <span>How do you handle medical emergencies?</span>
+                        <span class="transition-transform duration-300 group-open:-rotate-180 text-[#C9A24D]">
+                            <iconify-icon icon="solar:alt-arrow-down-linear" width="24" stroke-width="1.5"></iconify-icon>
+                        </span>
+                    </summary>
+                    <p class="text-[#2B2B2B]/70 mt-4 text-sm font-light leading-relaxed">
+                        Our staff is rigorously trained in emergency protocols, CPR, and First Aid. In the event of an emergency, we immediately contact emergency services (911), notify the family, and coordinate with the resident's primary care physician.
+                    </p>
+                </details>
+
+                <!-- FAQ 5 -->
+                <details class="group bg-white p-6 rounded-xl border border-[#0F4C5C]/5 shadow-sm [&amp;_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex justify-between items-center font-normal cursor-pointer list-none text-[#0F4C5C] text-lg md:text-xl tracking-tight">
+                        <span>What is the transition process like?</span>
+                        <span class="transition-transform duration-300 group-open:-rotate-180 text-[#C9A24D]">
+                            <iconify-icon icon="solar:alt-arrow-down-linear" width="24" stroke-width="1.5"></iconify-icon>
+                        </span>
+                    </summary>
+                    <p class="text-[#2B2B2B]/70 mt-4 text-sm font-light leading-relaxed">
+                        We strive to make the transition as smooth as possible. It begins with a comprehensive assessment by our registered nurse to understand the clinical and personal needs. From there, we formulate a care plan and assist the family with moving logistics to ensure immediate comfort.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Take Actions Today Section -->
+    <section id="take-action" class="py-24 px-6 bg-[#0F4C5C]">
+        <div class="max-w-5xl mx-auto bg-white rounded-3xl overflow-hidden shadow-2xl border border-white/10">
+            <div class="grid md:grid-cols-2">
+                <!-- Contact Form Area -->
+                <div class="p-8 md:p-12">
+                    <span class="text-[#C9A24D] text-xs font-medium tracking-widest uppercase mb-2 block">Next Steps</span>
+                    <h2 class="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-normal text-[#0F4C5C] mb-2 tracking-tight">Begin Their Next Chapter With Confidence</h2>
+                    <p class="text-sm text-[#2B2B2B]/60 mb-8 font-light">Schedule a personalized tour of our home and discuss a tailored care plan for your loved one.</p>
+
+                    <form class="space-y-4">
+                        <div>
+                            <input type="text" placeholder="Your Full Name" class="w-full bg-[#FAFAF8] border-b border-[#0F4C5C]/20 px-4 py-3 text-sm text-[#0F4C5C] placeholder-[#0F4C5C]/40 transition focus:border-[#0F4C5C] focus:bg-[#0F4C5C]/5">
+                        </div>
+                        <div>
+                            <input type="tel" placeholder="Phone Number" class="w-full bg-[#FAFAF8] border-b border-[#0F4C5C]/20 px-4 py-3 text-sm text-[#0F4C5C] placeholder-[#0F4C5C]/40 transition focus:border-[#0F4C5C] focus:bg-[#0F4C5C]/5">
+                        </div>
+                        
+                        <!-- Custom Select -->
+                        <div class="relative">
+                            <select class="w-full bg-[#FAFAF8] border-b border-[#0F4C5C]/20 px-4 py-3 text-sm text-[#0F4C5C] cursor-pointer focus:bg-[#0F4C5C]/5">
+                                <option disabled="" selected="">Interested In...</option>
+                                <option>Assisted Living</option>
+                                <option>Memory Care</option>
+                                <option>Respite Care</option>
+                                <option>General Inquiry</option>
+                            </select>
+                            <iconify-icon icon="solar:alt-arrow-down-linear" class="absolute right-4 top-3.5 text-[#0F4C5C]/50 pointer-events-none" stroke-width="1.5"></iconify-icon>
+                        </div>
+
+                        <div>
+                            <textarea placeholder="Tell us a little about your loved one's needs..." rows="3" class="w-full bg-[#FAFAF8] border-b border-[#0F4C5C]/20 px-4 py-3 text-sm text-[#0F4C5C] placeholder-[#0F4C5C]/40 transition focus:border-[#0F4C5C] focus:bg-[#0F4C5C]/5 resize-none"></textarea>
+                        </div>
+
+                        <button type="button" class="w-full bg-[#0F4C5C] text-white h-12 rounded-lg text-sm font-normal tracking-wide mt-4 hover:bg-[#0a3540] transition shadow-lg shadow-[#0F4C5C]/20 flex items-center justify-center gap-2">
+                            Request a Tour
+                            <iconify-icon icon="solar:arrow-right-linear" width="18" stroke-width="1.5"></iconify-icon>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Info Area -->
+                <div class="bg-[#FAFAF8] p-8 md:p-12 flex flex-col justify-between border-l border-[#0F4C5C]/5">
+                    <div>
+                        <h3 class="font-['Cormorant_Garamond'] text-2xl font-normal tracking-tight text-[#0F4C5C] mb-6">Home Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex gap-4">
+                                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#C9A24D] shadow-sm shrink-0">
+                                    <iconify-icon icon="solar:map-point-linear" width="20" stroke-width="1.5"></iconify-icon>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-[#0F4C5C] uppercase tracking-wide mb-1">Location</p>
+                                    <p class="text-sm text-[#2B2B2B]/70 font-light">123 Tranquil Lane, Care District,<br>Cityville, State 12345</p>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-4">
+                                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#C9A24D] shadow-sm shrink-0">
+                                    <iconify-icon icon="solar:phone-calling-linear" width="20" stroke-width="1.5"></iconify-icon>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-[#0F4C5C] uppercase tracking-wide mb-1">Contact</p>
+                                    <p class="text-sm text-[#2B2B2B]/70 font-light">(555) 123-4567</p>
+                                    <p class="text-sm text-[#2B2B2B]/70 font-light">info@hebroncarehome.com</p>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-4">
+                                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#C9A24D] shadow-sm shrink-0">
+                                    <iconify-icon icon="solar:clock-circle-linear" width="20" stroke-width="1.5"></iconify-icon>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-[#0F4C5C] uppercase tracking-wide mb-1">Office Hours</p>
+                                    <p class="text-sm text-[#2B2B2B]/70 font-light">Mon - Fri: 9:00 AM - 5:00 PM</p>
+                                    <p class="text-xs text-[#2B2B2B]/50 font-light mt-1">*Care is provided 24/7</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 h-32 w-full bg-white rounded-xl border border-[#0F4C5C]/10 flex items-center justify-center text-[#0F4C5C]/30 text-xs uppercase tracking-widest font-medium">
+                        <iconify-icon icon="solar:map-linear" width="24" class="mr-2" stroke-width="1.5"></iconify-icon> Map Location
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-[#0F4C5C]/10 pt-16 pb-8 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 mb-12">
+            <div class="md:col-span-1">
+                <a href="#" class="font-['Cormorant_Garamond'] text-2xl font-normal tracking-tight text-[#0F4C5C] block mb-4">HEBRON CARE</a>
+                <p class="text-sm text-[#2B2B2B]/60 font-light leading-relaxed mb-6">
+                    A licensed Adult Family Home providing premium, specialized, and compassionate living solutions for seniors.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="text-[#0F4C5C] hover:text-[#C9A24D] transition"><iconify-icon icon="solar:facebook-linear" width="20" stroke-width="1.5"></iconify-icon></a>
+                    <a href="#" class="text-[#0F4C5C] hover:text-[#C9A24D] transition"><iconify-icon icon="solar:instagram-linear" width="20" stroke-width="1.5"></iconify-icon></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="text-xs font-medium uppercase tracking-widest text-[#0F4C5C] mb-6">Explore</h4>
+                <ul class="space-y-3 text-sm text-[#2B2B2B]/70 font-light">
+                    <li><a href="#" class="hover:text-[#C9A24D] transition">Home</a></li>
+                    <li><a href="#why-us" class="hover:text-[#C9A24D] transition">Why Choose Us</a></li>
+                    <li><a href="#expertise" class="hover:text-[#C9A24D] transition">Our Expertise</a></li>
+                    <li><a href="#testimonials" class="hover:text-[#C9A24D] transition">Family Testimonials</a></li>
+                    <li><a href="#faq" class="hover:text-[#C9A24D] transition">FAQs</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-xs font-medium uppercase tracking-widest text-[#0F4C5C] mb-6">Care Services</h4>
+                <ul class="space-y-3 text-sm text-[#2B2B2B]/70 font-light">
+                    <li>Assisted Living</li>
+                    <li>Memory Care Support</li>
+                    <li>Medication Administration</li>
+                    <li>Respite &amp; Short-term</li>
+                </ul>
+            </div>
+
+             <div>
+                <h4 class="text-xs font-medium uppercase tracking-widest text-[#0F4C5C] mb-6">Need Immediate Placement?</h4>
+                <p class="text-sm text-[#2B2B2B]/70 font-light mb-4">Contact our admissions coordinator directly.</p>
+                <a href="tel:+10000000000" class="inline-flex items-center gap-2 text-[#0F4C5C] font-normal text-sm hover:underline">
+                    <iconify-icon icon="solar:phone-calling-linear" stroke-width="1.5"></iconify-icon>
+                    (555) 123-4567
+                </a>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto border-t border-[#0F4C5C]/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[#2B2B2B]/40 font-light">
+            <p>© 2024 Hebron Care Adult Family Home LLC. All rights reserved.</p>
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-[#0F4C5C] transition">Privacy Policy</a>
+                <a href="#" class="hover:text-[#0F4C5C] transition">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile Call Button -->
+    <div class="fixed bottom-6 right-6 md:hidden z-40">
+        <a href="tel:+10000000000" class="w-14 h-14 bg-[#C9A24D] rounded-full text-white shadow-lg shadow-[#C9A24D]/40 flex items-center justify-center">
+            <iconify-icon icon="solar:phone-calling-linear" width="24" stroke-width="1.5"></iconify-icon>
+        </a>
+    </div>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const menuBtn = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeBtn = document.getElementById('menu-close');
+        const links = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            const isClosed = mobileMenu.classList.contains('translate-x-full');
+            if (isClosed) {
+                mobileMenu.classList.remove('translate-x-full');
+            } else {
+                mobileMenu.classList.add('translate-x-full');
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+
+        links.forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+    </script>
+
+
+</body></html>

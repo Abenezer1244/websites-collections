@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Hebron Care Adult Family Home LLC</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&amp;family=Inter:wght@200;300;400;500&amp;display=swap" rel="stylesheet">
+<style>
+/* Custom scrollbar */
+::-webkit-scrollbar {
+width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+background: #FAFAF8;
+}
+::-webkit-scrollbar-thumb {
+background: #D1D5DB;
+border-radius: 0.25rem;
+}
+::-webkit-scrollbar-thumb:hover {
+background: #0F4C5C;
+}
+/* Subtle fade in animation */
+@keyframes fadeUp {
+from { opacity: 0; transform: translateY(20px); }
+to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up {
+animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+opacity: 0;
+}
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+/* 3D Map Animation Container */
+.map-3d-container {
+perspective: 1200px;
+}
+.map-3d-element {
+transform: rotateX(8deg) rotateY(-4deg) scale(0.96);
+transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 1s cubic-bezier(0.16, 1, 0.3, 1);
+transform-style: preserve-3d;
+box-shadow: -10px 20px 40px -10px rgba(15, 76, 92, 0.15);
+}
+.map-3d-container:hover .map-3d-element {
+transform: rotateX(0deg) rotateY(0deg) scale(1);
+box-shadow: 0 30px 60px -15px rgba(15, 76, 92, 0.25);
+}
+/* Custom Checkbox styles */
+input[type="checkbox"] {
+appearance: none;
+background-color: transparent;
+margin: 0;
+font: inherit;
+width: 1.15em;
+height: 1.15em;
+border: 1px solid rgba(15, 76, 92, 0.2);
+border-radius: 0.25rem;
+display: grid;
+place-content: center;
+transition: all 0.2s ease-in-out;
+}
+input[type="checkbox"]::before {
+content: "";
+width: 0.65em;
+height: 0.65em;
+transform: scale(0);
+transition: 120ms transform ease-in-out;
+box-shadow: inset 1em 1em white;
+background-color: white;
+transform-origin: center;
+clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+input[type="checkbox"]:checked {
+background-color: #0F4C5C;
+border-color: #0F4C5C;
+}
+input[type="checkbox"]:checked::before {
+transform: scale(1);
+}
+</style></head>
+<body class="bg-[#FAFAF8] text-[#2B2B2B] font-['Inter'] font-light antialiased selection:bg-[#C9A24D] selection:text-white overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 left-0 border-b border-[#0F4C5C]/5 bg-[#FAFAF8]/95 backdrop-blur-md transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative z-50">
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-8 h-8 rounded-full bg-[#0F4C5C] text-white flex items-center justify-center">
+                    <iconify-icon icon="solar:home-heart-linear" width="18" stroke-width="1.5"></iconify-icon>
+                </div>
+                <span class="font-['Cormorant_Garamond'] text-lg uppercase tracking-widest font-medium text-[#0F4C5C]">Hebron Care</span>
+            </a>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-normal text-[#2B2B2B]/80">
+                <a href="#" class="hover:text-[#0F4C5C] transition-colors">Services</a>
+                <a href="#" class="hover:text-[#0F4C5C] transition-colors">Gallery</a>
+                <a href="#" class="hover:text-[#0F4C5C] transition-colors">Mission &amp; Vision</a>
+                <a href="#" class="text-[#0F4C5C] transition-colors">Contact</a>
+            </div>
+
+            <a href="#" class="hidden md:flex items-center gap-2 bg-[#0F4C5C] text-white px-5 py-2.5 rounded-full text-xs font-normal tracking-wide hover:bg-[#0F4C5C]/90 transition-all hover:shadow-lg hover:shadow-[#0F4C5C]/20">
+                <span>Schedule Tour</span>
+                <iconify-icon icon="solar:calendar-add-linear" width="16" stroke-width="1.5"></iconify-icon>
+            </a>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-toggle" class="md:hidden text-[#0F4C5C] p-2 hover:bg-[#0F4C5C]/5 rounded-full transition-colors focus:outline-none">
+                <iconify-icon icon="solar:hamburger-menu-linear" width="24" stroke-width="1.5"></iconify-icon>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col pt-28 px-6 pb-6 shadow-2xl">
+            <button id="menu-close" class="absolute top-6 right-6 text-[#0F4C5C] p-2 hover:bg-[#0F4C5C]/5 rounded-full transition-colors">
+                <iconify-icon icon="solar:close-circle-linear" width="32" stroke-width="1.5"></iconify-icon>
+            </button>
+
+            <div class="flex flex-col gap-6 text-xl font-['Cormorant_Garamond'] font-normal tracking-tight text-[#0F4C5C]">
+                <a href="#" class="mobile-link py-3 border-b border-[#0F4C5C]/10 flex justify-between items-center group">
+                    Services
+                    <iconify-icon icon="solar:arrow-right-linear" stroke-width="1.5" class="opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 duration-300"></iconify-icon>
+                </a>
+                <a href="#" class="mobile-link py-3 border-b border-[#0F4C5C]/10 flex justify-between items-center group">
+                    Gallery
+                    <iconify-icon icon="solar:arrow-right-linear" stroke-width="1.5" class="opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 duration-300"></iconify-icon>
+                </a>
+                <a href="#" class="mobile-link py-3 border-b border-[#0F4C5C]/10 flex justify-between items-center group">
+                    Mission &amp; Vision
+                    <iconify-icon icon="solar:arrow-right-linear" stroke-width="1.5" class="opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 duration-300"></iconify-icon>
+                </a>
+                <a href="#" class="mobile-link py-3 border-b border-[#0F4C5C]/10 flex justify-between items-center group">
+                    Contact
+                    <iconify-icon icon="solar:arrow-right-linear" stroke-width="1.5" class="opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 duration-300"></iconify-icon>
+                </a>
+            </div>
+
+            <div class="mt-auto mb-8">
+                <a href="#" class="mobile-link w-full bg-[#0F4C5C] text-white py-4 rounded-xl flex items-center justify-center gap-2 text-sm font-sans font-normal tracking-wide shadow-lg shadow-[#0F4C5C]/20">
+                    <span>Schedule Tour</span>
+                    <iconify-icon icon="solar:calendar-add-linear" width="18" stroke-width="1.5"></iconify-icon>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact HERO Section -->
+    <section class="relative pt-40 pb-20 lg:pt-52 lg:pb-32 px-6 overflow-hidden bg-white text-center border-b border-[#0F4C5C]/5">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,#0F4C5C_0%,transparent_40%)] opacity-[0.03] pointer-events-none"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom,#C9A24D_0%,transparent_30%)] opacity-[0.02] pointer-events-none"></div>
+        
+        <div class="max-w-3xl mx-auto relative z-10 animate-fade-up">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#0F4C5C]/10 bg-[#FAFAF8] mb-8">
+                <iconify-icon icon="solar:letter-linear" class="text-[#C9A24D]" width="14" stroke-width="1.5"></iconify-icon>
+                <span class="text-xs tracking-widest uppercase font-medium text-[#0F4C5C]">Get In Touch</span>
+            </div>
+            <h1 class="font-['Cormorant_Garamond'] text-5xl md:text-7xl leading-[1.05] font-normal tracking-tight text-[#0F4C5C] mb-6">
+                Let's start a <br class="md:hidden">
+                <span class="italic text-[#C9A24D]">conversation.</span>
+            </h1>
+            <p class="text-base md:text-lg text-[#2B2B2B]/70 font-light leading-relaxed max-w-xl mx-auto">
+                Whether you're ready to schedule a personalized tour or just have a few questions about our care, our dedicated team is here to guide you.
+            </p>
+        </div>
+    </section>
+
+    <!-- Form & Info Section -->
+    <section class="py-24 px-6 bg-white border-b border-[#0F4C5C]/5">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-16 lg:gap-24 items-start">
+            
+            <!-- Left: Send a Message Form -->
+            <div class="lg:col-span-7 animate-fade-up delay-100">
+                <h2 class="font-['Cormorant_Garamond'] text-3xl md:text-4xl tracking-tight text-[#0F4C5C] mb-8">Send us a message</h2>
+                
+                <form class="space-y-6">
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label for="firstName" class="text-xs font-medium text-[#0F4C5C] uppercase tracking-widest">First Name</label>
+                            <input type="text" id="firstName" class="w-full bg-[#FAFAF8] border border-[#0F4C5C]/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#0F4C5C]/30 focus:ring-1 focus:ring-[#0F4C5C]/30 transition-all font-light text-[#2B2B2B] placeholder:text-[#2B2B2B]/30" placeholder="Jane">
+                        </div>
+                        <div class="space-y-2">
+                            <label for="lastName" class="text-xs font-medium text-[#0F4C5C] uppercase tracking-widest">Last Name</label>
+                            <input type="text" id="lastName" class="w-full bg-[#FAFAF8] border border-[#0F4C5C]/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#0F4C5C]/30 focus:ring-1 focus:ring-[#0F4C5C]/30 transition-all font-light text-[#2B2B2B] placeholder:text-[#2B2B2B]/30" placeholder="Doe">
+                        </div>
+                    </div>
+                    
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label for="email" class="text-xs font-medium text-[#0F4C5C] uppercase tracking-widest">Email Address</label>
+                            <input type="email" id="email" class="w-full bg-[#FAFAF8] border border-[#0F4C5C]/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#0F4C5C]/30 focus:ring-1 focus:ring-[#0F4C5C]/30 transition-all font-light text-[#2B2B2B] placeholder:text-[#2B2B2B]/30" placeholder="jane@example.com">
+                        </div>
+                        <div class="space-y-2">
+                            <label for="phone" class="text-xs font-medium text-[#0F4C5C] uppercase tracking-widest">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full bg-[#FAFAF8] border border-[#0F4C5C]/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#0F4C5C]/30 focus:ring-1 focus:ring-[#0F4C5C]/30 transition-all font-light text-[#2B2B2B] placeholder:text-[#2B2B2B]/30" placeholder="(555) 000-0000">
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label for="message" class="text-xs font-medium text-[#0F4C5C] uppercase tracking-widest">How can we help?</label>
+                        <textarea id="message" rows="5" class="w-full bg-[#FAFAF8] border border-[#0F4C5C]/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#0F4C5C]/30 focus:ring-1 focus:ring-[#0F4C5C]/30 transition-all font-light text-[#2B2B2B] placeholder:text-[#2B2B2B]/30 resize-none" placeholder="Tell us about your care needs or questions..."></textarea>
+                    </div>
+
+                    <div class="flex items-start gap-3 pt-2">
+                        <div class="pt-0.5">
+                            <input type="checkbox" id="privacy" class="cursor-pointer">
+                        </div>
+                        <label for="privacy" class="text-xs text-[#2B2B2B]/70 font-light leading-relaxed cursor-pointer select-none">
+                            I agree to the <a href="#" class="text-[#0F4C5C] hover:text-[#C9A24D] transition-colors">Privacy Policy</a> and consent to being contacted by Hebron Care regarding my inquiry.
+                        </label>
+                    </div>
+
+                    <button type="button" class="w-full sm:w-auto bg-[#0F4C5C] text-white px-8 py-4 rounded-xl text-sm font-normal tracking-wide hover:bg-[#0F4C5C]/90 transition-all hover:shadow-lg hover:shadow-[#0F4C5C]/20 flex items-center justify-center gap-2">
+                        <span>Send Message</span>
+                        <iconify-icon icon="solar:plain-linear" width="18" stroke-width="1.5"></iconify-icon>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Right: Contact Info -->
+            <div class="lg:col-span-5 lg:pl-8 animate-fade-up delay-200">
+                <h2 class="font-['Cormorant_Garamond'] text-3xl md:text-4xl tracking-tight text-[#0F4C5C] mb-8">Direct Contact</h2>
+                
+                <div class="space-y-4">
+                    <!-- Phone Card -->
+                    <a href="tel:+15551234567" class="group flex items-start gap-5 p-6 rounded-2xl bg-[#FAFAF8] border border-[#0F4C5C]/5 hover:border-[#0F4C5C]/15 transition-all duration-300">
+                        <div class="w-12 h-12 shrink-0 rounded-full bg-white border border-[#0F4C5C]/10 flex items-center justify-center text-[#0F4C5C] group-hover:bg-[#0F4C5C] group-hover:text-white transition-colors">
+                            <iconify-icon icon="solar:phone-calling-linear" width="22" stroke-width="1.5"></iconify-icon>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-medium text-[#0F4C5C] uppercase tracking-widest mb-1">Phone</h3>
+                            <p class="text-lg text-[#2B2B2B] font-normal group-hover:text-[#C9A24D] transition-colors">(555) 123-4567</p>
+                            <p class="text-xs text-[#2B2B2B]/60 font-light mt-1">Available Mon-Fri, 9am - 6pm</p>
+                        </div>
+                    </a>
+
+                    <!-- Email Card -->
+                    <a href="mailto:hello@hebroncare.com" class="group flex items-start gap-5 p-6 rounded-2xl bg-[#FAFAF8] border border-[#0F4C5C]/5 hover:border-[#0F4C5C]/15 transition-all duration-300">
+                        <div class="w-12 h-12 shrink-0 rounded-full bg-white border border-[#0F4C5C]/10 flex items-center justify-center text-[#0F4C5C] group-hover:bg-[#0F4C5C] group-hover:text-white transition-colors">
+                            <iconify-icon icon="solar:letter-linear" width="22" stroke-width="1.5"></iconify-icon>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-medium text-[#0F4C5C] uppercase tracking-widest mb-1">Email</h3>
+                            <p class="text-lg text-[#2B2B2B] font-normal group-hover:text-[#C9A24D] transition-colors">hello@hebroncare.com</p>
+                            <p class="text-xs text-[#2B2B2B]/60 font-light mt-1">We'll reply within 24 hours</p>
+                        </div>
+                    </a>
+
+                    <!-- Location Card -->
+                    <div class="group flex items-start gap-5 p-6 rounded-2xl bg-[#FAFAF8] border border-[#0F4C5C]/5 hover:border-[#0F4C5C]/15 transition-all duration-300">
+                        <div class="w-12 h-12 shrink-0 rounded-full bg-white border border-[#0F4C5C]/10 flex items-center justify-center text-[#0F4C5C] group-hover:bg-[#0F4C5C] group-hover:text-white transition-colors">
+                            <iconify-icon icon="solar:map-point-linear" width="22" stroke-width="1.5"></iconify-icon>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-medium text-[#0F4C5C] uppercase tracking-widest mb-1">Location</h3>
+                            <p class="text-base text-[#2B2B2B] font-normal leading-snug">
+                                1234 Serenity Lane, <br>
+                                Suite 100 <br>
+                                Seattle, WA 98101
+                            </p>
+                            <a href="#map" class="inline-flex items-center gap-1 text-xs text-[#0F4C5C] font-medium mt-3 hover:text-[#C9A24D] transition-colors">
+                                View on Map
+                                <iconify-icon icon="solar:arrow-right-linear" stroke-width="1.5"></iconify-icon>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- 3D Map Section -->
+    <section id="map" class="py-24 px-6 bg-[#FAFAF8] overflow-hidden relative">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,#0F4C5C_0%,transparent_50%)] opacity-[0.02] pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-16 max-w-2xl mx-auto animate-fade-up">
+                <h2 class="font-['Cormorant_Garamond'] text-4xl md:text-5xl tracking-tight text-[#0F4C5C] mb-4">Find our home</h2>
+                <p class="text-[#2B2B2B]/70 font-light leading-relaxed">
+                    Nestled in a quiet, secure neighborhood, perfectly situated for peaceful living and easy accessibility for visiting family.
+                </p>
+            </div>
+            
+            <div class="map-3d-container max-w-5xl mx-auto animate-fade-up delay-200 cursor-crosshair">
+                <div class="map-3d-element rounded-[2rem] overflow-hidden bg-white border border-[#0F4C5C]/10 h-[450px] md:h-[600px] relative">
+                    <!-- Standard Google Maps Iframe -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86164.8329624564!2d-122.40845339678385!3d47.61317427495574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490102c93e83355%3A0x102565466944d59a!2sSeattle%2C%20WA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0; filter: grayscale(0.2) contrast(1.1) opacity(0.9);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    
+                    <!-- Decorative overlay for style blending -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#0F4C5C]/5 to-transparent pointer-events-none mix-blend-multiply"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white pt-16 pb-8 px-6 border-t border-[#0F4C5C]/5">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 mb-12">
+            <div class="md:col-span-1">
+                <a href="#" class="font-['Cormorant_Garamond'] text-2xl font-normal tracking-tight text-[#0F4C5C] block mb-4">HEBRON CARE</a>
+                <p class="text-sm text-[#2B2B2B]/60 font-light leading-relaxed mb-6">
+                    A licensed Adult Family Home providing premium, specialized, and compassionate living solutions for seniors.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="text-[#0F4C5C] hover:text-[#C9A24D] transition"><iconify-icon icon="solar:facebook-linear" width="20" stroke-width="1.5"></iconify-icon></a>
+                    <a href="#" class="text-[#0F4C5C] hover:text-[#C9A24D] transition"><iconify-icon icon="solar:instagram-linear" width="20" stroke-width="1.5"></iconify-icon></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="text-xs font-medium uppercase tracking-widest text-[#0F4C5C] mb-6">Explore</h4>
+                <ul class="space-y-3 text-sm text-[#2B2B2B]/70 font-light">
+                    <li><a href="#" class="hover:text-[#C9A24D] transition">Home</a></li>
+                    <li><a href="#" class="hover:text-[#C9A24D] transition">About Us</a></li>
+                    <li><a href="#" class="hover:text-[#C9A24D] transition">Mission &amp; Vision</a></li>
+                    <li><a href="#" class="hover:text-[#C9A24D] transition">Gallery</a></li>
+                    <li><a href="#" class="hover:text-[#C9A24D] transition">Our People</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-xs font-medium uppercase tracking-widest text-[#0F4C5C] mb-6">Care Services</h4>
+                <ul class="space-y-3 text-sm text-[#2B2B2B]/70 font-light">
+                    <li><a href="#" class="text-[#C9A24D] transition">Assisted Living</a></li>
+                    <li><a href="#" class="text-[#C9A24D] transition">Memory Care Support</a></li>
+                    <li><a href="#" class="text-[#C9A24D] transition">Medication Administration</a></li>
+                    <li><a href="#" class="text-[#C9A24D] transition">Respite &amp; Short-term</a></li>
+                </ul>
+            </div>
+
+             <div>
+                <h4 class="text-xs font-medium uppercase tracking-widest text-[#0F4C5C] mb-6">Need Immediate Placement?</h4>
+                <p class="text-sm text-[#2B2B2B]/70 font-light mb-4">Contact our admissions coordinator directly.</p>
+                <a href="tel:+15551234567" class="inline-flex items-center gap-2 text-[#0F4C5C] font-normal text-sm hover:underline">
+                    <iconify-icon icon="solar:phone-calling-linear" stroke-width="1.5"></iconify-icon>
+                    (555) 123-4567
+                </a>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto border-t border-[#0F4C5C]/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[#2B2B2B]/40 font-light">
+            <p>© 2024 Hebron Care Adult Family Home LLC. All rights reserved.</p>
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-[#0F4C5C] transition">Privacy Policy</a>
+                <a href="#" class="hover:text-[#0F4C5C] transition">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile Call Button -->
+    <div class="fixed bottom-6 right-6 md:hidden z-40">
+        <a href="tel:+15551234567" class="w-14 h-14 bg-[#C9A24D] rounded-full text-white shadow-lg shadow-[#C9A24D]/40 flex items-center justify-center">
+            <iconify-icon icon="solar:phone-calling-linear" width="24" stroke-width="1.5"></iconify-icon>
+        </a>
+    </div>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Mobile Menu Logic
+        const menuBtn = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeBtn = document.getElementById('menu-close');
+        const links = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            const isClosed = mobileMenu.classList.contains('translate-x-full');
+            if (isClosed) {
+                mobileMenu.classList.remove('translate-x-full');
+            } else {
+                mobileMenu.classList.add('translate-x-full');
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+        links.forEach(link => link.addEventListener('click', toggleMenu));
+    </script>
+
+
+</body></html>
