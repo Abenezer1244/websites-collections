@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Services | Hebron Care Adult Family Home LLC</title>
+<meta name="description" content="Explore our comprehensive care services, specialized medical support, and the luxurious amenities at Hebron Care.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;display=swap" rel="stylesheet">
+<style>
+body { font-family: 'Inter', sans-serif; }
+h1, h2, h3, h4, h5, h6, .serif { font-family: 'Playfair Display', serif; }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #fafaf9; }
+::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 4px; }
+.reveal {
+opacity: 0;
+transform: translateY(30px);
+transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+.reveal.active {
+opacity: 1;
+transform: translateY(0);
+}
+</style></head>
+<body class="bg-[#FBF9F6] text-stone-800 antialiased selection:bg-emerald-100 selection:text-emerald-900 overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-[#FBF9F6]/80 backdrop-blur-md border-b border-stone-200/50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-emerald-900 rounded-full flex items-center justify-center text-white">
+                    <iconify-icon icon="solar:home-heart-linear" width="18"></iconify-icon>
+                </div>
+                <span class="text-xl font-normal tracking-tight text-emerald-950">Hebron Care</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-lg font-normal text-stone-600">
+                <a href="#approach" class="hover:text-emerald-900 transition-colors">Approach</a>
+                <a href="#services" class="hover:text-emerald-900 transition-colors">Core Services</a>
+                <a href="#specialties" class="hover:text-emerald-900 transition-colors">Specialties</a>
+                <a href="#amenities" class="hover:text-emerald-900 transition-colors">Amenities</a>
+            </div>
+            <a href="#contact" class="hidden md:inline-flex bg-emerald-900 text-[#FBF9F6] px-5 py-2.5 rounded-full text-base font-normal hover:bg-emerald-800 transition-all hover:scale-[1.02] shadow-lg shadow-emerald-900/10">
+                Schedule a Tour
+            </a>
+        </div>
+    </nav>
+
+    <!-- Services Hero (New Design: Split Layout with Image Composition) -->
+    <header class="pt-32 pb-24 px-6 relative overflow-hidden border-b border-stone-200/50">
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-50 rounded-full blur-3xl -z-10 opacity-60 pointer-events-none translate-x-1/3 -translate-y-1/3"></div>
+        
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center pt-10">
+            <div class="reveal z-10">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-white text-emerald-900 rounded-full text-sm font-normal mb-8 border border-stone-200 shadow-sm">
+                    <iconify-icon icon="solar:heart-pulse-linear" width="16"></iconify-icon> Our Services
+                </div>
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-normal tracking-tight text-emerald-950 leading-[1.1] mb-8">
+                    Elevating the <br> standard of <br> <span class="italic serif text-emerald-800">senior living.</span>
+                </h1>
+                <p class="text-xl text-stone-600 leading-relaxed font-light mb-10 max-w-lg">
+                    Comprehensive, personalized care tailored to the unique rhythms of each resident's life. We provide peace of mind through professional excellence.
+                </p>
+                <div class="flex items-center gap-6">
+                    <a href="#services" class="inline-flex items-center gap-2 text-emerald-900 font-normal text-lg hover:text-emerald-700 transition-colors">
+                        Explore our care
+                        <iconify-icon icon="solar:arrow-right-linear" width="20"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+
+            <!-- New Image Composition Look -->
+            <div class="relative h-[500px] md:h-[600px] w-full reveal delay-200">
+                <div class="absolute top-0 right-0 w-[80%] h-[85%] rounded-[2.5rem] overflow-hidden shadow-2xl bg-stone-200 z-10">
+                    <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover" alt="Caregiver assisting senior">
+                </div>
+                <div class="absolute bottom-0 left-0 w-[55%] h-[55%] rounded-[2.5rem] overflow-hidden shadow-xl border-8 border-[#FBF9F6] bg-stone-200 z-20">
+                    <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg" class="w-full h-full object-cover" alt="Seniors enjoying an activity">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Our Care Approach (Elaborated) -->
+    <section id="approach" class="py-24 px-6 bg-white relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 reveal">
+                <h2 class="text-4xl md:text-5xl font-normal text-emerald-950 tracking-tight mb-6">Our Care Approach</h2>
+                <p class="text-xl text-stone-600 font-light max-w-3xl mx-auto leading-relaxed">
+                    We believe that true care extends far beyond physical health. Our methodology is rooted in a holistic understanding of each individual, combining clinical precision with genuine emotional support.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-[#FBF9F6] p-10 rounded-3xl border border-stone-100 reveal">
+                    <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-emerald-800 mb-8 shadow-sm border border-stone-100">
+                        <iconify-icon icon="solar:user-id-linear" width="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-2xl font-normal tracking-tight text-emerald-950 mb-4">Highly Personalized</h3>
+                    <p class="text-stone-600 font-light leading-relaxed">
+                        Before a resident moves in, we conduct an exhaustive assessment to understand not just their medical requirements, but their life history, dietary preferences, and daily rhythms. Every care plan is uniquely bespoke.
+                    </p>
+                </div>
+
+                <div class="bg-[#FBF9F6] p-10 rounded-3xl border border-stone-100 reveal delay-100">
+                    <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-emerald-800 mb-8 shadow-sm border border-stone-100">
+                        <iconify-icon icon="solar:shield-check-linear" width="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-2xl font-normal tracking-tight text-emerald-950 mb-4">Proactive Wellness</h3>
+                    <p class="text-stone-600 font-light leading-relaxed">
+                        We don't just react to health changes; we anticipate them. Through continuous monitoring and close coordination with primary care physicians, we actively manage health to prevent hospital readmissions.
+                    </p>
+                </div>
+
+                <div class="bg-[#FBF9F6] p-10 rounded-3xl border border-stone-100 reveal delay-200">
+                    <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-emerald-800 mb-8 shadow-sm border border-stone-100">
+                        <iconify-icon icon="solar:users-group-two-rounded-linear" width="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-2xl font-normal tracking-tight text-emerald-950 mb-4">Family Integration</h3>
+                    <p class="text-stone-600 font-light leading-relaxed">
+                        When a resident joins us, their family becomes our family. We maintain transparent, regular communication channels with relatives, ensuring you are always informed, involved, and welcomed in our home.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services (Elaborated) -->
+    <section id="services" class="py-24 px-6 bg-[#FBF9F6] border-t border-stone-200/50">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16">
+            <div class="lg:w-1/3 reveal">
+                <div class="sticky top-32">
+                    <h2 class="text-4xl md:text-5xl font-normal text-emerald-950 tracking-tight mb-6">Core Services</h2>
+                    <p class="text-lg text-stone-600 font-light leading-relaxed mb-8">
+                        Our foundational services are designed to remove the friction from daily life, allowing our residents to focus on what matters most: enjoying their days in comfort and dignity.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-emerald-900 border border-stone-200 rounded-full font-normal hover:border-emerald-900 transition-colors shadow-sm">
+                        Discuss care options
+                    </a>
+                </div>
+            </div>
+
+            <div class="lg:w-2/3 grid sm:grid-cols-2 gap-6">
+                
+                <div class="bg-white p-8 rounded-3xl border border-stone-100 shadow-sm hover:shadow-md transition-shadow reveal">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="p-3 bg-emerald-50 rounded-xl text-emerald-800">
+                            <iconify-icon icon="solar:hand-heart-linear" width="24"></iconify-icon>
+                        </div>
+                        <h3 class="text-2xl font-normal tracking-tight text-emerald-950">Daily Living Support</h3>
+                    </div>
+                    <p class="text-stone-600 font-light leading-relaxed">
+                        Discreet, respectful assistance with Activities of Daily Living (ADLs) including bathing, dressing, grooming, and personal hygiene, tailored to the resident's desired level of independence.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl border border-stone-100 shadow-sm hover:shadow-md transition-shadow reveal delay-100">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="p-3 bg-emerald-50 rounded-xl text-emerald-800">
+                            <iconify-icon icon="solar:pills-linear" width="24"></iconify-icon>
+                        </div>
+                        <h3 class="text-2xl font-normal tracking-tight text-emerald-950">Medication Management</h3>
+                    </div>
+                    <p class="text-stone-600 font-light leading-relaxed">
+                        Flawless administration of all medications. We handle prescription refills, coordinate with pharmacies, and ensure the right dosages are given exactly on schedule to maintain optimal health.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl border border-stone-100 shadow-sm hover:shadow-md transition-shadow reveal">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="p-3 bg-emerald-50 rounded-xl text-emerald-800">
+                            <iconify-icon icon="solar:chef-hat-linear" width="24"></iconify-icon>
+                        </div>
+                        <h3 class="text-2xl font-normal tracking-tight text-emerald-950">Nutritional Dining</h3>
+                    </div>
+                    <p class="text-stone-600 font-light leading-relaxed">
+                        Three delicious, home-cooked meals daily, plus healthy snacks. We accommodate all dietary restrictions (diabetic, low-sodium, pureed) without ever compromising on flavor or presentation.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl border border-stone-100 shadow-sm hover:shadow-md transition-shadow reveal delay-100">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="p-3 bg-emerald-50 rounded-xl text-emerald-800">
+                            <iconify-icon icon="solar:wheelchair-linear" width="24"></iconify-icon>
+                        </div>
+                        <h3 class="text-2xl font-normal tracking-tight text-emerald-950">Mobility &amp; Transfers</h3>
+                    </div>
+                    <p class="text-stone-600 font-light leading-relaxed">
+                        Expert assistance with walking, wheelchair navigation, and safe transferring from bed to chair. Our facility is fully equipped to prevent falls and support residents with varying physical limitations.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Specialties (Elaborated & Distinctive Design) -->
+    <section id="specialties" class="py-24 px-4 md:px-6">
+        <div class="max-w-7xl mx-auto bg-emerald-950 rounded-[3rem] p-8 md:p-16 lg:p-20 relative overflow-hidden shadow-2xl">
+            <!-- Decorative elements -->
+            <div class="absolute top-0 right-0 w-96 h-96 bg-emerald-800/30 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-emerald-900/40 rounded-full blur-3xl"></div>
+
+            <div class="relative z-10">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-4xl md:text-5xl font-normal text-white tracking-tight mb-6">Specialized Medical Care</h2>
+                    <p class="text-xl text-emerald-100/80 font-light max-w-3xl mx-auto leading-relaxed">
+                        Some conditions require a higher tier of vigilance and specialized training. Our team is fully certified to manage complex medical situations with grace and expertise.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+                    
+                    <div class="bg-emerald-900/40 backdrop-blur-sm border border-emerald-800/50 p-8 rounded-3xl reveal">
+                        <h3 class="text-2xl font-normal tracking-tight text-white mb-3">Dementia &amp; Memory Care</h3>
+                        <p class="text-emerald-100/70 font-light leading-relaxed">
+                            We provide a secure, easily navigable environment for residents experiencing Alzheimer's and other forms of dementia. Our caregivers are trained in de-escalation, redirection, and validation therapy to ensure residents feel safe, understood, and calm.
+                        </p>
+                    </div>
+
+                    <div class="bg-emerald-900/40 backdrop-blur-sm border border-emerald-800/50 p-8 rounded-3xl reveal delay-100">
+                        <h3 class="text-2xl font-normal tracking-tight text-white mb-3">Hospice &amp; Palliative Support</h3>
+                        <p class="text-emerald-100/70 font-light leading-relaxed">
+                            In partnership with local hospice agencies, we offer profound end-of-life care focusing on pain management and comfort. We provide a peaceful, loving sanctuary for residents and their families during life's most delicate transitions.
+                        </p>
+                    </div>
+
+                    <div class="bg-emerald-900/40 backdrop-blur-sm border border-emerald-800/50 p-8 rounded-3xl reveal">
+                        <h3 class="text-2xl font-normal tracking-tight text-white mb-3">Post-Stroke Rehabilitation</h3>
+                        <p class="text-emerald-100/70 font-light leading-relaxed">
+                            Recovery from a stroke requires patience and consistency. We coordinate closely with visiting physical, occupational, and speech therapists, integrating their prescribed exercises into our daily care routines to optimize recovery.
+                        </p>
+                    </div>
+
+                    <div class="bg-emerald-900/40 backdrop-blur-sm border border-emerald-800/50 p-8 rounded-3xl reveal delay-100">
+                        <h3 class="text-2xl font-normal tracking-tight text-white mb-3">Diabetic &amp; Incontinence Care</h3>
+                        <p class="text-emerald-100/70 font-light leading-relaxed">
+                            From meticulous blood sugar monitoring and insulin administration to discreet, dignified incontinence management, we handle chronic conditions efficiently to prevent complications and maintain the resident's comfort and pride.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facility Amenities (Elaborated) -->
+    <section id="amenities" class="py-24 px-6 bg-white border-t border-stone-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16 reveal flex flex-col md:flex-row md:items-end justify-between gap-8">
+                <div class="max-w-2xl">
+                    <h2 class="text-4xl md:text-5xl font-normal text-emerald-950 tracking-tight mb-6">Facility Amenities</h2>
+                    <p class="text-xl text-stone-600 font-light leading-relaxed">
+                        A clinical setting can never feel like home. We designed Hebron Care to be a sanctuary of comfort, engagement, and security.
+                    </p>
+                </div>
+                <div class="hidden md:block">
+                    <div class="w-16 h-16 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-900">
+                        <iconify-icon icon="solar:sofa-linear" width="32"></iconify-icon>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+                
+                <div class="reveal">
+                    <div class="flex items-center gap-3 mb-4 text-emerald-900">
+                        <iconify-icon icon="solar:bed-linear" width="24"></iconify-icon>
+                        <h3 class="text-xl font-normal tracking-tight">Private &amp; Semi-Private Rooms</h3>
+                    </div>
+                    <p class="text-stone-600 font-light text-base leading-relaxed">
+                        Spacious, beautifully furnished bedrooms bathed in natural light. Residents are encouraged to bring personal belongings to make the space truly their own.
+                    </p>
+                </div>
+
+                <div class="reveal delay-100">
+                    <div class="flex items-center gap-3 mb-4 text-emerald-900">
+                        <iconify-icon icon="solar:tree-linear" width="24"></iconify-icon>
+                        <h3 class="text-xl font-normal tracking-tight">Accessible Gardens</h3>
+                    </div>
+                    <p class="text-stone-600 font-light text-base leading-relaxed">
+                        Secure, professionally landscaped outdoor areas with paved walking paths, raised garden beds, and shaded patios perfect for afternoon tea or family visits.
+                    </p>
+                </div>
+
+                <div class="reveal delay-200">
+                    <div class="flex items-center gap-3 mb-4 text-emerald-900">
+                        <iconify-icon icon="solar:shield-keyhole-linear" width="24"></iconify-icon>
+                        <h3 class="text-xl font-normal tracking-tight">Advanced Security Systems</h3>
+                    </div>
+                    <p class="text-stone-600 font-light text-base leading-relaxed">
+                        Peace of mind with 24/7 monitored alarms, delayed-egress doors to prevent wandering, and emergency call bell systems located in every bedroom and bathroom.
+                    </p>
+                </div>
+
+                <div class="reveal">
+                    <div class="flex items-center gap-3 mb-4 text-emerald-900">
+                        <iconify-icon icon="solar:tv-linear" width="24"></iconify-icon>
+                        <h3 class="text-xl font-normal tracking-tight">Entertainment &amp; Wi-Fi</h3>
+                    </div>
+                    <p class="text-stone-600 font-light text-base leading-relaxed">
+                        High-speed internet throughout the home allows for easy video calls with family. Common areas feature large screens for movie nights and current events.
+                    </p>
+                </div>
+
+                <div class="reveal delay-100">
+                    <div class="flex items-center gap-3 mb-4 text-emerald-900">
+                        <iconify-icon icon="solar:magic-stick-3-linear" width="24"></iconify-icon>
+                        <h3 class="text-xl font-normal tracking-tight">Housekeeping &amp; Laundry</h3>
+                    </div>
+                    <p class="text-stone-600 font-light text-base leading-relaxed">
+                        Comprehensive domestic care including daily room tidying, deep cleaning, and full laundry services for personal clothing and fresh linens provided regularly.
+                    </p>
+                </div>
+
+                <div class="reveal delay-200">
+                    <div class="flex items-center gap-3 mb-4 text-emerald-900">
+                        <iconify-icon icon="solar:bus-linear" width="24"></iconify-icon>
+                        <h3 class="text-xl font-normal tracking-tight">Transport Coordination</h3>
+                    </div>
+                    <p class="text-stone-600 font-light text-base leading-relaxed">
+                        We arrange and coordinate safe, reliable transportation for medical appointments, ensuring residents get to their doctors seamlessly and on time.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Philosophy (New Minimal Section) -->
+    <section class="py-32 px-6 bg-[#FBF9F6] border-t border-stone-200 text-center">
+        <div class="max-w-4xl mx-auto reveal">
+            <iconify-icon icon="solar:quote-left-linear" class="text-emerald-900/20 mb-8" width="64"></iconify-icon>
+            <h2 class="text-4xl md:text-5xl font-normal text-emerald-950 leading-tight mb-10 serif italic">
+                "We believe care is not just a service, but a profound commitment to human dignity, joy, and peace of mind."
+            </h2>
+            <div class="w-16 h-[1px] bg-emerald-900/30 mx-auto mb-6"></div>
+            <p class="text-lg text-emerald-900 font-normal tracking-widest uppercase text-sm">The Hebron Care Promise</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-stone-200 bg-white">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-center md:text-left">
+                <div class="flex items-center gap-2 justify-center md:justify-start mb-2">
+                    <iconify-icon icon="solar:home-heart-linear" class="text-emerald-900" width="20"></iconify-icon>
+                    <span class="font-normal tracking-tight text-emerald-950 text-lg">Hebron Care Adult Family Home LLC</span>
+                </div>
+                <p class="text-stone-500 text-sm font-light">Providing compassionate, residential care for seniors.</p>
+            </div>
+            
+            <div class="flex gap-6 text-stone-400">
+                <a href="#" class="hover:text-emerald-900 transition-colors"><iconify-icon icon="solar:letter-linear" width="24"></iconify-icon></a>
+                <a href="#" class="hover:text-emerald-900 transition-colors"><iconify-icon icon="solar:phone-linear" width="24"></iconify-icon></a>
+                <a href="#" class="hover:text-emerald-900 transition-colors"><iconify-icon icon="solar:map-point-linear" width="24"></iconify-icon></a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-8 pt-8 border-t border-stone-100 text-center text-stone-400 text-xs font-light">
+            <p>© 2024 Hebron Care Adult Family Home LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+</body></html>

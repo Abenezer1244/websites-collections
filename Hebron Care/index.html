@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hebron Care Adult Family Home LLC | Compassionate Senior Care</title>
+<meta name="description" content="Hebron Care Adult Family Home provides a safe, nurturing, and family-like environment with personalized care for your loved ones.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;display=swap" rel="stylesheet">
+<style>
+body { font-family: 'Inter', sans-serif; }
+h1, h2, h3, h4, h5, h6, .serif { font-family: 'Playfair Display', serif; }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #fafaf9; }
+::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 4px; }
+@keyframes float {
+0% { transform: translateY(0px); }
+50% { transform: translateY(-10px); }
+100% { transform: translateY(0px); }
+}
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-float-delayed { animation: float 7s ease-in-out infinite 2s; }
+.reveal {
+opacity: 0;
+transform: translateY(30px);
+transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+.reveal.active {
+opacity: 1;
+transform: translateY(0);
+}
+/* Continuous Gliding Marquee */
+@keyframes marquee {
+0% { transform: translateX(0); }
+100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+display: flex;
+width: max-content;
+animation: marquee 80s linear infinite;
+}
+.animate-marquee:hover {
+animation-play-state: paused;
+}
+/* Custom Details/Summary */
+details > summary { list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
+details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
+@keyframes slideDown {
+0% { opacity: 0; transform: translateY(-10px); }
+100% { opacity: 1; transform: translateY(0); }
+}
+</style></head>
+<body class="bg-[#FBF9F6] text-stone-800 antialiased selection:bg-emerald-100 selection:text-emerald-900 overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-[#FBF9F6]/80 backdrop-blur-md border-b border-stone-200/50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-emerald-900 rounded-full flex items-center justify-center text-white">
+                    <iconify-icon icon="solar:home-heart-linear" width="18"></iconify-icon>
+                </div>
+                <span class="text-xl font-normal tracking-tight text-emerald-950">Hebron Care</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-lg font-normal text-stone-600">
+                <a href="#why-choose" class="hover:text-emerald-900 transition-colors">Why Choose Us</a>
+                <a href="#expertise" class="hover:text-emerald-900 transition-colors">Our Expertise</a>
+                <a href="#testimonials" class="hover:text-emerald-900 transition-colors">Families Say</a>
+                <a href="#faq" class="hover:text-emerald-900 transition-colors">FAQ</a>
+            </div>
+            <a href="#action" class="hidden md:inline-flex bg-emerald-900 text-[#FBF9F6] px-5 py-2.5 rounded-full text-base font-normal hover:bg-emerald-800 transition-all hover:scale-[1.02] shadow-lg shadow-emerald-900/10">
+                Schedule a Tour
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-16 md:pt-40 md:pb-24 px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div class="reveal">
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-emerald-100/50 text-emerald-900 rounded-full text-sm font-normal mb-6 border border-emerald-200/50">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    Accepting New Residents
+                </div>
+                <h1 class="text-5xl md:text-7xl font-normal tracking-tight text-emerald-950 leading-[1.1] mb-8">
+                    Exceptional care for <br> <span class="italic serif text-emerald-800">your loved ones.</span>
+                </h1>
+                <p class="text-xl text-stone-600 leading-relaxed max-w-lg mb-10 font-light">
+                    Hebron Care Adult Family Home LLC provides a safe, nurturing, and truly residential environment. We tailor our support to honor the dignity and individuality of every resident.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row items-start gap-4 mb-12">
+                    <a href="#action" class="bg-emerald-900 text-[#FBF9F6] px-8 py-4 rounded-full text-lg font-normal hover:bg-emerald-800 transition-all hover:shadow-xl hover:-translate-y-0.5 flex items-center gap-2">
+                        Schedule a Tour
+                        <iconify-icon icon="solar:arrow-right-linear" width="20"></iconify-icon>
+                    </a>
+                    <a href="tel:5550123456" class="px-8 py-4 rounded-full text-lg font-normal text-emerald-900 border border-emerald-900/10 hover:bg-emerald-50 transition-all flex items-center gap-2">
+                        <iconify-icon icon="solar:phone-calling-linear" width="20"></iconify-icon>
+                        (555) 012-3456
+                    </a>
+                </div>
+
+                <div class="flex flex-wrap gap-x-8 gap-y-2 text-stone-500 text-sm font-normal pt-8 border-t border-stone-200">
+                    <div class="flex items-center gap-2">
+                        <iconify-icon icon="solar:verified-check-linear" class="text-emerald-700" width="18"></iconify-icon> Licensed Facility
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <iconify-icon icon="solar:heart-pulse-linear" class="text-emerald-700" width="18"></iconify-icon> 24/7 Monitoring
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <iconify-icon icon="solar:users-group-two-rounded-linear" class="text-emerald-700" width="18"></iconify-icon> Experienced Staff
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative lg:h-[600px] reveal delay-200 hidden lg:block">
+                <div class="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl bg-stone-200">
+                    <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" alt="Caregiver holding hands with resident" class="w-full h-full object-cover object-center scale-105 hover:scale-100 transition-transform duration-1000 ease-out">
+                    <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/40 via-transparent to-transparent"></div>
+                </div>
+
+                <div class="absolute top-12 -left-8 bg-white/95 backdrop-blur rounded-2xl p-4 shadow-xl border border-white/50 animate-float max-w-xs">
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700">
+                            <iconify-icon icon="solar:home-smile-linear" width="18"></iconify-icon>
+                        </div>
+                        <div>
+                            <div class="text-xs text-stone-500 font-normal">Environment</div>
+                            <div class="text-sm font-medium text-emerald-950">Real Home Setting</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="absolute bottom-24 -right-8 bg-white/95 backdrop-blur rounded-2xl p-5 shadow-xl border border-white/50 animate-float-delayed">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden bg-stone-100 flex items-center justify-center">
+                           <iconify-icon icon="solar:shield-check-linear" class="text-emerald-900" width="24"></iconify-icon>
+                        </div>
+                        <div>
+                            <p class="text-sm font-normal text-stone-900">Personalized Plans</p>
+                            <div class="flex text-emerald-500 mt-0.5 text-xs font-normal">
+                                Tailored to individual needs
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Why Choose Section -->
+    <section id="why-choose" class="py-24 px-6 mx-2 md:mx-6 bg-white rounded-[3rem] shadow-sm border border-stone-100 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-30">
+            <div class="absolute -top-[20%] -right-[10%] w-[600px] h-[600px] bg-stone-100 rounded-full blur-3xl"></div>
+            <div class="absolute top-[40%] -left-[10%] w-[400px] h-[400px] bg-emerald-50 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <h2 class="text-4xl md:text-5xl font-normal text-emerald-950 tracking-tight mb-16 text-center max-w-3xl mx-auto reveal">
+                Why Choose <br> <span class="italic serif text-stone-400">Hebron Care?</span>
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-[#FBF9F6]/80 backdrop-blur p-10 rounded-3xl group hover:bg-[#FBF9F6] transition-colors reveal">
+                    <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 text-stone-600 shadow-sm group-hover:scale-110 transition-transform">
+                        <iconify-icon icon="solar:home-linear" width="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-2xl font-normal text-emerald-950 mb-3 tracking-tight">A True Home.</h3>
+                    <p class="text-lg text-stone-600 leading-relaxed font-light">We offer a comfortable, residential house where residents feel like family, avoiding the overwhelming, institutional feel of large care facilities.</p>
+                </div>
+
+                <div class="bg-[#FBF9F6]/80 backdrop-blur p-10 rounded-3xl group hover:bg-[#FBF9F6] transition-colors reveal delay-100">
+                    <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 text-stone-600 shadow-sm group-hover:scale-110 transition-transform">
+                        <iconify-icon icon="solar:user-hands-linear" width="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-2xl font-normal text-emerald-950 mb-3 tracking-tight">Dedicated Attention.</h3>
+                    <p class="text-lg text-stone-600 leading-relaxed font-light">With a low resident-to-caregiver ratio, we ensure prompt, highly personalized care and meaningful daily interactions for everyone.</p>
+                </div>
+
+                <div class="bg-[#FBF9F6]/80 backdrop-blur p-10 rounded-3xl group hover:bg-[#FBF9F6] transition-colors reveal delay-200">
+                    <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 text-stone-600 shadow-sm group-hover:scale-110 transition-transform">
+                        <iconify-icon icon="solar:chef-hat-linear" width="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-2xl font-normal text-emerald-950 mb-3 tracking-tight">Nutritious Meals.</h3>
+                    <p class="text-lg text-stone-600 leading-relaxed font-light">Freshly prepared, home-cooked meals tailored to specific dietary requirements and preferences, served in a warm dining space.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Expertise Section -->
+    <section id="expertise" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <h2 class="text-4xl md:text-5xl font-normal text-emerald-950 tracking-tight mb-6">
+                        Our Care Expertise
+                    </h2>
+                    <p class="text-xl text-stone-600 leading-relaxed mb-8 font-light">
+                        We provide the exact level of support needed, allowing our residents to maintain their dignity and independence while ensuring their complete safety and well-being.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-800 shrink-0">
+                                <iconify-icon icon="solar:pill-linear" width="24"></iconify-icon>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-xl font-normal text-emerald-950 tracking-tight mb-1">Medication Management</h4>
+                                <p class="text-stone-600 font-light">Strict oversight and administration of daily medications, ensuring schedules are precisely followed.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-800 shrink-0">
+                                <iconify-icon icon="solar:wheelchair-linear" width="24"></iconify-icon>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-xl font-normal text-emerald-950 tracking-tight mb-1">Mobility &amp; Daily Living</h4>
+                                <p class="text-stone-600 font-light">Compassionate assistance with bathing, dressing, grooming, and safe transferring throughout the home.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-800 shrink-0">
+                                <iconify-icon icon="solar:brain-linear" width="24"></iconify-icon>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-xl font-normal text-emerald-950 tracking-tight mb-1">Cognitive Support</h4>
+                                <p class="text-stone-600 font-light">Specialized routines and engaging activities designed for those experiencing memory loss or dementia.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl border border-stone-200 overflow-hidden shadow-xl reveal delay-100 relative h-full min-h-[500px]">
+                     <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg" alt="Smiling resident and caregiver" class="opacity-90 w-full h-full object-cover">
+                     <div class="bg-white/95 border-stone-100 border-t pt-6 pr-6 pb-6 pl-6 absolute right-0 bottom-0 left-0 backdrop-blur-md">
+                        <div class="font-normal text-emerald-950 mb-2">Also specializing in:</div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-stone-100 rounded-full text-sm text-stone-600 font-normal">Respite Care</span>
+                            <span class="px-3 py-1 bg-stone-100 rounded-full text-sm text-stone-600 font-normal">Hospice Support</span>
+                            <span class="px-3 py-1 bg-stone-100 rounded-full text-sm text-stone-600 font-normal">Dementia Care</span>
+                            <span class="px-3 py-1 bg-stone-100 rounded-full text-sm text-stone-600 font-normal">Companionship</span>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials (Gliding) -->
+    <section id="testimonials" class="py-24 bg-white border-y border-stone-200 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                 <h2 class="text-4xl font-normal text-emerald-950 tracking-tight mb-4">Words From Our Families</h2>
+                 <div class="flex justify-center gap-1 text-emerald-500">
+                    <iconify-icon icon="solar:star-bold" width="24"></iconify-icon>
+                    <iconify-icon icon="solar:star-bold" width="24"></iconify-icon>
+                    <iconify-icon icon="solar:star-bold" width="24"></iconify-icon>
+                    <iconify-icon icon="solar:star-bold" width="24"></iconify-icon>
+                    <iconify-icon icon="solar:star-bold" width="24"></iconify-icon>
+                 </div>
+                 <p class="text-stone-500 mt-2 font-normal">Trusted by the community we serve</p>
+            </div>
+        </div>
+
+        <div class="relative w-full">
+            <!-- Fade Gradients -->
+            <div class="absolute inset-y-0 left-0 w-16 md:w-48 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute inset-y-0 right-0 w-16 md:w-48 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+            
+            <!-- Marquee Track -->
+            <div class="animate-marquee gap-6 py-4 px-6">
+                <!-- Set 1 (15 Testimonials) -->
+                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                    <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"Moving mom here was the best decision. The house is beautiful and the staff treats her like their own family."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">M</div>
+                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                    </div>
+                </div>
+                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                    <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"The home-cooked meals are incredible. My father is eating better than he has in years and loves the dining area."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">D</div>
+                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                    </div>
+                </div>
+                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                    <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"Hebron Care gave us peace of mind. Knowing someone is awake and watching out for him 24/7 is priceless."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">S</div>
+                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                    </div>
+                </div>
+                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                    <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"The small number of residents means the care is incredibly personal. They know all of my aunt's quirks and preferences."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">K</div>
+                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                    </div>
+                </div>
+                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                    <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"We toured so many large facilities that felt cold. Hebron Care felt warm and inviting the moment we walked in."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">J</div>
+                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                    </div>
+                </div>
+                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                    <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"Their dementia care is top-notch. They handle difficult days with such grace and professionalism."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">R</div>
+                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                    </div>
+                </div>
+                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                    <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"The communication is excellent. I always know how my mother is doing and if there are any changes in her health."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">L</div>
+                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                    </div>
+                </div>
+                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                    <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"It smells like a real home, looks like a real home, and feels like a real home. We are so grateful."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">T</div>
+                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                    </div>
+                </div>
+                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                    <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"They manage all his medications flawlessly, which was a huge stressor for me previously. Highly recommend."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">P</div>
+                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                    </div>
+                </div>
+                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                    <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"The staff is always smiling. You can tell they genuinely care about the residents, not just treating it as a job."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">A</div>
+                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                    </div>
+                </div>
+                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                    <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"My mom enjoys sitting on the patio and chatting with the other residents. It's a wonderful little community."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">E</div>
+                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                    </div>
+                </div>
+                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                    <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"Cleanliness is superb. Every time I visit unannounced, the house is immaculate and the residents look well cared for."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">B</div>
+                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                    </div>
+                </div>
+                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                    <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"They arranged a little birthday celebration for my dad. It's those small touches that mean the world to us."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">C</div>
+                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                    </div>
+                </div>
+                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                    <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"I appreciate how they encourage independence while stepping in the moment help is needed. Perfect balance."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">V</div>
+                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                    </div>
+                </div>
+                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                    <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"A true blessing for our family. Hebron Care took the heavy weight off our shoulders."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">H</div>
+                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                    </div>
+                </div>
+
+                <!-- Set 2 (Duplicated for seamless loop) -->
+                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                    <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"Moving mom here was the best decision. The house is beautiful and the staff treats her like their own family."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">M</div>
+                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                    </div>
+                </div>
+                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                    <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"The home-cooked meals are incredible. My father is eating better than he has in years and loves the dining area."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">D</div>
+                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                    </div>
+                </div>
+                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                    <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"Hebron Care gave us peace of mind. Knowing someone is awake and watching out for him 24/7 is priceless."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">S</div>
+                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                    </div>
+                </div>
+                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                    <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"The small number of residents means the care is incredibly personal. They know all of my aunt's quirks and preferences."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">K</div>
+                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                    </div>
+                </div>
+                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                    <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"We toured so many large facilities that felt cold. Hebron Care felt warm and inviting the moment we walked in."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">J</div>
+                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                    </div>
+                </div>
+                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                    <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"Their dementia care is top-notch. They handle difficult days with such grace and professionalism."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">R</div>
+                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                    </div>
+                </div>
+                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                    <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"The communication is excellent. I always know how my mother is doing and if there are any changes in her health."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">L</div>
+                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                    </div>
+                </div>
+                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                    <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"It smells like a real home, looks like a real home, and feels like a real home. We are so grateful."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">T</div>
+                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                    </div>
+                </div>
+                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                    <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"They manage all his medications flawlessly, which was a huge stressor for me previously. Highly recommend."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">P</div>
+                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                    </div>
+                </div>
+                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                    <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"The staff is always smiling. You can tell they genuinely care about the residents, not just treating it as a job."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">A</div>
+                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                    </div>
+                </div>
+                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                    <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"My mom enjoys sitting on the patio and chatting with the other residents. It's a wonderful little community."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">E</div>
+                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                    </div>
+                </div>
+                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                    <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"Cleanliness is superb. Every time I visit unannounced, the house is immaculate and the residents look well cared for."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">B</div>
+                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                    </div>
+                </div>
+                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                    <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"They arranged a little birthday celebration for my dad. It's those small touches that mean the world to us."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">C</div>
+                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                    </div>
+                </div>
+                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                    <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"I appreciate how they encourage independence while stepping in the moment help is needed. Perfect balance."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">V</div>
+                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                    </div>
+                </div>
+                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                    <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"A true blessing for our family. Hebron Care took the heavy weight off our shoulders."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">H</div>
+                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 px-6 mx-2 md:mx-6 bg-gradient-to-br from-emerald-50 to-[#FBF9F6] rounded-[3rem] border border-stone-100">
+        <div class="max-w-3xl mx-auto reveal">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-normal text-emerald-950 tracking-tight mb-4">Frequently Asked Questions</h2>
+                <p class="text-lg text-stone-600 font-light">Common questions families have when considering our home.</p>
+            </div>
+
+            <div class="space-y-4">
+                <details class="group bg-white rounded-2xl border border-stone-200 shadow-sm">
+                    <summary class="flex justify-between items-center font-normal cursor-pointer p-6 text-xl tracking-tight text-emerald-950">
+                        What is the staff-to-resident ratio?
+                        <span class="transition-transform duration-300 group-open:rotate-45 text-emerald-600">
+                            <iconify-icon icon="solar:add-circle-linear" width="24"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-stone-600 text-lg leading-relaxed font-light border-t border-stone-100 pt-4 mt-2">
+                        We maintain a very low staff-to-resident ratio, typically 1 caregiver to 3 or 4 residents. This ensures that every individual receives prompt, attentive, and highly personalized care throughout the day and night.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-2xl border border-stone-200 shadow-sm">
+                    <summary class="flex justify-between items-center font-normal cursor-pointer p-6 text-xl tracking-tight text-emerald-950">
+                        Are family visits allowed at any time?
+                        <span class="transition-transform duration-300 group-open:rotate-45 text-emerald-600">
+                            <iconify-icon icon="solar:add-circle-linear" width="24"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-stone-600 text-lg leading-relaxed font-light border-t border-stone-100 pt-4 mt-2">
+                        Absolutely. This is your loved one's home, and we encourage family visits. While we ask visitors to be respectful of quiet hours and meal times, you are welcome to visit, share a meal, or spend time together in our common areas or their private room.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-2xl border border-stone-200 shadow-sm">
+                    <summary class="flex justify-between items-center font-normal cursor-pointer p-6 text-xl tracking-tight text-emerald-950">
+                        How do you handle medical emergencies?
+                        <span class="transition-transform duration-300 group-open:rotate-45 text-emerald-600">
+                            <iconify-icon icon="solar:add-circle-linear" width="24"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-stone-600 text-lg leading-relaxed font-light border-t border-stone-100 pt-4 mt-2">
+                        Our staff is trained in First Aid and CPR, and we have protocols in place for any medical situation. In the event of an emergency, we immediately contact 911, followed by the resident's designated primary contacts and their physician.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-2xl border border-stone-200 shadow-sm">
+                    <summary class="flex justify-between items-center font-normal cursor-pointer p-6 text-xl tracking-tight text-emerald-950">
+                        Do you accommodate special diets?
+                        <span class="transition-transform duration-300 group-open:rotate-45 text-emerald-600">
+                            <iconify-icon icon="solar:add-circle-linear" width="24"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-stone-600 text-lg leading-relaxed font-light border-t border-stone-100 pt-4 mt-2">
+                        Yes. We understand that nutrition is vital for seniors. All meals are home-cooked, and we easily accommodate diabetic, low-sodium, pureed, and other prescribed or preferred diets.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-2xl border border-stone-200 shadow-sm">
+                    <summary class="flex justify-between items-center font-normal cursor-pointer p-6 text-xl tracking-tight text-emerald-950">
+                        What daily activities are provided?
+                        <span class="transition-transform duration-300 group-open:rotate-45 text-emerald-600">
+                            <iconify-icon icon="solar:add-circle-linear" width="24"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-stone-600 text-lg leading-relaxed font-light border-t border-stone-100 pt-4 mt-2">
+                        Activities are tailored to the interests and abilities of our current residents. They typically include gentle morning exercises, arts and crafts, music therapy, movie afternoons, gardening in our secured patio, and structured cognitive games.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Take Actions Today -->
+    <section id="action" class="py-24 px-6 bg-[#FBF9F6]">
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
+            <div class="reveal">
+                <h2 class="text-5xl md:text-6xl font-normal text-emerald-950 tracking-tight mb-6 leading-tight">
+                    Ready to find the perfect home?
+                </h2>
+                <p class="text-xl text-stone-600 mb-10 leading-relaxed font-light">
+                    Finding the right environment for a loved one is a big decision. Let us show you why Hebron Care is the perfect choice. Schedule a private tour today.
+                </p>
+                
+                <div class="space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-full bg-white border border-stone-200 flex items-center justify-center text-emerald-900 mt-1">
+                            <iconify-icon icon="solar:map-point-linear" width="20"></iconify-icon>
+                        </div>
+                        <div>
+                            <h4 class="font-normal text-emerald-950 text-lg">Location</h4>
+                            <p class="text-stone-600 font-light">123 Serenity Lane<br>Your City, ST 12345</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-full bg-white border border-stone-200 flex items-center justify-center text-emerald-900 mt-1">
+                            <iconify-icon icon="solar:phone-calling-linear" width="20"></iconify-icon>
+                        </div>
+                        <div>
+                            <h4 class="font-normal text-emerald-950 text-lg">Contact Us</h4>
+                            <a href="tel:5550123456" class="text-stone-600 hover:text-emerald-900 transition-colors font-light">(555) 012-3456</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 md:p-10 rounded-3xl border border-stone-100 shadow-xl reveal delay-100 relative">
+                <div class="absolute -top-6 -right-6 w-24 h-24 bg-emerald-100 rounded-full blur-2xl opacity-60"></div>
+                <div class="text-center space-y-6 relative z-10">
+                    <h3 class="text-2xl font-normal text-emerald-950 tracking-tight">Come See For Yourself</h3>
+                    <p class="text-stone-600 font-light">We would love to show you our home, introduce you to our staff, and answer any questions you may have.</p>
+                    
+                    <button class="w-full bg-emerald-900 text-white font-normal text-lg py-4 rounded-xl hover:bg-emerald-800 transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 transform flex items-center justify-center gap-2">
+                        Request a Tour
+                        <iconify-icon icon="solar:calendar-add-linear" width="20"></iconify-icon>
+                    </button>
+                    
+                    <p class="text-sm text-stone-400 font-light">Or call us directly to speak with our care director.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-stone-200 bg-white">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-center md:text-left">
+                <div class="flex items-center gap-2 justify-center md:justify-start mb-2">
+                    <iconify-icon icon="solar:home-heart-linear" class="text-emerald-900" width="20"></iconify-icon>
+                    <span class="font-normal tracking-tight text-emerald-950 text-lg">Hebron Care Adult Family Home LLC</span>
+                </div>
+                <p class="text-stone-500 text-sm font-light">Providing compassionate, residential care for seniors.</p>
+            </div>
+            
+            <div class="flex gap-6 text-stone-400">
+                <a href="#" class="hover:text-emerald-900 transition-colors"><iconify-icon icon="solar:letter-linear" width="24"></iconify-icon></a>
+                <a href="#" class="hover:text-emerald-900 transition-colors"><iconify-icon icon="solar:phone-linear" width="24"></iconify-icon></a>
+                <a href="#" class="hover:text-emerald-900 transition-colors"><iconify-icon icon="solar:map-point-linear" width="24"></iconify-icon></a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-8 pt-8 border-t border-stone-100 text-center text-stone-400 text-xs font-light">
+            <p>© 2024 Hebron Care Adult Family Home LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+</body></html>
