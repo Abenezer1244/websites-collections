@@ -140,17 +140,25 @@ details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
             </div>
         </div>
         <!-- Mobile menu -->
-        <div id="mobile-menu" class="md:hidden fixed left-0 right-0 top-16 bottom-0 w-full bg-[#FBF9F6] z-40 flex flex-col pt-6 px-4 pb-8 translate-x-full transition-transform duration-300 ease-out overflow-y-auto" aria-hidden="true" style="visibility: visible;">
-            <div class="flex flex-col gap-1 flex-1">
-                <a href="index.html" class="nav-mobile-link block py-4 px-4 text-lg font-semibold text-stone-800 hover:text-emerald-900 hover:bg-emerald-50/50 rounded-xl transition-colors">Home</a>
-                <a href="about-us.html" class="nav-mobile-link block py-4 px-4 text-lg font-semibold text-stone-800 hover:text-emerald-900 hover:bg-emerald-50/50 rounded-xl transition-colors">About Us</a>
-                <a href="gallery.html" class="nav-mobile-link block py-4 px-4 text-lg font-semibold text-stone-800 hover:text-emerald-900 hover:bg-emerald-50/50 rounded-xl transition-colors">Gallery</a>
-                <a href="services.html" class="nav-mobile-link block py-4 px-4 text-lg font-semibold text-stone-800 hover:text-emerald-900 hover:bg-emerald-50/50 rounded-xl transition-colors">Services</a>
-                <a href="contact.html" class="nav-mobile-link block py-4 px-4 text-lg font-semibold text-stone-800 hover:text-emerald-900 hover:bg-emerald-50/50 rounded-xl transition-colors">Contact Us</a>
+        <div id="mobile-menu" class="md:hidden fixed left-0 right-0 top-16 bottom-0 w-full bg-[#FBF9F6] z-40 flex flex-col translate-x-full transition-transform duration-300 ease-out overflow-y-auto" aria-hidden="true" style="visibility: visible;">
+            <div class="flex items-center justify-between py-4 px-4 sm:px-6 border-b border-stone-200">
+                <a href="index.html" class="text-xl font-semibold text-emerald-900 tracking-tight">Hebron Care <span class="text-amber-600">AFH</span></a>
+                <button type="button" id="nav-close-btn" class="p-2 -mr-2 text-emerald-900 hover:bg-stone-100 rounded-full transition-colors" aria-label="Close menu">
+                    <iconify-icon icon="solar:close-circle-bold" width="28"></iconify-icon>
+                </button>
             </div>
-            <a href="contact.html" class="nav-mobile-link mt-4 mx-4 py-4 px-6 bg-emerald-900 text-[#FBF9F6] rounded-full text-center font-normal hover:bg-emerald-800 transition-colors">
-                Schedule a Tour
-            </a>
+            <nav class="flex flex-col flex-1 py-2">
+                <a href="index.html" class="nav-mobile-link block py-4 px-4 sm:px-6 text-lg font-semibold text-emerald-900 border-b border-stone-200 hover:bg-emerald-50/50 transition-colors">Home</a>
+                <a href="about-us.html" class="nav-mobile-link block py-4 px-4 sm:px-6 text-lg font-semibold text-emerald-900 border-b border-stone-200 hover:bg-emerald-50/50 transition-colors">About Us</a>
+                <a href="gallery.html" class="nav-mobile-link block py-4 px-4 sm:px-6 text-lg font-semibold text-emerald-900 border-b border-stone-200 hover:bg-emerald-50/50 transition-colors">Gallery</a>
+                <a href="services.html" class="nav-mobile-link block py-4 px-4 sm:px-6 text-lg font-semibold text-emerald-900 border-b border-stone-200 hover:bg-emerald-50/50 transition-colors">Services</a>
+                <a href="contact.html" class="nav-mobile-link block py-4 px-4 sm:px-6 text-lg font-semibold text-emerald-900 border-b border-stone-200 hover:bg-emerald-50/50 transition-colors">Contact Us</a>
+            </nav>
+            <div class="p-4 sm:px-6 pb-8 pt-6">
+                <a href="contact.html" class="nav-mobile-link block w-full py-4 px-6 bg-emerald-900 text-white text-center text-lg font-semibold rounded-2xl hover:bg-emerald-800 transition-colors shadow-lg shadow-emerald-900/20">
+                    Schedule a Tour
+                </a>
+            </div>
         </div>
         <div id="mobile-backdrop" class="md:hidden fixed inset-0 top-16 bg-black/20 z-30 opacity-0 pointer-events-none transition-opacity duration-300" aria-hidden="true"></div>
     </nav>
@@ -773,6 +781,8 @@ details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
                 if (menu.classList.contains('translate-x-full')) openMenu();
                 else closeMenu();
             });
+            var closeBtn = document.getElementById('nav-close-btn');
+            if (closeBtn) closeBtn.addEventListener('click', closeMenu);
             backdrop.addEventListener('click', closeMenu);
             menu.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', closeMenu); });
             window.addEventListener('resize', function() { if (window.innerWidth >= 768) closeMenu(); });
