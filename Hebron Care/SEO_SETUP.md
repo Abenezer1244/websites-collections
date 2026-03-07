@@ -33,7 +33,7 @@ Each page has:
 ## What to Update When You Go Live
 
 ### 1. Domain & canonical URLs
-Replace `https://hebroncare.com` with your real domain in:
+The site uses **hebroncareafh.com**. If you ever change domains, update:
 - `index.html` – canonical, og:url, schema `url`
 - `about-us.html` – canonical, og:url
 - `services.html` – canonical, og:url
