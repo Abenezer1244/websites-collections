@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Services | Hebron Care Adult Family Home LLC</title>
-<meta name="description" content="Explore our comprehensive care services, specialized medical support, and the luxurious amenities at Hebron Care.">
+<title>Services | Hebron Care - Senior Care, Memory Care &amp; Amenities | Seattle, WA</title>
+<meta name="description" content="Explore Hebron Care's comprehensive senior care services: personalized care plans, memory care, 24/7 support, and family-like amenities in Seattle.">
+<meta name="keywords" content="senior care services Seattle, memory care, adult family home amenities, personalized care plans">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://hebroncare.com/services.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Services | Hebron Care Adult Family Home - Seattle, WA">
+<meta property="og:description" content="Comprehensive care services, specialized medical support, and amenities at Hebron Care in Seattle.">
+<meta property="og:url" content="https://hebroncare.com/services.html">
+<meta property="og:image" content="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=1200&auto=format&fit=crop">
+<meta property="og:site_name" content="Hebron Care Adult Family Home LLC">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,36 +32,62 @@ transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
 opacity: 1;
 transform: translateY(0);
 }
+/* Responsive: safe area, touch targets */
+html { -webkit-tap-highlight-color: transparent; }
+a, button { touch-action: manipulation; }
+@supports (padding: env(safe-area-inset-top)) {
+  body { padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+  nav .max-w-7xl { padding-left: max(1rem, env(safe-area-inset-left)); padding-right: max(1rem, env(safe-area-inset-right)); }
+}
 </style></head>
 <body class="bg-[#FBF9F6] text-stone-800 antialiased selection:bg-emerald-100 selection:text-emerald-900 overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-[#FBF9F6]/80 backdrop-blur-md border-b border-stone-200/50 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-2">
-                <div class="w-8 h-8 bg-emerald-900 rounded-full flex items-center justify-center text-white">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#FBF9F6]/95 backdrop-blur-md border-b border-stone-200/50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 min-h-[44px] min-w-[44px] -m-2 p-2 md:m-0 md:p-0">
+                <div class="w-8 h-8 bg-emerald-900 rounded-full flex items-center justify-center text-white shrink-0">
                     <iconify-icon icon="solar:home-heart-linear" width="18"></iconify-icon>
                 </div>
-                <span class="text-xl font-normal tracking-tight text-emerald-950">Hebron Care</span>
+                <span class="text-lg sm:text-xl font-normal tracking-tight text-emerald-950">Hebron Care</span>
             </a>
-            <div class="hidden md:flex items-center gap-8 text-lg font-normal text-stone-600">
-                <a href="index.html" class="hover:text-emerald-900 transition-colors">Home</a>
-                <a href="about-us.html" class="hover:text-emerald-900 transition-colors">About Us</a>
-                <a href="gallery.html" class="hover:text-emerald-900 transition-colors">Gallery</a>
-                <a href="services.html" class="hover:text-emerald-900 transition-colors">Services</a>
-                <a href="contact.html" class="hover:text-emerald-900 transition-colors">Contact Us</a>
+            <div class="hidden md:flex items-center gap-6 lg:gap-8 text-base lg:text-lg font-normal text-stone-600">
+                <a href="index.html" class="hover:text-emerald-900 transition-colors py-2">Home</a>
+                <a href="about-us.html" class="hover:text-emerald-900 transition-colors py-2">About Us</a>
+                <a href="gallery.html" class="hover:text-emerald-900 transition-colors py-2">Gallery</a>
+                <a href="services.html" class="hover:text-emerald-900 transition-colors py-2">Services</a>
+                <a href="contact.html" class="hover:text-emerald-900 transition-colors py-2">Contact Us</a>
             </div>
-            <a href="contact.html" class="hidden md:inline-flex bg-emerald-900 text-[#FBF9F6] px-5 py-2.5 rounded-full text-base font-normal hover:bg-emerald-800 transition-all hover:scale-[1.02] shadow-lg shadow-emerald-900/10">
+            <div class="flex items-center gap-2">
+                <a href="contact.html" class="hidden md:inline-flex bg-emerald-900 text-[#FBF9F6] px-5 py-2.5 rounded-full text-base font-normal hover:bg-emerald-800 transition-all hover:scale-[1.02] shadow-lg shadow-emerald-900/10 min-h-[44px] items-center">
+                    Schedule a Tour
+                </a>
+                <button type="button" id="nav-toggle" class="md:hidden flex items-center justify-center w-12 h-12 rounded-full text-stone-600 hover:bg-stone-100 hover:text-emerald-900 transition-colors -mr-2" aria-label="Open menu" aria-expanded="false">
+                    <iconify-icon icon="solar:hamburger-menu-linear" width="24" id="nav-icon-open"></iconify-icon>
+                    <iconify-icon icon="solar:close-circle-linear" width="24" class="hidden" id="nav-icon-close"></iconify-icon>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden fixed inset-0 top-16 bg-[#FBF9F6] z-40 flex flex-col pt-6 px-4 pb-8 translate-x-full transition-transform duration-300 ease-out overflow-y-auto" aria-hidden="true">
+            <div class="flex flex-col gap-1">
+                <a href="index.html" class="nav-mobile-link py-4 px-4 text-lg font-normal text-stone-600 hover:text-emerald-900 hover:bg-emerald-50/50 rounded-xl transition-colors">Home</a>
+                <a href="about-us.html" class="nav-mobile-link py-4 px-4 text-lg font-normal text-stone-600 hover:text-emerald-900 hover:bg-emerald-50/50 rounded-xl transition-colors">About Us</a>
+                <a href="gallery.html" class="nav-mobile-link py-4 px-4 text-lg font-normal text-stone-600 hover:text-emerald-900 hover:bg-emerald-50/50 rounded-xl transition-colors">Gallery</a>
+                <a href="services.html" class="nav-mobile-link py-4 px-4 text-lg font-normal text-stone-600 hover:text-emerald-900 hover:bg-emerald-50/50 rounded-xl transition-colors">Services</a>
+                <a href="contact.html" class="nav-mobile-link py-4 px-4 text-lg font-normal text-stone-600 hover:text-emerald-900 hover:bg-emerald-50/50 rounded-xl transition-colors">Contact Us</a>
+            </div>
+            <a href="contact.html" class="nav-mobile-link mt-4 mx-4 py-4 px-6 bg-emerald-900 text-[#FBF9F6] rounded-full text-center font-normal hover:bg-emerald-800 transition-colors">
                 Schedule a Tour
             </a>
         </div>
+        <div id="mobile-backdrop" class="md:hidden fixed inset-0 top-16 bg-black/20 z-30 opacity-0 pointer-events-none transition-opacity duration-300" aria-hidden="true"></div>
     </nav>
 
     <!-- Services Hero (New Design: Split Layout with Image Composition) -->
-    <header class="pt-32 pb-24 px-6 relative overflow-hidden border-b border-stone-200/50">
+    <header class="pt-28 sm:pt-32 pb-16 sm:pb-24 px-4 sm:px-6 relative overflow-hidden border-b border-stone-200/50">
         <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-50 rounded-full blur-3xl -z-10 opacity-60 pointer-events-none translate-x-1/3 -translate-y-1/3"></div>
         
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center pt-10">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 sm:gap-16 items-center pt-6 sm:pt-10">
             <div class="reveal z-10">
                 <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-white text-emerald-900 rounded-full text-sm font-normal mb-8 border border-stone-200 shadow-sm">
                     <iconify-icon icon="solar:heart-pulse-linear" width="16"></iconify-icon> Our Services
@@ -72,7 +107,7 @@ transform: translateY(0);
             </div>
 
             <!-- New Image Composition Look -->
-            <div class="relative h-[500px] md:h-[600px] w-full reveal delay-200">
+            <div class="relative h-[320px] sm:h-[400px] md:h-[500px] lg:h-[600px] w-full reveal delay-200">
                 <div class="absolute top-0 right-0 w-[80%] h-[85%] rounded-[2.5rem] overflow-hidden shadow-2xl bg-stone-200 z-10">
                     <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover" alt="Caregiver assisting senior">
                 </div>
@@ -136,7 +171,7 @@ transform: translateY(0);
                     <p class="text-lg text-stone-600 font-light leading-relaxed mb-8">
                         Our foundational services are designed to remove the friction from daily life, allowing our residents to focus on what matters most: enjoying their days in comfort and dignity.
                     </p>
-                    <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-emerald-900 border border-stone-200 rounded-full font-normal hover:border-emerald-900 transition-colors shadow-sm">
+                    <a href="contact.html" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-emerald-900 border border-stone-200 rounded-full font-normal hover:border-emerald-900 transition-colors shadow-sm">
                         Discuss care options
                     </a>
                 </div>
@@ -350,15 +385,23 @@ transform: translateY(0);
                     <span class="font-normal tracking-tight text-emerald-950 text-lg">Hebron Care Adult Family Home LLC</span>
                 </div>
                 <p class="text-stone-500 text-sm font-light">Providing compassionate, residential care for seniors.</p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-1 mt-4 text-sm">
+                    <a href="index.html" class="text-stone-500 hover:text-emerald-900 transition-colors">Home</a>
+                    <a href="about-us.html" class="text-stone-500 hover:text-emerald-900 transition-colors">About Us</a>
+                    <a href="gallery.html" class="text-stone-500 hover:text-emerald-900 transition-colors">Gallery</a>
+                    <a href="services.html" class="text-stone-500 hover:text-emerald-900 transition-colors">Services</a>
+                    <a href="contact.html" class="text-stone-500 hover:text-emerald-900 transition-colors">Contact Us</a>
+                </div>
             </div>
             
             <div class="flex gap-6 text-stone-400">
-                <a href="#" class="hover:text-emerald-900 transition-colors"><iconify-icon icon="solar:letter-linear" width="24"></iconify-icon></a>
-                <a href="#" class="hover:text-emerald-900 transition-colors"><iconify-icon icon="solar:phone-linear" width="24"></iconify-icon></a>
-                <a href="#" class="hover:text-emerald-900 transition-colors"><iconify-icon icon="solar:map-point-linear" width="24"></iconify-icon></a>
+                <a href="mailto:hello@hebroncare.com" class="hover:text-emerald-900 transition-colors" aria-label="Email"><iconify-icon icon="solar:letter-linear" width="24"></iconify-icon></a>
+                <a href="tel:+15551234567" class="hover:text-emerald-900 transition-colors" aria-label="Phone"><iconify-icon icon="solar:phone-linear" width="24"></iconify-icon></a>
+                <a href="https://www.google.com/maps?q=Hebron+Care+Adult+Family+Home+Seattle+WA" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-900 transition-colors" aria-label="Find us on Google"><iconify-icon icon="solar:map-point-linear" width="24"></iconify-icon></a>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto mt-8 pt-8 border-t border-stone-100 text-center text-stone-400 text-xs font-light">
+        <div class="max-w-7xl mx-auto mt-8 pt-8 border-t border-stone-100 text-center text-stone-400 text-xs font-light space-y-1">
+            <p><a href="https://www.google.com/maps?q=Hebron+Care+Adult+Family+Home+Seattle+WA" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-900 transition-colors">Find us on Google</a></p>
             <p>© 2024 Hebron Care Adult Family Home LLC. All rights reserved.</p>
         </div>
     </footer>
@@ -381,6 +424,9 @@ transform: translateY(0);
         document.querySelectorAll('.reveal').forEach(el => {
             observer.observe(el);
         });
+    </script>
+    <script>
+        (function(){var t=document.getElementById('nav-toggle'),m=document.getElementById('mobile-menu'),b=document.getElementById('mobile-backdrop'),o=document.getElementById('nav-icon-open'),c=document.getElementById('nav-icon-close');if(!t||!m)return;function open(){m.classList.remove('translate-x-full');m.classList.add('translate-x-0');if(b){b.classList.remove('opacity-0','pointer-events-none');b.classList.add('opacity-100','pointer-events-auto')}document.body.style.overflow='hidden';t.setAttribute('aria-expanded','true');t.setAttribute('aria-label','Close menu');if(o)o.classList.add('hidden');if(c)c.classList.remove('hidden')}function close(){m.classList.add('translate-x-full');m.classList.remove('translate-x-0');if(b){b.classList.add('opacity-0','pointer-events-none');b.classList.remove('opacity-100','pointer-events-auto')}document.body.style.overflow='';t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open menu');if(o)o.classList.remove('hidden');if(c)c.classList.add('hidden')}t.addEventListener('click',function(){m.classList.contains('translate-x-full')?open():close()});if(b)b.addEventListener('click',close);m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close)});window.addEventListener('resize',function(){if(window.innerWidth>=768)close()})})();
     </script>
 
 </body></html>
