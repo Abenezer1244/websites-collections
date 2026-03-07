@@ -5,11 +5,11 @@ This document explains the SEO setup and what to update when you have your live 
 ## What’s Already Implemented
 
 ### 1. Meta titles & descriptions
-- **Home:** "Hebron Care Adult Family Home LLC | Compassionate Senior Care in Seattle, WA"
-- **About:** "About Us | Hebron Care Adult Family Home - Mission & Team | Seattle, WA"
-- **Services:** "Services | Hebron Care - Senior Care, Memory Care & Amenities | Seattle, WA"
-- **Gallery:** "Gallery | Hebron Care - Virtual Tour of Our Seattle Adult Family Home"
-- **Contact:** "Contact Us | Hebron Care - Schedule a Tour | Seattle, WA"
+- **Home:** "Hebron Care Adult Family Home LLC #1 | Compassionate Senior Care in Everett, WA"
+- **About:** "About Us | Hebron Care Adult Family Home LLC #1 - Mission & Team | Everett, WA"
+- **Services:** "Services | Hebron Care Adult Family Home LLC #1 - Senior Care, Memory Care & Amenities | Everett, WA"
+- **Gallery:** "Gallery | Hebron Care Adult Family Home LLC #1 - Virtual Tour | Everett, WA"
+- **Contact:** "Contact Us | Hebron Care Adult Family Home LLC #1 | Everett, WA"
 
 Each page has:
 - Unique meta description (under 160 characters)
