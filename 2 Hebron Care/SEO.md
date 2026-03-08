@@ -28,11 +28,11 @@ This document describes the SEO elements added to the site and what to update wh
 
 Each page has a `<link rel="canonical" href="...">` in the `<head>`:
 
-- Home: `https://www.hebroncare.com/`
-- About Us: `https://www.hebroncare.com/about-us.html`
-- Gallery: `https://www.hebroncare.com/gallery.html`
-- Services: `https://www.hebroncare.com/services.html`
-- Contact: `https://www.hebroncare.com/contact.html`
+- Home: `https://2hebron-careafh.live/`
+- About Us: `https://2hebron-careafh.live/about-us.html`
+- Gallery: `https://2hebron-careafh.live/gallery.html`
+- Services: `https://2hebron-careafh.live/services.html`
+- Contact: `https://2hebron-careafh.live/contact.html`
 
 ---
 
@@ -83,7 +83,7 @@ Each page has a `<link rel="canonical" href="...">` in the `<head>`:
 
 ## Checklist before launch
 
-- [ ] Replace `https://www.hebroncare.com` with your live domain (canonicals + schema on all pages).
+- [x] Live domain set: `https://2hebron-careafh.live` (canonicals + schema on all pages).
 - [ ] Replace `https://www.google.com/maps/place/hebron-care` with your real Google Business Profile URL (schema `sameAs` + footer “Find us on Google” on all 5 pages).
 - [ ] Update address, phone, and email in the LocalBusiness schema (and on the site) if they differ from the placeholders.
 - [ ] In Google Search Console, add the property for your domain and submit your sitemap (if you have one).
