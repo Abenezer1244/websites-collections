@@ -107,10 +107,11 @@ input, select, textarea { font-size: 16px !important; }
 @media (min-width: 768px) { input, select, textarea { font-size: inherit !important; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; } }
 img { max-width: 100%; height: auto; display: block; }
-#mobile-menu { opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+#mobile-menu { opacity: 0; pointer-events: none; transition: opacity 0.3s ease; z-index: 45; }
 #mobile-menu.open { opacity: 1; pointer-events: auto; }
-#mobile-menu .mobile-menu-panel { transform: translateX(-100%); transition: transform 0.3s ease-in-out; }
+#mobile-menu .mobile-menu-panel { transform: translateX(-100%); transition: transform 0.3s ease-in-out; background-color: #FAFAF8 !important; isolation: isolate; z-index: 1; }
 #mobile-menu.open .mobile-menu-panel { transform: translateX(0); }
+#mobile-menu .mobile-menu-panel::before { content: ''; position: absolute; inset: 0; background: #FAFAF8; z-index: -1; border-radius: 0 1rem 1rem 0; }
 </style></head>
 <body class="bg-[#FAFAF8] text-[#2B2B2B] font-['Inter'] font-light antialiased selection:bg-[#C9A24D] selection:text-white overflow-x-hidden">
 
@@ -146,7 +147,7 @@ img { max-width: 100%; height: auto; display: block; }
         <!-- Mobile Menu: backdrop overlay + light panel -->
         <div id="mobile-menu" class="fixed inset-0 z-40 md:hidden" aria-hidden="true">
             <div class="absolute inset-0 bg-black/25" aria-hidden="true"></div>
-            <div class="mobile-menu-panel absolute left-0 top-0 bottom-0 w-[85%] max-w-[320px] bg-[#FAFAF8] shadow-2xl flex flex-col mobile-menu-content rounded-r-2xl border-r border-[#0F4C5C]/10">
+            <div class="mobile-menu-panel absolute left-0 top-0 bottom-0 w-[85%] max-w-[320px] shadow-2xl flex flex-col mobile-menu-content rounded-r-2xl border-r border-[#0F4C5C]/10 overflow-hidden" style="background-color: #FAFAF8;">
                 <button id="menu-close" type="button" aria-label="Close menu" class="absolute top-6 right-6 touch-target text-[#0F4C5C] p-2 hover:bg-[#0F4C5C]/5 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#0F4C5C]/20">
                     <iconify-icon icon="solar:close-circle-linear" width="32" stroke-width="1.5"></iconify-icon>
                 </button>
