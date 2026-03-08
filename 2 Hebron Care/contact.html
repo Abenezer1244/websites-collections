@@ -117,9 +117,9 @@ input, select, textarea { font-size: 16px !important; }
 @media (min-width: 768px) { input, select, textarea { font-size: inherit !important; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; } }
 img { max-width: 100%; height: auto; display: block; }
-#mobile-menu { opacity: 0; pointer-events: none; transition: opacity 0.3s ease; z-index: 45; }
-#mobile-menu.open { opacity: 1; pointer-events: auto; }
-#mobile-menu .mobile-menu-panel { transform: translateX(-100%); transition: transform 0.3s ease-in-out; background-color: #FAFAF8 !important; isolation: isolate; z-index: 1; }
+#mobile-menu { opacity: 0; pointer-events: none; transition: opacity 0.3s ease; z-index: 40; }
+#mobile-menu.open { opacity: 1; pointer-events: auto; z-index: 60; }
+#mobile-menu .mobile-menu-panel { transform: translateX(-100%); transition: transform 0.3s ease-in-out; background-color: #FAFAF8 !important; isolation: isolate; z-index: 1; min-height: 100vh; min-height: 100dvh; }
 #mobile-menu.open .mobile-menu-panel { transform: translateX(0); }
 #mobile-menu .mobile-menu-panel::before { content: ''; position: absolute; inset: 0; background: #FAFAF8; z-index: 0; border-radius: 0 1rem 1rem 0; pointer-events: none; }
 #mobile-menu .mobile-menu-panel > * { position: relative; z-index: 1; }
@@ -154,42 +154,42 @@ img { max-width: 100%; height: auto; display: block; }
                 <iconify-icon icon="solar:hamburger-menu-linear" width="24" stroke-width="1.5"></iconify-icon>
             </button>
         </div>
+    </nav>
 
-        <!-- Mobile Menu: backdrop overlay + light panel -->
-        <div id="mobile-menu" class="fixed inset-0 z-40 md:hidden" aria-hidden="true">
-            <div class="absolute inset-0 bg-black/25" aria-hidden="true"></div>
-            <div class="mobile-menu-panel absolute left-0 top-0 bottom-0 w-[85%] max-w-[320px] shadow-2xl flex flex-col mobile-menu-content rounded-r-2xl border-r border-[#0F4C5C]/10 overflow-hidden" style="background-color: #FAFAF8;">
-                <button id="menu-close" type="button" aria-label="Close menu" class="absolute top-6 right-6 touch-target text-[#0F4C5C] p-2 hover:bg-[#0F4C5C]/5 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#0F4C5C]/20 z-10">
-                    <iconify-icon icon="solar:close-circle-linear" width="32" stroke-width="1.5"></iconify-icon>
-                </button>
+    <!-- Mobile Menu: outside nav so it displays full screen above everything when open -->
+    <div id="mobile-menu" class="fixed inset-0 md:hidden" aria-hidden="true" style="z-index: 40;">
+        <div class="absolute inset-0 bg-black/25" aria-hidden="true"></div>
+        <div class="mobile-menu-panel absolute left-0 top-0 bottom-0 w-[85%] max-w-[320px] shadow-2xl flex flex-col mobile-menu-content rounded-r-2xl border-r border-[#0F4C5C]/10 overflow-hidden" style="background-color: #FAFAF8; min-height: 100vh;">
+            <button id="menu-close" type="button" aria-label="Close menu" class="absolute top-6 right-6 touch-target text-[#0F4C5C] p-2 hover:bg-[#0F4C5C]/5 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#0F4C5C]/20 z-10">
+                <iconify-icon icon="solar:close-circle-linear" width="32" stroke-width="1.5"></iconify-icon>
+            </button>
 
-                <div class="flex flex-col gap-6 text-xl font-['Cormorant_Garamond'] font-normal tracking-tight text-[#0F4C5C] pt-4 flex-1 min-h-0 overflow-y-auto">
-                    <a href="index.html" class="mobile-link py-3 border-b border-[#0F4C5C]/10 flex justify-between items-center group">Home
-                        <iconify-icon icon="solar:arrow-right-linear" stroke-width="1.5" class="opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 duration-300"></iconify-icon>
-                    </a>
-                    <a href="about-us.html" class="mobile-link py-3 border-b border-[#0F4C5C]/10 flex justify-between items-center group">About Us
-                        <iconify-icon icon="solar:arrow-right-linear" stroke-width="1.5" class="opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 duration-300"></iconify-icon>
-                    </a>
-                    <a href="gallery.html" class="mobile-link py-3 border-b border-[#0F4C5C]/10 flex justify-between items-center group">Gallery
-                        <iconify-icon icon="solar:arrow-right-linear" stroke-width="1.5" class="opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 duration-300"></iconify-icon>
-                    </a>
-                    <a href="services.html" class="mobile-link py-3 border-b border-[#0F4C5C]/10 flex justify-between items-center group">Services
-                        <iconify-icon icon="solar:arrow-right-linear" stroke-width="1.5" class="opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 duration-300"></iconify-icon>
-                    </a>
-                    <a href="contact.html" class="mobile-link py-3 border-b border-[#0F4C5C]/10 flex justify-between items-center group">Contact Us
-                        <iconify-icon icon="solar:arrow-right-linear" stroke-width="1.5" class="opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 duration-300"></iconify-icon>
-                    </a>
-                </div>
+            <div class="flex flex-col gap-6 text-xl font-['Cormorant_Garamond'] font-normal tracking-tight text-[#0F4C5C] pt-4 flex-1 min-h-0 overflow-y-auto">
+                <a href="index.html" class="mobile-link py-3 border-b border-[#0F4C5C]/10 flex justify-between items-center group">Home
+                    <iconify-icon icon="solar:arrow-right-linear" stroke-width="1.5" class="opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 duration-300"></iconify-icon>
+                </a>
+                <a href="about-us.html" class="mobile-link py-3 border-b border-[#0F4C5C]/10 flex justify-between items-center group">About Us
+                    <iconify-icon icon="solar:arrow-right-linear" stroke-width="1.5" class="opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 duration-300"></iconify-icon>
+                </a>
+                <a href="gallery.html" class="mobile-link py-3 border-b border-[#0F4C5C]/10 flex justify-between items-center group">Gallery
+                    <iconify-icon icon="solar:arrow-right-linear" stroke-width="1.5" class="opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 duration-300"></iconify-icon>
+                </a>
+                <a href="services.html" class="mobile-link py-3 border-b border-[#0F4C5C]/10 flex justify-between items-center group">Services
+                    <iconify-icon icon="solar:arrow-right-linear" stroke-width="1.5" class="opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 duration-300"></iconify-icon>
+                </a>
+                <a href="contact.html" class="mobile-link py-3 border-b border-[#0F4C5C]/10 flex justify-between items-center group">Contact Us
+                    <iconify-icon icon="solar:arrow-right-linear" stroke-width="1.5" class="opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 duration-300"></iconify-icon>
+                </a>
+            </div>
 
-                <div class="mt-auto mb-8">
-                    <a href="contact.html" class="mobile-link w-full bg-[#0F4C5C] text-white py-4 rounded-xl flex items-center justify-center gap-2 text-sm font-sans font-normal tracking-wide shadow-lg shadow-[#0F4C5C]/20">
-                        <span>Schedule Tour</span>
-                        <iconify-icon icon="solar:calendar-add-linear" width="18" stroke-width="1.5"></iconify-icon>
-                    </a>
-                </div>
+            <div class="mt-auto mb-8">
+                <a href="contact.html" class="mobile-link w-full bg-[#0F4C5C] text-white py-4 rounded-xl flex items-center justify-center gap-2 text-sm font-sans font-normal tracking-wide shadow-lg shadow-[#0F4C5C]/20">
+                    <span>Schedule Tour</span>
+                    <iconify-icon icon="solar:calendar-add-linear" width="18" stroke-width="1.5"></iconify-icon>
+                </a>
             </div>
         </div>
-    </nav>
+    </div>
 
     <!-- Contact HERO Section -->
     <section class="relative pt-28 sm:pt-36 lg:pt-52 pb-16 sm:pb-20 lg:pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden bg-white text-center border-b border-[#0F4C5C]/5">
