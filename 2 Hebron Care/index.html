@@ -100,22 +100,65 @@ animation-play-state: paused;
   }
 }
 
-/* Testimonial cards: fade-in-up with stagger */
-@keyframes testimonialFadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+/* Testimonial carousel */
+.testimonial-carousel-wrap {
+  position: relative;
+  max-width: 52rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5.5rem;
+  padding-right: 5.5rem;
 }
-.testimonial-card {
-  animation: testimonialFadeInUp 0.6s ease-out forwards;
-  opacity: 0;
+@media (min-width: 640px) {
+  .testimonial-carousel-wrap {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
 }
-.testimonial-card:nth-child(1) { animation-delay: 0.05s; }
-.testimonial-card:nth-child(2) { animation-delay: 0.12s; }
-.testimonial-card:nth-child(3) { animation-delay: 0.19s; }
-.testimonial-card:nth-child(4) { animation-delay: 0.26s; }
-.testimonial-card:nth-child(5) { animation-delay: 0.33s; }
-.testimonial-card:nth-child(6) { animation-delay: 0.4s; }
-.testimonial-card:nth-child(7) { animation-delay: 0.47s; }
+.testimonial-carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-out;
+  will-change: transform;
+}
+.testimonial-carousel-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 0;
+}
+.testimonial-carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  border: 2px solid #0F4C5C;
+  background: #fff;
+  color: #0F4C5C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(15, 76, 92, 0.15);
+}
+.testimonial-carousel-btn:hover {
+  background: #0F4C5C;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(15, 76, 92, 0.25);
+}
+.testimonial-carousel-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.testimonial-carousel-btn.prev { left: 0.5rem; }
+.testimonial-carousel-btn.next { right: 0.5rem; }
+@media (min-width: 640px) {
+  .testimonial-carousel-btn.prev { left: 1rem; }
+  .testimonial-carousel-btn.next { right: 1rem; }
+}
 
 /* === Advanced mobile & web responsiveness === */
 @supports (padding: env(safe-area-inset-top)) {
@@ -456,47 +499,97 @@ body { font-size: 1.0625rem; }
             </div>
         </div>
 
-        <!-- Curated testimonials: 7 strongest quotes in cards (with staggered animation) -->
+        <!-- Testimonials carousel: left/right buttons -->
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" aria-label="Family testimonials">
-                <div class="testimonial-card bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm">
-                    <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"The care is exceptional. We finally have peace of mind knowing Dad is safe."</p>
-                    <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">Sarah M.</p>
-                    <p class="text-xs text-[#2B2B2B]/85 font-light mt-0.5">Daughter of Resident</p>
+            <div class="testimonial-carousel-wrap" id="testimonial-carousel">
+                <button type="button" class="testimonial-carousel-btn prev" id="testimonial-prev" aria-label="Previous testimonial">
+                    <iconify-icon icon="solar:arrow-left-linear" width="24" stroke-width="1.5"></iconify-icon>
+                </button>
+                <button type="button" class="testimonial-carousel-btn next" id="testimonial-next" aria-label="Next testimonial">
+                    <iconify-icon icon="solar:arrow-right-linear" width="24" stroke-width="1.5"></iconify-icon>
+                </button>
+                <div class="overflow-hidden">
+                    <div class="testimonial-carousel-track" id="testimonial-track" aria-label="Family testimonials">
+                        <div class="testimonial-carousel-slide">
+                            <div class="bg-[#FAFAF8] p-10 sm:p-12 rounded-2xl border-t-2 border-[#C9A24D] shadow-sm mx-4 sm:mx-8">
+                                <p class="text-lg sm:text-xl text-[#2B2B2B]/80 font-light italic mb-6 leading-relaxed">"The care is exceptional. We finally have peace of mind knowing Dad is safe."</p>
+                                <p class="text-base font-medium text-[#0F4C5C] uppercase tracking-wide">Sarah M.</p>
+                                <p class="text-base text-[#2B2B2B]/85 font-light mt-0.5">Daughter of Resident</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-carousel-slide">
+                            <div class="bg-[#FAFAF8] p-10 sm:p-12 rounded-2xl border-t-2 border-[#C9A24D] shadow-sm mx-4 sm:mx-8">
+                                <p class="text-lg sm:text-xl text-[#2B2B2B]/80 font-light italic mb-6 leading-relaxed">"It truly feels just like home. The atmosphere is so warm and welcoming."</p>
+                                <p class="text-base font-medium text-[#0F4C5C] uppercase tracking-wide">David L.</p>
+                                <p class="text-base text-[#2B2B2B]/85 font-light mt-0.5">Son of Resident</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-carousel-slide">
+                            <div class="bg-[#FAFAF8] p-10 sm:p-12 rounded-2xl border-t-2 border-[#C9A24D] shadow-sm mx-4 sm:mx-8">
+                                <p class="text-lg sm:text-xl text-[#2B2B2B]/80 font-light italic mb-6 leading-relaxed">"Highly skilled caregivers who truly treat the residents like their own family."</p>
+                                <p class="text-base font-medium text-[#0F4C5C] uppercase tracking-wide">Amanda K.</p>
+                                <p class="text-base text-[#2B2B2B]/85 font-light mt-0.5">Family Member</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-carousel-slide">
+                            <div class="bg-[#FAFAF8] p-10 sm:p-12 rounded-2xl border-t-2 border-[#C9A24D] shadow-sm mx-4 sm:mx-8">
+                                <p class="text-lg sm:text-xl text-[#2B2B2B]/80 font-light italic mb-6 leading-relaxed">"Clean, safe, and filled with love. I couldn't ask for a better place."</p>
+                                <p class="text-base font-medium text-[#0F4C5C] uppercase tracking-wide">Michael T.</p>
+                                <p class="text-base text-[#2B2B2B]/85 font-light mt-0.5">Son of Resident</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-carousel-slide">
+                            <div class="bg-[#FAFAF8] p-10 sm:p-12 rounded-2xl border-t-2 border-[#C9A24D] shadow-sm mx-4 sm:mx-8">
+                                <p class="text-lg sm:text-xl text-[#2B2B2B]/80 font-light italic mb-6 leading-relaxed">"They treat him with so much dignity. His mood has improved significantly."</p>
+                                <p class="text-base font-medium text-[#0F4C5C] uppercase tracking-wide">Linda P.</p>
+                                <p class="text-base text-[#2B2B2B]/85 font-light mt-0.5">Spouse of Resident</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-carousel-slide">
+                            <div class="bg-[#FAFAF8] p-10 sm:p-12 rounded-2xl border-t-2 border-[#C9A24D] shadow-sm mx-4 sm:mx-8">
+                                <p class="text-lg sm:text-xl text-[#2B2B2B]/80 font-light italic mb-6 leading-relaxed">"Finding Hebron Care was an absolute blessing for our family."</p>
+                                <p class="text-base font-medium text-[#0F4C5C] uppercase tracking-wide">Patricia D.</p>
+                                <p class="text-base text-[#2B2B2B]/85 font-light mt-0.5">Daughter of Resident</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-carousel-slide">
+                            <div class="bg-[#FAFAF8] p-10 sm:p-12 rounded-2xl border-t-2 border-[#C9A24D] shadow-sm mx-4 sm:mx-8">
+                                <p class="text-lg sm:text-xl text-[#2B2B2B]/80 font-light italic mb-6 leading-relaxed">"A very smooth transition process. They guided us every step of the way."</p>
+                                <p class="text-base font-medium text-[#0F4C5C] uppercase tracking-wide">Nancy V.</p>
+                                <p class="text-base text-[#2B2B2B]/85 font-light mt-0.5">Family Member</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="testimonial-card bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm">
-                    <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"It truly feels just like home. The atmosphere is so warm and welcoming."</p>
-                    <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">David L.</p>
-                    <p class="text-xs text-[#2B2B2B]/85 font-light mt-0.5">Son of Resident</p>
-                </div>
-                <div class="testimonial-card bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm">
-                    <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"Highly skilled caregivers who truly treat the residents like their own family."</p>
-                    <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">Amanda K.</p>
-                    <p class="text-xs text-[#2B2B2B]/85 font-light mt-0.5">Family Member</p>
-                </div>
-                <div class="testimonial-card bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm">
-                    <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"Clean, safe, and filled with love. I couldn't ask for a better place."</p>
-                    <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">Michael T.</p>
-                    <p class="text-xs text-[#2B2B2B]/85 font-light mt-0.5">Son of Resident</p>
-                </div>
-                <div class="testimonial-card bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm">
-                    <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"They treat him with so much dignity. His mood has improved significantly."</p>
-                    <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">Linda P.</p>
-                    <p class="text-xs text-[#2B2B2B]/85 font-light mt-0.5">Spouse of Resident</p>
-                </div>
-                <div class="testimonial-card bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm">
-                    <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"Finding Hebron Care was an absolute blessing for our family."</p>
-                    <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">Patricia D.</p>
-                    <p class="text-xs text-[#2B2B2B]/85 font-light mt-0.5">Daughter of Resident</p>
-                </div>
-                <div class="testimonial-card bg-[#FAFAF8] p-6 rounded-xl border-t-2 border-[#C9A24D] shadow-sm">
-                    <p class="text-sm text-[#2B2B2B]/80 font-light italic mb-4">"A very smooth transition process. They guided us every step of the way."</p>
-                    <p class="text-xs font-medium text-[#0F4C5C] uppercase tracking-wide">Nancy V.</p>
-                    <p class="text-xs text-[#2B2B2B]/85 font-light mt-0.5">Family Member</p>
-                </div>
+                <p class="text-center text-xs text-[#2B2B2B]/60 mt-4" id="testimonial-counter" aria-live="polite">1 of 7</p>
             </div>
         </div>
     </section>
+    <script>
+(function() {
+  var track = document.getElementById('testimonial-track');
+  var prevBtn = document.getElementById('testimonial-prev');
+  var nextBtn = document.getElementById('testimonial-next');
+  var counterEl = document.getElementById('testimonial-counter');
+  if (!track || !prevBtn || !nextBtn) return;
+  var slides = track.querySelectorAll('.testimonial-carousel-slide');
+  var total = slides.length;
+  var index = 0;
+  function update() {
+    track.style.transform = 'translateX(-' + (index * 100) + '%)';
+    prevBtn.disabled = index === 0;
+    nextBtn.disabled = index === total - 1;
+    if (counterEl) counterEl.textContent = (index + 1) + ' of ' + total;
+  }
+  prevBtn.addEventListener('click', function() {
+    if (index > 0) { index--; update(); }
+  });
+  nextBtn.addEventListener('click', function() {
+    if (index < total - 1) { index++; update(); }
+  });
+  update();
+})();
+    </script>
 
     <!-- FAQ Section -->
     <section id="faq" class="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-[#FAFAF8] border-t border-[#0F4C5C]/5">
