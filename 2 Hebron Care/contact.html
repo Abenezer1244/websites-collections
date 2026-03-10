@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <title>Contact Us | Hebron Care Adult Family Home LLC #1</title>
 <meta name="description" content="Schedule a tour or get in touch with Hebron Care Adult Family Home LLC #1. Visit us in Everett, WA, call (425) 225-5424, or send a message. We're here to help with senior care options.">
 <link rel="canonical" href="https://2hebron-careafh.live/contact.html">
@@ -26,7 +27,7 @@
   "sameAs": [ "https://www.google.com/maps/place/11320+27th+Ave+SE,+Everett,+WA+98208" ]
 }
 </script>
-<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="css/styles.css">
 <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -71,6 +72,11 @@ box-shadow: -10px 20px 40px -10px rgba(15, 76, 92, 0.15);
 .map-3d-container:hover .map-3d-element {
 transform: rotateX(0deg) rotateY(0deg) scale(1);
 box-shadow: 0 30px 60px -15px rgba(15, 76, 92, 0.25);
+}
+select {
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
 }
 /* Custom Checkbox styles */
 input[type="checkbox"] {
@@ -123,8 +129,17 @@ img { max-width: 100%; height: auto; display: block; }
 #mobile-menu.open .mobile-menu-panel { transform: translateX(0); }
 #mobile-menu .mobile-menu-panel::before { content: ''; position: absolute; inset: 0; background: #FAFAF8; z-index: 0; border-radius: 0 1rem 1rem 0; pointer-events: none; }
 #mobile-menu .mobile-menu-panel > * { position: relative; z-index: 1; }
+#mobile-menu .mobile-link { min-height: 44px; }
+body { font-size: 1.0625rem; }
+.skip-link { position: absolute; left: -9999px; z-index: 100; padding: 0.75rem 1rem; background: #0F4C5C; color: white; font-size: 0.875rem; border-radius: 0.5rem; text-decoration: none; }
+.skip-link:focus { left: 1rem; top: max(1rem, env(safe-area-inset-top)); }
+@media (min-width: 768px) {
+  #menu-toggle { display: none !important; }
+  #mobile-menu { display: none !important; }
+}
 </style></head>
 <body class="bg-[#FAFAF8] text-[#2B2B2B] font-['Inter'] font-light antialiased selection:bg-[#C9A24D] selection:text-white overflow-x-hidden">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 top-0 left-0 border-b border-[#0F4C5C]/5 bg-[#FAFAF8]/95 backdrop-blur-md transition-all duration-300 pt-[env(safe-area-inset-top,0)]">
@@ -141,7 +156,7 @@ img { max-width: 100%; height: auto; display: block; }
                 <a href="about-us.html" class="hover:text-[#0F4C5C] transition-colors">About Us</a>
                 <a href="gallery.html" class="hover:text-[#0F4C5C] transition-colors">Gallery</a>
                 <a href="services.html" class="hover:text-[#0F4C5C] transition-colors">Services</a>
-                <a href="contact.html" class="text-[#0F4C5C] transition-colors">Contact Us</a>
+                <a href="contact.html" class="text-[#0F4C5C] font-medium border-b-2 border-[#0F4C5C] pb-1 -mb-px transition-colors" aria-current="page">Contact Us</a>
             </div>
 
             <a href="contact.html" class="hidden md:flex items-center gap-2 bg-[#0F4C5C] text-white px-5 py-2.5 rounded-full text-xs font-normal tracking-wide hover:bg-[#0F4C5C]/90 transition-all hover:shadow-lg hover:shadow-[#0F4C5C]/20">
@@ -158,7 +173,7 @@ img { max-width: 100%; height: auto; display: block; }
 
     <!-- Mobile Menu: outside nav so it displays full screen above everything when open -->
     <div id="mobile-menu" class="fixed inset-0 md:hidden" aria-hidden="true" style="z-index: 40;">
-        <div class="absolute inset-0 bg-black/25" aria-hidden="true"></div>
+        <div id="menu-backdrop" class="absolute inset-0 bg-black/25" aria-hidden="true" role="button" tabindex="-1" aria-label="Close menu"></div>
         <div class="mobile-menu-panel absolute left-0 top-0 bottom-0 w-[85%] max-w-[320px] shadow-2xl flex flex-col mobile-menu-content rounded-r-2xl border-r border-[#0F4C5C]/10 overflow-hidden" style="background-color: #FAFAF8; min-height: 100vh;">
             <button id="menu-close" type="button" aria-label="Close menu" class="absolute top-6 right-6 touch-target text-[#0F4C5C] p-2 hover:bg-[#0F4C5C]/5 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#0F4C5C]/20 z-10">
                 <iconify-icon icon="solar:close-circle-linear" width="32" stroke-width="1.5"></iconify-icon>
@@ -192,9 +207,7 @@ img { max-width: 100%; height: auto; display: block; }
     </div>
 
     <!-- Contact HERO Section -->
-    <section class="relative pt-28 sm:pt-36 lg:pt-52 pb-16 sm:pb-20 lg:pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden bg-white text-center border-b border-[#0F4C5C]/5">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,#0F4C5C_0%,transparent_40%)] opacity-[0.03] pointer-events-none"></div>
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom,#C9A24D_0%,transparent_30%)] opacity-[0.02] pointer-events-none"></div>
+    <section id="main-content" class="relative pt-28 sm:pt-36 lg:pt-52 pb-16 sm:pb-20 lg:pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden text-center border-b border-[#0F4C5C]/5" style="background-image: url('https://i.ibb.co/TMHfNdrR/nurse-holding-senior-man-s-hands-sympathy.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; background-color: #FAFAF8;">
         
         <div class="max-w-3xl mx-auto relative z-10 animate-fade-up">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#0F4C5C]/10 bg-[#FAFAF8] mb-8">
@@ -205,9 +218,11 @@ img { max-width: 100%; height: auto; display: block; }
                 Let's start a <br class="md:hidden">
                 <span class="italic text-[#C9A24D]">conversation.</span>
             </h1>
-            <p class="text-base md:text-lg text-[#2B2B2B]/70 font-light leading-relaxed max-w-xl mx-auto">
-                Whether you're ready to schedule a personalized tour or just have a few questions about our care, our dedicated team is here to guide you.
-            </p>
+            <div class="inline-block mt-3 px-4 py-2 rounded-xl bg-[#C9A24D]/50 backdrop-blur-lg text-white shadow-md shadow-[#0F4C5C]/25">
+                <p class="text-sm sm:text-base md:text-lg font-light leading-relaxed">
+                    Whether you're ready to schedule a personalized tour or just have a few questions about our care, our dedicated team is here to guide you.
+                </p>
+            </div>
         </div>
     </section>
 
@@ -220,24 +235,28 @@ img { max-width: 100%; height: auto; display: block; }
                 <h2 class="font-['Cormorant_Garamond'] text-3xl md:text-4xl tracking-tight text-[#0F4C5C] mb-8">Send us a message</h2>
                 
                 <div id="form-status" class="hidden mb-6 p-4 rounded-xl text-sm font-normal" role="alert" aria-live="polite"></div>
-                <form id="contact-form" class="space-y-6" action="https://formspree.io/f/YOUR_FORMSPREE_CONTACT_ID" method="POST">
+                <!-- Replace YOUR_FORMSPREE_CONTACT_ID with your Formspree form ID. See CONTACT-FORM.md -->
+                <form id="contact-form" class="space-y-6" action="https://formspree.io/f/YOUR_FORMSPREE_CONTACT_ID" method="POST" novalidate>
                     <input type="hidden" name="_subject" value="Hebron Care – New contact form submission">
                     <input type="hidden" name="_replyto" id="contact-replyto" value="">
                     <div class="grid sm:grid-cols-2 gap-6">
                         <div class="space-y-2">
-                            <label for="firstName" class="text-xs font-medium text-[#0F4C5C] uppercase tracking-widest">First Name</label>
-                            <input type="text" id="firstName" name="First Name" required class="w-full bg-[#FAFAF8] border border-[#0F4C5C]/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#0F4C5C]/30 focus:ring-1 focus:ring-[#0F4C5C]/30 transition-all font-light text-[#2B2B2B] placeholder:text-[#2B2B2B]/30" placeholder="Jane">
+                            <label for="firstName" class="text-xs font-medium text-[#0F4C5C] uppercase tracking-widest">First Name <span class="text-[#0F4C5C]/60">*</span></label>
+                            <input type="text" id="firstName" name="First Name" required class="contact-field w-full bg-[#FAFAF8] border border-[#0F4C5C]/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#0F4C5C]/30 focus:ring-1 focus:ring-[#0F4C5C]/30 transition-all font-light text-[#2B2B2B] placeholder:text-[#2B2B2B]/30" placeholder="Jane">
+                            <p id="contact-firstname-error" class="hidden mt-1 text-xs text-red-600 font-normal" role="alert">Please enter your first name.</p>
                         </div>
                         <div class="space-y-2">
-                            <label for="lastName" class="text-xs font-medium text-[#0F4C5C] uppercase tracking-widest">Last Name</label>
-                            <input type="text" id="lastName" name="Last Name" required class="w-full bg-[#FAFAF8] border border-[#0F4C5C]/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#0F4C5C]/30 focus:ring-1 focus:ring-[#0F4C5C]/30 transition-all font-light text-[#2B2B2B] placeholder:text-[#2B2B2B]/30" placeholder="Doe">
+                            <label for="lastName" class="text-xs font-medium text-[#0F4C5C] uppercase tracking-widest">Last Name <span class="text-[#0F4C5C]/60">*</span></label>
+                            <input type="text" id="lastName" name="Last Name" required class="contact-field w-full bg-[#FAFAF8] border border-[#0F4C5C]/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#0F4C5C]/30 focus:ring-1 focus:ring-[#0F4C5C]/30 transition-all font-light text-[#2B2B2B] placeholder:text-[#2B2B2B]/30" placeholder="Doe">
+                            <p id="contact-lastname-error" class="hidden mt-1 text-xs text-red-600 font-normal" role="alert">Please enter your last name.</p>
                         </div>
                     </div>
                     
                     <div class="grid sm:grid-cols-2 gap-6">
                         <div class="space-y-2">
-                            <label for="email" class="text-xs font-medium text-[#0F4C5C] uppercase tracking-widest">Email Address</label>
-                            <input type="email" id="email" name="Email" required class="w-full bg-[#FAFAF8] border border-[#0F4C5C]/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#0F4C5C]/30 focus:ring-1 focus:ring-[#0F4C5C]/30 transition-all font-light text-[#2B2B2B] placeholder:text-[#2B2B2B]/30" placeholder="jane@example.com">
+                            <label for="email" class="text-xs font-medium text-[#0F4C5C] uppercase tracking-widest">Email Address <span class="text-[#0F4C5C]/60">*</span></label>
+                            <input type="email" id="email" name="Email" required class="contact-field w-full bg-[#FAFAF8] border border-[#0F4C5C]/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#0F4C5C]/30 focus:ring-1 focus:ring-[#0F4C5C]/30 transition-all font-light text-[#2B2B2B] placeholder:text-[#2B2B2B]/30" placeholder="jane@example.com">
+                            <p id="contact-email-error" class="hidden mt-1 text-xs text-red-600 font-normal" role="alert">Please enter a valid email address.</p>
                         </div>
                         <div class="space-y-2">
                             <label for="phone" class="text-xs font-medium text-[#0F4C5C] uppercase tracking-widest">Phone Number</label>
@@ -246,23 +265,39 @@ img { max-width: 100%; height: auto; display: block; }
                     </div>
 
                     <div class="space-y-2">
-                        <label for="message" class="text-xs font-medium text-[#0F4C5C] uppercase tracking-widest">How can we help?</label>
-                        <textarea id="message" name="Message" rows="5" required class="w-full bg-[#FAFAF8] border border-[#0F4C5C]/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#0F4C5C]/30 focus:ring-1 focus:ring-[#0F4C5C]/30 transition-all font-light text-[#2B2B2B] placeholder:text-[#2B2B2B]/30 resize-none" placeholder="Tell us about your care needs or questions..."></textarea>
+                        <label for="reason" class="text-xs font-medium text-[#0F4C5C] uppercase tracking-widest">Reason for inquiry</label>
+                        <div class="relative">
+                            <select id="reason" name="Reason for inquiry" class="w-full bg-[#FAFAF8] border border-[#0F4C5C]/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#0F4C5C]/30 focus:ring-1 focus:ring-[#0F4C5C]/30 transition-all font-light text-[#2B2B2B] cursor-pointer appearance-none">
+                                <option value="">Select one...</option>
+                                <option value="Tour">Tour</option>
+                                <option value="Immediate Placement">Immediate Placement</option>
+                                <option value="General Question">General Question</option>
+                            </select>
+                            <iconify-icon icon="solar:alt-arrow-down-linear" class="absolute right-4 top-1/2 -translate-y-1/2 text-[#0F4C5C]/50 pointer-events-none" width="18" stroke-width="1.5"></iconify-icon>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label for="message" class="text-xs font-medium text-[#0F4C5C] uppercase tracking-widest">How can we help? <span class="text-[#0F4C5C]/60">*</span></label>
+                        <textarea id="message" name="Message" rows="5" required class="contact-field w-full bg-[#FAFAF8] border border-[#0F4C5C]/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#0F4C5C]/30 focus:ring-1 focus:ring-[#0F4C5C]/30 transition-all font-light text-[#2B2B2B] placeholder:text-[#2B2B2B]/30 resize-none" placeholder="Tell us about your care needs or questions..."></textarea>
+                        <p id="contact-message-error" class="hidden mt-1 text-xs text-red-600 font-normal" role="alert">Please enter your message.</p>
                     </div>
 
                     <div class="flex items-start gap-3 pt-2">
                         <div class="pt-0.5">
-                            <input type="checkbox" id="privacy" name="Privacy consent" required class="cursor-pointer">
+                            <input type="checkbox" id="privacy" name="Privacy consent" required class="contact-field cursor-pointer">
                         </div>
-                        <label for="privacy" class="text-xs text-[#2B2B2B]/70 font-light leading-relaxed cursor-pointer select-none">
-                            I agree to the <a href="#" class="text-[#0F4C5C] hover:text-[#C9A24D] transition-colors">Privacy Policy</a> and consent to being contacted by Hebron Care Adult Family Home LLC #1 regarding my inquiry.
+                        <label for="privacy" class="text-xs text-[#2B2B2B]/90 font-light leading-relaxed cursor-pointer select-none">
+                            I agree to the <a href="privacy-policy.html" class="text-[#0F4C5C] hover:text-[#C9A24D] transition-colors underline underline-offset-1">Privacy Policy</a> and consent to be contacted about my inquiry. <span class="text-[#0F4C5C]/60">*</span>
                         </label>
                     </div>
+                    <p id="contact-privacy-error" class="hidden mt-1 text-xs text-red-600 font-normal" role="alert">Please accept the Privacy Policy to continue.</p>
 
                     <button type="submit" id="contact-submit" class="w-full sm:w-auto bg-[#0F4C5C] text-white px-8 py-4 rounded-xl text-sm font-normal tracking-wide hover:bg-[#0F4C5C]/90 transition-all hover:shadow-lg hover:shadow-[#0F4C5C]/20 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed">
-                        <span>Send Message</span>
+                        <span>Send Message &amp; We'll Call You Back</span>
                         <iconify-icon icon="solar:plain-linear" width="18" stroke-width="1.5"></iconify-icon>
                     </button>
+                    <p class="text-xs text-[#2B2B2B]/85 font-light mt-3">We typically respond within 24 hours. No obligation—we're here to help.</p>
                 </form>
             </div>
 
@@ -279,7 +314,7 @@ img { max-width: 100%; height: auto; display: block; }
                         <div>
                             <h3 class="text-sm font-medium text-[#0F4C5C] uppercase tracking-widest mb-1">Home</h3>
                             <p class="text-lg text-[#2B2B2B] font-normal group-hover:text-[#C9A24D] transition-colors">(425) 225-5424</p>
-                            <p class="text-xs text-[#2B2B2B]/60 font-light mt-1">Available Mon-Fri, 9am - 6pm</p>
+                            <p class="text-xs text-[#2B2B2B]/85 font-light mt-1">Available Mon–Fri, 9am–5pm</p>
                         </div>
                     </a>
 
@@ -313,7 +348,7 @@ img { max-width: 100%; height: auto; display: block; }
                         <div>
                             <h3 class="text-sm font-medium text-[#0F4C5C] uppercase tracking-widest mb-1">Email</h3>
                             <p class="text-lg text-[#2B2B2B] font-normal group-hover:text-[#C9A24D] transition-colors">hebroncareafhllc@gmail.com</p>
-                            <p class="text-xs text-[#2B2B2B]/60 font-light mt-1">We'll reply within 24 hours</p>
+                            <p class="text-xs text-[#2B2B2B]/85 font-light mt-1">We'll reply within 24 hours</p>
                         </div>
                     </a>
 
@@ -346,7 +381,7 @@ img { max-width: 100%; height: auto; display: block; }
         <div class="max-w-7xl mx-auto relative z-10">
             <div class="text-center mb-16 max-w-2xl mx-auto animate-fade-up">
                 <h2 class="font-['Cormorant_Garamond'] text-4xl md:text-5xl tracking-tight text-[#0F4C5C] mb-4">Find our home</h2>
-                <p class="text-[#2B2B2B]/70 font-light leading-relaxed">
+                <p class="text-[#2B2B2B]/90 font-light leading-relaxed">
                     Nestled in a quiet, secure neighborhood, perfectly situated for peaceful living and easy accessibility for visiting family.
                 </p>
             </div>
@@ -354,7 +389,7 @@ img { max-width: 100%; height: auto; display: block; }
             <div class="map-3d-container max-w-5xl mx-auto animate-fade-up delay-200 cursor-crosshair">
                 <div class="map-3d-element rounded-[2rem] overflow-hidden bg-white border border-[#0F4C5C]/10 h-[450px] md:h-[600px] relative">
                     <!-- Standard Google Maps Iframe -->
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5615.0283418672825!2d-122.19769762344498!3d47.89478237121767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549006e1c1196959%3A0xfd83eb47372b17f3!2s11320%2027th%20Ave%20SE%2C%20Everett%2C%20WA%2098208!5e1!3m2!1sen!2sus!4v1772914945848!5m2!1sen!2sus" width="100%" height="100%" style="border:0; filter: grayscale(0.2) contrast(1.1) opacity(0.9);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5615.0283418672825!2d-122.19769762344498!3d47.89478237121767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549006e1c1196959%3A0xfd83eb47372b17f3!2s11320%2027th%20Ave%20SE%2C%20Everett%2C%20WA%2098208!5e1!3m2!1sen!2sus!4v1772914945848!5m2!1sen!2sus" width="100%" height="100%" style="border:0; filter: grayscale(0.2) contrast(1.1) opacity(0.9);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map: Hebron Care location, 11320 27th Ave SE, Everett, WA 98208"></iframe>
                     
                     <!-- Decorative overlay for style blending -->
                     <div class="absolute inset-0 bg-gradient-to-br from-[#0F4C5C]/5 to-transparent pointer-events-none mix-blend-multiply"></div>
@@ -368,22 +403,23 @@ img { max-width: 100%; height: auto; display: block; }
         <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-10 sm:mb-12">
             <div class="md:col-span-1">
                 <a href="index.html" class="font-['Cormorant_Garamond'] text-2xl font-normal tracking-tight text-[#0F4C5C] block mb-4">HEBRON CARE</a>
-                <p class="text-sm text-[#2B2B2B]/60 font-light leading-relaxed mb-4">
+                <p class="text-sm text-[#2B2B2B]/85 font-light leading-relaxed mb-2">
                     A licensed Adult Family Home providing premium, specialized, and compassionate living solutions for seniors.
                 </p>
+                <p class="text-xs text-[#0F4C5C]/70 font-normal mb-4">Washington State Licensed · License # <span aria-label="Add your state license number">__________</span></p>
                 <a href="https://www.google.com/maps/place/11320+27th+Ave+SE,+Everett,+WA+98208" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm text-[#0F4C5C] font-normal hover:text-[#C9A24D] transition mb-6">
                     <iconify-icon icon="solar:map-point-linear" width="18" stroke-width="1.5"></iconify-icon>
                     Find us on Google
                 </a>
-                <div class="flex gap-4">
-                    <a href="#" class="text-[#0F4C5C] hover:text-[#C9A24D] transition"><iconify-icon icon="solar:facebook-linear" width="20" stroke-width="1.5"></iconify-icon></a>
-                    <a href="#" class="text-[#0F4C5C] hover:text-[#C9A24D] transition"><iconify-icon icon="solar:instagram-linear" width="20" stroke-width="1.5"></iconify-icon></a>
+                <div class="flex gap-4" aria-label="Social links coming soon">
+                    <span class="text-[#0F4C5C]/50 cursor-default" aria-hidden="true"><iconify-icon icon="solar:facebook-linear" width="20" stroke-width="1.5"></iconify-icon></span>
+                    <span class="text-[#0F4C5C]/50 cursor-default" aria-hidden="true"><iconify-icon icon="solar:instagram-linear" width="20" stroke-width="1.5"></iconify-icon></span>
                 </div>
             </div>
             
             <div>
                 <h4 class="text-xs font-medium uppercase tracking-widest text-[#0F4C5C] mb-6">Explore</h4>
-                <ul class="space-y-3 text-sm text-[#2B2B2B]/70 font-light">
+                <ul class="space-y-3 text-sm text-[#2B2B2B]/90 font-light">
                     <li><a href="index.html" class="hover:text-[#C9A24D] transition">Home</a></li>
                     <li><a href="about-us.html" class="hover:text-[#C9A24D] transition">About Us</a></li>
                     <li><a href="gallery.html" class="hover:text-[#C9A24D] transition">Gallery</a></li>
@@ -394,7 +430,7 @@ img { max-width: 100%; height: auto; display: block; }
 
             <div>
                 <h4 class="text-xs font-medium uppercase tracking-widest text-[#0F4C5C] mb-6">Care Services</h4>
-                <ul class="space-y-3 text-sm text-[#2B2B2B]/70 font-light">
+                <ul class="space-y-3 text-sm text-[#2B2B2B]/90 font-light">
                     <li><a href="services.html" class="text-[#C9A24D] transition">Assisted Living</a></li>
                     <li><a href="services.html" class="text-[#C9A24D] transition">Memory Care Support</a></li>
                     <li><a href="services.html" class="text-[#C9A24D] transition">Medication Administration</a></li>
@@ -404,7 +440,7 @@ img { max-width: 100%; height: auto; display: block; }
 
              <div>
                 <h4 class="text-xs font-medium uppercase tracking-widest text-[#0F4C5C] mb-6">Need Immediate Placement?</h4>
-                <p class="text-sm text-[#2B2B2B]/70 font-light mb-4">Contact our admissions coordinator directly.</p>
+                <p class="text-sm text-[#2B2B2B]/90 font-light mb-4">Contact our admissions coordinator directly.</p>
                 <a href="tel:+14252255424" class="inline-flex items-center gap-2 text-[#0F4C5C] font-normal text-sm hover:underline">
                     <iconify-icon icon="solar:phone-calling-linear" stroke-width="1.5"></iconify-icon>
                     (425) 225-5424
@@ -413,10 +449,10 @@ img { max-width: 100%; height: auto; display: block; }
         </div>
         
         <div class="max-w-7xl mx-auto border-t border-[#0F4C5C]/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[#2B2B2B]/40 font-light">
-            <p>© 2024 Hebron Care Adult Family Home LLC #1. All rights reserved.</p>
+            <p>© 2026 Hebron Care Adult Family Home LLC #1. All rights reserved.</p>
             <div class="flex gap-4">
-                <a href="#" class="hover:text-[#0F4C5C] transition">Privacy Policy</a>
-                <a href="#" class="hover:text-[#0F4C5C] transition">Terms of Service</a>
+                <a href="privacy-policy.html" class="hover:text-[#0F4C5C] transition">Privacy Policy</a>
+                <a href="terms-of-service.html" class="hover:text-[#0F4C5C] transition">Terms of Service</a>
             </div>
         </div>
     </footer>
@@ -443,31 +479,76 @@ img { max-width: 100%; height: auto; display: block; }
 
         menuBtn.addEventListener('click', toggleMenu);
         closeBtn.addEventListener('click', toggleMenu);
+        var menuBackdrop = document.getElementById('menu-backdrop');
+        if (menuBackdrop) menuBackdrop.addEventListener('click', toggleMenu);
         links.forEach(link => link.addEventListener('click', toggleMenu));
 
-        // Contact form – submit via Formspree and show success/error
+        // Contact form – validate required fields and email, then submit via Formspree; clear success/error feedback
         const contactForm = document.getElementById('contact-form');
         const formStatus = document.getElementById('form-status');
         const contactSubmit = document.getElementById('contact-submit');
         const emailInput = document.getElementById('email');
+        const contactFields = document.querySelectorAll('.contact-field');
+        const contactErrorEls = ['contact-firstname-error', 'contact-lastname-error', 'contact-email-error', 'contact-message-error', 'contact-privacy-error'].map(function(id) { return document.getElementById(id); });
+
+        function clearContactFieldErrors() {
+            contactFields.forEach(function(el) {
+                if (el && el.classList) {
+                    el.classList.remove('!border-red-400', '!bg-red-50/50');
+                    if (el.type === 'checkbox') el.classList.remove('ring-2', 'ring-red-400');
+                }
+            });
+            contactErrorEls.forEach(function(el) { if (el) el.classList.add('hidden'); });
+        }
+
+        function showContactFieldError(inputId, errorId) {
+            var el = document.getElementById(inputId);
+            var err = document.getElementById(errorId);
+            if (el) { el.classList.add('!border-red-400', '!bg-red-50/50'); if (el.type === 'checkbox') el.classList.add('ring-2', 'ring-red-400'); }
+            if (err) err.classList.remove('hidden');
+        }
 
         if (contactForm) {
+            contactFields.forEach(function(el) {
+                if (el) {
+                    el.addEventListener('input', clearContactFieldErrors);
+                    if (el.type === 'checkbox') el.addEventListener('change', clearContactFieldErrors);
+                }
+            });
             contactForm.addEventListener('submit', async function(e) {
                 e.preventDefault();
-                document.getElementById('contact-replyto').value = emailInput ? emailInput.value : '';
+                if (emailInput) document.getElementById('contact-replyto').value = emailInput.value;
+                clearContactFieldErrors();
                 formStatus.classList.add('hidden');
                 formStatus.classList.remove('bg-[#0F4C5C]/10', 'text-[#0F4C5C]', 'border', 'border-[#0F4C5C]/20', 'bg-red-50', 'text-red-700', 'border-red-200');
-                if (contactSubmit) {
-                    contactSubmit.disabled = true;
-                    contactSubmit.innerHTML = '<span>Sending...</span>';
+
+                var first = (document.getElementById('firstName') || {}).value.trim();
+                var last = (document.getElementById('lastName') || {}).value.trim();
+                var email = (document.getElementById('email') || {}).value.trim();
+                var message = (document.getElementById('message') || {}).value.trim();
+                var privacy = document.getElementById('privacy') ? document.getElementById('privacy').checked : false;
+                var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                var valid = true;
+
+                if (!first) { valid = false; showContactFieldError('firstName', 'contact-firstname-error'); }
+                if (!last) { valid = false; showContactFieldError('lastName', 'contact-lastname-error'); }
+                if (!email || !emailRe.test(email)) { valid = false; showContactFieldError('email', 'contact-email-error'); }
+                if (!message) { valid = false; showContactFieldError('message', 'contact-message-error'); }
+                if (!privacy) { valid = false; showContactFieldError('privacy', 'contact-privacy-error'); }
+
+                if (!valid) {
+                    formStatus.textContent = 'Please fill in all required fields and accept the Privacy Policy.';
+                    formStatus.classList.add('bg-red-50', 'text-red-700', 'border', 'border-red-200');
+                    formStatus.classList.remove('hidden');
+                    var focusEl = !first ? document.getElementById('firstName') : !last ? document.getElementById('lastName') : (!email || !emailRe.test(email)) ? document.getElementById('email') : !message ? document.getElementById('message') : !privacy ? document.getElementById('privacy') : null;
+                    if (focusEl) focusEl.focus();
+                    return;
                 }
+
+                if (contactSubmit) { contactSubmit.disabled = true; contactSubmit.innerHTML = '<span>Sending...</span>'; }
                 try {
                     const formData = new FormData(contactForm);
-                    const response = await fetch(contactForm.action, {
-                        method: 'POST',
-                        body: formData,
-                        headers: { 'Accept': 'application/json' }
-                    });
+                    const response = await fetch(contactForm.action, { method: 'POST', body: formData, headers: { 'Accept': 'application/json' } });
                     if (response.ok) {
                         formStatus.textContent = 'Thank you! Your message has been sent. We\'ll be in touch soon.';
                         formStatus.classList.add('bg-[#0F4C5C]/10', 'text-[#0F4C5C]', 'border', 'border-[#0F4C5C]/20');
@@ -484,9 +565,10 @@ img { max-width: 100%; height: auto; display: block; }
                     formStatus.classList.add('bg-red-50', 'text-red-700', 'border', 'border-red-200');
                     formStatus.classList.remove('hidden');
                 }
+                if (formStatus && !formStatus.classList.contains('hidden')) formStatus.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
                 if (contactSubmit) {
                     contactSubmit.disabled = false;
-                    contactSubmit.innerHTML = '<span>Send Message</span><iconify-icon icon="solar:plain-linear" width="18" stroke-width="1.5"></iconify-icon>';
+                    contactSubmit.innerHTML = '<span>Send Message &amp; We\'ll Call You Back</span><iconify-icon icon="solar:plain-linear" width="18" stroke-width="1.5"></iconify-icon>';
                 }
             });
         }

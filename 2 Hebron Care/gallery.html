@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <title>Gallery | Hebron Care Adult Family Home LLC #1</title>
 <meta name="description" content="Take a visual tour of Hebron Care Adult Family Home LLC #1. See our warm spaces, dining areas, outdoor gardens, and family-focused environment for senior living in Everett, WA.">
 <link rel="canonical" href="https://2hebron-careafh.live/gallery.html">
@@ -16,7 +17,7 @@
   "sameAs": [ "https://www.google.com/maps/place/11320+27th+Ave+SE,+Everett,+WA+98208" ]
 }
 </script>
-<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="css/styles.css">
 <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -113,8 +114,27 @@ img { max-width: 100%; height: auto; display: block; }
 #mobile-menu.open .mobile-menu-panel { transform: translateX(0); }
 #mobile-menu .mobile-menu-panel::before { content: ''; position: absolute; inset: 0; background: #FAFAF8; z-index: 0; border-radius: 0 1rem 1rem 0; pointer-events: none; }
 #mobile-menu .mobile-menu-panel > * { position: relative; z-index: 1; }
+#mobile-menu .mobile-link { min-height: 44px; }
+.skip-link { position: absolute; left: -9999px; z-index: 100; padding: 0.75rem 1rem; background: #0F4C5C; color: white; font-size: 0.875rem; border-radius: 0.5rem; text-decoration: none; }
+.skip-link:focus { left: 1rem; top: max(1rem, env(safe-area-inset-top)); }
+@media (min-width: 768px) {
+  #menu-toggle { display: none !important; }
+  #mobile-menu { display: none !important; }
+}
+
+/* Gallery lightbox */
+#gallery-lightbox::backdrop { background: rgba(15, 76, 92, 0.92); }
+#gallery-lightbox { border: none; background: transparent; max-width: none; max-height: none; padding: 0; margin: 0; width: 100%; height: 100%; }
+#gallery-lightbox .lightbox-backdrop { position: relative; width: 100vw; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 2rem; box-sizing: border-box; cursor: pointer; }
+#gallery-lightbox .lightbox-inner { cursor: default; max-width: 95vw; max-height: 90vh; display: flex; align-items: center; justify-content: center; }
+#gallery-lightbox .lightbox-inner img { max-width: 100%; max-height: 90vh; width: auto; height: auto; object-fit: contain; border-radius: 0.5rem; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.4); }
+#gallery-lightbox .lightbox-close { position: absolute; top: 1rem; right: 1rem; width: 48px; height: 48px; border: none; background: rgba(255,255,255,0.9); color: #0F4C5C; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; line-height: 1; transition: background 0.2s, color 0.2s; z-index: 10; }
+#gallery-lightbox .lightbox-close:hover { background: #fff; color: #0F4C5C; }
+.gallery-card { cursor: pointer; }
+body { font-size: 1.0625rem; }
 </style></head>
 <body class="bg-[#FAFAF8] text-[#2B2B2B] font-['Inter'] font-light antialiased selection:bg-[#C9A24D] selection:text-white overflow-x-hidden">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 top-0 left-0 border-b border-[#0F4C5C]/5 bg-[#FAFAF8]/95 backdrop-blur-md transition-all duration-300 pt-[env(safe-area-inset-top,0)]">
@@ -129,7 +149,7 @@ img { max-width: 100%; height: auto; display: block; }
             <div class="hidden md:flex items-center gap-8 text-sm font-normal text-[#2B2B2B]/80">
                 <a href="index.html" class="hover:text-[#0F4C5C] transition-colors">Home</a>
                 <a href="about-us.html" class="hover:text-[#0F4C5C] transition-colors">About Us</a>
-                <a href="gallery.html" class="text-[#0F4C5C] transition-colors">Gallery</a>
+                <a href="gallery.html" class="text-[#0F4C5C] font-medium border-b-2 border-[#0F4C5C] pb-1 -mb-px transition-colors" aria-current="page">Gallery</a>
                 <a href="services.html" class="hover:text-[#0F4C5C] transition-colors">Services</a>
                 <a href="contact.html" class="hover:text-[#0F4C5C] transition-colors">Contact Us</a>
             </div>
@@ -148,7 +168,7 @@ img { max-width: 100%; height: auto; display: block; }
 
     <!-- Mobile Menu: outside nav so it displays full screen above everything when open -->
     <div id="mobile-menu" class="fixed inset-0 md:hidden" aria-hidden="true" style="z-index: 40;">
-        <div class="absolute inset-0 bg-black/25" aria-hidden="true"></div>
+        <div id="menu-backdrop" class="absolute inset-0 bg-black/25" aria-hidden="true" role="button" tabindex="-1" aria-label="Close menu"></div>
         <div class="mobile-menu-panel absolute left-0 top-0 bottom-0 w-[85%] max-w-[320px] shadow-2xl flex flex-col mobile-menu-content rounded-r-2xl border-r border-[#0F4C5C]/10 overflow-hidden" style="background-color: #FAFAF8; min-height: 100vh;">
             <button id="menu-close" type="button" aria-label="Close menu" class="absolute top-6 right-6 touch-target text-[#0F4C5C] p-2 hover:bg-[#0F4C5C]/5 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#0F4C5C]/20 z-10">
                     <iconify-icon icon="solar:close-circle-linear" width="32" stroke-width="1.5"></iconify-icon>
@@ -183,7 +203,7 @@ img { max-width: 100%; height: auto; display: block; }
     </div>
 
     <!-- Gallery HERO Section -->
-    <section class="relative pt-28 sm:pt-36 lg:pt-56 pb-12 sm:pb-16 lg:pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-white">
+    <section id="main-content" class="relative pt-28 sm:pt-36 lg:pt-56 pb-12 sm:pb-16 lg:pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-white">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#0F4C5C_0%,transparent_20%)] opacity-5 pointer-events-none"></div>
         
         <div class="max-w-7xl mx-auto flex flex-col items-center text-center relative z-10">
@@ -194,7 +214,7 @@ img { max-width: 100%; height: auto; display: block; }
             <h1 class="font-['Cormorant_Garamond'] text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-[1.05] font-normal tracking-tight text-[#0F4C5C] max-w-4xl mb-6">
                 Captured moments of <span class="italic text-[#C9A24D]">care</span> and connection.
             </h1>
-            <p class="text-lg md:text-xl text-[#2B2B2B]/70 font-extralight leading-relaxed max-w-2xl">
+            <p class="text-lg md:text-xl text-[#2B2B2B]/90 font-extralight leading-relaxed max-w-2xl">
                 Experience the warmth, joy, and dignity that fills the halls of Hebron Care every day. A visual journey into our family-focused environment.
             </p>
         </div>
@@ -207,158 +227,158 @@ img { max-width: 100%; height: auto; display: block; }
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5 auto-rows-[200px] md:auto-rows-[280px] grid-flow-dense">
                 
                 <div class="gallery-card col-span-2 row-span-2">
-                    <img src="https://i.ibb.co/Kc8t7jX9/0ddbadba006a773a415a16a2d814da35-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care home interior">
+                    <img loading="lazy" src="https://i.ibb.co/Kc8t7jX9/0ddbadba006a773a415a16a2d814da35-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care home interior">
                     <div class="gallery-icon flex items-center gap-2">
                         <iconify-icon icon="solar:home-smile-linear" width="24" stroke-width="1.5"></iconify-icon>
                         <span class="text-sm font-normal tracking-wide">Warm Spaces</span>
                     </div>
                 </div>
                 <div class="gallery-card col-span-1 row-span-2">
-                    <img src="https://i.ibb.co/SXHNtVbj/1-1.webp" alt="Living area at Hebron Care">
+                    <img loading="lazy" src="https://i.ibb.co/SXHNtVbj/1-1.webp" alt="Living area at Hebron Care">
                     <div class="gallery-icon flex items-center gap-2">
                         <iconify-icon icon="solar:sofa-linear" width="24" stroke-width="1.5"></iconify-icon>
                     </div>
                 </div>
                 <div class="gallery-card col-span-1 row-span-1">
-                    <img src="https://i.ibb.co/Jw886v9n/1.webp" alt="Comfortable home space">
+                    <img loading="lazy" src="https://i.ibb.co/Jw886v9n/1.webp" alt="Comfortable home space">
                     <div class="gallery-icon flex items-center gap-2">
                         <iconify-icon icon="solar:armchair-linear" width="24" stroke-width="1.5"></iconify-icon>
                     </div>
                 </div>
                 <div class="gallery-card col-span-1 row-span-1">
-                    <img src="https://i.ibb.co/s969MGyd/1c3c84141a33e0cced2283b645658d87-uncropped-scaled-within-1344-1008.webp" alt="Interior at Hebron Care">
+                    <img loading="lazy" src="https://i.ibb.co/s969MGyd/1c3c84141a33e0cced2283b645658d87-uncropped-scaled-within-1344-1008.webp" alt="Interior at Hebron Care">
                     <div class="gallery-icon flex items-center gap-2">
                         <iconify-icon icon="solar:lamp-linear" width="24" stroke-width="1.5"></iconify-icon>
                     </div>
                 </div>
                 <div class="gallery-card col-span-2 row-span-1">
-                    <img src="https://i.ibb.co/cKMgrBgP/3ef7a64d0ed08504da4b3024d11ed8c0-uncropped-scaled-within-1344-1008.webp" alt="Room at Hebron Care">
+                    <img loading="lazy" src="https://i.ibb.co/cKMgrBgP/3ef7a64d0ed08504da4b3024d11ed8c0-uncropped-scaled-within-1344-1008.webp" alt="Room at Hebron Care">
                     <div class="gallery-icon flex items-center gap-2">
                         <iconify-icon icon="solar:window-frame-linear" width="24" stroke-width="1.5"></iconify-icon>
                         <span class="text-sm font-normal tracking-wide">Our Home</span>
                     </div>
                 </div>
                 <div class="gallery-card col-span-1 row-span-2">
-                    <img src="https://i.ibb.co/DDPqq0SP/7afa51fe0c3e318f09fe6b0cb799ca04-uncropped-scaled-within-1344-1008.webp" alt="Cozy space">
+                    <img loading="lazy" src="https://i.ibb.co/DDPqq0SP/7afa51fe0c3e318f09fe6b0cb799ca04-uncropped-scaled-within-1344-1008.webp" alt="Cozy space">
                     <div class="gallery-icon flex items-center gap-2">
                         <iconify-icon icon="solar:stars-linear" width="24" stroke-width="1.5"></iconify-icon>
                     </div>
                 </div>
                 <div class="gallery-card col-span-1 row-span-1">
-                    <img src="https://i.ibb.co/prndgr1y/7c6e8e85eebffa55d2bdcdbae9877f05-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care interior">
+                    <img loading="lazy" src="https://i.ibb.co/prndgr1y/7c6e8e85eebffa55d2bdcdbae9877f05-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care interior">
                     <div class="gallery-icon flex items-center gap-2">
                         <iconify-icon icon="solar:leaf-linear" width="24" stroke-width="1.5"></iconify-icon>
                     </div>
                 </div>
                 <div class="gallery-card col-span-2 row-span-2">
-                    <img src="https://i.ibb.co/JwyWYTrd/7eba510eb53b95c3539a3274b10a1e87-uncropped-scaled-within-1344-1008.webp" alt="Family-focused environment">
+                    <img loading="lazy" src="https://i.ibb.co/JwyWYTrd/7eba510eb53b95c3539a3274b10a1e87-uncropped-scaled-within-1344-1008.webp" alt="Family-focused environment">
                     <div class="gallery-icon flex items-center gap-2">
                         <iconify-icon icon="solar:heart-angle-linear" width="24" stroke-width="1.5"></iconify-icon>
                         <span class="text-sm font-normal tracking-wide">Care &amp; Connection</span>
                     </div>
                 </div>
                 <div class="gallery-card col-span-1 row-span-1">
-                    <img src="https://i.ibb.co/VcB2C1j6/9c4c1db4ce6c4159633f27fd9259a39e-uncropped-scaled-within-1344-1008.webp" alt="Home room">
+                    <img loading="lazy" src="https://i.ibb.co/VcB2C1j6/9c4c1db4ce6c4159633f27fd9259a39e-uncropped-scaled-within-1344-1008.webp" alt="Home room">
                     <div class="gallery-icon flex items-center gap-2">
                         <iconify-icon icon="solar:chair-linear" width="24" stroke-width="1.5"></iconify-icon>
                     </div>
                 </div>
                 <div class="gallery-card col-span-1 row-span-1">
-                    <img src="https://i.ibb.co/7xwZXtZ7/9ee9b50d5a03c530707b40ae10e1e5fd-uncropped-scaled-within-1344-1008.webp" alt="Interior space">
+                    <img loading="lazy" src="https://i.ibb.co/7xwZXtZ7/9ee9b50d5a03c530707b40ae10e1e5fd-uncropped-scaled-within-1344-1008.webp" alt="Interior space">
                     <div class="gallery-icon flex items-center gap-2">
                         <iconify-icon icon="solar:cup-hot-linear" width="24" stroke-width="1.5"></iconify-icon>
                     </div>
                 </div>
                 <div class="gallery-card col-span-2 row-span-1">
-                    <img src="https://i.ibb.co/j95N77wd/25ff525ad894d80b71ac19f0f87ebf1a-uncropped-scaled-within-1344-1008.webp" alt="Living space at Hebron Care">
+                    <img loading="lazy" src="https://i.ibb.co/j95N77wd/25ff525ad894d80b71ac19f0f87ebf1a-uncropped-scaled-within-1344-1008.webp" alt="Living space at Hebron Care">
                     <div class="gallery-icon flex items-center gap-2">
                         <iconify-icon icon="solar:sun-linear" width="24" stroke-width="1.5"></iconify-icon>
                         <span class="text-sm font-normal tracking-wide">Bright &amp; Welcoming</span>
                     </div>
                 </div>
                 <div class="gallery-card col-span-1 row-span-2">
-                    <img src="https://i.ibb.co/5XXcZ9GQ/36d354edd8bc5454dec3c721f38065be-uncropped-scaled-within-1344-1008.webp" alt="Room view">
+                    <img loading="lazy" src="https://i.ibb.co/5XXcZ9GQ/36d354edd8bc5454dec3c721f38065be-uncropped-scaled-within-1344-1008.webp" alt="Room view">
                     <div class="gallery-icon flex items-center gap-2">
                         <iconify-icon icon="solar:bed-linear" width="24" stroke-width="1.5"></iconify-icon>
                     </div>
                 </div>
                 <div class="gallery-card col-span-1 row-span-1">
-                    <img src="https://i.ibb.co/nMX1kJnX/180-2nd-Ave-S-Edmonds-WA-98020-USA-Bathroom-IMGL0019-2-740x493.jpg" alt="Bathroom at Hebron Care">
+                    <img loading="lazy" src="https://i.ibb.co/nMX1kJnX/180-2nd-Ave-S-Edmonds-WA-98020-USA-Bathroom-IMGL0019-2-740x493.jpg" alt="Bathroom at Hebron Care">
                     <div class="gallery-icon flex items-center gap-2">
                         <iconify-icon icon="solar:bathtub-linear" width="24" stroke-width="1.5"></iconify-icon>
                     </div>
                 </div>
                 <div class="gallery-card col-span-1 row-span-1">
-                    <img src="https://i.ibb.co/0RYPdtLb/180-2nd-Ave-S-Edmonds-WA-98020-USA-Bathroom-IMGL0022-2.jpg" alt="Bathroom">
+                    <img loading="lazy" src="https://i.ibb.co/0RYPdtLb/180-2nd-Ave-S-Edmonds-WA-98020-USA-Bathroom-IMGL0022-2.jpg" alt="Bathroom">
                     <div class="gallery-icon flex items-center gap-2">
                         <iconify-icon icon="solar:water-drops-linear" width="24" stroke-width="1.5"></iconify-icon>
                     </div>
                 </div>
                 <div class="gallery-card col-span-2 row-span-2">
-                    <img src="https://i.ibb.co/C5MCKdKZ/180-2nd-Ave-S-Edmonds-WA-98020-USA-Bedroom-IMGL0025-2-2000x1333.jpg" alt="Comfortable bedroom at Hebron Care">
+                    <img loading="lazy" src="https://i.ibb.co/C5MCKdKZ/180-2nd-Ave-S-Edmonds-WA-98020-USA-Bedroom-IMGL0025-2-2000x1333.jpg" alt="Comfortable bedroom at Hebron Care">
                     <div class="gallery-icon flex items-center gap-2">
                         <iconify-icon icon="solar:bed-linear" width="24" stroke-width="1.5"></iconify-icon>
                         <span class="text-sm font-normal tracking-wide">Private Bedroom</span>
                     </div>
                 </div>
                 <div class="gallery-card col-span-1 row-span-1">
-                    <img src="https://i.ibb.co/F4qtN9vR/180-2nd-Ave-S-Edmonds-WA-98020-USA-Dining-room-IMGL0019-2000x1333.jpg" alt="Dining room at Hebron Care">
+                    <img loading="lazy" src="https://i.ibb.co/F4qtN9vR/180-2nd-Ave-S-Edmonds-WA-98020-USA-Dining-room-IMGL0019-2000x1333.jpg" alt="Dining room at Hebron Care">
                     <div class="gallery-icon flex items-center gap-2">
                         <iconify-icon icon="solar:cup-hot-linear" width="24" stroke-width="1.5"></iconify-icon>
                     </div>
                 </div>
                 <div class="gallery-card col-span-1 row-span-2">
-                    <img src="https://i.ibb.co/6JVy48L6/0664c71c16af7db24b96ead62f983742-uncropped-scaled-within-1344-1008.webp" alt="Home interior">
+                    <img loading="lazy" src="https://i.ibb.co/6JVy48L6/0664c71c16af7db24b96ead62f983742-uncropped-scaled-within-1344-1008.webp" alt="Home interior">
                     <div class="gallery-icon flex items-center gap-2">
                         <iconify-icon icon="solar:home-2-linear" width="24" stroke-width="1.5"></iconify-icon>
                     </div>
                 </div>
                 <div class="gallery-card col-span-1 row-span-1">
-                    <img src="https://i.ibb.co/rKSNFgxs/9980a06e3da7384cfb7990154b6e0fff-uncropped-scaled-within-1344-1008.webp" alt="Cozy room">
+                    <img loading="lazy" src="https://i.ibb.co/rKSNFgxs/9980a06e3da7384cfb7990154b6e0fff-uncropped-scaled-within-1344-1008.webp" alt="Cozy room">
                     <div class="gallery-icon flex items-center gap-2">
                         <iconify-icon icon="solar:emoji-funny-circle-linear" width="24" stroke-width="1.5"></iconify-icon>
                     </div>
                 </div>
                 <div class="gallery-card col-span-2 row-span-1">
-                    <img src="https://i.ibb.co/R4zqt1Qv/35148c286add27d447b3f47de8d63e36-uncropped-scaled-within-1344-1008.webp" alt="Living space">
+                    <img loading="lazy" src="https://i.ibb.co/R4zqt1Qv/35148c286add27d447b3f47de8d63e36-uncropped-scaled-within-1344-1008.webp" alt="Living space">
                     <div class="gallery-icon flex items-center gap-2">
                         <iconify-icon icon="solar:users-group-two-rounded-linear" width="24" stroke-width="1.5"></iconify-icon>
                         <span class="text-sm font-normal tracking-wide">Daily Living</span>
                     </div>
                 </div>
                 <div class="gallery-card col-span-1 row-span-1">
-                    <img src="https://i.ibb.co/7N6MRysd/229071-tiny.jpg" alt="Hebron Care home">
+                    <img loading="lazy" src="https://i.ibb.co/7N6MRysd/229071-tiny.jpg" alt="Hebron Care home">
                     <div class="gallery-icon flex items-center gap-2">
                         <iconify-icon icon="solar:gallery-wide-linear" width="24" stroke-width="1.5"></iconify-icon>
                     </div>
                 </div>
                 <div class="gallery-card col-span-1 row-span-1">
-                    <img src="https://i.ibb.co/FqkykfVp/a75018ea2db14ad6a04df57fc1851daa-uncropped-scaled-within-1344-1008.webp" alt="Interior at Hebron Care">
+                    <img loading="lazy" src="https://i.ibb.co/FqkykfVp/a75018ea2db14ad6a04df57fc1851daa-uncropped-scaled-within-1344-1008.webp" alt="Interior at Hebron Care">
                     <div class="gallery-icon flex items-center gap-2">
                         <iconify-icon icon="solar:hand-stars-linear" width="24" stroke-width="1.5"></iconify-icon>
                     </div>
                 </div>
                 <div class="gallery-card col-span-2 row-span-2">
-                    <img src="https://i.ibb.co/kVWkpWMy/bb05900f6d09d9a45e229bb4b123d884-uncropped-scaled-within-1344-1008.webp" alt="Room at Hebron Care">
+                    <img loading="lazy" src="https://i.ibb.co/kVWkpWMy/bb05900f6d09d9a45e229bb4b123d884-uncropped-scaled-within-1344-1008.webp" alt="Room at Hebron Care">
                     <div class="gallery-icon flex items-center gap-2">
                         <iconify-icon icon="solar:shield-check-linear" width="24" stroke-width="1.5"></iconify-icon>
                         <span class="text-sm font-normal tracking-wide">Safe &amp; Comfortable</span>
                     </div>
                 </div>
                 <div class="gallery-card col-span-1 row-span-1">
-                    <img src="https://i.ibb.co/gM9X7wp4/Blog-Company-News.png" alt="Hebron Care news">
+                    <img loading="lazy" src="https://i.ibb.co/gM9X7wp4/Blog-Company-News.png" alt="Hebron Care news">
                     <div class="gallery-icon flex items-center gap-2">
                         <iconify-icon icon="solar:document-text-linear" width="24" stroke-width="1.5"></iconify-icon>
                     </div>
                 </div>
                 <div class="gallery-card col-span-1 row-span-2">
-                    <img src="https://i.ibb.co/4ZWVCtKm/c0ac88a48a0d4319319a25fc8be9071d-uncropped-scaled-within-1344-1008.webp" alt="Home space">
+                    <img loading="lazy" src="https://i.ibb.co/4ZWVCtKm/c0ac88a48a0d4319319a25fc8be9071d-uncropped-scaled-within-1344-1008.webp" alt="Home space">
                     <div class="gallery-icon flex items-center gap-2">
                         <iconify-icon icon="solar:chat-round-dots-linear" width="24" stroke-width="1.5"></iconify-icon>
                     </div>
                 </div>
                 <div class="gallery-card col-span-2 row-span-1">
-                    <img src="https://i.ibb.co/8D5hV51C/c009d933140daa0498fb9471134fe02a-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care interior">
+                    <img loading="lazy" src="https://i.ibb.co/8D5hV51C/c009d933140daa0498fb9471134fe02a-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care interior">
                     <div class="gallery-icon flex items-center gap-2">
                         <iconify-icon icon="solar:user-heart-linear" width="24" stroke-width="1.5"></iconify-icon>
                         <span class="text-sm font-normal tracking-wide">Our Home</span>
@@ -374,22 +394,23 @@ img { max-width: 100%; height: auto; display: block; }
         <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-10 sm:mb-12">
             <div class="md:col-span-1">
                 <a href="index.html" class="font-['Cormorant_Garamond'] text-2xl font-normal tracking-tight text-[#0F4C5C] block mb-4">HEBRON CARE</a>
-                <p class="text-sm text-[#2B2B2B]/60 font-light leading-relaxed mb-4">
+                <p class="text-sm text-[#2B2B2B]/85 font-light leading-relaxed mb-2">
                     A licensed Adult Family Home providing premium, specialized, and compassionate living solutions for seniors.
                 </p>
+                <p class="text-xs text-[#0F4C5C]/70 font-normal mb-4">Washington State Licensed · License # <span aria-label="Add your state license number">__________</span></p>
                 <a href="https://www.google.com/maps/place/11320+27th+Ave+SE,+Everett,+WA+98208" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm text-[#0F4C5C] font-normal hover:text-[#C9A24D] transition mb-6">
                     <iconify-icon icon="solar:map-point-linear" width="18" stroke-width="1.5"></iconify-icon>
                     Find us on Google
                 </a>
-                <div class="flex gap-4">
-                    <a href="#" class="text-[#0F4C5C] hover:text-[#C9A24D] transition"><iconify-icon icon="solar:facebook-linear" width="20" stroke-width="1.5"></iconify-icon></a>
-                    <a href="#" class="text-[#0F4C5C] hover:text-[#C9A24D] transition"><iconify-icon icon="solar:instagram-linear" width="20" stroke-width="1.5"></iconify-icon></a>
+                <div class="flex gap-4" aria-label="Social links coming soon">
+                    <span class="text-[#0F4C5C]/50 cursor-default" aria-hidden="true"><iconify-icon icon="solar:facebook-linear" width="20" stroke-width="1.5"></iconify-icon></span>
+                    <span class="text-[#0F4C5C]/50 cursor-default" aria-hidden="true"><iconify-icon icon="solar:instagram-linear" width="20" stroke-width="1.5"></iconify-icon></span>
                 </div>
             </div>
             
             <div>
                 <h4 class="text-xs font-medium uppercase tracking-widest text-[#0F4C5C] mb-6">Explore</h4>
-                <ul class="space-y-3 text-sm text-[#2B2B2B]/70 font-light">
+                <ul class="space-y-3 text-sm text-[#2B2B2B]/90 font-light">
                     <li><a href="index.html" class="hover:text-[#C9A24D] transition">Home</a></li>
                     <li><a href="about-us.html" class="hover:text-[#C9A24D] transition">About Us</a></li>
                     <li><a href="gallery.html" class="hover:text-[#C9A24D] transition">Gallery</a></li>
@@ -400,7 +421,7 @@ img { max-width: 100%; height: auto; display: block; }
 
             <div>
                 <h4 class="text-xs font-medium uppercase tracking-widest text-[#0F4C5C] mb-6">Care Services</h4>
-                <ul class="space-y-3 text-sm text-[#2B2B2B]/70 font-light">
+                <ul class="space-y-3 text-sm text-[#2B2B2B]/90 font-light">
                     <li><a href="services.html" class="hover:text-[#C9A24D] transition">Assisted Living</a></li>
                     <li><a href="services.html" class="hover:text-[#C9A24D] transition">Memory Care Support</a></li>
                     <li><a href="services.html" class="hover:text-[#C9A24D] transition">Medication Administration</a></li>
@@ -410,7 +431,7 @@ img { max-width: 100%; height: auto; display: block; }
 
              <div>
                 <h4 class="text-xs font-medium uppercase tracking-widest text-[#0F4C5C] mb-6">Need Immediate Placement?</h4>
-                <p class="text-sm text-[#2B2B2B]/70 font-light mb-4">Contact our admissions coordinator directly.</p>
+                <p class="text-sm text-[#2B2B2B]/90 font-light mb-4">Contact our admissions coordinator directly.</p>
                 <a href="tel:+14252255424" class="inline-flex items-center gap-2 text-[#0F4C5C] font-normal text-sm hover:underline">
                     <iconify-icon icon="solar:phone-calling-linear" stroke-width="1.5"></iconify-icon>
                     (425) 225-5424
@@ -419,10 +440,10 @@ img { max-width: 100%; height: auto; display: block; }
         </div>
         
         <div class="max-w-7xl mx-auto border-t border-[#0F4C5C]/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[#2B2B2B]/40 font-light">
-            <p>© 2024 Hebron Care Adult Family Home LLC #1. All rights reserved.</p>
+            <p>© 2026 Hebron Care Adult Family Home LLC #1. All rights reserved.</p>
             <div class="flex gap-4">
-                <a href="#" class="hover:text-[#0F4C5C] transition">Privacy Policy</a>
-                <a href="#" class="hover:text-[#0F4C5C] transition">Terms of Service</a>
+                <a href="privacy-policy.html" class="hover:text-[#0F4C5C] transition">Privacy Policy</a>
+                <a href="terms-of-service.html" class="hover:text-[#0F4C5C] transition">Terms of Service</a>
             </div>
         </div>
     </footer>
@@ -433,6 +454,18 @@ img { max-width: 100%; height: auto; display: block; }
             <iconify-icon icon="solar:phone-calling-linear" width="24" stroke-width="1.5"></iconify-icon>
         </a>
     </div>
+
+    <!-- Gallery lightbox (click any photo to open larger view) -->
+    <dialog id="gallery-lightbox" aria-label="View image larger" class="gallery-lightbox-dialog">
+        <div id="lightbox-backdrop" class="lightbox-backdrop">
+            <div class="lightbox-inner">
+                <img id="lightbox-img" src="" alt="">
+            </div>
+            <button type="button" id="lightbox-close" class="lightbox-close" aria-label="Close lightbox">
+                <iconify-icon icon="solar:close-circle-bold" width="28"></iconify-icon>
+            </button>
+        </div>
+    </dialog>
 
     <!-- Interactive Scripts -->
     <script>
@@ -449,7 +482,43 @@ img { max-width: 100%; height: auto; display: block; }
 
         menuBtn.addEventListener('click', toggleMenu);
         closeBtn.addEventListener('click', toggleMenu);
+        var menuBackdrop = document.getElementById('menu-backdrop');
+        if (menuBackdrop) menuBackdrop.addEventListener('click', toggleMenu);
         links.forEach(link => link.addEventListener('click', toggleMenu));
+
+        // Gallery lightbox: click card to open larger view
+        (function() {
+            var dialog = document.getElementById('gallery-lightbox');
+            var lightboxImg = document.getElementById('lightbox-img');
+            var lightboxBackdrop = document.getElementById('lightbox-backdrop');
+            var lightboxClose = document.getElementById('lightbox-close');
+            var cards = document.querySelectorAll('.gallery-card');
+
+            function openLightbox(src, alt) {
+                if (!dialog || !lightboxImg) return;
+                lightboxImg.src = src;
+                lightboxImg.alt = alt || 'Gallery image';
+                dialog.showModal();
+            }
+
+            function closeLightbox() {
+                if (dialog) dialog.close();
+            }
+
+            cards.forEach(function(card) {
+                card.addEventListener('click', function() {
+                    var img = card.querySelector('img');
+                    if (img && img.src) openLightbox(img.src, img.alt);
+                });
+            });
+            if (lightboxBackdrop) {
+                lightboxBackdrop.addEventListener('click', function(e) {
+                    if (e.target === lightboxBackdrop || e.target.classList.contains('lightbox-inner')) closeLightbox();
+                });
+            }
+            if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+            if (dialog) dialog.addEventListener('cancel', closeLightbox);
+        })();
 
         // "Crazy" Staggered Scroll Animation Logic
         document.addEventListener('DOMContentLoaded', () => {

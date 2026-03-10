@@ -1,0 +1,3 @@
+[      46ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:5555/assets/team/founder.jpg:0
+[      47ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:5555/assets/team/director2.jpg:0
+[      63ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:5555/assets/team/rn-lead.jpg:0

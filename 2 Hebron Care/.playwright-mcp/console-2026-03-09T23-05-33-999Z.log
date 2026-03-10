@@ -1,0 +1,5 @@
+[      58ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:5555/assets/hero-home.jpg:0
+[  227694ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:5555/assets/hero-home.jpg:0
+[  285391ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:5555/assets/hero-home.jpg:0
+[  309433ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:5555/assets/hero-home.jpg:0
+[  604995ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:5555/assets/hero-home.jpg:0

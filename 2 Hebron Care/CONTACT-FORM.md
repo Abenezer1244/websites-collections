@@ -64,6 +64,28 @@ The `_subject` value in each form still differentiates “New contact form submi
 
 ---
 
+## Verify form & phone behavior
+
+Before going live, confirm on **real devices** (phone and desktop):
+
+1. **Form submissions reach the right inbox/CRM**
+   - Replace `YOUR_FORMSPREE_CONTACT_ID` and `YOUR_FORMSPREE_TOUR_ID` in the site with your real Formspree form IDs (see Setup above).
+   - Submit a test from the **Contact** page and from the **Request a Tour** form (Home or About). Check that the correct email receives each submission and that replies go to the sender when you hit “Reply.”
+   - If you use a CRM or other inbox, ensure Formspree is forwarding there or that you’re checking the inbox that Formspree uses.
+
+2. **“Call Us” and “Schedule Tour” work**
+   - On a **real phone**: Tap “Call Us Today,” “Schedule Tour” (then use the contact page or call link), and the sticky **Call** button on mobile. All should open the dialer with **(425) 225-5424** (and the provider number where shown).
+   - On **desktop**: Click the same links; they should open the default phone app or prompt to choose one.
+
+3. **Quick checklist**
+   - [ ] Form IDs replaced in `contact.html`, `index.html`, and `about-us.html`
+   - [ ] Test Contact form submission received in correct inbox
+   - [ ] Test Tour form submission received in correct inbox
+   - [ ] Call links tested on at least one real phone
+   - [ ] Mobile sticky “Call” button tested on a real device
+
+---
+
 ## Troubleshooting
 
 - **No email received:** Check Formspree dashboard for the form and confirm the form ID in the site matches. Check spam.

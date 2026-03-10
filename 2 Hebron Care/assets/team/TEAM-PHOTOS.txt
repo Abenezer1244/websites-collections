@@ -1,0 +1,16 @@
+TEAM PHOTOS (About page – Our People)
+======================================
+Add photos here for the “Real people” section on the About page.
+
+Files to add:
+- founder.jpg    — First founding director (headshot or professional photo)
+- director2.jpg  — Second founding director (optional; remove the second card in about-us.html if you have only one)
+- rn-lead.jpg    — RN / Lead caregiver (headshot or professional photo)
+
+Recommendations:
+- Headshots or upper-body shots work best (portrait orientation)
+- Consistent style (e.g. same background or all professional)
+- Size: at least 400×500px (4:5 aspect ratio is used)
+- Format: JPG or PNG
+
+In about-us.html, replace the placeholder names and bios ([Director Name], [Name], and the [1–2 sentence bio] text) with real names and short bios.

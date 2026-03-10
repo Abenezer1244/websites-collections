@@ -1,0 +1,14 @@
+HERO IMAGE (Home page)
+======================
+Place your real photo here for the home page hero.
+
+Filename: hero-home.jpg
+(Also OK: hero-home.png or hero-home.webp — then update the <img src="..."> in index.html to match.)
+
+Recommendations:
+- Common area of your home (living room, dining, or welcoming space)
+- Daylight, natural lighting
+- Residents and/or staff only if you have consent
+- Size: 1200×800px or larger (e.g. 1200×900, 1600×1200) for best quality
+
+Until you add hero-home.jpg, the site will show a fallback image. Replace the file with your photo when ready.
