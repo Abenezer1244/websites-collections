@@ -110,6 +110,32 @@ border-color: #0F4C5C;
 input[type="checkbox"]:checked::before {
 transform: scale(1);
 }
+/* Hero heading + subheading: make text pop over image (match home hero) */
+#main-content h1 {
+  position: relative;
+  text-shadow:
+    0 4px 18px rgba(0, 0, 0, 0.55),
+    0 0 2px rgba(0, 0, 0, 0.35);
+}
+
+#main-content h1 + p {
+  text-shadow:
+    0 3px 14px rgba(0, 0, 0, 0.55),
+    0 0 2px rgba(0, 0, 0, 0.35);
+}
+
+#main-content h1::before {
+  content: "";
+  position: absolute;
+  inset: -0.12em 0;
+  background: radial-gradient(circle at 50% 40%, rgba(15, 76, 92, 0.22), transparent 65%);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 0.2em;
+  z-index: -1;
+  pointer-events: none;
+}
+
 /* === Advanced mobile & web responsiveness === */
 @supports (padding: env(safe-area-inset-top)) {
   .mobile-menu-content { padding-top: calc(7rem + env(safe-area-inset-top, 0px)); padding-left: max(1.5rem, env(safe-area-inset-left)); padding-right: max(1.5rem, env(safe-area-inset-right)); padding-bottom: max(1.5rem, env(safe-area-inset-bottom)); }
