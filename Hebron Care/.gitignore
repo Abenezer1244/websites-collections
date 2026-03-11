@@ -1,0 +1,32 @@
+# Playwright / MCP
+.playwright-mcp/
+playwright-report/
+test-results/
+
+# Dependencies
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Env and secrets
+.env
+.env.local
+.env.*.local
+*.pem
+
+# Logs and temp
+*.log
+npm-debug.log*
+.cache/
+tmp/
+temp/
