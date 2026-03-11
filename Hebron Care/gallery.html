@@ -97,6 +97,10 @@ body.text-larger .text-sm { font-size: 0.9375rem; }
 body.text-larger .text-lg { font-size: 1.125rem; }
 body.text-larger .text-xl { font-size: 1.25rem; }
 body.text-larger .text-2xl { font-size: 1.5rem; }
+/* Gallery lightbox */
+#gallery-lightbox.is-open { opacity: 1; pointer-events: auto; }
+#gallery-lightbox.is-open #gallery-lightbox-img { opacity: 1; transform: scale(1); }
+#gallery-lightbox-img { transition: opacity 0.25s ease, transform 0.3s ease; transform: scale(0.95); }
 </style></head>
 <body class="bg-[#FBF9F6] text-stone-800 antialiased selection:bg-emerald-100 selection:text-emerald-900 overflow-x-hidden">
 
@@ -104,22 +108,20 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
     <nav class="fixed top-0 left-0 right-0 z-50 bg-[#FBF9F6]/95 backdrop-blur-md border-b border-stone-200/50 transition-all duration-300" role="banner">
         <div class="relative z-50 max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between bg-[#FBF9F6]/95">
             <a href="index.html" class="flex items-center gap-2 min-h-[44px] min-w-[44px] -m-2 p-2 md:m-0 md:p-0">
-                <div class="w-8 h-8 bg-emerald-900 rounded-full flex items-center justify-center text-white shrink-0">
-                    <iconify-icon icon="solar:home-heart-linear" width="18"></iconify-icon>
-                </div>
+                <img src="https://i.ibb.co/g5pPH0C/Untitled-design-1.png" alt="Hebron Care" width="32" height="32" class="shrink-0 h-8 w-8 object-contain">
                 <span class="text-lg sm:text-xl font-normal tracking-tight text-emerald-950">Hebron Care</span>
             </a>
             <div class="hidden md:flex items-center gap-6 lg:gap-8 text-base lg:text-lg font-normal text-stone-600">
                 <a href="index.html" class="hover:text-emerald-900 transition-colors py-2">Home</a>
                 <a href="about-us.html" class="hover:text-emerald-900 transition-colors py-2">About Us</a>
-                <a href="gallery.html" class="hover:text-emerald-900 transition-colors py-2">Gallery</a>
+                <a href="gallery.html" class="text-emerald-900 font-medium border-b-2 border-emerald-900 pb-0.5 transition-colors py-2" aria-current="page">Gallery</a>
                 <a href="services.html" class="hover:text-emerald-900 transition-colors py-2">Services</a>
                 <a href="contact.html" class="hover:text-emerald-900 transition-colors py-2">Contact Us</a>
             </div>
             <div class="flex items-center gap-3 md:gap-4">
-                <a href="tel:+14252255424" class="hidden md:inline-flex items-center gap-2 text-stone-600 hover:text-emerald-900 transition-colors py-2 text-base lg:text-lg font-normal min-h-[44px] items-center" aria-label="Call (425) 225-5424">
+                <a href="tel:+14252255424" class="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-stone-200 text-stone-600 hover:text-emerald-900 hover:border-emerald-300 hover:bg-emerald-50/50 transition-colors text-base font-normal min-h-[44px] items-center" aria-label="Call (425) 225-5424">
                     <iconify-icon icon="solar:phone-calling-linear" width="20"></iconify-icon>
-                    (425) 225-5424
+                    Call
                 </a>
                 <a href="contact.html" class="hidden md:inline-flex bg-emerald-900 text-[#FBF9F6] px-5 py-2.5 rounded-full text-base font-normal hover:bg-emerald-800 transition-all hover:scale-[1.02] shadow-lg shadow-emerald-900/10 min-h-[44px] items-center">
                     Schedule a Tour
@@ -136,7 +138,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
         <nav class="flex flex-col flex-1 py-2 pt-6">
             <a href="index.html" class="nav-mobile-link block py-4 px-4 sm:px-6 text-lg font-semibold text-emerald-900 border-b border-stone-200 hover:bg-emerald-50/50 transition-colors">Home</a>
             <a href="about-us.html" class="nav-mobile-link block py-4 px-4 sm:px-6 text-lg font-semibold text-emerald-900 border-b border-stone-200 hover:bg-emerald-50/50 transition-colors">About Us</a>
-            <a href="gallery.html" class="nav-mobile-link block py-4 px-4 sm:px-6 text-lg font-semibold text-emerald-900 border-b border-stone-200 hover:bg-emerald-50/50 transition-colors">Gallery</a>
+            <a href="gallery.html" class="nav-mobile-link block py-4 px-4 sm:px-6 text-lg font-semibold text-emerald-900 border-b border-stone-200 bg-emerald-50/80 border-l-4 border-l-emerald-900 -ml-px pl-[15px] transition-colors" aria-current="page">Gallery</a>
             <a href="services.html" class="nav-mobile-link block py-4 px-4 sm:px-6 text-lg font-semibold text-emerald-900 border-b border-stone-200 hover:bg-emerald-50/50 transition-colors">Services</a>
             <a href="contact.html" class="nav-mobile-link block py-4 px-4 sm:px-6 text-lg font-semibold text-emerald-900 border-b border-stone-200 hover:bg-emerald-50/50 transition-colors">Contact Us</a>
         </nav>
@@ -175,7 +177,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
             <!-- Image 1 -->
             <div class="masonry-item anim-type-1 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/Kc8t7jX9/0ddbadba006a773a415a16a2d814da35-uncropped-scaled-within-1344-1008.webp" loading="lazy" decoding="async" alt="Hebron Care home" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/Kc8t7jX9/0ddbadba006a773a415a16a2d814da35-uncropped-scaled-within-1344-1008.webp" loading="lazy" decoding="async" alt="Hebron Care home" class="w-full h-auto object-cover transition-transform duration-500 ease-out group-hover:scale-125 group-active:scale-150">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -186,7 +188,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
             <!-- Image 2 -->
             <div class="masonry-item anim-type-3 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/SXHNtVbj/1-1.webp" loading="lazy" decoding="async" alt="Caregiver supporting resident at table" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/SXHNtVbj/1-1.webp" loading="lazy" decoding="async" alt="Caregiver supporting resident at table" class="w-full h-auto object-cover transition-transform duration-500 ease-out group-hover:scale-125 group-active:scale-150">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -197,7 +199,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
             <!-- Image 3 -->
             <div class="masonry-item anim-type-2 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/Jw886v9n/1.webp" loading="lazy" decoding="async" alt="Resident and caregiver walking together outdoors" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/Jw886v9n/1.webp" loading="lazy" decoding="async" alt="Resident and caregiver walking together outdoors" class="w-full h-auto object-cover transition-transform duration-500 ease-out group-hover:scale-125 group-active:scale-150">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -208,7 +210,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
             <!-- Image 4 -->
             <div class="masonry-item anim-type-4 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/s969MGyd/1c3c84141a33e0cced2283b645658d87-uncropped-scaled-within-1344-1008.webp" loading="lazy" decoding="async" alt="Kitchen and dining space with seating" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/s969MGyd/1c3c84141a33e0cced2283b645658d87-uncropped-scaled-within-1344-1008.webp" loading="lazy" decoding="async" alt="Kitchen and dining space with seating" class="w-full h-auto object-cover transition-transform duration-500 ease-out group-hover:scale-125 group-active:scale-150">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -219,7 +221,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
             <!-- Image 5 -->
             <div class="masonry-item anim-type-1 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/cKMgrBgP/3ef7a64d0ed08504da4b3024d11ed8c0-uncropped-scaled-within-1344-1008.webp" loading="lazy" decoding="async" alt="Outdoor patio with dining table" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/cKMgrBgP/3ef7a64d0ed08504da4b3024d11ed8c0-uncropped-scaled-within-1344-1008.webp" loading="lazy" decoding="async" alt="Outdoor patio with dining table" class="w-full h-auto object-cover transition-transform duration-500 ease-out group-hover:scale-125 group-active:scale-150">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -230,7 +232,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
             <!-- Image 6 -->
             <div class="masonry-item anim-type-3 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/DDPqq0SP/7afa51fe0c3e318f09fe6b0cb799ca04-uncropped-scaled-within-1344-1008.webp" loading="lazy" decoding="async" alt="Living room with comfortable seating" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/DDPqq0SP/7afa51fe0c3e318f09fe6b0cb799ca04-uncropped-scaled-within-1344-1008.webp" loading="lazy" decoding="async" alt="Living room with comfortable seating" class="w-full h-auto object-cover transition-transform duration-500 ease-out group-hover:scale-125 group-active:scale-150">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -241,7 +243,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
             <!-- Image 7 -->
             <div class="masonry-item anim-type-2 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/prndgr1y/7c6e8e85eebffa55d2bdcdbae9877f05-uncropped-scaled-within-1344-1008.webp" loading="lazy" decoding="async" alt="Dining area with large window" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/prndgr1y/7c6e8e85eebffa55d2bdcdbae9877f05-uncropped-scaled-within-1344-1008.webp" loading="lazy" decoding="async" alt="Dining area with large window" class="w-full h-auto object-cover transition-transform duration-500 ease-out group-hover:scale-125 group-active:scale-150">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -252,7 +254,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
             <!-- Image 8 -->
             <div class="masonry-item anim-type-4 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/JwyWYTrd/7eba510eb53b95c3539a3274b10a1e87-uncropped-scaled-within-1344-1008.webp" alt="Open concept kitchen and lounge" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/JwyWYTrd/7eba510eb53b95c3539a3274b10a1e87-uncropped-scaled-within-1344-1008.webp" alt="Open concept kitchen and lounge" class="w-full h-auto object-cover transition-transform duration-500 ease-out group-hover:scale-125 group-active:scale-150">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -263,7 +265,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
             <!-- Image 9 -->
             <div class="masonry-item anim-type-1 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/VcB2C1j6/9c4c1db4ce6c4159633f27fd9259a39e-uncropped-scaled-within-1344-1008.webp" alt="Garden and lawn outside the home" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/VcB2C1j6/9c4c1db4ce6c4159633f27fd9259a39e-uncropped-scaled-within-1344-1008.webp" alt="Garden and lawn outside the home" class="w-full h-auto object-cover transition-transform duration-500 ease-out group-hover:scale-125 group-active:scale-150">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -274,7 +276,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
             <!-- Image 10 -->
             <div class="masonry-item anim-type-3 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/7xwZXtZ7/9ee9b50d5a03c530707b40ae10e1e5fd-uncropped-scaled-within-1344-1008.webp" alt="Driveway and front porch view" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/7xwZXtZ7/9ee9b50d5a03c530707b40ae10e1e5fd-uncropped-scaled-within-1344-1008.webp" alt="Driveway and front porch view" class="w-full h-auto object-cover transition-transform duration-500 ease-out group-hover:scale-125 group-active:scale-150">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -285,7 +287,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
             <!-- Image 11 -->
             <div class="masonry-item anim-type-2 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/j95N77wd/25ff525ad894d80b71ac19f0f87ebf1a-uncropped-scaled-within-1344-1008.webp" alt="Backyard patio seating area" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/j95N77wd/25ff525ad894d80b71ac19f0f87ebf1a-uncropped-scaled-within-1344-1008.webp" alt="Backyard patio seating area" class="w-full h-auto object-cover transition-transform duration-500 ease-out group-hover:scale-125 group-active:scale-150">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -296,7 +298,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
             <!-- Image 12 -->
             <div class="masonry-item anim-type-4 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/5XXcZ9GQ/36d354edd8bc5454dec3c721f38065be-uncropped-scaled-within-1344-1008.webp" alt="Front entry and driveway of Hebron Care home" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/5XXcZ9GQ/36d354edd8bc5454dec3c721f38065be-uncropped-scaled-within-1344-1008.webp" alt="Front entry and driveway of Hebron Care home" class="w-full h-auto object-cover transition-transform duration-500 ease-out group-hover:scale-125 group-active:scale-150">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -307,7 +309,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
             <!-- Image 13 -->
             <div class="masonry-item anim-type-1 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/nMX1kJnX/180-2nd-Ave-S-Edmonds-WA-98020-USA-Bathroom-IMGL0019-2-740x493.jpg" alt="Bathroom" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/nMX1kJnX/180-2nd-Ave-S-Edmonds-WA-98020-USA-Bathroom-IMGL0019-2-740x493.jpg" alt="Bathroom" class="w-full h-auto object-cover transition-transform duration-500 ease-out group-hover:scale-125 group-active:scale-150">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -318,7 +320,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
             <!-- Image 14 -->
             <div class="masonry-item anim-type-3 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/0RYPdtLb/180-2nd-Ave-S-Edmonds-WA-98020-USA-Bathroom-IMGL0022-2.jpg" alt="Bathroom" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/0RYPdtLb/180-2nd-Ave-S-Edmonds-WA-98020-USA-Bathroom-IMGL0022-2.jpg" alt="Bathroom" class="w-full h-auto object-cover transition-transform duration-500 ease-out group-hover:scale-125 group-active:scale-150">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -329,7 +331,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
             <!-- Image 15 -->
             <div class="masonry-item anim-type-2 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/C5MCKdKZ/180-2nd-Ave-S-Edmonds-WA-98020-USA-Bedroom-IMGL0025-2-2000x1333.jpg" alt="Bedroom" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/C5MCKdKZ/180-2nd-Ave-S-Edmonds-WA-98020-USA-Bedroom-IMGL0025-2-2000x1333.jpg" alt="Bedroom" class="w-full h-auto object-cover transition-transform duration-500 ease-out group-hover:scale-125 group-active:scale-150">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -340,7 +342,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
             <!-- Image 16 -->
             <div class="masonry-item anim-type-4 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/F4qtN9vR/180-2nd-Ave-S-Edmonds-WA-98020-USA-Dining-room-IMGL0019-2000x1333.jpg" alt="Dining room" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/F4qtN9vR/180-2nd-Ave-S-Edmonds-WA-98020-USA-Dining-room-IMGL0019-2000x1333.jpg" alt="Dining room" class="w-full h-auto object-cover transition-transform duration-500 ease-out group-hover:scale-125 group-active:scale-150">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -351,7 +353,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
             <!-- Image 17 -->
             <div class="masonry-item anim-type-1 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/6JVy48L6/0664c71c16af7db24b96ead62f983742-uncropped-scaled-within-1344-1008.webp" alt="Hallway and interior corridor" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/6JVy48L6/0664c71c16af7db24b96ead62f983742-uncropped-scaled-within-1344-1008.webp" alt="Hallway and interior corridor" class="w-full h-auto object-cover transition-transform duration-500 ease-out group-hover:scale-125 group-active:scale-150">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -362,7 +364,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
             <!-- Image 18 -->
             <div class="masonry-item anim-type-3 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/rKSNFgxs/9980a06e3da7384cfb7990154b6e0fff-uncropped-scaled-within-1344-1008.webp" alt="Cozy seating nook with armchairs" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/rKSNFgxs/9980a06e3da7384cfb7990154b6e0fff-uncropped-scaled-within-1344-1008.webp" alt="Cozy seating nook with armchairs" class="w-full h-auto object-cover transition-transform duration-500 ease-out group-hover:scale-125 group-active:scale-150">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -373,7 +375,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
             <!-- Image 19 -->
             <div class="masonry-item anim-type-2 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/R4zqt1Qv/35148c286add27d447b3f47de8d63e36-uncropped-scaled-within-1344-1008.webp" alt="Exterior of Hebron Care home with landscaping" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/R4zqt1Qv/35148c286add27d447b3f47de8d63e36-uncropped-scaled-within-1344-1008.webp" alt="Exterior of Hebron Care home with landscaping" class="w-full h-auto object-cover transition-transform duration-500 ease-out group-hover:scale-125 group-active:scale-150">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -384,7 +386,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
             <!-- Image 20 -->
             <div class="masonry-item anim-type-4 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/7N6MRysd/229071-tiny.jpg" alt="Seating area looking toward kitchen" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/7N6MRysd/229071-tiny.jpg" alt="Seating area looking toward kitchen" class="w-full h-auto object-cover transition-transform duration-500 ease-out group-hover:scale-125 group-active:scale-150">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -395,7 +397,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
             <!-- Image 21 -->
             <div class="masonry-item anim-type-1 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/FqkykfVp/a75018ea2db14ad6a04df57fc1851daa-uncropped-scaled-within-1344-1008.webp" alt="Covered patio and outdoor dining area" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/FqkykfVp/a75018ea2db14ad6a04df57fc1851daa-uncropped-scaled-within-1344-1008.webp" alt="Covered patio and outdoor dining area" class="w-full h-auto object-cover transition-transform duration-500 ease-out group-hover:scale-125 group-active:scale-150">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -406,7 +408,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
             <!-- Image 22 -->
             <div class="masonry-item anim-type-3 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/kVWkpWMy/bb05900f6d09d9a45e229bb4b123d884-uncropped-scaled-within-1344-1008.webp" alt="Tree-lined yard surrounding the home" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/kVWkpWMy/bb05900f6d09d9a45e229bb4b123d884-uncropped-scaled-within-1344-1008.webp" alt="Tree-lined yard surrounding the home" class="w-full h-auto object-cover transition-transform duration-500 ease-out group-hover:scale-125 group-active:scale-150">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -417,7 +419,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
             <!-- Image 23 -->
             <div class="masonry-item anim-type-2 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/gM9X7wp4/Blog-Company-News.png" alt="Caregiver helping resident with mobility" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/gM9X7wp4/Blog-Company-News.png" alt="Caregiver helping resident with mobility" class="w-full h-auto object-cover transition-transform duration-500 ease-out group-hover:scale-125 group-active:scale-150">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -428,7 +430,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
             <!-- Image 24 -->
             <div class="masonry-item anim-type-4 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/4ZWVCtKm/c0ac88a48a0d4319319a25fc8be9071d-uncropped-scaled-within-1344-1008.webp" alt="Landscape and trees beside the house" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/4ZWVCtKm/c0ac88a48a0d4319319a25fc8be9071d-uncropped-scaled-within-1344-1008.webp" alt="Landscape and trees beside the house" class="w-full h-auto object-cover transition-transform duration-500 ease-out group-hover:scale-125 group-active:scale-150">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -439,7 +441,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
             <!-- Image 25 -->
             <div class="masonry-item anim-type-1 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/8D5hV51C/c009d933140daa0498fb9471134fe02a-uncropped-scaled-within-1344-1008.webp" alt="Side view of home with driveway" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/8D5hV51C/c009d933140daa0498fb9471134fe02a-uncropped-scaled-within-1344-1008.webp" alt="Side view of home with driveway" class="w-full h-auto object-cover transition-transform duration-500 ease-out group-hover:scale-125 group-active:scale-150">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -450,6 +452,14 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
 
         </div>
     </section>
+
+    <!-- Gallery lightbox: expand image on click -->
+    <div id="gallery-lightbox" class="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black/90 opacity-0 pointer-events-none transition-opacity duration-300" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Enlarged image">
+        <button type="button" id="gallery-lightbox-close" class="absolute top-4 right-4 z-10 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white" aria-label="Close">
+            <iconify-icon icon="solar:close-circle-linear" width="28"></iconify-icon>
+        </button>
+        <img id="gallery-lightbox-img" src="" alt="" class="max-w-full max-h-[90vh] w-auto h-auto object-contain rounded-lg shadow-2xl opacity-0">
+    </div>
 
     </main>
 
@@ -535,6 +545,46 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
                 observer.observe(el);
             });
         });
+
+        // Gallery lightbox: open on image click, close on backdrop/button/Escape
+        (function() {
+            var lightbox = document.getElementById('gallery-lightbox');
+            var lightboxImg = document.getElementById('gallery-lightbox-img');
+            var closeBtn = document.getElementById('gallery-lightbox-close');
+            if (!lightbox || !lightboxImg) return;
+
+            function openLightbox(src, alt) {
+                lightboxImg.src = src;
+                lightboxImg.alt = alt || '';
+                lightbox.classList.add('is-open');
+                lightbox.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('is-open');
+                lightbox.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            }
+
+            document.addEventListener('click', function(e) {
+                var item = e.target.closest('.masonry-item');
+                if (!item) return;
+                var img = item.querySelector('.img-container img');
+                if (img && img.src) {
+                    e.preventDefault();
+                    openLightbox(img.src, img.alt || '');
+                }
+            });
+
+            if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', function(e) {
+                if (e.target === lightbox) closeLightbox();
+            });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox();
+            });
+        })();
     </script>
     <script>
         (function(){var t=document.getElementById('nav-toggle'),m=document.getElementById('mobile-menu'),b=document.getElementById('mobile-backdrop'),o=document.getElementById('nav-icon-open'),c=document.getElementById('nav-icon-close');if(!t||!m)return;function open(){m.classList.remove('translate-x-full');m.classList.add('translate-x-0');if(b){b.classList.remove('opacity-0','pointer-events-none');b.classList.add('opacity-100','pointer-events-auto')}document.body.style.overflow='hidden';t.setAttribute('aria-expanded','true');t.setAttribute('aria-label','Close menu');if(o)o.classList.add('hidden');if(c)c.classList.remove('hidden')}function close(){m.classList.add('translate-x-full');m.classList.remove('translate-x-0');if(b){b.classList.add('opacity-0','pointer-events-none');b.classList.remove('opacity-100','pointer-events-auto')}document.body.style.overflow='';t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open menu');if(o)o.classList.remove('hidden');if(c)c.classList.add('hidden')}t.addEventListener('click',function(){m.classList.contains('translate-x-full')?open():close()});if(b)b.addEventListener('click',close);var cb=document.getElementById('nav-close-btn');if(cb)cb.addEventListener('click',close);m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close)});window.addEventListener('resize',function(){if(window.innerWidth>=768)close()})})();

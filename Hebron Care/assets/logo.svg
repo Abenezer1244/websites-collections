@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+  <!-- House silhouette: roof + body (dark emerald) -->
+  <path fill="#064e3b" d="M24 2L2 20v26h18V30h8v16h18V20L24 2z"/>
+  <!-- Window (dark emerald) -->
+  <rect x="36" y="14" width="6" height="6" rx="1" fill="#064e3b"/>
+  <!-- Heart (light emerald) -->
+  <path fill="#a7f3d0" d="M24 26c-2.8-1.8-5-4-5-6.2a2.6 2.6 0 0 1 5 0c0 2.2-2.2 4.4-5 6.2z"/>
+  <!-- Hand (dark emerald) -->
+  <path fill="#064e3b" d="M18 38c0-2 2.5-3.5 6-3.5s6 1.5 6 3.5v3H18v-3z"/>
+</svg>
