@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23022c22'/%3E%3Cpath fill='%23a7f3d0' d='M16 23.5c-4-2.5-6.5-4.9-6.5-8A3.5 3.5 0 0 1 16 13a3.5 3.5 0 0 1 6.5 2.5c0 3.1-2.5 5.5-6.5 8z'/%3E%3C/svg%3E">
 <title>Hebron Care Adult Family Home LLC #1 | Compassionate Senior Care in Everett, WA</title>
 <meta name="description" content="Hebron Care Adult Family Home LLC #1 provides a safe, nurturing, family-like environment with personalized care for seniors in Everett, WA. Licensed facility, 24/7 monitoring. Schedule a tour today.">
 <meta name="keywords" content="adult family home Everett, senior care Everett WA, assisted living Everett, memory care, Hebron Care, residential care, senior living">
@@ -59,8 +60,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;display=swap" rel="stylesheet">
 <style>
-body { font-family: 'Inter', sans-serif; }
-h1, h2, h3, h4, h5, h6, .serif { font-family: 'Playfair Display', serif; }
+/* Branding: consistent fonts site-wide */
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; line-height: 1.65; }
+h1, h2, h3, h4, h5, h6, .serif { font-family: 'Playfair Display', Georgia, serif; }
+.font-serif { font-family: 'Playfair Display', Georgia, serif !important; }
+nav, nav a { font-family: 'Playfair Display', Georgia, serif; }
+header:first-of-type a, header:first-of-type button { font-family: 'Playfair Display', Georgia, serif; }
+#faq summary, #faq h2 { font-family: 'Playfair Display', Georgia, serif; }
+p, .body-text { line-height: 1.7; }
+label, input, select, textarea { font-family: 'Inter', system-ui, sans-serif; }
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #10b981; /* emerald-500 */
+  outline-offset: 3px;
+}
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: #fafaf9; }
 ::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 4px; }
@@ -110,11 +124,17 @@ details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
   .masonry-item .img-container::after { display: none; }
   .group:hover .group-hover\:opacity-100 { opacity: 1; }
 }
+/* Larger text accessibility */
+body.text-larger { font-size: 1.0625rem; }
+body.text-larger .text-sm { font-size: 0.9375rem; }
+body.text-larger .text-lg { font-size: 1.125rem; }
+body.text-larger .text-xl { font-size: 1.25rem; }
+body.text-larger .text-2xl { font-size: 1.5rem; }
 </style></head>
 <body class="bg-[#FBF9F6] text-stone-800 antialiased selection:bg-emerald-100 selection:text-emerald-900 overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#FBF9F6]/95 backdrop-blur-md border-b border-stone-200/50 transition-all duration-300 safe-area-padding">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#FBF9F6]/95 backdrop-blur-md border-b border-stone-200/50 transition-all duration-300 safe-area-padding" role="banner">
         <div class="relative z-50 max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between bg-[#FBF9F6]/95">
             <a href="index.html" class="flex items-center gap-2 min-h-[44px] min-w-[44px] -m-2 p-2 md:m-0 md:p-0">
                 <div class="w-8 h-8 bg-emerald-900 rounded-full flex items-center justify-center text-white shrink-0">
@@ -129,7 +149,11 @@ details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
                 <a href="services.html" class="hover:text-emerald-900 transition-colors py-2">Services</a>
                 <a href="contact.html" class="hover:text-emerald-900 transition-colors py-2">Contact Us</a>
             </div>
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-3 md:gap-4">
+                <a href="tel:+14252255424" class="hidden md:inline-flex items-center gap-2 text-stone-600 hover:text-emerald-900 transition-colors py-2 text-base lg:text-lg font-normal min-h-[44px] items-center" aria-label="Call (425) 225-5424">
+                    <iconify-icon icon="solar:phone-calling-linear" width="20"></iconify-icon>
+                    (425) 225-5424
+                </a>
                 <a href="contact.html" class="hidden md:inline-flex bg-emerald-900 text-[#FBF9F6] px-5 py-2.5 rounded-full text-base font-normal hover:bg-emerald-800 transition-all hover:scale-[1.02] shadow-lg shadow-emerald-900/10 min-h-[44px] items-center">
                     Schedule a Tour
                 </a>
@@ -157,8 +181,23 @@ details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
         </div>
     </div>
 
+    <!-- Sticky CTA bar: appears after scrolling past hero (web + mobile) -->
+    <div id="sticky-cta" class="fixed left-0 right-0 z-40 bg-white/98 backdrop-blur-md border-b border-stone-200 shadow-lg transition-transform duration-300 ease-out -translate-y-full" style="top: 5rem;" aria-hidden="true">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+            <a href="contact.html" class="inline-flex items-center gap-2 bg-emerald-900 text-[#FBF9F6] px-5 py-2.5 rounded-full text-sm sm:text-base font-normal hover:bg-emerald-800 transition-colors min-h-[44px] justify-center">
+                Schedule a Tour
+                <iconify-icon icon="solar:arrow-right-linear" width="18"></iconify-icon>
+            </a>
+            <a href="tel:+14252255424" class="inline-flex items-center gap-2 text-emerald-900 font-normal px-5 py-2.5 rounded-full border border-emerald-900/20 hover:bg-emerald-50 transition-colors min-h-[44px] justify-center">
+                <iconify-icon icon="solar:phone-calling-linear" width="18"></iconify-icon>
+                (425) 225-5424
+            </a>
+        </div>
+    </div>
+
+    <main id="main-content" role="main" tabindex="-1" aria-label="Hebron Care home page">
     <!-- Hero Section -->
-    <header class="pt-28 sm:pt-32 pb-12 sm:pb-16 md:pt-40 md:pb-24 px-4 sm:px-6 overflow-hidden">
+    <header id="hero" class="pt-28 sm:pt-32 pb-12 sm:pb-16 md:pt-40 md:pb-24 px-4 sm:px-6 overflow-hidden">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div class="reveal">
                 <div class="inline-flex items-center gap-2 px-3 py-1 bg-emerald-100/50 text-emerald-900 rounded-full text-sm font-normal mb-6 border border-emerald-200/50">
@@ -194,11 +233,17 @@ details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
                         <iconify-icon icon="solar:users-group-two-rounded-linear" class="text-emerald-700" width="18"></iconify-icon> Experienced Staff
                     </div>
                 </div>
+                <p class="text-stone-500 text-sm font-normal mt-3">Licensed in Washington · Serving Everett &amp; Snohomish County</p>
             </div>
 
             <div class="relative h-[280px] sm:h-[360px] md:h-[420px] lg:h-[600px] reveal delay-200 order-first lg:order-none">
                 <div class="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl bg-stone-200">
-                    <img src="https://i.ibb.co/5XXcZ9GQ/36d354edd8bc5454dec3c721f38065be-uncropped-scaled-within-1344-1008.webp" alt="Caregiver holding hands with resident" class="w-full h-full object-cover object-center scale-105 hover:scale-100 transition-transform duration-1000 ease-out">
+                    <img src="https://i.ibb.co/5XXcZ9GQ/36d354edd8bc5454dec3c721f38065be-uncropped-scaled-within-1344-1008.webp"
+                         srcset="https://i.ibb.co/5XXcZ9GQ/36d354edd8bc5454dec3c721f38065be-uncropped-scaled-within-1344-1008.webp 1344w"
+                         sizes="(min-width: 1024px) 50vw, 100vw"
+                         decoding="async"
+                         alt="Caregiver holding hands with resident"
+                         class="w-full h-full object-cover object-center scale-105 hover:scale-100 transition-transform duration-1000 ease-out">
                     <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/40 via-transparent to-transparent"></div>
                 </div>
 
@@ -232,7 +277,7 @@ details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
     </header>
 
     <!-- Why Choose Section -->
-    <section id="why-choose" class="py-24 px-6 mx-2 md:mx-6 bg-white rounded-[3rem] shadow-sm border border-stone-100 relative overflow-hidden">
+    <section id="why-choose" class="py-24 px-6 mx-2 md:mx-6 bg-white rounded-[3rem] shadow-sm border border-stone-200/80 relative overflow-hidden">
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-30">
             <div class="absolute -top-[20%] -right-[10%] w-[600px] h-[600px] bg-stone-100 rounded-full blur-3xl"></div>
             <div class="absolute top-[40%] -left-[10%] w-[400px] h-[400px] bg-emerald-50 rounded-full blur-3xl"></div>
@@ -244,7 +289,7 @@ details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
             </h2>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-[#FBF9F6]/80 backdrop-blur p-10 rounded-3xl group hover:bg-[#FBF9F6] transition-colors reveal">
+                <div class="bg-[#FBF9F6]/80 backdrop-blur p-10 rounded-3xl group hover:bg-[#FBF9F6] transition-colors reveal shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25),0_0_0_1px_rgba(0,0,0,0.05)] hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3),0_0_0_1px_rgba(0,0,0,0.05)]">
                     <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 text-stone-600 shadow-sm group-hover:scale-110 transition-transform">
                         <iconify-icon icon="solar:home-linear" width="24"></iconify-icon>
                     </div>
@@ -252,7 +297,7 @@ details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
                     <p class="text-lg text-stone-600 leading-relaxed font-light">We offer a comfortable, residential house where residents feel like family, avoiding the overwhelming, institutional feel of large care facilities.</p>
                 </div>
 
-                <div class="bg-[#FBF9F6]/80 backdrop-blur p-10 rounded-3xl group hover:bg-[#FBF9F6] transition-colors reveal delay-100">
+                <div class="bg-[#FBF9F6]/80 backdrop-blur p-10 rounded-3xl group hover:bg-[#FBF9F6] transition-colors reveal delay-100 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25),0_0_0_1px_rgba(0,0,0,0.05)] hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3),0_0_0_1px_rgba(0,0,0,0.05)]">
                     <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 text-stone-600 shadow-sm group-hover:scale-110 transition-transform">
                         <iconify-icon icon="solar:user-hands-linear" width="24"></iconify-icon>
                     </div>
@@ -260,7 +305,7 @@ details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
                     <p class="text-lg text-stone-600 leading-relaxed font-light">With a low resident-to-caregiver ratio, we ensure prompt, highly personalized care and meaningful daily interactions for everyone.</p>
                 </div>
 
-                <div class="bg-[#FBF9F6]/80 backdrop-blur p-10 rounded-3xl group hover:bg-[#FBF9F6] transition-colors reveal delay-200">
+                <div class="bg-[#FBF9F6]/80 backdrop-blur p-10 rounded-3xl group hover:bg-[#FBF9F6] transition-colors reveal delay-200 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25),0_0_0_1px_rgba(0,0,0,0.05)] hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3),0_0_0_1px_rgba(0,0,0,0.05)]">
                     <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 text-stone-600 shadow-sm group-hover:scale-110 transition-transform">
                         <iconify-icon icon="solar:chef-hat-linear" width="24"></iconify-icon>
                     </div>
@@ -272,7 +317,7 @@ details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
     </section>
 
     <!-- Our Expertise Section -->
-    <section id="expertise" class="py-24 px-6">
+    <section id="expertise" class="py-24 px-6 bg-emerald-50/30 border-y border-stone-100">
         <div class="max-w-6xl mx-auto">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div class="reveal">
@@ -294,7 +339,7 @@ details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
                         </div>
                         <div class="flex items-start gap-4">
                             <div class="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-800 shrink-0">
-                                <iconify-icon icon="solar:wheelchair-linear" width="24"></iconify-icon>
+                                <iconify-icon icon="mdi:wheelchair-accessibility" width="24"></iconify-icon>
                             </div>
                             <div class="flex-1">
                                 <h4 class="text-xl font-normal text-emerald-950 tracking-tight mb-1">Mobility &amp; Daily Living</h4>
@@ -303,7 +348,7 @@ details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
                         </div>
                         <div class="flex items-start gap-4">
                             <div class="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-800 shrink-0">
-                                <iconify-icon icon="solar:brain-linear" width="24"></iconify-icon>
+                                <iconify-icon icon="mdi:brain" width="24"></iconify-icon>
                             </div>
                             <div class="flex-1">
                                 <h4 class="text-xl font-normal text-emerald-950 tracking-tight mb-1">Cognitive Support</h4>
@@ -314,7 +359,11 @@ details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
                 </div>
 
                 <div class="bg-white rounded-none md:rounded-3xl border-0 md:border border-stone-200 overflow-hidden shadow-xl reveal delay-100 relative h-full min-h-[400px] md:min-h-[500px] -mx-6 md:mx-0">
-                     <img src="https://i.ibb.co/gM9X7wp4/Blog-Company-News.png" alt="Blog Company News" class="opacity-90 w-full h-full object-cover object-center">
+                     <img src="https://i.ibb.co/gM9X7wp4/Blog-Company-News.png"
+                          loading="lazy"
+                          decoding="async"
+                          alt="Caregiver helping resident with mobility"
+                          class="opacity-90 w-full h-full object-cover object-center">
                      <div class="bg-white/95 border-stone-100 border-t pt-6 pr-6 pb-6 pl-6 absolute right-0 bottom-0 left-0 backdrop-blur-md">
                         <div class="font-normal text-emerald-950 mb-2">Also specializing in:</div>
                         <div class="flex flex-wrap gap-2">
@@ -330,7 +379,7 @@ details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
     </section>
 
     <!-- Testimonials (Gliding) -->
-    <section id="testimonials" class="py-24 bg-white border-y border-stone-200 overflow-hidden">
+    <section id="testimonials" class="py-24 bg-[#FBF9F6] border-y border-stone-200 overflow-hidden" role="region" aria-label="Family testimonials carousel">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16 reveal">
                  <h2 class="text-4xl font-normal text-emerald-950 tracking-tight mb-4">Words From Our Families</h2>
@@ -347,230 +396,244 @@ details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
 
         <div class="relative w-full">
             <!-- Fade Gradients -->
-            <div class="absolute inset-y-0 left-0 w-16 md:w-48 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-            <div class="absolute inset-y-0 right-0 w-16 md:w-48 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+            <div class="pointer-events-none absolute inset-y-0 left-0 w-16 md:w-48 bg-gradient-to-r from-white to-transparent z-20"></div>
+            <div class="pointer-events-none absolute inset-y-0 right-0 w-16 md:w-48 bg-gradient-to-l from-white to-transparent z-20"></div>
             
-            <!-- Marquee Track -->
-            <div class="animate-marquee gap-6 py-4 px-6">
-                <!-- Set 1 (15 Testimonials) -->
-                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+            <!-- Testimonials Track with Controls -->
+            <div id="testimonial-track" class="flex gap-6 py-4 px-6 overflow-x-auto scroll-smooth snap-x snap-mandatory" aria-live="off">
+                <!-- Set 1 (15 Testimonials) - first card is "active" style -->
+                <div class="testimonial-card w-[350px] shrink-0 bg-white p-8 rounded-3xl border-2 border-emerald-200 shadow-lg shadow-emerald-900/5 snap-start">
                     <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"Moving mom here was the best decision. The house is beautiful and the staff treats her like their own family."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">M</div>
-                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                        <div class="text-sm font-normal text-emerald-950">– Mary, daughter of resident</div>
                     </div>
                 </div>
-                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                <div class="testimonial-card w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm snap-start">
                     <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"The home-cooked meals are incredible. My father is eating better than he has in years and loves the dining area."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">D</div>
-                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                        <div class="text-sm font-normal text-emerald-950">– David, son of resident</div>
                     </div>
                 </div>
-                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                <div class="testimonial-card w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm snap-start">
                     <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"Hebron Care gave us peace of mind. Knowing someone is awake and watching out for him 24/7 is priceless."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">S</div>
-                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                        <div class="text-sm font-normal text-emerald-950">– Susan, daughter of resident</div>
                     </div>
                 </div>
-                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                <div class="testimonial-card w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm snap-start">
                     <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"The small number of residents means the care is incredibly personal. They know all of my aunt's quirks and preferences."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">K</div>
-                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                        <div class="text-sm font-normal text-emerald-950">– Karen, niece of resident</div>
                     </div>
                 </div>
-                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                <div class="testimonial-card w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm snap-start">
                     <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"We toured so many large facilities that felt cold. Hebron Care felt warm and inviting the moment we walked in."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">J</div>
-                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                        <div class="text-sm font-normal text-emerald-950">– James, son of resident</div>
                     </div>
                 </div>
-                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                <div class="testimonial-card w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm snap-start">
                     <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"Their dementia care is top-notch. They handle difficult days with such grace and professionalism."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">R</div>
-                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                        <div class="text-sm font-normal text-emerald-950">– Rita, daughter of resident</div>
                     </div>
                 </div>
-                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                <div class="testimonial-card w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm snap-start">
                     <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"The communication is excellent. I always know how my mother is doing and if there are any changes in her health."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">L</div>
-                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                        <div class="text-sm font-normal text-emerald-950">– Linda, daughter of resident</div>
                     </div>
                 </div>
-                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                <div class="testimonial-card w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm snap-start">
                     <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"It smells like a real home, looks like a real home, and feels like a real home. We are so grateful."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">T</div>
-                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                        <div class="text-sm font-normal text-emerald-950">– Theresa, daughter of resident</div>
                     </div>
                 </div>
-                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                <div class="testimonial-card w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm snap-start">
                     <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"They manage all his medications flawlessly, which was a huge stressor for me previously. Highly recommend."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">P</div>
-                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                        <div class="text-sm font-normal text-emerald-950">– Paul, son of resident</div>
                     </div>
                 </div>
-                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                <div class="testimonial-card w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm snap-start">
                     <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"The staff is always smiling. You can tell they genuinely care about the residents, not just treating it as a job."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">A</div>
-                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                        <div class="text-sm font-normal text-emerald-950">– Anne, daughter of resident</div>
                     </div>
                 </div>
-                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                <div class="testimonial-card w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm snap-start">
                     <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"My mom enjoys sitting on the patio and chatting with the other residents. It's a wonderful little community."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">E</div>
-                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                        <div class="text-sm font-normal text-emerald-950">– Ellen, daughter of resident</div>
                     </div>
                 </div>
-                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                <div class="testimonial-card w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm snap-start">
                     <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"Cleanliness is superb. Every time I visit unannounced, the house is immaculate and the residents look well cared for."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">B</div>
-                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                        <div class="text-sm font-normal text-emerald-950">– Barbara, daughter of resident</div>
                     </div>
                 </div>
-                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                <div class="testimonial-card w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm snap-start">
                     <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"They arranged a little birthday celebration for my dad. It's those small touches that mean the world to us."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">C</div>
-                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                        <div class="text-sm font-normal text-emerald-950">– Chris, son of resident</div>
                     </div>
                 </div>
-                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                <div class="testimonial-card w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm snap-start">
                     <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"I appreciate how they encourage independence while stepping in the moment help is needed. Perfect balance."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">V</div>
-                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                        <div class="text-sm font-normal text-emerald-950">– Valerie, daughter of resident</div>
                     </div>
                 </div>
-                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                <div class="testimonial-card w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm snap-start">
                     <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"A true blessing for our family. Hebron Care took the heavy weight off our shoulders."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">H</div>
-                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                        <div class="text-sm font-normal text-emerald-950">– Helen, daughter of resident</div>
                     </div>
                 </div>
 
                 <!-- Set 2 (Duplicated for seamless loop) -->
-                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                <div class="testimonial-card w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm snap-start">
                     <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"Moving mom here was the best decision. The house is beautiful and the staff treats her like their own family."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">M</div>
-                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                        <div class="text-sm font-normal text-emerald-950">– Mary, daughter of resident</div>
                     </div>
                 </div>
-                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                <div class="testimonial-card w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm snap-start">
                     <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"The home-cooked meals are incredible. My father is eating better than he has in years and loves the dining area."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">D</div>
-                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                        <div class="text-sm font-normal text-emerald-950">– David, son of resident</div>
                     </div>
                 </div>
-                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                <div class="testimonial-card w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm snap-start">
                     <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"Hebron Care gave us peace of mind. Knowing someone is awake and watching out for him 24/7 is priceless."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">S</div>
-                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                        <div class="text-sm font-normal text-emerald-950">– Susan, daughter of resident</div>
                     </div>
                 </div>
-                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                <div class="testimonial-card w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm snap-start">
                     <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"The small number of residents means the care is incredibly personal. They know all of my aunt's quirks and preferences."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">K</div>
-                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                        <div class="text-sm font-normal text-emerald-950">– Karen, niece of resident</div>
                     </div>
                 </div>
-                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                <div class="testimonial-card w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm snap-start">
                     <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"We toured so many large facilities that felt cold. Hebron Care felt warm and inviting the moment we walked in."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">J</div>
-                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                        <div class="text-sm font-normal text-emerald-950">– James, son of resident</div>
                     </div>
                 </div>
-                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                <div class="testimonial-card w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm snap-start">
                     <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"Their dementia care is top-notch. They handle difficult days with such grace and professionalism."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">R</div>
-                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                        <div class="text-sm font-normal text-emerald-950">– Rita, daughter of resident</div>
                     </div>
                 </div>
-                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                <div class="testimonial-card w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm snap-start">
                     <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"The communication is excellent. I always know how my mother is doing and if there are any changes in her health."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">L</div>
-                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                        <div class="text-sm font-normal text-emerald-950">– Linda, daughter of resident</div>
                     </div>
                 </div>
-                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                <div class="testimonial-card w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm snap-start">
                     <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"It smells like a real home, looks like a real home, and feels like a real home. We are so grateful."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">T</div>
-                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                        <div class="text-sm font-normal text-emerald-950">– Theresa, daughter of resident</div>
                     </div>
                 </div>
-                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                <div class="testimonial-card w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm snap-start">
                     <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"They manage all his medications flawlessly, which was a huge stressor for me previously. Highly recommend."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">P</div>
-                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                        <div class="text-sm font-normal text-emerald-950">– Paul, son of resident</div>
                     </div>
                 </div>
-                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                <div class="testimonial-card w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm snap-start">
                     <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"The staff is always smiling. You can tell they genuinely care about the residents, not just treating it as a job."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">A</div>
-                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                        <div class="text-sm font-normal text-emerald-950">– Anne, daughter of resident</div>
                     </div>
                 </div>
-                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                <div class="testimonial-card w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm snap-start">
                     <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"My mom enjoys sitting on the patio and chatting with the other residents. It's a wonderful little community."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">E</div>
-                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                        <div class="text-sm font-normal text-emerald-950">– Ellen, daughter of resident</div>
                     </div>
                 </div>
-                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                <div class="testimonial-card w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm snap-start">
                     <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"Cleanliness is superb. Every time I visit unannounced, the house is immaculate and the residents look well cared for."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">B</div>
-                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                        <div class="text-sm font-normal text-emerald-950">– Barbara, daughter of resident</div>
                     </div>
                 </div>
-                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                <div class="testimonial-card w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm snap-start">
                     <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"They arranged a little birthday celebration for my dad. It's those small touches that mean the world to us."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">C</div>
-                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                        <div class="text-sm font-normal text-emerald-950">– Chris, son of resident</div>
                     </div>
                 </div>
-                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                <div class="testimonial-card w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm snap-start">
                     <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"I appreciate how they encourage independence while stepping in the moment help is needed. Perfect balance."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">V</div>
-                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                        <div class="text-sm font-normal text-emerald-950">– Valerie, daughter of resident</div>
                     </div>
                 </div>
-                <div class="w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm">
+                <div class="testimonial-card w-[350px] shrink-0 bg-[#FBF9F6] p-8 rounded-3xl border border-stone-100 shadow-sm snap-start">
                     <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"A true blessing for our family. Hebron Care took the heavy weight off our shoulders."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 font-medium font-serif">H</div>
-                        <div class="text-sm font-normal text-emerald-950">Family Member</div>
+                        <div class="text-sm font-normal text-emerald-950">– Helen, daughter of resident</div>
                     </div>
                 </div>
             </div>
+
+            <!-- Live region for screen readers -->
+            <div id="testimonial-live" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+            <!-- Arrow controls -->
+            <div class="mt-6 flex items-center justify-center gap-4 px-6">
+                <button type="button" class="testimonial-arrow rounded-full border border-stone-300 bg-white text-emerald-900 min-w-[48px] min-h-[48px] w-12 h-12 flex items-center justify-center shadow-sm hover:bg-emerald-50 hover:border-emerald-600 transition-colors" data-dir="prev" aria-label="Previous testimonials">
+                    <iconify-icon icon="solar:alt-arrow-left-linear" width="22"></iconify-icon>
+                </button>
+                <button type="button" class="testimonial-arrow rounded-full border border-stone-300 bg-white text-emerald-900 min-w-[48px] min-h-[48px] w-12 h-12 flex items-center justify-center shadow-sm hover:bg-emerald-50 hover:border-emerald-600 transition-colors" data-dir="next" aria-label="Next testimonials">
+                    <iconify-icon icon="solar:alt-arrow-right-linear" width="22"></iconify-icon>
+                </button>
+            </div>
+            <p id="testimonial-swipe-hint" class="text-center text-stone-400 text-sm font-light mt-2 md:mt-3">Swipe or use arrows for more</p>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section id="faq" class="py-24 px-6 mx-2 md:mx-6 bg-gradient-to-br from-emerald-50 to-[#FBF9F6] rounded-[3rem] border border-stone-100">
+    <section id="faq" class="py-24 px-6 mx-2 md:mx-6 bg-gradient-to-br from-emerald-50/80 to-[#FBF9F6] rounded-[3rem] border border-stone-200/80">
         <div class="max-w-3xl mx-auto reveal">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-normal text-emerald-950 tracking-tight mb-4">Frequently Asked Questions</h2>
@@ -579,7 +642,7 @@ details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
 
             <div class="space-y-4">
                 <details class="group bg-white rounded-2xl border border-stone-200 shadow-sm">
-                    <summary class="flex justify-between items-center font-normal cursor-pointer p-6 text-xl tracking-tight text-emerald-950">
+                    <summary class="flex justify-between items-center font-normal cursor-pointer p-6 text-xl tracking-tight text-emerald-950 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-emerald-500/15">
                         What is the staff-to-resident ratio?
                         <span class="transition-transform duration-300 group-open:rotate-45 text-emerald-600">
                             <iconify-icon icon="solar:add-circle-linear" width="24"></iconify-icon>
@@ -591,7 +654,7 @@ details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
                 </details>
 
                 <details class="group bg-white rounded-2xl border border-stone-200 shadow-sm">
-                    <summary class="flex justify-between items-center font-normal cursor-pointer p-6 text-xl tracking-tight text-emerald-950">
+                    <summary class="flex justify-between items-center font-normal cursor-pointer p-6 text-xl tracking-tight text-emerald-950 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-emerald-500/15">
                         Are family visits allowed at any time?
                         <span class="transition-transform duration-300 group-open:rotate-45 text-emerald-600">
                             <iconify-icon icon="solar:add-circle-linear" width="24"></iconify-icon>
@@ -603,7 +666,7 @@ details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
                 </details>
 
                 <details class="group bg-white rounded-2xl border border-stone-200 shadow-sm">
-                    <summary class="flex justify-between items-center font-normal cursor-pointer p-6 text-xl tracking-tight text-emerald-950">
+                    <summary class="flex justify-between items-center font-normal cursor-pointer p-6 text-xl tracking-tight text-emerald-950 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-emerald-500/15">
                         How do you handle medical emergencies?
                         <span class="transition-transform duration-300 group-open:rotate-45 text-emerald-600">
                             <iconify-icon icon="solar:add-circle-linear" width="24"></iconify-icon>
@@ -615,7 +678,7 @@ details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
                 </details>
 
                 <details class="group bg-white rounded-2xl border border-stone-200 shadow-sm">
-                    <summary class="flex justify-between items-center font-normal cursor-pointer p-6 text-xl tracking-tight text-emerald-950">
+                    <summary class="flex justify-between items-center font-normal cursor-pointer p-6 text-xl tracking-tight text-emerald-950 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-emerald-500/15">
                         Do you accommodate special diets?
                         <span class="transition-transform duration-300 group-open:rotate-45 text-emerald-600">
                             <iconify-icon icon="solar:add-circle-linear" width="24"></iconify-icon>
@@ -627,7 +690,7 @@ details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
                 </details>
 
                 <details class="group bg-white rounded-2xl border border-stone-200 shadow-sm">
-                    <summary class="flex justify-between items-center font-normal cursor-pointer p-6 text-xl tracking-tight text-emerald-950">
+                    <summary class="flex justify-between items-center font-normal cursor-pointer p-6 text-xl tracking-tight text-emerald-950 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-emerald-500/15">
                         What daily activities are provided?
                         <span class="transition-transform duration-300 group-open:rotate-45 text-emerald-600">
                             <iconify-icon icon="solar:add-circle-linear" width="24"></iconify-icon>
@@ -691,8 +754,10 @@ details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
-    <footer class="py-12 px-6 border-t border-stone-200 bg-white">
+    <footer class="py-12 px-6 border-t border-stone-200 bg-white" role="contentinfo">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
             <div class="text-center md:text-left">
                 <div class="flex items-center gap-2 justify-center md:justify-start mb-2">
@@ -701,11 +766,13 @@ details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
                 </div>
                 <p class="text-stone-500 text-sm font-light">Providing compassionate, residential care for seniors.</p>
                 <div class="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-1 mt-4 text-sm">
+                    <a href="contact.html" class="font-medium text-emerald-800 hover:text-emerald-900 transition-colors">Schedule a Tour</a>
                     <a href="index.html" class="text-stone-500 hover:text-emerald-900 transition-colors">Home</a>
                     <a href="about-us.html" class="text-stone-500 hover:text-emerald-900 transition-colors">About Us</a>
                     <a href="gallery.html" class="text-stone-500 hover:text-emerald-900 transition-colors">Gallery</a>
                     <a href="services.html" class="text-stone-500 hover:text-emerald-900 transition-colors">Services</a>
                     <a href="contact.html" class="text-stone-500 hover:text-emerald-900 transition-colors">Contact Us</a>
+                    <a href="privacy.html" class="text-stone-500 hover:text-emerald-900 transition-colors">Privacy Policy</a>
                 </div>
             </div>
             
@@ -716,8 +783,8 @@ details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
             </div>
         </div>
         <div class="max-w-7xl mx-auto mt-8 pt-8 border-t border-stone-100 text-center text-stone-400 text-xs font-light space-y-1">
-            <p><a href="https://www.google.com/maps/place/11320+27th+Ave+SE,+Everett,+WA+98208" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-900 transition-colors">Find us on Google</a></p>
-            <p>© 2024 Hebron Care Adult Family Home LLC #1. All rights reserved.</p>
+            <p>© 2026 Hebron Care Adult Family Home LLC #1. All rights reserved.</p>
+            <p class="mt-2"><button type="button" id="larger-text-btn" class="text-stone-500 hover:text-emerald-700 transition-colors underline underline-offset-2" aria-pressed="false">Larger text</button></p>
         </div>
     </footer>
 
@@ -739,6 +806,25 @@ details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
         document.querySelectorAll('.reveal').forEach(el => {
             observer.observe(el);
         });
+
+        // Sticky CTA bar: show when hero scrolls out of view (web + mobile)
+        (function() {
+            var hero = document.getElementById('hero');
+            var stickyCta = document.getElementById('sticky-cta');
+            if (!hero || !stickyCta) return;
+            var io = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        stickyCta.classList.add('-translate-y-full');
+                        stickyCta.setAttribute('aria-hidden', 'true');
+                    } else {
+                        stickyCta.classList.remove('-translate-y-full');
+                        stickyCta.setAttribute('aria-hidden', 'false');
+                    }
+                });
+            }, { root: null, rootMargin: '0px', threshold: 0 });
+            io.observe(hero);
+        })();
 
         (function() {
             var toggle = document.getElementById('nav-toggle');
@@ -780,6 +866,95 @@ details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
             backdrop.addEventListener('click', closeMenu);
             menu.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', closeMenu); });
             window.addEventListener('resize', function() { if (window.innerWidth >= 768) closeMenu(); });
+        })();
+
+        // Testimonials horizontal scroll controls + active card highlight
+        (function () {
+            var container = document.getElementById('testimonial-track');
+            if (!container) return;
+
+            var arrows = document.querySelectorAll('.testimonial-arrow');
+            var cards = Array.prototype.slice.call(container.querySelectorAll('.testimonial-card'));
+            var liveRegion = document.getElementById('testimonial-live');
+
+            function updateActiveCard() {
+                if (!cards.length) return;
+                var containerRect = container.getBoundingClientRect();
+                var containerCenter = containerRect.left + containerRect.width / 2;
+                var closestCard = null;
+                var closestDistance = Infinity;
+
+                cards.forEach(function (card) {
+                    var rect = card.getBoundingClientRect();
+                    var cardCenter = rect.left + rect.width / 2;
+                    var distance = Math.abs(cardCenter - containerCenter);
+                    if (distance < closestDistance) {
+                        closestDistance = distance;
+                        closestCard = card;
+                    }
+                });
+
+                cards.forEach(function (card) {
+                    card.classList.remove('ring-2', 'ring-emerald-300', 'shadow-lg', 'bg-white');
+                });
+                if (closestCard) {
+                    closestCard.classList.add('ring-2', 'ring-emerald-300', 'shadow-lg', 'bg-white');
+                    if (liveRegion) {
+                        var quote = closestCard.querySelector('p');
+                        if (quote && quote.textContent) {
+                            liveRegion.textContent = 'Testimonial: ' + quote.textContent.trim();
+                        }
+                    }
+                }
+            }
+
+            arrows.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    var dir = this.getAttribute('data-dir') === 'next' ? 1 : -1;
+                    var amount = container.clientWidth * 0.9;
+                    container.scrollBy({ left: dir * amount, behavior: 'smooth' });
+                    setTimeout(updateActiveCard, 400);
+                });
+            });
+
+            container.addEventListener('scroll', function () {
+                window.requestAnimationFrame(updateActiveCard);
+            });
+
+            // Initialize on load
+            updateActiveCard();
+
+            // Hide "Swipe or use arrows" hint after first scroll or after 5s
+            var swipeHint = document.getElementById('testimonial-swipe-hint');
+            if (swipeHint) {
+                var hintHidden = false;
+                function hideHint() {
+                    if (hintHidden) return;
+                    hintHidden = true;
+                    swipeHint.classList.add('opacity-0', 'transition-opacity', 'duration-300');
+                    setTimeout(function() { swipeHint.style.display = 'none'; }, 300);
+                }
+                container.addEventListener('scroll', hideHint, { once: true });
+                setTimeout(hideHint, 5000);
+            }
+        })();
+
+        // Larger text toggle (persists in localStorage)
+        (function() {
+            var btn = document.getElementById('larger-text-btn');
+            if (!btn) return;
+            var key = 'hebroncare-larger-text';
+            if (localStorage.getItem(key) === '1') {
+                document.body.classList.add('text-larger');
+                btn.setAttribute('aria-pressed', 'true');
+                btn.textContent = 'Default text';
+            }
+            btn.addEventListener('click', function() {
+                var on = document.body.classList.toggle('text-larger');
+                btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+                btn.textContent = on ? 'Default text' : 'Larger text';
+                localStorage.setItem(key, on ? '1' : '0');
+            });
         })();
     </script>
 

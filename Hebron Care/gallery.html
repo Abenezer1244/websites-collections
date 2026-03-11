@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23022c22'/%3E%3Cpath fill='%23a7f3d0' d='M16 23.5c-4-2.5-6.5-4.9-6.5-8A3.5 3.5 0 0 1 16 13a3.5 3.5 0 0 1 6.5 2.5c0 3.1-2.5 5.5-6.5 8z'/%3E%3C/svg%3E">
 <title>Gallery | Hebron Care Adult Family Home LLC #1 - Virtual Tour | Everett, WA</title>
 <meta name="description" content="Take a virtual tour of Hebron Care. Explore our beautiful, comfortable, and safe environment designed for senior living in Everett, WA.">
 <meta name="keywords" content="Hebron Care gallery, adult family home photos Everett, senior living facility Everett WA, care home tour">
@@ -18,8 +19,20 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;display=swap" rel="stylesheet">
 <style>
-body { font-family: 'Inter', sans-serif; }
-h1, h2, h3, h4, h5, h6, .serif { font-family: 'Playfair Display', serif; }
+/* Branding: consistent fonts site-wide */
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; line-height: 1.65; }
+h1, h2, h3, h4, h5, h6, .serif { font-family: 'Playfair Display', Georgia, serif; }
+.font-serif { font-family: 'Playfair Display', Georgia, serif !important; }
+nav, nav a { font-family: 'Playfair Display', Georgia, serif; }
+header:first-of-type a, header:first-of-type button { font-family: 'Playfair Display', Georgia, serif; }
+p, .body-text { line-height: 1.7; }
+label, input, select, textarea { font-family: 'Inter', system-ui, sans-serif; }
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #10b981;
+  outline-offset: 3px;
+}
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: #fafaf9; }
 ::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 4px; }
@@ -79,11 +92,16 @@ a, button { touch-action: manipulation; }
   .masonry-item .img-container::after { display: none; }
   .masonry-item:active .img-container + [class*="absolute"] { opacity: 1; }
 }
+body.text-larger { font-size: 1.0625rem; }
+body.text-larger .text-sm { font-size: 0.9375rem; }
+body.text-larger .text-lg { font-size: 1.125rem; }
+body.text-larger .text-xl { font-size: 1.25rem; }
+body.text-larger .text-2xl { font-size: 1.5rem; }
 </style></head>
 <body class="bg-[#FBF9F6] text-stone-800 antialiased selection:bg-emerald-100 selection:text-emerald-900 overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#FBF9F6]/95 backdrop-blur-md border-b border-stone-200/50 transition-all duration-300">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#FBF9F6]/95 backdrop-blur-md border-b border-stone-200/50 transition-all duration-300" role="banner">
         <div class="relative z-50 max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between bg-[#FBF9F6]/95">
             <a href="index.html" class="flex items-center gap-2 min-h-[44px] min-w-[44px] -m-2 p-2 md:m-0 md:p-0">
                 <div class="w-8 h-8 bg-emerald-900 rounded-full flex items-center justify-center text-white shrink-0">
@@ -98,7 +116,11 @@ a, button { touch-action: manipulation; }
                 <a href="services.html" class="hover:text-emerald-900 transition-colors py-2">Services</a>
                 <a href="contact.html" class="hover:text-emerald-900 transition-colors py-2">Contact Us</a>
             </div>
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-3 md:gap-4">
+                <a href="tel:+14252255424" class="hidden md:inline-flex items-center gap-2 text-stone-600 hover:text-emerald-900 transition-colors py-2 text-base lg:text-lg font-normal min-h-[44px] items-center" aria-label="Call (425) 225-5424">
+                    <iconify-icon icon="solar:phone-calling-linear" width="20"></iconify-icon>
+                    (425) 225-5424
+                </a>
                 <a href="contact.html" class="hidden md:inline-flex bg-emerald-900 text-[#FBF9F6] px-5 py-2.5 rounded-full text-base font-normal hover:bg-emerald-800 transition-all hover:scale-[1.02] shadow-lg shadow-emerald-900/10 min-h-[44px] items-center">
                     Schedule a Tour
                 </a>
@@ -125,6 +147,7 @@ a, button { touch-action: manipulation; }
         </div>
     </div>
 
+    <main id="main-content" role="main" tabindex="-1" aria-label="Hebron Care gallery">
     <!-- Hero Section -->
     <header class="pt-28 sm:pt-32 pb-14 sm:pb-20 px-4 sm:px-6 relative overflow-hidden flex flex-col items-center text-center border-b border-stone-200/50">
         <!-- Decorative Ambient Glows -->
@@ -152,7 +175,7 @@ a, button { touch-action: manipulation; }
             <!-- Image 1 -->
             <div class="masonry-item anim-type-1 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/Kc8t7jX9/0ddbadba006a773a415a16a2d814da35-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care home" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/Kc8t7jX9/0ddbadba006a773a415a16a2d814da35-uncropped-scaled-within-1344-1008.webp" loading="lazy" decoding="async" alt="Hebron Care home" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -163,7 +186,7 @@ a, button { touch-action: manipulation; }
             <!-- Image 2 -->
             <div class="masonry-item anim-type-3 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/SXHNtVbj/1-1.webp" alt="Hebron Care" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/SXHNtVbj/1-1.webp" loading="lazy" decoding="async" alt="Caregiver supporting resident at table" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -174,7 +197,7 @@ a, button { touch-action: manipulation; }
             <!-- Image 3 -->
             <div class="masonry-item anim-type-2 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/Jw886v9n/1.webp" alt="Hebron Care" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/Jw886v9n/1.webp" loading="lazy" decoding="async" alt="Resident and caregiver walking together outdoors" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -185,7 +208,7 @@ a, button { touch-action: manipulation; }
             <!-- Image 4 -->
             <div class="masonry-item anim-type-4 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/s969MGyd/1c3c84141a33e0cced2283b645658d87-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/s969MGyd/1c3c84141a33e0cced2283b645658d87-uncropped-scaled-within-1344-1008.webp" loading="lazy" decoding="async" alt="Kitchen and dining space with seating" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -196,7 +219,7 @@ a, button { touch-action: manipulation; }
             <!-- Image 5 -->
             <div class="masonry-item anim-type-1 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/cKMgrBgP/3ef7a64d0ed08504da4b3024d11ed8c0-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/cKMgrBgP/3ef7a64d0ed08504da4b3024d11ed8c0-uncropped-scaled-within-1344-1008.webp" loading="lazy" decoding="async" alt="Outdoor patio with dining table" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -207,7 +230,7 @@ a, button { touch-action: manipulation; }
             <!-- Image 6 -->
             <div class="masonry-item anim-type-3 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/DDPqq0SP/7afa51fe0c3e318f09fe6b0cb799ca04-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/DDPqq0SP/7afa51fe0c3e318f09fe6b0cb799ca04-uncropped-scaled-within-1344-1008.webp" loading="lazy" decoding="async" alt="Living room with comfortable seating" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -218,7 +241,7 @@ a, button { touch-action: manipulation; }
             <!-- Image 7 -->
             <div class="masonry-item anim-type-2 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/prndgr1y/7c6e8e85eebffa55d2bdcdbae9877f05-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/prndgr1y/7c6e8e85eebffa55d2bdcdbae9877f05-uncropped-scaled-within-1344-1008.webp" loading="lazy" decoding="async" alt="Dining area with large window" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -229,7 +252,7 @@ a, button { touch-action: manipulation; }
             <!-- Image 8 -->
             <div class="masonry-item anim-type-4 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/JwyWYTrd/7eba510eb53b95c3539a3274b10a1e87-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/JwyWYTrd/7eba510eb53b95c3539a3274b10a1e87-uncropped-scaled-within-1344-1008.webp" alt="Open concept kitchen and lounge" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -240,7 +263,7 @@ a, button { touch-action: manipulation; }
             <!-- Image 9 -->
             <div class="masonry-item anim-type-1 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/VcB2C1j6/9c4c1db4ce6c4159633f27fd9259a39e-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/VcB2C1j6/9c4c1db4ce6c4159633f27fd9259a39e-uncropped-scaled-within-1344-1008.webp" alt="Garden and lawn outside the home" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -251,7 +274,7 @@ a, button { touch-action: manipulation; }
             <!-- Image 10 -->
             <div class="masonry-item anim-type-3 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/7xwZXtZ7/9ee9b50d5a03c530707b40ae10e1e5fd-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/7xwZXtZ7/9ee9b50d5a03c530707b40ae10e1e5fd-uncropped-scaled-within-1344-1008.webp" alt="Driveway and front porch view" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -262,7 +285,7 @@ a, button { touch-action: manipulation; }
             <!-- Image 11 -->
             <div class="masonry-item anim-type-2 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/j95N77wd/25ff525ad894d80b71ac19f0f87ebf1a-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/j95N77wd/25ff525ad894d80b71ac19f0f87ebf1a-uncropped-scaled-within-1344-1008.webp" alt="Backyard patio seating area" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -273,7 +296,7 @@ a, button { touch-action: manipulation; }
             <!-- Image 12 -->
             <div class="masonry-item anim-type-4 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/5XXcZ9GQ/36d354edd8bc5454dec3c721f38065be-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/5XXcZ9GQ/36d354edd8bc5454dec3c721f38065be-uncropped-scaled-within-1344-1008.webp" alt="Front entry and driveway of Hebron Care home" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -328,7 +351,7 @@ a, button { touch-action: manipulation; }
             <!-- Image 17 -->
             <div class="masonry-item anim-type-1 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/6JVy48L6/0664c71c16af7db24b96ead62f983742-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/6JVy48L6/0664c71c16af7db24b96ead62f983742-uncropped-scaled-within-1344-1008.webp" alt="Hallway and interior corridor" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -339,7 +362,7 @@ a, button { touch-action: manipulation; }
             <!-- Image 18 -->
             <div class="masonry-item anim-type-3 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/rKSNFgxs/9980a06e3da7384cfb7990154b6e0fff-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/rKSNFgxs/9980a06e3da7384cfb7990154b6e0fff-uncropped-scaled-within-1344-1008.webp" alt="Cozy seating nook with armchairs" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -350,7 +373,7 @@ a, button { touch-action: manipulation; }
             <!-- Image 19 -->
             <div class="masonry-item anim-type-2 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/R4zqt1Qv/35148c286add27d447b3f47de8d63e36-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/R4zqt1Qv/35148c286add27d447b3f47de8d63e36-uncropped-scaled-within-1344-1008.webp" alt="Exterior of Hebron Care home with landscaping" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -361,7 +384,7 @@ a, button { touch-action: manipulation; }
             <!-- Image 20 -->
             <div class="masonry-item anim-type-4 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/7N6MRysd/229071-tiny.jpg" alt="Hebron Care" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/7N6MRysd/229071-tiny.jpg" alt="Seating area looking toward kitchen" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -372,7 +395,7 @@ a, button { touch-action: manipulation; }
             <!-- Image 21 -->
             <div class="masonry-item anim-type-1 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/FqkykfVp/a75018ea2db14ad6a04df57fc1851daa-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/FqkykfVp/a75018ea2db14ad6a04df57fc1851daa-uncropped-scaled-within-1344-1008.webp" alt="Covered patio and outdoor dining area" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -383,7 +406,7 @@ a, button { touch-action: manipulation; }
             <!-- Image 22 -->
             <div class="masonry-item anim-type-3 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/kVWkpWMy/bb05900f6d09d9a45e229bb4b123d884-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/kVWkpWMy/bb05900f6d09d9a45e229bb4b123d884-uncropped-scaled-within-1344-1008.webp" alt="Tree-lined yard surrounding the home" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -394,7 +417,7 @@ a, button { touch-action: manipulation; }
             <!-- Image 23 -->
             <div class="masonry-item anim-type-2 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/gM9X7wp4/Blog-Company-News.png" alt="Hebron Care" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/gM9X7wp4/Blog-Company-News.png" alt="Caregiver helping resident with mobility" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -405,7 +428,7 @@ a, button { touch-action: manipulation; }
             <!-- Image 24 -->
             <div class="masonry-item anim-type-4 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/4ZWVCtKm/c0ac88a48a0d4319319a25fc8be9071d-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/4ZWVCtKm/c0ac88a48a0d4319319a25fc8be9071d-uncropped-scaled-within-1344-1008.webp" alt="Landscape and trees beside the house" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -416,7 +439,7 @@ a, button { touch-action: manipulation; }
             <!-- Image 25 -->
             <div class="masonry-item anim-type-1 break-inside-avoid relative group rounded-[2rem] overflow-hidden bg-stone-200 cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500">
                 <div class="img-container w-full h-full relative">
-                    <img src="https://i.ibb.co/8D5hV51C/c009d933140daa0498fb9471134fe02a-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <img src="https://i.ibb.co/8D5hV51C/c009d933140daa0498fb9471134fe02a-uncropped-scaled-within-1344-1008.webp" alt="Side view of home with driveway" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110">
                     <div class="absolute inset-0 bg-emerald-950/0 group-hover:bg-emerald-950/20 transition-colors duration-500 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-emerald-900 shadow-lg">
                             <iconify-icon icon="solar:maximize-linear" width="24"></iconify-icon>
@@ -428,8 +451,10 @@ a, button { touch-action: manipulation; }
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
-    <footer class="py-12 px-6 border-t border-stone-200 bg-white">
+    <footer class="py-12 px-6 border-t border-stone-200 bg-white" role="contentinfo">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
             <div class="text-center md:text-left">
                 <div class="flex items-center gap-2 justify-center md:justify-start mb-2">
@@ -438,11 +463,13 @@ a, button { touch-action: manipulation; }
                 </div>
                 <p class="text-stone-500 text-sm font-light">Providing compassionate, residential care for seniors.</p>
                 <div class="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-1 mt-4 text-sm">
+                    <a href="contact.html" class="font-medium text-emerald-800 hover:text-emerald-900 transition-colors">Schedule a Tour</a>
                     <a href="index.html" class="text-stone-500 hover:text-emerald-900 transition-colors">Home</a>
                     <a href="about-us.html" class="text-stone-500 hover:text-emerald-900 transition-colors">About Us</a>
                     <a href="gallery.html" class="text-stone-500 hover:text-emerald-900 transition-colors">Gallery</a>
                     <a href="services.html" class="text-stone-500 hover:text-emerald-900 transition-colors">Services</a>
                     <a href="contact.html" class="text-stone-500 hover:text-emerald-900 transition-colors">Contact Us</a>
+                    <a href="privacy.html" class="text-stone-500 hover:text-emerald-900 transition-colors">Privacy Policy</a>
                 </div>
             </div>
             
@@ -453,8 +480,8 @@ a, button { touch-action: manipulation; }
             </div>
         </div>
         <div class="max-w-7xl mx-auto mt-8 pt-8 border-t border-stone-100 text-center text-stone-400 text-xs font-light space-y-1">
-            <p><a href="https://www.google.com/maps/place/11320+27th+Ave+SE,+Everett,+WA+98208" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-900 transition-colors">Find us on Google</a></p>
-            <p>© 2024 Hebron Care Adult Family Home LLC #1. All rights reserved.</p>
+            <p>© 2026 Hebron Care Adult Family Home LLC #1. All rights reserved.</p>
+            <p class="mt-2"><button type="button" id="larger-text-btn" class="text-stone-500 hover:text-emerald-700 transition-colors underline underline-offset-2" aria-pressed="false">Larger text</button></p>
         </div>
     </footer>
 
@@ -512,5 +539,6 @@ a, button { touch-action: manipulation; }
     <script>
         (function(){var t=document.getElementById('nav-toggle'),m=document.getElementById('mobile-menu'),b=document.getElementById('mobile-backdrop'),o=document.getElementById('nav-icon-open'),c=document.getElementById('nav-icon-close');if(!t||!m)return;function open(){m.classList.remove('translate-x-full');m.classList.add('translate-x-0');if(b){b.classList.remove('opacity-0','pointer-events-none');b.classList.add('opacity-100','pointer-events-auto')}document.body.style.overflow='hidden';t.setAttribute('aria-expanded','true');t.setAttribute('aria-label','Close menu');if(o)o.classList.add('hidden');if(c)c.classList.remove('hidden')}function close(){m.classList.add('translate-x-full');m.classList.remove('translate-x-0');if(b){b.classList.add('opacity-0','pointer-events-none');b.classList.remove('opacity-100','pointer-events-auto')}document.body.style.overflow='';t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open menu');if(o)o.classList.remove('hidden');if(c)c.classList.add('hidden')}t.addEventListener('click',function(){m.classList.contains('translate-x-full')?open():close()});if(b)b.addEventListener('click',close);var cb=document.getElementById('nav-close-btn');if(cb)cb.addEventListener('click',close);m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close)});window.addEventListener('resize',function(){if(window.innerWidth>=768)close()})})();
     </script>
+    <script>(function(){var btn=document.getElementById('larger-text-btn');if(!btn)return;var key='hebroncare-larger-text';if(localStorage.getItem(key)==='1'){document.body.classList.add('text-larger');btn.setAttribute('aria-pressed','true');btn.textContent='Default text';}btn.addEventListener('click',function(){var on=document.body.classList.toggle('text-larger');btn.setAttribute('aria-pressed',on?'true':'false');btn.textContent=on?'Default text':'Larger text';localStorage.setItem(key,on?'1':'0');});})();</script>
 
 </body></html>
