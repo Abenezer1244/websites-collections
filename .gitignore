@@ -1,0 +1,35 @@
+# Playwright / MCP
+**/.playwright-mcp/
+playwright-report/
+test-results/
+
+# Dependencies
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Env and secrets
+.env
+.env.local
+.env.*.local
+*.pem
+
+# Hebron#3 generated screenshots
+Hebron#3/*.png
+
+# Logs and temp
+*.log
+npm-debug.log*
+.cache/
+tmp/
+temp/
