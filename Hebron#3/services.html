@@ -55,28 +55,31 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     <a href="#main" class="skip-link">Skip to main content</a>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 px-6 py-4 bg-[#2D2A26]/95 backdrop-blur-md border-b border-[#2D2A26]/20 shadow-sm transition-all duration-300 serif">
-        <div class="max-w-screen-xl mx-auto flex justify-between items-center">
-            <a href="/" class="flex items-center gap-2 text-[#F5F2EB] z-50 relative hover:text-white transition-colors" aria-label="Hebron Care - Home" title="Hebron Care">
+    <nav class="fixed top-0 w-full z-50 px-4 md:px-6 pt-4 pb-3 bg-transparent backdrop-blur-md transition-all duration-300 serif">
+        <div class="max-w-screen-xl mx-auto flex items-center justify-between gap-4">
+            <a href="/" class="flex items-center gap-2 text-clay z-50 relative hover:text-[#2D2A26] transition-colors" aria-label="Hebron Care - Home" title="Hebron Care">
                 <img src="https://i.ibb.co/CxnYYN2/Untitled-design-4-Picsart-Background-Remover.png" alt="Hebron Care" class="h-8 w-auto" width="32" height="32">
-                <span class="text-xl tracking-tight font-medium">Hebron Care</span>
+                <span class="text-2xl md:text-3xl tracking-tight font-medium">Hebron Care</span>
             </a>
-            
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center gap-16">
-                <a href="/about-us/" class="text-base font-normal text-[#F5F2EB]/90 hover:text-white transition-colors">About Us</a>
-                <a href="/services/" class="text-base font-medium text-white border-b-2 border-white/90 pb-0.5 transition-colors">Services</a>
-                <a href="/" class="text-xl font-normal text-[#F5F2EB]/90 hover:text-white transition-colors">Home</a>
-                <a href="/gallery/" class="text-base font-normal text-[#F5F2EB]/90 hover:text-white transition-colors">Gallery</a>
-                <a href="/contact/" class="text-base font-normal text-[#F5F2EB]/90 hover:text-white transition-colors">Contact</a>
+
+            <!-- Desktop Menu - pill style -->
+            <div class="hidden md:flex flex-1 justify-center">
+                <div class="inline-flex items-center gap-16 px-14 py-2 rounded-full bg-[#2D2A26]/95 border border-white/10 shadow-lg shadow-black/30">
+                    <a href="/about-us/" class="text-sm md:text-base font-normal text-white/75 hover:text-white transition-colors">About Us</a>
+                    <a href="/services/" class="text-sm md:text-base font-medium text-[#2D2A26] bg-white px-4 py-1.5 rounded-full shadow-sm hover:bg-white hover:text-[#2D2A26] transition-colors">Services</a>
+                    <a href="/" class="text-sm md:text-base font-normal text-white/75 hover:text-white transition-colors">Home</a>
+                    <a href="/gallery/" class="text-sm md:text-base font-normal text-white/75 hover:text-white transition-colors">Gallery</a>
+                    <a href="/contact/" class="text-sm md:text-base font-normal text-white/75 hover:text-white transition-colors">Contact</a>
+                </div>
             </div>
 
-            <a href="/contact/" class="hidden md:flex items-center gap-2 bg-[#A67C52] text-white px-5 py-2.5 rounded-full text-sm font-normal hover:bg-[#8f6a47] transition-all">
+            <!-- Primary CTA -->
+            <a href="/contact/" class="hidden md:inline-flex items-center gap-2 bg-[#A67C52] text-white px-5 py-2 rounded-full text-sm font-medium shadow-md shadow-black/30 hover:bg-[#8f6a47] transition-all">
                 <span>Schedule a Tour</span>
             </a>
 
             <!-- Mobile Menu Icon -->
-            <button class="md:hidden z-50 text-[#F5F2EB]" data-nav-toggle data-target="#mobile-nav">
+            <button class="md:hidden z-50 text-clay" data-nav-toggle data-target="#mobile-nav">
                 <iconify-icon icon="solar:hamburger-menu-linear" width="1.5rem" stroke-width="1.5"></iconify-icon>
             </button>
         </div>
@@ -122,10 +125,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
             <!-- Right: New Hero Imagery Composition -->
             <div class="relative w-full aspect-square lg:aspect-[4/5] fade-up" style="animation-delay: 0.2s;">
                 <div class="absolute top-0 right-0 w-3/4 h-5/6 rounded-[2.5rem] overflow-hidden shadow-sm border border-[#2D2A26]/5 z-10">
-                    <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&amp;w=2000&amp;auto=format&amp;fit=crop" alt="Caregiver holding hands" class="w-full h-full object-cover" loading="lazy">
+                    <img src="https://i.ibb.co/FL180T8H/adult-family-homes.jpg" alt="Exterior of Hebron Care adult family home" class="w-full h-full object-cover" loading="lazy">
                 </div>
                 <div class="absolute bottom-0 left-0 w-1/2 h-1/2 rounded-[2rem] overflow-hidden shadow-md border border-white/20 z-20">
-                    <img src="https://images.unsplash.com/photo-1529260830199-0268430a6311?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" alt="Comfortable home setting" class="w-full h-full object-cover" loading="lazy">
+                    <img src="https://i.ibb.co/z1sThtz/1.webp" alt="Caregiver supporting senior using a walker" class="w-full h-full object-cover" loading="lazy">
                 </div>
             </div>
 
@@ -217,7 +220,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
                 <!-- Service 4 -->
                 <div class="bg-white p-8 rounded-3xl border border-[#2D2A26]/5 hover:shadow-md transition-shadow group">
                     <div class="w-12 h-12 rounded-full bg-[#F5F2EB] flex items-center justify-center mb-6 group-hover:bg-clay/10 transition-colors">
-                        <iconify-icon icon="solar:wheelchair-linear" class="text-2xl text-clay" stroke-width="1.5"></iconify-icon>
+                        <iconify-icon icon="mdi:wheelchair" class="text-2xl text-clay" stroke-width="1.5"></iconify-icon>
                     </div>
                     <h3 class="text-xl serif tracking-tight text-[#2D2A26] mb-3">Mobility &amp; Transfer</h3>
                     <p class="text-[#2D2A26]/70 font-light text-base leading-relaxed">
@@ -266,8 +269,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Specialty 1 -->
                 <div class="rounded-3xl bg-[#F5F2EB] overflow-hidden border border-[#2D2A26]/5 flex flex-col h-full group">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1581579438747-1dc8d17fdce4?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" alt="Memory Care" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" duration-700 group-hover:scale-105">
+                <div class="h-48 overflow-hidden relative">
+                        <img src="https://i.ibb.co/gMJq1ZvM/Memory-Care-Vista-Prairie-s-Dementia-Care-Program-Memory-Care-50.jpg" alt="Memory Care" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" duration-700 group-hover:scale-105">
                     </div>
                     <div class="p-8 flex-grow">
                         <h3 class="text-2xl serif tracking-tight text-[#2D2A26] mb-3">Memory Care</h3>
@@ -309,7 +312,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
                 <!-- Specialty 3 -->
                 <div class="rounded-3xl bg-[#F5F2EB] overflow-hidden border border-[#2D2A26]/5 flex flex-col h-full group">
                     <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" alt="Respite Care" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                        <img src="https://i.ibb.co/TDs0Nz9S/unnamed.jpg" alt="Respite Care" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
                     </div>
                     <div class="p-8 flex-grow">
                         <h3 class="text-2xl serif tracking-tight text-[#2D2A26] mb-3">Respite Care</h3>
@@ -380,7 +383,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
                     <!-- Amenity Item -->
                     <div class="flex items-start gap-4">
                         <div class="w-10 h-10 rounded-full bg-white flex shrink-0 items-center justify-center border border-[#2D2A26]/5 shadow-sm">
-                            <iconify-icon icon="solar:tree-linear" class="text-xl text-clay"></iconify-icon>
+                            <iconify-icon icon="mdi:tree" class="text-xl text-clay"></iconify-icon>
                         </div>
                         <div>
                             <h4 class="text-lg font-medium tracking-tight text-[#2D2A26]">Tranquil Outdoor Spaces</h4>

@@ -70,17 +70,17 @@ perspective: 1000px;
 }
 /* Base masonry column setup for smooth layout */
 .masonry-grid {
-column-count: 2;
+column-count: 1;
 column-gap: 1rem;
 }
 @media (min-width: 768px) {
-.masonry-grid { column-count: 3; column-gap: 1.5rem; }
+.masonry-grid { column-count: 2; column-gap: 1.5rem; }
 }
 @media (min-width: 1024px) {
-.masonry-grid { column-count: 4; column-gap: 1.5rem; }
+.masonry-grid { column-count: 3; column-gap: 1.5rem; }
 }
 @media (min-width: 1280px) {
-.masonry-grid { column-count: 5; column-gap: 1.5rem; }
+.masonry-grid { column-count: 3; column-gap: 1.5rem; }
 }
 .masonry-item {
 break-inside: avoid;
@@ -91,28 +91,31 @@ margin-bottom: 1.5rem;
     <a href="#main" class="skip-link">Skip to main content</a>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 px-6 py-4 bg-[#2D2A26]/95 backdrop-blur-md border-b border-[#2D2A26]/20 shadow-sm transition-all duration-300 serif">
-        <div class="max-w-screen-xl mx-auto flex justify-between items-center">
-            <a href="/" class="flex items-center gap-2 text-[#F5F2EB] z-50 relative hover:text-white transition-colors" aria-label="Hebron Care - Home" title="Hebron Care">
+    <nav class="fixed top-0 w-full z-50 px-4 md:px-6 pt-4 pb-3 bg-transparent backdrop-blur-md transition-all duration-300 serif">
+        <div class="max-w-screen-xl mx-auto flex items-center justify-between gap-4">
+            <a href="/" class="flex items-center gap-2 text-clay z-50 relative hover:text-[#2D2A26] transition-colors" aria-label="Hebron Care - Home" title="Hebron Care">
                 <img src="https://i.ibb.co/CxnYYN2/Untitled-design-4-Picsart-Background-Remover.png" alt="Hebron Care" class="h-8 w-auto" width="32" height="32">
-                <span class="text-xl tracking-tight font-medium">Hebron Care</span>
+                <span class="text-2xl md:text-3xl tracking-tight font-medium">Hebron Care</span>
             </a>
-            
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center gap-16">
-                <a href="/about-us/" class="text-base font-normal text-[#F5F2EB]/90 hover:text-white transition-colors">About Us</a>
-                <a href="/services/" class="text-base font-normal text-[#F5F2EB]/90 hover:text-white transition-colors">Services</a>
-                <a href="/" class="text-xl font-normal text-[#F5F2EB]/90 hover:text-white transition-colors">Home</a>
-                <a href="/gallery/" class="text-base font-medium text-white border-b-2 border-white/90 pb-0.5 transition-colors">Gallery</a>
-                <a href="/contact/" class="text-base font-normal text-[#F5F2EB]/90 hover:text-white transition-colors">Contact</a>
+
+            <!-- Desktop Menu - pill style -->
+            <div class="hidden md:flex flex-1 justify-center">
+                <div class="inline-flex items-center gap-16 px-14 py-2 rounded-full bg-[#2D2A26]/95 border border-white/10 shadow-lg shadow-black/30">
+                    <a href="/about-us/" class="text-sm md:text-base font-normal text-white/75 hover:text-white transition-colors">About Us</a>
+                    <a href="/services/" class="text-sm md:text-base font-normal text-white/75 hover:text-white transition-colors">Services</a>
+                    <a href="/" class="text-sm md:text-base font-normal text-white/75 hover:text-white transition-colors">Home</a>
+                    <a href="/gallery/" class="text-sm md:text-base font-medium text-[#2D2A26] bg-white px-4 py-1.5 rounded-full shadow-sm hover:bg-white hover:text-[#2D2A26] transition-colors">Gallery</a>
+                    <a href="/contact/" class="text-sm md:text-base font-normal text-white/75 hover:text-white transition-colors">Contact</a>
+                </div>
             </div>
 
-            <a href="/contact/" class="hidden md:flex items-center gap-2 bg-[#A67C52] text-white px-5 py-2.5 rounded-full text-sm font-normal hover:bg-[#8f6a47] transition-all">
+            <!-- Primary CTA -->
+            <a href="/contact/" class="hidden md:inline-flex items-center gap-2 bg-[#A67C52] text-white px-5 py-2 rounded-full text-sm font-medium shadow-md shadow-black/30 hover:bg-[#8f6a47] transition-all">
                 <span>Schedule a Tour</span>
             </a>
 
             <!-- Mobile Menu Icon -->
-            <button class="md:hidden z-50 text-[#F5F2EB]" data-nav-toggle data-target="#mobile-nav">
+            <button class="md:hidden z-50 text-clay" data-nav-toggle data-target="#mobile-nav">
                 <iconify-icon icon="solar:hamburger-menu-linear" width="1.5rem" stroke-width="1.5"></iconify-icon>
             </button>
         </div>

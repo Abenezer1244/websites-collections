@@ -91,23 +91,26 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     <a href="#main" class="skip-link">Skip to main content</a>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 px-6 py-4 bg-[#2D2A26]/95 backdrop-blur-md border-b border-[#2D2A26]/20 shadow-sm transition-all duration-300 serif">
-        <div class="max-w-screen-xl mx-auto flex justify-between items-center">
+    <nav id="site-nav" class="fixed top-0 w-full z-50 px-4 md:px-6 pt-4 pb-3 backdrop-blur-md transition-all duration-300 serif">
+        <div class="max-w-screen-xl mx-auto flex items-center justify-between gap-4">
             <a href="/" class="flex items-center gap-2 text-[#F5F2EB] z-50 relative hover:text-white transition-colors" aria-label="Hebron Care - Home" title="Hebron Care">
                 <img src="https://i.ibb.co/CxnYYN2/Untitled-design-4-Picsart-Background-Remover.png" alt="Hebron Care" class="h-8 w-auto" width="32" height="32">
-                <span class="text-xl tracking-tight font-medium">Hebron Care</span>
+                <span class="text-2xl md:text-3xl tracking-tight font-medium">Hebron Care</span>
             </a>
-            
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center gap-16">
-                <a href="/about-us/" class="text-base font-normal text-[#F5F2EB]/90 hover:text-white transition-colors">About Us</a>
-                <a href="/services/" class="text-base font-normal text-[#F5F2EB]/90 hover:text-white transition-colors">Services</a>
-                <a href="/" class="text-xl font-medium text-white border-b-2 border-white/90 pb-0.5 transition-colors">Home</a>
-                <a href="/gallery/" class="text-base font-normal text-[#F5F2EB]/90 hover:text-white transition-colors">Gallery</a>
-                <a href="/contact/" class="text-base font-normal text-[#F5F2EB]/90 hover:text-white transition-colors">Contact</a>
+
+            <!-- Desktop Menu - pill style -->
+            <div class="hidden md:flex flex-1 justify-center">
+                <div class="inline-flex items-center gap-16 px-14 py-2 rounded-full bg-[#2D2A26]/95 border border-white/10 shadow-lg shadow-black/30">
+                    <a href="/about-us/" class="text-sm md:text-base font-normal text-white/75 hover:text-white transition-colors">About Us</a>
+                    <a href="/services/" class="text-sm md:text-base font-normal text-white/75 hover:text-white transition-colors">Services</a>
+                    <a href="/" class="text-sm md:text-base font-medium text-[#2D2A26] bg-white px-4 py-1.5 rounded-full shadow-sm hover:bg-white hover:text-[#2D2A26] transition-colors">Home</a>
+                    <a href="/gallery/" class="text-sm md:text-base font-normal text-white/75 hover:text-white transition-colors">Gallery</a>
+                    <a href="/contact/" class="text-sm md:text-base font-normal text-white/75 hover:text-white transition-colors">Contact</a>
+                </div>
             </div>
 
-            <a href="/contact/" class="hidden md:flex items-center gap-2 bg-[#A67C52] text-white px-5 py-2.5 rounded-full text-sm font-normal hover:bg-[#8f6a47] transition-all">
+            <!-- Primary CTA -->
+            <a href="/contact/" class="hidden md:inline-flex items-center gap-2 bg-[#A67C52] text-white px-5 py-2 rounded-full text-sm font-medium shadow-md shadow-black/30 hover:bg-[#8f6a47] transition-all">
                 <span>Schedule a Tour</span>
             </a>
 
@@ -173,21 +176,21 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-                <div class="p-8 bg-white rounded-2xl shadow-sm border border-[#2D2A26]/5">
+                <div class="p-8 bg-white rounded-2xl shadow-2xl shadow-[#2D2A26]/20 border border-[#2D2A26]/5 transform transition-transform transition-shadow duration-300 hover:-translate-y-3 hover:-rotate-1 hover:shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
                     <iconify-icon icon="solar:heart-pulse-linear" width="2rem" class="text-clay mb-4"></iconify-icon>
                     <h4 class="text-xl font-normal mb-3 tracking-tight">24/7 Support</h4>
                     <p class="text-sm text-[#2D2A26]/60 leading-relaxed font-light">
                         Awake staff available day and night to assist with mobility, personal hygiene, and any sudden needs that arise, ensuring complete peace of mind.
                     </p>
                 </div>
-                <div class="p-8 bg-white rounded-2xl shadow-sm border border-[#2D2A26]/5">
+                <div class="p-8 bg-white rounded-2xl shadow-2xl shadow-[#2D2A26]/20 border border-[#2D2A26]/5 transform transition-transform transition-shadow duration-300 hover:-translate-y-3 hover:rotate-1 hover:shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
                     <iconify-icon icon="solar:users-group-rounded-linear" width="2rem" class="text-clay mb-4"></iconify-icon>
                     <h4 class="text-xl font-normal mb-3 tracking-tight">High Staff Ratio</h4>
                     <p class="text-sm text-[#2D2A26]/60 leading-relaxed font-light">
                         By keeping our community small, our caregivers form meaningful bonds with each resident, adapting to their unique preferences and routines.
                     </p>
                 </div>
-                <div class="p-8 bg-white rounded-2xl shadow-sm border border-[#2D2A26]/5">
+                <div class="p-8 bg-white rounded-2xl shadow-2xl shadow-[#2D2A26]/20 border border-[#2D2A26]/5 transform transition-transform transition-shadow duration-300 hover:-translate-y-3 hover:-rotate-1 hover:shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
                     <iconify-icon icon="solar:chef-hat-linear" width="2rem" class="text-clay mb-4"></iconify-icon>
                     <h4 class="text-xl font-normal mb-3 tracking-tight">Nutritious Dining</h4>
                     <p class="text-sm text-[#2D2A26]/60 leading-relaxed font-light">
@@ -226,14 +229,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
                     </ul>
                 </div>
                 <div class="order-1 md:order-2 h-[400px] rounded-2xl overflow-hidden relative">
-                    <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg" class="w-full h-full object-cover" alt="Caregiver holding hands" loading="lazy">
+                    <img src="https://kenwoodcare.com/wp-content/uploads/2019/01/shutterstock_367740032.jpg" class="w-full h-full object-cover" alt="Caregiver supporting senior woman at home" loading="lazy">
                 </div>
             </div>
 
             <!-- Expertise 2 -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center mb-24">
                 <div class="h-[400px] rounded-2xl overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover" alt="Medical checking" loading="lazy">
+                    <img src="https://i.ibb.co/N6F0frqV/Medication-Management-Tips-for-Seniors.jpg" class="w-full h-full object-cover" alt="Caregiver managing medications on laptop with stethoscope" loading="lazy">
                 </div>
                 <div>
                     <span class="text-xs font-normal uppercase tracking-widest text-clay mb-4 block">Medical Oversight</span>
@@ -274,7 +277,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
                     </ul>
                 </div>
                 <div class="order-1 md:order-2 h-[400px] rounded-2xl overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover" alt="Seniors enjoying time" loading="lazy">
+                    <img src="https://i.ibb.co/4wx6m52c/mary-beth-with-residents-2-800x.webp" class="w-full h-full object-cover" alt="Caregiver engaging with residents at a table" loading="lazy">
                 </div>
             </div>
         </div>
@@ -285,7 +288,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
         <div class="max-w-6xl mx-auto">
             <div class="flex flex-col md:flex-row items-center gap-16">
                 <div class="w-full md:w-5/12 aspect-square md:aspect-[4/5] rounded-2xl overflow-hidden bg-stone relative">
-                    <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover mix-blend-multiply opacity-90" alt="Happy family member" loading="lazy">
+                    <img src="https://i.ibb.co/q38P8Ykt/IMG-3019edit-2.jpg" class="w-full h-full object-cover mix-blend-multiply opacity-90" alt="Family visiting resident at Hebron Care" loading="lazy">
                 </div>
                 <div class="w-full md:w-7/12">
                     <span class="text-xs font-normal uppercase tracking-widest text-clay mb-4 block">Family Testimonial</span>
@@ -518,6 +521,23 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
         });
       });
     });
+  })();
+</script>
+<script>
+  (function () {
+    var nav = document.getElementById('site-nav');
+    if (!nav) return;
+
+    function updateNavBackground() {
+      if (window.scrollY > 40) {
+        nav.classList.add('bg-[#2D2A26]/95', 'border-b', 'border-[#2D2A26]/20', 'shadow-sm');
+      } else {
+        nav.classList.remove('bg-[#2D2A26]/95', 'border-b', 'border-[#2D2A26]/20', 'shadow-sm');
+      }
+    }
+
+    window.addEventListener('scroll', updateNavBackground, { passive: true });
+    updateNavBackground();
   })();
 </script>
 <script>document.getElementById('copyright-year') && (document.getElementById('copyright-year').textContent = new Date().getFullYear());</script>

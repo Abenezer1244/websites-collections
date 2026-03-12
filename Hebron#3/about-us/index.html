@@ -55,28 +55,31 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     <a href="#main" class="skip-link">Skip to main content</a>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 px-6 py-4 bg-[#2D2A26]/95 backdrop-blur-md border-b border-[#2D2A26]/20 shadow-sm transition-all duration-300 serif">
-        <div class="max-w-screen-xl mx-auto flex justify-between items-center">
-            <a href="/" class="flex items-center gap-2 text-[#F5F2EB] z-50 relative hover:text-white transition-colors" aria-label="Hebron Care - Home" title="Hebron Care">
+    <nav class="fixed top-0 w-full z-50 px-4 md:px-6 pt-4 pb-3 bg-transparent backdrop-blur-md transition-all duration-300 serif">
+        <div class="max-w-screen-xl mx-auto flex items-center justify-between gap-4">
+            <a href="/" class="flex items-center gap-2 text-clay z-50 relative hover:text-[#2D2A26] transition-colors" aria-label="Hebron Care - Home" title="Hebron Care">
                 <img src="https://i.ibb.co/CxnYYN2/Untitled-design-4-Picsart-Background-Remover.png" alt="Hebron Care" class="h-8 w-auto" width="32" height="32">
-                <span class="text-xl tracking-tight font-medium">Hebron Care</span>
+                <span class="text-2xl md:text-3xl tracking-tight font-medium">Hebron Care</span>
             </a>
-            
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center gap-16">
-                <a href="/about-us/" class="text-base font-medium text-white border-b-2 border-white/90 pb-0.5 transition-colors">About Us</a>
-                <a href="/services/" class="text-base font-normal text-[#F5F2EB]/90 hover:text-white transition-colors">Services</a>
-                <a href="/" class="text-xl font-normal text-[#F5F2EB]/90 hover:text-white transition-colors">Home</a>
-                <a href="/gallery/" class="text-base font-normal text-[#F5F2EB]/90 hover:text-white transition-colors">Gallery</a>
-                <a href="/contact/" class="text-base font-normal text-[#F5F2EB]/90 hover:text-white transition-colors">Contact</a>
+
+            <!-- Desktop Menu - pill style -->
+            <div class="hidden md:flex flex-1 justify-center">
+                <div class="inline-flex items-center gap-16 px-14 py-2 rounded-full bg-[#2D2A26]/95 border border-white/10 shadow-lg shadow-black/30">
+                    <a href="/about-us/" class="text-sm md:text-base font-medium text-[#2D2A26] bg-white px-4 py-1.5 rounded-full shadow-sm hover:bg-white hover:text-[#2D2A26] transition-colors">About Us</a>
+                    <a href="/services/" class="text-sm md:text-base font-normal text-white/75 hover:text-white transition-colors">Services</a>
+                    <a href="/" class="text-sm md:text-base font-normal text-white/75 hover:text-white transition-colors">Home</a>
+                    <a href="/gallery/" class="text-sm md:text-base font-normal text-white/75 hover:text-white transition-colors">Gallery</a>
+                    <a href="/contact/" class="text-sm md:text-base font-normal text-white/75 hover:text-white transition-colors">Contact</a>
+                </div>
             </div>
 
-            <a href="/contact/" class="hidden md:flex items-center gap-2 bg-[#A67C52] text-white px-5 py-2.5 rounded-full text-sm font-normal hover:bg-[#8f6a47] transition-all">
+            <!-- Primary CTA -->
+            <a href="/contact/" class="hidden md:inline-flex items-center gap-2 bg-[#A67C52] text-white px-5 py-2 rounded-full text-sm font-medium shadow-md shadow-black/30 hover:bg-[#8f6a47] transition-all">
                 <span>Schedule a Tour</span>
             </a>
 
             <!-- Mobile Menu Icon -->
-            <button class="md:hidden z-50 text-[#F5F2EB]" data-nav-toggle data-target="#mobile-nav">
+            <button class="md:hidden z-50 text-clay" data-nav-toggle data-target="#mobile-nav">
                 <iconify-icon icon="solar:hamburger-menu-linear" width="1.5rem" stroke-width="1.5"></iconify-icon>
             </button>
         </div>
@@ -115,36 +118,54 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
         </div>
     </header>
 
-    <!-- Purpose & Vision Section -->
+    <!-- Vision & Mission Section -->
     <section id="purpose" class="py-24 px-6 md:px-12 bg-white rounded-[3rem] mx-2 md:mx-6 shadow-sm border border-[#2D2A26]/5 relative z-20 -mt-16 md:-mt-24">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
-            
-            <!-- Purpose -->
-            <div class="flex flex-col h-full">
-                <div class="w-12 h-12 rounded-full bg-[#F5F2EB] flex items-center justify-center mb-8 border border-[#2D2A26]/5">
-                    <iconify-icon icon="solar:heart-angle-linear" width="1.5rem" class="text-clay"></iconify-icon>
+        <div class="max-w-4xl mx-auto flex flex-col gap-24">
+
+            <!-- Vision Block -->
+            <div class="relative text-center py-12">
+                <!-- Soft background word -->
+                <div class="pointer-events-none select-none absolute inset-0 flex items-start justify-center">
+                    <span class="text-5xl md:text-7xl lg:text-8xl serif font-light tracking-tight text-[#2D2A26]/5 mt-6">
+                        Our vision
+                    </span>
                 </div>
-                <h2 class="text-3xl md:text-4xl serif tracking-tight text-[#2D2A26] mb-6">Our Purpose</h2>
-                <p class="text-[#2D2A26]/70 font-light leading-relaxed text-base mb-6">
-                    Our mission is rooted in a single, unwavering belief: that the transition into assisted living should not mean a loss of independence, identity, or comfort. We exist to provide a seamless extension of home for seniors who require assistance with daily living.
-                </p>
-                <p class="text-[#2D2A26]/70 font-light leading-relaxed text-base">
-                    By limiting our residency size, we remove the institutional feel of traditional facilities. Instead, we foster an environment where highly personalized, compassionate care is the daily standard, ensuring that every resident feels seen, heard, and deeply valued.
-                </p>
+
+                <!-- Vertical accent line -->
+                <div class="absolute inset-y-8 left-1/2 -translate-x-px w-px bg-gradient-to-b from-transparent via-[#2D2A26]/15 to-transparent"></div>
+
+                <div class="relative space-y-6">
+                    <span class="text-xs font-normal uppercase tracking-[0.35em] text-clay">Our Vision</span>
+                    <p class="text-xl md:text-2xl text-[#2D2A26] font-light leading-relaxed max-w-3xl mx-auto">
+                        We envision a future where adult family homes are the premier choice for aging gracefully. A future where the stigma of elder care is entirely erased, replaced by a profound sense of community, joy, and uncompromising medical oversight.
+                    </p>
+                    <p class="text-sm md:text-base text-[#2D2A26]/70 font-light leading-relaxed max-w-3xl mx-auto">
+                        Through continuous training of our exceptional staff, transparent communication with families, and an unyielding commitment to holistic well-being, we aim to set the absolute gold standard for residential elder care in our community and beyond.
+                    </p>
+                </div>
             </div>
 
-            <!-- Vision -->
-            <div class="flex flex-col h-full">
-                <div class="w-12 h-12 rounded-full bg-[#F5F2EB] flex items-center justify-center mb-8 border border-[#2D2A26]/5">
-                    <iconify-icon icon="solar:eye-linear" width="1.5rem" class="text-clay"></iconify-icon>
+            <!-- Mission Block -->
+            <div class="relative text-center py-12">
+                <!-- Soft background word -->
+                <div class="pointer-events-none select-none absolute inset-0 flex items-start justify-center">
+                    <span class="text-5xl md:text-7xl lg:text-8xl serif font-light tracking-tight text-[#2D2A26]/5 mt-6">
+                        Our mission
+                    </span>
                 </div>
-                <h2 class="text-3xl md:text-4xl serif tracking-tight text-[#2D2A26] mb-6">Our Vision</h2>
-                <p class="text-[#2D2A26]/70 font-light leading-relaxed text-base mb-6">
-                    We envision a future where adult family homes are the premier choice for aging gracefully. A future where the stigma of elder care is entirely erased, replaced by a profound sense of community, joy, and uncompromising medical oversight.
-                </p>
-                <p class="text-[#2D2A26]/70 font-light leading-relaxed text-base">
-                    Through continuous training of our exceptional staff, transparent communication with families, and an unyielding commitment to holistic well-being, we aim to set the absolute gold standard for residential elder care in our community and beyond.
-                </p>
+
+                <!-- Vertical accent line -->
+                <div class="absolute inset-y-8 left-1/2 -translate-x-px w-px bg-gradient-to-b from-transparent via-[#2D2A26]/15 to-transparent"></div>
+
+                <div class="relative space-y-6">
+                    <span class="text-xs font-normal uppercase tracking-[0.35em] text-clay">Our Mission</span>
+                    <p class="text-xl md:text-2xl text-[#2D2A26] font-light leading-relaxed max-w-3xl mx-auto">
+                        Our mission is rooted in a single, unwavering belief: that the transition into assisted living should not mean a loss of independence, identity, or comfort. We exist to provide a seamless extension of home for seniors who require assistance with daily living.
+                    </p>
+                    <p class="text-sm md:text-base text-[#2D2A26]/70 font-light leading-relaxed max-w-3xl mx-auto">
+                        By limiting our residency size, we remove the institutional feel of traditional facilities. Instead, we foster an environment where highly personalized, compassionate care is the daily standard, ensuring that every resident feels seen, heard, and deeply valued.
+                    </p>
+                </div>
             </div>
 
         </div>
