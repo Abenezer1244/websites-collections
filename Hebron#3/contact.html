@@ -152,6 +152,17 @@ transition: background-color 5000s ease-in-out 0s;
                 <h3 class="text-2xl md:text-3xl serif tracking-tight text-[#2D2A26] mb-2">Send a message</h3>
                 <p class="text-sm font-light text-[#2D2A26]/60 mb-8">Fill out the form below and we'll get back to you within 24 hours.</p>
 
+                <!-- Success message (shown in place of form) -->
+                <div id="form-success" class="hidden text-center py-10 px-6">
+                    <div class="w-16 h-16 rounded-full bg-[#A67C52]/15 flex items-center justify-center mx-auto mb-5">
+                        <iconify-icon icon="solar:check-circle-bold" class="text-4xl text-[#A67C52]" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h4 class="text-xl md:text-2xl serif tracking-tight text-[#2D2A26] mb-2">Message sent</h4>
+                    <p class="text-sm font-light text-[#2D2A26]/70 mb-6 max-w-sm mx-auto">We'll get back to you within 24 hours.</p>
+                    <button type="button" id="form-send-another" class="text-sm font-medium text-[#A67C52] hover:text-[#2D2A26] transition-colors underline underline-offset-2">Send another message</button>
+                </div>
+
+                <!-- Submissions are sent via Web3Forms. If notifications land in spam, mark "Not spam", add notify@web3forms.com to Gmail contacts, and create a filter: From @web3forms.com → Never send to Spam. -->
                 <form id="contact-form" class="space-y-6">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div class="space-y-2">
@@ -189,6 +200,8 @@ transition: background-color 5000s ease-in-out 0s;
                     </label>
 
                     <input type="hidden" name="subject" value="New contact form submission from Hebron Care website">
+                    <input type="hidden" name="from_name" value="Hebron Care">
+                    <div id="form-error" class="hidden rounded-2xl bg-red-50 border border-red-200/60 px-4 py-3 text-sm text-red-800/90">Something went wrong. Please try again.</div>
                     <button type="submit" class="w-full bg-[#2D2A26] hover:bg-[#2D2A26]/90 text-white font-medium text-sm py-4 rounded-2xl transition-all shadow-lg shadow-[#2D2A26]/10 flex justify-center items-center gap-2 mt-4">
                         Send Message
                         <iconify-icon icon="solar:plain-linear" class="text-lg" stroke-width="1.5"></iconify-icon>
@@ -306,11 +319,46 @@ transition: background-color 5000s ease-in-out 0s;
 
 <script>
   const form = document.getElementById('contact-form');
-  if (form) {
+  const formSuccess = document.getElementById('form-success');
+  const formError = document.getElementById('form-error');
+  const sendAnotherBtn = document.getElementById('form-send-another');
+
+  if (form && formSuccess) {
     const submitBtn = form.querySelector('button[type="submit"]');
+
+    function showSuccess() {
+      form.classList.add('hidden');
+      formError.classList.add('hidden');
+      formSuccess.classList.remove('hidden');
+    }
+
+    function showForm() {
+      formSuccess.classList.add('hidden');
+      form.classList.remove('hidden');
+      form.reset();
+    }
+
+    function showError(msg) {
+      if (formError) {
+        formError.textContent = msg || "Something went wrong. Please try again.";
+        formError.classList.remove('hidden');
+      }
+    }
+
+    function hideError() {
+      if (formError) formError.classList.add('hidden');
+    }
+
+    if (sendAnotherBtn) {
+      sendAnotherBtn.addEventListener('click', function () {
+        showForm();
+        hideError();
+      });
+    }
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
+      hideError();
 
       const formData = new FormData(form);
       formData.append("access_key", "f6c61f92-7ace-4991-a36f-697a7b307632");
@@ -328,13 +376,12 @@ transition: background-color 5000s ease-in-out 0s;
         const data = await response.json();
 
         if (response.ok) {
-          alert("Success! Your message has been sent.");
-          form.reset();
+          showSuccess();
         } else {
-          alert("Error: " + data.message);
+          showError("Error: " + (data.message || "Please try again."));
         }
       } catch (error) {
-        alert("Something went wrong. Please try again.");
+        showError("Something went wrong. Please try again.");
       } finally {
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
