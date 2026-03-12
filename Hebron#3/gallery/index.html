@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | Hebron Care</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function () {
+        fetch("/gallery.html", { cache: "no-store" })
+          .then(function (r) { return r.text(); })
+          .then(function (html) {
+            document.open();
+            document.write(html);
+            document.close();
+          })
+          .catch(function () {
+            document.body.innerHTML = "Unable to load this page. Please try again.";
+          });
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
