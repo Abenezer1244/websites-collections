@@ -100,12 +100,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
             <!-- Desktop Menu - pill style -->
             <div class="hidden md:flex flex-1 justify-center">
-                <div class="inline-flex items-center gap-16 px-14 py-2 rounded-full bg-[#2D2A26]/95 border border-white/10 shadow-lg shadow-black/30">
-                    <a href="/about-us/" class="text-sm md:text-base font-normal text-white/75 hover:text-white transition-colors">About Us</a>
-                    <a href="/services/" class="text-sm md:text-base font-normal text-white/75 hover:text-white transition-colors">Services</a>
+                <div class="inline-flex items-center gap-16 px-16 py-2.5 rounded-full bg-white/5 border border-white/60 shadow-[0_40px_120px_rgba(15,23,42,0.75)] backdrop-blur-3xl">
+                    <a href="/about-us/" class="text-sm md:text-base font-normal text-white/80 hover:text-white transition-colors">About Us</a>
+                    <a href="/services/" class="text-sm md:text-base font-normal text-white/80 hover:text-white transition-colors">Services</a>
                     <a href="/" class="text-sm md:text-base font-medium text-[#2D2A26] bg-white px-4 py-1.5 rounded-full shadow-sm hover:bg-white hover:text-[#2D2A26] transition-colors">Home</a>
-                    <a href="/gallery/" class="text-sm md:text-base font-normal text-white/75 hover:text-white transition-colors">Gallery</a>
-                    <a href="/contact/" class="text-sm md:text-base font-normal text-white/75 hover:text-white transition-colors">Contact</a>
+                    <a href="/gallery/" class="text-sm md:text-base font-normal text-white/80 hover:text-white transition-colors">Gallery</a>
+                    <a href="/contact/" class="text-sm md:text-base font-normal text-white/80 hover:text-white transition-colors">Contact</a>
                 </div>
             </div>
 
@@ -530,9 +530,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
     function updateNavBackground() {
       if (window.scrollY > 40) {
-        nav.classList.add('bg-[#2D2A26]/95', 'border-b', 'border-[#2D2A26]/20', 'shadow-sm');
+        nav.classList.add('bg-black/30', 'border-b', 'border-white/10', 'shadow-md', 'backdrop-blur-xl');
       } else {
-        nav.classList.remove('bg-[#2D2A26]/95', 'border-b', 'border-[#2D2A26]/20', 'shadow-sm');
+        nav.classList.remove('bg-black/30', 'border-b', 'border-white/10', 'shadow-md', 'backdrop-blur-xl');
       }
     }
 
