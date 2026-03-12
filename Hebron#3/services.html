@@ -55,39 +55,41 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     <a href="#main" class="skip-link">Skip to main content</a>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 px-6 py-6 transition-all duration-300">
+    <nav class="fixed top-0 w-full z-50 px-6 py-4 bg-[#2D2A26]/95 backdrop-blur-md border-b border-[#2D2A26]/20 shadow-sm transition-all duration-300 serif">
         <div class="max-w-screen-xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-xl tracking-titter font-medium text-rock z-50 relative mix-blend-difference text-white" aria-label="Hebron Care - Home" title="Hebron Care">
-                HC
+            <a href="index.html" class="flex items-center gap-2 text-[#F5F2EB] z-50 relative hover:text-white transition-colors" aria-label="Hebron Care - Home" title="Hebron Care">
+                <img src="https://i.ibb.co/5hFBjkQY/Untitled-design-2-Picsart-Background-Remover.png" alt="Hebron Care" class="h-8 w-auto" width="32" height="32">
+                <span class="text-xl tracking-tight font-medium">Hebron Care</span>
             </a>
             
             <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center gap-8 bg-[#2D2A26]/5 backdrop-blur-md px-8 py-3 rounded-full border border-[#2D2A26]/10 shadow-sm">
-                <a href="index.html" class="text-sm font-normal text-rock/80 hover:text-rock transition-colors">Home</a>
-                <a href="about-us.html" class="text-sm font-normal text-rock/80 hover:text-rock transition-colors">About Us</a>
-                <a href="services.html" class="text-sm font-normal text-rock/80 hover:text-rock transition-colors">Services</a>
-                <a href="gallery.html" class="text-sm font-normal text-rock/80 hover:text-rock transition-colors">Gallery</a>
-                <a href="contact.html" class="text-sm font-normal text-rock/80 hover:text-rock transition-colors">Contact Us</a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="about-us.html" class="text-sm font-normal text-[#F5F2EB]/90 hover:text-white transition-colors">About Us</a>
+                <a href="services.html" class="text-sm font-normal text-[#F5F2EB]/90 hover:text-white transition-colors">Services</a>
+                <a href="index.html" class="text-lg font-normal text-[#F5F2EB]/90 hover:text-white transition-colors">Home</a>
+                <a href="gallery.html" class="text-sm font-normal text-[#F5F2EB]/90 hover:text-white transition-colors">Gallery</a>
+                <a href="contact.html" class="text-sm font-normal text-[#F5F2EB]/90 hover:text-white transition-colors">Contact</a>
             </div>
 
-            <a href="contact.html" class="hidden md:flex items-center gap-2 bg-[#2D2A26] text-[#F5F2EB] px-5 py-2.5 rounded-full text-sm font-normal hover:bg-opacity-90 transition-all">
-                <span>Contact Us</span>
+            <a href="contact.html" class="hidden md:flex items-center gap-2 bg-[#A67C52] text-white px-5 py-2.5 rounded-full text-sm font-normal hover:bg-[#8f6a47] transition-all">
+                <span>Schedule a Tour</span>
             </a>
 
             <!-- Mobile Menu Icon -->
-            <button class="md:hidden z-50 text-rock mix-blend-difference text-white" data-nav-toggle data-target="#mobile-nav">
-                <iconify-icon icon="solar:hamburger-menu-linear" class="text-2xl" stroke-width="1.5"></iconify-icon>
+            <button class="md:hidden z-50 text-[#F5F2EB]" data-nav-toggle data-target="#mobile-nav">
+                <iconify-icon icon="solar:hamburger-menu-linear" width="1.5rem" stroke-width="1.5"></iconify-icon>
             </button>
         </div>
     </nav>
 
     <!-- Mobile Nav -->
-    <div id="mobile-nav" class="fixed inset-x-4 top-20 z-40 md:hidden bg-[#2D2A26] text-[#F5F2EB] rounded-3xl shadow-xl border border-[#2D2A26]/20 px-6 py-5 space-y-3 transform origin-top transition-all duration-200 opacity-0 scale-95 pointer-events-none">
-        <a href="index.html" class="block text-sm py-2 border-b border-white/10 last:border-b-0">Home</a>
-        <a href="about-us.html" class="block text-sm py-2 border-b border-white/10 last:border-b-0">About Us</a>
-        <a href="services.html" class="block text-sm py-2 border-b border-white/10 last:border-b-0">Services</a>
-        <a href="gallery.html" class="block text-sm py-2 border-b border-white/10 last:border-b-0">Gallery</a>
-        <a href="contact.html" class="block text-sm py-2">Contact Us</a>
+    <div id="mobile-nav" class="fixed inset-x-4 top-20 z-40 md:hidden bg-[#2D2A26] text-[#F5F2EB] rounded-3xl shadow-xl border border-[#2D2A26]/20 px-6 py-5 space-y-3 transform origin-top transition-all duration-200 opacity-0 scale-95 pointer-events-none serif">
+        <a href="about-us.html" class="block text-sm py-2 border-b border-white/10">About Us</a>
+        <a href="services.html" class="block text-sm py-2 border-b border-white/10">Services</a>
+        <a href="index.html" class="block text-lg font-medium py-2 border-b border-white/10">Home</a>
+        <a href="gallery.html" class="block text-sm py-2 border-b border-white/10">Gallery</a>
+        <a href="contact.html" class="block text-sm py-2 border-b border-white/10">Contact</a>
+        <a href="contact.html" class="block text-center bg-[#A67C52] text-white py-2.5 rounded-full mt-2">Schedule a Tour</a>
     </div>
 
     <!-- Services HERO Section (New Look) -->
@@ -448,7 +450,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
                 </div>
                 <div class="flex flex-col gap-3 md:text-right">
                     <a href="services.html" class="text-white/40 hover:text-white text-sm font-light transition-colors">Services &amp; Amenities</a>
-                    <a href="#" class="text-white/40 hover:text-white text-sm font-light transition-colors" title="Coming soon">Privacy Practices</a>
+                    <a href="privacy.html" class="text-white/40 hover:text-white text-sm font-light transition-colors">Privacy Policy</a>
+                    <a href="terms.html" class="text-white/40 hover:text-white text-sm font-light transition-colors">Terms of Service</a>
                     <a href="contact.html" class="text-white/40 hover:text-white text-sm font-light transition-colors">Contact Information</a>
                     <p class="text-white/20 text-xs mt-4 font-light">© <span id="copyright-year">2026</span> Hebron Care Adult Family Home LLC. All rights reserved.</p>
                 </div>
