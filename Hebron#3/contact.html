@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <title>Contact Us | Hebron Care</title>
-<meta name="description" content="Contact Hebron Care Adult Family Home in Seattle to discuss care options, ask questions, or schedule a tour for your loved one.">
+<meta name="description" content="Contact Hebron Care Adult Family Home in Everett, WA to discuss care options, ask questions, or schedule a tour for your loved one.">
+<meta property="og:title" content="Contact Us | Hebron Care">
+<meta property="og:description" content="Contact Hebron Care Adult Family Home in Everett, WA to discuss care options, ask questions, or schedule a tour for your loved one.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&amp;w=1200&amp;auto=format&amp;fit=crop">
+<meta property="og:url" content="https://3hebroncareafh.site/contact.html">
+<meta property="og:type" content="website">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -87,25 +93,29 @@ input:-webkit-autofill:active{
 -webkit-text-fill-color: var(--color-rock) !important;
 transition: background-color 5000s ease-in-out 0s;
 }
+.skip-link { position: absolute; left: -9999px; z-index: 9999; padding: 0.75rem 1rem; background: #2D2A26; color: #F5F2EB; border-radius: 0.5rem; font-size: 0.875rem; }
+.skip-link:focus { left: 1rem; top: 1rem; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: none; box-shadow: 0 0 0 2px #F5F2EB, 0 0 0 4px #A67C52; }
 </style></head>
 <body class="antialiased selection:bg-stone-300 font-light text-base bg-[#F5F2EB]">
+    <a href="#main" class="skip-link">Skip to main content</a>
 
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 px-6 py-6 transition-all duration-300 mix-blend-difference text-white">
         <div class="max-w-screen-xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-xl tracking-titter font-medium z-50 relative">
+            <a href="index.html" class="text-xl tracking-titter font-medium z-50 relative" aria-label="Hebron Care - Home" title="Hebron Care">
                 HC
             </a>
             
             <div class="hidden md:flex items-center gap-8 bg-white/5 backdrop-blur-md px-8 py-3 rounded-full border border-white/10 shadow-sm">
-                <a href="about-us.html" class="text-sm font-normal text-white/80 hover:text-white transition-colors">About Us</a>
-                <a href="gallery.html" class="text-sm font-normal text-white/80 hover:text-white transition-colors">Gallery</a>
                 <a href="index.html" class="text-sm font-normal text-white/80 hover:text-white transition-colors">Home</a>
+                <a href="about-us.html" class="text-sm font-normal text-white/80 hover:text-white transition-colors">About Us</a>
                 <a href="services.html" class="text-sm font-normal text-white/80 hover:text-white transition-colors">Services</a>
+                <a href="gallery.html" class="text-sm font-normal text-white/80 hover:text-white transition-colors">Gallery</a>
                 <a href="contact.html" class="text-sm font-normal text-white/80 hover:text-white transition-colors">Contact Us</a>
             </div>
 
-            <a href="#action" class="hidden md:flex items-center gap-2 bg-white text-black px-5 py-2.5 rounded-full text-sm font-normal hover:bg-opacity-90 transition-all">
+            <a href="contact.html" class="hidden md:flex items-center gap-2 bg-white text-black px-5 py-2.5 rounded-full text-sm font-normal hover:bg-opacity-90 transition-all">
                 <span>Contact Us</span>
             </a>
 
@@ -117,15 +127,15 @@ transition: background-color 5000s ease-in-out 0s;
 
     <!-- Mobile Nav -->
     <div id="mobile-nav" class="fixed inset-x-4 top-20 z-40 md:hidden bg-[#2D2A26] text-[#F5F2EB] rounded-3xl shadow-xl border border-white/10 px-6 py-5 space-y-3 transform origin-top transition-all duration-200 opacity-0 scale-95 pointer-events-none">
-        <a href="about-us.html" class="block text-sm py-2 border-b border-white/10 last:border-b-0">About Us</a>
-        <a href="gallery.html" class="block text-sm py-2 border-b border-white/10 last:border-b-0">Gallery</a>
         <a href="index.html" class="block text-sm py-2 border-b border-white/10 last:border-b-0">Home</a>
+        <a href="about-us.html" class="block text-sm py-2 border-b border-white/10 last:border-b-0">About Us</a>
         <a href="services.html" class="block text-sm py-2 border-b border-white/10 last:border-b-0">Services</a>
+        <a href="gallery.html" class="block text-sm py-2 border-b border-white/10 last:border-b-0">Gallery</a>
         <a href="contact.html" class="block text-sm py-2">Contact Us</a>
     </div>
 
     <!-- Contact HERO Section -->
-    <header class="relative pt-40 md:pt-52 pb-16 px-6 md:px-12 flex flex-col items-center justify-center text-center overflow-hidden">
+    <header id="main" class="relative pt-40 md:pt-52 pb-16 px-6 md:px-12 flex flex-col items-center justify-center text-center overflow-hidden" tabindex="-1">
         <!-- Abstract Decoration -->
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#A67C52] rounded-full blur-[180px] pointer-events-none opacity-20"></div>
 
@@ -182,7 +192,7 @@ transition: background-color 5000s ease-in-out 0s;
 
                     <div class="space-y-2">
                         <label for="phone" class="text-xs font-medium text-[#2D2A26]/80 ml-1">Phone Number (Optional)</label>
-                        <input type="tel" id="phone" name="phone" class="w-full bg-white/80 border border-[#2D2A26]/10 rounded-2xl px-5 py-3.5 text-sm font-light text-[#2D2A26] focus:outline-none focus:ring-2 focus:ring-[#A67C52]/50 focus:border-[#A67C52] transition-all" placeholder="(555) 123-4567">
+                        <input type="tel" id="phone" name="phone" class="w-full bg-white/80 border border-[#2D2A26]/10 rounded-2xl px-5 py-3.5 text-sm font-light text-[#2D2A26] focus:outline-none focus:ring-2 focus:ring-[#A67C52]/50 focus:border-[#A67C52] transition-all" placeholder="(360) 843-7364">
                     </div>
 
                     <div class="space-y-2">
@@ -206,6 +216,7 @@ transition: background-color 5000s ease-in-out 0s;
                         Send Message
                         <iconify-icon icon="solar:plain-linear" class="text-lg" stroke-width="1.5"></iconify-icon>
                     </button>
+                    <p class="text-xs text-[#2D2A26]/60 mt-2 text-center">We'll reply within 24 hours.</p>
                 </form>
             </div>
 
@@ -213,26 +224,27 @@ transition: background-color 5000s ease-in-out 0s;
             <div class="lg:col-span-5 flex flex-col gap-4 fade-up-item" style="animation-delay: 0.4s;">
                 
                 <!-- Phone -->
-                <a href="tel:+1234567890" class="group bg-white/40 hover:bg-white/80 backdrop-blur-md border border-[#2D2A26]/5 p-6 rounded-[2rem] flex items-start gap-5 transition-all duration-300 hover:shadow-xl hover:shadow-[#2D2A26]/5 hover:-translate-y-1">
+                <a href="tel:+13608437364" class="group bg-white/40 hover:bg-white/80 backdrop-blur-md border border-[#2D2A26]/5 p-6 rounded-[2rem] flex items-start gap-5 transition-all duration-300 hover:shadow-xl hover:shadow-[#2D2A26]/5 hover:-translate-y-1">
                     <div class="w-12 h-12 rounded-full bg-white border border-[#2D2A26]/5 flex items-center justify-center text-[#A67C52] group-hover:scale-110 transition-transform duration-300 shadow-sm shrink-0">
                         <iconify-icon icon="solar:phone-calling-linear" class="text-xl" stroke-width="1.5"></iconify-icon>
                     </div>
                     <div>
                         <h4 class="text-sm font-medium text-[#2D2A26] mb-1">Call Us</h4>
-                        <p class="text-sm font-light text-[#2D2A26]/60 mb-2">Available Mon-Fri, 9am - 6pm</p>
-                        <p class="text-lg font-medium text-[#2D2A26] tracking-tight">+1 (555) 123-4567</p>
+                        <p class="text-sm font-light text-[#2D2A26]/60 mb-2">Provider: (360) 843-7364 • Home: (425) 225-5424</p>
+                        <p class="text-lg font-medium text-[#2D2A26] tracking-tight">(360) 843-7364</p>
+                        <p class="text-xs font-light text-[#2D2A26]/60 mt-1">Fax: (425) 948-6381</p>
                     </div>
                 </a>
 
                 <!-- Email -->
-                <a href="mailto:care@hebronhome.com" class="group bg-white/40 hover:bg-white/80 backdrop-blur-md border border-[#2D2A26]/5 p-6 rounded-[2rem] flex items-start gap-5 transition-all duration-300 hover:shadow-xl hover:shadow-[#2D2A26]/5 hover:-translate-y-1">
+                <a href="mailto:hebroncareafhllc@gmail.com" class="group bg-white/40 hover:bg-white/80 backdrop-blur-md border border-[#2D2A26]/5 p-6 rounded-[2rem] flex items-start gap-5 transition-all duration-300 hover:shadow-xl hover:shadow-[#2D2A26]/5 hover:-translate-y-1">
                     <div class="w-12 h-12 rounded-full bg-white border border-[#2D2A26]/5 flex items-center justify-center text-[#A67C52] group-hover:scale-110 transition-transform duration-300 shadow-sm shrink-0">
                         <iconify-icon icon="solar:letter-opened-linear" class="text-xl" stroke-width="1.5"></iconify-icon>
                     </div>
                     <div>
                         <h4 class="text-sm font-medium text-[#2D2A26] mb-1">Email Us</h4>
                         <p class="text-sm font-light text-[#2D2A26]/60 mb-2">We typically reply within 24 hours</p>
-                        <p class="text-lg font-medium text-[#2D2A26] tracking-tight">care@hebronhome.com</p>
+                        <p class="text-lg font-medium text-[#2D2A26] tracking-tight break-all">hebroncareafhllc@gmail.com</p>
                     </div>
                 </a>
 
@@ -245,8 +257,8 @@ transition: background-color 5000s ease-in-out 0s;
                         <h4 class="text-sm font-medium text-[#2D2A26] mb-1">Visit Us</h4>
                         <p class="text-sm font-light text-[#2D2A26]/60 mb-2">Tours by appointment only</p>
                         <p class="text-base font-medium text-[#2D2A26] tracking-tight leading-snug">
-                            123 Haven Way<br>
-                            Seattle, WA 98101
+                            11320 27th Ave SE<br>
+                            Everett, WA 98208
                         </p>
                     </div>
                 </a>
@@ -259,7 +271,11 @@ transition: background-color 5000s ease-in-out 0s;
     <section id="map" class="py-16 md:py-24 px-4 md:px-8 max-w-[90rem] mx-auto relative z-20 overflow-hidden mb-20">
         <div class="text-center mb-16 fade-up-item" style="animation-delay: 0.5s;">
             <h2 class="text-3xl md:text-5xl serif tracking-tight text-[#2D2A26] mb-4">Find us here</h2>
-            <p class="text-[#2D2A26]/60 font-light text-base md:text-lg max-w-xl mx-auto">Nestled in a quiet, serene neighborhood. Hover over the map to interact and explore the area.</p>
+            <p class="text-[#2D2A26]/60 font-light text-base md:text-lg max-w-xl mx-auto mb-4">Nestled in a quiet, serene neighborhood. Hover over the map to interact and explore the area.</p>
+            <a href="https://www.google.com/maps/dir//11320+27th+Ave+SE,+Everett,+WA+98208" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-[#A67C52] hover:text-[#2D2A26] font-medium text-sm transition-colors">
+                <iconify-icon icon="solar:map-point-linear" class="text-lg"></iconify-icon>
+                Get directions
+            </a>
         </div>
 
         <div class="map-perspective w-full h-[400px] md:h-[600px] mx-auto flex items-center justify-center fade-up-item" style="animation-delay: 0.6s;">
@@ -268,7 +284,7 @@ transition: background-color 5000s ease-in-out 0s;
                 <div class="absolute inset-0 pointer-events-none z-10 rounded-[2.5rem] md:rounded-[3rem] shadow-[inset_0_0_40px_rgba(0,0,0,0.05)]"></div>
                 
                 <!-- Google Map Embed -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d34341.34685376518!2d-122.3320708!3d47.6062095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490102c93e83355%3A0x102565466944d59a!2sSeattle%2C%20WA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="filter grayscale-[20%] sepia-[10%] opacity-90 transition-all duration-700 hover:grayscale-0 hover:sepia-0 hover:opacity-100"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5615.0283418672825!2d-122.19769762344498!3d47.89478237121767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549006e1c1196959%3A0xfd83eb47372b17f3!2s11320%2027th%20Ave%20SE%2C%20Everett%2C%20WA%2098208!5e1!3m2!1sen!2sus!4v1772914945848!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="filter grayscale-[20%] sepia-[10%] opacity-90 transition-all duration-700 hover:grayscale-0 hover:sepia-0 hover:opacity-100"></iframe>
 
                 <!-- Contextual Label -->
                 <div class="absolute bottom-6 left-6 z-20 pointer-events-none">
@@ -293,7 +309,7 @@ transition: background-color 5000s ease-in-out 0s;
                 Finding the right home is a significant decision. We invite you to schedule a tour, meet our caregivers, and see the environment for yourself. 
             </p>
 
-            <a href="tel:+1234567890" class="inline-flex items-center gap-3 bg-white hover:bg-[#E6E2DA] text-[#2D2A26] px-10 py-4 rounded-full text-base font-normal transition-all transform hover:-translate-y-1 shadow-lg shadow-black/20 mb-20">
+            <a href="tel:+13608437364" class="inline-flex items-center gap-3 bg-white hover:bg-[#E6E2DA] text-[#2D2A26] px-10 py-4 rounded-full text-base font-normal transition-all transform hover:-translate-y-1 shadow-lg shadow-black/20 mb-20">
                 <iconify-icon icon="solar:phone-calling-linear" class="text-2xl" stroke-width="1.5"></iconify-icon>
                 Call to Schedule a Tour
             </a>
@@ -308,10 +324,10 @@ transition: background-color 5000s ease-in-out 0s;
                     </p>
                 </div>
                 <div class="flex flex-col gap-3 md:text-right">
-                    <a href="#" class="text-white/40 hover:text-white text-sm font-light transition-colors">Services &amp; Amenities</a>
-                    <a href="#" class="text-white/40 hover:text-white text-sm font-light transition-colors">Privacy Practices</a>
-                    <a href="#" class="text-white/40 hover:text-white text-sm font-light transition-colors">Contact Information</a>
-                    <p class="text-white/20 text-xs mt-4 font-light">© 2024 Hebron Care Adult Family Home LLC. All rights reserved.</p>
+                    <a href="services.html" class="text-white/40 hover:text-white text-sm font-light transition-colors">Services &amp; Amenities</a>
+                    <a href="#" class="text-white/40 hover:text-white text-sm font-light transition-colors" title="Coming soon">Privacy Practices</a>
+                    <a href="contact.html" class="text-white/40 hover:text-white text-sm font-light transition-colors">Contact Information</a>
+                    <p class="text-white/20 text-xs mt-4 font-light">© <span id="copyright-year">2026</span> Hebron Care Adult Family Home LLC. All rights reserved.</p>
                 </div>
             </div>
         </div>
@@ -378,7 +394,11 @@ transition: background-color 5000s ease-in-out 0s;
         if (response.ok) {
           showSuccess();
         } else {
-          showError("Error: " + (data.message || "Please try again."));
+          const msg = (data.message || "").toLowerCase();
+          const isSpam = msg.includes("spam") || msg.includes("marked as spam");
+          showError(isSpam
+            ? "Your message was flagged. Please use clear, real text and try again."
+            : "Error: " + (data.message || "Please try again."));
         }
       } catch (error) {
         showError("Something went wrong. Please try again.");
@@ -389,5 +409,28 @@ transition: background-color 5000s ease-in-out 0s;
     });
   }
 </script>
-
+<script>
+  (function () {
+    var toggles = document.querySelectorAll('[data-nav-toggle]');
+    toggles.forEach(function (btn) {
+      var targetSelector = btn.getAttribute('data-target');
+      var menu = document.querySelector(targetSelector);
+      if (!menu) return;
+      btn.addEventListener('click', function () {
+        var isOpen = !menu.classList.contains('pointer-events-none');
+        if (isOpen) {
+          menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+        } else {
+          menu.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
+        }
+      });
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+        });
+      });
+    });
+  })();
+</script>
+<script>document.getElementById('copyright-year') && (document.getElementById('copyright-year').textContent = new Date().getFullYear());</script>
 </body></html>

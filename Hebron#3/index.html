@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <title>Hebron Care | Adult Family Home</title>
-<meta name="description" content="Hebron Care Adult Family Home in Seattle provides compassionate, residential senior care with 24/7 support, high staff ratios, and a warm, home-like environment.">
+<meta name="description" content="Hebron Care Adult Family Home in Everett, WA provides compassionate, residential senior care with 24/7 support, high staff ratios, and a warm, home-like environment.">
+<meta property="og:title" content="Hebron Care | Adult Family Home">
+<meta property="og:description" content="Hebron Care Adult Family Home in Everett, WA provides compassionate, residential senior care with 24/7 support, high staff ratios, and a warm, home-like environment.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&amp;w=1200&amp;auto=format&amp;fit=crop">
+<meta property="og:url" content="https://3hebroncareafh.site/">
+<meta property="og:type" content="website">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,6 +47,11 @@ color: #2D2A26;
 }
 /* Hide scrollbar */
 ::-webkit-scrollbar { width: 0; background: transparent; }
+/* Skip link - visible on focus */
+.skip-link { position: absolute; left: -9999px; z-index: 9999; padding: 0.75rem 1rem; background: #2D2A26; color: #F5F2EB; border-radius: 0.5rem; font-size: 0.875rem; }
+.skip-link:focus { left: 1rem; top: 1rem; }
+/* Focus ring for keyboard users */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: none; box-shadow: 0 0 0 2px #F5F2EB, 0 0 0 4px #A67C52; }
 </style><script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -48,13 +59,13 @@ color: #2D2A26;
   "name": "Hebron Care Adult Family Home",
   "url": "https://3hebroncareafh.site/",
   "@id": "https://3hebroncareafh.site/#hebron-care",
-  "telephone": "+1-555-123-4567",
+  "telephone": "+1-360-843-7364",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "123 Haven Way",
-    "addressLocality": "Seattle",
+    "streetAddress": "11320 27th Ave SE",
+    "addressLocality": "Everett",
     "addressRegion": "WA",
-    "postalCode": "98101",
+    "postalCode": "98208",
     "addressCountry": "US"
   },
   "image": "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=1600&auto=format&fit=crop",
@@ -72,29 +83,30 @@ color: #2D2A26;
     "closes": "18:00"
   }],
   "sameAs": [
-    "https://www.google.com/maps/search/?api=1&query=Hebron+Care+Adult+Family+Home+Seattle"
+    "https://www.google.com/maps/place/11320+27th+Ave+SE,+Everett,+WA+98208"
   ]
 }
 </script></head>
 <body class="antialiased selection:bg-stone-300 font-light text-base">
+    <a href="#main" class="skip-link">Skip to main content</a>
 
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 px-6 py-6 transition-all duration-300">
         <div class="max-w-screen-xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-xl tracking-titter font-medium text-rock z-50 relative mix-blend-difference text-white">
+            <a href="index.html" class="text-xl tracking-titter font-medium text-rock z-50 relative mix-blend-difference text-white" aria-label="Hebron Care - Home" title="Hebron Care">
                 HC
             </a>
             
             <!-- Desktop Menu -->
             <div class="hidden md:flex items-center gap-8 bg-white/10 backdrop-blur-md px-8 py-3 rounded-full border border-white/20 shadow-sm">
-                <a href="about-us.html" class="text-sm font-normal text-rock/80 hover:text-rock transition-colors">About Us</a>
-                <a href="gallery.html" class="text-sm font-normal text-rock/80 hover:text-rock transition-colors">Gallery</a>
                 <a href="index.html" class="text-sm font-normal text-rock/80 hover:text-rock transition-colors">Home</a>
+                <a href="about-us.html" class="text-sm font-normal text-rock/80 hover:text-rock transition-colors">About Us</a>
                 <a href="services.html" class="text-sm font-normal text-rock/80 hover:text-rock transition-colors">Services</a>
+                <a href="gallery.html" class="text-sm font-normal text-rock/80 hover:text-rock transition-colors">Gallery</a>
                 <a href="contact.html" class="text-sm font-normal text-rock/80 hover:text-rock transition-colors">Contact Us</a>
             </div>
 
-            <a href="#action" class="hidden md:flex items-center gap-2 bg-[#2D2A26] text-[#F5F2EB] px-5 py-2.5 rounded-full text-sm font-normal hover:bg-opacity-90 transition-all">
+            <a href="contact.html" class="hidden md:flex items-center gap-2 bg-[#2D2A26] text-[#F5F2EB] px-5 py-2.5 rounded-full text-sm font-normal hover:bg-opacity-90 transition-all">
                 <span>Contact Us</span>
             </a>
 
@@ -107,15 +119,15 @@ color: #2D2A26;
 
     <!-- Mobile Nav -->
     <div id="mobile-nav" class="fixed inset-x-4 top-20 z-40 md:hidden bg-[#2D2A26] text-[#F5F2EB] rounded-3xl shadow-xl border border-white/10 px-6 py-5 space-y-3 transform origin-top transition-all duration-200 opacity-0 scale-95 pointer-events-none">
-        <a href="about-us.html" class="block text-sm py-2 border-b border-white/10 last:border-b-0">About Us</a>
-        <a href="gallery.html" class="block text-sm py-2 border-b border-white/10 last:border-b-0">Gallery</a>
         <a href="index.html" class="block text-sm py-2 border-b border-white/10 last:border-b-0">Home</a>
+        <a href="about-us.html" class="block text-sm py-2 border-b border-white/10 last:border-b-0">About Us</a>
         <a href="services.html" class="block text-sm py-2 border-b border-white/10 last:border-b-0">Services</a>
+        <a href="gallery.html" class="block text-sm py-2 border-b border-white/10 last:border-b-0">Gallery</a>
         <a href="contact.html" class="block text-sm py-2">Contact Us</a>
     </div>
 
     <!-- Hero Section -->
-    <header class="relative h-screen w-full overflow-hidden flex items-center justify-center">
+    <header id="main" class="relative h-screen w-full overflow-hidden flex items-center justify-center" tabindex="-1">
         <!-- Background Image with Overlay -->
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&amp;w=2069&amp;auto=format&amp;fit=crop" alt="Comfortable home interior" class="w-full h-full object-cover">
@@ -212,14 +224,14 @@ color: #2D2A26;
                     </ul>
                 </div>
                 <div class="order-1 md:order-2 h-[400px] rounded-2xl overflow-hidden relative">
-                    <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg" class="w-full h-full object-cover" alt="Caregiver holding hands">
+                    <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg" class="w-full h-full object-cover" alt="Caregiver holding hands" loading="lazy">
                 </div>
             </div>
 
             <!-- Expertise 2 -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center mb-24">
                 <div class="h-[400px] rounded-2xl overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover" alt="Medical checking">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover" alt="Medical checking" loading="lazy">
                 </div>
                 <div>
                     <span class="text-xs font-normal uppercase tracking-widest text-clay mb-4 block">Medical Oversight</span>
@@ -260,7 +272,7 @@ color: #2D2A26;
                     </ul>
                 </div>
                 <div class="order-1 md:order-2 h-[400px] rounded-2xl overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover" alt="Seniors enjoying time">
+                    <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover" alt="Seniors enjoying time" loading="lazy">
                 </div>
             </div>
         </div>
@@ -271,7 +283,7 @@ color: #2D2A26;
         <div class="max-w-6xl mx-auto">
             <div class="flex flex-col md:flex-row items-center gap-16">
                 <div class="w-full md:w-5/12 aspect-square md:aspect-[4/5] rounded-2xl overflow-hidden bg-stone relative">
-                    <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover mix-blend-multiply opacity-90" alt="Happy family member">
+                    <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover mix-blend-multiply opacity-90" alt="Happy family member" loading="lazy">
                 </div>
                 <div class="w-full md:w-7/12">
                     <span class="text-xs font-normal uppercase tracking-widest text-clay mb-4 block">Family Testimonial</span>
@@ -298,8 +310,8 @@ color: #2D2A26;
             
             <div class="space-y-4">
                 <!-- Q1 -->
-                <details class="group bg-white rounded-xl p-6 cursor-pointer border border-transparent hover:border-[#2D2A26]/5 transition-all open:ring-1 open:ring-[#2D2A26]/5">
-                    <summary class="flex justify-between items-center font-normal text-lg tracking-tight list-none">
+                <details id="faq-1" class="group bg-white rounded-xl p-6 cursor-pointer border border-transparent hover:border-[#2D2A26]/5 transition-all open:ring-1 open:ring-[#2D2A26]/5">
+                    <summary class="flex justify-between items-center font-normal text-lg tracking-tight list-none" aria-controls="faq-1" aria-expanded="false">
                         What levels of care do you provide?
                         <span class="transition group-open:rotate-180 text-clay">
                             <iconify-icon icon="solar:alt-arrow-down-linear" width="1.25rem"></iconify-icon>
@@ -311,8 +323,8 @@ color: #2D2A26;
                 </details>
 
                 <!-- Q2 -->
-                <details class="group bg-white rounded-xl p-6 cursor-pointer border border-transparent hover:border-[#2D2A26]/5 transition-all open:ring-1 open:ring-[#2D2A26]/5">
-                    <summary class="flex justify-between items-center font-normal text-lg tracking-tight list-none">
+                <details id="faq-2" class="group bg-white rounded-xl p-6 cursor-pointer border border-transparent hover:border-[#2D2A26]/5 transition-all open:ring-1 open:ring-[#2D2A26]/5">
+                    <summary class="flex justify-between items-center font-normal text-lg tracking-tight list-none" aria-controls="faq-2" aria-expanded="false">
                         Are meals tailored to specific dietary requirements?
                         <span class="transition group-open:rotate-180 text-clay">
                             <iconify-icon icon="solar:alt-arrow-down-linear" width="1.25rem"></iconify-icon>
@@ -324,8 +336,8 @@ color: #2D2A26;
                 </details>
 
                 <!-- Q3 -->
-                <details class="group bg-white rounded-xl p-6 cursor-pointer border border-transparent hover:border-[#2D2A26]/5 transition-all open:ring-1 open:ring-[#2D2A26]/5">
-                    <summary class="flex justify-between items-center font-normal text-lg tracking-tight list-none">
+                <details id="faq-3" class="group bg-white rounded-xl p-6 cursor-pointer border border-transparent hover:border-[#2D2A26]/5 transition-all open:ring-1 open:ring-[#2D2A26]/5">
+                    <summary class="flex justify-between items-center font-normal text-lg tracking-tight list-none" aria-controls="faq-3" aria-expanded="false">
                         What are your visiting hours?
                         <span class="transition group-open:rotate-180 text-clay">
                             <iconify-icon icon="solar:alt-arrow-down-linear" width="1.25rem"></iconify-icon>
@@ -337,8 +349,8 @@ color: #2D2A26;
                 </details>
 
                 <!-- Q4 -->
-                <details class="group bg-white rounded-xl p-6 cursor-pointer border border-transparent hover:border-[#2D2A26]/5 transition-all open:ring-1 open:ring-[#2D2A26]/5">
-                    <summary class="flex justify-between items-center font-normal text-lg tracking-tight list-none">
+                <details id="faq-4" class="group bg-white rounded-xl p-6 cursor-pointer border border-transparent hover:border-[#2D2A26]/5 transition-all open:ring-1 open:ring-[#2D2A26]/5">
+                    <summary class="flex justify-between items-center font-normal text-lg tracking-tight list-none" aria-controls="faq-4" aria-expanded="false">
                         How do you handle medical emergencies?
                         <span class="transition group-open:rotate-180 text-clay">
                             <iconify-icon icon="solar:alt-arrow-down-linear" width="1.25rem"></iconify-icon>
@@ -350,8 +362,8 @@ color: #2D2A26;
                 </details>
 
                 <!-- Q5 -->
-                <details class="group bg-white rounded-xl p-6 cursor-pointer border border-transparent hover:border-[#2D2A26]/5 transition-all open:ring-1 open:ring-[#2D2A26]/5">
-                    <summary class="flex justify-between items-center font-normal text-lg tracking-tight list-none">
+                <details id="faq-5" class="group bg-white rounded-xl p-6 cursor-pointer border border-transparent hover:border-[#2D2A26]/5 transition-all open:ring-1 open:ring-[#2D2A26]/5">
+                    <summary class="flex justify-between items-center font-normal text-lg tracking-tight list-none" aria-controls="faq-5" aria-expanded="false">
                         Do you coordinate with home health or hospice agencies?
                         <span class="transition group-open:rotate-180 text-clay">
                             <iconify-icon icon="solar:alt-arrow-down-linear" width="1.25rem"></iconify-icon>
@@ -377,7 +389,7 @@ color: #2D2A26;
                 Finding the right home is a significant decision. We invite you to schedule a tour, meet our caregivers, and see the environment for yourself. 
             </p>
 
-            <a href="tel:+1234567890" class="inline-flex items-center gap-3 bg-white hover:bg-stone-200 text-[#2D2A26] px-10 py-4 rounded-full text-base font-normal transition-all transform hover:-translate-y-1 shadow-lg shadow-black/20 mb-20">
+            <a href="tel:+13608437364" class="inline-flex items-center gap-3 bg-white hover:bg-stone-200 text-[#2D2A26] px-10 py-4 rounded-full text-base font-normal transition-all transform hover:-translate-y-1 shadow-lg shadow-black/20 mb-20">
                 <iconify-icon icon="solar:phone-calling-linear" width="1.5rem" stroke-width="1.5"></iconify-icon>
                 Call to Schedule a Tour
             </a>
@@ -392,16 +404,38 @@ color: #2D2A26;
                     </p>
                 </div>
                 <div class="flex flex-col gap-3 md:text-right">
-                    <a href="#" class="text-white/40 hover:text-white text-sm font-light transition-colors">Services &amp; Amenities</a>
-                    <a href="#" class="text-white/40 hover:text-white text-sm font-light transition-colors">Privacy Practices</a>
-                    <a href="#" class="text-white/40 hover:text-white text-sm font-light transition-colors">Contact Information</a>
-                    <p class="text-white/20 text-xs mt-4 font-light">© 2024 Hebron Care Adult Family Home LLC. All rights reserved.</p>
+                    <a href="services.html" class="text-white/40 hover:text-white text-sm font-light transition-colors">Services &amp; Amenities</a>
+                    <a href="#" class="text-white/40 hover:text-white text-sm font-light transition-colors" title="Coming soon">Privacy Practices</a>
+                    <a href="contact.html" class="text-white/40 hover:text-white text-sm font-light transition-colors">Contact Information</a>
+                    <p class="text-white/20 text-xs mt-4 font-light">© <span id="copyright-year">2026</span> Hebron Care Adult Family Home LLC. All rights reserved.</p>
                 </div>
             </div>
         </div>
     </footer>
 
 
+<script>
+  (function () {
+    var faqSection = document.getElementById('faq');
+    if (faqSection) {
+      var detailsList = faqSection.querySelectorAll('details');
+      detailsList.forEach(function (d) {
+        var summary = d.querySelector('summary');
+        if (!summary) return;
+        d.addEventListener('toggle', function () {
+          detailsList.forEach(function (other) {
+            if (other !== d) {
+              other.removeAttribute('open');
+              var s = other.querySelector('summary');
+              if (s) s.setAttribute('aria-expanded', 'false');
+            }
+          });
+          if (summary) summary.setAttribute('aria-expanded', d.hasAttribute('open') ? 'true' : 'false');
+        });
+      });
+    }
+  })();
+</script>
 <script>
   (function () {
     const toggles = document.querySelectorAll('[data-nav-toggle]');
@@ -417,7 +451,13 @@ color: #2D2A26;
           menu.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
         }
       });
+      menu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+        });
+      });
     });
   })();
 </script>
+<script>document.getElementById('copyright-year') && (document.getElementById('copyright-year').textContent = new Date().getFullYear());</script>
 </body></html>

@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <title>Gallery | Hebron Care</title>
-<meta name="description" content="View the Hebron Care gallery to see our warm interiors, tranquil outdoor spaces, and everyday life inside our adult family home in Seattle.">
+<meta name="description" content="View the Hebron Care gallery to see our warm interiors, tranquil outdoor spaces, and everyday life inside our adult family home in Everett.">
+<meta property="og:title" content="Gallery | Hebron Care">
+<meta property="og:description" content="View the Hebron Care gallery to see our warm interiors, tranquil outdoor spaces, and everyday life inside our adult family home in Everett.">
+<meta property="og:image" content="https://i.ibb.co/Kc8t7jX9/0ddbadba006a773a415a16a2d814da35-uncropped-scaled-within-1344-1008.webp">
+<meta property="og:url" content="https://3hebroncareafh.site/gallery.html">
+<meta property="og:type" content="website">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,6 +38,9 @@ background: #D4C5B0;
 color: #2D2A26;
 }
 ::-webkit-scrollbar { width: 0; background: transparent; }
+.skip-link { position: absolute; left: -9999px; z-index: 9999; padding: 0.75rem 1rem; background: #2D2A26; color: #F5F2EB; border-radius: 0.5rem; font-size: 0.875rem; }
+.skip-link:focus { left: 1rem; top: 1rem; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: none; box-shadow: 0 0 0 2px #F5F2EB, 0 0 0 4px #A67C52; }
 /* Crazy Gallery Animations */
 @keyframes fadeUpHero {
 0% { opacity: 0; transform: translateY(2rem) scale(0.95); filter: blur(10px); }
@@ -79,23 +88,24 @@ margin-bottom: 1.5rem;
 }
 </style></head>
 <body class="antialiased selection:bg-stone-300 font-light text-base bg-[#F5F2EB]">
+    <a href="#main" class="skip-link">Skip to main content</a>
 
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 px-6 py-6 transition-all duration-300 mix-blend-difference text-white">
         <div class="max-w-screen-xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-xl tracking-titter font-medium z-50 relative">
+            <a href="index.html" class="text-xl tracking-titter font-medium z-50 relative" aria-label="Hebron Care - Home" title="Hebron Care">
                 HC
             </a>
             
             <div class="hidden md:flex items-center gap-8 bg-white/5 backdrop-blur-md px-8 py-3 rounded-full border border-white/10 shadow-sm">
-                <a href="about-us.html" class="text-sm font-normal text-white/80 hover:text-white transition-colors">About Us</a>
-                <a href="gallery.html" class="text-sm font-normal text-white/80 hover:text-white transition-colors">Gallery</a>
                 <a href="index.html" class="text-sm font-normal text-white/80 hover:text-white transition-colors">Home</a>
+                <a href="about-us.html" class="text-sm font-normal text-white/80 hover:text-white transition-colors">About Us</a>
                 <a href="services.html" class="text-sm font-normal text-white/80 hover:text-white transition-colors">Services</a>
+                <a href="gallery.html" class="text-sm font-normal text-white/80 hover:text-white transition-colors">Gallery</a>
                 <a href="contact.html" class="text-sm font-normal text-white/80 hover:text-white transition-colors">Contact Us</a>
             </div>
 
-            <a href="#action" class="hidden md:flex items-center gap-2 bg-white text-black px-5 py-2.5 rounded-full text-sm font-normal hover:bg-opacity-90 transition-all">
+            <a href="contact.html" class="hidden md:flex items-center gap-2 bg-white text-black px-5 py-2.5 rounded-full text-sm font-normal hover:bg-opacity-90 transition-all">
                 <span>Contact Us</span>
             </a>
 
@@ -107,15 +117,15 @@ margin-bottom: 1.5rem;
 
     <!-- Mobile Nav -->
     <div id="mobile-nav" class="fixed inset-x-4 top-20 z-40 md:hidden bg-[#2D2A26] text-[#F5F2EB] rounded-3xl shadow-xl border border-white/10 px-6 py-5 space-y-3 transform origin-top transition-all duration-200 opacity-0 scale-95 pointer-events-none">
-        <a href="about-us.html" class="block text-sm py-2 border-b border-white/10 last:border-b-0">About Us</a>
-        <a href="gallery.html" class="block text-sm py-2 border-b border-white/10 last:border-b-0">Gallery</a>
         <a href="index.html" class="block text-sm py-2 border-b border-white/10 last:border-b-0">Home</a>
+        <a href="about-us.html" class="block text-sm py-2 border-b border-white/10 last:border-b-0">About Us</a>
         <a href="services.html" class="block text-sm py-2 border-b border-white/10 last:border-b-0">Services</a>
+        <a href="gallery.html" class="block text-sm py-2 border-b border-white/10 last:border-b-0">Gallery</a>
         <a href="contact.html" class="block text-sm py-2">Contact Us</a>
     </div>
 
     <!-- Gallery HERO Section -->
-    <header class="relative pt-40 md:pt-52 pb-20 px-6 md:px-12 flex flex-col items-center justify-center text-center overflow-hidden min-h-[50vh]">
+    <header id="main" class="relative pt-40 md:pt-52 pb-20 px-6 md:px-12 flex flex-col items-center justify-center text-center overflow-hidden min-h-[50vh]" tabindex="-1">
         <!-- Abstract Decoration -->
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white rounded-full blur-[150px] pointer-events-none opacity-50"></div>
 
@@ -140,139 +150,103 @@ margin-bottom: 1.5rem;
 
             <!-- Item 1 -->
             <div class="masonry-item gallery-item relative overflow-hidden rounded-3xl cursor-pointer transition-all duration-700 ease-out hover:!opacity-100 hover:!scale-105 hover:!blur-none group-hover:opacity-30 group-hover:blur-[4px] group-hover:scale-[0.98] z-0 hover:z-50 hover:shadow-2xl border border-[#2D2A26]/5" style="animation-delay: 0.1s;">
-                <img src="https://images.unsplash.com/random/800x1200/?senior,care,home&amp;sig=1" alt="Senior Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-[#2D2A26]/60 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
-                    <p class="text-white text-sm font-medium tracking-tight">Compassionate Connections</p>
-                </div>
+                <img src="https://i.ibb.co/Kc8t7jX9/0ddbadba006a773a415a16a2d814da35-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care home" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110" loading="lazy">
             </div>
-
             <!-- Item 2 -->
             <div class="masonry-item gallery-item relative overflow-hidden rounded-3xl cursor-pointer transition-all duration-700 ease-out hover:!opacity-100 hover:!scale-105 hover:!blur-none group-hover:opacity-30 group-hover:blur-[4px] group-hover:scale-[0.98] z-0 hover:z-50 hover:shadow-2xl border border-[#2D2A26]/5" style="animation-delay: 0.15s;">
-                <img src="https://images.unsplash.com/random/800x800/?elderly,laughing&amp;sig=2" alt="Senior Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-[#2D2A26]/60 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
-                    <p class="text-white text-sm font-medium tracking-tight">Daily Joy</p>
-                </div>
+                <img src="https://i.ibb.co/SXHNtVbj/1-1.webp" alt="Hebron Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110" loading="lazy">
             </div>
-
             <!-- Item 3 -->
             <div class="masonry-item gallery-item relative overflow-hidden rounded-3xl cursor-pointer transition-all duration-700 ease-out hover:!opacity-100 hover:!scale-105 hover:!blur-none group-hover:opacity-30 group-hover:blur-[4px] group-hover:scale-[0.98] z-0 hover:z-50 hover:shadow-2xl border border-[#2D2A26]/5" style="animation-delay: 0.2s;">
-                <img src="https://images.unsplash.com/random/800x1000/?living,room,cozy&amp;sig=3" alt="Senior Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-[#2D2A26]/60 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
-                    <p class="text-white text-sm font-medium tracking-tight">Warm Interiors</p>
-                </div>
+                <img src="https://i.ibb.co/Jw886v9n/1.webp" alt="Hebron Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110" loading="lazy">
             </div>
-
             <!-- Item 4 -->
             <div class="masonry-item gallery-item relative overflow-hidden rounded-3xl cursor-pointer transition-all duration-700 ease-out hover:!opacity-100 hover:!scale-105 hover:!blur-none group-hover:opacity-30 group-hover:blur-[4px] group-hover:scale-[0.98] z-0 hover:z-50 hover:shadow-2xl border border-[#2D2A26]/5" style="animation-delay: 0.25s;">
-                <img src="https://images.unsplash.com/random/800x900/?nurse,hands&amp;sig=4" alt="Senior Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-[#2D2A26]/60 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
-                    <p class="text-white text-sm font-medium tracking-tight">Dedicated Support</p>
-                </div>
+                <img src="https://i.ibb.co/s969MGyd/1c3c84141a33e0cced2283b645658d87-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110" loading="lazy">
             </div>
-
             <!-- Item 5 -->
             <div class="masonry-item gallery-item relative overflow-hidden rounded-3xl cursor-pointer transition-all duration-700 ease-out hover:!opacity-100 hover:!scale-105 hover:!blur-none group-hover:opacity-30 group-hover:blur-[4px] group-hover:scale-[0.98] z-0 hover:z-50 hover:shadow-2xl border border-[#2D2A26]/5" style="animation-delay: 0.3s;">
-                <img src="https://images.unsplash.com/random/800x1100/?senior,reading&amp;sig=5" alt="Senior Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110">
+                <img src="https://i.ibb.co/cKMgrBgP/3ef7a64d0ed08504da4b3024d11ed8c0-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110" loading="lazy">
             </div>
-
             <!-- Item 6 -->
             <div class="masonry-item gallery-item relative overflow-hidden rounded-3xl cursor-pointer transition-all duration-700 ease-out hover:!opacity-100 hover:!scale-105 hover:!blur-none group-hover:opacity-30 group-hover:blur-[4px] group-hover:scale-[0.98] z-0 hover:z-50 hover:shadow-2xl border border-[#2D2A26]/5" style="animation-delay: 0.35s;">
-                <img src="https://images.unsplash.com/random/800x700/?garden,sunlight&amp;sig=6" alt="Senior Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110">
+                <img src="https://i.ibb.co/DDPqq0SP/7afa51fe0c3e318f09fe6b0cb799ca04-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110" loading="lazy">
             </div>
-
             <!-- Item 7 -->
             <div class="masonry-item gallery-item relative overflow-hidden rounded-3xl cursor-pointer transition-all duration-700 ease-out hover:!opacity-100 hover:!scale-105 hover:!blur-none group-hover:opacity-30 group-hover:blur-[4px] group-hover:scale-[0.98] z-0 hover:z-50 hover:shadow-2xl border border-[#2D2A26]/5" style="animation-delay: 0.4s;">
-                <img src="https://images.unsplash.com/random/800x1200/?grandpa,smiling&amp;sig=7" alt="Senior Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110">
+                <img src="https://i.ibb.co/prndgr1y/7c6e8e85eebffa55d2bdcdbae9877f05-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110" loading="lazy">
             </div>
-
             <!-- Item 8 -->
             <div class="masonry-item gallery-item relative overflow-hidden rounded-3xl cursor-pointer transition-all duration-700 ease-out hover:!opacity-100 hover:!scale-105 hover:!blur-none group-hover:opacity-30 group-hover:blur-[4px] group-hover:scale-[0.98] z-0 hover:z-50 hover:shadow-2xl border border-[#2D2A26]/5" style="animation-delay: 0.45s;">
-                <img src="https://images.unsplash.com/random/800x900/?wheelchair,accessible&amp;sig=8" alt="Senior Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110">
+                <img src="https://i.ibb.co/JwyWYTrd/7eba510eb53b95c3539a3274b10a1e87-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110" loading="lazy">
             </div>
-
             <!-- Item 9 -->
             <div class="masonry-item gallery-item relative overflow-hidden rounded-3xl cursor-pointer transition-all duration-700 ease-out hover:!opacity-100 hover:!scale-105 hover:!blur-none group-hover:opacity-30 group-hover:blur-[4px] group-hover:scale-[0.98] z-0 hover:z-50 hover:shadow-2xl border border-[#2D2A26]/5" style="animation-delay: 0.5s;">
-                <img src="https://images.unsplash.com/random/800x800/?grandma,baking&amp;sig=9" alt="Senior Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110">
+                <img src="https://i.ibb.co/VcB2C1j6/9c4c1db4ce6c4159633f27fd9259a39e-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110" loading="lazy">
             </div>
-
             <!-- Item 10 -->
             <div class="masonry-item gallery-item relative overflow-hidden rounded-3xl cursor-pointer transition-all duration-700 ease-out hover:!opacity-100 hover:!scale-105 hover:!blur-none group-hover:opacity-30 group-hover:blur-[4px] group-hover:scale-[0.98] z-0 hover:z-50 hover:shadow-2xl border border-[#2D2A26]/5" style="animation-delay: 0.55s;">
-                <img src="https://images.unsplash.com/random/800x1000/?caregiver,hospice&amp;sig=10" alt="Senior Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110">
+                <img src="https://i.ibb.co/7xwZXtZ7/9ee9b50d5a03c530707b40ae10e1e5fd-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110" loading="lazy">
             </div>
-
             <!-- Item 11 -->
             <div class="masonry-item gallery-item relative overflow-hidden rounded-3xl cursor-pointer transition-all duration-700 ease-out hover:!opacity-100 hover:!scale-105 hover:!blur-none group-hover:opacity-30 group-hover:blur-[4px] group-hover:scale-[0.98] z-0 hover:z-50 hover:shadow-2xl border border-[#2D2A26]/5" style="animation-delay: 0.6s;">
-                <img src="https://images.unsplash.com/random/800x1100/?tea,morning&amp;sig=11" alt="Senior Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110">
+                <img src="https://i.ibb.co/j95N77wd/25ff525ad894d80b71ac19f0f87ebf1a-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110" loading="lazy">
             </div>
-
             <!-- Item 12 -->
             <div class="masonry-item gallery-item relative overflow-hidden rounded-3xl cursor-pointer transition-all duration-700 ease-out hover:!opacity-100 hover:!scale-105 hover:!blur-none group-hover:opacity-30 group-hover:blur-[4px] group-hover:scale-[0.98] z-0 hover:z-50 hover:shadow-2xl border border-[#2D2A26]/5" style="animation-delay: 0.65s;">
-                <img src="https://images.unsplash.com/random/800x800/?family,visiting&amp;sig=12" alt="Senior Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110">
+                <img src="https://i.ibb.co/5XXcZ9GQ/36d354edd8bc5454dec3c721f38065be-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110" loading="lazy">
             </div>
-
             <!-- Item 13 -->
             <div class="masonry-item gallery-item relative overflow-hidden rounded-3xl cursor-pointer transition-all duration-700 ease-out hover:!opacity-100 hover:!scale-105 hover:!blur-none group-hover:opacity-30 group-hover:blur-[4px] group-hover:scale-[0.98] z-0 hover:z-50 hover:shadow-2xl border border-[#2D2A26]/5" style="animation-delay: 0.7s;">
-                <img src="https://images.unsplash.com/random/800x1300/?senior,walking&amp;sig=13" alt="Senior Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110">
+                <img src="https://i.ibb.co/nMX1kJnX/180-2nd-Ave-S-Edmonds-WA-98020-USA-Bathroom-IMGL0019-2-740x493.jpg" alt="Bathroom at Hebron Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110" loading="lazy">
             </div>
-
             <!-- Item 14 -->
             <div class="masonry-item gallery-item relative overflow-hidden rounded-3xl cursor-pointer transition-all duration-700 ease-out hover:!opacity-100 hover:!scale-105 hover:!blur-none group-hover:opacity-30 group-hover:blur-[4px] group-hover:scale-[0.98] z-0 hover:z-50 hover:shadow-2xl border border-[#2D2A26]/5" style="animation-delay: 0.75s;">
-                <img src="https://images.unsplash.com/random/800x900/?assisted,living&amp;sig=14" alt="Senior Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110">
+                <img src="https://i.ibb.co/0RYPdtLb/180-2nd-Ave-S-Edmonds-WA-98020-USA-Bathroom-IMGL0022-2.jpg" alt="Bathroom at Hebron Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110" loading="lazy">
             </div>
-
             <!-- Item 15 -->
             <div class="masonry-item gallery-item relative overflow-hidden rounded-3xl cursor-pointer transition-all duration-700 ease-out hover:!opacity-100 hover:!scale-105 hover:!blur-none group-hover:opacity-30 group-hover:blur-[4px] group-hover:scale-[0.98] z-0 hover:z-50 hover:shadow-2xl border border-[#2D2A26]/5" style="animation-delay: 0.8s;">
-                <img src="https://images.unsplash.com/random/800x800/?nursing,home&amp;sig=15" alt="Senior Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110">
+                <img src="https://i.ibb.co/C5MCKdKZ/180-2nd-Ave-S-Edmonds-WA-98020-USA-Bedroom-IMGL0025-2-2000x1333.jpg" alt="Bedroom at Hebron Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110" loading="lazy">
             </div>
-
             <!-- Item 16 -->
             <div class="masonry-item gallery-item relative overflow-hidden rounded-3xl cursor-pointer transition-all duration-700 ease-out hover:!opacity-100 hover:!scale-105 hover:!blur-none group-hover:opacity-30 group-hover:blur-[4px] group-hover:scale-[0.98] z-0 hover:z-50 hover:shadow-2xl border border-[#2D2A26]/5" style="animation-delay: 0.85s;">
-                <img src="https://images.unsplash.com/random/800x1000/?dementia,care&amp;sig=16" alt="Senior Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110">
+                <img src="https://i.ibb.co/F4qtN9vR/180-2nd-Ave-S-Edmonds-WA-98020-USA-Dining-room-IMGL0019-2000x1333.jpg" alt="Dining room at Hebron Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110" loading="lazy">
             </div>
-
             <!-- Item 17 -->
             <div class="masonry-item gallery-item relative overflow-hidden rounded-3xl cursor-pointer transition-all duration-700 ease-out hover:!opacity-100 hover:!scale-105 hover:!blur-none group-hover:opacity-30 group-hover:blur-[4px] group-hover:scale-[0.98] z-0 hover:z-50 hover:shadow-2xl border border-[#2D2A26]/5" style="animation-delay: 0.9s;">
-                <img src="https://images.unsplash.com/random/800x1100/?medical,checkup&amp;sig=17" alt="Senior Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110">
+                <img src="https://i.ibb.co/6JVy48L6/0664c71c16af7db24b96ead62f983742-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110" loading="lazy">
             </div>
-
             <!-- Item 18 -->
             <div class="masonry-item gallery-item relative overflow-hidden rounded-3xl cursor-pointer transition-all duration-700 ease-out hover:!opacity-100 hover:!scale-105 hover:!blur-none group-hover:opacity-30 group-hover:blur-[4px] group-hover:scale-[0.98] z-0 hover:z-50 hover:shadow-2xl border border-[#2D2A26]/5" style="animation-delay: 0.95s;">
-                <img src="https://images.unsplash.com/random/800x700/?healthy,meal,senior&amp;sig=18" alt="Senior Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110">
+                <img src="https://i.ibb.co/rKSNFgxs/9980a06e3da7384cfb7990154b6e0fff-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110" loading="lazy">
             </div>
-
             <!-- Item 19 -->
             <div class="masonry-item gallery-item relative overflow-hidden rounded-3xl cursor-pointer transition-all duration-700 ease-out hover:!opacity-100 hover:!scale-105 hover:!blur-none group-hover:opacity-30 group-hover:blur-[4px] group-hover:scale-[0.98] z-0 hover:z-50 hover:shadow-2xl border border-[#2D2A26]/5" style="animation-delay: 1.0s;">
-                <img src="https://images.unsplash.com/random/800x1200/?senior,dog,therapy&amp;sig=19" alt="Senior Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110">
+                <img src="https://i.ibb.co/R4zqt1Qv/35148c286add27d447b3f47de8d63e36-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110" loading="lazy">
             </div>
-
             <!-- Item 20 -->
             <div class="masonry-item gallery-item relative overflow-hidden rounded-3xl cursor-pointer transition-all duration-700 ease-out hover:!opacity-100 hover:!scale-105 hover:!blur-none group-hover:opacity-30 group-hover:blur-[4px] group-hover:scale-[0.98] z-0 hover:z-50 hover:shadow-2xl border border-[#2D2A26]/5" style="animation-delay: 1.05s;">
-                <img src="https://images.unsplash.com/random/800x900/?playing,cards,elderly&amp;sig=20" alt="Senior Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110">
+                <img src="https://i.ibb.co/7N6MRysd/229071-tiny.jpg" alt="Hebron Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110" loading="lazy">
             </div>
-
             <!-- Item 21 -->
             <div class="masonry-item gallery-item relative overflow-hidden rounded-3xl cursor-pointer transition-all duration-700 ease-out hover:!opacity-100 hover:!scale-105 hover:!blur-none group-hover:opacity-30 group-hover:blur-[4px] group-hover:scale-[0.98] z-0 hover:z-50 hover:shadow-2xl border border-[#2D2A26]/5" style="animation-delay: 1.1s;">
-                <img src="https://images.unsplash.com/random/800x1000/?painting,senior&amp;sig=21" alt="Senior Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110">
+                <img src="https://i.ibb.co/FqkykfVp/a75018ea2db14ad6a04df57fc1851daa-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110" loading="lazy">
             </div>
-
             <!-- Item 22 -->
             <div class="masonry-item gallery-item relative overflow-hidden rounded-3xl cursor-pointer transition-all duration-700 ease-out hover:!opacity-100 hover:!scale-105 hover:!blur-none group-hover:opacity-30 group-hover:blur-[4px] group-hover:scale-[0.98] z-0 hover:z-50 hover:shadow-2xl border border-[#2D2A26]/5" style="animation-delay: 1.15s;">
-                <img src="https://images.unsplash.com/random/800x800/?bed,comfortable,room&amp;sig=22" alt="Senior Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110">
+                <img src="https://i.ibb.co/kVWkpWMy/bb05900f6d09d9a45e229bb4b123d884-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110" loading="lazy">
             </div>
-
             <!-- Item 23 -->
             <div class="masonry-item gallery-item relative overflow-hidden rounded-3xl cursor-pointer transition-all duration-700 ease-out hover:!opacity-100 hover:!scale-105 hover:!blur-none group-hover:opacity-30 group-hover:blur-[4px] group-hover:scale-[0.98] z-0 hover:z-50 hover:shadow-2xl border border-[#2D2A26]/5" style="animation-delay: 1.2s;">
-                <img src="https://images.unsplash.com/random/800x1100/?music,therapy,elderly&amp;sig=23" alt="Senior Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110">
+                <img src="https://i.ibb.co/gM9X7wp4/Blog-Company-News.png" alt="Hebron Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110" loading="lazy">
             </div>
-
             <!-- Item 24 -->
             <div class="masonry-item gallery-item relative overflow-hidden rounded-3xl cursor-pointer transition-all duration-700 ease-out hover:!opacity-100 hover:!scale-105 hover:!blur-none group-hover:opacity-30 group-hover:blur-[4px] group-hover:scale-[0.98] z-0 hover:z-50 hover:shadow-2xl border border-[#2D2A26]/5" style="animation-delay: 1.25s;">
-                <img src="https://images.unsplash.com/random/800x1300/?doctor,smiling,senior&amp;sig=24" alt="Senior Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110">
+                <img src="https://i.ibb.co/4ZWVCtKm/c0ac88a48a0d4319319a25fc8be9071d-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110" loading="lazy">
             </div>
-
             <!-- Item 25 -->
             <div class="masonry-item gallery-item relative overflow-hidden rounded-3xl cursor-pointer transition-all duration-700 ease-out hover:!opacity-100 hover:!scale-105 hover:!blur-none group-hover:opacity-30 group-hover:blur-[4px] group-hover:scale-[0.98] z-0 hover:z-50 hover:shadow-2xl border border-[#2D2A26]/5" style="animation-delay: 1.3s;">
-                <img src="https://images.unsplash.com/random/800x900/?sunroom,plants,home&amp;sig=25" alt="Senior Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110">
+                <img src="https://i.ibb.co/8D5hV51C/c009d933140daa0498fb9471134fe02a-uncropped-scaled-within-1344-1008.webp" alt="Hebron Care" class="w-full h-auto object-cover transform transition-transform duration-1000 hover:scale-110" loading="lazy">
             </div>
 
         </div>
@@ -290,7 +264,7 @@ margin-bottom: 1.5rem;
                 Finding the right home is a significant decision. We invite you to schedule a tour, meet our caregivers, and see the environment for yourself. 
             </p>
 
-            <a href="tel:+1234567890" class="inline-flex items-center gap-3 bg-white hover:bg-stone-200 text-[#2D2A26] px-10 py-4 rounded-full text-base font-normal transition-all transform hover:-translate-y-1 shadow-lg shadow-black/20 mb-20">
+            <a href="tel:+13608437364" class="inline-flex items-center gap-3 bg-white hover:bg-stone-200 text-[#2D2A26] px-10 py-4 rounded-full text-base font-normal transition-all transform hover:-translate-y-1 shadow-lg shadow-black/20 mb-20">
                 <iconify-icon icon="solar:phone-calling-linear" class="text-2xl" stroke-width="1.5"></iconify-icon>
                 Call to Schedule a Tour
             </a>
@@ -305,13 +279,79 @@ margin-bottom: 1.5rem;
                     </p>
                 </div>
                 <div class="flex flex-col gap-3 md:text-right">
-                    <a href="#" class="text-white/40 hover:text-white text-sm font-light transition-colors">Services &amp; Amenities</a>
-                    <a href="#" class="text-white/40 hover:text-white text-sm font-light transition-colors">Privacy Practices</a>
-                    <a href="#" class="text-white/40 hover:text-white text-sm font-light transition-colors">Contact Information</a>
-                    <p class="text-white/20 text-xs mt-4 font-light">© 2024 Hebron Care Adult Family Home LLC. All rights reserved.</p>
+                    <a href="services.html" class="text-white/40 hover:text-white text-sm font-light transition-colors">Services &amp; Amenities</a>
+                    <a href="#" class="text-white/40 hover:text-white text-sm font-light transition-colors" title="Coming soon">Privacy Practices</a>
+                    <a href="contact.html" class="text-white/40 hover:text-white text-sm font-light transition-colors">Contact Information</a>
+                    <p class="text-white/20 text-xs mt-4 font-light">© <span id="copyright-year">2026</span> Hebron Care Adult Family Home LLC. All rights reserved.</p>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- Lightbox -->
+    <div id="gallery-lightbox" class="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image view">
+        <button type="button" id="lightbox-close" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-white/50" aria-label="Close">
+            <iconify-icon icon="solar:close-circle-linear" class="text-2xl"></iconify-icon>
+        </button>
+        <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[90vh] w-auto h-auto object-contain rounded-lg shadow-2xl">
+    </div>
+
+    <script>
+      (function () {
+        var lightbox = document.getElementById('gallery-lightbox');
+        var lightboxImg = document.getElementById('lightbox-img');
+        var lightboxClose = document.getElementById('lightbox-close');
+        function openLightbox(src, alt) {
+          lightboxImg.src = src;
+          lightboxImg.alt = alt || 'Gallery image';
+          lightbox.classList.remove('opacity-0', 'pointer-events-none');
+          lightbox.classList.add('opacity-100');
+          lightbox.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox() {
+          lightbox.classList.add('opacity-0', 'pointer-events-none');
+          lightbox.classList.remove('opacity-100');
+          lightbox.setAttribute('aria-hidden', 'true');
+          document.body.style.overflow = '';
+        }
+        document.querySelectorAll('.gallery-item img').forEach(function (img) {
+          img.closest('.gallery-item').addEventListener('click', function (e) {
+            e.preventDefault();
+            openLightbox(img.src, img.alt);
+          });
+        });
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', function (e) {
+          if (e.target === lightbox) closeLightbox();
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') closeLightbox();
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        var toggles = document.querySelectorAll('[data-nav-toggle]');
+        toggles.forEach(function (btn) {
+          var targetSelector = btn.getAttribute('data-target');
+          var menu = document.querySelector(targetSelector);
+          if (!menu) return;
+          btn.addEventListener('click', function () {
+            var isOpen = !menu.classList.contains('pointer-events-none');
+            if (isOpen) {
+              menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+            } else {
+              menu.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
+            }
+          });
+          menu.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+              menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+            });
+          });
+        });
+      })();
+    </script>
+    <script>document.getElementById('copyright-year') && (document.getElementById('copyright-year').textContent = new Date().getFullYear());</script>
 </body></html>
