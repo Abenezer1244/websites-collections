@@ -1,66 +1,57 @@
 # Contact Form & Email Notifications
 
-The site uses **Formspree** to send form submissions to your email. No backend or server is required.
+The site uses **Web3Forms** (web3forms.com) to send form submissions to your email. No backend or server is required.
 
 ---
 
 ## How it works
 
-1. **Contact form** (Contact page): First name, last name, email, phone, message, privacy consent → you get an email for each submission.
-2. **Tour request forms** (Home and About Us): Name, phone, interest, message → you get an email for each submission.
+1. **Contact form** (Contact page): First name, last name, email, phone, reason, message, privacy consent → you get an email for each submission.
+2. **Tour request forms** (Home and About Us): Name, phone, interested in, message → you get an email for each submission.
 
-Submissions are sent via Formspree’s endpoint. Formspree emails you and can show a success (or error) message on the page without redirecting.
+Submissions are sent to Web3Forms’ API. Web3Forms emails you and the page shows a success (or error) message without redirecting. The sender’s **Email** field is used as the reply-to address for the contact form.
 
 ---
 
 ## Setup (one-time)
 
-### 1. Create a Formspree account
+### 1. Create a Web3Forms access key
 
-1. Go to [formspree.io](https://formspree.io) and sign up (free tier is enough to start).
-2. Create **two forms** in the Formspree dashboard:
-   - One for **Contact** (e.g. “Hebron Care – Contact”).
-   - One for **Tour requests** (e.g. “Hebron Care – Tour”).
-3. For each form, copy the **form ID** from the form’s endpoint, e.g.  
-   `https://formspree.io/f/abcxyz` → the ID is `abcxyz`.
+1. Go to [web3forms.com](https://web3forms.com) and enter your email.
+2. Click **Create Access Key**. You’ll receive an **access key** (a UUID) by email.
+3. You can use **one access key** for both forms. Emails will have different subjects so you can tell them apart.
 
-### 2. Put your form IDs in the site
+### 2. Put your access key in the site
 
-Replace the placeholders in the HTML with your real Formspree form IDs.
+Replace the placeholder in the HTML with your real Web3Forms access key.
 
-**Contact form (Contact page – `contact.html`):**
+**In all three places:**
 
-- Find: `action="https://formspree.io/f/YOUR_FORMSPREE_CONTACT_ID"`
-- Replace `YOUR_FORMSPREE_CONTACT_ID` with the ID of your **Contact** form.
+- **Contact form** (`contact/index.html`): Find `value="YOUR_WEB3FORMS_ACCESS_KEY"` in the hidden `access_key` input and replace it.
+- **Tour form** (`index.html` and `about-us/index.html`): Same – find `value="YOUR_WEB3FORMS_ACCESS_KEY"` in the tour form’s hidden `access_key` input and replace it in both files.
 
-**Tour form (Home and About Us – `index.html` and `about-us.html`):**
+Use the same key in all three, or create a second key at Web3Forms and use one for contact and one for tour if you prefer.
 
-- Find: `action="https://formspree.io/f/YOUR_FORMSPREE_TOUR_ID"`
-- Replace `YOUR_FORMSPREE_TOUR_ID` with the ID of your **Tour** form (same ID in both files).
-
-After that, submissions will be sent to Formspree and you’ll get email notifications.
+After that, submissions will be sent to Web3Forms and you’ll get email notifications.
 
 ---
 
 ## What you receive by email
 
-- **Contact form:** Subject “Hebron Care – New contact form submission”. Body includes: First Name, Last Name, Email, Phone, Message. Reply-To is set to the sender’s email.
+- **Contact form:** Subject “Hebron Care – New contact form submission”. Body includes: First Name, Last Name, Email, Phone, Reason for inquiry, Message. Reply-To is set to the sender’s email (Web3Forms uses the `Email` field).
 - **Tour form:** Subject “Hebron Care – Tour request”. Body includes: Name, Phone, Interested In, Message.
 
-You can change the subject line by editing the hidden input `name="_subject"` in each form.
+You can change the subject line by editing the hidden input `name="subject"` in each form.
 
 ---
 
-## Optional: one form for everything
+## Optional: two access keys
 
-If you prefer a single Formspree form for both contact and tour:
+If you want separate keys for contact vs tour:
 
-1. Use one form in the Formspree dashboard.
-2. Use that form’s ID in both:
-   - `contact.html` (contact form `action`)
-   - `index.html` and `about-us.html` (tour form `action`).
-
-The `_subject` value in each form still differentiates “New contact form submission” vs “Tour request” in your inbox.
+1. Create two access keys at Web3Forms (use your email twice; you’ll get two keys).
+2. In `contact/index.html`, set the contact form’s `access_key` to one key.
+3. In `index.html` and `about-us/index.html`, set the tour form’s `access_key` to the other key.
 
 ---
 
@@ -68,17 +59,17 @@ The `_subject` value in each form still differentiates “New contact form submi
 
 Before going live, confirm on **real devices** (phone and desktop):
 
-1. **Form submissions reach the right inbox/CRM**
-   - Replace `YOUR_FORMSPREE_CONTACT_ID` and `YOUR_FORMSPREE_TOUR_ID` in the site with your real Formspree form IDs (see Setup above).
-   - Submit a test from the **Contact** page and from the **Request a Tour** form (Home or About). Check that the correct email receives each submission and that replies go to the sender when you hit “Reply.”
-   - If you use a CRM or other inbox, ensure Formspree is forwarding there or that you’re checking the inbox that Formspree uses.
+1. **Form submissions reach the right inbox**
+   - Replace `YOUR_WEB3FORMS_ACCESS_KEY` in `contact/index.html`, `index.html`, and `about-us/index.html` with your real Web3Forms access key (see Setup above).
+   - Submit a test from the **Contact** page and from the **Request a Tour** form (Home or About). Check that your email receives each submission and that replies go to the sender when you hit “Reply” on the contact form.
+   - Check spam/junk if you don’t see the first test.
 
 2. **“Call Us” and “Schedule Tour” work**
-   - On a **real phone**: Tap “Call Us Today,” “Schedule Tour” (then use the contact page or call link), and the sticky **Call** button on mobile. All should open the dialer with **(425) 225-5424** (and the provider number where shown).
+   - On a **real phone**: Tap “Call Us Today,” “Schedule Tour,” and the sticky **Call** button on mobile. All should open the dialer with **(425) 225-5424** (and the provider number where shown).
    - On **desktop**: Click the same links; they should open the default phone app or prompt to choose one.
 
 3. **Quick checklist**
-   - [ ] Form IDs replaced in `contact.html`, `index.html`, and `about-us.html`
+   - [ ] Access key replaced in `contact/index.html`, `index.html`, and `about-us/index.html`
    - [ ] Test Contact form submission received in correct inbox
    - [ ] Test Tour form submission received in correct inbox
    - [ ] Call links tested on at least one real phone
@@ -88,13 +79,13 @@ Before going live, confirm on **real devices** (phone and desktop):
 
 ## Troubleshooting
 
-- **No email received:** Check Formspree dashboard for the form and confirm the form ID in the site matches. Check spam.
-- **“Something went wrong” on submit:** Confirm the form ID is correct and that the form is active in Formspree. Check the browser Network tab for the request to `formspree.io`.
-- **Redirect instead of success message:** The script uses Formspree’s JSON API. Ensure you’re not overriding the form with a redirect in Formspree settings if you want the inline success message.
+- **No email received:** Confirm the access key is correct and that you verified your email with Web3Forms. Check spam. Check the Web3Forms dashboard for submission logs.
+- **“Something went wrong” on submit:** Confirm the access key is correct. Check the browser Network tab for the request to `api.web3forms.com/submit` and the response body for an error message.
+- **Bot check:** The forms include a hidden `botcheck` field; Web3Forms can use it for basic spam protection. If you enable hCaptcha later, you may need to add their script (see Web3Forms docs).
 
 ---
 
-## Formspree free tier
+## Web3Forms free tier
 
-- 50 submissions per month on the free plan.
-- For more, upgrade on [formspree.io](https://formspree.io) or use another form backend and point the form `action` (and script) to that endpoint.
+- Free plan includes a generous number of submissions; see [web3forms.com](https://web3forms.com) for current limits.
+- For more submissions or features (e.g. file uploads, webhooks), upgrade on Web3Forms or use another form backend and point the form and script to that endpoint.
