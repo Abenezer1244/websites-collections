@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Hebron Care</title>
+<meta name="description" content="Learn about Hebron Care, our mission, purpose, and dedicated team providing dignified senior care in a warm adult family home in Seattle.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,300&amp;display=swap" rel="stylesheet">
+<style>
+:root {
+--color-sand: #F5F2EB;
+--color-stone: #E6E2DA;
+--color-rock: #2D2A26;
+--color-clay: #A67C52;
+}
+body {
+background-color: var(--color-sand);
+color: var(--color-rock);
+font-family: 'DM Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6, .serif {
+font-family: 'Crimson Pro', serif;
+}
+.text-clay { color: var(--color-clay); }
+.bg-stone { background-color: var(--color-stone); }
+/* Smooth fade for elements */
+.fade-up {
+animation: fadeUp 1s ease-out forwards;
+opacity: 0;
+transform: translateY(1.5rem);
+}
+@keyframes fadeUp {
+to { opacity: 1; transform: translateY(0); }
+}
+/* Custom selection color */
+::selection {
+background: #D4C5B0;
+color: #2D2A26;
+}
+/* Hide scrollbar */
+::-webkit-scrollbar { width: 0; background: transparent; }
+</style></head>
+<body class="antialiased selection:bg-stone-300 font-light text-base bg-[#F5F2EB]">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 px-6 py-6 transition-all duration-300">
+        <div class="max-w-screen-xl mx-auto flex justify-between items-center">
+            <a href="/" class="text-xl tracking-titter font-medium text-rock z-50 relative mix-blend-difference text-white">
+                HC
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8 bg-[#2D2A26]/5 backdrop-blur-md px-8 py-3 rounded-full border border-[#2D2A26]/10 shadow-sm">
+                <a href="/about-us" class="text-sm font-normal text-rock/80 hover:text-rock transition-colors">About Us</a>
+                <a href="/gallery" class="text-sm font-normal text-rock/80 hover:text-rock transition-colors">Gallery</a>
+                <a href="/" class="text-sm font-normal text-rock/80 hover:text-rock transition-colors">Home</a>
+                <a href="/services" class="text-sm font-normal text-rock/80 hover:text-rock transition-colors">Services</a>
+                <a href="/contact" class="text-sm font-normal text-rock/80 hover:text-rock transition-colors">Contact Us</a>
+            </div>
+
+            <a href="#action" class="hidden md:flex items-center gap-2 bg-[#2D2A26] text-[#F5F2EB] px-5 py-2.5 rounded-full text-sm font-normal hover:bg-opacity-90 transition-all">
+                <span>Contact Us</span>
+            </a>
+
+            <!-- Mobile Menu Icon -->
+            <button class="md:hidden z-50 text-rock mix-blend-difference text-white" data-nav-toggle data-target="#mobile-nav">
+                <iconify-icon icon="solar:hamburger-menu-linear" width="1.5rem" stroke-width="1.5"></iconify-icon>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <div id="mobile-nav" class="fixed inset-x-4 top-20 z-40 md:hidden bg-[#2D2A26] text-[#F5F2EB] rounded-3xl shadow-xl border border-[#2D2A26]/20 px-6 py-5 space-y-3 transform origin-top transition-all duration-200 opacity-0 scale-95 pointer-events-none">
+        <a href="/about-us" class="block text-sm py-2 border-b border-white/10 last:border-b-0">About Us</a>
+        <a href="/gallery" class="block text-sm py-2 border-b border-white/10 last:border-b-0">Gallery</a>
+        <a href="/" class="block text-sm py-2 border-b border-white/10 last:border-b-0">Home</a>
+        <a href="/services" class="block text-sm py-2 border-b border-white/10 last:border-b-0">Services</a>
+        <a href="/contact" class="block text-sm py-2">Contact Us</a>
+    </div>
+
+    <!-- About Us HERO Section (New Look) -->
+    <header class="relative pt-40 md:pt-52 pb-24 px-6 md:px-12 flex flex-col items-center text-center overflow-hidden">
+        <!-- Abstract Decoration -->
+        <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-white rounded-full blur-[120px] pointer-events-none -translate-y-1/2 -translate-x-1/4 opacity-60"></div>
+
+        <div class="relative z-10 max-w-4xl mx-auto w-full">
+            <span class="text-clay text-xs font-normal uppercase tracking-widest mb-6 block fade-up">About Hebron Care</span>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl text-[#2D2A26] mb-8 leading-[1.1] font-light tracking-tight serif fade-up" style="animation-delay: 0.1s;">
+                Redefining the meaning <br class="hidden md:block">
+                <span class="italic text-clay">of care.</span>
+            </h1>
+            <p class="text-[#2D2A26]/70 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto mb-16 fade-up" style="animation-delay: 0.2s;">
+                We believe every individual deserves to age with dignity, surrounded by warmth, profound respect, and a community that feels genuinely like family.
+            </p>
+        </div>
+
+        <!-- Featured Hero Image -->
+        <div class="w-full max-w-6xl aspect-[4/3] md:aspect-[21/9] rounded-3xl overflow-hidden relative fade-up shadow-sm border border-[#2D2A26]/5 z-10" style="animation-delay: 0.3s;">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&amp;w=2070&amp;auto=format&amp;fit=crop" alt="Beautiful sunlit home interior" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+        </div>
+    </header>
+
+    <!-- Purpose & Vision Section -->
+    <section id="purpose" class="py-24 px-6 md:px-12 bg-white rounded-[3rem] mx-2 md:mx-6 shadow-sm border border-[#2D2A26]/5 relative z-20 -mt-16 md:-mt-24">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
+            
+            <!-- Purpose -->
+            <div class="flex flex-col h-full">
+                <div class="w-12 h-12 rounded-full bg-[#F5F2EB] flex items-center justify-center mb-8 border border-[#2D2A26]/5">
+                    <iconify-icon icon="solar:heart-angle-linear" width="1.5rem" class="text-clay"></iconify-icon>
+                </div>
+                <h2 class="text-3xl md:text-4xl serif tracking-tight text-[#2D2A26] mb-6">Our Purpose</h2>
+                <p class="text-[#2D2A26]/70 font-light leading-relaxed text-base mb-6">
+                    Our mission is rooted in a single, unwavering belief: that the transition into assisted living should not mean a loss of independence, identity, or comfort. We exist to provide a seamless extension of home for seniors who require assistance with daily living.
+                </p>
+                <p class="text-[#2D2A26]/70 font-light leading-relaxed text-base">
+                    By limiting our residency size, we remove the institutional feel of traditional facilities. Instead, we foster an environment where highly personalized, compassionate care is the daily standard, ensuring that every resident feels seen, heard, and deeply valued.
+                </p>
+            </div>
+
+            <!-- Vision -->
+            <div class="flex flex-col h-full">
+                <div class="w-12 h-12 rounded-full bg-[#F5F2EB] flex items-center justify-center mb-8 border border-[#2D2A26]/5">
+                    <iconify-icon icon="solar:eye-linear" width="1.5rem" class="text-clay"></iconify-icon>
+                </div>
+                <h2 class="text-3xl md:text-4xl serif tracking-tight text-[#2D2A26] mb-6">Our Vision</h2>
+                <p class="text-[#2D2A26]/70 font-light leading-relaxed text-base mb-6">
+                    We envision a future where adult family homes are the premier choice for aging gracefully. A future where the stigma of elder care is entirely erased, replaced by a profound sense of community, joy, and uncompromising medical oversight.
+                </p>
+                <p class="text-[#2D2A26]/70 font-light leading-relaxed text-base">
+                    Through continuous training of our exceptional staff, transparent communication with families, and an unyielding commitment to holistic well-being, we aim to set the absolute gold standard for residential elder care in our community and beyond.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Our Journey Section -->
+    <section id="journey" class="py-32 px-6 md:px-12 bg-[#F5F2EB]">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-24">
+                <span class="text-xs font-normal uppercase tracking-widest text-clay mb-4 block">How It Started</span>
+                <h2 class="text-4xl md:text-5xl serif tracking-tight text-[#2D2A26]">Our Journey</h2>
+                <p class="text-[#2D2A26]/60 font-light mt-4 max-w-xl mx-auto">From a simple, heartfelt realization to the establishment of a sanctuary of care.</p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-16 md:gap-20">
+                <!-- Step 01 -->
+                <div class="flex flex-col md:flex-row gap-6 md:gap-16 items-start group">
+                    <div class="md:w-1/4 shrink-0">
+                        <span class="text-5xl text-clay/30 serif font-light block transition-colors duration-500 group-hover:text-clay">01</span>
+                        <h3 class="text-2xl serif tracking-tight text-[#2D2A26] mt-4">The Calling</h3>
+                    </div>
+                    <div class="md:w-3/4">
+                        <p class="text-[#2D2A26]/70 font-light leading-relaxed text-lg">
+                            Years spent working within the traditional healthcare system opened our eyes to a glaring gap in senior care. While large facilities provided adequate medical attention, they often lacked the warmth, personalization, and intimate human connection that individuals truly need to thrive in their later years. We witnessed the emotional toll that institutional settings took on both the elderly and their anxious families.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w-full h-px bg-stone transition-colors duration-500"></div>
+
+                <!-- Step 02 -->
+                <div class="flex flex-col md:flex-row gap-6 md:gap-16 items-start group">
+                    <div class="md:w-1/4 shrink-0">
+                        <span class="text-5xl text-clay/30 serif font-light block transition-colors duration-500 group-hover:text-clay">02</span>
+                        <h3 class="text-2xl serif tracking-tight text-[#2D2A26] mt-4">The Foundation</h3>
+                    </div>
+                    <div class="md:w-3/4">
+                        <p class="text-[#2D2A26]/70 font-light leading-relaxed text-lg">
+                            Driven by a desire to offer a better alternative, Hebron Care was conceptualized. We sought out a beautiful, accessible residential property and transformed it completely. Every hallway, bathroom, and communal space was meticulously redesigned to meet strict accessibility and safety standards, without ever compromising on the aesthetic comfort of a true, inviting home.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w-full h-px bg-stone transition-colors duration-500"></div>
+
+                <!-- Step 03 -->
+                <div class="flex flex-col md:flex-row gap-6 md:gap-16 items-start group">
+                    <div class="md:w-1/4 shrink-0">
+                        <span class="text-5xl text-clay/30 serif font-light block transition-colors duration-500 group-hover:text-clay">03</span>
+                        <h3 class="text-2xl serif tracking-tight text-[#2D2A26] mt-4">The Present</h3>
+                    </div>
+                    <div class="md:w-3/4">
+                        <p class="text-[#2D2A26]/70 font-light leading-relaxed text-lg">
+                            Today, Hebron Care stands as a beacon of specialized adult family care. We have built an incredible team of licensed caregivers, nurses, and support staff who treat our residents like their own family members. It is a place filled with laughter, shared meals, gentle music, and the profound peace of mind that comes from knowing your loved ones are exactly where they need to be.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our People Section -->
+    <section id="people" class="py-24 px-6 md:px-12 bg-white rounded-[3rem] mx-2 md:mx-6 shadow-sm border border-[#2D2A26]/5 mb-12">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl serif tracking-tight text-[#2D2A26]">Our People</h2>
+                <p class="text-[#2D2A26]/60 font-light mt-6 max-w-2xl mx-auto text-lg leading-relaxed">
+                    A house is built with walls and beams; a home is built with love and dreams. Meet the dedicated individuals whose expertise and empathy make Hebron Care exceptional.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-16">
+                <!-- Person 1 -->
+                <div class="group">
+                    <div class="w-full aspect-[4/5] rounded-2xl overflow-hidden mb-6 bg-[#F5F2EB] relative border border-[#2D2A26]/5">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale hover:grayscale-0" alt="Lead Caregiver">
+                    </div>
+                    <h4 class="text-xl serif tracking-tight text-[#2D2A26]">Elena Rodriguez</h4>
+                    <span class="text-xs text-clay uppercase tracking-widest font-normal block mt-2">Director of Care / RN</span>
+                    <p class="text-sm text-[#2D2A26]/60 font-light mt-4 leading-relaxed">
+                        With over 15 years in geriatric nursing, Elena oversees all medical assessments, medication management, and coordinates closely with primary physicians.
+                    </p>
+                </div>
+
+                <!-- Person 2 -->
+                <div class="group">
+                    <div class="w-full aspect-[4/5] rounded-2xl overflow-hidden mb-6 bg-[#F5F2EB] relative border border-[#2D2A26]/5">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale hover:grayscale-0" alt="Senior Caregiver">
+                    </div>
+                    <h4 class="text-xl serif tracking-tight text-[#2D2A26]">Sarah Jenkins</h4>
+                    <span class="text-xs text-clay uppercase tracking-widest font-normal block mt-2">Lead Resident Assistant</span>
+                    <p class="text-sm text-[#2D2A26]/60 font-light mt-4 leading-relaxed">
+                        Sarah’s intuitive, gentle approach to daily routines ensures our residents feel empowered and respected. She specializes in memory care engagement.
+                    </p>
+                </div>
+
+                <!-- Person 3 -->
+                <div class="group">
+                    <div class="w-full aspect-[4/5] rounded-2xl overflow-hidden mb-6 bg-[#F5F2EB] relative border border-[#2D2A26]/5">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale hover:grayscale-0" alt="Nutrition Specialist">
+                    </div>
+                    <h4 class="text-xl serif tracking-tight text-[#2D2A26]">Marcus Thorne</h4>
+                    <span class="text-xs text-clay uppercase tracking-widest font-normal block mt-2">Culinary &amp; Nutrition</span>
+                    <p class="text-sm text-[#2D2A26]/60 font-light mt-4 leading-relaxed">
+                        Marcus crafts vibrant, home-cooked meals tailored to the complex dietary needs of our residents, ensuring that dining remains a daily joy.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Global Team Highlight -->
+            <div class="mt-8 p-8 md:p-12 bg-[#F5F2EB]/50 rounded-2xl border border-[#2D2A26]/5 flex flex-col md:flex-row items-center justify-between gap-8">
+                <div>
+                    <h4 class="text-2xl serif tracking-tight mb-3 text-[#2D2A26]">Our 24/7 Awake Staff</h4>
+                    <p class="text-base text-[#2D2A26]/70 font-light max-w-2xl leading-relaxed">
+                        Beyond our leadership, every member of our rotating team is fully licensed, thoroughly vetted, and CPR/First Aid certified. They undergo rigorous, ongoing training in elderly care, fall prevention, and compassionate communication. There is always an alert, responsive caregiver available, day or night.
+                    </p>
+                </div>
+                <div class="w-16 h-16 rounded-full bg-white flex shrink-0 items-center justify-center shadow-sm border border-[#2D2A26]/5">
+                    <iconify-icon icon="solar:shield-user-linear" width="2rem" class="text-clay"></iconify-icon>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Take Action Today & Footer Section -->
+    <footer id="action" class="bg-[#2D2A26] text-[#F5F2EB] py-24 px-6 md:px-12 rounded-t-[3rem] relative overflow-hidden">
+        <!-- Abstract Decoration -->
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-clay/5 rounded-full blur-[100px] pointer-events-none -translate-y-1/2 translate-x-1/2"></div>
+
+        <div class="max-w-4xl mx-auto relative z-10 text-center">
+            <span class="text-xs font-normal uppercase tracking-widest text-clay mb-4 block">Take Action Today</span>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl serif mb-6 tracking-tight">Let's discuss their needs.</h2>
+            <p class="text-white/60 text-lg font-light mb-12 max-w-xl mx-auto leading-relaxed">
+                Finding the right home is a significant decision. We invite you to schedule a tour, meet our caregivers, and see the environment for yourself. 
+            </p>
+
+            <a href="tel:+1234567890" class="inline-flex items-center gap-3 bg-white hover:bg-stone-200 text-[#2D2A26] px-10 py-4 rounded-full text-base font-normal transition-all transform hover:-translate-y-1 shadow-lg shadow-black/20 mb-20">
+                <iconify-icon icon="solar:phone-calling-linear" width="1.5rem" stroke-width="1.5"></iconify-icon>
+                Call to Schedule a Tour
+            </a>
+
+            <!-- Footer Bottom -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left border-t border-white/10 pt-12 max-w-3xl mx-auto">
+                <div>
+                    <h4 class="font-serif italic text-2xl mb-2 text-clay tracking-tight">Hebron Care</h4>
+                    <p class="text-white/40 text-sm font-light leading-relaxed">
+                        Adult Family Home LLC.<br>
+                        Providing compassionate, residential care.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-3 md:text-right">
+                    <a href="#" class="text-white/40 hover:text-white text-sm font-light transition-colors">Services &amp; Amenities</a>
+                    <a href="#" class="text-white/40 hover:text-white text-sm font-light transition-colors">Privacy Practices</a>
+                    <a href="#" class="text-white/40 hover:text-white text-sm font-light transition-colors">Contact Information</a>
+                    <p class="text-white/20 text-xs mt-4 font-light">© 2024 Hebron Care Adult Family Home LLC. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body></html>

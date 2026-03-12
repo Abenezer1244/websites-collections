@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hebron Care | Adult Family Home</title>
+<meta name="description" content="Hebron Care Adult Family Home in Seattle provides compassionate, residential senior care with 24/7 support, high staff ratios, and a warm, home-like environment.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,300&amp;family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&amp;display=swap" rel="stylesheet">
+<style>
+:root {
+--color-sand: #F5F2EB;
+--color-stone: #E6E2DA;
+--color-rock: #2D2A26;
+--color-clay: #A67C52;
+}
+body {
+background-color: var(--color-sand);
+color: var(--color-rock);
+font-family: 'DM Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6, .serif {
+font-family: 'Crimson Pro', serif;
+}
+.text-clay { color: var(--color-clay); }
+.bg-stone { background-color: var(--color-stone); }
+/* Smooth fade for elements */
+.fade-up {
+animation: fadeUp 1s ease-out forwards;
+opacity: 0;
+transform: translateY(1.5rem);
+}
+@keyframes fadeUp {
+to { opacity: 1; transform: translateY(0); }
+}
+/* Custom selection color */
+::selection {
+background: #D4C5B0;
+color: #2D2A26;
+}
+/* Hide scrollbar */
+::-webkit-scrollbar { width: 0; background: transparent; }
+</style><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NursingHome",
+  "name": "Hebron Care Adult Family Home",
+  "url": "https://3hebroncareafh.site/",
+  "@id": "https://3hebroncareafh.site/#hebron-care",
+  "telephone": "+1-555-123-4567",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "123 Haven Way",
+    "addressLocality": "Seattle",
+    "addressRegion": "WA",
+    "postalCode": "98101",
+    "addressCountry": "US"
+  },
+  "image": "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=1600&auto=format&fit=crop",
+  "priceRange": "$$",
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "09:00",
+    "closes": "18:00"
+  }],
+  "sameAs": [
+    "https://www.google.com/maps/search/?api=1&query=Hebron+Care+Adult+Family+Home+Seattle"
+  ]
+}
+</script></head>
+<body class="antialiased selection:bg-stone-300 font-light text-base">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 px-6 py-6 transition-all duration-300">
+        <div class="max-w-screen-xl mx-auto flex justify-between items-center">
+            <a href="/" class="text-xl tracking-titter font-medium text-rock z-50 relative mix-blend-difference text-white">
+                HC
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8 bg-white/10 backdrop-blur-md px-8 py-3 rounded-full border border-white/20 shadow-sm">
+                <a href="/about-us" class="text-sm font-normal text-rock/80 hover:text-rock transition-colors">About Us</a>
+                <a href="/gallery" class="text-sm font-normal text-rock/80 hover:text-rock transition-colors">Gallery</a>
+                <a href="/" class="text-sm font-normal text-rock/80 hover:text-rock transition-colors">Home</a>
+                <a href="/services" class="text-sm font-normal text-rock/80 hover:text-rock transition-colors">Services</a>
+                <a href="/contact" class="text-sm font-normal text-rock/80 hover:text-rock transition-colors">Contact Us</a>
+            </div>
+
+            <a href="#action" class="hidden md:flex items-center gap-2 bg-[#2D2A26] text-[#F5F2EB] px-5 py-2.5 rounded-full text-sm font-normal hover:bg-opacity-90 transition-all">
+                <span>Contact Us</span>
+            </a>
+
+            <!-- Mobile Menu Icon -->
+            <button class="md:hidden z-50 text-rock mix-blend-difference text-white" data-nav-toggle data-target="#mobile-nav">
+                <iconify-icon icon="solar:hamburger-menu-linear" width="1.5rem" stroke-width="1.5"></iconify-icon>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <div id="mobile-nav" class="fixed inset-x-4 top-20 z-40 md:hidden bg-[#2D2A26] text-[#F5F2EB] rounded-3xl shadow-xl border border-white/10 px-6 py-5 space-y-3 transform origin-top transition-all duration-200 opacity-0 scale-95 pointer-events-none">
+        <a href="/about-us" class="block text-sm py-2 border-b border-white/10 last:border-b-0">About Us</a>
+        <a href="/gallery" class="block text-sm py-2 border-b border-white/10 last:border-b-0">Gallery</a>
+        <a href="/" class="block text-sm py-2 border-b border-white/10 last:border-b-0">Home</a>
+        <a href="/services" class="block text-sm py-2 border-b border-white/10 last:border-b-0">Services</a>
+        <a href="/contact" class="block text-sm py-2">Contact Us</a>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen w-full overflow-hidden flex items-center justify-center">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&amp;w=2069&amp;auto=format&amp;fit=crop" alt="Comfortable home interior" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-[#F5F2EB]"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-6 max-w-3xl mx-auto mt-12 fade-up" style="animation-delay: 0.2s;">
+            <p class="text-white/90 text-sm uppercase tracking-[0.2em] mb-6 font-normal">Hebron Care LLC</p>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl text-[#F5F2EB] mb-6 leading-tight font-light tracking-tight">
+                Comfort. Care. <br> <span class="italic">Family.</span>
+            </h1>
+            <p class="text-white/90 text-lg md:text-xl font-light leading-relaxed max-w-lg mx-auto mb-10">
+                A warm, residential adult family home where your loved ones receive personalized attention, dignity, and a true sense of belonging.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#action" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-[#F5F2EB] text-[#2D2A26] px-8 py-4 rounded-full text-sm font-normal hover:bg-white transition-colors">
+                    <iconify-icon icon="solar:phone-linear" width="1.25rem" stroke-width="1.5"></iconify-icon>
+                    Schedule a Visit
+                </a>
+                <a href="#expertise" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-full text-sm font-normal hover:bg-white/20 transition-colors">
+                    View our care
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-24 px-6 md:px-12 bg-[#F5F2EB]">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="inline-block p-3 rounded-full border border-[#2D2A26]/10 mb-8 text-[#2D2A26]/60">
+                    <iconify-icon icon="solar:home-smile-linear" width="1.5rem" stroke-width="1.5"></iconify-icon>
+                </div>
+                <h2 class="text-3xl md:text-5xl leading-tight mb-6 font-light text-[#2D2A26] tracking-tight serif">
+                    More than just care. <br>
+                    <span class="italic text-clay">A true home.</span>
+                </h2>
+                <p class="text-lg text-[#2D2A26]/70 font-light max-w-2xl mx-auto leading-relaxed">
+                    Transitioning to care shouldn't mean losing the comfort of a home. We provide a safe, intimate environment where residents are treated like family, supported by professional caregivers around the clock.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+                <div class="p-8 bg-white rounded-2xl shadow-sm border border-[#2D2A26]/5">
+                    <iconify-icon icon="solar:heart-pulse-linear" width="2rem" class="text-clay mb-4"></iconify-icon>
+                    <h4 class="text-xl font-normal mb-3 tracking-tight">24/7 Support</h4>
+                    <p class="text-sm text-[#2D2A26]/60 leading-relaxed font-light">
+                        Awake staff available day and night to assist with mobility, personal hygiene, and any sudden needs that arise, ensuring complete peace of mind.
+                    </p>
+                </div>
+                <div class="p-8 bg-white rounded-2xl shadow-sm border border-[#2D2A26]/5">
+                    <iconify-icon icon="solar:users-group-rounded-linear" width="2rem" class="text-clay mb-4"></iconify-icon>
+                    <h4 class="text-xl font-normal mb-3 tracking-tight">High Staff Ratio</h4>
+                    <p class="text-sm text-[#2D2A26]/60 leading-relaxed font-light">
+                        By keeping our community small, our caregivers form meaningful bonds with each resident, adapting to their unique preferences and routines.
+                    </p>
+                </div>
+                <div class="p-8 bg-white rounded-2xl shadow-sm border border-[#2D2A26]/5">
+                    <iconify-icon icon="solar:chef-hat-linear" width="2rem" class="text-clay mb-4"></iconify-icon>
+                    <h4 class="text-xl font-normal mb-3 tracking-tight">Nutritious Dining</h4>
+                    <p class="text-sm text-[#2D2A26]/60 leading-relaxed font-light">
+                        Home-cooked, balanced meals prepared daily. We accommodate specific dietary restrictions and preferences to ensure dining is always a joy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Expertise Section -->
+    <section id="expertise" class="py-20 px-6 md:px-12 bg-white rounded-[3rem] mx-2 md:mx-6 shadow-sm border border-[#2D2A26]/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-3xl md:text-4xl serif tracking-tight text-[#2D2A26]">Our Expertise</h2>
+                <p class="text-[#2D2A26]/60 font-light mt-4">Comprehensive care tailored to individual needs.</p>
+            </div>
+
+            <!-- Expertise 1 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center mb-24">
+                <div class="order-2 md:order-1">
+                    <span class="text-xs font-normal uppercase tracking-widest text-clay mb-4 block">Personalized Support</span>
+                    <h3 class="text-3xl md:text-4xl mb-6 serif tracking-tight">Activities of Daily Living.</h3>
+                    <p class="text-[#2D2A26]/70 mb-6 leading-relaxed font-light">
+                        We assist with all daily routines respectfully and gently. Our goal is to maintain dignity while providing the necessary support for bathing, dressing, grooming, and mobility. We adapt to the resident's pace, never rushing the process.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-sm text-[#2D2A26]/80 font-light">
+                            <iconify-icon icon="solar:hand-stars-linear" width="1.125rem" class="text-clay"></iconify-icon>
+                            Gentle bathing &amp; dressing assistance
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-[#2D2A26]/80 font-light">
+                            <iconify-icon icon="solar:wheelchair-linear" width="1.125rem" class="text-clay"></iconify-icon>
+                            Safe transferring &amp; mobility support
+                        </li>
+                    </ul>
+                </div>
+                <div class="order-1 md:order-2 h-[400px] rounded-2xl overflow-hidden relative">
+                    <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg" class="w-full h-full object-cover" alt="Caregiver holding hands">
+                </div>
+            </div>
+
+            <!-- Expertise 2 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center mb-24">
+                <div class="h-[400px] rounded-2xl overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover" alt="Medical checking">
+                </div>
+                <div>
+                    <span class="text-xs font-normal uppercase tracking-widest text-clay mb-4 block">Medical Oversight</span>
+                    <h3 class="text-3xl md:text-4xl mb-6 serif tracking-tight">Health &amp; Medication Management.</h3>
+                    <p class="text-[#2D2A26]/70 mb-6 leading-relaxed font-light">
+                        Managing medications can be complex. Our trained staff handles storage, dispensing, and logging of all prescriptions. We closely monitor vital signs and coordinate seamlessly with primary care physicians and home health agencies.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-sm text-[#2D2A26]/80 font-light">
+                            <iconify-icon icon="solar:pill-linear" width="1.125rem" class="text-clay"></iconify-icon>
+                            Accurate medication administration
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-[#2D2A26]/80 font-light">
+                            <iconify-icon icon="solar:stethoscope-linear" width="1.125rem" class="text-clay"></iconify-icon>
+                            Coordination with healthcare providers
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Expertise 3 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
+                <div class="order-2 md:order-1">
+                    <span class="text-xs font-normal uppercase tracking-widest text-clay mb-4 block">Quality of Life</span>
+                    <h3 class="text-3xl md:text-4xl mb-6 serif tracking-tight">Engagement &amp; Well-being.</h3>
+                    <p class="text-[#2D2A26]/70 mb-6 leading-relaxed font-light">
+                        A fulfilling life goes beyond physical health. We encourage social interaction through group activities, gentle exercises, and hobbies. Our home features comfortable common areas designed for relaxation and family visits.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-sm text-[#2D2A26]/80 font-light">
+                            <iconify-icon icon="solar:music-notes-linear" width="1.125rem" class="text-clay"></iconify-icon>
+                            Music therapy and gentle exercises
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-[#2D2A26]/80 font-light">
+                            <iconify-icon icon="solar:sofa-linear" width="1.125rem" class="text-clay"></iconify-icon>
+                            Inviting spaces for family gatherings
+                        </li>
+                    </ul>
+                </div>
+                <div class="order-1 md:order-2 h-[400px] rounded-2xl overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover" alt="Seniors enjoying time">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section id="testimonial" class="py-24 px-6 md:px-12 bg-[#E6E2DA]">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="w-full md:w-5/12 aspect-square md:aspect-[4/5] rounded-2xl overflow-hidden bg-stone relative">
+                    <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover mix-blend-multiply opacity-90" alt="Happy family member">
+                </div>
+                <div class="w-full md:w-7/12">
+                    <span class="text-xs font-normal uppercase tracking-widest text-clay mb-4 block">Family Testimonial</span>
+                    <h2 class="text-3xl md:text-5xl serif mb-8 tracking-tight leading-tight">"They gave us our peace of mind back."</h2>
+                    <p class="text-lg text-[#2D2A26]/80 font-light mb-8 italic leading-relaxed">
+                        "Moving our father into care was the hardest decision we've ever made. From the moment we walked into Hebron Care, the guilt faded. It didn't feel like a facility; it felt like a home. The staff knows exactly how he likes his coffee, they sit and listen to his stories, and the medical oversight is impeccable. We can finally sleep at night knowing he is safe, loved, and treated with absolute dignity."
+                    </p>
+                    <div class="flex items-center gap-4 border-t border-[#2D2A26]/10 pt-6">
+                        <div class="w-10 h-10 rounded-full bg-[#2D2A26] flex items-center justify-center text-[#F5F2EB] text-sm serif">S</div>
+                        <div>
+                            <p class="text-sm font-normal text-[#2D2A26]">Sarah Jenkins</p>
+                            <p class="text-xs font-light text-[#2D2A26]/60">Daughter of a Resident</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 px-6 md:px-12 bg-[#F5F2EB]">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl md:text-4xl serif mb-12 text-center tracking-tight">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4">
+                <!-- Q1 -->
+                <details class="group bg-white rounded-xl p-6 cursor-pointer border border-transparent hover:border-[#2D2A26]/5 transition-all open:ring-1 open:ring-[#2D2A26]/5">
+                    <summary class="flex justify-between items-center font-normal text-lg tracking-tight list-none">
+                        What levels of care do you provide?
+                        <span class="transition group-open:rotate-180 text-clay">
+                            <iconify-icon icon="solar:alt-arrow-down-linear" width="1.25rem"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div class="text-[#2D2A26]/70 mt-4 leading-relaxed font-light text-sm border-t border-gray-100 pt-4">
+                        We provide comprehensive care ranging from minimal assistance with daily activities to more intensive support for mobility issues and age-related conditions. We conduct a thorough assessment before admission to ensure we can fully meet your loved one's needs.
+                    </div>
+                </details>
+
+                <!-- Q2 -->
+                <details class="group bg-white rounded-xl p-6 cursor-pointer border border-transparent hover:border-[#2D2A26]/5 transition-all open:ring-1 open:ring-[#2D2A26]/5">
+                    <summary class="flex justify-between items-center font-normal text-lg tracking-tight list-none">
+                        Are meals tailored to specific dietary requirements?
+                        <span class="transition group-open:rotate-180 text-clay">
+                            <iconify-icon icon="solar:alt-arrow-down-linear" width="1.25rem"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div class="text-[#2D2A26]/70 mt-4 leading-relaxed font-light text-sm border-t border-gray-100 pt-4">
+                        Yes. All our meals are home-cooked and can be customized to accommodate diabetic, low-sodium, pureed, or allergy-specific diets. We focus on both nutrition and flavor to ensure residents enjoy their dining experience.
+                    </div>
+                </details>
+
+                <!-- Q3 -->
+                <details class="group bg-white rounded-xl p-6 cursor-pointer border border-transparent hover:border-[#2D2A26]/5 transition-all open:ring-1 open:ring-[#2D2A26]/5">
+                    <summary class="flex justify-between items-center font-normal text-lg tracking-tight list-none">
+                        What are your visiting hours?
+                        <span class="transition group-open:rotate-180 text-clay">
+                            <iconify-icon icon="solar:alt-arrow-down-linear" width="1.25rem"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div class="text-[#2D2A26]/70 mt-4 leading-relaxed font-light text-sm border-t border-gray-100 pt-4">
+                        We believe family involvement is crucial. We have open visiting hours during the day and early evening. We simply ask that visitors respect the privacy and quiet times of other residents in the home.
+                    </div>
+                </details>
+
+                <!-- Q4 -->
+                <details class="group bg-white rounded-xl p-6 cursor-pointer border border-transparent hover:border-[#2D2A26]/5 transition-all open:ring-1 open:ring-[#2D2A26]/5">
+                    <summary class="flex justify-between items-center font-normal text-lg tracking-tight list-none">
+                        How do you handle medical emergencies?
+                        <span class="transition group-open:rotate-180 text-clay">
+                            <iconify-icon icon="solar:alt-arrow-down-linear" width="1.25rem"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div class="text-[#2D2A26]/70 mt-4 leading-relaxed font-light text-sm border-t border-gray-100 pt-4">
+                        Our staff is trained in First Aid and CPR. In the event of an emergency, we immediately contact emergency services (911), followed by the resident's primary physician and designated family members.
+                    </div>
+                </details>
+
+                <!-- Q5 -->
+                <details class="group bg-white rounded-xl p-6 cursor-pointer border border-transparent hover:border-[#2D2A26]/5 transition-all open:ring-1 open:ring-[#2D2A26]/5">
+                    <summary class="flex justify-between items-center font-normal text-lg tracking-tight list-none">
+                        Do you coordinate with home health or hospice agencies?
+                        <span class="transition group-open:rotate-180 text-clay">
+                            <iconify-icon icon="solar:alt-arrow-down-linear" width="1.25rem"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div class="text-[#2D2A26]/70 mt-4 leading-relaxed font-light text-sm border-t border-gray-100 pt-4">
+                        Absolutely. We work closely with visiting nurses, physical therapists, and hospice care providers to ensure residents receive comprehensive medical support without having to leave the comfort of the home.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Take Action Today & Footer Section -->
+    <footer id="action" class="bg-[#2D2A26] text-[#F5F2EB] py-24 px-6 md:px-12 rounded-t-[3rem] mt-12 relative overflow-hidden">
+        <!-- Abstract Decoration -->
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-clay/5 rounded-full blur-[100px] pointer-events-none -translate-y-1/2 translate-x-1/2"></div>
+
+        <div class="max-w-4xl mx-auto relative z-10 text-center">
+            <span class="text-xs font-normal uppercase tracking-widest text-clay mb-4 block">Take Action Today</span>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl serif mb-6 tracking-tight">Let's discuss their needs.</h2>
+            <p class="text-white/60 text-lg font-light mb-12 max-w-xl mx-auto leading-relaxed">
+                Finding the right home is a significant decision. We invite you to schedule a tour, meet our caregivers, and see the environment for yourself. 
+            </p>
+
+            <a href="tel:+1234567890" class="inline-flex items-center gap-3 bg-white hover:bg-stone-200 text-[#2D2A26] px-10 py-4 rounded-full text-base font-normal transition-all transform hover:-translate-y-1 shadow-lg shadow-black/20 mb-20">
+                <iconify-icon icon="solar:phone-calling-linear" width="1.5rem" stroke-width="1.5"></iconify-icon>
+                Call to Schedule a Tour
+            </a>
+
+            <!-- Footer Bottom -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left border-t border-white/10 pt-12 max-w-3xl mx-auto">
+                <div>
+                    <h4 class="font-serif italic text-2xl mb-2 text-clay tracking-tight">Hebron Care</h4>
+                    <p class="text-white/40 text-sm font-light leading-relaxed">
+                        Adult Family Home LLC.<br>
+                        Providing compassionate, residential care.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-3 md:text-right">
+                    <a href="#" class="text-white/40 hover:text-white text-sm font-light transition-colors">Services &amp; Amenities</a>
+                    <a href="#" class="text-white/40 hover:text-white text-sm font-light transition-colors">Privacy Practices</a>
+                    <a href="#" class="text-white/40 hover:text-white text-sm font-light transition-colors">Contact Information</a>
+                    <p class="text-white/20 text-xs mt-4 font-light">© 2024 Hebron Care Adult Family Home LLC. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+<script>
+  (function () {
+    const toggles = document.querySelectorAll('[data-nav-toggle]');
+    toggles.forEach((btn) => {
+      const targetSelector = btn.getAttribute('data-target');
+      const menu = document.querySelector(targetSelector);
+      if (!menu) return;
+      btn.addEventListener('click', () => {
+        const isOpen = !menu.classList.contains('pointer-events-none');
+        if (isOpen) {
+          menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+        } else {
+          menu.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
+        }
+      });
+    });
+  })();
+</script>
+</body></html>
