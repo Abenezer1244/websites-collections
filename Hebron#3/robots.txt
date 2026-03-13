@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://3hebroncareafh.site/sitemap.xml

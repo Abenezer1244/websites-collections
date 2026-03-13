@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<title>Contact Us | Hebron Care</title>
+<title>Contact Us | Adult Family Home — Everett, WA | Hebron Care</title>
 <meta name="description" content="Contact Hebron Care Adult Family Home in Everett, WA to discuss care options, ask questions, or schedule a tour for your loved one.">
 <meta property="og:title" content="Contact Us | Hebron Care">
 <meta property="og:description" content="Contact Hebron Care Adult Family Home in Everett, WA to discuss care options, ask questions, or schedule a tour for your loved one.">
@@ -119,11 +119,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
             <!-- Desktop Menu - pill style -->
             <div class="hidden md:flex flex-1 justify-center">
-                <div class="inline-flex items-center gap-16 px-14 py-2 rounded-full bg-white/15 border border-white/60 shadow-[0_26px_70px_rgba(15,23,42,0.35)] backdrop-blur-3xl">
-                    <a href="/about-us/" class="text-sm md:text-base font-normal text-[#2D2A26]/55 hover:text-[#2D2A26] transition-colors">About Us</a>
-                    <a href="/services/" class="text-sm md:text-base font-normal text-[#2D2A26]/55 hover:text-[#2D2A26] transition-colors">Services</a>
-                    <a href="/" class="text-sm md:text-base font-normal text-[#2D2A26]/55 hover:text-[#2D2A26] transition-colors">Home</a>
-                    <a href="/gallery/" class="text-sm md:text-base font-normal text-[#2D2A26]/55 hover:text-[#2D2A26] transition-colors">Gallery</a>
+                <div class="inline-flex items-center gap-12 px-12 py-2 rounded-full bg-white/15 border border-white/60 backdrop-blur-3xl -translate-y-1 shadow-[0_2px_4px_rgba(45,42,38,0.06),0_8px_16px_rgba(45,42,38,0.08),0_20px_40px_-10px_rgba(45,42,38,0.12),0_32px_64px_-20px_rgba(45,42,38,0.18),0_40px_80px_-24px_rgba(45,42,38,0.22)]">
+                    <a href="/" class="text-sm md:text-base font-normal text-[#2D2A26]/80 hover:text-[#2D2A26] transition-colors">Home</a>
+                    <a href="/about-us/" class="text-sm md:text-base font-normal text-[#2D2A26]/80 hover:text-[#2D2A26] transition-colors">About Us</a>
+                    <a href="/services/" class="text-sm md:text-base font-normal text-[#2D2A26]/80 hover:text-[#2D2A26] transition-colors">Services</a>
+                    <a href="/gallery/" class="text-sm md:text-base font-normal text-[#2D2A26]/80 hover:text-[#2D2A26] transition-colors">Gallery</a>
+                    <a href="/pricing/" class="text-sm md:text-base font-normal text-[#2D2A26]/80 hover:text-[#2D2A26] transition-colors">Pricing</a>
                     <a href="/contact/" class="text-sm md:text-base font-medium text-[#2D2A26] bg-white px-4 py-1.5 rounded-full shadow-sm hover:bg-white hover:text-[#2D2A26] transition-colors">Contact</a>
                 </div>
             </div>
@@ -134,24 +135,33 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
             </a>
 
             <!-- Mobile Menu Icon -->
-            <button class="md:hidden z-50 text-clay" data-nav-toggle data-target="#mobile-nav">
+            <button type="button" class="md:hidden z-50 text-clay" data-nav-toggle data-target="#mobile-nav" aria-label="Open navigation menu">
                 <iconify-icon icon="solar:hamburger-menu-linear" width="1.5rem" stroke-width="1.5"></iconify-icon>
             </button>
         </div>
     </nav>
 
+    <div id="mobile-nav-overlay" class="fixed inset-0 z-[38] md:hidden bg-black/30 opacity-0 pointer-events-none transition-opacity duration-200" data-nav-overlay aria-hidden="true"></div>
     <!-- Mobile Nav -->
     <div id="mobile-nav" class="fixed inset-x-4 top-20 z-40 md:hidden bg-[#2D2A26] text-[#F5F2EB] rounded-3xl shadow-xl border border-white/10 px-6 py-5 space-y-3 transform origin-top transition-all duration-200 opacity-0 scale-95 pointer-events-none serif">
+        <a href="/" class="block text-xl font-medium py-2 border-b border-white/10">Home</a>
         <a href="/about-us/" class="block text-base py-2 border-b border-white/10">About Us</a>
         <a href="/services/" class="block text-base py-2 border-b border-white/10">Services</a>
-        <a href="/" class="block text-xl font-medium py-2 border-b border-white/10">Home</a>
         <a href="/gallery/" class="block text-base py-2 border-b border-white/10">Gallery</a>
+        <a href="/pricing/" class="block text-base py-2 border-b border-white/10">Pricing</a>
         <a href="/contact/" class="block text-base font-medium text-white py-2 border-b-2 border-white/90">Contact</a>
         <a href="/contact/" class="block text-center bg-[#A67C52] text-white py-2.5 rounded-full mt-2">Schedule a Tour</a>
     </div>
 
     <!-- Contact HERO Section -->
     <header id="main" class="relative pt-40 md:pt-52 pb-16 px-6 md:px-12 flex flex-col items-center justify-center text-center overflow-hidden" tabindex="-1">
+        <nav aria-label="Breadcrumb" class="absolute top-24 left-6 md:left-12 z-10 text-left">
+            <ol class="flex items-center gap-2 text-sm font-light text-[#2D2A26]/70" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/" itemprop="item" class="hover:text-clay transition-colors"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+                <li aria-hidden="true">/</li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name">Contact</span><meta itemprop="position" content="2"></li>
+            </ol>
+        </nav>
         <!-- Abstract Decoration -->
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#A67C52] rounded-full blur-[180px] pointer-events-none opacity-20"></div>
 
@@ -176,7 +186,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
             <!-- Send a Message Form -->
             <div class="lg:col-span-7 bg-white/60 backdrop-blur-xl border border-[#2D2A26]/5 p-8 md:p-12 rounded-[2.5rem] shadow-sm fade-up-item" style="animation-delay: 0.2s;">
                 <h3 class="text-2xl md:text-3xl serif tracking-tight text-[#2D2A26] mb-2">Send a message</h3>
-                <p class="text-sm font-light text-[#2D2A26]/60 mb-8">Fill out the form below and we'll get back to you within 24 hours.</p>
+                <p class="text-sm font-light text-[#2D2A26]/60 mb-8">Fill out the form below. We respond within <strong>24 hours</strong> (usually same day on weekdays).</p>
 
                 <!-- Success message (shown in place of form) -->
                 <div id="form-success" class="hidden text-center py-10 px-6">
@@ -207,13 +217,23 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
                     </div>
 
                     <div class="space-y-2">
-                        <label for="phone" class="text-xs font-medium text-[#2D2A26]/80 ml-1">Phone Number (Optional)</label>
-                        <input type="tel" id="phone" name="phone" class="w-full bg-white/80 border border-[#2D2A26]/10 rounded-2xl px-5 py-3.5 text-sm font-light text-[#2D2A26] focus:outline-none focus:ring-2 focus:ring-[#A67C52]/50 focus:border-[#A67C52] transition-all" placeholder="(360) 843-7364">
+                        <label for="phone" class="text-xs font-medium text-[#2D2A26]/80 ml-1">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="w-full bg-white/80 border border-[#2D2A26]/10 rounded-2xl px-5 py-3.5 text-sm font-light text-[#2D2A26] focus:outline-none focus:ring-2 focus:ring-[#A67C52]/50 focus:border-[#A67C52] transition-all" placeholder="(360) 843-7364" required>
                     </div>
 
                     <div class="space-y-2">
-                        <label for="message" class="text-xs font-medium text-[#2D2A26]/80 ml-1">Your Message</label>
-                        <textarea id="message" name="message" rows="4" class="w-full bg-white/80 border border-[#2D2A26]/10 rounded-2xl px-5 py-3.5 text-sm font-light text-[#2D2A26] focus:outline-none focus:ring-2 focus:ring-[#A67C52]/50 focus:border-[#A67C52] transition-all resize-none" placeholder="How can we help you today?" required></textarea>
+                        <label for="careNeeds" class="text-xs font-medium text-[#2D2A26]/80 ml-1">Care needs or questions</label>
+                        <textarea id="careNeeds" name="careNeeds" rows="3" class="w-full bg-white/80 border border-[#2D2A26]/10 rounded-2xl px-5 py-3.5 text-sm font-light text-[#2D2A26] focus:outline-none focus:ring-2 focus:ring-[#A67C52]/50 focus:border-[#A67C52] transition-all resize-none" placeholder="e.g. memory care, mobility support, medication management, timeline"></textarea>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label for="moveInDate" class="text-xs font-medium text-[#2D2A26]/80 ml-1">Expected move-in date (optional)</label>
+                        <input type="text" id="moveInDate" name="moveInDate" class="w-full bg-white/80 border border-[#2D2A26]/10 rounded-2xl px-5 py-3.5 text-sm font-light text-[#2D2A26] focus:outline-none focus:ring-2 focus:ring-[#A67C52]/50 focus:border-[#A67C52] transition-all" placeholder="e.g. Within 2 weeks, Next month, Flexible">
+                    </div>
+
+                    <div class="space-y-2">
+                        <label for="message" class="text-xs font-medium text-[#2D2A26]/80 ml-1">Your message</label>
+                        <textarea id="message" name="message" rows="4" class="w-full bg-white/80 border border-[#2D2A26]/10 rounded-2xl px-5 py-3.5 text-sm font-light text-[#2D2A26] focus:outline-none focus:ring-2 focus:ring-[#A67C52]/50 focus:border-[#A67C52] transition-all resize-none" placeholder="Anything else you'd like us to know?" required></textarea>
                     </div>
 
                     <!-- Custom Toggle -->
@@ -246,9 +266,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
                     </div>
                     <div>
                         <h4 class="text-sm font-medium text-[#2D2A26] mb-1">Call Us</h4>
-                        <p class="text-sm font-light text-[#2D2A26]/60 mb-2">Provider: (360) 843-7364 • Home: (425) 225-5424</p>
-                        <p class="text-lg font-medium text-[#2D2A26] tracking-tight">(360) 843-7364</p>
-                        <p class="text-xs font-light text-[#2D2A26]/60 mt-1">Fax: (425) 948-6381</p>
+                        <p class="text-base font-medium text-[#2D2A26] tracking-tight">(360) 843-7364</p>
+                        <p class="text-sm font-light text-[#2D2A26]/60 mt-1">Home: (425) 225-5424 · Fax: (425) 948-6381</p>
                     </div>
                 </a>
 
@@ -259,8 +278,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
                     </div>
                     <div>
                         <h4 class="text-sm font-medium text-[#2D2A26] mb-1">Email Us</h4>
-                        <p class="text-sm font-light text-[#2D2A26]/60 mb-2">We typically reply within 24 hours</p>
-                        <p class="text-lg font-medium text-[#2D2A26] tracking-tight break-all">hebroncareafhllc@gmail.com</p>
+                        <p class="text-base font-medium text-[#2D2A26] tracking-tight break-all">hebroncareafhllc@gmail.com</p>
+                        <p class="text-sm font-light text-[#2D2A26]/60 mt-1">We reply within 24 hours</p>
                     </div>
                 </a>
 
@@ -271,13 +290,20 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
                     </div>
                     <div>
                         <h4 class="text-sm font-medium text-[#2D2A26] mb-1">Visit Us</h4>
-                        <p class="text-sm font-light text-[#2D2A26]/60 mb-2">Tours by appointment only</p>
                         <p class="text-base font-medium text-[#2D2A26] tracking-tight leading-snug">
                             11320 27th Ave SE<br>
                             Everett, WA 98208
                         </p>
+                        <p class="text-sm font-light text-[#2D2A26]/60 mt-1">Tours by appointment only</p>
                     </div>
                 </a>
+
+                <!-- Office hours -->
+                <div class="bg-white/40 backdrop-blur-md border border-[#2D2A26]/5 p-6 rounded-[2rem]">
+                    <h4 class="text-sm font-medium text-[#2D2A26] mb-1">Office hours</h4>
+                    <p class="text-base font-medium text-[#2D2A26]">Mon–Fri, 9am–6pm</p>
+                    <p class="text-sm font-light text-[#2D2A26]/60 mt-1">We respond within 24 hours</p>
+                </div>
 
             </div>
         </div>
@@ -336,11 +362,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
                     <h4 class="font-serif italic text-2xl mb-2 text-[#A67C52] tracking-tight">Hebron Care</h4>
                     <p class="text-white/40 text-sm font-light leading-relaxed">
                         Adult Family Home LLC.<br>
+                        11320 27th Ave SE, Everett, WA 98208<br>
+                        Licensed Washington State Adult Family Home<br>
+                        DSHS License #: [ADD LICENSE NUMBER HERE]<br>
                         Providing compassionate, residential care.
                     </p>
                 </div>
                 <div class="flex flex-col gap-3 md:text-right">
                     <a href="/services/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Services &amp; Amenities</a>
+                    <a href="/pricing/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Pricing</a>
                     <a href="/privacy/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Privacy Policy</a>
                     <a href="/terms/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Terms of Service</a>
                     <a href="/contact/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Contact Information</a>
@@ -429,23 +459,26 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 <script>
   (function () {
     var toggles = document.querySelectorAll('[data-nav-toggle]');
+    var overlay = document.querySelector('[data-nav-overlay]');
+    function closeMenu(menu) {
+      if (!menu) return;
+      menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+      if (overlay) { overlay.classList.add('opacity-0', 'pointer-events-none'); overlay.setAttribute('aria-hidden', 'true'); }
+    }
     toggles.forEach(function (btn) {
       var targetSelector = btn.getAttribute('data-target');
       var menu = document.querySelector(targetSelector);
       if (!menu) return;
       btn.addEventListener('click', function () {
         var isOpen = !menu.classList.contains('pointer-events-none');
-        if (isOpen) {
-          menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
-        } else {
+        if (isOpen) closeMenu(menu);
+        else {
           menu.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
+          if (overlay) { overlay.classList.remove('opacity-0', 'pointer-events-none'); overlay.setAttribute('aria-hidden', 'false'); }
         }
       });
-      menu.querySelectorAll('a').forEach(function (link) {
-        link.addEventListener('click', function () {
-          menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
-        });
-      });
+      if (overlay) overlay.addEventListener('click', function () { closeMenu(menu); });
+      menu.querySelectorAll('a').forEach(function (link) { link.addEventListener('click', function () { closeMenu(menu); }); });
     });
   })();
 </script>

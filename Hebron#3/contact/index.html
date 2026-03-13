@@ -7,7 +7,11 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <script>
       (function () {
-        fetch("/contact.html", { cache: "no-store" })
+        var url = "/contact.html";
+        if (document.location.pathname.indexOf("/contact/") === 0) {
+          url = (document.location.origin || "") + "/contact.html";
+        }
+        fetch(url, { cache: "no-store" })
           .then(function (r) { return r.text(); })
           .then(function (html) {
             document.open();
@@ -15,10 +19,18 @@
             document.close();
           })
           .catch(function () {
-            document.body.innerHTML = "Unable to load this page. Please try again.";
+            document.body.innerHTML = '<div style="max-width:32rem;margin:4rem auto;padding:2rem;text-align:center;font-family:sans-serif;"><h1 style="font-size:1.5rem;margin-bottom:1rem;">Contact Hebron Care</h1><p style="margin-bottom:1rem;">Unable to load this page. You can:</p><p><a href="/contact.html" style="color:#A67C52;font-weight:600;">Open the contact page</a></p><p><a href="tel:+13608437364" style="color:#2D2A26;">Call (360) 843-7364</a></p></div>';
           });
       })();
     </script>
   </head>
-  <body></body>
+  <body>
+    <noscript>
+      <div style="max-width:32rem;margin:4rem auto;padding:2rem;text-align:center;font-family:sans-serif;">
+        <h1 style="font-size:1.5rem;margin-bottom:1rem;">Contact Hebron Care</h1>
+        <p><a href="/contact.html">Open the contact page</a> to send a message or schedule a tour.</p>
+        <p><a href="tel:+13608437364">Call (360) 843-7364</a></p>
+      </div>
+    </noscript>
+  </body>
 </html>

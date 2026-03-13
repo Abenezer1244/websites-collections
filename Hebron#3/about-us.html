@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<title>About Us | Hebron Care</title>
+<title>About Us | Adult Family Home — Everett, WA | Hebron Care</title>
 <meta name="description" content="Learn about Hebron Care, our mission, purpose, and dedicated team providing dignified senior care in a warm adult family home in Everett.">
 <meta property="og:title" content="About Us | Hebron Care">
 <meta property="og:description" content="Learn about Hebron Care, our mission, purpose, and dedicated team providing dignified senior care in a warm adult family home in Everett.">
@@ -64,12 +64,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
             <!-- Desktop Menu - pill style -->
             <div class="hidden md:flex flex-1 justify-center">
-                <div class="inline-flex items-center gap-16 px-14 py-2 rounded-full bg-white/15 border border-white/60 shadow-[0_26px_70px_rgba(15,23,42,0.35)] backdrop-blur-3xl">
+                <div class="inline-flex items-center gap-12 px-12 py-2 rounded-full bg-white/15 border border-white/60 backdrop-blur-3xl -translate-y-1 shadow-[0_2px_4px_rgba(45,42,38,0.06),0_8px_16px_rgba(45,42,38,0.08),0_20px_40px_-10px_rgba(45,42,38,0.12),0_32px_64px_-20px_rgba(45,42,38,0.18),0_40px_80px_-24px_rgba(45,42,38,0.22)]">
+                    <a href="/" class="text-sm md:text-base font-normal text-[#2D2A26]/80 hover:text-[#2D2A26] transition-colors">Home</a>
                     <a href="/about-us/" class="text-sm md:text-base font-medium text-[#2D2A26] bg-white px-4 py-1.5 rounded-full shadow-sm hover:bg-white hover:text-[#2D2A26] transition-colors">About Us</a>
-                    <a href="/services/" class="text-sm md:text-base font-normal text-[#2D2A26]/55 hover:text-[#2D2A26] transition-colors">Services</a>
-                    <a href="/" class="text-sm md:text-base font-normal text-[#2D2A26]/55 hover:text-[#2D2A26] transition-colors">Home</a>
-                    <a href="/gallery/" class="text-sm md:text-base font-normal text-[#2D2A26]/55 hover:text-[#2D2A26] transition-colors">Gallery</a>
-                    <a href="/contact/" class="text-sm md:text-base font-normal text-[#2D2A26]/55 hover:text-[#2D2A26] transition-colors">Contact</a>
+                    <a href="/services/" class="text-sm md:text-base font-normal text-[#2D2A26]/80 hover:text-[#2D2A26] transition-colors">Services</a>
+                    <a href="/gallery/" class="text-sm md:text-base font-normal text-[#2D2A26]/80 hover:text-[#2D2A26] transition-colors">Gallery</a>
+                    <a href="/pricing/" class="text-sm md:text-base font-normal text-[#2D2A26]/80 hover:text-[#2D2A26] transition-colors">Pricing</a>
+                    <a href="/contact/" class="text-sm md:text-base font-normal text-[#2D2A26]/80 hover:text-[#2D2A26] transition-colors">Contact</a>
                 </div>
             </div>
 
@@ -79,24 +80,33 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
             </a>
 
             <!-- Mobile Menu Icon -->
-            <button class="md:hidden z-50 text-clay" data-nav-toggle data-target="#mobile-nav">
+            <button type="button" class="md:hidden z-50 text-clay" data-nav-toggle data-target="#mobile-nav" aria-label="Open navigation menu">
                 <iconify-icon icon="solar:hamburger-menu-linear" width="1.5rem" stroke-width="1.5"></iconify-icon>
             </button>
         </div>
     </nav>
 
+    <div id="mobile-nav-overlay" class="fixed inset-0 z-[38] md:hidden bg-black/30 opacity-0 pointer-events-none transition-opacity duration-200" data-nav-overlay aria-hidden="true"></div>
     <!-- Mobile Nav -->
     <div id="mobile-nav" class="fixed inset-x-4 top-20 z-40 md:hidden bg-[#2D2A26] text-[#F5F2EB] rounded-3xl shadow-xl border border-[#2D2A26]/20 px-6 py-5 space-y-3 transform origin-top transition-all duration-200 opacity-0 scale-95 pointer-events-none serif">
+        <a href="/" class="block text-xl font-medium py-2 border-b border-white/10">Home</a>
         <a href="/about-us/" class="block text-base font-medium text-white py-2 border-b-2 border-white/90">About Us</a>
         <a href="/services/" class="block text-base py-2 border-b border-white/10">Services</a>
-        <a href="/" class="block text-xl font-medium py-2 border-b border-white/10">Home</a>
         <a href="/gallery/" class="block text-base py-2 border-b border-white/10">Gallery</a>
+        <a href="/pricing/" class="block text-base py-2 border-b border-white/10">Pricing</a>
         <a href="/contact/" class="block text-base py-2 border-b border-white/10">Contact</a>
         <a href="/contact/" class="block text-center bg-[#A67C52] text-white py-2.5 rounded-full mt-2">Schedule a Tour</a>
     </div>
 
     <!-- About Us HERO Section (New Look) -->
     <header id="main" class="relative pt-40 md:pt-52 pb-24 px-6 md:px-12 flex flex-col items-center text-center overflow-hidden" tabindex="-1">
+        <nav aria-label="Breadcrumb" class="absolute top-24 left-6 md:left-12 z-10 text-left">
+            <ol class="flex items-center gap-2 text-sm font-light text-[#2D2A26]/70" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/" itemprop="item" class="hover:text-clay transition-colors"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+                <li aria-hidden="true">/</li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name">About Us</span><meta itemprop="position" content="2"></li>
+            </ol>
+        </nav>
         <!-- Abstract Decoration -->
         <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-white rounded-full blur-[120px] pointer-events-none -translate-y-1/2 -translate-x-1/4 opacity-60"></div>
 
@@ -113,7 +123,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
         <!-- Featured Hero Image -->
         <div class="w-full max-w-6xl aspect-[4/3] md:aspect-[21/9] rounded-3xl overflow-hidden relative fade-up shadow-sm border border-[#2D2A26]/5 z-10" style="animation-delay: 0.3s;">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&amp;w=2070&amp;auto=format&amp;fit=crop" alt="Beautiful sunlit home interior" class="w-full h-full object-cover">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&amp;w=2070&amp;auto=format&amp;fit=crop" alt="Interior of Hebron Care adult family home in Everett, WA — warm residential care setting" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
         </div>
     </header>
@@ -241,11 +251,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
                 <!-- Person 1 -->
                 <div class="group">
                     <div class="w-full aspect-[4/5] rounded-2xl overflow-hidden mb-6 bg-[#F5F2EB] relative border border-[#2D2A26]/5">
-                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Lead Caregiver" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Elena Rodriguez, Director of Care" loading="lazy">
                     </div>
-                    <h4 class="text-xl serif tracking-tight text-[#2D2A26]">Elena Rodriguez</h4>
-                    <span class="text-xs text-clay uppercase tracking-widest font-normal block mt-2">Director of Care / RN</span>
-                    <p class="text-sm text-[#2D2A26]/60 font-light mt-4 leading-relaxed">
+                    <h4 class="text-xl serif tracking-tight text-[#2D2A26] mb-1">Elena Rodriguez</h4>
+                    <span class="text-xs text-clay uppercase tracking-widest font-normal block mb-3">Director of Care / RN</span>
+                    <p class="text-sm text-[#2D2A26]/60 font-light leading-relaxed">
                         With over 15 years in geriatric nursing, Elena oversees all medical assessments, medication management, and coordinates closely with primary physicians.
                     </p>
                 </div>
@@ -253,11 +263,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
                 <!-- Person 2 -->
                 <div class="group">
                     <div class="w-full aspect-[4/5] rounded-2xl overflow-hidden mb-6 bg-[#F5F2EB] relative border border-[#2D2A26]/5">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Senior Caregiver" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Sarah Jenkins, Lead Resident Assistant" loading="lazy">
                     </div>
-                    <h4 class="text-xl serif tracking-tight text-[#2D2A26]">Sarah Jenkins</h4>
-                    <span class="text-xs text-clay uppercase tracking-widest font-normal block mt-2">Lead Resident Assistant</span>
-                    <p class="text-sm text-[#2D2A26]/60 font-light mt-4 leading-relaxed">
+                    <h4 class="text-xl serif tracking-tight text-[#2D2A26] mb-1">Sarah Jenkins</h4>
+                    <span class="text-xs text-clay uppercase tracking-widest font-normal block mb-3">Lead Resident Assistant</span>
+                    <p class="text-sm text-[#2D2A26]/60 font-light leading-relaxed">
                         Sarah’s intuitive, gentle approach to daily routines ensures our residents feel empowered and respected. She specializes in memory care engagement.
                     </p>
                 </div>
@@ -265,11 +275,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
                 <!-- Person 3 -->
                 <div class="group">
                     <div class="w-full aspect-[4/5] rounded-2xl overflow-hidden mb-6 bg-[#F5F2EB] relative border border-[#2D2A26]/5">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Nutrition Specialist" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Marcus Thorne, Culinary &amp; Nutrition" loading="lazy">
                     </div>
-                    <h4 class="text-xl serif tracking-tight text-[#2D2A26]">Marcus Thorne</h4>
-                    <span class="text-xs text-clay uppercase tracking-widest font-normal block mt-2">Culinary &amp; Nutrition</span>
-                    <p class="text-sm text-[#2D2A26]/60 font-light mt-4 leading-relaxed">
+                    <h4 class="text-xl serif tracking-tight text-[#2D2A26] mb-1">Marcus Thorne</h4>
+                    <span class="text-xs text-clay uppercase tracking-widest font-normal block mb-3">Culinary &amp; Nutrition</span>
+                    <p class="text-sm text-[#2D2A26]/60 font-light leading-relaxed">
                         Marcus crafts vibrant, home-cooked meals tailored to the complex dietary needs of our residents, ensuring that dining remains a daily joy.
                     </p>
                 </div>
@@ -313,11 +323,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
                     <h4 class="font-serif italic text-2xl mb-2 text-clay tracking-tight">Hebron Care</h4>
                     <p class="text-white/40 text-sm font-light leading-relaxed">
                         Adult Family Home LLC.<br>
+                        11320 27th Ave SE, Everett, WA 98208<br>
+                        Licensed Washington State Adult Family Home<br>
+                        DSHS License #: [ADD LICENSE NUMBER HERE]<br>
                         Providing compassionate, residential care.
                     </p>
                 </div>
                 <div class="flex flex-col gap-3 md:text-right">
                     <a href="/services/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Services &amp; Amenities</a>
+                    <a href="/pricing/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Pricing</a>
                     <a href="/privacy/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Privacy Policy</a>
                     <a href="/terms/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Terms of Service</a>
                     <a href="/contact/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Contact Information</a>
@@ -329,23 +343,26 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     <script>
       (function () {
         var toggles = document.querySelectorAll('[data-nav-toggle]');
+        var overlay = document.querySelector('[data-nav-overlay]');
+        function closeMenu(menu) {
+          if (!menu) return;
+          menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+          if (overlay) { overlay.classList.add('opacity-0', 'pointer-events-none'); overlay.setAttribute('aria-hidden', 'true'); }
+        }
         toggles.forEach(function (btn) {
           var targetSelector = btn.getAttribute('data-target');
           var menu = document.querySelector(targetSelector);
           if (!menu) return;
           btn.addEventListener('click', function () {
             var isOpen = !menu.classList.contains('pointer-events-none');
-            if (isOpen) {
-              menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
-            } else {
+            if (isOpen) closeMenu(menu);
+            else {
               menu.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
+              if (overlay) { overlay.classList.remove('opacity-0', 'pointer-events-none'); overlay.setAttribute('aria-hidden', 'false'); }
             }
           });
-          menu.querySelectorAll('a').forEach(function (link) {
-            link.addEventListener('click', function () {
-              menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
-            });
-          });
+          if (overlay) overlay.addEventListener('click', function () { closeMenu(menu); });
+          menu.querySelectorAll('a').forEach(function (link) { link.addEventListener('click', function () { closeMenu(menu); }); });
         });
       })();
     </script>

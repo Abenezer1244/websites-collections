@@ -2,9 +2,9 @@
 <html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<title>Services | Hebron Care</title>
-<meta name="description" content="Explore Hebron Care's core services, from daily living support and medication management to mobility assistance, amenities, and specialized senior care in Everett.">
-<meta property="og:title" content="Services | Hebron Care">
+<title>Services | Adult Family Home — Everett, WA | Hebron Care</title>
+<meta name="description" content="Medication management, memory care, mobility support, and ADL assistance at Hebron Care adult family home in Everett, WA. Dementia care, hospice coordination, and 24/7 residential care in Snohomish County.">
+<meta property="og:title" content="Services | Adult Family Home — Everett, WA | Hebron Care">
 <meta property="og:description" content="Explore Hebron Care's core services, from daily living support and medication management to mobility assistance, amenities, and specialized senior care in Everett.">
 <meta property="og:image" content="https://i.ibb.co/YB4mzcw4/Family-house-front-yard-garage-2017-4-K-HD-Wallpaper-1366x768.jpg">
 <meta property="og:url" content="https://3hebroncareafh.site/services/">
@@ -64,12 +64,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
             <!-- Desktop Menu - pill style -->
             <div class="hidden md:flex flex-1 justify-center">
-                <div class="inline-flex items-center gap-16 px-14 py-2 rounded-full bg-white/15 border border-white/60 shadow-[0_26px_70px_rgba(15,23,42,0.35)] backdrop-blur-3xl">
-                    <a href="/about-us/" class="text-sm md:text-base font-normal text-[#2D2A26]/55 hover:text-[#2D2A26] transition-colors">About Us</a>
+                <div class="inline-flex items-center gap-12 px-12 py-2 rounded-full bg-white/15 border border-white/60 backdrop-blur-3xl -translate-y-1 shadow-[0_2px_4px_rgba(45,42,38,0.06),0_8px_16px_rgba(45,42,38,0.08),0_20px_40px_-10px_rgba(45,42,38,0.12),0_32px_64px_-20px_rgba(45,42,38,0.18),0_40px_80px_-24px_rgba(45,42,38,0.22)]">
+                    <a href="/" class="text-sm md:text-base font-normal text-[#2D2A26]/80 hover:text-[#2D2A26] transition-colors">Home</a>
+                    <a href="/about-us/" class="text-sm md:text-base font-normal text-[#2D2A26]/80 hover:text-[#2D2A26] transition-colors">About Us</a>
                     <a href="/services/" class="text-sm md:text-base font-medium text-[#2D2A26] bg-white px-4 py-1.5 rounded-full shadow-sm hover:bg-white hover:text-[#2D2A26] transition-colors">Services</a>
-                    <a href="/" class="text-sm md:text-base font-normal text-[#2D2A26]/55 hover:text-[#2D2A26] transition-colors">Home</a>
-                    <a href="/gallery/" class="text-sm md:text-base font-normal text-[#2D2A26]/55 hover:text-[#2D2A26] transition-colors">Gallery</a>
-                    <a href="/contact/" class="text-sm md:text-base font-normal text-[#2D2A26]/55 hover:text-[#2D2A26] transition-colors">Contact</a>
+                    <a href="/gallery/" class="text-sm md:text-base font-normal text-[#2D2A26]/80 hover:text-[#2D2A26] transition-colors">Gallery</a>
+                    <a href="/pricing/" class="text-sm md:text-base font-normal text-[#2D2A26]/80 hover:text-[#2D2A26] transition-colors">Pricing</a>
+                    <a href="/contact/" class="text-sm md:text-base font-normal text-[#2D2A26]/80 hover:text-[#2D2A26] transition-colors">Contact</a>
                 </div>
             </div>
 
@@ -79,24 +80,33 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
             </a>
 
             <!-- Mobile Menu Icon -->
-            <button class="md:hidden z-50 text-clay" data-nav-toggle data-target="#mobile-nav">
+            <button type="button" class="md:hidden z-50 text-clay" data-nav-toggle data-target="#mobile-nav" aria-label="Open navigation menu">
                 <iconify-icon icon="solar:hamburger-menu-linear" width="1.5rem" stroke-width="1.5"></iconify-icon>
             </button>
         </div>
     </nav>
 
+    <div id="mobile-nav-overlay" class="fixed inset-0 z-[38] md:hidden bg-black/30 opacity-0 pointer-events-none transition-opacity duration-200" data-nav-overlay aria-hidden="true"></div>
     <!-- Mobile Nav -->
     <div id="mobile-nav" class="fixed inset-x-4 top-20 z-40 md:hidden bg-[#2D2A26] text-[#F5F2EB] rounded-3xl shadow-xl border border-[#2D2A26]/20 px-6 py-5 space-y-3 transform origin-top transition-all duration-200 opacity-0 scale-95 pointer-events-none serif">
+        <a href="/" class="block text-xl font-medium py-2 border-b border-white/10">Home</a>
         <a href="/about-us/" class="block text-base py-2 border-b border-white/10">About Us</a>
         <a href="/services/" class="block text-base font-medium text-white py-2 border-b-2 border-white/90">Services</a>
-        <a href="/" class="block text-xl font-medium py-2 border-b border-white/10">Home</a>
         <a href="/gallery/" class="block text-base py-2 border-b border-white/10">Gallery</a>
+        <a href="/pricing/" class="block text-base py-2 border-b border-white/10">Pricing</a>
         <a href="/contact/" class="block text-base py-2 border-b border-white/10">Contact</a>
         <a href="/contact/" class="block text-center bg-[#A67C52] text-white py-2.5 rounded-full mt-2">Schedule a Tour</a>
     </div>
 
     <!-- Services HERO Section (New Look) -->
     <header id="main" class="relative pt-32 md:pt-48 pb-24 px-6 md:px-12 flex flex-col items-center overflow-hidden" tabindex="-1">
+        <nav aria-label="Breadcrumb" class="absolute top-24 left-6 md:left-12 z-10 text-left">
+            <ol class="flex items-center gap-2 text-sm font-light text-[#2D2A26]/70" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/" itemprop="item" class="hover:text-clay transition-colors"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+                <li aria-hidden="true">/</li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name">Services</span><meta itemprop="position" content="2"></li>
+            </ol>
+        </nav>
         <!-- Abstract Decoration -->
         <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-white rounded-full blur-[120px] pointer-events-none -translate-y-1/3 translate-x-1/3 opacity-60"></div>
 
@@ -112,8 +122,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
                     Tailored services <br>
                     <span class="italic text-clay">for a life well-lived.</span>
                 </h1>
-                <p class="text-[#2D2A26]/70 text-lg md:text-xl font-light leading-relaxed max-w-lg mb-10">
-                    We provide a full spectrum of personalized care, perfectly balancing professional medical oversight with the profound comforts of a true home environment.
+                <p class="text-[#2D2A26]/70 text-lg md:text-xl font-light leading-relaxed max-w-lg mb-4">
+                    We provide a full spectrum of personalized care—including medication management, memory care and dementia support, mobility and ADL assistance, and hospice coordination—perfectly balancing professional medical oversight with the comforts of a true home environment.
+                </p>
+                <p class="text-[#2D2A26]/60 text-base font-light mb-10">
+                    Residential care for seniors in Everett, WA and Snohomish County. Adult family home services tailored to your loved one's needs.
                 </p>
                 <div class="flex flex-wrap gap-3">
                     <span class="px-4 py-2 rounded-full border border-[#2D2A26]/10 text-sm font-light text-[#2D2A26]/80 bg-white/50 backdrop-blur-sm">24/7 Monitoring</span>
@@ -270,7 +283,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
                 <!-- Specialty 1 -->
                 <div class="rounded-3xl bg-[#F5F2EB] overflow-hidden border border-[#2D2A26]/5 flex flex-col h-full group">
                 <div class="h-48 overflow-hidden relative">
-                        <img src="https://i.ibb.co/gMJq1ZvM/Memory-Care-Vista-Prairie-s-Dementia-Care-Program-Memory-Care-50.jpg" alt="Memory Care" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" duration-700 group-hover:scale-105">
+                        <img src="https://i.ibb.co/gMJq1ZvM/Memory-Care-Vista-Prairie-s-Dementia-Care-Program-Memory-Care-50.jpg" alt="Memory care and dementia support at Hebron Care adult family home in Everett, WA" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
                     </div>
                     <div class="p-8 flex-grow">
                         <h3 class="text-2xl serif tracking-tight text-[#2D2A26] mb-3">Memory Care</h3>
@@ -291,7 +304,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
                 <!-- Specialty 2 -->
                 <div class="rounded-3xl bg-[#F5F2EB] overflow-hidden border border-[#2D2A26]/5 flex flex-col h-full group">
                     <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" alt="Hospice Care" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" alt="Hospice and end-of-life care support at Hebron Care adult family home, Everett, WA" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
                     </div>
                     <div class="p-8 flex-grow">
                         <h3 class="text-2xl serif tracking-tight text-[#2D2A26] mb-3">Hospice Support</h3>
@@ -312,7 +325,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
                 <!-- Specialty 3 -->
                 <div class="rounded-3xl bg-[#F5F2EB] overflow-hidden border border-[#2D2A26]/5 flex flex-col h-full group">
                     <div class="h-48 overflow-hidden relative">
-                        <img src="https://i.ibb.co/TDs0Nz9S/unnamed.jpg" alt="Respite Care" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                        <img src="https://i.ibb.co/TDs0Nz9S/unnamed.jpg" alt="Short-term respite care at Hebron Care adult family home in Everett, WA" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
                     </div>
                     <div class="p-8 flex-grow">
                         <h3 class="text-2xl serif tracking-tight text-[#2D2A26] mb-3">Respite Care</h3>
@@ -333,6 +346,49 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
         </div>
     </section>
 
+    <!-- Conditions We Serve -->
+    <section class="py-24 px-6 md:px-12 bg-white rounded-[3rem] mx-2 md:mx-6 shadow-sm border border-[#2D2A26]/5">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl serif tracking-tight text-[#2D2A26] mb-4">Conditions we serve</h2>
+            <p class="text-[#2D2A26]/70 font-light text-lg max-w-3xl mb-10">We welcome residents with a wide range of needs. Our team is experienced in supporting those with:</p>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-[#2D2A26]/80 font-light">
+                <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" class="text-clay shrink-0"></iconify-icon> Dementia &amp; Alzheimer’s</li>
+                <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" class="text-clay shrink-0"></iconify-icon> Stroke recovery</li>
+                <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" class="text-clay shrink-0"></iconify-icon> COPD &amp; respiratory care</li>
+                <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" class="text-clay shrink-0"></iconify-icon> Mobility issues &amp; fall risk</li>
+                <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" class="text-clay shrink-0"></iconify-icon> Hospice &amp; end-of-life care</li>
+                <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" class="text-clay shrink-0"></iconify-icon> Diabetes &amp; medication management</li>
+                <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" class="text-clay shrink-0"></iconify-icon> Post-hospitalization &amp; respite</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- What's included & staffing -->
+    <section class="py-24 px-6 md:px-12 bg-[#F5F2EB]">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-3xl md:text-4xl serif tracking-tight text-[#2D2A26] mb-6">What’s included in the base rate</h2>
+                <p class="text-[#2D2A26]/70 font-light mb-6">Our monthly rate typically includes:</p>
+                <ul class="space-y-2 text-[#2D2A26]/80 font-light">
+                    <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" class="text-clay"></iconify-icon> 24/7 supervision &amp; awake staff</li>
+                    <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" class="text-clay"></iconify-icon> Three meals daily + snacks</li>
+                    <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" class="text-clay"></iconify-icon> Medication management (RN-delegated)</li>
+                    <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" class="text-clay"></iconify-icon> Assistance with ADLs (bathing, dressing, grooming)</li>
+                    <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" class="text-clay"></iconify-icon> Housekeeping &amp; laundry</li>
+                    <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" class="text-clay"></iconify-icon> Activities &amp; engagement</li>
+                    <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" class="text-clay"></iconify-icon> Care coordination with doctors &amp; families</li>
+                </ul>
+                <p class="text-[#2D2A26]/60 font-light text-sm mt-6">Some items (e.g. certain medical supplies, outside therapies, or one-on-one nursing beyond the base level) may be billed separately. We outline this clearly before admission.</p>
+            </div>
+            <div>
+                <h2 class="text-3xl md:text-4xl serif tracking-tight text-[#2D2A26] mb-6">Staffing &amp; care plan process</h2>
+                <p class="text-[#2D2A26]/70 font-light mb-4">We maintain a high staff-to-resident ratio with awake coverage 24/7. Our team includes licensed caregivers and RN oversight for assessments and medication delegation.</p>
+                <p class="text-[#2D2A26]/70 font-light mb-4">Before move-in we complete an assessment and create an individualized care plan. We review and update the plan regularly and whenever needs change, in partnership with families and physicians.</p>
+                <p class="text-[#2D2A26]/70 font-light">For exact rates and what might be included or billed separately for your situation, <a href="/contact/" class="text-clay hover:underline">contact us</a> or see our <a href="/pricing/" class="text-clay hover:underline">Pricing</a> page.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Facility Amenities Section -->
     <section id="amenities" class="py-32 px-6 md:px-12 bg-[#F5F2EB]">
         <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
@@ -340,7 +396,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
             <!-- Imagery -->
             <div class="lg:w-1/2 w-full relative">
                 <div class="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-sm border border-[#2D2A26]/5">
-                    <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" alt="Beautiful sunroom" class="w-full h-full object-cover" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" alt="Common area sunroom at Hebron Care adult family home, Everett, WA" class="w-full h-full object-cover" loading="lazy">
                 </div>
                 <!-- Floating badge -->
                 <div class="absolute -bottom-8 -right-4 md:right-8 bg-white p-6 rounded-3xl shadow-lg border border-[#2D2A26]/5 max-w-xs">
@@ -448,11 +504,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
                     <h4 class="font-serif italic text-2xl mb-2 text-clay tracking-tight">Hebron Care</h4>
                     <p class="text-white/40 text-sm font-light leading-relaxed">
                         Adult Family Home LLC.<br>
+                        11320 27th Ave SE, Everett, WA 98208<br>
+                        Licensed Washington State Adult Family Home<br>
+                        DSHS License #: [ADD LICENSE NUMBER HERE]<br>
                         Providing compassionate, residential care.
                     </p>
                 </div>
                 <div class="flex flex-col gap-3 md:text-right">
                     <a href="/services/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Services &amp; Amenities</a>
+                    <a href="/pricing/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Pricing</a>
                     <a href="/privacy/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Privacy Policy</a>
                     <a href="/terms/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Terms of Service</a>
                     <a href="/contact/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Contact Information</a>
@@ -464,23 +524,26 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     <script>
       (function () {
         var toggles = document.querySelectorAll('[data-nav-toggle]');
+        var overlay = document.querySelector('[data-nav-overlay]');
+        function closeMenu(menu) {
+          if (!menu) return;
+          menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+          if (overlay) { overlay.classList.add('opacity-0', 'pointer-events-none'); overlay.setAttribute('aria-hidden', 'true'); }
+        }
         toggles.forEach(function (btn) {
           var targetSelector = btn.getAttribute('data-target');
           var menu = document.querySelector(targetSelector);
           if (!menu) return;
           btn.addEventListener('click', function () {
             var isOpen = !menu.classList.contains('pointer-events-none');
-            if (isOpen) {
-              menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
-            } else {
+            if (isOpen) closeMenu(menu);
+            else {
               menu.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
+              if (overlay) { overlay.classList.remove('opacity-0', 'pointer-events-none'); overlay.setAttribute('aria-hidden', 'false'); }
             }
           });
-          menu.querySelectorAll('a').forEach(function (link) {
-            link.addEventListener('click', function () {
-              menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
-            });
-          });
+          if (overlay) overlay.addEventListener('click', function () { closeMenu(menu); });
+          menu.querySelectorAll('a').forEach(function (link) { link.addEventListener('click', function () { closeMenu(menu); }); });
         });
       })();
     </script>

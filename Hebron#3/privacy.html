@@ -36,23 +36,23 @@ a:focus-visible, button:focus-visible { outline: none; box-shadow: 0 0 0 2px #F5
                 <span class="text-xl tracking-tight font-medium">Hebron Care</span>
             </a>
             <div class="hidden md:flex items-center gap-16">
-                <a href="/about-us/" class="text-base font-normal text-[#F5F2EB]/90 hover:text-white transition-colors">About Us</a>
-                <a href="/services/" class="text-base font-normal text-[#F5F2EB]/90 hover:text-white transition-colors">Services</a>
-                <a href="/" class="text-xl font-normal text-[#F5F2EB]/90 hover:text-white transition-colors">Home</a>
-                <a href="/gallery/" class="text-base font-normal text-[#F5F2EB]/90 hover:text-white transition-colors">Gallery</a>
-                <a href="/contact/" class="text-base font-normal text-[#F5F2EB]/90 hover:text-white transition-colors">Contact</a>
+                <a href="/" class="text-xl font-normal text-white hover:text-[#F5F2EB] transition-colors">Home</a>
+                <a href="/about-us/" class="text-base font-normal text-white hover:text-[#F5F2EB] transition-colors">About Us</a>
+                <a href="/services/" class="text-base font-normal text-white hover:text-[#F5F2EB] transition-colors">Services</a>
+                <a href="/gallery/" class="text-base font-normal text-white hover:text-[#F5F2EB] transition-colors">Gallery</a>
+                <a href="/contact/" class="text-base font-normal text-white hover:text-[#F5F2EB] transition-colors">Contact</a>
             </div>
             <a href="/contact/" class="hidden md:flex items-center gap-2 bg-[#A67C52] text-white px-5 py-2.5 rounded-full text-sm font-normal hover:bg-[#8f6a47] transition-all"><span>Schedule a Tour</span></a>
-            <button class="md:hidden z-50 text-[#F5F2EB]" data-nav-toggle data-target="#mobile-nav">
+            <button type="button" class="md:hidden z-50 text-[#F5F2EB]" data-nav-toggle data-target="#mobile-nav" aria-label="Open navigation menu">
                 <iconify-icon icon="solar:hamburger-menu-linear" width="1.5rem" stroke-width="1.5"></iconify-icon>
             </button>
         </div>
     </nav>
 
     <div id="mobile-nav" class="fixed inset-x-4 top-20 z-40 md:hidden bg-[#2D2A26] text-[#F5F2EB] rounded-3xl shadow-xl border border-[#2D2A26]/20 px-6 py-5 space-y-3 transform origin-top transition-all duration-200 opacity-0 scale-95 pointer-events-none serif">
+        <a href="/" class="block text-xl font-medium py-2 border-b border-white/10">Home</a>
         <a href="/about-us/" class="block text-base py-2 border-b border-white/10">About Us</a>
         <a href="/services/" class="block text-base py-2 border-b border-white/10">Services</a>
-        <a href="/" class="block text-xl font-medium py-2 border-b border-white/10">Home</a>
         <a href="/gallery/" class="block text-base py-2 border-b border-white/10">Gallery</a>
         <a href="/contact/" class="block text-base py-2 border-b border-white/10">Contact</a>
         <a href="/contact/" class="block text-center bg-[#A67C52] text-white py-2.5 rounded-full mt-2">Schedule a Tour</a>

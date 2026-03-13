@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<title>Hebron Care | Adult Family Home</title>
+<title>Hebron Care | Adult Family Home — Everett, WA</title>
 <meta name="description" content="Hebron Care Adult Family Home in Everett, WA provides compassionate, residential senior care with 24/7 support, high staff ratios, and a warm, home-like environment.">
 <meta property="og:title" content="Hebron Care | Adult Family Home">
 <meta property="og:description" content="Hebron Care Adult Family Home in Everett, WA provides compassionate, residential senior care with 24/7 support, high staff ratios, and a warm, home-like environment.">
@@ -55,11 +55,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 </style><script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "NursingHome",
+  "@type": ["LocalBusiness", "MedicalBusiness", "NursingHome"],
   "name": "Hebron Care Adult Family Home",
   "url": "https://3hebroncareafh.site/",
   "@id": "https://3hebroncareafh.site/#hebron-care",
   "telephone": "+1-360-843-7364",
+  "email": "hebroncareafhllc@gmail.com",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "11320 27th Ave SE",
@@ -68,23 +69,23 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     "postalCode": "98208",
     "addressCountry": "US"
   },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 47.8948,
+    "longitude": -122.1977
+  },
   "image": "https://i.ibb.co/YB4mzcw4/Family-house-front-yard-garage-2017-4-K-HD-Wallpaper-1366x768.jpg",
   "priceRange": "$$",
   "openingHoursSpecification": [{
     "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday"
-    ],
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
     "opens": "09:00",
     "closes": "18:00"
   }],
   "sameAs": [
     "https://www.google.com/maps/place/11320+27th+Ave+SE,+Everett,+WA+98208"
-  ]
+  ],
+  "description": "Hebron Care is a licensed adult family home in Everett, WA, providing 24/7 residential care, medication management, memory care support, and ADL assistance for seniors in Snohomish County."
 }
 </script></head>
 <body class="antialiased selection:bg-stone-300 font-light text-base">
@@ -100,11 +101,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
             <!-- Desktop Menu - pill style -->
             <div class="hidden md:flex flex-1 justify-center">
-                <div class="inline-flex items-center gap-16 px-16 py-2.5 rounded-full bg-white/5 border border-white/60 shadow-[0_40px_120px_rgba(15,23,42,0.75)] backdrop-blur-3xl">
+                <div class="inline-flex items-center gap-12 px-12 py-2.5 rounded-full bg-white/5 border border-white/60 backdrop-blur-3xl -translate-y-1 shadow-[0_4px_8px_rgba(0,0,0,0.15),0_12px_24px_-4px_rgba(0,0,0,0.2),0_28px_56px_-12px_rgba(0,0,0,0.3),0_40px_80px_-24px_rgba(0,0,0,0.35)]">
+                    <a href="/" class="text-sm md:text-base font-medium text-[#2D2A26] bg-white px-4 py-1.5 rounded-full shadow-sm hover:bg-white hover:text-[#2D2A26] transition-colors">Home</a>
                     <a href="/about-us/" class="text-sm md:text-base font-normal text-white/80 hover:text-white transition-colors">About Us</a>
                     <a href="/services/" class="text-sm md:text-base font-normal text-white/80 hover:text-white transition-colors">Services</a>
-                    <a href="/" class="text-sm md:text-base font-medium text-[#2D2A26] bg-white px-4 py-1.5 rounded-full shadow-sm hover:bg-white hover:text-[#2D2A26] transition-colors">Home</a>
                     <a href="/gallery/" class="text-sm md:text-base font-normal text-white/80 hover:text-white transition-colors">Gallery</a>
+                    <a href="/pricing/" class="text-sm md:text-base font-normal text-white/80 hover:text-white transition-colors">Pricing</a>
                     <a href="/contact/" class="text-sm md:text-base font-normal text-white/80 hover:text-white transition-colors">Contact</a>
                 </div>
             </div>
@@ -115,27 +117,29 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
             </a>
 
             <!-- Mobile Menu Icon -->
-            <button class="md:hidden z-50 text-[#F5F2EB]" data-nav-toggle data-target="#mobile-nav">
+            <button type="button" class="md:hidden z-50 text-[#F5F2EB]" data-nav-toggle data-target="#mobile-nav" aria-label="Open navigation menu">
                 <iconify-icon icon="solar:hamburger-menu-linear" width="1.5rem" stroke-width="1.5"></iconify-icon>
             </button>
         </div>
     </nav>
 
     <!-- Mobile Nav -->
+    <div id="mobile-nav-overlay" class="fixed inset-0 z-[38] md:hidden bg-black/30 opacity-0 pointer-events-none transition-opacity duration-200" data-nav-overlay aria-hidden="true"></div>
     <div id="mobile-nav" class="fixed inset-x-4 top-20 z-40 md:hidden bg-[#2D2A26] text-[#F5F2EB] rounded-3xl shadow-xl border border-white/10 px-6 py-5 space-y-3 transform origin-top transition-all duration-200 opacity-0 scale-95 pointer-events-none serif">
+        <a href="/" class="block text-xl font-medium text-white py-2 border-b-2 border-white/90">Home</a>
         <a href="/about-us/" class="block text-base py-2 border-b border-white/10">About Us</a>
         <a href="/services/" class="block text-base py-2 border-b border-white/10">Services</a>
-        <a href="/" class="block text-xl font-medium text-white py-2 border-b-2 border-white/90">Home</a>
         <a href="/gallery/" class="block text-base py-2 border-b border-white/10">Gallery</a>
+        <a href="/pricing/" class="block text-base py-2 border-b border-white/10">Pricing</a>
         <a href="/contact/" class="block text-base py-2 border-b border-white/10">Contact</a>
         <a href="/contact/" class="block text-center bg-[#A67C52] text-white py-2.5 rounded-full mt-2">Schedule a Tour</a>
     </div>
 
     <!-- Hero Section -->
     <header id="main" class="relative h-screen w-full overflow-hidden flex items-center justify-center" tabindex="-1">
-        <!-- Background Image with Overlay -->
+        <!-- Background Image with Overlay. Replace with actual exterior/interior photos of Hebron Care for best trust. -->
         <div class="absolute inset-0 z-0">
-            <img src="https://i.ibb.co/YB4mzcw4/Family-house-front-yard-garage-2017-4-K-HD-Wallpaper-1366x768.jpg" alt="Family home exterior" class="w-full h-full object-cover">
+            <img src="https://i.ibb.co/YB4mzcw4/Family-house-front-yard-garage-2017-4-K-HD-Wallpaper-1366x768.jpg" alt="Hebron Care adult family home exterior, Everett, WA — residential senior care" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-[#F5F2EB]"></div>
         </div>
 
@@ -144,15 +148,18 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
             <h1 class="text-5xl md:text-7xl lg:text-8xl text-[#F5F2EB] mb-6 leading-tight font-light tracking-tight">
                 Comfort. Care. <br> <span class="italic">Family.</span>
             </h1>
-            <p class="text-white/90 text-lg md:text-xl font-light leading-relaxed max-w-lg mx-auto mb-10">
+            <p class="text-white/90 text-lg md:text-xl font-light leading-relaxed max-w-lg mx-auto mb-4">
                 A warm, residential adult family home where your loved ones receive personalized attention, dignity, and a true sense of belonging.
             </p>
+            <p class="text-white/80 text-sm md:text-base font-normal tracking-wide mb-10">
+                Serving Everett and surrounding areas in Snohomish County, WA.
+            </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#action" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-[#F5F2EB] text-[#2D2A26] px-8 py-4 rounded-full text-sm font-normal hover:bg-white transition-colors">
+                <a href="/contact/" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-[#F5F2EB] text-[#2D2A26] px-8 py-4 rounded-full text-sm font-normal hover:bg-white transition-colors">
                     <iconify-icon icon="solar:phone-linear" width="1.25rem" stroke-width="1.5"></iconify-icon>
                     Schedule a Visit
                 </a>
-                <a href="#expertise" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-full text-sm font-normal hover:bg-white/20 transition-colors">
+                <a href="/services/" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-full text-sm font-normal hover:bg-white/20 transition-colors">
                     View our care
                 </a>
             </div>
@@ -229,14 +236,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
                     </ul>
                 </div>
                 <div class="order-1 md:order-2 h-[400px] rounded-2xl overflow-hidden relative">
-                    <img src="https://kenwoodcare.com/wp-content/uploads/2019/01/shutterstock_367740032.jpg" class="w-full h-full object-cover" alt="Caregiver supporting senior woman at home" loading="lazy">
+                    <img src="https://kenwoodcare.com/wp-content/uploads/2019/01/shutterstock_367740032.jpg" class="w-full h-full object-cover" alt="Caregiver assisting senior resident with daily activities at Hebron Care adult family home in Everett, WA" loading="lazy">
                 </div>
             </div>
 
             <!-- Expertise 2 -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center mb-24">
                 <div class="h-[400px] rounded-2xl overflow-hidden relative">
-                    <img src="https://i.ibb.co/N6F0frqV/Medication-Management-Tips-for-Seniors.jpg" class="w-full h-full object-cover" alt="Caregiver managing medications on laptop with stethoscope" loading="lazy">
+                    <img src="https://i.ibb.co/N6F0frqV/Medication-Management-Tips-for-Seniors.jpg" class="w-full h-full object-cover" alt="Medication management and care coordination at Hebron Care adult family home, Everett, WA" loading="lazy">
                 </div>
                 <div>
                     <span class="text-xs font-normal uppercase tracking-widest text-clay mb-4 block">Medical Oversight</span>
@@ -277,7 +284,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
                     </ul>
                 </div>
                 <div class="order-1 md:order-2 h-[400px] rounded-2xl overflow-hidden relative">
-                    <img src="https://i.ibb.co/4wx6m52c/mary-beth-with-residents-2-800x.webp" class="w-full h-full object-cover" alt="Caregiver engaging with residents at a table" loading="lazy">
+                    <img src="https://i.ibb.co/4wx6m52c/mary-beth-with-residents-2-800x.webp" class="w-full h-full object-cover" alt="Staff engaging with residents in common area at Hebron Care adult family home, Everett, WA" loading="lazy">
                 </div>
             </div>
         </div>
@@ -299,8 +306,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
                     <div class="flex items-center gap-4 border-t border-[#2D2A26]/10 pt-6">
                         <div class="w-10 h-10 rounded-full bg-[#2D2A26] flex items-center justify-center text-[#F5F2EB] text-sm serif">S</div>
                         <div>
-                            <p class="text-sm font-normal text-[#2D2A26]">Sarah Jenkins</p>
-                            <p class="text-xs font-light text-[#2D2A26]/60">Daughter of a Resident</p>
+                            <p class="text-sm font-normal text-[#2D2A26]">S.J.</p>
+                            <p class="text-xs font-light text-[#2D2A26]/60">Daughter of Resident — Seattle, WA</p>
                         </div>
                     </div>
                 </div>
@@ -401,19 +408,110 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
                 <!-- Q3 -->
                 <details id="faq-3" class="group bg-white rounded-xl p-6 cursor-pointer border border-transparent hover:border-[#2D2A26]/5 transition-all open:ring-1 open:ring-[#2D2A26]/5">
                     <summary class="flex justify-between items-center font-normal text-lg tracking-tight list-none" aria-controls="faq-3" aria-expanded="false">
-                        What are your visiting hours?
+                        What do your rates look like?
                         <span class="transition group-open:rotate-180 text-clay">
                             <iconify-icon icon="solar:alt-arrow-down-linear" width="1.25rem"></iconify-icon>
                         </span>
                     </summary>
                     <div class="text-[#2D2A26]/70 mt-4 leading-relaxed font-light text-sm border-t border-gray-100 pt-4">
-                        We believe family involvement is crucial. We have open visiting hours during the day and early evening. We simply ask that visitors respect the privacy and quiet times of other residents in the home.
+                        Private-pay rates at Hebron Care typically start around <strong>$X,XXX per month</strong> and vary based on room type and level of assistance needed. Rates include 24/7 supervision, assistance with personal care, home-cooked meals, medication management, housekeeping, laundry, and coordination with healthcare providers. After a brief assessment call and tour, we’ll provide an exact quote for your loved one’s needs.
                     </div>
                 </details>
 
                 <!-- Q4 -->
                 <details id="faq-4" class="group bg-white rounded-xl p-6 cursor-pointer border border-transparent hover:border-[#2D2A26]/5 transition-all open:ring-1 open:ring-[#2D2A26]/5">
                     <summary class="flex justify-between items-center font-normal text-lg tracking-tight list-none" aria-controls="faq-4" aria-expanded="false">
+                        Do you accept insurance or Medicaid?
+                        <span class="transition group-open:rotate-180 text-clay">
+                            <iconify-icon icon="solar:alt-arrow-down-linear" width="1.25rem"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div class="text-[#2D2A26]/70 mt-4 leading-relaxed font-light text-sm border-t border-gray-100 pt-4">
+                        Hebron Care is a <strong>private-pay</strong> adult family home. Many families use long-term care insurance to help cover costs, and we’re happy to work with your insurance provider on required documentation and billing verification. Medicare and standard health insurance typically do not pay for room and board in adult family homes, but we can walk you through what may be covered and discuss any available local funding options.
+                    </div>
+                </details>
+
+                <!-- Q5 -->
+                <details id="faq-5" class="group bg-white rounded-xl p-6 cursor-pointer border border-transparent hover:border-[#2D2A26]/5 transition-all open:ring-1 open:ring-[#2D2A26]/5">
+                    <summary class="flex justify-between items-center font-normal text-lg tracking-tight list-none" aria-controls="faq-5" aria-expanded="false">
+                        Do you accept Medicaid or Medicare?
+                        <span class="transition group-open:rotate-180 text-clay">
+                            <iconify-icon icon="solar:alt-arrow-down-linear" width="1.25rem"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div class="text-[#2D2A26]/70 mt-4 leading-relaxed font-light text-sm border-t border-gray-100 pt-4">
+                        We are a private-pay adult family home. Medicare does not cover room and board in an AFH. Medicaid may cover some residents through state programs; we can discuss whether your situation might qualify and refer you to local resources for eligibility.
+                    </div>
+                </details>
+
+                <!-- Q6 -->
+                <details id="faq-6" class="group bg-white rounded-xl p-6 cursor-pointer border border-transparent hover:border-[#2D2A26]/5 transition-all open:ring-1 open:ring-[#2D2A26]/5">
+                    <summary class="flex justify-between items-center font-normal text-lg tracking-tight list-none" aria-controls="faq-6" aria-expanded="false">
+                        What is the monthly cost and what does it include?
+                        <span class="transition group-open:rotate-180 text-clay">
+                            <iconify-icon icon="solar:alt-arrow-down-linear" width="1.25rem"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div class="text-[#2D2A26]/70 mt-4 leading-relaxed font-light text-sm border-t border-gray-100 pt-4">
+                        Monthly rates typically start in the mid-range for private-pay AFHs in Snohomish County and vary by room and level of care. Included: 24/7 supervision, meals, medication management, housekeeping, laundry, activities, and care coordination. See our <a href="/pricing/" class="text-clay hover:underline">Pricing</a> page for details, and we provide an exact quote after a tour and assessment.
+                    </div>
+                </details>
+
+                <!-- Q7 -->
+                <details id="faq-7" class="group bg-white rounded-xl p-6 cursor-pointer border border-transparent hover:border-[#2D2A26]/5 transition-all open:ring-1 open:ring-[#2D2A26]/5">
+                    <summary class="flex justify-between items-center font-normal text-lg tracking-tight list-none" aria-controls="faq-7" aria-expanded="false">
+                        How many residents live at Hebron Care at one time?
+                        <span class="transition group-open:rotate-180 text-clay">
+                            <iconify-icon icon="solar:alt-arrow-down-linear" width="1.25rem"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div class="text-[#2D2A26]/70 mt-4 leading-relaxed font-light text-sm border-t border-gray-100 pt-4">
+                        We are licensed for up to 6 residents—Washington State’s maximum for an adult family home. This small size lets us offer highly personalized care and a true family atmosphere.
+                    </div>
+                </details>
+
+                <!-- Q8 -->
+                <details id="faq-8" class="group bg-white rounded-xl p-6 cursor-pointer border border-transparent hover:border-[#2D2A26]/5 transition-all open:ring-1 open:ring-[#2D2A26]/5">
+                    <summary class="flex justify-between items-center font-normal text-lg tracking-tight list-none" aria-controls="faq-8" aria-expanded="false">
+                        What conditions do you specialize in?
+                        <span class="transition group-open:rotate-180 text-clay">
+                            <iconify-icon icon="solar:alt-arrow-down-linear" width="1.25rem"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div class="text-[#2D2A26]/70 mt-4 leading-relaxed font-light text-sm border-t border-gray-100 pt-4">
+                        We specialize in dementia and memory care, mobility challenges, stroke recovery, COPD and respiratory support, diabetes management, and hospice coordination. We also support residents with general aging needs, medication management, and ADL assistance. Each care plan is tailored to the individual.
+                    </div>
+                </details>
+
+                <!-- Q9 -->
+                <details id="faq-9" class="group bg-white rounded-xl p-6 cursor-pointer border border-transparent hover:border-[#2D2A26]/5 transition-all open:ring-1 open:ring-[#2D2A26]/5">
+                    <summary class="flex justify-between items-center font-normal text-lg tracking-tight list-none" aria-controls="faq-9" aria-expanded="false">
+                        How quickly can we schedule a tour?
+                        <span class="transition group-open:rotate-180 text-clay">
+                            <iconify-icon icon="solar:alt-arrow-down-linear" width="1.25rem"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div class="text-[#2D2A26]/70 mt-4 leading-relaxed font-light text-sm border-t border-gray-100 pt-4">
+                        Usually within a few days. Call us at (360) 843-7364 or submit the contact form; we’ll respond within 24 hours and work with you to find a time that fits your schedule.
+                    </div>
+                </details>
+
+                <!-- Q10 -->
+                <details id="faq-10" class="group bg-white rounded-xl p-6 cursor-pointer border border-transparent hover:border-[#2D2A26]/5 transition-all open:ring-1 open:ring-[#2D2A26]/5">
+                    <summary class="flex justify-between items-center font-normal text-lg tracking-tight list-none" aria-controls="faq-10" aria-expanded="false">
+                        What happens if my loved one's care needs increase significantly?
+                        <span class="transition group-open:rotate-180 text-clay">
+                            <iconify-icon icon="solar:alt-arrow-down-linear" width="1.25rem"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div class="text-[#2D2A26]/70 mt-4 leading-relaxed font-light text-sm border-t border-gray-100 pt-4">
+                        We reassess care plans regularly and work with families and physicians when needs change. Many increased needs can be met in-house with RN delegation and outside therapy or hospice. If at any point we feel we cannot safely meet a resident’s needs, we’ll have an honest conversation and help with transition planning.
+                    </div>
+                </details>
+
+                <!-- Q11 -->
+                <details id="faq-11" class="group bg-white rounded-xl p-6 cursor-pointer border border-transparent hover:border-[#2D2A26]/5 transition-all open:ring-1 open:ring-[#2D2A26]/5">
+                    <summary class="flex justify-between items-center font-normal text-lg tracking-tight list-none" aria-controls="faq-11" aria-expanded="false">
                         How do you handle medical emergencies?
                         <span class="transition group-open:rotate-180 text-clay">
                             <iconify-icon icon="solar:alt-arrow-down-linear" width="1.25rem"></iconify-icon>
@@ -424,9 +522,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
                     </div>
                 </details>
 
-                <!-- Q5 -->
-                <details id="faq-5" class="group bg-white rounded-xl p-6 cursor-pointer border border-transparent hover:border-[#2D2A26]/5 transition-all open:ring-1 open:ring-[#2D2A26]/5">
-                    <summary class="flex justify-between items-center font-normal text-lg tracking-tight list-none" aria-controls="faq-5" aria-expanded="false">
+                <!-- Q12 -->
+                <details id="faq-12" class="group bg-white rounded-xl p-6 cursor-pointer border border-transparent hover:border-[#2D2A26]/5 transition-all open:ring-1 open:ring-[#2D2A26]/5">
+                    <summary class="flex justify-between items-center font-normal text-lg tracking-tight list-none" aria-controls="faq-12" aria-expanded="false">
                         Do you coordinate with home health or hospice agencies?
                         <span class="transition group-open:rotate-180 text-clay">
                             <iconify-icon icon="solar:alt-arrow-down-linear" width="1.25rem"></iconify-icon>
@@ -463,11 +561,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
                     <h4 class="font-serif italic text-2xl mb-2 text-clay tracking-tight">Hebron Care</h4>
                     <p class="text-white/40 text-sm font-light leading-relaxed">
                         Adult Family Home LLC.<br>
+                        11320 27th Ave SE, Everett, WA 98208<br>
+                        Licensed Washington State Adult Family Home<br>
+                        DSHS License #: [ADD LICENSE NUMBER HERE]<br>
                         Providing compassionate, residential care.
                     </p>
                 </div>
                 <div class="flex flex-col gap-3 md:text-right">
                     <a href="/services/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Services &amp; Amenities</a>
+                    <a href="/pricing/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Pricing</a>
                     <a href="/privacy/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Privacy Policy</a>
                     <a href="/terms/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Terms of Service</a>
                     <a href="/contact/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Contact Information</a>
@@ -503,6 +605,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 <script>
   (function () {
     const toggles = document.querySelectorAll('[data-nav-toggle]');
+    const overlay = document.querySelector('[data-nav-overlay]');
+    function closeMenu(menu) {
+      if (!menu) return;
+      menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+      if (overlay) {
+        overlay.classList.add('opacity-0', 'pointer-events-none');
+        overlay.setAttribute('aria-hidden', 'true');
+      }
+    }
     toggles.forEach((btn) => {
       const targetSelector = btn.getAttribute('data-target');
       const menu = document.querySelector(targetSelector);
@@ -510,15 +621,18 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
       btn.addEventListener('click', () => {
         const isOpen = !menu.classList.contains('pointer-events-none');
         if (isOpen) {
-          menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+          closeMenu(menu);
         } else {
           menu.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
+          if (overlay) {
+            overlay.classList.remove('opacity-0', 'pointer-events-none');
+            overlay.setAttribute('aria-hidden', 'false');
+          }
         }
       });
+      if (overlay) overlay.addEventListener('click', () => closeMenu(menu));
       menu.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', () => {
-          menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
-        });
+        link.addEventListener('click', () => closeMenu(menu));
       });
     });
   })();
