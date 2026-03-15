@@ -2,6 +2,7 @@
   "name": "hebron-care",
   "private": true,
   "scripts": {
+    "start": "npx --yes serve . -l 3000",
     "build:css": "tailwindcss -i ./src/input.css -o ./css/styles.css --minify",
     "watch:css": "tailwindcss -i ./src/input.css -o ./css/styles.css --watch",
     "test": "playwright test",

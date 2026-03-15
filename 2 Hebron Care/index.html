@@ -9,7 +9,7 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": ["LocalBusiness", "MedicalBusiness"],
   "@id": "https://2hebron-careafh.live/#business",
   "name": "Hebron Care Adult Family Home LLC #1",
   "description": "A licensed Adult Family Home providing premium, specialized, and compassionate living solutions for seniors. Assisted living, memory care, medication management, and respite care in Everett, WA.",
@@ -28,11 +28,20 @@
     { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "17:00", "description": "Office hours" },
     { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "00:00", "closes": "23:59", "description": "Care provided 24/7" }
   ],
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 47.9790,
+    "longitude": -122.2021
+  },
   "sameAs": [
     "https://www.google.com/maps/place/11320+27th+Ave+SE,+Everett,+WA+98208"
   ],
   "priceRange": "$$",
-  "areaServed": { "@type": "City", "name": "Everett", "containedInPlace": { "@type": "State", "name": "Washington" } }
+  "areaServed": {
+    "@type": "City",
+    "name": "Everett",
+    "containedInPlace": { "@type": "State", "name": "Washington" }
+  }
 }
 </script>
 <link rel="stylesheet" href="css/styles.css">
@@ -342,6 +351,10 @@ body { font-size: 1.0625rem; }
                             Call Us Today
                         </a>
                     </div>
+                    <div class="mt-4 inline-flex items-center gap-2 rounded-full bg-black/40 px-4 py-2 text-xs text-white/90 backdrop-blur-sm">
+                        <span class="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span>Currently accepting new residents · limited availability</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -467,7 +480,7 @@ body { font-size: 1.0625rem; }
                 <!-- Service 2 -->
                 <div class="bg-white p-8 rounded-2xl border border-[#0F4C5C]/5 hover:border-[#C9A24D]/30 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] group">
                     <div class="w-12 h-12 bg-[#0F4C5C]/5 rounded-xl flex items-center justify-center text-[#0F4C5C] mb-6 group-hover:bg-[#0F4C5C] group-hover:text-white transition-colors">
-                        <iconify-icon icon="solar:brain-linear" width="24" stroke-width="1.5"></iconify-icon>
+                        <iconify-icon icon="ph:brain" width="24" stroke-width="1.5"></iconify-icon>
                     </div>
                     <h3 class="font-['Cormorant_Garamond'] text-2xl font-normal tracking-tight text-[#0F4C5C] mb-2">Memory Care</h3>
                     <p class="text-sm text-[#2B2B2B]/90 font-light leading-relaxed mb-4">
@@ -526,7 +539,7 @@ body { font-size: 1.0625rem; }
     <section id="testimonials" class="py-12 sm:py-16 lg:py-24 relative bg-white overflow-hidden">
         <div class="absolute right-0 top-0 w-64 h-64 bg-[#C9A24D]/5 rounded-bl-full pointer-events-none"></div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-12 flex flex-col items-center text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-6 flex flex-col items-center text-center">
             <span class="text-[#C9A24D] text-xs font-medium tracking-widest uppercase mb-2 block">Family Stories</span>
             <h2 class="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-normal text-[#0F4C5C] tracking-tight mb-4">Hear From Our Families</h2>
             <div class="flex gap-1 text-[#C9A24D]">
@@ -536,6 +549,10 @@ body { font-size: 1.0625rem; }
                 <iconify-icon icon="solar:star-bold" width="20"></iconify-icon>
                 <iconify-icon icon="solar:star-bold" width="20"></iconify-icon>
             </div>
+            <a href="https://www.google.com/maps/place/11320+27th+Ave+SE,+Everett,+WA+98208" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-2 text-xs text-[#0F4C5C] hover:text-[#C9A24D] transition-colors">
+                <iconify-icon icon="solar:external-drive-linear" width="16" stroke-width="1.5"></iconify-icon>
+                <span>Read verified reviews on Google</span>
+            </a>
         </div>
 
         <!-- Testimonials carousel: left/right buttons -->
@@ -758,6 +775,96 @@ body { font-size: 1.0625rem; }
                         </p>
                     </div>
                 </details>
+
+                <!-- FAQ 9 -->
+                <details id="faq-9" class="group bg-white p-6 rounded-xl border border-[#0F4C5C]/5 shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex justify-between items-center font-['Cormorant_Garamond'] text-2xl md:text-3xl cursor-pointer list-none text-[#0F4C5C] tracking-tight focus:outline-none focus:ring-2 focus:ring-[#0F4C5C]/30 focus:ring-inset rounded" aria-expanded="false" aria-controls="faq-9-content" id="faq-9-summary">
+                        <span>What does care cost and what payment types do you accept?</span>
+                        <span class="transition-transform duration-300 group-open:-rotate-180 text-[#C9A24D]">
+                            <iconify-icon icon="solar:alt-arrow-down-linear" width="24" stroke-width="1.5"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div id="faq-9-content" role="region" aria-labelledby="faq-9-summary">
+                        <p class="text-[#2B2B2B]/90 mt-4 text-base font-light leading-relaxed">
+                            Monthly rates are based on your loved one's care needs, room type, and level of assistance required. Most families pay privately and some use long‑term care insurance. After a nurse assessment, we provide a clear written quote that outlines what is included so there are no surprises.
+                        </p>
+                    </div>
+                </details>
+
+                <!-- FAQ 10 -->
+                <details id="faq-10" class="group bg-white p-6 rounded-xl border border-[#0F4C5C]/5 shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex justify-between items-center font-['Cormorant_Garamond'] text-2xl md:text-3xl cursor-pointer list-none text-[#0F4C5C] tracking-tight focus:outline-none focus:ring-2 focus:ring-[#0F4C5C]/30 focus:ring-inset rounded" aria-expanded="false" aria-controls="faq-10-content" id="faq-10-summary">
+                        <span>Do you accept Medicare, Medicaid, or long-term care insurance?</span>
+                        <span class="transition-transform duration-300 group-open:-rotate-180 text-[#C9A24D]">
+                            <iconify-icon icon="solar:alt-arrow-down-linear" width="24" stroke-width="1.5"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div id="faq-10-content" role="region" aria-labelledby="faq-10-summary">
+                        <p class="text-[#2B2B2B]/90 mt-4 text-base font-light leading-relaxed">
+                            Traditional Medicare does not pay for long‑term room and board in adult family homes. Some residents use Medicaid programs or long‑term care insurance depending on eligibility and plan rules. Because funding options are very specific to each person, we encourage you to call us so we can review your situation and explain what may be available and how your benefits might help.
+                        </p>
+                    </div>
+                </details>
+
+                <!-- FAQ 11 -->
+                <details id="faq-11" class="group bg-white p-6 rounded-xl border border-[#0F4C5C]/5 shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex justify-between items-center font-['Cormorant_Garamond'] text-2xl md:text-3xl cursor-pointer list-none text-[#0F4C5C] tracking-tight focus:outline-none focus:ring-2 focus:ring-[#0F4C5C]/30 focus:ring-inset rounded" aria-expanded="false" aria-controls="faq-11-content" id="faq-11-summary">
+                        <span>Do you have current availability and how many residents do you serve?</span>
+                        <span class="transition-transform duration-300 group-open:-rotate-180 text-[#C9A24D]">
+                            <iconify-icon icon="solar:alt-arrow-down-linear" width="24" stroke-width="1.5"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div id="faq-11-content" role="region" aria-labelledby="faq-11-summary">
+                        <p class="text-[#2B2B2B]/90 mt-4 text-base font-light leading-relaxed">
+                            As a Washington‑licensed adult family home, we care for up to six residents at a time in an intimate, home‑like setting. Availability changes as residents transition in and out of the home, so please call us to confirm our current openings and whether we are accepting new residents right now.
+                        </p>
+                    </div>
+                </details>
+
+                <!-- FAQ 12 -->
+                <details id="faq-12" class="group bg-white p-6 rounded-xl border border-[#0F4C5C]/5 shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex justify-between items-center font-['Cormorant_Garamond'] text-2xl md:text-3xl cursor-pointer list-none text-[#0F4C5C] tracking-tight focus:outline-none focus:ring-2 focus:ring-[#0F4C5C]/30 focus:ring-inset rounded" aria-expanded="false" aria-controls="faq-12-content" id="faq-12-summary">
+                        <span>What happens if my loved one’s care needs increase over time?</span>
+                        <span class="transition-transform duration-300 group-open:-rotate-180 text-[#C9A24D]">
+                            <iconify-icon icon="solar:alt-arrow-down-linear" width="24" stroke-width="1.5"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div id="faq-12-content" role="region" aria-labelledby="faq-12-summary">
+                        <p class="text-[#2B2B2B]/90 mt-4 text-base font-light leading-relaxed">
+                            We expect needs to change. Our nurse and care team regularly review each resident’s condition and update the care plan as mobility, memory, or medical needs evolve. If a higher level of support is required, we discuss options with you early so there are no surprises and your loved one can remain in the home safely for as long as it is appropriate.
+                        </p>
+                    </div>
+                </details>
+
+                <!-- FAQ 13 -->
+                <details id="faq-13" class="group bg-white p-6 rounded-xl border border-[#0F4C5C]/5 shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex justify-between items-center font-['Cormorant_Garamond'] text-2xl md:text-3xl cursor-pointer list-none text-[#0F4C5C] tracking-tight focus:outline-none focus:ring-2 focus:ring-[#0F4C5C]/30 focus:ring-inset rounded" aria-expanded="false" aria-controls="faq-13-content" id="faq-13-summary">
+                        <span>Are there any additional or hidden fees beyond the monthly rate?</span>
+                        <span class="transition-transform duration-300 group-open:-rotate-180 text-[#C9A24D]">
+                            <iconify-icon icon="solar:alt-arrow-down-linear" width="24" stroke-width="1.5"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div id="faq-13-content" role="region" aria-labelledby="faq-13-summary">
+                        <p class="text-[#2B2B2B]/90 mt-4 text-base font-light leading-relaxed">
+                            No hidden fees. Your written service agreement clearly outlines what is included in the monthly rate and which optional services or supplies—if any—may be billed separately. We review this with you before move‑in so you understand the total cost of care.
+                        </p>
+                    </div>
+                </details>
+
+                <!-- FAQ 14 -->
+                <details id="faq-14" class="group bg-white p-6 rounded-xl border border-[#0F4C5C]/5 shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex justify-between items-center font-['Cormorant_Garamond'] text-2xl md:text-3xl cursor-pointer list-none text-[#0F4C5C] tracking-tight focus:outline-none focus:ring-2 focus:ring-[#0F4C5C]/30 focus:ring-inset rounded" aria-expanded="false" aria-controls="faq-14-content" id="faq-14-summary">
+                        <span>Do you have experience with conditions like Parkinson’s, COPD, or post-stroke recovery?</span>
+                        <span class="transition-transform duration-300 group-open:-rotate-180 text-[#C9A24D]">
+                            <iconify-icon icon="solar:alt-arrow-down-linear" width="24" stroke-width="1.5"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div id="faq-14-content" role="region" aria-labelledby="faq-14-summary">
+                        <p class="text-[#2B2B2B]/90 mt-4 text-base font-light leading-relaxed">
+                            Yes. Our team has supported residents living with Parkinson’s disease, COPD and other chronic lung conditions, diabetes, heart disease, and recovery after stroke. We work closely with your physicians and therapists to follow treatment plans, monitor changes, and adjust daily support so your loved one can remain as independent and comfortable as possible.
+                        </p>
+                    </div>
+                </details>
             </div>
         </div>
     </section>
@@ -766,49 +873,15 @@ body { font-size: 1.0625rem; }
     <section id="take-action" class="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-[#0F4C5C]">
         <div class="max-w-5xl mx-auto bg-white rounded-3xl overflow-hidden shadow-2xl border border-white/10">
             <div class="grid md:grid-cols-2">
-                <!-- Contact Form Area -->
+                <!-- CTA Area (forms routed to Contact page) -->
                 <div class="p-8 md:p-12">
                     <span class="text-[#C9A24D] text-xs font-medium tracking-widest uppercase mb-2 block">Next Steps</span>
                     <h2 class="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-normal text-[#0F4C5C] mb-2 tracking-tight">Begin Their Next Chapter With Confidence</h2>
-                    <p class="text-sm text-[#2B2B2B]/90 mb-8 font-light">Schedule a personalized tour of our home and discuss a tailored care plan for your loved one.</p>
-
-                    <div id="tour-form-status" class="hidden mb-4 p-4 rounded-xl text-sm font-normal" role="alert" aria-live="polite"></div>
-                    <!-- Web3Forms: replace YOUR_WEB3FORMS_ACCESS_KEY with your key from https://web3forms.com -->
-                    <form id="tour-form" class="space-y-4" action="https://api.web3forms.com/submit" method="POST" novalidate>
-                        <input type="hidden" name="access_key" value="cd9bdd93-9d53-4559-9d71-340c10af26dc">
-                        <input type="hidden" name="subject" value="Hebron Care – Tour request">
-                        <input type="hidden" name="from_name" value="Hebron Care">
-                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;" tabindex="-1" autocomplete="off">
-                        <div class="space-y-1">
-                            <label for="tour-name" class="text-xs font-medium text-[#0F4C5C] uppercase tracking-widest">Full Name <span class="text-[#0F4C5C]/60">*</span></label>
-                            <input type="text" id="tour-name" name="Name" required placeholder="Your Full Name *" class="w-full bg-[#FAFAF8] border-b border-[#0F4C5C]/20 px-4 py-3 text-sm text-[#0F4C5C] placeholder-[#0F4C5C]/40 transition focus:border-[#0F4C5C] focus:bg-[#0F4C5C]/5 invalid:border-red-400 invalid:bg-red-50/50">
-                            <p id="tour-name-error" class="hidden mt-1 text-xs text-red-600 font-normal" role="alert">Please enter your full name.</p>
-                        </div>
-                        <div class="space-y-1">
-                            <label for="tour-phone" class="text-xs font-medium text-[#0F4C5C] uppercase tracking-widest">Phone Number <span class="text-[#0F4C5C]/60">*</span></label>
-                            <input type="tel" id="tour-phone" name="Phone" required placeholder="Phone Number *" class="w-full bg-[#FAFAF8] border-b border-[#0F4C5C]/20 px-4 py-3 text-sm text-[#0F4C5C] placeholder-[#0F4C5C]/40 transition focus:border-[#0F4C5C] focus:bg-[#0F4C5C]/5 invalid:border-red-400 invalid:bg-red-50/50">
-                            <p id="tour-phone-error" class="hidden mt-1 text-xs text-red-600 font-normal" role="alert">Please enter a phone number.</p>
-                        </div>
-                        <div class="relative space-y-1">
-                            <label for="tour-interested" class="text-xs font-medium text-[#0F4C5C] uppercase tracking-widest">Interested In</label>
-                            <select id="tour-interested" name="Interested In" class="w-full bg-[#FAFAF8] border-b border-[#0F4C5C]/20 px-4 py-3 text-sm text-[#0F4C5C] cursor-pointer focus:bg-[#0F4C5C]/5">
-                                <option disabled="" selected="" value="">Interested In...</option>
-                                <option value="Assisted Living">Assisted Living</option>
-                                <option value="Memory Care">Memory Care</option>
-                                <option value="Respite Care">Respite Care</option>
-                                <option value="General Inquiry">General Inquiry</option>
-                            </select>
-                            <iconify-icon icon="solar:alt-arrow-down-linear" class="absolute right-4 top-3.5 text-[#0F4C5C]/50 pointer-events-none" stroke-width="1.5"></iconify-icon>
-                        </div>
-                        <div class="space-y-1">
-                            <label for="tour-message" class="text-xs font-medium text-[#0F4C5C] uppercase tracking-widest">Message (optional)</label>
-                            <textarea id="tour-message" name="Message" placeholder="Tell us a little about your loved one's needs..." rows="3" class="w-full bg-[#FAFAF8] border-b border-[#0F4C5C]/20 px-4 py-3 text-sm text-[#0F4C5C] placeholder-[#0F4C5C]/40 transition focus:border-[#0F4C5C] focus:bg-[#0F4C5C]/5 resize-none"></textarea>
-                        </div>
-                        <button type="submit" id="tour-submit" class="w-full bg-[#0F4C5C] text-white h-12 rounded-lg text-sm font-normal tracking-wide mt-4 hover:bg-[#0a3540] transition shadow-lg shadow-[#0F4C5C]/20 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed">
-                            Request a Tour
-                            <iconify-icon icon="solar:arrow-right-linear" width="18" stroke-width="1.5"></iconify-icon>
-                        </button>
-                    </form>
+                    <p class="text-sm text-[#2B2B2B]/90 mb-6 font-light">We’ll walk you through care options, availability, and next steps in one simple conversation.</p>
+                    <a href="/contact/#contact-form" class="inline-flex items-center justify-center gap-2 rounded-full bg-[#0F4C5C] px-8 py-3.5 text-sm font-normal tracking-wide text-white shadow-lg shadow-[#0F4C5C]/20 hover:bg-[#0F4C5C]/90 hover:shadow-xl hover:shadow-[#0F4C5C]/30 transition-all">
+                        Schedule a Tour
+                        <iconify-icon icon="solar:arrow-right-linear" width="18" stroke-width="1.5"></iconify-icon>
+                    </a>
                 </div>
 
                 <!-- Info Area -->
@@ -835,6 +908,7 @@ body { font-size: 1.0625rem; }
                                     <p class="text-sm font-medium text-[#0F4C5C] uppercase tracking-wide mb-1">Contact</p>
                                     <p class="text-sm text-[#2B2B2B]/90 font-light">(425) 225-5424</p>
                                     <p class="text-sm text-[#2B2B2B]/90 font-light">hebroncareafhllc@gmail.com</p>
+                                    <p class="text-xs text-[#2B2B2B]/70 font-light mt-1">Payment types: private pay; long‑term care insurance (case‑by‑case).</p>
                                 </div>
                             </div>
 
@@ -848,11 +922,29 @@ body { font-size: 1.0625rem; }
                                     <p class="text-xs text-[#2B2B2B]/50 font-light mt-1">*Care is provided 24/7</p>
                                 </div>
                             </div>
+
+                            <div class="flex gap-4">
+                                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#C9A24D] shadow-sm shrink-0">
+                                    <iconify-icon icon="solar:map-linear" width="20" stroke-width="1.5"></iconify-icon>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-[#0F4C5C] uppercase tracking-wide mb-1">Neighborhood</p>
+                                    <p class="text-sm text-[#2B2B2B]/90 font-light">Quiet Everett neighborhood with quick access to I‑5, local parks, and major hospitals in Snohomish County.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="mt-8 h-32 w-full bg-white rounded-xl border border-[#0F4C5C]/10 flex items-center justify-center text-[#0F4C5C]/30 text-xs uppercase tracking-widest font-medium">
-                        <iconify-icon icon="solar:map-linear" width="24" class="mr-2" stroke-width="1.5"></iconify-icon> Map Location
+                    <div class="mt-8 w-full bg-white rounded-xl border border-[#0F4C5C]/10 overflow-hidden">
+                        <iframe
+                            src="https://maps.google.com/maps?q=11320+27th+Ave+SE+Everett+WA+98208&amp;z=15&amp;output=embed"
+                            width="100%"
+                            height="180"
+                            style="border:0;"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Map showing Hebron Care Adult Family Home in Everett, WA">
+                        </iframe>
                     </div>
                 </div>
             </div>
@@ -867,7 +959,12 @@ body { font-size: 1.0625rem; }
                 <p class="text-sm text-[#2B2B2B]/85 font-light leading-relaxed mb-2">
                     A licensed Adult Family Home providing premium, specialized, and compassionate living solutions for seniors.
                 </p>
-                <p class="text-xs text-[#0F4C5C]/70 font-normal mb-4">Washington State Licensed · License # <span aria-label="Add your state license number">__________</span></p>
+                <p class="text-xs text-[#0F4C5C]/70 font-normal mb-4">
+                    Washington State Licensed Adult Family Home ·
+                    <a href="https://apps.dshs.wa.gov/providerexplorer/Search" target="_blank" rel="noopener noreferrer" class="underline decoration-dotted hover:text-[#C9A24D]">
+                        Verify in DSHS Provider Explorer
+                    </a>
+                </p>
                 <a href="https://www.google.com/maps/place/11320+27th+Ave+SE,+Everett,+WA+98208" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm text-[#0F4C5C] font-normal hover:text-[#C9A24D] transition mb-6">
                     <iconify-icon icon="solar:map-point-linear" width="18" stroke-width="1.5"></iconify-icon>
                     Find us on Google
@@ -892,10 +989,10 @@ body { font-size: 1.0625rem; }
             <div>
                 <h4 class="text-xs font-medium uppercase tracking-widest text-[#0F4C5C] mb-6">Care Services</h4>
                 <ul class="space-y-3 text-sm text-[#2B2B2B]/90 font-light">
-                    <li><a href="/services/" class="hover:text-[#C9A24D] transition">Assisted Living</a></li>
-                    <li><a href="/services/" class="hover:text-[#C9A24D] transition">Memory Care Support</a></li>
-                    <li><a href="/services/" class="hover:text-[#C9A24D] transition">Medication Administration</a></li>
-                    <li><a href="/services/" class="hover:text-[#C9A24D] transition">Respite &amp; Short-term</a></li>
+                    <li><a href="/services/#assisted-living" class="hover:text-[#C9A24D] transition">Assisted Living</a></li>
+                    <li><a href="/services/#memory-care" class="hover:text-[#C9A24D] transition">Memory Care Support</a></li>
+                    <li><a href="/services/#medication-management" class="hover:text-[#C9A24D] transition">Medication Administration</a></li>
+                    <li><a href="/services/#respite-care" class="hover:text-[#C9A24D] transition">Respite &amp; Short-term</a></li>
                 </ul>
             </div>
 
