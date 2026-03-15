@@ -21,7 +21,7 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": ["LocalBusiness", "MedicalBusiness"],
   "@id": "https://hebroncareafh.com/#organization",
   "name": "Hebron Care Adult Family Home LLC #1",
   "description": "Hebron Care Adult Family Home LLC #1 provides a safe, nurturing, and family-like environment with personalized care for seniors in Everett, WA.",
@@ -51,6 +51,110 @@
   },
   "sameAs": [
     "https://www.google.com/maps/place/11320+27th+Ave+SE,+Everett,+WA+98208"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the staff-to-resident ratio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We maintain a very low staff-to-resident ratio, typically 1 caregiver to 3 or 4 residents. This ensures that every individual receives prompt, attentive, and highly personalized care throughout the day and night."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are family visits allowed at any time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. This is your loved one's home, and we encourage family visits. While we ask visitors to be respectful of quiet hours and meal times, you are welcome to visit, share a meal, or spend time together in our common areas or their private room."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you handle medical emergencies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our staff is trained in First Aid and CPR, and we have protocols in place for any medical situation. In the event of an emergency, we immediately contact 911, followed by the resident's designated primary contacts and their physician."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you accommodate special diets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We understand that nutrition is vital for seniors. All meals are home-cooked, and we easily accommodate diabetic, low-sodium, pureed, and other prescribed or preferred diets."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What daily activities are provided?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Activities are tailored to the interests and abilities of our current residents. They typically include gentle morning exercises, arts and crafts, music therapy, movie afternoons, gardening in our secured patio, and structured cognitive games."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does care cost, and what payment types do you accept?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rates depend on the level of care and room type. We accept private pay, long-term care insurance, and Washington State Medicaid (DSHS long-term care funding). Contact us for a personalized quote after we learn about your loved one's needs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you accept Medicare, Medicaid, or long-term care insurance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We accept Washington State Medicaid (DSHS) long-term care funding and long-term care insurance. Medicare does not pay for room and board in an adult family home but continues to cover medical care, hospital stays, and prescriptions. We're happy to walk you through your options."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many residents do you serve, and do you have availability?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Washington State limits adult family homes to six residents, which allows us to provide highly personalized care. We currently have limited availability. Please call or submit a contact form to ask about open spots and schedule a tour."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if my loved one's care needs increase over time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We reassess care plans regularly and work with families and physicians to adjust support as needs change. Many residents age in place with us as their needs increase. If a resident eventually requires a higher level of care than we can safely provide (e.g., skilled nursing), we help families plan a smooth transition."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can residents bring their own furniture or personal belongings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. We encourage residents to bring familiar furniture, photos, and keepsakes so their room feels like home. We work with you to ensure the space is safe and comfortable. Personal belongings help with orientation and well-being, especially for those with memory care needs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What conditions do you have experience with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our staff has experience with dementia and memory care, Parkinson's, COPD, post-stroke recovery, diabetes management, mobility challenges, and general frailty. We coordinate with physicians and specialists to support complex needs. Tell us about your loved one's condition so we can discuss how we can help."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you communicate health updates to family?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We call designated family contacts promptly for any change in condition, after a fall, or before a doctor visit. We also provide regular updates by phone or in person when you visit. You can reach the care team anytime; we want you to feel informed and confident in your loved one's care."
+      }
+    }
   ]
 }
 </script>
@@ -186,7 +290,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
             <div class="reveal">
                 <div class="inline-flex items-center gap-2 px-3 py-1 bg-emerald-100/50 text-emerald-900 rounded-full text-sm font-normal mb-6 border border-emerald-200/50">
                     <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                    Accepting New Residents
+                    Accepting New Residents · <span id="vacancy-text">Limited spots available</span>
                 </div>
                 <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal tracking-tight text-emerald-950 leading-[1.1] mb-6 sm:mb-8">
                     Exceptional care for <br> <span class="italic serif text-emerald-800">your loved ones.</span>
@@ -218,6 +322,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
                     </div>
                 </div>
                 <p class="text-stone-500 text-sm font-normal mt-3">Licensed in Washington · Serving Everett &amp; Snohomish County</p>
+                <p class="text-stone-500 text-sm font-normal mt-1">We accept private pay, long-term care insurance, and Washington State Medicaid (DSHS).</p>
             </div>
 
             <div class="relative h-[280px] sm:h-[360px] md:h-[420px] lg:h-[600px] reveal delay-200 order-first lg:order-none">
@@ -286,7 +391,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
                         <iconify-icon icon="solar:user-hands-linear" width="24"></iconify-icon>
                     </div>
                     <h3 class="text-2xl font-normal text-emerald-950 mb-3 tracking-tight">Dedicated Attention.</h3>
-                    <p class="text-lg text-stone-600 leading-relaxed font-light">With a low resident-to-caregiver ratio, we ensure prompt, highly personalized care and meaningful daily interactions for everyone.</p>
+                    <p class="text-lg text-stone-600 leading-relaxed font-light">With a staff-to-resident ratio typically <strong class="text-emerald-900 font-normal">1:3</strong>, we ensure prompt, highly personalized care and meaningful daily interactions for everyone.</p>
                 </div>
 
                 <div class="bg-[#FBF9F6]/80 backdrop-blur p-10 rounded-3xl group hover:bg-[#FBF9F6] transition-colors reveal delay-200 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25),0_0_0_1px_rgba(0,0,0,0.05)] hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3),0_0_0_1px_rgba(0,0,0,0.05)]">
@@ -684,6 +789,90 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
                         Activities are tailored to the interests and abilities of our current residents. They typically include gentle morning exercises, arts and crafts, music therapy, movie afternoons, gardening in our secured patio, and structured cognitive games.
                     </div>
                 </details>
+
+                <details class="group bg-white rounded-2xl border border-stone-200 shadow-sm">
+                    <summary class="flex justify-between items-center font-normal cursor-pointer p-6 text-xl tracking-tight text-emerald-950 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-emerald-500/15">
+                        What does care cost, and what payment types do you accept?
+                        <span class="transition-transform duration-300 group-open:rotate-45 text-emerald-600">
+                            <iconify-icon icon="solar:add-circle-linear" width="24"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-stone-600 text-lg leading-relaxed font-light border-t border-stone-100 pt-4 mt-2">
+                        Rates depend on the level of care and room type. We accept <strong class="text-emerald-900 font-normal">private pay</strong>, <strong class="text-emerald-900 font-normal">long-term care insurance</strong>, and <strong class="text-emerald-900 font-normal">Washington State Medicaid</strong> (DSHS long-term care funding). Contact us for a personalized quote after we learn about your loved one's needs.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-2xl border border-stone-200 shadow-sm">
+                    <summary class="flex justify-between items-center font-normal cursor-pointer p-6 text-xl tracking-tight text-emerald-950 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-emerald-500/15">
+                        Do you accept Medicare, Medicaid, or long-term care insurance?
+                        <span class="transition-transform duration-300 group-open:rotate-45 text-emerald-600">
+                            <iconify-icon icon="solar:add-circle-linear" width="24"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-stone-600 text-lg leading-relaxed font-light border-t border-stone-100 pt-4 mt-2">
+                        Yes. We accept Washington State Medicaid (DSHS) long-term care funding and long-term care insurance. Medicare does not pay for room and board in an adult family home but continues to cover medical care, hospital stays, and prescriptions. We're happy to walk you through your options.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-2xl border border-stone-200 shadow-sm">
+                    <summary class="flex justify-between items-center font-normal cursor-pointer p-6 text-xl tracking-tight text-emerald-950 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-emerald-500/15">
+                        How many residents do you serve, and do you have availability?
+                        <span class="transition-transform duration-300 group-open:rotate-45 text-emerald-600">
+                            <iconify-icon icon="solar:add-circle-linear" width="24"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-stone-600 text-lg leading-relaxed font-light border-t border-stone-100 pt-4 mt-2">
+                        Washington State limits adult family homes to six residents, which allows us to provide highly personalized care. We currently have limited availability. Please call or submit a contact form to ask about open spots and schedule a tour.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-2xl border border-stone-200 shadow-sm">
+                    <summary class="flex justify-between items-center font-normal cursor-pointer p-6 text-xl tracking-tight text-emerald-950 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-emerald-500/15">
+                        What happens if my loved one's care needs increase over time?
+                        <span class="transition-transform duration-300 group-open:rotate-45 text-emerald-600">
+                            <iconify-icon icon="solar:add-circle-linear" width="24"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-stone-600 text-lg leading-relaxed font-light border-t border-stone-100 pt-4 mt-2">
+                        We reassess care plans regularly and work with families and physicians to adjust support as needs change. Many residents age in place with us as their needs increase. If a resident eventually requires a higher level of care than we can safely provide (e.g., skilled nursing), we help families plan a smooth transition.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-2xl border border-stone-200 shadow-sm">
+                    <summary class="flex justify-between items-center font-normal cursor-pointer p-6 text-xl tracking-tight text-emerald-950 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-emerald-500/15">
+                        Can residents bring their own furniture or personal belongings?
+                        <span class="transition-transform duration-300 group-open:rotate-45 text-emerald-600">
+                            <iconify-icon icon="solar:add-circle-linear" width="24"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-stone-600 text-lg leading-relaxed font-light border-t border-stone-100 pt-4 mt-2">
+                        Absolutely. We encourage residents to bring familiar furniture, photos, and keepsakes so their room feels like home. We work with you to ensure the space is safe and comfortable. Personal belongings help with orientation and well-being, especially for those with memory care needs.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-2xl border border-stone-200 shadow-sm">
+                    <summary class="flex justify-between items-center font-normal cursor-pointer p-6 text-xl tracking-tight text-emerald-950 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-emerald-500/15">
+                        What conditions do you have experience with?
+                        <span class="transition-transform duration-300 group-open:rotate-45 text-emerald-600">
+                            <iconify-icon icon="solar:add-circle-linear" width="24"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-stone-600 text-lg leading-relaxed font-light border-t border-stone-100 pt-4 mt-2">
+                        Our staff has experience with dementia and memory care, Parkinson's, COPD, post-stroke recovery, diabetes management, mobility challenges, and general frailty. We coordinate with physicians and specialists to support complex needs. Tell us about your loved one's condition so we can discuss how we can help.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-2xl border border-stone-200 shadow-sm">
+                    <summary class="flex justify-between items-center font-normal cursor-pointer p-6 text-xl tracking-tight text-emerald-950 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-emerald-500/15">
+                        How do you communicate health updates to family?
+                        <span class="transition-transform duration-300 group-open:rotate-45 text-emerald-600">
+                            <iconify-icon icon="solar:add-circle-linear" width="24"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-stone-600 text-lg leading-relaxed font-light border-t border-stone-100 pt-4 mt-2">
+                        We call designated family contacts promptly for any change in condition, after a fall, or before a doctor visit. We also provide regular updates by phone or in person when you visit. You can reach the care team anytime; we want you to feel informed and confident in your loved one's care.
+                    </div>
+                </details>
             </div>
         </div>
     </section>
@@ -768,6 +957,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
         </div>
         <div class="max-w-7xl mx-auto mt-8 pt-8 border-t border-stone-100 text-center text-stone-400 text-xs font-light space-y-1">
             <p>© 2026 Hebron Care Adult Family Home LLC #1. All rights reserved.</p>
+            <p class="mt-2">DSHS license: <a href="https://apps.dshs.wa.gov/carefinder/ProviderSearch.aspx" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:text-emerald-700 transition-colors underline underline-offset-2">verify our license</a></p>
             <p class="mt-2"><button type="button" id="larger-text-btn" class="text-stone-500 hover:text-emerald-700 transition-colors underline underline-offset-2" aria-pressed="false">Larger text</button></p>
         </div>
     </footer>
