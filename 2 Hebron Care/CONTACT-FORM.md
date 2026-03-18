@@ -65,7 +65,7 @@ Before going live, confirm on **real devices** (phone and desktop):
    - Check spam/junk if you don’t see the first test.
 
 2. **“Call Us” and “Schedule Tour” work**
-   - On a **real phone**: Tap “Call Us Today,” “Schedule Tour,” and the sticky **Call** button on mobile. All should open the dialer with **(425) 225-5424** (and the provider number where shown).
+   - On a **real phone**: Tap “Call Us Today,” “Schedule Tour,” and the sticky **Call** button on mobile. All should open the dialer with **(425) 374-7954** (and the provider number where shown).
    - On **desktop**: Click the same links; they should open the default phone app or prompt to choose one.
 
 3. **Quick checklist**

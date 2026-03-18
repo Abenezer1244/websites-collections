@@ -22,7 +22,7 @@ This document describes the SEO elements added to the site and what to update wh
 - **About Us:** Learn about Hebron Care's mission, vision, and journey. A Seattle-area Adult Family Home built on compassion, trust, and personalized senior care since day one.
 - **Gallery:** Take a visual tour of Hebron Care. See our warm spaces, dining areas, outdoor gardens, and family-focused environment for senior living in Seattle.
 - **Services:** Assisted living, memory care, medication management, respite care & more. Explore Hebron Care's full range of senior care services in Seattle, WA.
-- **Contact:** Schedule a tour or get in touch with Hebron Care Adult Family Home LLC #1. Visit us in Everett, WA, call (425) 225-5424, or send a message. We're here to help with senior care options.
+- **Contact:** Schedule a tour or get in touch with Hebron Care Adult Family Home LLC #2. Visit us in Everett, WA, call (425) 374-7954, or send a message. We're here to help with senior care options.
 
 ### Canonical URLs
 
