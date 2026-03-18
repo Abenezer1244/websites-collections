@@ -26,7 +26,7 @@
   "name": "Hebron Care Adult Family Home LLC #1",
   "description": "Hebron Care Adult Family Home LLC #1 provides a safe, nurturing, and family-like environment with personalized care for seniors in Everett, WA.",
   "url": "https://hebroncareafh.com",
-  "telephone": "+14252255424",
+  "telephone": "+13608437364",
   "email": "hebroncareafhllc@gmail.com",
   "address": {
     "@type": "PostalAddress",
@@ -234,6 +234,22 @@ body.text-larger .text-sm { font-size: 0.9375rem; }
 body.text-larger .text-lg { font-size: 1.125rem; }
 body.text-larger .text-xl { font-size: 1.25rem; }
 body.text-larger .text-2xl { font-size: 1.5rem; }
+/* Mobile testimonial tuning (prevent clipped cards) */
+@media (max-width: 640px) {
+  #testimonial-track {
+    padding-left: max(1rem, calc((100vw - 320px) / 2));
+    padding-right: max(1rem, calc((100vw - 320px) / 2));
+  }
+  .testimonial-card {
+    width: 320px !important;
+    padding: 1.5rem !important; /* p-6 */
+    scroll-snap-align: center !important;
+  }
+  .testimonial-card > p {
+    font-size: 1rem !important; /* text-base */
+    margin-bottom: 1.25rem !important; /* slightly tighter than mb-6 */
+  }
+}
 </style></head>
 <body class="bg-[#FBF9F6] text-stone-800 antialiased selection:bg-emerald-100 selection:text-emerald-900 overflow-x-hidden">
 
@@ -252,7 +268,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
                 <a href="/contact/" class="hover:text-emerald-900 transition-colors py-2">Contact Us</a>
             </div>
             <div class="flex items-center gap-3 md:gap-4">
-                <a href="tel:+14252255424" class="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-stone-200 text-stone-600 hover:text-emerald-900 hover:border-emerald-300 hover:bg-emerald-50/50 transition-colors text-base font-normal min-h-[44px] items-center" aria-label="Call (425) 225-5424">
+                <a href="tel:+13608437364" class="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-stone-200 text-stone-600 hover:text-emerald-900 hover:border-emerald-300 hover:bg-emerald-50/50 transition-colors text-base font-normal min-h-[44px] items-center" aria-label="Call (360) 843-7364">
                     <iconify-icon icon="solar:phone-calling-linear" width="20"></iconify-icon>
                     Call
                 </a>
@@ -304,9 +320,9 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
                         Schedule a Tour
                         <iconify-icon icon="solar:arrow-right-linear" width="20"></iconify-icon>
                     </a>
-                    <a href="tel:+14252255424" class="px-8 py-4 rounded-full text-lg font-normal text-emerald-900 border border-emerald-900/10 hover:bg-emerald-50 transition-all flex items-center gap-2 min-h-[48px] justify-center">
+                    <a href="tel:+13608437364" class="px-8 py-4 rounded-full text-lg font-normal text-emerald-900 border border-emerald-900/10 hover:bg-emerald-50 transition-all flex items-center gap-2 min-h-[48px] justify-center">
                         <iconify-icon icon="solar:phone-calling-linear" width="20"></iconify-icon>
-                        (425) 225-5424
+                        (360) 843-7364
                     </a>
                 </div>
 
@@ -367,7 +383,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
 
     <!-- Testimonials (Gliding) -->
     <section id="testimonials" class="py-24 bg-[#FBF9F6] border-y border-stone-200 overflow-hidden" role="region" aria-label="Family testimonials carousel">
-        <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="text-center mb-16 reveal">
                  <h2 class="text-4xl font-normal text-emerald-950 tracking-tight mb-4">Words From Our Families</h2>
                  <div class="flex justify-center gap-1 text-emerald-500">
@@ -382,9 +398,9 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
         </div>
 
         <div class="relative w-full">
-            <div class="pointer-events-none absolute inset-y-0 left-0 w-16 md:w-48 bg-gradient-to-r from-white to-transparent z-20"></div>
-            <div class="pointer-events-none absolute inset-y-0 right-0 w-16 md:w-48 bg-gradient-to-l from-white to-transparent z-20"></div>
-            <div id="testimonial-track" class="flex gap-6 py-4 px-6 overflow-x-auto scroll-smooth snap-x snap-mandatory" aria-live="off">
+            <div class="pointer-events-none absolute inset-y-0 left-0 w-10 md:w-48 bg-gradient-to-r from-white to-transparent z-20"></div>
+            <div class="pointer-events-none absolute inset-y-0 right-0 w-10 md:w-48 bg-gradient-to-l from-white to-transparent z-20"></div>
+            <div id="testimonial-track" class="flex gap-6 py-4 px-4 sm:px-6 overflow-x-auto scroll-smooth snap-x snap-mandatory" aria-live="off">
                 <div class="testimonial-card w-[350px] shrink-0 bg-white p-8 rounded-3xl border-2 border-emerald-200 shadow-lg shadow-emerald-900/5 snap-start">
                     <p class="text-lg text-stone-700 leading-relaxed mb-6 italic font-light">"Moving mom here was the best decision. The house is beautiful and the staff treats her like their own family."</p>
                     <div class="flex items-center gap-3">
@@ -492,15 +508,15 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
                 </div>
             </div>
             <div id="testimonial-live" class="sr-only" aria-live="polite" aria-atomic="true"></div>
-            <div class="mt-6 flex items-center justify-center gap-4 px-6">
-                <button type="button" class="testimonial-arrow rounded-full border border-stone-300 bg-white text-emerald-900 min-w-[48px] min-h-[48px] w-12 h-12 flex items-center justify-center shadow-sm hover:bg-emerald-50 hover:border-emerald-600 transition-colors" data-dir="prev" aria-label="Previous testimonials">
+            <div class="mt-4 sm:mt-6 flex items-center justify-center gap-3 sm:gap-4 px-4 sm:px-6">
+                <button type="button" class="testimonial-arrow rounded-full border border-stone-300 bg-white text-emerald-900 min-w-[44px] min-h-[44px] w-10 h-10 sm:min-w-[48px] sm:min-h-[48px] sm:w-12 sm:h-12 flex items-center justify-center shadow-sm hover:bg-emerald-50 hover:border-emerald-600 transition-colors" data-dir="prev" aria-label="Previous testimonials">
                     <iconify-icon icon="solar:alt-arrow-left-linear" width="22"></iconify-icon>
                 </button>
-                <button type="button" class="testimonial-arrow rounded-full border border-stone-300 bg-white text-emerald-900 min-w-[48px] min-h-[48px] w-12 h-12 flex items-center justify-center shadow-sm hover:bg-emerald-50 hover:border-emerald-600 transition-colors" data-dir="next" aria-label="Next testimonials">
+                <button type="button" class="testimonial-arrow rounded-full border border-stone-300 bg-white text-emerald-900 min-w-[44px] min-h-[44px] w-10 h-10 sm:min-w-[48px] sm:min-h-[48px] sm:w-12 sm:h-12 flex items-center justify-center shadow-sm hover:bg-emerald-50 hover:border-emerald-600 transition-colors" data-dir="next" aria-label="Next testimonials">
                     <iconify-icon icon="solar:alt-arrow-right-linear" width="22"></iconify-icon>
                 </button>
             </div>
-            <p id="testimonial-swipe-hint" class="text-center text-stone-400 text-sm font-light mt-2 md:mt-3">Swipe or use arrows for more</p>
+            <p id="testimonial-swipe-hint" class="text-center text-stone-400 text-xs sm:text-sm font-light mt-1.5 sm:mt-2 md:mt-3">Swipe or use arrows for more</p>
         </div>
     </section>
 
@@ -610,7 +626,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
     <!-- Trust Strip -->
     <section class="py-4 px-6 bg-emerald-950/90 text-stone-300 serif" aria-label="Trust and credentials">
         <div class="max-w-7xl mx-auto text-center text-sm font-normal">
-            <span>DSHS Licensed</span>
+            <span>DSHS Licensed (756107)</span>
             <span class="mx-2" aria-hidden="true">·</span>
             <span>1:3 Staff Ratio</span>
             <span class="mx-2" aria-hidden="true">·</span>
@@ -803,7 +819,7 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
                         </div>
                         <div>
                             <h4 class="font-normal text-emerald-950 text-lg">Contact Us</h4>
-                            <a href="tel:+14252255424" class="text-stone-600 hover:text-emerald-900 transition-colors font-light">(425) 225-5424</a>
+                            <a href="tel:+13608437364" class="text-stone-600 hover:text-emerald-900 transition-colors font-light">(360) 843-7364</a>
                         </div>
                     </div>
                 </div>
@@ -850,13 +866,13 @@ body.text-larger .text-2xl { font-size: 1.5rem; }
             
             <div class="flex gap-6 text-stone-400">
                 <a href="mailto:hebroncareafhllc@gmail.com" class="hover:text-emerald-900 transition-colors" aria-label="Email"><iconify-icon icon="solar:letter-linear" width="24"></iconify-icon></a>
-                <a href="tel:+14252255424" class="hover:text-emerald-900 transition-colors" aria-label="Phone"><iconify-icon icon="solar:phone-linear" width="24"></iconify-icon></a>
+                <a href="tel:+13608437364" class="hover:text-emerald-900 transition-colors" aria-label="Phone"><iconify-icon icon="solar:phone-linear" width="24"></iconify-icon></a>
                 <a href="https://www.google.com/maps/place/11320+27th+Ave+SE,+Everett,+WA+98208" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-900 transition-colors" aria-label="Find us on Google"><iconify-icon icon="solar:map-point-linear" width="24"></iconify-icon></a>
             </div>
         </div>
         <div class="max-w-7xl mx-auto mt-8 pt-8 border-t border-stone-100 text-center text-stone-400 text-xs font-light space-y-1">
             <p>© 2026 Hebron Care Adult Family Home LLC #1. All rights reserved.</p>
-            <p class="mt-2">DSHS license: <a href="https://apps.dshs.wa.gov/carefinder/ProviderSearch.aspx" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:text-emerald-700 transition-colors underline underline-offset-2">verify our license</a></p>
+            <p class="mt-2">DSHS license #756107.</p>
             <p class="mt-2"><button type="button" id="larger-text-btn" class="text-stone-500 hover:text-emerald-700 transition-colors underline underline-offset-2" aria-pressed="false">Larger text</button></p>
         </div>
     </footer>
