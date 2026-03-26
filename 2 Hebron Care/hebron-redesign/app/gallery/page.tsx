@@ -83,16 +83,6 @@ function GalleryCard({ image, index, onClick }: GalleryCardProps) {
             style={{ display: "block" }}
           />
 
-          {/* Hover overlay: gradient + caption */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 rounded-lg" />
-          <div
-            className="absolute bottom-0 left-0 right-0 px-3 py-2.5 translate-y-2 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
-          >
-            <p className="font-sans text-[11px] font-light tracking-wide text-white/90 leading-snug">
-              {image.alt}
-            </p>
-          </div>
-
           {/* Subtle hover shadow ring */}
           <div className="absolute inset-0 rounded-lg ring-0 transition-all duration-300 group-hover:ring-1 group-hover:ring-white/20 group-hover:shadow-xl" />
         </div>
@@ -169,10 +159,9 @@ function Lightbox({ images, index, onClose, onPrev, onNext }: LightboxProps) {
           />
         </div>
 
-        {/* Caption */}
-        <p className="mt-3 font-sans text-xs font-light tracking-wide text-white/70">
-          {image.alt}
-          <span className="ml-3 text-white/35">{index + 1} / {images.length}</span>
+        {/* Image counter */}
+        <p className="mt-3 font-sans text-xs font-light tracking-wide text-white/35">
+          {index + 1} / {images.length}
         </p>
       </motion.div>
 

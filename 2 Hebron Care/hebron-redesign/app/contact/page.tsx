@@ -27,19 +27,21 @@ export default function ContactPage() {
     const data = new FormData(form);
 
     try {
-      const res = await fetch("https://formspree.io/f/xdkonbpj", {
+      data.append("access_key", "cd9bdd93-9d53-4559-9d71-340c10af26dc");
+      data.append("subject", "New Inquiry from Hebron Care Website");
+      data.append("from_name", "Hebron Care Website");
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: data,
-        headers: { Accept: "application/json" },
       });
 
-      if (res.ok) {
+      const json = await res.json().catch(() => ({}));
+      if (json.success) {
         setStatus("success");
         form.reset();
       } else {
-        const json = await res.json().catch(() => ({}));
         setErrorMessage(
-          json?.errors?.[0]?.message ||
+          json?.message ||
             "Something went wrong. Please try again or call us directly."
         );
         setStatus("error");
