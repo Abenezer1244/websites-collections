@@ -1,25 +1,554 @@
-﻿<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Services | Skagit River</title>
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<title>Services | Adult Family Home — Mount Vernon, WA | Skagit River</title>
+<meta name="description" content="Medication management, memory care, mobility support, and ADL assistance at Skagit River adult family home in Mount Vernon, WA. Dementia care, hospice coordination, and 24/7 residential care in Skagit County.">
+<meta property="og:title" content="Services | Adult Family Home — Mount Vernon, WA | Skagit River">
+<meta property="og:description" content="Explore Skagit River's core services, from daily living support and medication management to mobility assistance, amenities, and specialized senior care in Mount Vernon.">
+<meta property="og:image" content="https://i.ibb.co/B2s5FTcN/DSC00600-fotor-2026032514729.png">
+<meta property="og:url" content="https://3hebroncareafh.site/services/">
+<meta property="og:type" content="website">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,300&amp;family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&amp;display=swap" rel="stylesheet">
+<style>
+:root {
+--color-sand: #F5F2EB;
+--color-stone: #E6E2DA;
+--color-rock: #2D2A26;
+--color-clay: #A67C52;
+}
+body {
+background-color: var(--color-sand);
+color: var(--color-rock);
+font-family: 'DM Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6, .serif {
+font-family: 'Crimson Pro', serif;
+}
+.text-clay { color: var(--color-clay); }
+.bg-stone { background-color: var(--color-stone); }
+/* Smooth fade for elements */
+.fade-up {
+animation: fadeUp 1s ease-out forwards;
+opacity: 0;
+transform: translateY(1.5rem);
+}
+@keyframes fadeUp {
+to { opacity: 1; transform: translateY(0); }
+}
+/* Custom selection color */
+::selection {
+background: #D4C5B0;
+color: #2D2A26;
+}
+/* Hide scrollbar */
+::-webkit-scrollbar { width: 0; background: transparent; }
+.skip-link { position: absolute; left: -9999px; z-index: 9999; padding: 0.75rem 1rem; background: #2D2A26; color: #F5F2EB; border-radius: 0.5rem; font-size: 0.875rem; }
+.skip-link:focus { left: 1rem; top: 1rem; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: none; box-shadow: 0 0 0 2px #F5F2EB, 0 0 0 4px #A67C52; }
+@media (prefers-reduced-motion: reduce) {
+*, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+</style></head>
+<body class="antialiased selection:bg-stone-300 font-light text-base bg-[#F5F2EB]">
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 px-4 md:px-6 pt-4 pb-3 bg-transparent backdrop-blur-md transition-all duration-300 serif">
+        <div class="max-w-screen-xl mx-auto flex items-center justify-between gap-4">
+            <a href="/" class="flex items-center gap-2 text-clay z-50 relative hover:text-[#2D2A26] transition-colors" aria-label="Skagit River - Home" title="Skagit River">
+                <img src="https://i.ibb.co/CxnYYN2/Untitled-design-4-Picsart-Background-Remover.png" alt="Skagit River" class="h-8 w-auto" width="32" height="32">
+                <span class="text-2xl md:text-3xl tracking-tight font-medium">Skagit River</span>
+            </a>
+
+            <!-- Desktop Menu - pill style -->
+            <div class="hidden md:flex flex-1 justify-center">
+                <div class="inline-flex items-center gap-12 px-12 py-2 rounded-full bg-white/15 border border-white/60 backdrop-blur-3xl -translate-y-1 shadow-[0_2px_4px_rgba(45,42,38,0.06),0_8px_16px_rgba(45,42,38,0.08),0_20px_40px_-10px_rgba(45,42,38,0.12),0_32px_64px_-20px_rgba(45,42,38,0.18),0_40px_80px_-24px_rgba(45,42,38,0.22)]">
+                    <a href="/" class="text-sm md:text-base font-normal text-[#2D2A26]/80 hover:text-[#2D2A26] transition-colors">Home</a>
+                    <a href="/about-us/" class="text-sm md:text-base font-normal text-[#2D2A26]/80 hover:text-[#2D2A26] transition-colors">About Us</a>
+                    <a href="/services/" class="text-sm md:text-base font-medium text-[#2D2A26] bg-white px-4 py-1.5 rounded-full shadow-sm hover:bg-white hover:text-[#2D2A26] transition-colors">Services</a>
+                    <a href="/gallery/" class="text-sm md:text-base font-normal text-[#2D2A26]/80 hover:text-[#2D2A26] transition-colors">Gallery</a>
+                    <a href="/pricing/" class="text-sm md:text-base font-normal text-[#2D2A26]/80 hover:text-[#2D2A26] transition-colors">Pricing</a>
+                    <a href="/contact/" class="text-sm md:text-base font-normal text-[#2D2A26]/80 hover:text-[#2D2A26] transition-colors">Contact</a>
+                </div>
+            </div>
+
+            <!-- Primary CTA -->
+            <a href="/contact/" class="hidden md:inline-flex items-center gap-2 bg-[#A67C52] text-white px-5 py-2 rounded-full text-sm font-medium shadow-md shadow-black/30 hover:bg-[#8f6a47] transition-all">
+                <span>Schedule a Tour</span>
+            </a>
+
+            <!-- Mobile Menu Icon -->
+            <button type="button" class="md:hidden z-50 text-clay" data-nav-toggle data-target="#mobile-nav" aria-label="Open navigation menu">
+                <iconify-icon icon="solar:hamburger-menu-linear" width="1.5rem" stroke-width="1.5"></iconify-icon>
+            </button>
+        </div>
+    </nav>
+
+    <div id="mobile-nav-overlay" class="fixed inset-0 z-[38] md:hidden bg-black/30 opacity-0 pointer-events-none transition-opacity duration-200" data-nav-overlay aria-hidden="true"></div>
+    <!-- Mobile Nav -->
+    <div id="mobile-nav" class="fixed inset-x-4 top-20 z-40 md:hidden bg-[#2D2A26] text-[#F5F2EB] rounded-3xl shadow-xl border border-white/10 px-6 py-5 space-y-3 transform origin-top transition-all duration-200 opacity-0 scale-95 pointer-events-none serif">
+        <a href="/" class="block text-xl font-medium py-2 border-b border-white/10">Home</a>
+        <a href="/about-us/" class="block text-base py-2 border-b border-white/10">About Us</a>
+        <a href="/services/" class="block text-base font-medium text-white py-2 border-b-2 border-white/90">Services</a>
+        <a href="/gallery/" class="block text-base py-2 border-b border-white/10">Gallery</a>
+        <a href="/pricing/" class="block text-base py-2 border-b border-white/10">Pricing</a>
+        <a href="/contact/" class="block text-base py-2 border-b border-white/10">Contact</a>
+        <a href="/contact/" class="block text-center bg-[#A67C52] text-white py-2.5 rounded-full mt-2">Schedule a Tour</a>
+    </div>
+
+    <!-- Services HERO Section (New Look) -->
+    <header id="main" class="relative pt-32 md:pt-48 pb-24 px-6 md:px-12 flex flex-col items-center overflow-hidden" tabindex="-1">
+        <nav aria-label="Breadcrumb" class="absolute top-24 left-6 md:left-12 z-10 text-left">
+            <ol class="flex items-center gap-2 text-sm font-light text-[#2D2A26]/70" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/" itemprop="item" class="hover:text-clay transition-colors"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+                <li aria-hidden="true">/</li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name">Services</span><meta itemprop="position" content="2"></li>
+            </ol>
+        </nav>
+        <!-- Abstract Decoration -->
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-white rounded-full blur-[120px] pointer-events-none -translate-y-1/3 translate-x-1/3 opacity-60"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            
+            <!-- Left: Typography & Intro -->
+            <div class="fade-up">
+                <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[#2D2A26]/5 text-xs font-normal uppercase tracking-widest text-clay mb-8">
+                    <iconify-icon icon="solar:leaf-linear" class="text-base"></iconify-icon>
+                    Comprehensive Care
+                </span>
+                <h1 class="text-5xl md:text-6xl lg:text-7xl text-[#2D2A26] mb-6 leading-[1.1] font-light tracking-tight serif">
+                    Tailored services <br>
+                    <span class="italic text-clay">for a life well-lived.</span>
+                </h1>
+                <p class="text-[#2D2A26]/70 text-lg md:text-xl font-light leading-relaxed max-w-lg mb-4">
+                    We provide a full spectrum of personalized care—including medication management, memory care and dementia support, mobility and ADL assistance, and hospice coordination—perfectly balancing professional medical oversight with the comforts of a true home environment.
+                </p>
+                <p class="text-[#2D2A26]/60 text-base font-light mb-10">
+                    Residential care for seniors in Mount Vernon, WA and Skagit County. Adult family home services tailored to your loved one's needs.
+                </p>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-4 py-2 rounded-full border border-[#2D2A26]/10 text-sm font-light text-[#2D2A26]/80 bg-white/50 backdrop-blur-sm">24/7 Monitoring</span>
+                    <span class="px-4 py-2 rounded-full border border-[#2D2A26]/10 text-sm font-light text-[#2D2A26]/80 bg-white/50 backdrop-blur-sm">RN Delegation</span>
+                    <span class="px-4 py-2 rounded-full border border-[#2D2A26]/10 text-sm font-light text-[#2D2A26]/80 bg-white/50 backdrop-blur-sm">Holistic Wellness</span>
+                </div>
+            </div>
+
+            <!-- Right: New Hero Imagery Composition -->
+            <div class="relative w-full aspect-square lg:aspect-[4/5] fade-up" style="animation-delay: 0.2s;">
+                <div class="absolute top-0 right-0 w-3/4 h-5/6 rounded-[2.5rem] overflow-hidden shadow-sm border border-[#2D2A26]/5 z-10">
+                    <img src="https://i.ibb.co/FL180T8H/adult-family-homes.jpg" alt="Exterior of Skagit River adult family home" class="w-full h-full object-cover" loading="lazy">
+                </div>
+                <div class="absolute bottom-0 left-0 w-1/2 h-1/2 rounded-[2rem] overflow-hidden shadow-md border border-white/20 z-20">
+                    <img src="https://i.ibb.co/z1sThtz/1.webp" alt="Caregiver supporting senior using a walker" class="w-full h-full object-cover" loading="lazy">
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Our Care Approach Section -->
+    <section id="approach" class="py-24 px-6 md:px-12 bg-white rounded-[3rem] mx-2 md:mx-6 shadow-sm border border-[#2D2A26]/5 relative z-20">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-16 md:gap-24">
+            
+            <div class="md:w-1/3 shrink-0">
+                <span class="text-xs font-normal uppercase tracking-widest text-clay mb-4 block">The Foundation</span>
+                <h2 class="text-3xl md:text-4xl serif tracking-tight text-[#2D2A26] sticky top-32">Our Care <br>Approach</h2>
+            </div>
+
+            <div class="md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <div class="w-10 h-10 rounded-full bg-[#F5F2EB] flex items-center justify-center mb-6 border border-[#2D2A26]/5">
+                        <iconify-icon icon="solar:user-heart-linear" class="text-xl text-clay" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl serif tracking-tight text-[#2D2A26] mb-4">Person-Centered Focus</h3>
+                    <p class="text-[#2D2A26]/70 font-light leading-relaxed text-base">
+                        We don't believe in one-size-fits-all care. Every resident undergoes a comprehensive assessment to craft an individualized care plan. This living document adapts as their needs change, ensuring they always receive the exact level of support required to maintain dignity and independence.
+                    </p>
+                </div>
+                <div>
+                    <div class="w-10 h-10 rounded-full bg-[#F5F2EB] flex items-center justify-center mb-6 border border-[#2D2A26]/5">
+                        <iconify-icon icon="solar:shield-check-linear" class="text-xl text-clay" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl serif tracking-tight text-[#2D2A26] mb-4">Proactive Health Monitoring</h3>
+                    <p class="text-[#2D2A26]/70 font-light leading-relaxed text-base">
+                        Our 24/7 awake staff and licensed nursing oversight allow us to detect subtle changes in health early. By coordinating seamlessly with primary care physicians and specialists, we prevent complications and keep families fully informed every step of the way.
+                    </p>
+                </div>
+                <div class="md:col-span-2 mt-4 p-8 bg-[#F5F2EB]/50 rounded-2xl border border-[#2D2A26]/5">
+                    <p class="text-[#2D2A26]/80 font-light leading-relaxed text-lg italic serif text-center">
+                        "Our goal is never to take over a resident's life, but to provide the gentle scaffolding they need to continue living it beautifully."
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section id="services" class="py-32 px-6 md:px-12 bg-[#F5F2EB]">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20">
+                <span class="text-xs font-normal uppercase tracking-widest text-clay mb-4 block">What We Provide</span>
+                <h2 class="text-4xl md:text-5xl serif tracking-tight text-[#2D2A26]">Our Core Services</h2>
+                <p class="text-[#2D2A26]/60 font-light mt-4 max-w-2xl mx-auto text-lg">Comprehensive daily support designed to remove the burden of chores and medical management, allowing residents to focus on living.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-3xl border border-[#2D2A26]/5 hover:shadow-md transition-shadow group">
+                    <div class="w-12 h-12 rounded-full bg-[#F5F2EB] flex items-center justify-center mb-6 group-hover:bg-clay/10 transition-colors">
+                        <iconify-icon icon="solar:hand-stars-linear" class="text-2xl text-clay" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl serif tracking-tight text-[#2D2A26] mb-3">Activities of Daily Living</h3>
+                    <p class="text-[#2D2A26]/70 font-light text-base leading-relaxed">
+                        Discreet, respectful assistance with bathing, dressing, grooming, and personal hygiene. We honor personal routines and preferences above all.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-3xl border border-[#2D2A26]/5 hover:shadow-md transition-shadow group">
+                    <div class="w-12 h-12 rounded-full bg-[#F5F2EB] flex items-center justify-center mb-6 group-hover:bg-clay/10 transition-colors">
+                        <iconify-icon icon="solar:pill-linear" class="text-2xl text-clay" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl serif tracking-tight text-[#2D2A26] mb-3">Medication Management</h3>
+                    <p class="text-[#2D2A26]/70 font-light text-base leading-relaxed">
+                        Strict RN-delegated administration of all medications. We handle refills, pharmacy coordination, and track schedules meticulously.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-3xl border border-[#2D2A26]/5 hover:shadow-md transition-shadow group">
+                    <div class="w-12 h-12 rounded-full bg-[#F5F2EB] flex items-center justify-center mb-6 group-hover:bg-clay/10 transition-colors">
+                        <iconify-icon icon="solar:cup-hot-linear" class="text-2xl text-clay" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl serif tracking-tight text-[#2D2A26] mb-3">Culinary &amp; Nutrition</h3>
+                    <p class="text-[#2D2A26]/70 font-light text-base leading-relaxed">
+                        Three delicious, home-cooked meals daily, plus snacks. We accommodate complex dietary restrictions, pureed diets, and diabetic meal plans.
+                    </p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white p-8 rounded-3xl border border-[#2D2A26]/5 hover:shadow-md transition-shadow group">
+                    <div class="w-12 h-12 rounded-full bg-[#F5F2EB] flex items-center justify-center mb-6 group-hover:bg-clay/10 transition-colors">
+                        <iconify-icon icon="mdi:wheelchair" class="text-2xl text-clay" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl serif tracking-tight text-[#2D2A26] mb-3">Mobility &amp; Transfer</h3>
+                    <p class="text-[#2D2A26]/70 font-light text-base leading-relaxed">
+                        Expert assistance with ambulation, standing, and bed-to-chair transfers using safe, state-of-the-art techniques and equipment.
+                    </p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white p-8 rounded-3xl border border-[#2D2A26]/5 hover:shadow-md transition-shadow group">
+                    <div class="w-12 h-12 rounded-full bg-[#F5F2EB] flex items-center justify-center mb-6 group-hover:bg-clay/10 transition-colors">
+                        <iconify-icon icon="solar:washing-machine-linear" class="text-2xl text-clay" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl serif tracking-tight text-[#2D2A26] mb-3">Housekeeping &amp; Laundry</h3>
+                    <p class="text-[#2D2A26]/70 font-light text-base leading-relaxed">
+                        Complete management of the household environment. Daily room tidying, thorough cleaning, and personal laundry services.
+                    </p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-white p-8 rounded-3xl border border-[#2D2A26]/5 hover:shadow-md transition-shadow group">
+                    <div class="w-12 h-12 rounded-full bg-[#F5F2EB] flex items-center justify-center mb-6 group-hover:bg-clay/10 transition-colors">
+                        <iconify-icon icon="solar:music-notes-linear" class="text-2xl text-clay" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl serif tracking-tight text-[#2D2A26] mb-3">Engagement &amp; Activities</h3>
+                    <p class="text-[#2D2A26]/70 font-light text-base leading-relaxed">
+                        Cognitive stimulation and social engagement through music, art therapy, light exercise, gardening, and family gatherings.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Specialties Section -->
+    <section id="specialties" class="py-24 px-6 md:px-12 bg-white rounded-[3rem] mx-2 md:mx-6 shadow-sm border border-[#2D2A26]/5">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
+                <div class="max-w-2xl">
+                    <h2 class="text-4xl md:text-5xl serif tracking-tight text-[#2D2A26] mb-6">Our Specialties</h2>
+                    <p class="text-[#2D2A26]/60 font-light text-lg leading-relaxed">
+                        Beyond standard assisted living, our staff is extensively trained to handle complex conditions requiring a higher, more nuanced level of care.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Specialty 1 -->
+                <div class="rounded-3xl bg-[#F5F2EB] overflow-hidden border border-[#2D2A26]/5 flex flex-col h-full group">
+                <div class="h-48 overflow-hidden relative">
+                        <img src="https://i.ibb.co/gMJq1ZvM/Memory-Care-Vista-Prairie-s-Dementia-Care-Program-Memory-Care-50.jpg" alt="Memory care and dementia support at Skagit River adult family home in Mount Vernon, WA" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                    </div>
+                    <div class="p-8 flex-grow">
+                        <h3 class="text-2xl serif tracking-tight text-[#2D2A26] mb-3">Memory Care</h3>
+                        <p class="text-[#2D2A26]/70 font-light text-sm leading-relaxed mb-6">
+                            Dedicated support for Alzheimer's and various stages of dementia. We utilize validation therapy, secure environments, and familiar routines to reduce anxiety and promote peace of mind.
+                        </p>
+                        <ul class="space-y-2 mt-auto">
+                            <li class="flex items-center gap-2 text-sm font-light text-[#2D2A26]/80">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-clay"></iconify-icon> Wandering prevention
+                            </li>
+                            <li class="flex items-center gap-2 text-sm font-light text-[#2D2A26]/80">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-clay"></iconify-icon> Behavioral redirection
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Specialty 2 -->
+                <div class="rounded-3xl bg-[#F5F2EB] overflow-hidden border border-[#2D2A26]/5 flex flex-col h-full group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" alt="Hospice and end-of-life care support at Skagit River adult family home, Mount Vernon, WA" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                    </div>
+                    <div class="p-8 flex-grow">
+                        <h3 class="text-2xl serif tracking-tight text-[#2D2A26] mb-3">Hospice Support</h3>
+                        <p class="text-[#2D2A26]/70 font-light text-sm leading-relaxed mb-6">
+                            We partner seamlessly with local hospice agencies to provide compassionate end-of-life care in the comfort of our home, ensuring absolute dignity, pain management, and emotional support.
+                        </p>
+                        <ul class="space-y-2 mt-auto">
+                            <li class="flex items-center gap-2 text-sm font-light text-[#2D2A26]/80">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-clay"></iconify-icon> 24/7 comfort monitoring
+                            </li>
+                            <li class="flex items-center gap-2 text-sm font-light text-[#2D2A26]/80">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-clay"></iconify-icon> Family counseling support
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Specialty 3 -->
+                <div class="rounded-3xl bg-[#F5F2EB] overflow-hidden border border-[#2D2A26]/5 flex flex-col h-full group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://i.ibb.co/TDs0Nz9S/unnamed.jpg" alt="Short-term respite care at Skagit River adult family home in Mount Vernon, WA" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                    </div>
+                    <div class="p-8 flex-grow">
+                        <h3 class="text-2xl serif tracking-tight text-[#2D2A26] mb-3">Respite Care</h3>
+                        <p class="text-[#2D2A26]/70 font-light text-sm leading-relaxed mb-6">
+                            Short-term stays designed to give primary caregivers a necessary rest, or to provide a supportive environment for seniors recovering from surgery or hospitalization before returning home.
+                        </p>
+                        <ul class="space-y-2 mt-auto">
+                            <li class="flex items-center gap-2 text-sm font-light text-[#2D2A26]/80">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-clay"></iconify-icon> Flexible stay durations
+                            </li>
+                            <li class="flex items-center gap-2 text-sm font-light text-[#2D2A26]/80">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-clay"></iconify-icon> Full access to amenities
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conditions We Serve -->
+    <section class="py-24 px-6 md:px-12 bg-white rounded-[3rem] mx-2 md:mx-6 shadow-sm border border-[#2D2A26]/5">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl serif tracking-tight text-[#2D2A26] mb-4">Conditions we serve</h2>
+            <p class="text-[#2D2A26]/70 font-light text-lg max-w-3xl mb-10">We welcome residents with a wide range of needs. Our team is experienced in supporting those with:</p>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-[#2D2A26]/80 font-light">
+                <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" class="text-clay shrink-0"></iconify-icon> Dementia &amp; Alzheimer's</li>
+                <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" class="text-clay shrink-0"></iconify-icon> Stroke recovery</li>
+                <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" class="text-clay shrink-0"></iconify-icon> COPD &amp; respiratory care</li>
+                <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" class="text-clay shrink-0"></iconify-icon> Mobility issues &amp; fall risk</li>
+                <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" class="text-clay shrink-0"></iconify-icon> Hospice &amp; end-of-life care</li>
+                <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" class="text-clay shrink-0"></iconify-icon> Diabetes &amp; medication management</li>
+                <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" class="text-clay shrink-0"></iconify-icon> Post-hospitalization &amp; respite</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- What's included & staffing -->
+    <section class="py-24 px-6 md:px-12 bg-[#F5F2EB]">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-3xl md:text-4xl serif tracking-tight text-[#2D2A26] mb-6">What's included in the base rate</h2>
+                <p class="text-[#2D2A26]/70 font-light mb-6">Our monthly rate typically includes:</p>
+                <ul class="space-y-2 text-[#2D2A26]/80 font-light">
+                    <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" class="text-clay"></iconify-icon> 24/7 supervision &amp; awake staff</li>
+                    <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" class="text-clay"></iconify-icon> Three meals daily + snacks</li>
+                    <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" class="text-clay"></iconify-icon> Medication management (RN-delegated)</li>
+                    <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" class="text-clay"></iconify-icon> Assistance with ADLs (bathing, dressing, grooming)</li>
+                    <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" class="text-clay"></iconify-icon> Housekeeping &amp; laundry</li>
+                    <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" class="text-clay"></iconify-icon> Activities &amp; engagement</li>
+                    <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" class="text-clay"></iconify-icon> Care coordination with doctors &amp; families</li>
+                </ul>
+                <p class="text-[#2D2A26]/60 font-light text-sm mt-6">Some items (e.g. certain medical supplies, outside therapies, or one-on-one nursing beyond the base level) may be billed separately. We outline this clearly before admission.</p>
+            </div>
+            <div>
+                <h2 class="text-3xl md:text-4xl serif tracking-tight text-[#2D2A26] mb-6">Staffing &amp; care plan process</h2>
+                <p class="text-[#2D2A26]/70 font-light mb-4">We maintain a high staff-to-resident ratio with awake coverage 24/7. Our team includes licensed caregivers and RN oversight for assessments and medication delegation.</p>
+                <p class="text-[#2D2A26]/70 font-light mb-4">Before move-in we complete an assessment and create an individualized care plan. We review and update the plan regularly and whenever needs change, in partnership with families and physicians.</p>
+                <p class="text-[#2D2A26]/70 font-light">For exact rates and what might be included or billed separately for your situation, <a href="/contact/" class="text-clay hover:underline">contact us</a> or see our <a href="/pricing/" class="text-clay hover:underline">Pricing</a> page.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facility Amenities Section -->
+    <section id="amenities" class="py-32 px-6 md:px-12 bg-[#F5F2EB]">
+        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
+            
+            <!-- Imagery -->
+            <div class="lg:w-1/2 w-full relative">
+                <div class="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-sm border border-[#2D2A26]/5">
+                    <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" alt="Common area sunroom at Skagit River adult family home, Mount Vernon, WA" class="w-full h-full object-cover" loading="lazy">
+                </div>
+                <!-- Floating badge -->
+                <div class="absolute -bottom-8 -right-4 md:right-8 bg-white p-6 rounded-3xl shadow-lg border border-[#2D2A26]/5 max-w-xs">
+                    <iconify-icon icon="solar:home-smile-linear" class="text-3xl text-clay mb-2"></iconify-icon>
+                    <p class="text-[#2D2A26] text-sm font-normal">Designed for absolute accessibility and unmatched comfort.</p>
+                </div>
+            </div>
+
+            <!-- Amenities List -->
+            <div class="lg:w-1/2 w-full">
+                <span class="text-xs font-normal uppercase tracking-widest text-clay mb-4 block">The Comforts of Home</span>
+                <h2 class="text-4xl md:text-5xl serif tracking-tight text-[#2D2A26] mb-8">Facility Amenities</h2>
+                <p class="text-[#2D2A26]/60 font-light text-lg mb-12 leading-relaxed">
+                    Our residence has been thoughtfully architected to provide a safe, barrier-free environment that feels elegant and universally welcoming.
+                </p>
+
+                <div class="space-y-6">
+                    <!-- Amenity Item -->
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-full bg-white flex shrink-0 items-center justify-center border border-[#2D2A26]/5 shadow-sm">
+                            <iconify-icon icon="solar:bed-linear" class="text-xl text-clay"></iconify-icon>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-medium tracking-tight text-[#2D2A26]">Private &amp; Companion Suites</h4>
+                            <p class="text-[#2D2A26]/60 font-light text-sm mt-1 leading-relaxed">Spacious, fully furnished rooms with personal climate control, call buttons, and abundant natural light.</p>
+                        </div>
+                    </div>
+
+                    <!-- Amenity Item -->
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-full bg-white flex shrink-0 items-center justify-center border border-[#2D2A26]/5 shadow-sm">
+                            <iconify-icon icon="solar:bath-linear" class="text-xl text-clay"></iconify-icon>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-medium tracking-tight text-[#2D2A26]">Accessible Bathrooms</h4>
+                            <p class="text-[#2D2A26]/60 font-light text-sm mt-1 leading-relaxed">Zero-entry roll-in showers, secure grab bars, and non-slip flooring designed specifically for fall prevention.</p>
+                        </div>
+                    </div>
+
+                    <!-- Amenity Item -->
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-full bg-white flex shrink-0 items-center justify-center border border-[#2D2A26]/5 shadow-sm">
+                            <iconify-icon icon="mdi:tree" class="text-xl text-clay"></iconify-icon>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-medium tracking-tight text-[#2D2A26]">Tranquil Outdoor Spaces</h4>
+                            <p class="text-[#2D2A26]/60 font-light text-sm mt-1 leading-relaxed">A beautifully landscaped, secure backyard with paved walking paths, raised garden beds, and shaded patios.</p>
+                        </div>
+                    </div>
+
+                    <!-- Amenity Item -->
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-full bg-white flex shrink-0 items-center justify-center border border-[#2D2A26]/5 shadow-sm">
+                            <iconify-icon icon="solar:sofa-linear" class="text-xl text-clay"></iconify-icon>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-medium tracking-tight text-[#2D2A26]">Communal Living Areas</h4>
+                            <p class="text-[#2D2A26]/60 font-light text-sm mt-1 leading-relaxed">Warm, inviting living rooms with cozy seating, a library corner, and a large dining table for family-style meals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Our Philosophy Section -->
+    <section class="py-32 px-6 md:px-12 bg-white rounded-[3rem] mx-2 md:mx-6 shadow-sm border border-[#2D2A26]/5 mb-12 relative overflow-hidden flex items-center justify-center text-center">
+        <!-- Abstract Decoration -->
+        <div class="absolute inset-0 bg-clay/5 rounded-full blur-[100px] pointer-events-none scale-150"></div>
+        
+        <div class="max-w-4xl mx-auto relative z-10">
+            <iconify-icon icon="solar:quote-left-linear" class="text-5xl text-clay/40 mb-8 mx-auto block"></iconify-icon>
+            <h2 class="text-3xl md:text-5xl lg:text-6xl serif tracking-tight text-[#2D2A26] leading-[1.2]">
+                Our philosophy is simple: <br class="hidden md:block">
+                Care is not just a service we provide; <br class="hidden md:block">
+                <span class="italic text-clay">it is a relationship we nurture.</span>
+            </h2>
+            <p class="text-[#2D2A26]/60 font-light text-lg md:text-xl mt-8">
+                We measure our success not just by clinical health, but by the daily smiles, the shared stories, and the undeniable feeling of being at home.
+            </p>
+        </div>
+    </section>
+
+    <!-- Take Action Today & Footer Section -->
+    <footer id="action" class="bg-[#2D2A26] text-[#F5F2EB] py-24 px-6 md:px-12 rounded-t-[3rem] relative overflow-hidden">
+        <!-- Abstract Decoration -->
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-clay/5 rounded-full blur-[100px] pointer-events-none -translate-y-1/2 translate-x-1/2"></div>
+
+        <div class="max-w-4xl mx-auto relative z-10 text-center">
+            <span class="text-xs font-normal uppercase tracking-widest text-clay mb-4 block">Take Action Today</span>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl serif mb-6 tracking-tight">Let's discuss their needs.</h2>
+            <p class="text-white/60 text-lg font-light mb-12 max-w-xl mx-auto leading-relaxed">
+                Finding the right home is a significant decision. We invite you to schedule a tour, meet our caregivers, and see the environment for yourself. 
+            </p>
+
+            <a href="tel:+13607232907" class="inline-flex items-center gap-3 bg-white hover:bg-stone-200 text-[#2D2A26] px-10 py-4 rounded-full text-base font-normal transition-all transform hover:-translate-y-1 shadow-lg shadow-black/20 mb-20">
+                <iconify-icon icon="solar:phone-calling-linear" class="text-2xl" stroke-width="1.5"></iconify-icon>
+                Call to Schedule a Tour
+            </a>
+
+            <!-- Footer Bottom -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left border-t border-white/10 pt-12 max-w-3xl mx-auto">
+                <div>
+                    <h4 class="font-serif italic text-2xl mb-2 text-clay tracking-tight">Skagit River</h4>
+                    <p class="text-white/40 text-sm font-light leading-relaxed">
+                        Skagit River Adult Family Home LLC.<br>
+                        2120 Forest Dr, Mount Vernon, WA 98273<br>
+                        Licensed Washington State Adult Family Home<br>
+                        DSHS License #: 758550<br>
+                        Providing compassionate, residential care.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-3 md:text-right">
+                    <a href="/services/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Services &amp; Amenities</a>
+                    <a href="/pricing/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Pricing</a>
+                    <a href="/privacy/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Privacy Policy</a>
+                    <a href="/terms/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Terms of Service</a>
+                    <a href="/contact/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Contact Information</a>
+                    <p class="text-white/20 text-xs mt-4 font-light">&copy; <span id="copyright-year">2026</span> Skagit River Adult Family Home LLC. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script>
       (function () {
-        fetch("/services.html", { cache: "no-store" })
-          .then(function (r) { return r.text(); })
-          .then(function (html) {
-            document.open();
-            document.write(html);
-            document.close();
-          })
-          .catch(function () {
-            document.body.innerHTML = "Unable to load this page. Please try again.";
+        var toggles = document.querySelectorAll('[data-nav-toggle]');
+        var overlay = document.querySelector('[data-nav-overlay]');
+        function closeMenu(menu) {
+          if (!menu) return;
+          menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+          if (overlay) { overlay.classList.add('opacity-0', 'pointer-events-none'); overlay.setAttribute('aria-hidden', 'true'); }
+        }
+        toggles.forEach(function (btn) {
+          var targetSelector = btn.getAttribute('data-target');
+          var menu = document.querySelector(targetSelector);
+          if (!menu) return;
+          btn.addEventListener('click', function () {
+            var isOpen = !menu.classList.contains('pointer-events-none');
+            if (isOpen) closeMenu(menu);
+            else {
+              menu.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
+              if (overlay) { overlay.classList.remove('opacity-0', 'pointer-events-none'); overlay.setAttribute('aria-hidden', 'false'); }
+            }
           });
+          if (overlay) overlay.addEventListener('click', function () { closeMenu(menu); });
+          menu.querySelectorAll('a').forEach(function (link) { link.addEventListener('click', function () { closeMenu(menu); }); });
+        });
       })();
     </script>
-  </head>
-  <body></body>
-</html>
-
+    <script>document.getElementById('copyright-year') && (document.getElementById('copyright-year').textContent = new Date().getFullYear());</script>
+</body></html>

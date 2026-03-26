@@ -1,0 +1,8 @@
+node_modules/
+.next/
+.claude/
+.firecrawl/
+.playwright-mcp/
+*.log
+.env
+.env.*

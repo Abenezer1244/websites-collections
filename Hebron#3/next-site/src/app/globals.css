@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand Colors */
+  --sand: #F5F2EB;
+  --stone: #E6E2DA;
+  --rock: #2D2A26;
+  --clay: #A67C52;
+
+  /* Extended Palette */
+  --warm-white: #FDFCFA;
+  --linen: #FAF7F2;
+  --clay-light: #C9A882;
+  --clay-dark: #8B6941;
+  --clay-text: #7A6540;
+  --sage: #7A8B6F;
+  --cream: #F0EBE0;
+
+  /* Semantic */
+  --background: var(--sand);
+  --foreground: var(--rock);
+  --primary: var(--clay);
+  --primary-foreground: #FFFFFF;
+  --muted: var(--stone);
+  --muted-foreground: rgba(45, 42, 38, 0.6);
+  --accent: var(--sage);
+  --card: var(--warm-white);
+  --card-foreground: var(--rock);
+  --border: rgba(45, 42, 38, 0.08);
+  --ring: var(--clay);
+  --destructive: #DC2626;
+
+  /* Selection */
+  --selection-bg: #D4C5B0;
+  --selection-text: var(--rock);
+}
+
+@theme inline {
+  --color-sand: var(--sand);
+  --color-stone: var(--stone);
+  --color-rock: var(--rock);
+  --color-clay: var(--clay);
+  --color-warm-white: var(--warm-white);
+  --color-linen: var(--linen);
+  --color-clay-light: var(--clay-light);
+  --color-clay-dark: var(--clay-dark);
+  --color-clay-text: var(--clay-text);
+  --color-sage: var(--sage);
+  --color-cream: var(--cream);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-destructive: var(--destructive);
+  --font-serif: var(--font-crimson);
+  --font-sans: var(--font-dm-sans);
+}
+
+/* Base */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-dm-sans), "DM Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-crimson), "Crimson Pro", serif;
+}
+
+::selection {
+  background: var(--selection-bg);
+  color: var(--selection-text);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 9999;
+  padding: 0.75rem 1rem;
+  background: var(--rock);
+  color: var(--sand);
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+/* Focus ring */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--sand), 0 0 0 4px var(--clay);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Subtle grain texture overlay */
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}

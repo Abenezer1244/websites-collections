@@ -2,10 +2,10 @@
 <html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<title>Pricing | Adult Family Home — Everett, WA | Skagit River</title>
-<meta name="description" content="Transparent pricing for Skagit River adult family home in Everett, WA. Monthly rate range, what's included, payment options including private pay and long-term care insurance.">
-<meta property="og:title" content="Pricing | Adult Family Home — Everett, WA | Skagit River">
-<meta property="og:description" content="Monthly rates, what's included, and payment options at Skagit River in Everett, WA.">
+<title>Pricing | Adult Family Home — Mount Vernon, WA | Skagit River</title>
+<meta name="description" content="Transparent pricing for Skagit River adult family home in Mount Vernon, WA. Monthly rate range, what's included, payment options including private pay and long-term care insurance.">
+<meta property="og:title" content="Pricing | Adult Family Home — Mount Vernon, WA | Skagit River">
+<meta property="og:description" content="Monthly rates, what's included, and payment options at Skagit River in Mount Vernon, WA.">
 <meta property="og:url" content="https://3hebroncareafh.site/pricing/">
 <meta property="og:type" content="website">
 <script src="https://cdn.tailwindcss.com"></script>
@@ -24,6 +24,9 @@ h1, h2, h3, h4, h5, h6, .serif { font-family: 'Crimson Pro', serif; }
 .skip-link { position: absolute; left: -9999px; z-index: 9999; padding: 0.75rem 1rem; background: #2D2A26; color: #F5F2EB; border-radius: 0.5rem; font-size: 0.875rem; }
 .skip-link:focus { left: 1rem; top: 1rem; }
 a:focus-visible, button:focus-visible { outline: none; box-shadow: 0 0 0 2px #F5F2EB, 0 0 0 4px #A67C52; }
+@media (prefers-reduced-motion: reduce) {
+*, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
 </style></head>
 <body class="antialiased font-light text-base bg-[#F5F2EB]">
     <a href="#main" class="skip-link">Skip to main content</a>
@@ -74,9 +77,11 @@ a:focus-visible, button:focus-visible { outline: none; box-shadow: 0 0 0 2px #F5
 
     <main id="main" class="pt-36 md:pt-44 pb-24 px-6 md:px-12 max-w-3xl mx-auto" tabindex="-1">
         <nav aria-label="Breadcrumb" class="mb-8 text-sm font-light text-[#2D2A26]/70">
-            <a href="/" class="hover:text-clay transition-colors">Home</a>
-            <span class="mx-2">/</span>
-            <span>Pricing</span>
+            <ol class="flex items-center gap-2" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/" itemprop="item" class="hover:text-clay transition-colors"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+                <li aria-hidden="true">/</li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name">Pricing</span><meta itemprop="position" content="2"></li>
+            </ol>
         </nav>
         <header class="mb-12">
             <h1 class="text-4xl md:text-5xl serif tracking-tight text-[#2D2A26] mb-4">Pricing &amp; what's included</h1>
@@ -86,7 +91,7 @@ a:focus-visible, button:focus-visible { outline: none; box-shadow: 0 0 0 2px #F5
         <div class="space-y-10 text-[#2D2A26]/90 font-light leading-relaxed">
             <section>
                 <h2 class="text-xl serif font-normal text-[#2D2A26] mb-3">Monthly rate range</h2>
-                <p>Private-pay monthly rates at Skagit River typically <strong>start in the mid-range for adult family homes in Snohomish County</strong> (Everett, WA area) and vary by room type and level of care. Rates are often in the <strong>$X,XXX–$X,XXX per month</strong> range depending on whether your loved one needs standard assistance, memory care, or higher-acuity support. We give you an exact quote after a brief assessment and tour.</p>
+                <p>Private-pay monthly rates at Skagit River typically <strong>start in the mid-range for adult family homes in Skagit County</strong> (Mount Vernon, WA area) and vary by room type and level of care. Rates are often in the <strong>$X,XXX–$X,XXX per month</strong> range depending on whether your loved one needs standard assistance, memory care, or higher-acuity support. We give you an exact quote after a brief assessment and tour.</p>
             </section>
 
             <section>
@@ -118,14 +123,44 @@ a:focus-visible, button:focus-visible { outline: none; box-shadow: 0 0 0 2px #F5
         </div>
     </main>
 
-    <footer class="bg-[#2D2A26] text-[#F5F2EB] py-12 px-6 mt-16">
-        <div class="max-w-3xl mx-auto text-center">
-            <a href="/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Home</a>
-            <span class="mx-2 text-white/30">|</span>
-            <a href="/services/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Services</a>
-            <span class="mx-2 text-white/30">|</span>
-            <a href="/contact/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Contact</a>
-            <p class="text-white/20 text-xs mt-4 font-light">Â© <span id="copyright-year">2026</span> Skagit River Adult Family Home LLC.</p>
+    <!-- Take Action Today & Footer Section -->
+    <footer id="action" class="bg-[#2D2A26] text-[#F5F2EB] py-24 px-6 md:px-12 rounded-t-[3rem] mt-12 relative overflow-hidden">
+        <!-- Abstract Decoration -->
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-clay/5 rounded-full blur-[100px] pointer-events-none -translate-y-1/2 translate-x-1/2"></div>
+
+        <div class="max-w-4xl mx-auto relative z-10 text-center">
+            <span class="text-xs font-normal uppercase tracking-widest text-clay mb-4 block">Take Action Today</span>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl serif mb-6 tracking-tight">Let's discuss their needs.</h2>
+            <p class="text-white/60 text-lg font-light mb-12 max-w-xl mx-auto leading-relaxed">
+                Finding the right home is a significant decision. We invite you to schedule a tour, meet our caregivers, and see the environment for yourself.
+            </p>
+
+            <a href="tel:+13607232907" class="inline-flex items-center gap-3 bg-white hover:bg-stone-200 text-[#2D2A26] px-10 py-4 rounded-full text-base font-normal transition-all transform hover:-translate-y-1 shadow-lg shadow-black/20 mb-20">
+                <iconify-icon icon="solar:phone-calling-linear" width="1.5rem" stroke-width="1.5"></iconify-icon>
+                Call to Schedule a Tour
+            </a>
+
+            <!-- Footer Bottom -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left border-t border-white/10 pt-12 max-w-3xl mx-auto">
+                <div>
+                    <h4 class="font-serif italic text-2xl mb-2 text-clay tracking-tight">Skagit River</h4>
+                    <p class="text-white/40 text-sm font-light leading-relaxed">
+                        Skagit River Adult Family Home LLC.<br>
+                        2120 Forest Dr, Mount Vernon, WA 98273<br>
+                        Licensed Washington State Adult Family Home<br>
+                        DSHS License #: 758550<br>
+                        Providing compassionate, residential care.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-3 md:text-right">
+                    <a href="/services/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Services &amp; Amenities</a>
+                    <a href="/pricing/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Pricing</a>
+                    <a href="/privacy/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Privacy Policy</a>
+                    <a href="/terms/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Terms of Service</a>
+                    <a href="/contact/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Contact Information</a>
+                    <p class="text-white/20 text-xs mt-4 font-light">&copy; <span id="copyright-year">2026</span> Skagit River Adult Family Home LLC. All rights reserved.</p>
+                </div>
+            </div>
         </div>
     </footer>
     <script>

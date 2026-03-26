@@ -24,41 +24,65 @@ h1, h2, h3, h4, h5, h6, .serif { font-family: 'Crimson Pro', serif; }
 .skip-link { position: absolute; left: -9999px; z-index: 9999; padding: 0.75rem 1rem; background: #2D2A26; color: #F5F2EB; border-radius: 0.5rem; font-size: 0.875rem; }
 .skip-link:focus { left: 1rem; top: 1rem; }
 a:focus-visible, button:focus-visible { outline: none; box-shadow: 0 0 0 2px #F5F2EB, 0 0 0 4px #A67C52; }
+@media (prefers-reduced-motion: reduce) {
+*, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
 </style></head>
 <body class="antialiased font-light text-base bg-[#F5F2EB]">
     <a href="#main" class="skip-link">Skip to main content</a>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 px-6 py-4 bg-[#2D2A26]/95 backdrop-blur-md border-b border-[#2D2A26]/20 shadow-sm transition-all duration-300 serif">
-        <div class="max-w-screen-xl mx-auto flex justify-between items-center">
-            <a href="/" class="flex items-center gap-2 text-[#F5F2EB] z-50 relative hover:text-white transition-colors" aria-label="Skagit River - Home" title="Skagit River">
+    <nav class="fixed top-0 w-full z-50 px-4 md:px-6 pt-4 pb-3 bg-transparent backdrop-blur-md transition-all duration-300 serif">
+        <div class="max-w-screen-xl mx-auto flex items-center justify-between gap-4">
+            <a href="/" class="flex items-center gap-2 text-clay z-50 relative hover:text-[#2D2A26] transition-colors" aria-label="Skagit River - Home" title="Skagit River">
                 <img src="https://i.ibb.co/CxnYYN2/Untitled-design-4-Picsart-Background-Remover.png" alt="Skagit River" class="h-8 w-auto" width="32" height="32">
-                <span class="text-xl tracking-tight font-medium">Skagit River</span>
+                <span class="text-2xl md:text-3xl tracking-tight font-medium">Skagit River</span>
             </a>
-            <div class="hidden md:flex items-center gap-16">
-                <a href="/" class="text-xl font-normal text-white hover:text-[#F5F2EB] transition-colors">Home</a>
-                <a href="/about-us/" class="text-base font-normal text-white hover:text-[#F5F2EB] transition-colors">About Us</a>
-                <a href="/services/" class="text-base font-normal text-white hover:text-[#F5F2EB] transition-colors">Services</a>
-                <a href="/gallery/" class="text-base font-normal text-white hover:text-[#F5F2EB] transition-colors">Gallery</a>
-                <a href="/contact/" class="text-base font-normal text-white hover:text-[#F5F2EB] transition-colors">Contact</a>
+
+            <!-- Desktop Menu - pill style -->
+            <div class="hidden md:flex flex-1 justify-center">
+                <div class="inline-flex items-center gap-12 px-12 py-2 rounded-full bg-white/15 border border-white/60 backdrop-blur-3xl -translate-y-1 shadow-[0_2px_4px_rgba(45,42,38,0.06),0_8px_16px_rgba(45,42,38,0.08),0_20px_40px_-10px_rgba(45,42,38,0.12),0_32px_64px_-20px_rgba(45,42,38,0.18),0_40px_80px_-24px_rgba(45,42,38,0.22)]">
+                    <a href="/" class="text-sm md:text-base font-normal text-[#2D2A26]/80 hover:text-[#2D2A26] transition-colors">Home</a>
+                    <a href="/about-us/" class="text-sm md:text-base font-normal text-[#2D2A26]/80 hover:text-[#2D2A26] transition-colors">About Us</a>
+                    <a href="/services/" class="text-sm md:text-base font-normal text-[#2D2A26]/80 hover:text-[#2D2A26] transition-colors">Services</a>
+                    <a href="/gallery/" class="text-sm md:text-base font-normal text-[#2D2A26]/80 hover:text-[#2D2A26] transition-colors">Gallery</a>
+                    <a href="/pricing/" class="text-sm md:text-base font-normal text-[#2D2A26]/80 hover:text-[#2D2A26] transition-colors">Pricing</a>
+                    <a href="/contact/" class="text-sm md:text-base font-normal text-[#2D2A26]/80 hover:text-[#2D2A26] transition-colors">Contact</a>
+                </div>
             </div>
-            <a href="/contact/" class="hidden md:flex items-center gap-2 bg-[#A67C52] text-white px-5 py-2.5 rounded-full text-sm font-normal hover:bg-[#8f6a47] transition-all"><span>Schedule a Tour</span></a>
-            <button type="button" class="md:hidden z-50 text-[#F5F2EB]" data-nav-toggle data-target="#mobile-nav" aria-label="Open navigation menu">
+
+            <!-- Primary CTA -->
+            <a href="/contact/" class="hidden md:inline-flex items-center gap-2 bg-[#A67C52] text-white px-5 py-2 rounded-full text-sm font-medium shadow-md shadow-black/30 hover:bg-[#8f6a47] transition-all">
+                <span>Schedule a Tour</span>
+            </a>
+
+            <!-- Mobile Menu Icon -->
+            <button type="button" class="md:hidden z-50 text-clay" data-nav-toggle data-target="#mobile-nav" aria-label="Open navigation menu">
                 <iconify-icon icon="solar:hamburger-menu-linear" width="1.5rem" stroke-width="1.5"></iconify-icon>
             </button>
         </div>
     </nav>
 
-    <div id="mobile-nav" class="fixed inset-x-4 top-20 z-40 md:hidden bg-[#2D2A26] text-[#F5F2EB] rounded-3xl shadow-xl border border-[#2D2A26]/20 px-6 py-5 space-y-3 transform origin-top transition-all duration-200 opacity-0 scale-95 pointer-events-none serif">
+    <div id="mobile-nav-overlay" class="fixed inset-0 z-[38] md:hidden bg-black/30 opacity-0 pointer-events-none transition-opacity duration-200" data-nav-overlay aria-hidden="true"></div>
+    <!-- Mobile Nav -->
+    <div id="mobile-nav" class="fixed inset-x-4 top-20 z-40 md:hidden bg-[#2D2A26] text-[#F5F2EB] rounded-3xl shadow-xl border border-white/10 px-6 py-5 space-y-3 transform origin-top transition-all duration-200 opacity-0 scale-95 pointer-events-none serif">
         <a href="/" class="block text-xl font-medium py-2 border-b border-white/10">Home</a>
         <a href="/about-us/" class="block text-base py-2 border-b border-white/10">About Us</a>
         <a href="/services/" class="block text-base py-2 border-b border-white/10">Services</a>
         <a href="/gallery/" class="block text-base py-2 border-b border-white/10">Gallery</a>
+        <a href="/pricing/" class="block text-base py-2 border-b border-white/10">Pricing</a>
         <a href="/contact/" class="block text-base py-2 border-b border-white/10">Contact</a>
         <a href="/contact/" class="block text-center bg-[#A67C52] text-white py-2.5 rounded-full mt-2">Schedule a Tour</a>
     </div>
 
     <main id="main" class="pt-36 md:pt-44 pb-24 px-6 md:px-12 max-w-3xl mx-auto" tabindex="-1">
+        <nav aria-label="Breadcrumb" class="mb-8 text-sm font-light text-[#2D2A26]/70">
+            <ol class="flex items-center gap-2" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/" itemprop="item" class="hover:text-clay transition-colors"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+                <li aria-hidden="true">/</li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name">Privacy Policy</span><meta itemprop="position" content="2"></li>
+            </ol>
+        </nav>
         <header class="mb-12">
             <h1 class="text-4xl md:text-5xl serif tracking-tight text-[#2D2A26] mb-4">Privacy Policy</h1>
             <p class="text-[#2D2A26]/70 text-sm">Last updated: March 2026</p>
@@ -67,7 +91,7 @@ a:focus-visible, button:focus-visible { outline: none; box-shadow: 0 0 0 2px #F5
         <div class="prose prose-stone max-w-none space-y-8 text-[#2D2A26]/90 font-light leading-relaxed">
             <section>
                 <h2 class="text-xl serif font-normal text-[#2D2A26] mb-3">Who we are</h2>
-                <p>Skagit River Adult Family Home LLC (“Skagit River,” “we,” “us”) operates this website. We are a residential adult family home in Everett, Washington, providing compassionate care for our residents. This Privacy Policy describes how we collect, use, and protect information when you visit our site or contact us.</p>
+                <p>Skagit River Adult Family Home LLC (&ldquo;Skagit River,&rdquo; &ldquo;we,&rdquo; &ldquo;us&rdquo;) operates this website. We are a residential adult family home in Mount Vernon, Washington, providing compassionate care for our residents. This Privacy Policy describes how we collect, use, and protect information when you visit our site or contact us.</p>
             </section>
 
             <section>
@@ -110,7 +134,7 @@ a:focus-visible, button:focus-visible { outline: none; box-shadow: 0 0 0 2px #F5
 
             <section>
                 <h2 class="text-xl serif font-normal text-[#2D2A26] mb-3">Changes to this policy</h2>
-                <p>We may update this Privacy Policy from time to time. The “Last updated” date at the top of this page will reflect the most recent changes. Continued use of the site after changes constitutes acceptance of the updated policy.</p>
+                <p>We may update this Privacy Policy from time to time. The &ldquo;Last updated&rdquo; date at the top of this page will reflect the most recent changes. Continued use of the site after changes constitutes acceptance of the updated policy.</p>
             </section>
 
             <section>
@@ -119,50 +143,78 @@ a:focus-visible, button:focus-visible { outline: none; box-shadow: 0 0 0 2px #F5
                 <p class="mt-2">
                     <strong>Skagit River Adult Family Home LLC</strong><br>
                     <a href="mailto:skagitriverafhllc2025@gmail.com" class="text-[#A67C52] hover:text-[#2D2A26] underline underline-offset-2">skagitriverafhllc2025@gmail.com</a><br>
-                    Provider: (360) 723-2907 · Home: (360) 982-2076<br>
+                    Provider: (360) 723-2907 &middot; Home: (360) 982-2076<br>
                     2120 Forest Dr, Mount Vernon, WA 98273
                 </p>
             </section>
         </div>
     </main>
 
-    <footer class="bg-[#2D2A26] text-[#F5F2EB] py-16 px-6 md:px-12 rounded-t-[3rem] relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-[400px] h-[400px] bg-[#A67C52]/5 rounded-full blur-[100px] pointer-events-none -translate-y-1/2 translate-x-1/2"></div>
-        <div class="max-w-4xl mx-auto relative z-10 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
-            <div>
-                <h4 class="font-serif italic text-xl text-[#A67C52] tracking-tight">Skagit River</h4>
-                <p class="text-white/40 text-sm font-light">Skagit River Adult Family Home LLC. Providing compassionate, residential care.</p>
-            </div>
-            <div class="flex flex-wrap justify-center md:justify-end gap-4">
-                <a href="/privacy/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Privacy Policy</a>
-                <a href="/terms/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Terms of Service</a>
-                <a href="/services/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Services &amp; Amenities</a>
-                <a href="/contact/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Contact</a>
+    <!-- Take Action Today & Footer Section -->
+    <footer id="action" class="bg-[#2D2A26] text-[#F5F2EB] py-24 px-6 md:px-12 rounded-t-[3rem] mt-12 relative overflow-hidden">
+        <!-- Abstract Decoration -->
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-clay/5 rounded-full blur-[100px] pointer-events-none -translate-y-1/2 translate-x-1/2"></div>
+
+        <div class="max-w-4xl mx-auto relative z-10 text-center">
+            <span class="text-xs font-normal uppercase tracking-widest text-clay mb-4 block">Take Action Today</span>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl serif mb-6 tracking-tight">Let's discuss their needs.</h2>
+            <p class="text-white/60 text-lg font-light mb-12 max-w-xl mx-auto leading-relaxed">
+                Finding the right home is a significant decision. We invite you to schedule a tour, meet our caregivers, and see the environment for yourself.
+            </p>
+
+            <a href="tel:+13607232907" class="inline-flex items-center gap-3 bg-white hover:bg-stone-200 text-[#2D2A26] px-10 py-4 rounded-full text-base font-normal transition-all transform hover:-translate-y-1 shadow-lg shadow-black/20 mb-20">
+                <iconify-icon icon="solar:phone-calling-linear" width="1.5rem" stroke-width="1.5"></iconify-icon>
+                Call to Schedule a Tour
+            </a>
+
+            <!-- Footer Bottom -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left border-t border-white/10 pt-12 max-w-3xl mx-auto">
+                <div>
+                    <h4 class="font-serif italic text-2xl mb-2 text-clay tracking-tight">Skagit River</h4>
+                    <p class="text-white/40 text-sm font-light leading-relaxed">
+                        Skagit River Adult Family Home LLC.<br>
+                        2120 Forest Dr, Mount Vernon, WA 98273<br>
+                        Licensed Washington State Adult Family Home<br>
+                        DSHS License #: 758550<br>
+                        Providing compassionate, residential care.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-3 md:text-right">
+                    <a href="/services/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Services &amp; Amenities</a>
+                    <a href="/pricing/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Pricing</a>
+                    <a href="/privacy/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Privacy Policy</a>
+                    <a href="/terms/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Terms of Service</a>
+                    <a href="/contact/" class="text-white/40 hover:text-white text-sm font-light transition-colors">Contact Information</a>
+                    <p class="text-white/20 text-xs mt-4 font-light">&copy; <span id="copyright-year">2026</span> Skagit River Adult Family Home LLC. All rights reserved.</p>
+                </div>
             </div>
         </div>
-        <p class="text-white/20 text-xs text-center mt-8 font-light">© <span id="copyright-year">2026</span> Skagit River Adult Family Home LLC. All rights reserved.</p>
     </footer>
-
     <script>
-        (function() {
-            var y = document.getElementById('copyright-year');
-            if (y) y.textContent = new Date().getFullYear();
-            var t = document.querySelector('[data-nav-toggle]');
-            var n = document.getElementById('mobile-nav');
-            if (t && n) {
-                t.addEventListener('click', function() {
-                    n.classList.toggle('opacity-0');
-                    n.classList.toggle('scale-95');
-                    n.classList.toggle('pointer-events-none');
-                });
-                n.querySelectorAll('a').forEach(function(a) {
-                    a.addEventListener('click', function() {
-                        n.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
-                    });
-                });
-            }
-        })();
-    </script>
-</body>
-</html>
-
+  (function () {
+    var toggles = document.querySelectorAll('[data-nav-toggle]');
+    var overlay = document.querySelector('[data-nav-overlay]');
+    function closeMenu(menu) {
+      if (!menu) return;
+      menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+      if (overlay) { overlay.classList.add('opacity-0', 'pointer-events-none'); overlay.setAttribute('aria-hidden', 'true'); }
+    }
+    toggles.forEach(function (btn) {
+      var targetSelector = btn.getAttribute('data-target');
+      var menu = document.querySelector(targetSelector);
+      if (!menu) return;
+      btn.addEventListener('click', function () {
+        var isOpen = !menu.classList.contains('pointer-events-none');
+        if (isOpen) closeMenu(menu);
+        else {
+          menu.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
+          if (overlay) { overlay.classList.remove('opacity-0', 'pointer-events-none'); overlay.setAttribute('aria-hidden', 'false'); }
+        }
+      });
+      if (overlay) overlay.addEventListener('click', function () { closeMenu(menu); });
+      menu.querySelectorAll('a').forEach(function (link) { link.addEventListener('click', function () { closeMenu(menu); }); });
+    });
+  })();
+</script>
+    <script>document.getElementById('copyright-year') && (document.getElementById('copyright-year').textContent = new Date().getFullYear());</script>
+</body></html>
