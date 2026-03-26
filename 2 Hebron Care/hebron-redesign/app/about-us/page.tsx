@@ -140,7 +140,7 @@ export default function AboutUsPage() {
       {/* ── Hero ──────────────────────────────────────────────────────────── */}
       <section className="relative h-[85vh] min-h-[560px] w-full overflow-hidden">
         <ParallaxImage
-          src="https://i.ibb.co/DfZCjxxH/DSC00412-fotor-2026032514584.png"
+          src="/images/DSC00412-fotor-2026032514584.webp"
           alt="Inside Hebron Care Adult Family Home"
           className="absolute inset-0 w-full h-full"
           speed={0.25}
@@ -231,7 +231,7 @@ export default function AboutUsPage() {
               <div className="flex flex-col gap-4">
                 <div className="relative w-full aspect-[4/3] overflow-hidden rounded-sm shadow-md">
                   <Image
-                    src="https://i.ibb.co/Pv38kqwv/DSC00423-fotor-2026032515228.png"
+                    src="/images/DSC00423-fotor-2026032515228.webp"
                     alt="Common living area at Hebron Care"
                     fill
                     className="object-cover hover:scale-[1.02] transition-transform duration-700"
@@ -241,7 +241,7 @@ export default function AboutUsPage() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="relative w-full aspect-square overflow-hidden rounded-sm shadow-md">
                     <Image
-                      src="https://i.ibb.co/JWhYt53f/DSC00431-fotor-2026032515435.png"
+                      src="/images/DSC00431-fotor-2026032515435.webp"
                       alt="Dining area at Hebron Care"
                       fill
                       className="object-cover hover:scale-[1.02] transition-transform duration-700"
@@ -250,7 +250,7 @@ export default function AboutUsPage() {
                   </div>
                   <div className="relative w-full aspect-square overflow-hidden rounded-sm shadow-md">
                     <Image
-                      src="https://i.ibb.co/VYMJ1dfc/DSC00436-fotor-2026032514591.png"
+                      src="/images/DSC00436-fotor-2026032514591.webp"
                       alt="Resident bedroom at Hebron Care"
                       fill
                       className="object-cover hover:scale-[1.02] transition-transform duration-700"
@@ -323,7 +323,7 @@ export default function AboutUsPage() {
             <ScrollReveal direction="right" delay={0.15}>
               <div className="relative w-full aspect-[3/4] max-w-md mx-auto lg:mx-0 overflow-hidden rounded-sm shadow-lg">
                 <Image
-                  src="https://i.ibb.co/8gvr9Vh0/DSC00438-fotor-2026032515127.png"
+                  src="/images/DSC00514-fotor-2026032515181.webp"
                   alt="Hebron Care team"
                   fill
                   className="object-cover"

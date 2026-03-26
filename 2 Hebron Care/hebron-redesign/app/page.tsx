@@ -65,7 +65,7 @@ function Hero() {
       {/* Right: photo */}
       <div className="hidden md:block absolute right-0 top-0 h-full w-1/2">
         <ParallaxImage
-          src="https://i.ibb.co/Pv38kqwv/DSC00423-fotor-2026032515228.png"
+          src="/images/DSC00423-fotor-2026032515228.webp"
           alt="Warm, light-filled living room at Hebron Care Adult Family Home"
           className="h-full w-full"
           speed={0.25}
@@ -78,7 +78,7 @@ function Hero() {
       {/* Mobile: photo below text — shown as a background tint */}
       <div className="absolute inset-0 md:hidden opacity-10 pointer-events-none">
         <Image
-          src="https://i.ibb.co/Pv38kqwv/DSC00423-fotor-2026032515228.png"
+          src="/images/DSC00423-fotor-2026032515228.webp"
           alt=""
           fill
           className="object-cover"
@@ -114,7 +114,7 @@ function StorySection() {
       {/* Full-bleed background image */}
       <div className="absolute inset-0">
         <Image
-          src="https://i.ibb.co/C5d3Md87/DSC00514-fotor-2026032515181.png"
+          src="/images/DSC00514-fotor-2026032515181.webp"
           alt="Caregiver and resident sharing a quiet moment together at Hebron Care"
           fill
           className="object-cover object-center"
@@ -172,7 +172,7 @@ function ServicesSection() {
             <ScrollReveal direction="up" delay={0} className="md:col-span-2">
               <div className="relative h-80 sm:h-96 md:h-[420px] overflow-hidden group rounded-sm">
                 <Image
-                  src="https://i.ibb.co/MDcT1MGc/DSC00385-fotor-2026032515528.png"
+                  src="/images/DSC00385-fotor-2026032515528.webp"
                   alt="Memory care resident in a calm, familiar environment at Hebron Care"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -257,7 +257,7 @@ function ServicesSection() {
             <ScrollReveal direction="up" delay={0.08} className="md:col-span-2">
               <div className="relative h-80 sm:h-96 md:h-[420px] overflow-hidden group rounded-sm">
                 <Image
-                  src="https://i.ibb.co/S7BfDJY8/DSC00397-fotor-2026032515820.png"
+                  src="/images/DSC00397-fotor-2026032515820.webp"
                   alt="Residents enjoying outdoor garden time at Hebron Care"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"

@@ -58,7 +58,7 @@ export default function ServicesPage() {
             <ScrollReveal direction="right" delay={0.05} className="relative">
               <div className="relative h-[420px] md:h-[580px] overflow-hidden">
                 <Image
-                  src="https://i.ibb.co/MDcT1MGc/DSC00385-fotor-2026032515528.png"
+                  src="/images/DSC00385-fotor-2026032515528.webp"
                   alt="Caregiver spending quiet time with a memory care resident at Hebron Care"
                   fill
                   className="object-cover"
@@ -284,7 +284,7 @@ export default function ServicesPage() {
             <ScrollReveal direction="left" delay={0.1} className="relative">
               <div className="relative h-[420px] md:h-[540px] overflow-hidden">
                 <Image
-                  src="https://i.ibb.co/S7BfDJY8/DSC00397-fotor-2026032515820.png"
+                  src="/images/DSC00397-fotor-2026032515820.webp"
                   alt="Organized medication management at Hebron Care Adult Family Home"
                   fill
                   className="object-cover"
@@ -350,7 +350,7 @@ export default function ServicesPage() {
         {/* Background image with overlay */}
         <div className="absolute inset-0">
           <Image
-            src="https://i.ibb.co/DfZCjxxH/DSC00412-fotor-2026032514584.png"
+            src="/images/DSC00412-fotor-2026032514584.webp"
             alt="Night view of Hebron Care, someone is always watching over our residents"
             fill
             className="object-cover object-center"
