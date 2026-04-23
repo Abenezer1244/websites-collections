@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
     "How Hebron Care Adult Family Home LLC #2 collects, uses, and protects your information.",
+  alternates: {
+    canonical: "https://hebroncareafh2.com/privacy-policy",
+  },
 };
 
 export default function PrivacyPolicyPage() {

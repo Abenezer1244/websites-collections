@@ -386,7 +386,7 @@ export default function AboutUsPage() {
                     />
                     <div>
                       <p className="font-sans text-sm text-[var(--color-ink)] font-medium">
-                        2421 81st Pl SE, Everett, WA 98208
+                        2421 81st Pl SE, Everett, WA 98203
                       </p>
                       <p className="font-sans text-xs text-[var(--color-ink-muted)] font-light mt-0.5">
                         Licensed Adult Family Home, State of Washington

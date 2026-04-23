@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Terms of Service",
   description:
     "Terms of use for the Hebron Care Adult Family Home LLC #2 website.",
+  alternates: {
+    canonical: "https://hebroncareafh2.com/terms-of-service",
+  },
 };
 
 export default function TermsOfServicePage() {

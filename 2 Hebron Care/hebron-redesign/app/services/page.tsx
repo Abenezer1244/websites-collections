@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "Services",
   description:
     "Memory care, daily living assistance, medication management, respite care, and 24/7 monitoring. Delivered in a real home in Everett, WA. Learn what a day at Hebron Care actually looks like.",
+  alternates: {
+    canonical: "https://hebroncareafh2.com/services",
+  },
   openGraph: {
     title: "Services | Hebron Care Adult Family Home",
     description:

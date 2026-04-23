@@ -52,7 +52,7 @@ export function Footer() {
             </a>
             <div className="flex items-center gap-2.5 text-[13px] text-white/40">
               <MapPin size={14} strokeWidth={1.5} className="shrink-0" />
-              2421 81st Pl SE, Everett, WA 98208
+              2421 81st Pl SE, Everett, WA 98203
             </div>
           </div>
 

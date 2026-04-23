@@ -8,14 +8,17 @@ import { SectionDivider } from "@/components/shared/section-divider";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: "Hebron Care Adult Family Home | Memory Care & Assisted Living | Everett, WA",
   description:
     "Hebron Care Adult Family Home in Everett, WA. A licensed, intimate home where your loved one receives 24/7 personalized care, memory support, and real family connection.",
+  alternates: {
+    canonical: "https://hebroncareafh2.com/",
+  },
   openGraph: {
     title: "Hebron Care Adult Family Home | Everett, WA",
     description:
       "Not a facility. A home. Six residents, around-the-clock care, and a family that knows your loved one by name.",
-    url: "https://2hebron-careafh.live",
+    url: "https://hebroncareafh2.com",
   },
 };
 
@@ -414,7 +417,7 @@ function CtaSection() {
 
         <ScrollReveal direction="up" delay={0.28} duration={0.6}>
           <p className="font-sans text-xs text-[var(--color-ink-muted)] mt-10">
-            2421 81st Pl SE, Everett, WA 98208
+            2421 81st Pl SE, Everett, WA 98203
           </p>
         </ScrollReveal>
 
